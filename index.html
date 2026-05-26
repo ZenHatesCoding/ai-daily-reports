@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 技术洞察日报</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#1c1e21;line-height:1.6;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .wrap{text-align:center;max-width:500px;padding:24px}
+    h1{font-size:24px;font-weight:700;margin-bottom:16px;color:#1a1a2e}
+    .links{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+    .link{display:block;background:white;border-radius:12px;padding:16px 24px;text-decoration:none;color:#1c1e21;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.15s}
+    .link:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+    .link span{display:block;font-size:12px;color:#888;margin-top:4px}
+    .loading{color:#888;font-size:14px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🤖 AI 技术洞察日报</h1>
+  <p class="loading" id="status">加载中...</p>
+  <div class="links">
+    <a id="todayLink" href="#">
+      📰 今日日报
+      <span id="todayDate">加载中...</span>
+    </a>
+    <a href="https://github.com/ZenHatesCoding/ai-daily-reports" target="_blank">
+      📂 历史日报
+      <span>查看所有过往报告</span>
+    </a>
+  </div>
+</div>
+<script>
+// 自动跳转到最新报告（根据当前日期）
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+const dateStr = `${yyyy}-${mm}-${dd}`;
+const url = `reports/ai-daily-${dateStr}.html`;
+document.getElementById('todayLink').href = url;
+document.getElementById('todayDate').textContent = `${yyyy}年${mm}月${dd}日`;
+document.getElementById('status').textContent = '正在重定向...';
+window.location.href = url;
+</script>
+</body>
+</html>
