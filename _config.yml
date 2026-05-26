@@ -1,0 +1,10 @@
+title: AI技术日报
+theme: minima
+safe: true
+exclude:
+  - scripts
+  - SKILL.md
+  - README.md
+  - state
+include:
+  - reports
