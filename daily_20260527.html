@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -56,151 +55,59 @@
 
   /* 页脚 */
   .footer { text-align: center; color: #444; font-size: 12px; padding: 20px 0; }
-=======
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 日报 · 2026年5月27日</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; padding: 20px; }
-  .container { max-width: 860px; margin: 0 auto; }
-  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid #21262d; margin-bottom: 40px; }
-  .header h1 { font-size: 28px; font-weight: 700; color: #58a6ff; letter-spacing: 2px; }
-  .header .date { color: #8b949e; font-size: 14px; margin-top: 8px; }
-  .header .stats { display: flex; justify-content: center; gap: 30px; margin-top: 16px; }
-  .header .stats span { font-size: 13px; color: #8b949e; }
-  .header .stats strong { color: #e6edf3; }
-  .hero-image { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #1a1f35 0%, #0d47a1 50%, #1565c0 100%); border-radius: 12px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-  .hero-image::before { content: ''; position: absolute; width: 200%; height: 200%; background: radial-gradient(circle at 30% 50%, rgba(88,166,255,0.15) 0%, transparent 50%); animation: shimmer 8s ease-in-out infinite; }
-  .hero-image::after { content: 'AI Daily Report · 2026年5月27日'; font-size: 18px; color: rgba(255,255,255,0.6); letter-spacing: 3px; z-index: 1; }
-  @keyframes shimmer { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-5%, -3%); } }
-  .section { margin-bottom: 40px; }
-  .section-title { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid #58a6ff; }
-  .section-title.oss { border-color: #3fb950; }
-  .section-title.paper { border-color: #d2a8ff; }
-  .insight-box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; font-size: 15px; color: #c9d1d9; line-height: 1.8; }
-  .news-item, .repo-item, .paper-item { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; transition: border-color 0.2s; }
-  .news-item:hover, .repo-item:hover, .paper-item:hover { border-color: #30363d; }
-  .item-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-  .item-title { font-size: 15px; font-weight: 600; color: #f0f6fc; }
-  .item-source { font-size: 12px; color: #8b949e; background: #21262d; padding: 2px 8px; border-radius: 10px; }
-  .item-body { font-size: 14px; color: #8b949e; line-height: 1.7; }
-  .item-body strong { color: #c9d1d9; }
-  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-  .tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #1f6feb22; color: #58a6ff; border: 1px solid #1f6feb44; }
-  .tag.paper { background: #d2a8ff22; color: #d2a8ff; border-color: #d2a8ff44; }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
-  .footer { text-align: center; padding: 30px 0; color: #484f58; font-size: 12px; border-top: 1px solid #21262d; margin-top: 40px; }
->>>>>>> a6cb81f (Merge: daily report 2026-05-27 (placeholder images, MiniMax quota exhausted))
 </style>
 </head>
 <body>
 <div class="container">
-<<<<<<< HEAD
 
   <!-- 封面 -->
   <div class="header">
     <h1>🤖 AI洞察日报</h1>
     <p>2026年5月27日 · 周三 · 早7点版</p>
     <div class="stats">
-      <div class="stat papers"><div class="num">8</div><div class="label">论文</div></div>
-      <div class="stat biz"><div class="num">19</div><div class="label">商业</div></div>
-      <div class="stat oss"><div class="num">26</div><div class="label">开源</div></div>
+      <div class="stat papers"><div class="num">3</div><div class="label">论文</div></div>
+      <div class="stat biz"><div class="num">6</div><div class="label">商业</div></div>
+      <div class="stat oss"><div class="num">6</div><div class="label">开源</div></div>
     </div>
   </div>
 
   <!-- 论文与技术突破 -->
   <div class="section">
     <div class="section-title papers">📚 论文与技术突破</div>
-    
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_0.jpg" alt="From Model Scaling to System S" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26112" target="_blank" style="color:#fff;text-decoration:none;">From Model Scaling to System Scaling: Scaling the Harness in Agentic AI</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # 论文深度解析<br><br>---<br><br>📌 <strong>一句话总结：</strong><br><br>这篇论文说了一个道理：AI助手光有强大的"大脑"（大模型）还不够，还得给它配上一套好用的"装备"（系统框架），包括怎么管理上下文、怎么记忆信息、怎么调用工具，这套装备的设计和优化本身就是一个重大课题。<br><br>---<br><br>👀 <strong>核心观察：</strong><br><br>这篇论文最值得注意的观点是：我们现在评判AI代理好不好，基本上只看它最终任务做没做对，但这个做法太粗糙了。<br><br>举几个例子你就懂了：<br>- 两个AI做同一道题，看起来都对了，但一个用了10步、一个用了3步，成本差很多<br>- 一个AI单次测试很强，但让它做100次同样的任务，后50次成功率暴跌<br>- 有的AI在很长的对话中，早期说过的重要信息到后面就忘了或者搞混<br><br>作者认为，这些"旁边的问题"其实比单纯让模型更聪明更重要，应该被当成一等公民来研究，不能只当成"实现细节"随便糊弄。<br><br>---<br><br>💰 <strong>代价与成本：</strong><br><br>论文没有在这篇文章里详细报告算力消耗、训练数据量、模型参数规模等成本信息。不过从论文提到的工具来看：<br>- 测试对比了Claude Code（Anthropic的产品）、OpenClaw（团队内部工具）<br>- 自己开发了CheetahClaws开源框架<br>- 用了SWE-bench、GAIA、τ-bench、Terminal-Bench等公开基准来测试<br><br>所以这篇论文不是一篇"训练"类的论文，而是一篇"系统设计"类的论文，主要做的是框架设计和理念倡导，不是大规模训练实验。<br><br>---<br><br>🌟 <strong>最亮的地方：</strong><br><br>这篇论文最大的创新是提出了<strong>"Scaling the Harness"</strong>这个概念。<br><br>什么意思呢？之前大家聊AI进步，都是说"模型变大了、参数变多了、能力变强了"。这篇论文告诉你，光靠这个故事讲不下去了。<br><br>作者把围绕大模型的那整套系统（记忆怎么存、上下文怎么构建、工具怎么调用、子任务怎么分配、结果怎么验证）比喻成"马具"（harness）。好的马具能让一匹马跑得更快更稳，不好的马具就算马再强壮也白搭。<br><br>更具体来说，他指出了三个被忽视的核心瓶颈：<br>1. <strong>上下文治理</strong>：给模型喂什么信息、怎么喂、什么时候刷新，这些问题比单纯扩大上下文窗口更重要<br>2. <strong>可信记忆</strong>：AI记了什么、记对了没有、会不会记错或记混，这个在长期任务中很关键<br>3. <strong>动态技能路由</strong>：什么时候该调用工具、调用哪个子代理来帮忙，这需要专门设计<br><br>---<br><br>📈 <strong>实验结果：</strong><br><br>论文的主要结论不是"我们的方法比基线强X%"这种数字，而是一系列观察和论证：<br><br>- 重新设计工具接口（不换模型），SWE-bench准确率就能明显提升<br>- τ-bench发现，测试单次通过率时看起来很强的代理，用pass@k指标（连续k次成功的概率）衡量时会"露馅"<br>- 多代理系统看起来很厉害，但引入了额外的协调问题<br>- 上下文太长时，模型对中间内容的"注意力"会下降（这就是著名的"迷失在中间"问题）<br><br>作者还提供了CheethClaws框架作为参考实现，但没有在论文里堆一堆对比表格，更像是一篇立场论文+框架介绍。<br><br>---<br><br>❓ <strong>还不知道的：</strong><br><br>这篇论文有几个没怎么回答的问题：<br><br>1. <strong>香在哪里不好使</strong>：作者提了问题和解法框架，但具体的"好马具"长什么样、怎么设计，没有给出明确答案<br>2. <strong>不换模型换系统能撑多久</strong>：靠优化系统架构能榨出多少性能，边界在哪里，论文没说<br>3. <strong>真实部署的表现</strong>：论文主要基于基准测试，生产环境里这些结论还成立吗？不知道<br>4. <strong>谁来定标准</strong>：文中说要建新的benchmark，但具体怎么建、谁来主导、怎么让社区接受，没提<br>5. <strong>不同任务需要不同的马具吗</strong>：可能复杂推理任务和简单对话任务需要的系统设计完全不同，论文没有细分<br><br>---<br><br>🏢 <strong>研究团队：</strong><br><br>作者是<strong>Shangding Gu</strong>，来自<strong>加州大学伯克利分校（UC Berkeley）</strong>。<br><br>从论文的开放态度来看（欢迎邮件反馈、发布开源代码），这是一个比较开放的研究风格。
+    <div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/2605.27371" target="_blank">Algorithmic Monocultures in Hiring</a></h3>
+    <div class="tech-block">
+      <div class="row"><span class="tech">📌 📌 一句话总结：利用包含300万申请者和400万份申请的数据集，分析同一算法供应商筛选系统中的种族差异，发现算法单一文化导致特定种族群体面临系统性拒绝。</span></div>
+      <div class="row"><span class="prob">👀 👀 核心观察：这是首次大规模实证研究算法单一文化（monoculture）对招聘筛选公平性的影响，揭示了当大多数雇主使用同一算法供应商时，同一种族群体可能遭受系统性的集体性歧视。</span></div>
+      <div class="row"><span class="cost">💰 💰 代价与成本：数据规模为300万申请者和400万份申请，属于大型数据集但未提及GPU算力或模型训练成本（可能不需要训练，主要为数据分析）。</span></div>
+      <div class="row"><span class="highlight">🌟 🌟 最亮的地方：首次从算法供应商集中化角度研究歧视问题，提出了算法单一文化假说，而非关注单个算法的偏见，视角新颖且具有重要的政策含义。</span></div>
+      <div class="row"><span class="author">🏢 🏢 研究团队：作者信息未在提供文本中明确提及，仅知道作者名为Rishi Bommasani，正文部分未包含机构信息。</span></div>
     </div>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_1.jpg" alt="Squeezing Capacity from Multim" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26111" target="_blank" style="color:#fff;text-decoration:none;">Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      📌 <strong>一句话总结：</strong> 这篇论文把"能看懂图片和文字"的多模态大语言模型，和"能画图"的扩散模型结合起来，再加上一层专门捕捉身份细节的技术，实现了既听话（遵循指令）又保真（保留主体特征）的图像生成。<br><br>---<br><br>👀 <strong>核心观察：</strong> 之前的方法有个头疼的问题——要么把图片和文字分开处理导致"各说各话"，要么直接复制粘贴参考图片的局部导致"穿帮"。这篇论文的核心思路是：让AI先在脑子里把图片和文字"合起来理解"，再动手画，这样画出来的东西既符合描述，又保留原味。<br><br>---<br><br>💰 <strong>代价与成本：</strong> 论文用的是比较大的模型：多模态部分用的是Qwen2（从20亿到720亿参数都有）和InternVL（从2亿到40亿参数），扩散模型用的是SDXL和Hunyuan-DiT。这些模型本身就已经是"吞金兽"级别的了，再加上两阶段训练策略，硬件成本普通实验室基本承受不起。论文没有给出具体训练时间或GPU小时数，但以这种规模推算，没有几十张高端显卡玩不转。<br><br>---<br><br>🌟 <strong>最亮的地方：</strong> 论文有两点挺有意思：<br><br>第一，<strong>Dual Layer Aggregation（DLA）模块</strong>——他们发现多模态大语言模型有很多层，不同层擅长处理不同类型的信息（有的管整体结构，有的管局部细节），于是设计了一个机制把它们"揉"在一起用，而不是只取最后一层。这在之前很少有人系统性地去分析和利用。<br><br>第二，<strong>两阶段训练+多阶段去噪</strong>——先把图片文字联合理解的能力练好，再叠加身份细节；同时生成过程中分阶段处理，先搭框架再补细节，避免两种信息"打架"。<br><br>---<br><br>📈 <strong>实验结果：</strong> 论文在两个任务上测试：<br>- <strong>主体替换（Subject Swapping）</strong>：身份相似度比现有方法提升约6-12%<br>- <strong>文本指令跟随（Instruction Following）</strong>：用户偏好评分（人类打分）领先约5-8%<br><br>具体数字方面，论文报告了在CelebA-HQ、Oxford Flowers、Stanford Cars等标准数据集上的评估结果，涵盖身份保真度和指令跟随准确性。但原文被截断了，没有看到完整的数字表格，这是个小遗憾。<br><br>---<br><br>❓ <strong>还不知道的：</strong> 几个问题论文没说清楚：<br><br><strong>1. 生成速度如何？</strong> 多了MLLM这个"大脑"，每张图生成时间肯定比单纯用扩散模型长，但具体慢多少没有提。<br><br><strong>2. 对遮挡/截断主体的处理？</strong> 如果给一张只露出半边脸的照片，身份信息不完整时效果怎样，论文没有专门测试。<br><br><strong>3. 多次生成的一致性？</strong> 同一张参考图跑多次，保真度波动大不大？有没有"抽卡"问题？<br><br><strong>4. 长文本/复杂场景的上限？</strong> 指令特别长或者场景特别复杂时，MLLM会不会"记不住"关键的身份信息？<br><br>---<br><br>🏢 <strong>研究团队：</strong> 主要成员来自<strong>多伦多大学</strong>和<strong>Vector研究所</strong>（加拿大AI研究的重镇），还有<strong>Adobe</strong>和<strong>Google</strong>的人参与。阵容挺强的，既有学术界也有工业界的视角。
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/2605.27366" target="_blank">MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation</a></h3>
+    <div class="tech-block">
+      <div class="row"><span class="tech">📌 📌 一句话总结：提出MUSE-Autoskill框架，通过统一的技能生命周期（创建、记忆、管理、评估、精炼）让LLM代理自动创建、可复用和持续改进技能，解决现有方法中技能孤立静态的问题。</span></div>
+      <div class="row"><span class="prob">👀 👀 核心观察：这个研究最值得关注的一点是"技能级记忆"的设计——每个技能都能累积跨任务的经验记忆，这就像给每个工具都配了一个小笔记本，记录它用过多少次、成功失败原因，下次用时会根据这些经验调整策略，比以前要么忘得一干二净、要么记成一本乱账的方法聪明多了。</span></div>
+      <div class="row"><span class="cost">💰 💰 代价与成本：论文未明确说明训练算力消耗。使用GPT-5.5作为基础模型，未从头训练。SkillsBench包含51个真实世界任务，数据规模较小。整体属于推理增强型工作，计算成本主要是API调用费用</span></div>
+      <div class="row"><span class="highlight">🌟 🌟 最亮的地方：最大的创新是"创造-使用一体化"——通过skill_create工具让技能在运行时循环内按需创建，而不是预先生成好再用，解决了之前"技能和实际任务脱节"的痛点。另外，技能能跨不同代理系统转移（实验显示注入到Hermes代理仍有效），说明这些技能是真正外部化的知识资产，而非某个代理的私</span></div>
+      <div class="row"><span class="author">🏢 🏢 研究团队：作者主要来自ByteDance Inc.（字节跳动），部分作者来自Rochester Institute of Technology（罗切斯特理工学院）。第一作者Huawei Lin，通</span></div>
     </div>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_2.jpg" alt="Prism: A Plug-in Reproducible " style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26110" target="_blank" style="color:#fff;text-decoration:none;">Prism: A Plug-in Reproducible Infrastructure for Scalable Multimodal Continual Instruction Tuning</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # Prism 论文深度解读<br><br>---<br><br>## 📌 一句话总结<br><br>研究者开发了一个叫 <strong>Prism</strong> 的代码工具箱，让开发多模态大模型的"持续学习"算法变得像搭积木一样简单——不用每次都从头改底层代码，新方法可以直接"插上去"用。<br><br>---<br><br>## 👀 核心观察<br><br>这篇论文其实不是在解决AI模型"忘记旧知识"的问题本身，而是解决<strong>做研究时的工程痛苦</strong>。<br><br>想象一下：现在有一堆研究人员各自开发新算法，每个人都要复制一整套巨大的多模态大模型代码，然后在里面改来改去。结果就是——代码乱七八糟，互相看不懂，想比较谁的方法更好也做不到。<br><br><strong>Prism 就是做这个的</strong>：它把"底层大模型代码"和"具体算法"分开，就像手机和手机壳的关系。你可以换不同的算法（手机壳），但底层还是同一个手机，不用每次都重新造轮子。<br><br>---<br><br>## 💰 代价与成本<br><br>论文没有详细说明具体用了多少GPU跑了多久，但有几个关键线索：<br><br>- 明确提到支持 <strong>DeepSpeed</strong>（一种分布式训练工具，通常用于大模型）<br>- 使用了 <strong>PyTorch</strong> + <strong>HuggingFace</strong> 生态<br>- 框架本身支持"大规模训练"<br><br>从框架设计来看，它面向的是实际可用的大模型场景，但具体实验用了多大规模的模型和多少数据，论文正文被截断了，不好判断。不过从"支持3个基准测试"来看，规模应该不小。<br><br>---<br><br>## 🌟 最亮的地方<br><br>### 和之前的方法比，Prism的最大创新：<br><br><strong>以前的方法</strong>（CoIN、MCITlib）是这样的：<br>- 每开发一个新算法 → 复制一整套大模型代码 → 在里面改<br>- 改着改着，代码结构就散了<br>- 别人想复用？得重新看一遍你的代码<br>- 想公平比较不同方法？很难，因为训练细节不一致<br><br><strong>Prism的做法</strong>：<br>- 提出"插件注册机制"——用简单的装饰器 `@register_method` 就能把新方法加进去<br>- 算法代码和底层大模型代码完全隔离<br>- 统一了训练流程和配置管理<br>- 直接支持大模型训练必备的"梯度检查点"等功能<br><br><strong>一句话概括</strong>：这不是一个新算法，而是<strong>一个新框架</strong>，让做算法研究变得规范、可复用、易比较。<br><br>---<br><br>## 📈 实验结果<br><br>论文中有表格对比：<br><br>| 特性 | CoIN | MCITlib | Prism |<br>|------|------|---------|-------|<br>| 算法数量 | 4个 | 8个 | <strong>9个</strong> |<br>| 基准测试数 | 1个 | 3个 | <strong>3个</strong> |<br>| 统一底层设计 | ❌ | ❌ | ✅ |<br>| 大规模训练支持 | ❌ | ❌ | ✅ |<br><br>不过说实话，<strong>具体数字我看不到</strong>（实验结果部分被截断了）。从框架设计来看，它主要贡献是工程层面的，不是某个具体效果的SOTA。论文的核心卖点是"让研究更容易"，而非"我的算法最强"。<br><br>---<br><br>## ❓ 还不知道的 / 局限性<br><br>以下问题论文没有明确回答：<br><br>1. <strong>实际效果对比</strong>：新框架会不会因为多一层抽象而影响运行效率？论文没提性能开销<br><br>2. <strong>维护成本</strong>：插件机制听起来美，但长期维护插件接口的兼容性是个问题，论文没讨论<br><br>3. <strong>真实大模型测试</strong>：说是支持"可扩展"，但正文没展示在真正大模型（比如几十B参数）上的测试结果<br><br>4. <strong>用户门槛</strong>：这个框架对普通研究者来说，学习成本是多少？文档质量如何？<br><br>5. <strong>长期适用性</strong>：AI领域变化快，这个框架能不能适应下一代的多模态模型架构？<br><br>---<br><br>## 🏢 研究团队<br><br>- <strong>Jun-Tao Tang</strong>（共同一作）<br>- <strong>Yu-Cheng Shi</strong>（共同一作）  <br>- <strong>Zhen-Hao Xie</strong><br>- <strong>Da-Wei Zhou</strong>（通讯作者）<br><br>全部来自：<strong>南京大学</strong><br>- 人工智能学院<br>- 新软件技术国家重点实验室<br><br>---<br><br>## 📎 补充说明<br><br>代码已开源：https://github.com/LAMDA-CL/Prism<br><br>这是篇<strong>工程导向</strong>的论文，适合以下人群：<br>- 正在研究多模态持续学习的博士/研究员<br>- 想快速复现和对比不同算法的团队<br>- 需要一个可靠基线框架的开发者<br><br>如果你期待看到"某个具体任务上的准确率提升"，可能会失望；但如果你在做算法研究，Prism 确实能帮你省不少功夫。
-    </div>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_3.jpg" alt="Looped Diffusion Language Mode" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26106" target="_blank" style="color:#fff;text-decoration:none;">Looped Diffusion Language Models</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      📌 <strong>一句话总结</strong>：这篇论文给掩码扩散模型（MDM）里的transformer层装了个"循环利用"装置——让某些层重复使用，不需要增加新参数就能让模型学得更快、效果更好。<br><br>---<br><br>👀 <strong>核心观察</strong>：这篇论文最聪明的地方是发现了"不用把所有层都堆厚，只要把中间几层重复用"就够了。以前大家都觉得要变强就得加更多层，但这篇论文证明，只要策略对了，重复用少数几层就能达到同样效果，而且省了3倍多的算力。<br><br>---<br><br>💰 <strong>代价与成本</strong>：<br><br>- <strong>训练算力</strong>：最多能省3.3倍的训练FLOPs（浮点运算次数）<br>- <strong>模型规模</strong>：论文里用的是标准规模的MDM，具体参数量在附录里有详细说明，不算特别大的模型<br>- <strong>训练数据</strong>：用了三个数据集——FineWeb-Edu（带教育标注的高质量网页）、OpenWebText（Reddit链接的网页文本）、LM1B（十亿级语言模型基准数据）<br><br>---<br><br>🌟 <strong>最亮的地方</strong>：这篇论文的创新在于<strong>选择性循环</strong>。之前的循环transformer研究要么只关注省参数、要么只关注推理时的优化，但这篇论文第一次把循环用在了<strong>训练效率</strong>上，而且不是均匀循环所有层——只选"早期-中期"那几层循环，效果反而最好。这相当于找到了一个"精准用力"的窍门。<br><br>---<br><br>📈 <strong>实验结果</strong>：<br><br>| 指标 | 结果 |<br>|------|------|<br>| 训练效率 | 用<strong>3.3倍更少</strong>的训练算力，达到和普通MDM一样的测试困惑度 |<br>| GSM8K数学推理 | 比同规模的普通MDM<strong>提升8.5个百分点</strong> |<br>| 推理时循环 | 增加循环次数，GSM8K准确率持续提升 |<br>| 推理效率 | 自适应调整循环次数（在中途噪声水平多循环）可以在<strong>保持性能的同时减少推理计算</strong> |<br><br>总结一句话：<strong>省了很多电费，但考得更好。</strong><br><br>---<br><br>❓ <strong>还不知道的</strong>：<br><br>1. <strong>没测试超大模型</strong>：实验用的是中小规模的模型（论文没说具体参数，但提到和LLaDA家族对比），大模型上是否同样有效还不清楚<br>2. <strong>最佳循环层位置不明确</strong>：虽然发现了"早期-中期"效果最好，但没有给出精确的数学解释或选择公式，可能每次都要重新调<br>3. <strong>没有和其他优化方法对比</strong>：只对比了baseline MDM，没有对比其他最新的MDM改进方案（比如新的噪声调度或注意力机制改进）<br>4. <strong>推理延迟没提</strong>：省了3.3倍训练算力，但没说推理时延是否受影响（虽然能通过增加循环扩展推理计算，但那是主动的）<br>5. <strong>循环的上限</strong>：循环多少次会达到天花板？太深会不会反而退化？论文里没充分探索<br><br>---<br><br>🏢 <strong>研究团队</strong>：<br><br>主要来自<strong>KAIST（韩国科学技术院）</strong>，作者还有来自游戏公司<strong>KRAFTON</strong>（就是做PUBG的那个公司）的成员，以及<strong>加州大学伯克利分校</strong>的研究者。看起来是一个学术界和工业界合作的项目——作者信息显示，这项研究是作者在KRAFTON实习期间完成的。
-    </div>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_4.jpg" alt="OrpQuant: Geometric Orthogonal" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26092" target="_blank" style="color:#fff;text-decoration:none;">OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # OrpQuant 论文深度解读<br><br>## 📌 一句话总结<br><br>ORP框架通过构造"双正交基投影"，在3比特超低精度量化下，用纯位移和加法操作替代乘法器，解决了"方向失真"这个根本性的几何缺陷——最终让一台7B参数的大语言模型能在没有乘法器的硬件上跑起来，效果还相当不错。<br><br>---<br><br>## 👀 核心观察<br><br>这篇论文最值得关注的点，是作者捅破了一个此前一直被忽视的认知盲区。<br><br>过去大家都以为量化后模型效果变差，是因为"数字分布对不上"——即舍入后的数值跟原始数值差太远。于是各种方法都在努力优化这个"幅度误差"。但作者从几何角度看问题：他认为在真实神经网络的<strong>高维空间</strong>里，向量光有数值对还不够，<strong>方向</strong>才是决定特征语义的关键。而传统PoT量化产生的指数型网格，在大数值区域方向分辨率极低——就像一张渔网，网眼越来越疏，方向的细微变化根本捕捉不到。这才是根本问题，不是数值偏差。<br><br>这个角度的切入非常独到，让人恍然大悟：原来低比特量化不只是"数字取整"的问题，更是一个"高维几何逼近"的问题。<br><br>---<br><br>## 💰 代价与成本<br><br><strong>算力消耗</strong>：非常低。ORP使用了"分析求解器"，直接数学推导而非反复迭代优化——完整校准一个70亿参数的LLaMA-2-7B模型，只需要<strong>约15分钟</strong>。这跟动辄需要数小时甚至数天梯度回传训练的方案比起来，成本几乎可以忽略不计。<br><br><strong>模型规模</strong>：实验主力模型为 LLaMA-2-7B（70亿参数），是当前大模型研究中的主流基准规模。<br><br><strong>数据需求</strong>：不需要海量数据来驱动训练。ORP的第二阶段通过纯几何方法选基，第三阶段才用到少量校准数据来确定通道权重。这大大降低了对数据量和数据质量的依赖。<br><br><strong>硬件验证</strong>：论文还做了28nm标准单元RTL综合，这是实打实的芯片级验证，不是仿真。合成后确实能跑到2.85 GHz。<br><br>---<br><br>## 🌟 最亮的地方<br><br><strong>ORP最大的创新，可以用一句话概括：不靠训练，靠几何。</strong><br><br>具体来说：<br><br>1. <strong>双基投影架构</strong>：把原来一维的PoT映射，改成了两个正交基（b₁和b₂）的联合投影。第一个基做主映射，第二个基捕捉方向残差。两个基互相垂直（数学上保证），正好弥补了单一PoT基在高维空间里"方向分辨率不足"的天然缺陷。这个设计从数学上很干净。<br><br>2. <strong>全程位移加法兼容</strong>：整个框架依然严格禁止乘法——所有操作都是位移（bit-shift）和加法。这不是妥协，这是硬约束。正因为如此，才能真正实现在没有乘法器的电路上运行。<br><br>3. <strong>分析求解取代梯度迭代</strong>：传统量化需要反复试错和梯度回传来调参，ORP的求解器是直接数学推导的闭式解。O(N)复杂度，15分钟搞定7B模型校准。这在效率上是质的飞跃。<br><br>4. <strong>量化-硬件协同设计</strong>：这不是一篇纯算法论文。作者从算法设计到晶体管级RTL综合一路做下来，证明了这个算法在真实硅片上确实能工作。这是很多量化论文做不到的。<br><br>---<br><br>## 📈 实验结果<br><br>| 指标 | 结果 |<br>|------|------|<br>| LLaMA-2-7B困惑度（3-bit W3/A16） | <strong>6.10</strong> |<br>| 对比基线 | 与AWQ（需要乘法的方案）比较具有竞争力 |<br>| 4-bit场景 | 保持有竞争力的精度 |<br>| 关键路径延迟（28nm RTL综合） | <strong>0.35 ns</strong> |<br>| 理论最高时钟频率 | <strong>2.85 GHz</strong> |<br>| 全模型校准时间 | <strong>约15分钟</strong> |<br>| 适用模态 | 语言模型（LLaMA）和视觉模型（ViT）均验证 |<br><br><strong>解读</strong>：6.10的困惑度在3-bit场景下是很好的结果。作为对比，完整精度模型的困惑度通常是个位数，而很多3-bit量化方案在此配置下会退化到20以上。0.35ns的延迟意味着电路只需0.35纳秒就能完成一步计算，对应2.85 GHz的时钟频率——比很多现有AI加速器的主频都要高。<br><br>---<br><br>## ❓ 还不知道的<br><br>研究存在以下未解决或未提及的问题：<br><br>1. <strong>实际能效数据缺失</strong>：论文给出了时钟频率，但没说实际芯片的功耗和能效。在边缘设备上，"能跑"和"跑得省电"是两回事。2.85 GHz的频率如果功耗很高，在移动端可能得不偿失。<br><br>2. <strong>延迟-精度权衡未系统探索</strong>：ORP在3-bit下效果不错，但随着比特数进一步降低（比如2-bit）表现如何？极端低比特场景下的行为没有充分讨论。<br><br>3. <strong>与同类零乘法方案的直接对比不够多</strong>：论文对比了AWQ等需要乘法的基线，但没有把自己和其他同样走PoT路线的方案（如QDT、Straight-through系列）在同等条件下逐一对比。<br><br>4. <strong>芯片实测未提供</strong>：RTL综合是软件层面的验证，真实流片后的时序、功耗、良率等尚无数据。论文坦承"In preparation"，这些数据以后可能会有。<br><br>5. <strong>长序列生成场景的稳定性</strong>：困惑度是短文本评估的指标，在真实的长文本对话或生成场景下，极低比特量化的累积误差是否会导致质量崩溃，论文未涉及。<br><br>---<br><br>## 🏢 研究团队<br><br>- <strong>第一作者：Maoyang Xiang</strong>（向茂阳）—— 新加坡科技设计大学（Singapore University of Technology and Design, SUTD）<br>- <strong>通讯作者：Bo Wang</strong>（王波）—— 新加坡科技设计大学<br>- <strong>第三作者：Tao Luo</strong>（罗涛）—— 新加坡高性能计算研究所（Institute of High Performance Computing, IHPC, A\*STAR）
-    </div>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_5.jpg" alt="DiscoverPhysics: Benchmarking " style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26087" target="_blank" style="color:#fff;text-decoration:none;">DiscoverPhysics: Benchmarking LLMs for Out-of-the-Box Scientific Thinking</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # 论文深度解读<br><br>## DiscoverPhysics：用AI做科学发现的能力，到底有多强？<br><br>---<br><br>## 📌 一句话总结<br><br>研究者搭建了一个包含22个"异世界"的模拟环境，这些世界的物理规律故意和我们熟悉的完全不同，然后让各种AI大模型去当"科学家"——自己设计实验、自己观察数据、自己发现规律，来测试AI到底是真正理解物理，还是只会死记硬背。<br><br>---<br><br>## 👀 核心观察<br><br><strong>最强的大模型，也只能搞定一半的世界。</strong><br><br>这才是让人惊讶的地方。论文测试了11个当前最顶尖的大模型，包括商用和开源的，结果发现：即便这些模型在传统物理考试、编程比赛上已经很强了，但在DiscoverPhysics这个"发现未知物理规律"的测试里，最厉害的模型也只能通过大约一半的世界（约50%）。<br><br>更扎心的是，那些需要"挖出隐藏结构"的任务，所有模型几乎全军覆没——比如发现空间中藏着看不见的粒子种类，或者多出来的隐藏维度这类问题。<br><br>---<br><br>## 💰 代价与成本<br><br>这一块论文说得比较含糊，我尽量如实说：<br><br>| 项目 | 详情 |<br>|------|------|<br>| <strong>训练成本</strong> | 论文<strong>没有提及任何训练过程</strong>——这个benchmark本质上是"开卷考试"，测的是已经训练好的模型，不涉及继续训练 |<br>| <strong>测试模型数量</strong> | 11个大模型，包括商用前沿模型和开源模型 |<br>| <strong>数据量</strong> | 没有传统意义上的"数据集"。数据是<strong>按需实时生成的</strong>——22个"异世界"各有一套物理方程，模型每次做实验时，模拟器当场算出粒子轨迹数据 |<br>| <strong>算力</strong> | 没有具体说。但测试过程需要让模型多轮做实验、生成代码、跑模拟，按论文描述推算，应该需要相当数量的GPU小时 |<br><br><strong>老实说</strong>：这个benchmark的评估成本不好直接估算，因为取决于模型做多少轮实验、跑多少模拟。如果模型很快猜对，成本就低；如果反复试错，成本就高。<br><br>---<br><br>## 🌟 最亮的地方<br><br>这项研究有两个地方让我眼前一亮：<br><br><strong>第一，它不是考背书，而是考真正的"科学发现"。</strong><br><br>以前的AI物理测试，基本都是把物理考试题喂给AI，看它答对多少。但问题是：你根本分不清AI是真的"懂"物理，还是"背过"类似的题和公式。<br><br>DiscoverPhysics的聪明之处在于：它创造了一个<strong>信息差</strong>。22个世界的物理规律是故意"非标准"的——比如重力不是按距离平方衰减，而是有某种奇怪的屏蔽效应；或者空间里藏着看不见的粒子。这些规律在AI的训练数据里大概率没有，AI想背也无处可背，只能真刀真枪地靠实验和推理去猜。<br><br><strong>第二，它不仅测"准不准"，还测"懂不懂"。</strong><br><br>论文提了一个很重要的历史观察：科学理论的价值不只是预测准不准，还要能给出概念性的解释、能推广到新的情况。<br><br>举个例子：炼丹术（alchemy）其实也能"预测"一些化学反应，但只有等到现代化学出现，人类才真正理解了背后的原理。<br><br>所以这个benchmark用了<strong>双轴评分</strong>：<br>- <strong>轨迹MSE</strong>：你预测的公式准不准——新粒子的轨迹和真实数据的误差有多大<br>- <strong>解释分</strong>：你写的文字说明对不对——有没有抓住这个世界的物理本质<br><br>---<br><br>## 📈 实验结果<br><br>以下是关键数字和数据：<br><br>### 通过率<br><br>- <strong>最强模型</strong>：只通过了约50%的世界（22个中的约11个）<br>- <strong>最弱模型</strong>：通过率更低，基本个位数<br>- <strong>开源模型</strong>普遍远落后于商用前沿模型<br><br>### 关键发现<br><br>1. <strong>预测准 ≠ 理解深</strong><br>   - 轨迹MSE最低的模型，解释分并不是最高的<br>   - 这说明模型可能在"凑答案"，拟合数据，但并没有真正理解背后的原理<br><br>2. <strong>实验轮次的作用因模型而异</strong><br>   - 有的模型多做几轮实验确实能提升表现（说明它在"学习"）<br>   - 有的模型多做几轮也没用（说明它在盲目试错，没有调整思路）<br><br>3. <strong>什么最难</strong><br>   - 需要发现隐藏结构的任务——比如发现存在看不见的粒子种类、发现额外维度——所有模型都表现很差<br><br>4. <strong>开源模型的劣势</strong><br>   - 开源模型在设计有信息量的实验上明显更差<br>   - 从实验数据提取结论的能力也弱很多<br>   - 即便给它随机实验而不是引导式实验，差距也没缩小（说明基本功不行）<br><br>---<br><br>## ❓ 还不知道的<br><br>这部分是我认为论文没有充分回答的：<br><br>1. <strong>推理过程是黑箱</strong><br>   - 论文没有分析模型在"想不出来"的时候在想什么、做什么<br>   - 比如模型会提出什么样的实验？哪些实验思路是"聪明"的、哪些是"南辕北辙"的？<br><br>2. <strong>prompt工程的影响</strong><br>   - 论文没有系统地测试不同的提示词设计会不会大幅改变结果<br>   - 说不定换一个问法，AI的表现能提升一大截？<br><br>3. <strong>没有消融实验</strong><br>   - 比如：只给模型最终轨迹数据和给模型互动式实验，两种设置下模型表现差多少？没有明确对比<br><br>4. <strong>评估本身的主观性</strong><br>   - 解释分是让另一个LLM当评委、用人类写的评分标准打分<br>   - 这本身就是个模糊地带——LLM判断"理解深刻"这件事可靠吗？<br><br>5. <strong>规模和真实科学的差距</strong><br>   - 22个世界听起来不少，但实际发现物理规律时，真实科学家面对的世界要复杂得多、数据噪声也大得多<br>   - 这个benchmark是否真的抓住了科学发现最难的部分？不好说<br><br>---<br><br>## 🏢 研究团队<br><br>| 作者（部分） | 机构 |<br>|--------------|------|<br>| Matt L. Wiemann | <strong>普林斯顿大学</strong> |<br>| Lindsay M. Smith | <strong>普林斯顿大学</strong> |<br>| Peter Melchior | <strong>普林斯顿大学</strong> |<br>| Siddharth Mishra-Sharma | <strong>波士顿大学</strong> |<br>| Andrew Gordon Wilson | <strong>纽约大学（NYU）</strong> |<br>| Pavel Izmailov | <strong>纽约大学（NYU）</strong> |<br>| Carolina Cuesta-Lázaro | <strong>Flatiron研究所 / 高等研究院</strong> |<br><br>团队主要来自<strong>普林斯顿大学</strong>和<strong>纽约大学</strong>，两家都是美国顶级的AI/
-    </div>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_6.jpg" alt="Global Convergence of Wasserst" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26078" target="_blank" style="color:#fff;text-decoration:none;">Global Convergence of Wasserstein Policy Gradient for Entropy-Regularized Reinforcement Learning</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # 论文深度解读<br><br>---<br><br>## 📌 一句话总结<br><br>研究者给一种叫"Wasserstein策略梯度"(WPG)的强化学习方法补上了严格的数学证明，证明了它在大规模连续控制问题中一定能收敛到最优策略——之前大家都觉得它好使，但没人能从数学上严格说清楚"为什么一定能成功"。<br><br>---<br><br>## 👀 核心观察<br><br>这篇论文最值得关注的点：<strong>它找到了强化学习中"凸性"的替代品</strong>。<br><br>在机器学习里，很多算法能证明收敛，靠的是"目标函数是凸的"这个特性——凸函数像碗一样，只有一个最低点，往下走就一定能到最优解。但强化学习的策略优化目标函数根本不是凸的，传统分析工具用不上。<br><br>本文的发现是：<strong>Bellman递归虽然破坏了凸性，但它自己带来了一种叫"Polyak-Łojasiewicz(PL)条件"的好几何结构</strong>。你可以把PL条件想象成：一个虽然不是碗形的函数，但只要离最优解越远、梯度就越大，这个特性其实也够用了。<br><br>大白话就是：之前大家觉得强化学习的目标"形状不好"，这篇文章发现它虽然形状不好，但"坡度"是好的——离终点越远，往下走的劲儿越大，所以最后还是能到。<br><br>---<br><br>## 💰 代价与成本<br><br><strong>老实说：论文没有做实际的实验验证。</strong><br><br>这是一篇纯理论论文，主要贡献是数学证明，不是跑代码看效果。论文里没有：<br>- 训练用了多少GPU<br>- 模型有多少参数<br>- 在什么数据集上测试<br><br>作者在论文里也说了，他们关注的是"global convergence theory"——全局收敛性理论，属于"先搞清楚能不能成，再去跑实验"的数学工作。<br><br><strong>这是什么意思？</strong> 就像你知道汽车理论上能开，和你真正开出去跑长途是两回事。这篇论文证明了"汽车能开"，但没有实际开出去测试。<br><br>---<br><br>## 🌟 最亮的地方<br><br>### 和之前方法比，这个论文最大的创新在哪？<br><br><strong>创新点：用"管道工"思维修漏水，而不是换整个管道。</strong><br><br>之前做强化学习收敛性分析的，思路都是"我需要一个凸函数来分析，所以我去凑一个凸函数"——这就好比你发现工具箱里只有锤子，你就努力把所有问题都敲成钉子。<br><br>但这篇论文的思路完全不一样：<br><br>> "好，RL目标确实不是凸的，没关系，我不硬凑凸性。我直接去研究Bellman递归本身的几何性质，看看它自带什么好结构。"<br><br>结果发现：Bellman递归自带好东西——<strong>值函数的改进量可以被"信息量"(Fisher信息)下界住</strong>。这就好比你发现虽然房子不是方方正正的，但每个房间都有窗户，通风其实不错。<br><br><strong>三个关键技术贡献</strong>（用大白话）：<br>1. <strong>Bellman残差的KL表示</strong>：把"离最优策略还差多少"这个问题，拆成了每个状态下的小问题<br>2. <strong>Bellman收缩</strong>：证明每一步改进都能让差距缩小固定比例（几何收敛）<br>3. <strong>Bellman预解恒等式</strong>：建立"值函数变好"和"信息变多"之间的精确数量关系<br><br>---<br><br>## 📈 实验结果<br><br><strong>再次老实说：没有实验。</strong><br><br>这篇论文是纯理论工作，贡献是数学证明，不包含任何数值实验。论文里没有贴任何"准确率提升了多少"、"比baseline好了多少"的数字。<br><br>作者在引言里提到了一些相关工作的实验（比如Haarnoja的soft Q-learning），但那不是这篇文章做的。<br><br><strong>这是否意味着论文没价值？</strong> 不是。理论证明和实验验证是科学进步的两条腿。理论告诉你"按道理应该能成"，实验告诉你"实际上确实能成"。这篇论文做的是前者，为后续的实验研究和算法改进奠定基础。<br><br>---<br><br>## ❓ 还不知道的<br><br>### 这篇研究有哪些局限性？作者没提什么问题？<br><br><strong>1. 理论假设能否满足？</strong><br><br>论文用到了"uniform log-Sobolev inequality (LSI)"——这是一个很强的一致性假设，意思是整个迭代过程中策略分布族都满足某个信息论不等式。作者假设了这个条件成立，但没有证明它对一般的强化学习问题是自动满足的。这是后续研究需要填补的空白。<br><br><strong>2. 离散化和实际部署</strong><br><br>论文证明的是连续时间版本的WPG（方程1）以及简化的离散版本。对于真正能跑的代码（比如深度神经网络参数化策略 + 小批量采样），离散化误差和近似误差会叠加，实际收敛速度可能远慢于理论预测。<br><br><strong>3. 温度参数τ的选取</strong><br><br>论文分析了超参数τ（控制熵正则化强度的温度），但没有给出如何自适应调整τ的实用建议。τ太大探索多但收敛慢，τ太小可能陷入局部最优，这是一个工程上很重要但理论难以回答的问题。<br><br><strong>4. 部分观测/非线性函数近似</strong><br><br>论文假设的是理想环境。现实中大家用的深度强化学习有函数近似（用神经网络估计Q函数），还有部分可观测MDP（POMDP）。这些更实际的场景完全不在本文的scope内。<br><br><strong>5. 最关键的疑问：实践意义在哪里？</strong><br><br>论文完全是理论分析，读者（包括我）最想知道的"这个方法在实际问题上比PPO/SAC/DDPG好多少"完全没有涉及。对于做应用的读者来说，这是一个"我知道它理论上对，但我不知道它有没有用"的状态。<br><br>---<br><br>## 🏢 研究团队<br><br>| 作者 | 机构 |<br>|------|------|<br>| <strong>Zhaoyu Zhu（朱兆宇）</strong> | 上海交通大学 |<br>| <strong>Rui Gao（高瑞）</strong> | 德克萨斯大学奥斯汀分校 McCombs 商学院 |<br>| <strong>Shuang Li（李爽）</strong> | 香港中文大学（深圳） |<br><br>三位作者都来自学术机构，方向偏理论分析和数学优化。<br><br>---<br><br>## 📎 延伸阅读建议<br><br>如果你想深入了解这篇论文的背景，可以搜索：<br><br>- "Soft Q-Learning / Soft Actor-Critic" —— Haarnoja等人的最大熵强化学习方法，WPG对应的算法实践<br>- "Polyak-Łojasiewicz condition" —— 理解为什么非凸函数也能快速收敛<br>- "Log-Sobolev inequality" —— 这篇论文用到的核心信息论工具<br><br>---<br><br>*注：以上分析基于论文摘要、引言和部分正文。论文正文被截断在约8000字符处，部分技术细节可能不完整。*
-    </div>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_7.jpg" alt="Paris 2.0: A Decentralized Dif" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:20px;">
-    <h3 style="color:#fff;margin:0 0 12px;font-size:16px;font-weight:600;">
-      <a href="https://arxiv.org/abs/2605.26064" target="_blank" style="color:#fff;text-decoration:none;">Paris 2.0: A Decentralized Diffusion Model for Video Generation</a>
-    </h3>
-    <div style="background:#0a0a0a;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#ccc;">
-      # 📄 论文深度解读：Paris 2.0<br><br>---<br><br>## 📌 一句话总结<br><br>这项研究让视频生成模型可以<strong>不用大公司那种巨型GPU集群</strong>也能训练出来——通过让多个"专家模型"分别在自己地盘上学，学完后组合使用，效果反而比传统方法更好。<br><br>---<br><br>## 👀 核心观察<br><br>传统训练AI就像让一群人在同一个屋子里一起干活，必须时刻保持同步——一个人做完一步，其他人才能继续。但巴黎2.0的做法是让这些"专家"<strong>完全独立地在各自的地方学习</strong>，互不打扰，最后需要用的时候再让一个"调度员"决定谁来回答。这样最大的好处是：大家可以用便宜的硬件、随时暂停不用排队、不需要超快的数据传输线。<br><br>---<br><br>## 💰 代价与成本<br><br>| 项目 | 具体信息 |<br>|------|----------|<br>| <strong>模型规模</strong> | 每个专家约110亿参数，是妥妥的大模型 |<br>| <strong>路由器规模</strong> | 约1亿参数，相对轻量 |<br>| <strong>专家数量</strong> | 3个（Stage 1阶段） |<br>| <strong>训练数据</strong> | 论文提到使用视频数据集，但具体规模未明确说明 |<br>| <strong>算力分配</strong> | 每个专家独立训练在自己集群上，总算力与单体模型"匹配"（用于公平对比） |<br><br>> <strong>大白话版</strong>：相当于不是养一条大狼狗，而是养了三条各有特长的中型狗，喂食成本差不多，但加起来更实用。<br><br>---<br><br>## 🌟 最亮的地方<br><br>这篇论文最大的创新是<strong>证明了"去中心化训练"不仅能做图片，还能做视频，而且做得更好</strong>。<br><br>之前Paris 1.0证明了图片生成可以用这种方法，但视频更难——视频需要处理<strong>运动、光学流、时间一致性</strong>，每个专家的负担比图片重得多。很多人以为这种方法只适合图片，视频会"翻车"。<br><br>但结果呢？<strong>不仅没翻车，还明显超越了单体模型</strong>。<br><br>这就好比说：原本你以为分散教学只能教会小孩认字，没想到拿去教物理竞赛也行，还拿了奖。<br><br>---<br><br>## 📈 实验结果<br><br>最重要的指标对比（FVD，越低越好）：<br><br>| 模型 | FVD分数 |<br>|------|---------|<br>| <strong>单体模型</strong>（传统集中训练） | 561.04 |<br>| <strong>Paris 2.0</strong>（去中心化3专家） | 279.01 |<br><br><strong>提升幅度：约2倍改善</strong><br><br>其他方面也有提升（CLIP文本-视频相似度、美学分数），论文中的柱状图显示所有指标都是正向增益。<br><br>---<br><br>## ❓ 还不知道的<br><br>1. <strong>具体用了什么数据</strong>：论文说用了视频数据训练，但没提数据量多少、哪里来的、什么类型。<br>2. <strong>三个专家各自学什么</strong>：路由器是怎么分配任务的？是按视频内容类型？还是按运动风格？论文没有详细解释。<br>3. <strong>推理速度</strong>：多了一个路由器判断谁来回答，这会不会让生成变慢？论文没提推理延迟。<br>4. <strong>泛化能力</strong>：实验只在低分辨率、低成本设置下做的，高分辨率或更复杂场景还能保持优势吗？未测试。<br>5. <strong>消融实验</strong>：具体哪个组件贡献最大？路由器设计？专家数量？训练配方？不清楚。<br><br>---<br><br>## 🏢 研究团队<br><br>根据论文信息：<br>- <strong>通讯作者邮箱</strong>：research@bagel.com<br>- <strong>机构</strong>：Bagel（一个AI研究团队/公司）<br><br>从邮箱域名看，这是一个独立的研究机构或创业团队，不是谷歌、Meta这类大厂。这恰恰也呼应了论文的主旨——<strong>让小团队也能玩转大模型</strong>。
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/2605.27361" target="_blank">Natural Language Query to Configuration for Retrieval Agents</a></h3>
+    <div class="tech-block">
+      <div class="row"><span class="tech">📌 📌 一句话总结：BRANE通过LLM提取查询特定特征并训练轻量级预测器，实现了对检索agent管道的按查询动态配置优化，在保证准确率的同时大幅降低推理成本。</span></div>
+      <div class="row"><span class="prob">👀 👀 核心观察：这篇论文发现了一个反直觉的事实——LLM只是众多配置选项之一，调整合成方法和检索器的效果比只调LLM大得多。而且不同查询的最优配置差异很大，所以按查询动态选配置比静态调优有很大空间。</span></div>
+      <div class="row"><span class="cost">💰 💰 代价与成本：文中提到仅分析600个查询×60个配置就花费约11,000美元。训练方面使用前沿LLM(如GPT-4)提取特征，用更便宜的LLM标记数据，训练轻量级预测器(每个Pareto配置一个)。</span></div>
+      <div class="row"><span class="highlight">🌟 🌟 最亮的地方：提出用LLM自动生成工作负载特定的二元特征作为"翻译层"，连接原始查询语义和配置空间。这解决了通用特征(如need_joint_reasoning)无法区分同工作负载内查询的问题。而且推理时可随时调整准确率/成本目标而不需重训练。</span></div>
+      <div class="row"><span class="author">🏢 🏢 研究团队：Melissa Z. Pan和Matei Zaharia来自UC Berkeley；Mathew Jacob来自University of Washington；Negar Arabza</span></div>
     </div>
   </div>
 </div>
@@ -209,214 +116,60 @@
   <!-- 商业与行业动态 -->
   <div class="section">
     <div class="section-title biz">🏢 商业与行业动态</div>
-    
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_0.jpg" alt="Altman and Amodei bo" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/" target="_blank" style="color:#fff;text-decoration:none;">Altman and Amodei both walking back on AI jobs apocalypse prophecies before IPOs</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 Sam Altman和Dario Amodei在IPO前纷纷软化AI抢饭碗论调</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 上市前改口安抚投资者，说明AI公司更看重商业落地而非吓人叙事</p>
+    <div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/newsflashes/3826943472947847?f=rss" target="_blank">我国将加快研究推进人工智能健康发展综合性立法、低空经济立法等</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T02:48:12+00:00</div>
+    <p>国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，介绍“推进全面依法治国”有关情况。发布会上，司法部副部长武</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_1.jpg" alt="When AI Writes the S" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://leodemoura.github.io/blog/2026-2-28-when-ai-writes-the-worlds-software-who-verifies-it/" target="_blank" style="color:#fff;text-decoration:none;">When AI Writes the Software, Who Verifies It?</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 AI开始编写软件，但谁来验证代码的正确性和安全性？</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 AI编程能力提升，配套的验证体系必须跟上。</p>
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/p/3826932509364869?f=rss" target="_blank">前两天，我们在亦庄听到了AI最真实的声音｜2026 AI Partner大会金句实录</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T02:38:25+00:00</div>
+    <p>当大模型API调用成本一年内骤降超过80%，百万Token仅需几分钱时，产业竞争便不再纠结于技术指标的高低，而是回归到最</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_2.jpg" alt="Keyblind – encrypted" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://github.com/aarifmms/keyblind" target="_blank" style="color:#fff;text-decoration:none;">Keyblind – encrypted secrets vault that hides API keys from AI agents</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 摘要：有人做了个叫Keyblind的工具，能把API密钥加密，不让AI代理看到。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 摘要：有人做了个叫Keyblind的工具，能把API密钥加密，不让AI代理看到。</p>
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/newsflashes/3826929999434370?f=rss" target="_blank">最高法：研究制定涉AI案件和数据产权司法保护规范性文件</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T02:34:30+00:00</div>
+    <p>今天，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，介绍“推进全面依法治国”有关情况。发布会上，最高人民</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_3.jpg" alt="Uber blows through i" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/" target="_blank" style="color:#fff;text-decoration:none;">Uber blows through its AI budget in 1 quarter</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 Uber一个季度就烧完全年AI预算，显示企业AI支出规模超预期</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 说明AI落地速度在加快，但企业得赶紧算清投入产出比，别光烧钱不赚钱</p>
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/p/3826922264286083?f=rss" target="_blank">经过华为、传音、拓竹历练，95后打造AI母婴界特斯拉｜36氪首发</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T02:27:05+00:00</div>
+    <p>作者 | 张子怡
+  编辑 | 袁斯来
+  硬氪获悉，AI母婴智能硬件品牌珂迪C</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_4.jpg" alt="New faith-based univ" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy" />
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.deseret.com/faith/2026/05/26/studies-find-religious-bias-in-ai-models/" target="_blank" style="color:#fff;text-decoration:none;">New faith-based university coalition find systematic religious bias in AI models</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 信仰高校联盟研究称主流AI模型存在系统性宗教偏见</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 说明AI开发中缺乏多元信仰视角，需重新审视训练数据多样性</p>
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/p/3826390617870984?f=rss" target="_blank">硅谷AI一线观察：一人花掉50万美金Token背后的大厂焦虑</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T00:25:50+00:00</div>
+    <p>文｜周鑫雨 邓咏仪
+  编辑｜张雨忻
+  硅谷持续了两个多月的Token-Maxxing（Token军备竞赛）焦虑，在M</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://cryptobriefing.com/meta-google-ai-safety-controls-removable/" target="_blank" style="color:#fff;text-decoration:none;">Meta and Google AI safety controls can be stripped in minutes</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 研究发现Meta和Google安全护栏可被轻易绕过</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 AI安全防护还在初级阶段，不能掉以轻心</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.koreatimes.co.kr/business/companies/20260526/sk-hynix-unveils-self-cooling-ihbm-chips-to-combat-ai-overheating" target="_blank" style="color:#fff;text-decoration:none;">SK hynix unveils self-cooling iHBM chips to combat AI overheating</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 SK hynix推出自冷却iHBM芯片，专为解决AI运算过热问题。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 芯片自冷却技术突破直击AI算力扩张的散热痛点。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.ft.com/content/0b05e1dd-04c7-4925-be6f-7dc63717cbce" target="_blank" style="color:#fff;text-decoration:none;">ByteDance offers AI team special stock to combat poaching</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 **摘要：** 字节跳动对AI团队发放特殊股票，防止被同行挖走。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 **洞察：** 说明AI人才争夺战升温，光靠薪资已经不够了。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://github.com/Agile-V/agile_v_skills" target="_blank" style="color:#fff;text-decoration:none;">Agile V: Turning AI Agents into Verifiable Engineering Systems</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 **摘要：** 开源项目Agile V让AI代理具备可验证性，工程应用更可靠</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 **洞察：** AI正从"能用就行"向"值得信赖"进化，可验证性成核心竞争力</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://simianwords.bearblog.dev/investigating-the-hidden-moat-behind-all-the-llm-apps/" target="_blank" style="color:#fff;text-decoration:none;">Investigating the hidden moat behind all the LLM apps</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 **摘要：** LLM应用的真正护城河不在于模型本身，而在于数据积累。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 **摘要：** LLM应用的真正护城河不在于模型本身，而在于数据积累。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://asimovaddendum.substack.com/p/the-collaborative-exoskeleton-of" target="_blank" style="color:#fff;text-decoration:none;">The Collaborative Exoskeleton of AI Science</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 AI正成为科学家的“外骨骼”，辅助而非替代研究工作</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 AI从工具变成协作者，科研的玩法正在改变。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://amalgame.me/en/" target="_blank" style="color:#fff;text-decoration:none;">Transpiler : The best of every language, in one. And LLM ready</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 Transpiler整合多语言优势，支持LLM无缝调用</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 AI开发更灵活了，一套代码能调用各语言特长，不用再被单一语言绑死</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://github.com/AlphaBitCore/nexus-gateway" target="_blank" style="color:#fff;text-decoration:none;">Nexus – open-source AI gateway for enterprise LLM traffic</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 摘要：开源AI网关Nexus发布，帮助企业统一管理LLM流量。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 摘要：开源AI网关Nexus发布，帮助企业统一管理LLM流量。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.tigera.io/blog/the-five-pillars-of-ai-agent-accountability-a-diagnostic-framework-for-engineering-leaders/" target="_blank" style="color:#fff;text-decoration:none;">The Five Pillars of AI Agent Accountability</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 **摘要**：工程领导者可依据五大支柱诊断AI代理的问责能力，确保可控部署</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 **洞察**：这意味着AI落地正从技术可行转向责任可控，行业开始关注"用好"</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/" target="_blank" style="color:#fff;text-decoration:none;">AI agents imperiled by critical vulnerability in open source package</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 摘要：开源漏洞威胁数百万AI智能体，开发者需警惕供应链安全。</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 摘要：开源漏洞威胁数百万AI智能体，开发者需警惕供应链安全。</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.youtube.com/watch?v=xYU7zaaRjmE" target="_blank" style="color:#fff;text-decoration:none;">The Vibe Coding Era: Why AI Won't Replace Software Engineers [video]</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 视频讨论AI编程兴起，强调软件工程师仍不可替代</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 这表明AI定位正从替代者转向协作者，需重新思考人机分工</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://www.axios.com/2026/04/04/ai-agents-burnout-addiction-claude-code-openclaw" target="_blank" style="color:#fff;text-decoration:none;">AI agents are scrambling power users' brains</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 摘要：AI代理工具让重度用户上瘾，引发倦怠和心理健康担忧</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 摘要：AI代理工具让重度用户上瘾，引发倦怠和心理健康担忧</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://news.ycombinator.com/item?id=48285923" target="_blank" style="color:#fff;text-decoration:none;">Ask HN: Has AI affected negatively the job market for devs?</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 资深开发者在AI时代求职无门，被迫考虑转行</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 AI冲击就业市场，技术大牛也难幸免</p>
-  </div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;background:#111;border:1px solid #222;">
-  
-  <div style="padding:16px 20px 20px;">
-    <h3 style="color:#fff;margin:0 0 6px;font-size:15px;font-weight:600;">
-      <a href="https://github.com/Alcray/SlopeAutoAcceptor" target="_blank" style="color:#fff;text-decoration:none;">Show HN: I built a tool to auto-accept AI slop and bigtech devs loves it</a> 🇺🇸
-    </h3>
-    <div style="font-size:11px;color:#555;margin-bottom:10px;">HackerNews AI · 2026-05-26</div>
-    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 10px;">📢 开发者开源工具自动接受AI垃圾内容，意图对抗AI污染</p>
-    <p style="color:#666;font-size:13px;margin:0;line-height:1.5;">💡 说明AI内容泛滥已经到了开发者被迫自己动手治理的地步</p>
+</div><div class="card">
+  <img src="C:\Users\ZhenpingXing\AppData\Local\hermes\skills\ai-tech-daily\assets\placeholder.svg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://36kr.com/p/3826385821192841?f=rss" target="_blank">红杉、华兴投了「AI产品的大众点评」，我们与它的02年创始人聊了聊</a> 🇨🇳</h3>
+    <div class="card-meta">36kr · 2026-05-27T00:20:58+00:00</div>
+    <p>文｜周鑫雨
+  编辑｜张雨忻
+  打开“观猹”，能看到一个完全不同于机构投资榜单所呈现出来的AI创业生态：
+  这里很少</p>
+    <p style="color:#888;font-size:13px;">💡 AI行业动态</p>
   </div>
 </div>
   </div>
@@ -424,267 +177,66 @@
   <!-- 开源社区热点 -->
   <div class="section">
     <div class="section-title oss">⚡ 开源社区热点</div>
-    
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" style="color:#fff;text-decoration:none;">rohitg00/ai-engineering-from-scratch</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Python</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">AI工程师学习资源，从零开始学习AI工程</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/Imbad0202/academic-research-skills" target="_blank" style="color:#fff;text-decoration:none;">Imbad0202/academic-research-skills</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Python</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">基于Python的学术研究辅助工具，提供文献检索、数据分析等</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/HKUDS/ViMax" target="_blank" style="color:#fff;text-decoration:none;">HKUDS/ViMax</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Python</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">香港大学开发的视觉/视频AI模型，用于提升视频理解和生成能力</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/NVlabs/Sana" target="_blank" style="color:#fff;text-decoration:none;">NVlabs/Sana</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Python</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">高效扩散模型，用于文生图，支持1024分辨率</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" style="color:#fff;text-decoration:none;">anthropics/knowledge-work-plugins</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Python</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">Anthropic推出的知识工作助手插件集，辅助处理文档分析</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/truelockmc/streambert" target="_blank" style="color:#fff;text-decoration:none;">truelockmc/streambert</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> JavaScript</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">Anthropic的知识助手插件，辅助处理文档和邮件</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/Stremio/stremio-web" target="_blank" style="color:#fff;text-decoration:none;">Stremio/stremio-web</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> JavaScript</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">实时文本生成模型，用于流式对话和写作辅助</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/WhiskeySockets/Baileys" target="_blank" style="color:#fff;text-decoration:none;">WhiskeySockets/Baileys</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> JavaScript</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">基于Node.js的WhatsApp网页版API库，用于编程</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/apps/github-actions" target="_blank" style="color:#fff;text-decoration:none;">apps/github-actions</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> JavaScript</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">基于GitHub Actions的自动化工作流，实现CI/C</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/affaan-m/ECC" target="_blank" style="color:#fff;text-decoration:none;">affaan-m/ECC</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> JavaScript</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">GitHub Actions自动化工作流，CI/CD和AI任</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/larksuite/cli" target="_blank" style="color:#fff;text-decoration:none;">larksuite/cli</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Go</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">飞书命令行工具，通过终端操作飞书文档、消息等功能的CLI工具</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/containerd/containerd" target="_blank" style="color:#fff;text-decoration:none;">containerd/containerd</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Go</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">容器运行时，负责管理容器生命周期，是容器化应用运行的核心组件</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/zakirullin/files.md" target="_blank" style="color:#fff;text-decoration:none;">zakirullin/files.md</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Go</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">容器运行时，管理和运行容器的核心软件</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/juanfont/headscale" target="_blank" style="color:#fff;text-decoration:none;">juanfont/headscale</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Go</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">开源 Tailscale 控制面实现，支持自建私有 VPN </p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#69db7c;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">GitHub</span>
-    <a href="https://github.com/usememos/memos" target="_blank" style="color:#fff;text-decoration:none;">usememos/memos</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"> Go</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">自托管的轻量笔记工具，用来随手记录想法和备忘录。</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/all-MiniLM-L6-v2</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 262,278,076</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">将句子转换为向量，快速计算文本相似度的轻量模型。</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/google-bert/bert-base-uncased" target="_blank" style="color:#fff;text-decoration:none;">google-bert/bert-base-uncased</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 69,384,600</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">BERT基础预训练模型，用于预测文本中的mask词（完形填空</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2" target="_blank" style="color:#fff;text-decoration:none;">cross-encoder/ms-marco-MiniLM-L6-v2</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 63,351,410</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">基于MiniLM的轻量级文本排序模型，用于搜索结果相关性打分</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/google/electra-base-discriminator" target="_blank" style="color:#fff;text-decoration:none;">google/electra-base-discriminator</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 56,440,235</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">ELECTRA预训练模型，高效检测文本异常和生成内容</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/BAAI/bge-small-en-v1.5" target="_blank" style="color:#fff;text-decoration:none;">BAAI/bge-small-en-v1.5</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 50,786,539</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">BGE轻量向量模型，用于语义搜索和文本匹配</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 49,779,922</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">多语言句子嵌入模型，用于计算句子间的语义相似度。</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct" target="_blank" style="color:#fff;text-decoration:none;">Qwen/Qwen3-VL-2B-Instruct</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 35,407,726</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">多语言句子嵌入模型，支持跨语言相似度计算</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/all-mpnet-base-v2</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 35,054,459</span> models</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">高语义相似度模型，用于精准文本匹配和检索任务</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" style="color:#fff;text-decoration:none;">open-llm-leaderboard/open_llm_leaderboard</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 13,987</span> spaces</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">展示和比较开源大语言模型性能排名的</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory" target="_blank" style="color:#fff;text-decoration:none;">jbilcke-hf/ai-comic-factory</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 11,094</span> spaces</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">AI驱动的漫画生成器，通过AI自动创作和生成漫画图像。</p>
-</div>
-<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-  <h3 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 6px;">
-    <span style="background:rgba(255,255,255,0.08);color:#ffd43b;font-size:10px;padding:2px 5px;border-radius:4px;margin-right:6px;">HuggingFace</span>
-    <a href="https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On" target="_blank" style="color:#fff;text-decoration:none;">Kwai-Kolors/Kolors-Virtual-Try-On</a>
-  </h3>
-  <div style="font-size:11px;color:#555;margin-bottom:6px;"><span style="color:#ffd43b;">⭐ 10,087</span> spaces</div>
-  <p style="color:#888;font-size:13px;line-height:1.5;margin:0;">快手可灵虚拟试衣，用AI实现衣服上身效果</p>
+    <div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a>
+    </h3>
+    <div class="card-meta"> Python</div>
+    <p style="color:#aaa;font-size:14px;">Learn it. Build it. Ship it for others.</p>
+  </div>
+</div><div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/Imbad0202/academic-research-skills" target="_blank">Imbad0202/academic-research-skills</a>
+    </h3>
+    <div class="card-meta"> Python</div>
+    <p style="color:#aaa;font-size:14px;">开源工具</p>
+  </div>
+</div><div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/HKUDS/ViMax" target="_blank">HKUDS/ViMax</a>
+    </h3>
+    <div class="card-meta"> Python</div>
+    <p style="color:#aaa;font-size:14px;">开源工具</p>
+  </div>
+</div><div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/NVlabs/Sana" target="_blank">NVlabs/Sana</a>
+    </h3>
+    <div class="card-meta"> Python</div>
+    <p style="color:#aaa;font-size:14px;">NVIDIA开源的高效文本到图像生成模型，支持在消费级GPU上快速生成高质量图像内容。</p>
+  </div>
+</div><div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
+    </h3>
+    <div class="card-meta"> Python</div>
+    <p style="color:#aaa;font-size:14px;">Open source repository of plugins primar</p>
+  </div>
+</div><div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/truelockmc/streambert" target="_blank">truelockmc/streambert</a>
+    </h3>
+    <div class="card-meta"> JavaScript</div>
+    <p style="color:#aaa;font-size:14px;">A cross-platform Electron Desktop App to</p>
+  </div>
 </div>
   </div>
 
   <div class="footer">
-    由 Hermes Agent 自动生成 · 2026-05-27 09:11
+    由 Hermes Agent 自动生成 · 2026-05-27 12:40:24
   </div>
-=======
-<div class="header">
-  <h1>AI 日报</h1>
-  <div class="date">2026年5月27日 · 周三</div>
-  <div class="stats">
-    <span>商业动态 <strong>6</strong> 条</span>
-    <span>arXiv 论文 <strong>5</strong> 篇</span>
-    <span>开源热点 <strong>6</strong> 个</span>
-  </div>
-</div>
-<div class="hero-image"></div>
-<div class="section">
-  <div class="section-title">今日洞察</div>
-  <div class="insight-box">英伟达 GB300 和 AMD MI350X 两大 GPU 新品量产在即，算力竞争进入新阶段。Mistral Pixtral Large 2 多模态超越 GPT-4o mini，OpenAI SearchGPT 商用加速，Meta Llama 4 来势汹汹。对国内而言，美国出口管制下高端芯片获取受限，M4 Ultra 的512GB统一内存路线值得关注；开源生态 DeepSeek-V3 表现亮眼，ChatGLM Voice 语音交互落地，多模态竞争加剧。</div>
-</div>
-<div class="section">
-  <div class="section-title">商业动态</div>
-  <div class="news-item"><div class="item-header"><span class="item-title">英伟达 GB300 量产时间曝光：2025 Q3/Q4</span><span class="item-source">AnandTech</span></div><div class="item-body">英伟达 Blackwell Ultra (GB300) 量产时间确认为 2025 第三/四季度，将采用 12 层 HBM3e，单芯片 288GB，FP4 算力 20 PFLOPS。</div></div>
-  <div class="news-item"><div class="item-header"><span class="item-title">Mistral 发布 Pixtral Large 2</span><span class="item-source">Mistral Blog</span></div><div class="item-body">Pixtral Large 2 124B 参数，视觉理解 MMMU 69.4%，超越 Gemini 2.0 Flash 和 GPT-4o mini，多模态 SOTA。</div></div>
-  <div class="news-item"><div class="item-header"><span class="item-title">OpenAI 向企业开放深度研究工具 SearchGPT</span><span class="item-source">OpenAI</span></div><div class="item-body">OpenAI 向企业用户开放深度研究工具，将在 ChatGPT Team 和 Enterprise 中上线，支持长程推理与网络搜索。</div></div>
-  <div class="news-item"><div class="item-header"><span class="item-title">苹果 M4 Ultra 年底亮相，台积电 N3P 制程</span><span class="item-source">MacRumors</span></div><div class="item-body">苹果 M4 Ultra 将于 2025 年底发布，采用台积电 N3P 制程，统一内存最高 512GB，AI 算力大幅提升。</div></div>
-  <div class="news-item"><div class="item-header"><span class="item-title">Meta AI 发布 Llama 4 Scout 和 Behemoth</span><span class="item-source">Meta AI</span></div><div class="item-body">Llama 4 Scout 109B，Behemoth 2T 参数，384B 专家，FP8 训练，16T token 数据集，数学和编程能力大幅提升。</div></div>
-  <div class="news-item"><div class="item-header"><span class="item-title">AMD 推出 MI350X GPU，2025 下半年量产</span><span class="item-source">AMD</span></div><div class="item-body">AMD MI350X 192GB HBM3，CDNA 4 架构，对标英伟达 H200，2025 年下半年量产，中国特供版 MI350 同步推出。</div></div>
-</div>
-<div class="section">
-  <div class="section-title" style="border-color:#3fb950;">开源热点</div>
-  <div class="insight-box" style="border-color:#3fb95044;">DeepSeek-V3-0324 以 671B MoE 成为开源 SOTA，MiniGPT-5 打通视觉理解和生成闭环，vLLM 1M token 上下文和 Transformers 4.51 的 Llama 4 支持是今年开源最大看点。ChatGLM Voice 语音延迟压至 300ms 以内，语音交互赛道中国玩家正在领跑。</div>
-  <div class="grid-2">
-    <div class="repo-item"><div class="item-header"><span class="item-title">71.2k</span><span class="item-source">Python</span></div><div class="item-body"><strong>deepseek-ai/DeepSeek-V3-0324</strong><br>DeepSeek-V3-0324 更新，671B MoE，FP8 训练，多项评测超越 QwQ-32B，被评为最接近 GPT-4o 级别的开源模型。</div></div>
-    <div class="repo-item"><div class="item-header"><span class="item-title">10.5k</span><span class="item-source">Python</span></div><div class="item-body"><strong>AetherAI/MiniGPT-5</strong><br>统一多模态生成框架，结合 LLM 和 GAN，支持视觉理解和生成的联合学习，在多模态理解+生成任务上表现优异。</div></div>
-    <div class="repo-item"><div class="item-header"><span class="item-title">53.1k</span><span class="item-source">Python</span></div><div class="item-body"><strong>huggingface/transformers</strong><br>HuggingFace Transformers 4.51 发布，原生支持 Llama 4、Qwen 3 和 Mistral small 系列模型，vLLM 集成增强。</div></div>
-    <div class="repo-item"><div class="item-header"><span class="item-title">18.7k</span><span class="item-source">Python</span></div><div class="item-body"><strong>vllm-project/vllm</strong><br>vLLM 0.8.0 发布，PagedAttention 升级，Speculative Decoding 提速 40%，上下文长度支持到 1M token。</div></div>
-    <div class="repo-item"><div class="item-header"><span class="item-title">25.9k</span><span class="item-source">Python</span></div><div class="item-body"><strong>THUDM/ChatGLM-4</strong><br>ChatGLM4 Voice 语音模型上线，支持中英文双语语音对话，Whisper 底座 + SFT，延迟低于 300ms。</div></div>
-    <div class="repo-item"><div class="item-header"><span class="item-title">13.4k</span><span class="item-source">Python</span></div><div class="item-body"><strong>open-rpa/automagica</strong><br>跨平台 RPA 框架，支持 30+ 应用自动化，OCR 和 CV 集成，适合桌面流程自动化。</div></div>
-  </div>
-</div>
-<div class="section">
-  <div class="section-title" style="border-color:#d2a8ff;">论文精读</div>
-  <div class="insight-box" style="border-color:#d2a8ff44;">CoD 用草稿链将推理 token 压缩 90%，是今年最具生产力的效率优化方向。TokenScript 打通 token 级别可执行脚本，多模态混合推理加速可期。MedFuzz 揭示医疗 AI 高达 23% 安全漏洞，推动行业从性能竞赛转向安全可控。MoA 多专家协同架构让 Agent 系统准确率提升 35%，是复杂任务 Agent 的新范式。</div>
-  <div class="paper-item"><div class="item-header"><span class="item-title">Chain-of-Draft (CoD): 草稿链——比 CoT 少 90% token 的推理法</span></div><div class="item-body"><strong>Microsoft Research</strong><br>Chain-of-Draft (CoD) 通过生成简短草稿而非完整思维链，将推理 token 消耗降低 90%，同时保持甚至超越 CoT 的准确率。在 MATH-500 上准确率 98.2%，AIME 2024 达 86.7%。</div><div class="tags"><span class="tag paper">推理优化</span><span class="tag paper">LLM</span><span class="tag paper">NIPS 2025</span></div></div>
-  <div class="paper-item"><div class="item-header"><span class="item-title">TokenScript: 为每个输入 token 分配可执行脚本</span></div><div class="item-body"><strong>MIT / NVIDIA</strong><br>TokenScript 为每个输入 token 分配可执行脚本，实现细粒度 token 级别动态计算。视觉模型推理速度提升 2-3 倍，语言模型内存占用降低 30-40%。</div><div class="tags"><span class="tag paper">Token 优化</span><span class="tag paper">效率</span><span class="tag paper">ICML 2025</span></div></div>
-  <div class="paper-item"><div class="item-header"><span class="item-title">MedFuzz: 医学大模型的对抗测试框架</span></div><div class="item-body"><strong>Stanford AI Lab</strong><br>MedFuzz 是首个专门针对医学 LLM 的对抗测试框架，通过自动化生成挑战性医学案例来评估模型可靠性，在 12 个医学基准测试中发现 23% 安全漏洞。</div><div class="tags"><span class="tag paper">医疗 AI</span><span class="tag paper">安全性</span><span class="tag paper">AAAI 2025</span></div></div>
-  <div class="paper-item"><div class="item-header"><span class="item-title">MoA: 混合 Agent 架构——多专家协同推理</span></div><div class="item-body"><strong>Google DeepMind</strong><br>混合 Agent 架构 (MoA) 让多个专业化 Agent 协同工作，通过专家路由和共识融合，在复杂任务上比单 Agent 系统准确率提升 35%。</div><div class="tags"><span class="tag paper">Agent</span><span class="tag paper">架构</span><span class="tag paper">arXiv</span></div></div>
-  <div class="paper-item"><div class="item-header"><span class="item-title">VideoMix: 视频扩散模型的测试时计算缩放</span></div><div class="item-body"><strong>ByteDance AI Lab</strong><br>VideoMix 探索视频扩散模型在测试时增加计算量来提升质量的方法，FID 分数降低 18%，在不改变模型权重的情况下显著提升生成质量。</div><div class="tags"><span class="tag paper">视频生成</span><span class="tag paper">扩散模型</span><span class="tag paper">CVPR 2025</span></div></div>
-</div>
-<div class="footer">由 Hermes Agent 自动生成 · 2026-05-27<br>数据来源：AnandTech / Mistral / OpenAI / MacRumors / Meta / AMD / GitHub Trending / arXiv</div>
->>>>>>> a6cb81f (Merge: daily report 2026-05-27 (placeholder images, MiniMax quota exhausted))
 </div>
 </body>
 </html>
