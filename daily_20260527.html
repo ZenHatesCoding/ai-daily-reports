@@ -27,35 +27,31 @@
   .section-title.biz { color: #ffd43b; border-color: #ffd43b; }
   .section-title.oss { color: #69db7c; border-color: #69db7c; }
 
-  /* 卡片 */
-  .card { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-  .card-meta { font-size: 11px; color: #888; margin-bottom: 6px; }
-  .card h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 10px; }
-  .card p { color: #aaa; font-size: 14px; line-height: 1.6; margin: 0 0 10px; }
-  .card img { max-width: 100%; border-radius: 8px; margin-bottom: 12px; display: block; }
-  .card a { color: #4dabf7; text-decoration: none; }
+  /* 卡片 — 上图下文字 */
+  .card { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; padding: 0; margin-bottom: 16px; overflow: hidden; }
+  .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; }
+  .card-body { padding: 16px 20px 20px; }
+  .card-meta { font-size: 11px; color: #666; margin-bottom: 8px; }
+  .card h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 10px; line-height: 1.4; }
+  .card h3 a { color: #fff; text-decoration: none; }
+  .card h3 a:hover { color: #4dabf7; }
+  .card p { color: #aaa; font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
   .card .source { color: #555; font-size: 12px; }
 
-  /* 论文卡片内的标签 */
-  .tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .tag { background: #1a3a5c; color: #4a9eff; font-size: 11px; padding: 3px 8px; border-radius: 6px; }
-  .authors { color: #666; font-size: 12px; }
-
   /* 论文技术说明 */
-  .tech-block { background: #0d0d0d; border-radius: 8px; padding: 14px; margin-bottom: 14px; font-size: 13px; line-height: 1.7; }
-  .tech-block .row { margin-bottom: 8px; }
+  .tech-block { background: #0d0d0d; border-radius: 8px; padding: 14px; margin-top: 12px; font-size: 13px; line-height: 1.8; }
+  .tech-block .row { margin-bottom: 6px; }
   .tech-block .row:last-child { margin-bottom: 0; }
   .prob { color: #ff6b6b; }
   .tech { color: #4dabf7; }
   .cost { color: #ffd43b; }
+  .highlight { color: #b197ff; }
+  .author { color: #888; }
 
-  /* 开源项目星级 */
-  .star { color: #ffd43b; }
-  .repo-name { color: #ddd; margin-left: 8px; }
-
-  /* 图片网格（论文配图每篇2张） */
-  .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-  .img-grid img { width: 100%; border-radius: 6px; aspect-ratio: 16/9; object-fit: cover; }
+  /* 开源项目 */
+  .card h3 .platform-tag { font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 6px; }
+  .card h3 .platform-tag.github { background: #1a3a2a; color: #69db7c; }
+  .card h3 .platform-tag.huggingface { background: #3a2a1a; color: #ffd43b; }
 
   /* 页脚 */
   .footer { text-align: center; color: #444; font-size: 12px; padding: 20px 0; }
@@ -78,108 +74,76 @@
   <!-- 论文与技术突破 -->
   <div class="section">
     <div class="section-title papers">📚 论文与技术突破</div>
-    <div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_0.jpg" alt="MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/248bdf836e81" target="_blank" style="color:#4dabf7;text-decoration:none;">MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：JSON状态评估+并行RL环境
-🎯 问题：移动GUI智能体仿真平台缺失
-⚖️ 代价：低成本并行rollouts
-✨ 亮点：JSON状态验证+并行RL+轻量级浏览器托管
-🏢 作者：Dingbang Wu @ 单位未知</p>
+    
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_0.jpg" alt="MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/248bdf836e81" target="_blank" style="color:#fff;text-decoration:none;">MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：浏览器托管移动GUI模拟环境</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：移动代理缺乏可验证和规模化训练方案</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：低成本并行可扩展训练</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：确定性状态判断与并行RL训练</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Dingbang Wu @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_1.jpg" alt="From Model Scaling to System Scaling: Scaling the Harness in Agentic AI" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/683231c2bc01" target="_blank" style="color:#4dabf7;text-decoration:none;">From Model Scaling to System Scaling: Scaling the Harness in Agentic AI</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：基础模型执行层架构设计
-🎯 问题：Agentic AI系统扩展瓶颈问题
-⚖️ 代价：未提及
-✨ 亮点：提出将执行层作为可设计评估优化的第一类对象
-🏢 作者：Shangding Gu @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_1.jpg" alt="From Model Scaling to System Scaling: Scaling the Harness in Agentic AI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/683231c2bc01" target="_blank" style="color:#fff;text-decoration:none;">From Model Scaling to System Scaling: Scaling the Harness in Agentic AI</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：系统架构规模化设计框架</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：AI agentic系统扩展瓶颈</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：（摘要未提及具体数字）</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：提出harness规模化概念框架</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Shangding Gu @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_2.jpg" alt="Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/ddf1a7508a4f" target="_blank" style="color:#4dabf7;text-decoration:none;">Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：多模态大语言模型连接扩散模型
-🎯 问题：身份保持与文本指令遵循的平衡
-⚖️ 代价：大型模型计算资源需求高
-✨ 亮点：跨模态推理增强身份保留能力
-🏢 作者：Shuhong Zheng @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_2.jpg" alt="Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/ddf1a7508a4f" target="_blank" style="color:#fff;text-decoration:none;">Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：MLLM引导的Subject图像生成</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：跨模态推理受限与图像伪影</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：未明确</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：利用MLLM容量增强跨模态融合</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Shuhong Zheng @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_3.jpg" alt="Beyond Summaries: Structure-Aware Labeling of Code Changes with Large Language Models" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/d199e3133769" target="_blank" style="color:#4dabf7;text-decoration:none;">Beyond Summaries: Structure-Aware Labeling of Code Changes with Large Language Models</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：LLM结构感知代码变更分类
-🎯 问题：代码补丁变更类型自动识别
-⚖️ 代价：依赖LLM推理算力
-✨ 亮点：超越摘要的细粒度变更感知
-🏢 作者：Bar Weiss @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/d199e3133769" target="_blank" style="color:#fff;text-decoration:none;">Beyond Summaries: Structure-Aware Labeling of Code Changes with Large Language Models</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：待分析</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：待分析</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：未知</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：待研究</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Bar Weiss @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_4.jpg" alt="Language Models Need Sleep" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/fb29404e7a9e" target="_blank" style="color:#4dabf7;text-decoration:none;">Language Models Need Sleep</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：SSM循环整合机制
-🎯 问题：注意力机制随上下文长度扩展性差
-⚖️ 代价：额外N次离线循环计算开销
-✨ 亮点：模拟睡眠整合机制将上下文转为快速权重清除缓存
-🏢 作者：Sangyun Lee @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/fb29404e7a9e" target="_blank" style="color:#fff;text-decoration:none;">Language Models Need Sleep</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：睡眠式快速权重上下文整合</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：Transformer注意力随上下文长度扩展性差</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：周期N次离线循环计算</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：周期转换上下文为快速权重并清除KV缓存</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Sangyun Lee @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_5.jpg" alt="OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/35df1f908dd9" target="_blank" style="color:#4dabf7;text-decoration:none;">OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：PoT量化结合几何正交残差投影
-🎯 问题：LLM和ViT边缘部署的内存与计算瓶颈
-⚖️ 代价：未知
-✨ 亮点：乘法器自由位位移替代MAC的极低比特量化
-🏢 作者：Maoyang Xiang @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/35df1f908dd9" target="_blank" style="color:#fff;text-decoration:none;">OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：幂二量化位移位替代MAC运算</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：LLM/ViT边缘部署内存与时序瓶颈</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：极低比特位宽量化</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：几何正交残差投影优化幂二权重</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Maoyang Xiang @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_6.jpg" alt="Channel-wise Vector Quantization" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/ec377bb7e40b" target="_blank" style="color:#4dabf7;text-decoration:none;">Channel-wise Vector Quantization</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：通道级向量量化
-🎯 问题：patch级tokenization的局限性
-⚖️ 代价：未明确说明
-✨ 亮点：将图像表示为通道级视觉细节而非空间patch网格
-🏢 作者：Wei Song @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/ec377bb7e40b" target="_blank" style="color:#fff;text-decoration:none;">Channel-wise Vector Quantization</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：通道级向量量化替代patch级量化</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：传统VQ以patch为单位的局限性</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：[未提供相关数据]</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：将图像表征为视觉细节层级而非空间网格</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Wei Song @ 单位未知</span></div>
     </div>
   </div>
-</div><div class="card" style="margin-bottom:20px;padding:16px;">
-  <div style="display:flex;gap:12px;">
-    <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_img_7.jpg" alt="Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-    <div style="flex:1;min-width:0;">
-      <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://arxiv.org/abs/4200b0f33cda" target="_blank" style="color:#4dabf7;text-decoration:none;">Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World</a></h3>
-      <div style="color:#666;font-size:11px;margin-bottom:6px;">📅 2026-05-25 · 🏷️ cs.AI</div>
-      <p style="margin:0;color:#888;font-size:12px;line-height:1.6;font-family:monospace;white-space:pre-wrap;">🔬 技术：LLM智能体基准评估框架
-🎯 问题：现有助手访问用户数字世界范围有限
-⚖️ 代价：未提及
-✨ 亮点：提出覆盖用户全数字世界的Claw-Anything基准测试
-🏢 作者：Yusong Lin @ 单位未知</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arxiv.org/abs/4200b0f33cda" target="_blank" style="color:#fff;text-decoration:none;">Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World</a></h3>
+    <div class="tech-block" style="background:#0d0d0d;border-radius:8px;padding:14px;margin-top:12px;font-size:13px;line-height:1.8;">
+      <div class="row" style="margin-bottom:6px;"><span class="tech">🔬 技术：Always-On个人助理全面基准测试框架</span></div><div class="row" style="margin-bottom:6px;"><span class="prob">🎯 问题：现有助手仅覆盖用户数字世界窄部分</span></div><div class="row" style="margin-bottom:6px;"><span class="cost">⚖️ 代价：未提供具体训练成本信息</span></div><div class="row" style="margin-bottom:6px;"><span class="highlight">✨ 亮点：提出更广泛访问用户数字世界的评估基准</span></div><div class="row" style="margin-bottom:0;"><span class="author">🏢 作者：Yusong Lin @ 单位未知</span></div>
     </div>
   </div>
 </div>
@@ -188,50 +152,176 @@
   <!-- 商业与行业动态 -->
   <div class="section">
     <div class="section-title biz">🏢 商业与行业动态</div>
-    <div class="card" style="display:flex;gap:12px;margin-bottom:16px;">
-  <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_0.jpg" alt="Altman and Amodei both walking back on AI jobs apocalypse prophecies before IPOs" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-  <div style="flex:1;min-width:0;">
-    <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/" target="_blank" style="color:#4dabf7;text-decoration:none;">Altman and Amodei both walking back on AI jobs apocalypse prophecies before IPOs</a> 🇺🇸</h3>
-    <div style="color:#555;font-size:11px;margin-bottom:4px;">HackerNews AI · </div>
-    <p style="margin:0;color:#999;font-size:12px;line-height:1.5;white-space:pre-wrap;">📝 一句话摘要：AI双雄IPO前收回就业末日论，动机遭质疑
-
-💡 洞察：AI领袖IPO前调整言论凸显商业考量，投资者需警惕乐观预期。</p>
+    
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_0.jpg" alt="Altman and Amodei both walking back on AI jobs apocalypse prophecies before IPOs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/" target="_blank" style="color:#fff;text-decoration:none;">Altman and Amodei both walking back on AI jobs apocalypse prophecies before IPOs</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T23:01:19+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
   </div>
-</div><div class="card" style="display:flex;gap:12px;margin-bottom:16px;">
-  <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_1.jpg" alt="When AI Writes the Software, Who Verifies It?" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-  <div style="flex:1;min-width:0;">
-    <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://leodemoura.github.io/blog/2026-2-28-when-ai-writes-the-worlds-software-who-verifies-it/" target="_blank" style="color:#4dabf7;text-decoration:none;">When AI Writes the Software, Who Verifies It?</a> 🇺🇸</h3>
-    <div style="color:#555;font-size:11px;margin-bottom:4px;">HackerNews AI · </div>
-    <p style="margin:0;color:#999;font-size:12px;line-height:1.5;white-space:pre-wrap;">📝 一句话摘要：AI编程时代，代码验证成关键挑战
-
-💡 洞察：AI生成代码的可靠性存疑，建立验证机制迫在眉睫</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_1.jpg" alt="When AI Writes the Software, Who Verifies It?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://leodemoura.github.io/blog/2026-2-28-when-ai-writes-the-worlds-software-who-verifies-it/" target="_blank" style="color:#fff;text-decoration:none;">When AI Writes the Software, Who Verifies It?</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:57:02+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
   </div>
-</div><div class="card" style="display:flex;gap:12px;margin-bottom:16px;">
-  <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_2.jpg" alt="Keyblind – encrypted secrets vault that hides API keys from AI agents" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-  <div style="flex:1;min-width:0;">
-    <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://github.com/aarifmms/keyblind" target="_blank" style="color:#4dabf7;text-decoration:none;">Keyblind – encrypted secrets vault that hides API keys from AI agents</a> 🇺🇸</h3>
-    <div style="color:#555;font-size:11px;margin-bottom:4px;">HackerNews AI · </div>
-    <p style="margin:0;color:#999;font-size:12px;line-height:1.5;white-space:pre-wrap;">📝 一句话摘要：Keyblind：隐藏API密钥，防止AI代理窥探
-
-💡 洞察：AI代理时代，密钥安全成新挑战</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_2.jpg" alt="Keyblind – encrypted secrets vault that hides API keys from AI agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://github.com/aarifmms/keyblind" target="_blank" style="color:#fff;text-decoration:none;">Keyblind – encrypted secrets vault that hides API keys from AI agents</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:47:33+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
   </div>
-</div><div class="card" style="display:flex;gap:12px;margin-bottom:16px;">
-  <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_3.jpg" alt="Uber blows through its AI budget in 1 quarter" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-  <div style="flex:1;min-width:0;">
-    <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/" target="_blank" style="color:#4dabf7;text-decoration:none;">Uber blows through its AI budget in 1 quarter</a> 🇺🇸</h3>
-    <div style="color:#555;font-size:11px;margin-bottom:4px;">HackerNews AI · </div>
-    <p style="margin:0;color:#999;font-size:12px;line-height:1.5;white-space:pre-wrap;">📝 一句话摘要：Uber单季燃尽AI预算，显示企业AI支出正飙升
-
-💡 洞察：企业AI投入加速，AI已成科技竞争核心战场</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_3.jpg" alt="Uber blows through its AI budget in 1 quarter" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/" target="_blank" style="color:#fff;text-decoration:none;">Uber blows through its AI budget in 1 quarter</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:44:31+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
   </div>
-</div><div class="card" style="display:flex;gap:12px;margin-bottom:16px;">
-  <div style="flex-shrink:0;width:120px;height:80px;overflow:hidden;border-radius:6px;"><img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_4.jpg" alt="New faith-based university coalition find systematic religious bias in AI models" width="120" height="80" loading="lazy" style="border-radius:6px;object-fit:cover;" /></div>
-  <div style="flex:1;min-width:0;">
-    <h3 style="margin:0 0 4px;font-size:14px;font-weight:600;"><a href="https://www.deseret.com/faith/2026/05/26/studies-find-religious-bias-in-ai-models/" target="_blank" style="color:#4dabf7;text-decoration:none;">New faith-based university coalition find systematic religious bias in AI models</a> 🇺🇸</h3>
-    <div style="color:#555;font-size:11px;margin-bottom:4px;">HackerNews AI · </div>
-    <p style="margin:0;color:#999;font-size:12px;line-height:1.5;white-space:pre-wrap;">📝 一句话摘要：信仰大学联盟揭示AI系统存在系统性宗教偏见
-
-💡 洞察：AI宗教偏见影响数亿信教群体，凸显算法公平紧迫性</p>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_img_4.jpg" alt="New faith-based university coalition find systematic religious bias in AI models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0;margin-bottom:0;display:block;" loading="lazy" />
+  <div class="card-body">
+    <h3><a href="https://www.deseret.com/faith/2026/05/26/studies-find-religious-bias-in-ai-models/" target="_blank" style="color:#fff;text-decoration:none;">New faith-based university coalition find systematic religious bias in AI models</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:38:08+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://cryptobriefing.com/meta-google-ai-safety-controls-removable/" target="_blank" style="color:#fff;text-decoration:none;">Meta and Google AI safety controls can be stripped in minutes</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:31:02+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://www.koreatimes.co.kr/business/companies/20260526/sk-hynix-unveils-self-cooling-ihbm-chips-to-combat-ai-overheating" target="_blank" style="color:#fff;text-decoration:none;">SK hynix unveils self-cooling iHBM chips to combat AI overheating</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:26:24+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://www.ft.com/content/0b05e1dd-04c7-4925-be6f-7dc63717cbce" target="_blank" style="color:#fff;text-decoration:none;">ByteDance offers AI team special stock to combat poaching</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:19:51+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://github.com/Agile-V/agile_v_skills" target="_blank" style="color:#fff;text-decoration:none;">Agile V: Turning AI Agents into Verifiable Engineering Systems</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:09:32+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://simianwords.bearblog.dev/investigating-the-hidden-moat-behind-all-the-llm-apps/" target="_blank" style="color:#fff;text-decoration:none;">Investigating the hidden moat behind all the LLM apps</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:08:25+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://asimovaddendum.substack.com/p/the-collaborative-exoskeleton-of" target="_blank" style="color:#fff;text-decoration:none;">The Collaborative Exoskeleton of AI Science</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T22:07:29+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://amalgame.me/en/" target="_blank" style="color:#fff;text-decoration:none;">Transpiler : The best of every language, in one. And LLM ready</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:56:53+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://github.com/AlphaBitCore/nexus-gateway" target="_blank" style="color:#fff;text-decoration:none;">Nexus – open-source AI gateway for enterprise LLM traffic</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:50:44+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://www.tigera.io/blog/the-five-pillars-of-ai-agent-accountability-a-diagnostic-framework-for-engineering-leaders/" target="_blank" style="color:#fff;text-decoration:none;">The Five Pillars of AI Agent Accountability</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:41:58+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/" target="_blank" style="color:#fff;text-decoration:none;">AI agents imperiled by critical vulnerability in open source package</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:34:29+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://www.youtube.com/watch?v=xYU7zaaRjmE" target="_blank" style="color:#fff;text-decoration:none;">The Vibe Coding Era: Why AI Won't Replace Software Engineers [video]</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:30:22+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://www.axios.com/2026/04/04/ai-agents-burnout-addiction-claude-code-openclaw" target="_blank" style="color:#fff;text-decoration:none;">AI agents are scrambling power users' brains</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:20:13+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://news.ycombinator.com/item?id=48285923" target="_blank" style="color:#fff;text-decoration:none;">Ask HN: Has AI affected negatively the job market for devs?</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T21:02:14+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
+  </div>
+</div>
+<div class="card" style="padding:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+  
+  <div class="card-body">
+    <h3><a href="https://github.com/Alcray/SlopeAutoAcceptor" target="_blank" style="color:#fff;text-decoration:none;">Show HN: I built a tool to auto-accept AI slop and bigtech devs loves it</a> 🇺🇸</h3>
+    <div class="card-meta">HackerNews AI · 2026-05-26T20:45:37+00:00</div>
+    <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px;"></p>
+    <p style="color:#888;font-size:13px;margin:0;">💡 </p>
   </div>
 </div>
   </div>
@@ -239,51 +329,193 @@
   <!-- 开源社区热点 -->
   <div class="section">
     <div class="section-title oss">⚡ 开源社区热点</div>
-    <div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" style="color:#69db7c;text-decoration:none;">rohitg00/ai-engineering-from-scratch</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> Python</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/Imbad0202/academic-research-skills" target="_blank" style="color:#69db7c;text-decoration:none;">Imbad0202/academic-research-skills</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> Python</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/HKUDS/ViMax" target="_blank" style="color:#69db7c;text-decoration:none;">HKUDS/ViMax</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> Python</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/NVlabs/Sana" target="_blank" style="color:#69db7c;text-decoration:none;">NVlabs/Sana</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> Python</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" style="color:#69db7c;text-decoration:none;">anthropics/knowledge-work-plugins</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> Python</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/truelockmc/streambert" target="_blank" style="color:#69db7c;text-decoration:none;">truelockmc/streambert</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> JavaScript</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/Stremio/stremio-web" target="_blank" style="color:#69db7c;text-decoration:none;">Stremio/stremio-web</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> JavaScript</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/WhiskeySockets/Baileys" target="_blank" style="color:#69db7c;text-decoration:none;">WhiskeySockets/Baileys</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> JavaScript</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/apps/github-actions" target="_blank" style="color:#69db7c;text-decoration:none;">apps/github-actions</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> JavaScript</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
-</div><div style="background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:14px;margin-bottom:10px;">
-  <h4 style="margin:0 0 4px;font-size:13px;"><a href="https://github.com/affaan-m/ECC" target="_blank" style="color:#69db7c;text-decoration:none;">affaan-m/ECC</a> <span style="color:#555;font-size:11px;">GitHub</span></h4>
-  <div style="color:#888;font-size:11px;margin-bottom:4px;"> JavaScript</div>
-  <p style="margin:0;color:#aaa;font-size:12px;">无描述</p>
+    
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" style="color:#fff;text-decoration:none;">rohitg00/ai-engineering-from-scratch</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Python</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">从零开始学习AI工程，包括机器学习、深度学习与大模型应用实战</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/Imbad0202/academic-research-skills" target="_blank" style="color:#fff;text-decoration:none;">Imbad0202/academic-research-skills</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Python</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">分享学术研究必备技能，包括文献检索、论文写作、数据分析等实用教程。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/HKUDS/ViMax" target="_blank" style="color:#fff;text-decoration:none;">HKUDS/ViMax</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Python</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;"></p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/NVlabs/Sana" target="_blank" style="color:#fff;text-decoration:none;">NVlabs/Sana</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Python</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">高效的多模态内容生成与编辑框架，支持文本到图像的高质量创作</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" style="color:#fff;text-decoration:none;">anthropics/knowledge-work-plugins</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Python</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">Anthropic公司开发的知识工作插件库，增强AI助手处理复杂知识任务的能力。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/truelockmc/streambert" target="_blank" style="color:#fff;text-decoration:none;">truelockmc/streambert</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">基于BERT的流式文本处理模型库</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/Stremio/stremio-web" target="_blank" style="color:#fff;text-decoration:none;">Stremio/stremio-web</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">Stremio网页版，一个在线流媒体管理和播放平台。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/WhiskeySockets/Baileys" target="_blank" style="color:#fff;text-decoration:none;">WhiskeySockets/Baileys</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">基于TypeScript的WhatsApp Web API库，可用于构建WhatsApp机器人或与WhatsApp交互</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/apps/github-actions" target="_blank" style="color:#fff;text-decoration:none;">apps/github-actions</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">基于GitHub Actions的CI/CD自动化工作流，实现持续集成与部署</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/affaan-m/ECC" target="_blank" style="color:#fff;text-decoration:none;">affaan-m/ECC</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">轻量级椭圆曲线密码库，支持多种曲线和安全实现</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/larksuite/cli" target="_blank" style="color:#fff;text-decoration:none;">larksuite/cli</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Go</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">飞书（Lark）官方命令行工具，用于管理和操作飞书应用、消息、文件等资源。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/containerd/containerd" target="_blank" style="color:#fff;text-decoration:none;">containerd/containerd</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Go</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">CNCF孵化项目，行业标准容器运行时，提供核心容器功能与镜像管理。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/zakirullin/files.md" target="_blank" style="color:#fff;text-decoration:none;">zakirullin/files.md</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Go</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">文件处理相关的开源工具库，提供便捷的文件读写与操作功能</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/juanfont/headscale" target="_blank" style="color:#fff;text-decoration:none;">juanfont/headscale</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Go</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">Tailscale控制平面的开源实现，支持自托管部署，实现去中心化的虚拟专用网络。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#69db7c;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">GitHub</span><a href="https://github.com/usememos/memos" target="_blank" style="color:#fff;text-decoration:none;">usememos/memos</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"> Go</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">轻量级自托管备忘录服务，支持Markdown编辑和标签管理，Notion的开源替代方案</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/all-MiniLM-L6-v2</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 262,278,076</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">将句子编码为384维向量，用于语义相似度计算和文本聚类</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/google-bert/bert-base-uncased" target="_blank" style="color:#fff;text-decoration:none;">google-bert/bert-base-uncased</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 69,384,600</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">基于BERT的掩码语言模型</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2" target="_blank" style="color:#fff;text-decoration:none;">cross-encoder/ms-marco-MiniLM-L6-v2</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 63,351,410</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">微软MS MARCO搜索排序模型，基于MiniLM的高效交叉编码器</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/google/electra-base-discriminator" target="_blank" style="color:#fff;text-decoration:none;">google/electra-base-discriminator</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 56,440,235</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">Google发布的ELECTRA基础判别器模型，通过替换token检测预训练，在自然语言理解任务中表现出色</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/BAAI/bge-small-en-v1.5" target="_blank" style="color:#fff;text-decoration:none;">BAAI/bge-small-en-v1.5</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 50,786,539</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">BAAI开源的轻量英文嵌入模型，支持特征提取与文本相似度计算</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 49,779,922</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">多语言句子嵌入模型，用于计算句子相似度和语义匹配任务</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct" target="_blank" style="color:#fff;text-decoration:none;">Qwen/Qwen3-VL-2B-Instruct</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 35,407,726</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">阿里云开源的多模态视觉语言模型，支持图像理解和文本生成任务。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2" target="_blank" style="color:#fff;text-decoration:none;">sentence-transformers/all-mpnet-base-v2</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 35,054,459</span> models</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">基于MPNet的句子嵌入模型，用于计算句子间语义相似度</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" style="color:#fff;text-decoration:none;">open-llm-leaderboard/open_llm_leaderboard</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 13,987</span> spaces</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">开源大语言模型排行榜的Docker化部署方案</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory" target="_blank" style="color:#fff;text-decoration:none;">jbilcke-hf/ai-comic-factory</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 11,094</span> spaces</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">AI驱动的漫画创作平台，支持多种艺术风格自动生成漫画作品。</p>
+</div>
+<div class="card" style="background:#161616;border:1px solid #2a2a2a;border-radius:12px;padding:16px 20px;margin-bottom:16px;">
+  <h3 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 8px;">
+    <span style="background:rgba(255,255,255,0.1);color:#ffd43b;font-size:11px;padding:2px 6px;border-radius:4px;margin-right:6px;">HuggingFace</span><a href="https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On" target="_blank" style="color:#fff;text-decoration:none;">Kwai-Kolors/Kolors-Virtual-Try-On</a>
+  </h3>
+  <div class="card-meta" style="font-size:11px;color:#666;margin-bottom:8px;"><span style="color:#ffd43b;">⭐ 10,087</span> spaces</div>
+  <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0;">快手Kolors虚拟试衣Demo，支持服装换装效果预览</p>
 </div>
   </div>
 
   <div class="footer">
-    由 Hermes Agent 自动生成 · 2026-05-27 07:52:29
+    由 Hermes Agent 自动生成 · 2026-05-27 08:16:57
   </div>
 </div>
 </body>
