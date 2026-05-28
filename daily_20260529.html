@@ -3,194 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 技术洞察日报 · 年</title>
+<title>AI 技术洞察日报 · 2026年05月29日</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh;padding:20px}
-  .container{max-width:1200px;margin:0 auto}
-  header{text-align:center;padding:40px 0}
-  h1{font-size:2rem;font-weight:700;color:#fff;margin-bottom:8px}
-  .date{color:#888;font-size:0.95rem}
-  .stats{display:flex;justify-content:center;gap:40px;margin:24px 0;padding:20px;background:rgba(255,255,255,0.04);border-radius:12px}
-  .stat{text-align:center}
-  .stat-num{font-size:2rem;font-weight:700;color:#6ee7b7}
-  .stat-label{color:#888;font-size:0.85rem;margin-top:4px}
-  .section{margin:40px 0}
-  .section-title{font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid rgba(110,231,183,0.3)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-  .card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;transition:transform 0.2s,box-shadow 0.2s}
-  .card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(110,231,183,0.1)}
-  .card h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4}
-  .card-digest{color:#aaa;font-size:0.88rem;margin-bottom:6px;line-height:1.5}
-  .card-insight{color:#6ee7b7;font-size:0.85rem;margin-bottom:12px;font-style:italic}
-  .card-meta{font-size:0.8rem;color:#666;margin-top:8px}
-  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.75rem;margin-right:4px}
-  .tag-news{background:rgba(110,231,183,0.15);color:#6ee7b7}
-  .tag-paper{background:rgba(167,139,250,0.15);color:#a78bfa}
-  .tag-oss{background:rgba(251,191,36,0.15);color:#fbbf24}
-  .highlight{color:#6ee7b7;font-weight:600}
-  .cost{color:#f87171;font-size:0.85rem;margin-top:8px}
-  footer{text-align:center;padding:40px 0;color:#555;font-size:0.85rem}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; }
+.stat span { color: #58a6ff; font-weight: 600; font-size: 18px; }
+h2 { font-size: 16px; color: #8b949e; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; text-transform: uppercase; letter-spacing: 1px; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block; }
+.card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card-meta { font-size: 12px; color: #6e7681; margin-bottom: 8px; }
+.card p { font-size: 14px; color: #8b949e; line-height: 1.6; margin-bottom: 6px; }
+.tech-block { margin-top: 8px; }
+.row { margin-bottom: 6px; font-size: 13px; line-height: 1.5; }
+.prob { color: #f97583; }
+.tech { color: #79c0ff; }
+.cost { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="container">
 <header>
-<h1>🤖 AI 技术洞察日报</h1>
-<div class="date">年</div>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <p style="color:#6e7681;font-size:14px;">2026年05月29日 · 每日早7点更新</p>
+  <div class="stats">
+    <div class="stat">📰 <span>5</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat">🔥 <span>5</span> 个开源热点</div>
+  </div>
 </header>
-<div class="stats">
-<div class="stat"><div class="stat-num">5</div><div class="stat-label">条商业新闻</div></div>
-<div class="stat"><div class="stat-num">5</div><div class="stat-label">篇论文深度解读</div></div>
-<div class="stat"><div class="stat-num">5</div><div class="stat-label">个开源热点</div></div>
-</div>
 
-<div class="section">
-<h2 class="section-title">📰 商业新闻</h2>
-<div class="cards">
+<section>
+<h2>📰 AI 商业新闻</h2>
+
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_0.jpg" alt="快手基本面韧性凸显，可灵AI成第二增长曲线" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>快手基本面韧性凸显，可灵AI成第二增长曲线</h3>
-  <div class="card-digest">摘要：快手Q1营收337亿元同比增3.4%，可灵AI月活超千万成第二增长曲线，商业化提速。</div>
-  <div class="card-insight">💡 可灵AI成快手新增长引擎，AI视频生成竞争进入商业落地阶段。</div>
-  <div class="card-meta"><span class="tag tag-news">新闻</span></div>
+  <h3><a href="https://36kr.com/p/3828915666441090?f=rss" target="_blank">快手基本面韧性凸显，可灵AI成第二增长曲线</a> 🇨🇳</h3>
+  <div class="card-meta">36kr · 2026-05-28</div>
+  <p>快手Q1营收337亿元同比增3.4%，可灵AI月活超千万成第二增长曲线，商业化提速。</p>
+  <p style="color:#888;font-size:13px;">💡 可灵AI成快手新增长引擎，AI视频生成竞争进入商业落地阶段。</p>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_1.jpg" alt="雷神联合AMD发布覆盖三大形态AI工作站产品矩阵" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>雷神联合AMD发布覆盖三大形态AI工作站产品矩阵</h3>
-  <div class="card-digest">摘要：雷神发布塔式/迷你PC/移动三类AI工作站，搭载AMD芯片，定位专业AI算力。</div>
-  <div class="card-insight">💡 AI工作站从云端走向本地，AMD与英伟达在终端算力赛道正面对决。</div>
-  <div class="card-meta"><span class="tag tag-news">新闻</span></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_1.jpg" alt="科氪 | 雷神联合AMD发布覆盖三大形态AI工作站产品矩阵" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://36kr.com/p/3828898785858185?f=rss" target="_blank">科氪 | 雷神联合AMD发布覆盖三大形态AI工作站产品矩阵</a> 🇨🇳</h3>
+  <div class="card-meta">36kr · 2026-05-28</div>
+  <p>雷神发布塔式/迷你PC/移动三类AI工作站，搭载AMD芯片，定位专业AI算力。</p>
+  <p style="color:#888;font-size:13px;">💡 AI工作站从云端走向本地，AMD与英伟达在终端算力赛道正面对决。</p>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_2.jpg" alt="氪星晚报：微博Q1营收4.213亿美元增6%，科大讯飞发布AI眼镜" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>氪星晚报：微博Q1营收4.213亿美元增6%，科大讯飞发布AI眼镜</h3>
-  <div class="card-digest">摘要：微博Q1营收同比增长6%至4.213亿美元；科大讯飞发布AI眼镜，语音助手集成。</div>
-  <div class="card-insight">💡 AI眼镜成硬件新热点，语音AI落地速度超预期，商业化路径逐渐清晰。</div>
-  <div class="card-meta"><span class="tag tag-news">新闻</span></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_2.jpg" alt="氪星晚报 ｜微博：第一季度总营收4.213亿美元，同比增长6%；科大讯飞发布讯飞AI眼镜；日本太空企业AstroX计划从气球上发射火箭" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://36kr.com/p/3828874222555782?f=rss" target="_blank">氪星晚报 ｜微博：第一季度总营收4.213亿美元，同比增长6%；科大讯飞发布讯飞AI眼镜；日本太空企业AstroX计划从气球上发射火箭</a> 🇨🇳</h3>
+  <div class="card-meta">36kr · 2026-05-28</div>
+  <p>微博Q1营收同比增长6%至4.213亿美元；科大讯飞发布AI眼镜，语音助手集成。</p>
+  <p style="color:#888;font-size:13px;">💡 AI眼镜成硬件新热点，语音AI落地速度超预期，商业化路径逐渐清晰。</p>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_3.jpg" alt="同济医院与阿里云达成合作，探索AI精准诊疗" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>同济医院与阿里云达成合作，探索AI精准诊疗</h3>
-  <div class="card-digest">摘要：同济医院与阿里云签署合作协议，围绕脑科学和消化肿瘤，用千问大模型探索AI诊疗。</div>
-  <div class="card-insight">💡 医疗AI从单点突破进入系统集成阶段，大模型厂商争相布局垂直医疗场景。</div>
-  <div class="card-meta"><span class="tag tag-news">新闻</span></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_3.jpg" alt="同济医院与阿里云达成合作" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://36kr.com/newsflashes/3828875762143874?f=rss" target="_blank">同济医院与阿里云达成合作</a> 🇨🇳</h3>
+  <div class="card-meta">36kr · 2026-05-28</div>
+  <p>同济医院与阿里云签署合作协议，围绕脑科学和消化肿瘤，用千问大模型探索AI诊疗。</p>
+  <p style="color:#888;font-size:13px;">💡 医疗AI从单点突破进入系统集成阶段，大模型厂商争相布局垂直医疗场景。</p>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_4.jpg" alt="雷鸟创新发布GT系列AR眼镜和V4拍摄眼镜，售价1899元起" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>雷鸟创新发布GT系列AR眼镜和V4拍摄眼镜，售价1899元起</h3>
-  <div class="card-digest">摘要：雷鸟创新推出专业影视级AR眼镜GT系列（1899元起）和AI拍摄眼镜V4（2199元起）。</div>
-  <div class="card-insight">💡 AR眼镜价格下探至2000元内，市场从极客向大众消费渗透，商业拐点已至。</div>
-  <div class="card-meta"><span class="tag tag-news">新闻</span></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_4.jpg" alt="科氪 | 雷鸟创新双品齐发：GT 系列、V4 同台亮相，次世代 AI 眼镜雷鸟 iO 提前预告" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://36kr.com/p/3828851140350592?f=rss" target="_blank">科氪 | 雷鸟创新双品齐发：GT 系列、V4 同台亮相，次世代 AI 眼镜雷鸟 iO 提前预告</a> 🇨🇳</h3>
+  <div class="card-meta">36kr · 2026-05-28</div>
+  <p>雷鸟创新推出专业影视级AR眼镜GT系列（1899元起）和AI拍摄眼镜V4（2199元起）。</p>
+  <p style="color:#888;font-size:13px;">💡 AR眼镜价格下探至2000元内，市场从极客向大众消费渗透，商业拐点已至。</p>
 </div>
-</div>
-</div>
+</section>
 
-<div class="section">
-<h2 class="section-title">📄 论文深度解读</h2>
-<div class="cards">
+<section>
+<h2>📄 论文深度解读</h2>
+
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.28812.jpg" alt="Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation</h3>
-  <div class="card-meta"><span class="tag tag-paper">论文</span> <span class="highlight">2605.28812</span></div>
-  <div style="margin-top:8px">
-    <div style="color:#aaa;font-size:0.88rem"><span class="highlight">🎯 问题</span>：触觉传感器数据在仿真到真实世界迁移时，因为物理过程太复杂、维度太高，导致 sim-to-real 一直做不好。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">⚙️ 方法</span>：提出 CoP（压力中心）表示：把每个 taxel 的触觉响应投影到物理有意义的低维压力中心坐标上，配合可微分标定方案估计 taxel 朝向。核心是用物理约束换 Robustness。</div>
-    <div class="cost">⚠️ 代价：把原始高维触感信号压缩成低维 CoP 坐标——信息密度降低了，复杂精细操作（比如多指协同）需要的细节被牺牲掉了。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">📊 效果</span>：在 peg-in-hole 和 ball balancing 两个任务上，CoP 策略实现零样本 sim-to-real 迁移，显著优于 coarse binary-contact 和 raw-taxel 基线。</div>
-    <div class="card-meta" style="margin-top:8px"><span class="highlight">🏢 Jiahe Pan @ ETH Zürich & UC Berkeley</span></div>
-  </div>
+  <h3><a href="https://arxiv.org/abs/2605.28812" target="_blank">Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：触觉传感器数据在仿真到真实世界迁移时，因为物理过程太复杂、维度太高，导致 sim-to-real 一直做不好。</span></div><div class="row"><span class="tech">⚙️ 方法：提出 CoP（压力中心）表示：把每个 taxel 的触觉响应投影到物理有意义的低维压力中心坐标上，配合可微分标定方案估计 taxel 朝向。核心是用物理约束换 Robustness。</span></div><div class="row"><span class="cost">📦 代价：把原始高维触感信号压缩成低维 CoP 坐标——信息密度降低了，复杂精细操作（比如多指协同）需要的细节被牺牲掉了。</span></div><div class="row"><span class="highlight">📊 效果：在 peg-in-hole 和 ball balancing 两个任务上，CoP 策略实现零样本 sim-to-real 迁移，显著优于 coarse binary-contact 和 raw-taxel 基线。</span></div><div class="row"><span class="author">🏢 团队：Jiahe Pan @ ETH Zürich & UC Berkeley</span></div></div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.28807.jpg" alt="Calibrating Conservatism for Scalable Oversight" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>Calibrating Conservatism for Scalable Oversight</h3>
-  <div class="card-meta"><span class="tag tag-paper">论文</span> <span class="highlight">2605.28807</span></div>
-  <div style="margin-top:8px">
-    <div style="color:#aaa;font-size:0.88rem"><span class="highlight">🎯 问题</span>：AI 能力越来越强，人类怎么监督可能超越自己的系统？现有的 scalable oversight 方法要么假设太复杂，要么缺乏统计保证。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">⚙️ 方法</span>：提出 CCO（校准集体监督）：把多个辅助评分器聚合成一个惩罚项，基于 AT (Attainable Utility Preservation) 思想。用 Conformal Decision Theory 在线校准保守参数 λ，确保不良结果率低于用户指定阈值。</div>
-    <div class="cost">⚠️ 代价：约束伦理违规的代价是牺牲一部分 reward 性能——两个目标互相竞争，保守度调高虽然更安全，但会压制高奖励动作；调低则违规增加。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">📊 效果</span>：在 SWE-bench 上，弱 overseer 成功约束了对抗性强 agent；在 MACHIAVELLI 上，CCO 大幅降低伦理违规率（substantially reduces ethical violations）同时保留了 reward。</div>
-    <div class="card-meta" style="margin-top:8px"><span class="highlight">🏢 William Overman @ 未知机构（arXiv 未提供完整机构信息）</span></div>
-  </div>
+  <h3><a href="https://arxiv.org/abs/2605.28807" target="_blank">Calibrating Conservatism for Scalable Oversight</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：AI 能力越来越强，人类怎么监督可能超越自己的系统？现有的 scalable oversight 方法要么假设太复杂，要么缺乏统计保证。</span></div><div class="row"><span class="tech">⚙️ 方法：提出 CCO（校准集体监督）：把多个辅助评分器聚合成一个惩罚项，基于 AT (Attainable Utility Preservation) 思想。用 Conformal Decision Theory 在线校准保守参数 λ，确保不良结果率低于用户指定阈值。</span></div><div class="row"><span class="cost">📦 代价：约束伦理违规的代价是牺牲一部分 reward 性能——两个目标互相竞争，保守度调高虽然更安全，但会压制高奖励动作；调低则违规增加。</span></div><div class="row"><span class="highlight">📊 效果：在 SWE-bench 上，弱 overseer 成功约束了对抗性强 agent；在 MACHIAVELLI 上，CCO 大幅降低伦理违规率（substantially reduces ethical violations）同时保留了 reward。</span></div><div class="row"><span class="author">🏢 团队：William Overman @ 未知机构（arXiv 未提供完整机构信息）</span></div></div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.28805.jpg" alt="OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration</h3>
-  <div class="card-meta"><span class="tag tag-paper">论文</span> <span class="highlight">2605.28805</span></div>
-  <div style="margin-top:8px">
-    <div style="color:#aaa;font-size:0.88rem"><span class="highlight">🎯 问题</span>：图片生成/推理结果验证目前只能拿到二元 True/False 反馈，太粗糙，reward 信号不够细粒度，judge 模型无法精确改进。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">⚙️ 方法</span>：提出 meta-verification：用符号输出（bounding box、point）代替文本解释作为元验证依据，结合 decoupled RL（判断任务和元验证任务分离训练）。核心洞察：符号输出空间高度离散，模型更容易稳定优化。</div>
-    <div class="cost">⚠️ 代价：符号 bounding box 比文本解释的信息量少很多——丢失了细粒度语义和错误原因的自然语言描述，只能提供粗粒度的位置级反馈。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">📊 效果</span>：OmniVerifier-M1 在多个视觉验证基准上优于 baseline；decoupled RL 显著优于 joint training（B.3 节有详细数据）。结合 M1-TTS 实现区域级自主修正。</div>
-    <div class="card-meta" style="margin-top:8px"><span class="highlight">🏢 Xinchen Zhang @ 未知机构</span></div>
-  </div>
+  <h3><a href="https://arxiv.org/abs/2605.28805" target="_blank">OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：图片生成/推理结果验证目前只能拿到二元 True/False 反馈，太粗糙，reward 信号不够细粒度，judge 模型无法精确改进。</span></div><div class="row"><span class="tech">⚙️ 方法：提出 meta-verification：用符号输出（bounding box、point）代替文本解释作为元验证依据，结合 decoupled RL（判断任务和元验证任务分离训练）。核心洞察：符号输出空间高度离散，模型更容易稳定优化。</span></div><div class="row"><span class="cost">📦 代价：符号 bounding box 比文本解释的信息量少很多——丢失了细粒度语义和错误原因的自然语言描述，只能提供粗粒度的位置级反馈。</span></div><div class="row"><span class="highlight">📊 效果：OmniVerifier-M1 在多个视觉验证基准上优于 baseline；decoupled RL 显著优于 joint training（B.3 节有详细数据）。结合 M1-TTS 实现区域级自主修正。</span></div><div class="row"><span class="author">🏢 团队：Xinchen Zhang @ 未知机构</span></div></div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.28792.jpg" alt="CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models</h3>
-  <div class="card-meta"><span class="tag tag-paper">论文</span> <span class="highlight">2605.28792</span></div>
-  <div style="margin-top:8px">
-    <div style="color:#aaa;font-size:0.88rem"><span class="highlight">🎯 问题</span>：现有 EEG 模型基于 attention，序列长度的计算是二次方；且要求固定长度输入，无法处理从几秒到数小时的无限长 EEG 信号。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">⚙️ 方法</span>：用 Mamba 状态空间模型（SSM）替代 attention，配合因果滑动窗口推理，实现端到端实时流式 EEG 理解。预训练采用两阶段：因果预测预训练 + EMA-JEPA 重建-free 隐表示精炼。</div>
-    <div class="cost">⚠️ 代价：单向 SSM 放弃了双向 attention 的全局上下文能力——无法利用未来信息，但 EEG 本身是因果物理信号，这个代价理论上可接受。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">📊 效果</span>：在 3 个 EEG 数据集上吞吐量提升 >10 倍，长序列推理延迟显著低于现有方法。具体数字见论文 4.2 节。</div>
-    <div class="card-meta" style="margin-top:8px"><span class="highlight">🏢 Abhilash Durgam @ University of Central Florida</span></div>
-  </div>
+  <h3><a href="https://arxiv.org/abs/2605.28792" target="_blank">CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：现有 EEG 模型基于 attention，序列长度的计算是二次方；且要求固定长度输入，无法处理从几秒到数小时的无限长 EEG 信号。</span></div><div class="row"><span class="tech">⚙️ 方法：用 Mamba 状态空间模型（SSM）替代 attention，配合因果滑动窗口推理，实现端到端实时流式 EEG 理解。预训练采用两阶段：因果预测预训练 + EMA-JEPA 重建-free 隐表示精炼。</span></div><div class="row"><span class="cost">📦 代价：单向 SSM 放弃了双向 attention 的全局上下文能力——无法利用未来信息，但 EEG 本身是因果物理信号，这个代价理论上可接受。</span></div><div class="row"><span class="highlight">📊 效果：在 3 个 EEG 数据集上吞吐量提升 >10 倍，长序列推理延迟显著低于现有方法。具体数字见论文 4.2 节。</span></div><div class="row"><span class="author">🏢 团队：Abhilash Durgam @ University of Central Florida</span></div></div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.28791.jpg" alt="Skill-Conditioned Gated Self-Distillation for LLM Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>Skill-Conditioned Gated Self-Distillation for LLM Reasoning</h3>
-  <div class="card-meta"><span class="tag tag-paper">论文</span> <span class="highlight">2605.28791</span></div>
-  <div style="margin-top:8px">
-    <div style="color:#aaa;font-size:0.88rem"><span class="highlight">🎯 问题</span>：自蒸馏需要可信的特权信息（正确答案或成功轨迹），但真实场景只有 verifier 反馈，没有 ground-truth，技能库可能包含无关、过时甚至错误的技能。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">⚙️ 方法</span>：提出 SGSD：构建技能-错误配对库，多个 teacher 对同一学生 rollout 评分，verifier 验证每个 teacher 的极性（支持成功/压制失败=正监督，反之=反向），用 gated loss 抑制不确定或极端信号。</div>
-    <div class="cost">⚠️ 代价：用经验技能代替正确答案，放弃了 ground-truth 的可靠性——即使合理的技能也不应无条件复制，成功轨迹被支持但失败轨迹被压制时，正确轨迹也可能被误伤。</div>
-    <div style="color:#aaa;font-size:0.88rem;margin-top:6px"><span class="highlight">📊 效果</span>：Qwen3-1.7B 上，SGSD 较 GRPO 平均提升 6.2%，较 OPSD 提升 1.7%（AIME24/25、HMMT25）。</div>
-    <div class="card-meta" style="margin-top:8px"><span class="highlight">🏢 Jiazhen Huang @ Tsinghua University</span></div>
-  </div>
+  <h3><a href="https://arxiv.org/abs/2605.28791" target="_blank">Skill-Conditioned Gated Self-Distillation for LLM Reasoning</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：自蒸馏需要可信的特权信息（正确答案或成功轨迹），但真实场景只有 verifier 反馈，没有 ground-truth，技能库可能包含无关、过时甚至错误的技能。</span></div><div class="row"><span class="tech">⚙️ 方法：提出 SGSD：构建技能-错误配对库，多个 teacher 对同一学生 rollout 评分，verifier 验证每个 teacher 的极性（支持成功/压制失败=正监督，反之=反向），用 gated loss 抑制不确定或极端信号。</span></div><div class="row"><span class="cost">📦 代价：用经验技能代替正确答案，放弃了 ground-truth 的可靠性——即使合理的技能也不应无条件复制，成功轨迹被支持但失败轨迹被压制时，正确轨迹也可能被误伤。</span></div><div class="row"><span class="highlight">📊 效果：Qwen3-1.7B 上，SGSD 较 GRPO 平均提升 6.2%，较 OPSD 提升 1.7%（AIME24/25、HMMT25）。</span></div><div class="row"><span class="author">🏢 团队：Jiazhen Huang @ Tsinghua University</span></div></div>
 </div>
-</div>
-</div>
+</section>
 
-<div class="section">
-<h2 class="section-title">🔥 开源热点</h2>
-<div class="cards">
+<section>
+<h2>🔥 开源热点</h2>
+
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_0.jpg" alt="rohitg00/ai-engineering-from-scratch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>ai-engineering-from-scratch</h3>
-  <div class="card-digest">从零构建AI智能体系统的教程，包含提示工程、工具调用和记忆管理实战代码。</div>
-  <div class="card-meta"><span class="tag tag-oss">开源</span> <a href="https://github.com/rohitg00/ai-engineering-from-scratch" style="color:#6ee7b7;text-decoration:none">rohitg00/ai-engineering-from-scratch</a></div>
+  <h3>
+    <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+    <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a>
+  </h3>
+  <div class="card-meta"> Python</div>
+  <p style="color:#aaa;font-size:14px;">从零构建AI智能体系统的教程，包含提示工程、工具调用和记忆管理实战代码。</p>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_1.jpg" alt="anthropics/knowledge-work-plugins" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>knowledge-work-plugins</h3>
-  <div class="card-digest">Anthropic官方发布的知识工作智能体插件集合，支持Claude进行研究和文档处理。</div>
-  <div class="card-meta"><span class="tag tag-oss">开源</span> <a href="https://github.com/anthropics/knowledge-work-plugins" style="color:#6ee7b7;text-decoration:none">anthropics/knowledge-work-plugins</a></div>
+  <h3>
+    <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+    <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
+  </h3>
+  <div class="card-meta"> Python</div>
+  <p style="color:#aaa;font-size:14px;">Anthropic官方发布的知识工作智能体插件集合，支持Claude进行研究和文档处理。</p>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_2.jpg" alt="harry0703/MoneyPrinterTurbo" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>MoneyPrinterTurbo</h3>
-  <div class="card-digest">AI自动生成视频并发布到YouTube/TikTok的工具，输入文案即可批量产出病毒视频。</div>
-  <div class="card-meta"><span class="tag tag-oss">开源</span> <a href="https://github.com/harry0703/MoneyPrinterTurbo" style="color:#6ee7b7;text-decoration:none">harry0703/MoneyPrinterTurbo</a></div>
+  <h3>
+    <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+    <a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">harry0703/MoneyPrinterTurbo</a>
+  </h3>
+  <div class="card-meta"> Python</div>
+  <p style="color:#aaa;font-size:14px;">AI自动生成视频并发布到YouTube/TikTok的工具，输入文案即可批量产出病毒视频。</p>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_3.jpg" alt="mukul975/Anthropic-Cybersecurity-Skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>Anthropic-Cybersecurity-Skills</h3>
-  <div class="card-digest">用Claude AI智能体自动化网络安全渗透测试的实战工具集，包含CTF挑战解题。</div>
-  <div class="card-meta"><span class="tag tag-oss">开源</span> <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" style="color:#6ee7b7;text-decoration:none">mukul975/Anthropic-Cybersecurity-Skills</a></div>
+  <h3>
+    <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+    <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank">mukul975/Anthropic-Cybersecurity-Skills</a>
+  </h3>
+  <div class="card-meta"> Python</div>
+  <p style="color:#aaa;font-size:14px;">用Claude AI智能体自动化网络安全渗透测试的实战工具集，包含CTF挑战解题。</p>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_4.jpg" alt="affaan-m/ECC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3>ECC</h3>
-  <div class="card-digest">轻量级椭圆曲线密码学JavaScript库，支持主流曲线和密钥生成，适用于Web加密场景。</div>
-  <div class="card-meta"><span class="tag tag-oss">开源</span> <a href="https://github.com/affaan-m/ECC" style="color:#6ee7b7;text-decoration:none">affaan-m/ECC</a></div>
+  <h3>
+    <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+    <a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a>
+  </h3>
+  <div class="card-meta"> JavaScript</div>
+  <p style="color:#aaa;font-size:14px;">轻量级椭圆曲线密码学JavaScript库，支持主流曲线和密钥生成，适用于Web加密场景。</p>
 </div>
-</div>
-</div>
+</section>
 
 <footer>
-<p>由 <a href="https://hermes-agent.nousresearch.com" style="color:#6ee7b7;text-decoration:none">Hermes Agent</a> 自动生成 · 数据来源：arXiv & GitHub Trending</p>
-<p><a href="https://ZenHatesCoding.github.io/ai-daily-reports/daily_20260529.html" style="color:#888;text-decoration:none">查看完整日报</a></p>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
 </footer>
 </div>
 </body>
