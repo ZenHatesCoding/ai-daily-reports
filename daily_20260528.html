@@ -1,291 +1,320 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI洞察日报 2026年5月28日 · 周四 · 早7点版</title>
-<style>
-  * { box-sizing: border-box; }
-  body { background: #0a0a0a; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 20px; }
-  .container { max-width: 680px; margin: 0 auto; }
-
-  /* 封面 */
-  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid #1a1a1a; margin-bottom: 28px; }
-  .header h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; color: #fff; }
-  .header p { color: #666; font-size: 13px; margin: 0; }
-  .stats { display: flex; gap: 16px; justify-content: center; margin-top: 16px; }
-  .stat { background: #141414; border: 1px solid #222; border-radius: 10px; padding: 14px 20px; text-align: center; flex: 1; }
-  .stat .num { font-size: 22px; font-weight: 700; }
-  .stat .label { color: #666; font-size: 12px; margin-top: 4px; }
-  .stat.papers .num { color: #4dabf7; }
-  .stat.biz .num { color: #ffd43b; }
-  .stat.oss .num { color: #69db7c; }
-
-  /* 区块标题 */
-  .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid; }
-  .section-title.papers { color: #4dabf7; border-color: #4dabf7; }
-  .section-title.biz { color: #ffd43b; border-color: #ffd43b; }
-  .section-title.oss { color: #69db7c; border-color: #69db7c; }
-
-  /* 卡片 — 上图下文字 */
-  .card { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; padding: 0; margin-bottom: 16px; overflow: hidden; }
-  .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; }
-  .card-body { padding: 16px 20px 20px; }
-  .card-meta { font-size: 11px; color: #666; margin-bottom: 8px; }
-  .card h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 10px; line-height: 1.4; }
-  .card h3 a { color: #fff; text-decoration: none; }
-  .card h3 a:hover { color: #4dabf7; }
-  .card p { color: #aaa; font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
-  .card .source { color: #555; font-size: 12px; }
-
-  /* 论文技术说明 */
-  .tech-block { background: #0d0d0d; border-radius: 8px; padding: 14px; margin-top: 12px; font-size: 13px; line-height: 1.8; }
-  .tech-block .row { margin-bottom: 6px; }
-  .tech-block .row:last-child { margin-bottom: 0; }
-  .prob { color: #ff6b6b; }
-  .tech { color: #4dabf7; }
-  .cost { color: #ffd43b; }
-  .highlight { color: #b197ff; }
-  .author { color: #888; }
-
-  /* 开源项目 */
-  .card h3 .platform-tag { font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 6px; }
-  .card h3 .platform-tag.github { background: #1a3a2a; color: #69db7c; }
-  .card h3 .platform-tag.huggingface { background: #3a2a1a; color: #ffd43b; }
-
-  /* 页脚 */
-  .footer { text-align: center; color: #444; font-size: 12px; padding: 20px 0; }
-</style>
-</head>
-<body>
-<div class="container">
-
-  <!-- 封面 -->
-  <div class="header">
-    <h1>🤖 AI洞察日报</h1>
-    <p>2026年5月28日 · 周四 · 早7点版</p>
-    <div class="stats">
-      <div class="stat papers"><div class="num">5</div><div class="label">论文</div></div>
-      <div class="stat biz"><div class="num">6</div><div class="label">商业</div></div>
-      <div class="stat oss"><div class="num">10</div><div class="label">开源</div></div>
-    </div>
-  </div>
-
-  <!-- 论文与技术突破 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI洞察日报 2026年5月28日 · 周四 · 早7点版</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background: #0a0a0a; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 20px; }
+  .container { max-width: 680px; margin: 0 auto; }
+
+  /* 封面 */
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid #1a1a1a; margin-bottom: 28px; }
+  .header h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; color: #fff; }
+  .header p { color: #666; font-size: 13px; margin: 0; }
+  .stats { display: flex; gap: 16px; justify-content: center; margin-top: 16px; }
+  .stat { background: #141414; border: 1px solid #222; border-radius: 10px; padding: 14px 20px; text-align: center; flex: 1; }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .label { color: #666; font-size: 12px; margin-top: 4px; }
+  .stat.papers .num { color: #4dabf7; }
+  .stat.biz .num { color: #ffd43b; }
+  .stat.oss .num { color: #69db7c; }
+
+  /* 区块标题 */
+  .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid; }
+  .section-title.papers { color: #4dabf7; border-color: #4dabf7; }
+  .section-title.biz { color: #ffd43b; border-color: #ffd43b; }
+  .section-title.oss { color: #69db7c; border-color: #69db7c; }
+
+  /* 卡片 — 上图下文字 */
+  .card { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; padding: 0; margin-bottom: 16px; overflow: hidden; }
+  .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; }
+  .card-body { padding: 16px 20px 20px; }
+  .card-meta { font-size: 11px; color: #666; margin-bottom: 8px; }
+  .card h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 10px; line-height: 1.4; }
+  .card h3 a { color: #fff; text-decoration: none; }
+  .card h3 a:hover { color: #4dabf7; }
+  .card p { color: #aaa; font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
+  .card .source { color: #555; font-size: 12px; }
+
+  /* 论文技术说明 */
+  .tech-block { background: #0d0d0d; border-radius: 8px; padding: 14px; margin-top: 12px; font-size: 13px; line-height: 1.8; }
+  .tech-block .row { margin-bottom: 6px; }
+  .tech-block .row:last-child { margin-bottom: 0; }
+  .prob { color: #ff6b6b; }
+  .tech { color: #4dabf7; }
+  .cost { color: #ffd43b; }
+  .highlight { color: #b197ff; }
+  .author { color: #888; }
+
+  /* 开源项目 */
+  .card h3 .platform-tag { font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 6px; }
+  .card h3 .platform-tag.github { background: #1a3a2a; color: #69db7c; }
+  .card h3 .platform-tag.huggingface { background: #3a2a1a; color: #ffd43b; }
+
+  /* 页脚 */
+  .footer { text-align: center; color: #444; font-size: 12px; padding: 20px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 封面 -->
+  <div class="header">
+    <h1>🤖 AI洞察日报</h1>
+    <p>2026年5月28日 · 周四 · 早7点版</p>
+    <div class="stats">
+      <div class="stat papers"><div class="num">5</div><div class="label">论文</div></div>
+      <div class="stat biz"><div class="num">6</div><div class="label">商业</div></div>
+      <div class="stat oss"><div class="num">10</div><div class="label">开源</div></div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-title papers">📚 论文与技术突破</div>
     
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.27371.jpg" alt="Algorithmic Monocultures in Hiring" loading="lazy" />
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/img_paper_2605.27371.jpg" alt="Algorithmic Monocultures in Hiring" loading="lazy" />
   <div class="card-body">
     <div class="card-meta">cs.AI · arXiv</div>
     <h3><a href="https://arxiv.org/abs/2605.27371" target="_blank">Algorithmic Monocultures in Hiring</a></h3>
-    <div class="tech-block"><div class="row"><span class="prob">📌 一句话：研究发现招聘算法同质化导致种族歧视和个体结果均质化，14.74%亚裔和25.87%黑人申请者受到不利影响</span></div><div class="row"><span class="highlight">💡 当大多数雇主使用同一家算法供应商的筛选工具时，会导致系统性歧视：特定种族群体面临更高比例的不利决策，个体申请者收到同质化结果（申请10个职位全被拒的比例高于随机预期），且这种同质性源自算法的确定性可复现特性</span></div><div class="row"><span class="cost">⚖️ 代价：研究基于300万申请者提交400万次申请的招聘数据集</span></div><div class="row"><span class="tech">✨ 亮点：揭示算法单一文化对就业歧视的影响，证明需要广泛申请才能让申请被人工审核</span></div><div class="row"><span class="author">🏢 Rishi Bommasani, Sarah H. Bana, Kathleen A. Creel, Dan Jurafsky, Percy Liang（斯坦福大学）</span></div></div>
+    <div class="tech-block">
+      <div class="row"><span class="prob">🎯 问题：当多数企业使用同几家算法供应商的招聘筛选算法时，同一求职者群体反复被拒聘，导致种族和个体层面的结果同质化问题。</span></div>
+      <div class="row"><span class="tech">⚙️ 方法：获取并分析同一算法供应商筛选的300万求职者、400万份申请数据集，利用招聘算法的确定性可复现性生成求职者若投递所有职位的反事实结果，从而量化算法单一文化对不同种族群体的影响。具体通过构建反事实实验：给定同一求职者特征，分别模拟投递该供应商服务的所有雇主职位，追踪哪些职位会返回拒聘结果。</span></div>
+      <div class="row"><span class="cost">📦 代价：300万名求职者、400万份申请，由同一算法供应商提供筛选，数据涵盖亚裔和非裔美国人申请者。</span></div>
+      <div class="row"><span class="highlight">📊 效果：亚裔申请者中有14.74%的申请、非裔申请者中有25.87%的申请投递到对其产生不利影响的职位；申请10个职位的求职者中有4%被全部推荐拒聘。</span></div>
+      <div class="row"><span class="author">🏢 Rishi Bommasani (Stanford), Sarah H. Bana, Kathleen A. Creel, Dan Jurafsky, Percy Liang (Stanford/Cornell)</span></div>
+    </div>
   </div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.27366_0.jpg" alt="MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation" loading="lazy" />
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/img_paper_2605.27366_0.jpg" alt="MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation" loading="lazy" />
   <div class="card-body">
     <div class="card-meta">cs.AI · arXiv</div>
     <h3><a href="https://arxiv.org/abs/2605.27366" target="_blank">MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation</a></h3>
-    <div class="tech-block"><div class="row"><span class="prob">📌 一句话：提出MUSE-Autoskill框架，让AI智能体通过统一的生命周期（创建、记忆、管理、评估、改进）持续提升任务解决能力</span></div><div class="row"><span class="highlight">💡 现有技能创建方法将技能视为孤立静态的产物，限制了可复用性、可靠性和长期改进。MUSE-Autoskill引入技能级记忆，积累跨任务经验，实现技能作为长寿命、经验感知、可测试资产的价值</span></div><div class="row"><span class="cost">⚖️ 代价：在SkillsBench基准上评估</span></div><div class="row"><span class="tech">✨ 亮点：统一生命周期管理技能，支持按需创建、跨任务存储复用、高效组织和选择、单元测试和运行时反馈评估</span></div><div class="row"><span class="author">🏢 Huawei Lin, Peng Li, Jie Song, Fuxin Jiang, Tieying Zhang</span></div></div>
+    <div class="tech-block">
+      <div class="row"><span class="prob">🎯 问题：现有技能创建方法将技能视为孤立、静态的产物，限制了技能的可复用性、可靠性和长期改进能力。</span></div>
+      <div class="row"><span class="tech">⚙️ 方法：MUSE-Autoskill实现统一的技能生命周期管理：1）技能创建时提取可泛化的任务模式为可复用单元；2）技能级记忆机制以键值结构存储每个技能执行后的反馈和经验，检索时基于语义相似度而非精确匹配；3）通过单元测试验证技能正确性，运行时收集执行失败样本触发技能自动 refinement；4）技能评估器计算每个技能的任务覆盖率、成功率和质量得分，用于指导新任务分配。</span></div>
+      <div class="row"><span class="cost">📦 代价：在SkillsBench基准上进行评估，使用技能级记忆机制积累跨任务经验。</span></div>
+      <div class="row"><span class="highlight">📊 效果：论文未给出具体量化结果，仅报告技能生命周期管理可提升任务成功率、效率、复用率和跨智能体迁移能力。</span></div>
+      <div class="row"><span class="author">🏢 Huawei Lin, Peng Li, Jie Song, Fuxin Jiang, Tieying Zhang</span></div>
+    </div>
   </div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.27365.jpg" alt="LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding" loading="lazy" />
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/img_paper_2605.27365.jpg" alt="LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding" loading="lazy" />
   <div class="card-body">
     <div class="card-meta">cs.AI · arXiv</div>
     <h3><a href="https://arxiv.org/abs/2605.27365" target="_blank">LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding</a></h3>
-    <div class="tech-block"><div class="row"><span class="prob">📌 一句话：提出并行边界框解码（PBD），将视觉定位和检测统一为单步并行生成，显著提升解码吞吐量和定位精度</span></div><div class="row"><span class="highlight">💡 现有方法将2D边界框序列化为多个独立学习的1D标记，逐标记解码忽略边界框几何的耦合结构，且存在推理瓶颈。PBD将边界框和点作为原子单元单步解码，保持框内几何一致性并实现大规模并行</span></div><div class="row"><span class="cost">⚖️ 代价：构建超过1.38亿训练样本的LocateAnything-Data大规模数据集</span></div><div class="row"><span class="tech">✨ 亮点：提升高IoU定位质量同时显著提高解码吞吐量，突破视觉-语言 grounding的速度-精度边界</span></div><div class="row"><span class="author">🏢 Shihao Wang, Shilong Liu, Yuanguo Kuang, Xinyu Wei, Yangzhou Liu, Zhiqi Li, Yunze Man, Guo Chen, Andrew Tao, Guilin Liu, Jan Kautz, Lei Zhang, Zhiding Yu（NVIDIA等机构）</span></div></div>
+    <div class="tech-block">
+      <div class="row"><span class="prob">🎯 问题：视觉-语言模型将视觉定位任务表述为坐标token生成问题，将2D边界框串化成多个独立学习的1D token进行解码，这种逐token解码与边界框的几何耦合结构不匹配，且严格串行生成造成推理瓶颈。</span></div>
+      <div class="row"><span class="tech">⚙️ 方法：并行边界框解码（PBD）：将边界框的(x1,y1,x2,y2)四个坐标和点坐标作为原子解码单元，在单一步骤中同时解码整个边界框而非逐token串行生成；通过几何一致性注意力机制确保框内坐标的语义一致性；开发可扩展数据引擎利用自动化标注工具整理超过1.38亿训练样本的LocateAnything-Data大规模数据集，涵盖高精度定位的多样化数据。</span></div>
+      <div class="row"><span class="cost">📦 代价：LocateAnything-Data数据集包含超过1.38亿训练样本，覆盖高精度定位的多样化数据。</span></div>
+      <div class="row"><span class="highlight">📊 效果：论文未给出具体的吞吐量提升倍数或IoU精度数值，仅泛泛称在多个基准测试中实现显著更高的解码吞吐量，同时提升高IoU定位质量。</span></div>
+      <div class="row"><span class="author">🏢 Shihao Wang, Shilong Liu, Yuanguo Kuang, Xinyu Wei, Yangzhou Liu, Zhiqi Li, Yunze Man, Guo Chen, Andrew Tao, Guilin Liu, Jan Kautz, Lei Zhang, Zhiding Yu (NVIDIA)</span></div>
+    </div>
   </div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.27361_2.jpg" alt="Natural Language Query to Configuration for Retrieval Agents" loading="lazy" />
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/img_paper_2605.27361_2.jpg" alt="Natural Language Query to Configuration for Retrieval Agents (BRANE)" loading="lazy" />
   <div class="card-body">
     <div class="card-meta">cs.AI · arXiv</div>
-    <h3><a href="https://arxiv.org/abs/2605.27361" target="_blank">Natural Language Query to Configuration for Retrieval Agents</a></h3>
-    <div class="tech-block"><div class="row"><span class="prob">📌 一句话：BRANE系统根据自然语言查询和准确度/预算目标，自动选择最优检索管道配置，实现成本-质量权衡</span></div><div class="row"><span class="highlight">💡 现代检索智能体暴露多种配置选择（LLM、检索器、文档数量、hops数量、合成策略），每个都影响答案质量和成本。当前方法手工调优一次后静态使用，BRANE利用LLM将查询转换为工作负载特征，训练轻量级预测器估计管道正确性，在推理时选择最大化预测正确性且考虑成本的配置</span></div><div class="row"><span class="cost">⚖️ 代价：在MuSiQue、BrowseComp-Plus、FinanceBench三个基准上评估</span></div><div class="row"><span class="tech">✨ 亮点：在保持最佳固定配置准确度的同时成本降低89%，超越LLM路由、基于规则和微调Qwen3-4B基线</span></div><div class="row"><span class="author">🏢 Melissa Z. Pan, Negar Arabzadeh, Mathew Jacob, Fiodar Kazhamiaka, Esha Choukse, Matei Zaharia（斯坦福大学）</span></div></div>
+    <h3><a href="https://arxiv.org/abs/2605.27361" target="_blank">Natural Language Query to Configuration for Retrieval Agents (BRANE)</a></h3>
+    <div class="tech-block">
+      <div class="row"><span class="prob">🎯 问题：现代检索智能体涉及众多配置选择（LLM、检索器、文档数量、跳数、合成策略），但通常在 workload 层面手动调优一次，导致每个查询的优化空间未被充分利用。</span></div>
+      <div class="row"><span class="tech">⚙️ 方法：BRANE使用LLM将每个自然语言查询转换为 workload 特定特征向量（包含查询复杂度、领域、预期答案类型等），然后训练轻量级每配置预测器（基于梯度提升决策树）对每个候选配置进行成功率预测；推理时贪心选择预测正确率最高的配置，若存在多个预测正确率相近的配置则选择成本惩罚最小的配置，无需重新训练即可实现可调的成本-质量权衡。</span></div>
+      <div class="row"><span class="cost">📦 代价：在MuSiQue、BrowseComp-Plus和FinanceBench三个基准上评估。</span></div>
+      <div class="row"><span class="highlight">📊 效果：BRANE以最高89%更低的成本达到与最佳固定配置相同的准确率，优于LLM路由、基于规则和微调Qwen3-4B基线；在MuSiQue上以22美元成本达到84.3%准确率，而最佳固定配置需要185美元。</span></div>
+      <div class="row"><span class="author">🏢 Melissa Z. Pan, Negar Arabzadeh, Mathew Jacob, Fiodar Kazhamiaka, Esha Choukse, Matei Zaharia (Stanford)</span></div>
+    </div>
   </div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.27360.jpg" alt="GENESIS: Harnessing AI Agents for Autonomous 6G RAN Synthesis, Research, and Testing" loading="lazy" />
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/img_paper_2605.27360.jpg" alt="GENESIS: Harnessing AI Agents for Autonomous 6G RAN Synthesis, Research, and Testing" loading="lazy" />
   <div class="card-body">
     <div class="card-meta">cs.AI · arXiv</div>
     <h3><a href="https://arxiv.org/abs/2605.27360" target="_blank">GENESIS: Harnessing AI Agents for Autonomous 6G RAN Synthesis, Research, and Testing</a></h3>
-    <div class="tech-block"><div class="row"><span class="prob">📌 一句话：提出GENESIS框架，使用AI智能体将意图（规范条款、遥测异常、研究假设）转化为经过OTA实验验证的解决方案</span></div><div class="row"><span class="highlight">💡 蜂窝无线接入网络（RAN）研发受六个结构性流程制约，每个迭代需要数月手工工程。LLM在RAN用例中存在已知缺陷： hallucinate API、误读规范导致互操作性失败、严重依赖仿真设计但转移到真实硬件时表现糟糕。GENESIS建立在三个可组合原语（智能体、技能、钩子）和知识层（SYNAPSE）上，兼作真值来源和框架产物的接收者</span></div><div class="row"><span class="cost">⚖️ 代价：用于6G RAN研究的真实场景</span></div><div class="row"><span class="tech">✨ 亮点：通过意图到解决方案的转换、OTA实验验证和持久知识库，应对LLM在RAN研发中的结构和实用性挑战</span></div><div class="row"><span class="author">🏢 Tamerlan Aghayev, Maxime Elkael, Michele Polese, Minh Dat Nguyen, Gabriele Gemmi, Andrea Lacava, Ali Saeizadeh, Reshma Prasad, Paolo Testolina, Angelo Feraudo, Soumendra Nanda, Pedram Johari, Salvatore D'Oro, Tommaso Melodia（东北大学等机构）</span></div></div>
+    <div class="tech-block">
+      <div class="row"><span class="prob">🎯 问题：蜂窝无线接入网络（RAN）的研发受制于六个结构性流程——从标准规范合成代码、互操作性测试、稳定性加固、数据驱动优化到新波形发现和安全加固——每个流程每次迭代都耗费数月人工工程工作。</span></div>
+      <div class="row"><span class="tech">⚙️ 方法：GENESIS框架基于三个可组合原语（智能体负责决策、技能封装可执行单元、钩子处理环境交互）和知识层SYNAPSE（作为真值来源和所有产物的接收方），将意图（规范条款、遥测异常、研究假设）通过意图解析智能体转换为具体任务，由技能库调用对应工具执行，执行结果经钩子反馈到SYNAPSE知识层进行持久化，知识层支持增量更新和跨任务检索，使能力随运行次数复利增长。</span></div>
+      <div class="row"><span class="cost">📦 代价：在真实硬件上进行OTA实验验证，而非仅依赖仿真。</span></div>
+      <div class="row"><span class="highlight">📊 效果：论文未给出具体量化结果，仅描述该框架在真实硬件OTA实验中验证有效，能自动化完成RAN研发六大结构性流程。</span></div>
+      <div class="row"><span class="author">🏢 Tamerlan Aghayev, Maxime Elkael, Michele Polese, Minh Dat Nguyen, Gabriele Gemmi, Andrea Lacava, Ali Saeizadeh, Reshma Prasad, Paolo Testolina, Angelo Feraudo, Soumendra Nanda, Pedram Johari, Salvatore D'Oro, Tommaso Melodia</span></div>
+    </div>
   </div>
 </div>
   </div>
 
-  <!-- 商业与行业动态 -->
-  <div class="section">
-    <div class="section-title biz">🏢 商业与行业动态</div>
-    
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_0_0.jpg" alt="腾讯游戏的One More Thing，是AI" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/p/3827658881323649?f=rss" target="_blank">腾讯游戏的One More Thing，是AI</a> 🇺🇸</h3>
-    <p>摘要：2026年腾讯游戏发布会上，腾讯推出三款AI重磅产品：AI渲染方案MagicDawn、模拟经营游戏《数字景德镇·瓷都小匠》及AI游戏创作平台「代号Craft」。｜洞察：腾讯AI布局已从早期客服、内容审核等后端应用，进入渲染、创作、玩法设计等开发核心环节，标志着腾讯游戏AI进入全链路落地阶段，技术开源策略也显示了其对技术实力的信心。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_1_1.jpg" alt="氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/p/3827497128465287?f=rss" target="_blank">氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</a> 🇺🇸</h3>
-    <p>摘要：高盛策略师将标普500指数目标点位上调至8000点，预测今年回报达17%；阿里宣布自2027财年起将十三薪并入年终奖；快手可灵AI 3月ARR近5亿美元同比增长4倍；台积电今年全员平均分红奖金涨幅将超30%。｜洞察：AI热潮推动的盈利增长正在全球资本市场持续发酵，同时中国科技巨头也在通过薪酬结构优化和AI商业化加速布局。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_2_2.jpg" alt="金仕达与华为联合发布AI风控一体机" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/newsflashes/3827488691212934?f=rss" target="_blank">金仕达与华为联合发布AI风控一体机</a> 🇺🇸</h3>
-    <p>摘要：金仕达与华为联合发布面向金融行业高性能计算的AI风控一体机，提供自主可控的软硬件一体化解决方案；同时金仕达与玻色量子达成战略合作，探索量子计算在投资组合优化、复杂风险模拟等前沿场景的应用。｜洞察：金融AI风控正在向软硬件一体化和量子计算等前沿技术方向演进，头部科技企业与垂直领域公司的联合成为重要落地模式。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_3_3.jpg" alt="程一笑：快手AI漫剧营销消耗同比增长超100倍，3月底单日营销消耗峰值突破2000万元" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/newsflashes/3827488082727812?f=rss" target="_blank">程一笑：快手AI漫剧营销消耗同比增长超100倍，3月底单日营销消耗峰值突破2000万元</a> 🇺🇸</h3>
-    <p>摘要：快手AI漫剧营销消耗在2026年第一季度同比增长超100倍，环比增长超150%；截至3月底单日营销消耗峰值突破2000万元。｜洞察：AI显著降低了漫剧生产成本和创作门槛，推动供给快速扩张，进而带动用户消费和投流需求释放，AI+内容营销模式已实现规模化商业变现。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_4_4.jpg" alt="程一笑：可灵AI 3月ARR近5亿美元，较去年同期增长4倍" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/newsflashes/3827487780492161?f=rss" target="_blank">程一笑：可灵AI 3月ARR近5亿美元，较去年同期增长4倍</a> 🇺🇸</h3>
-    <p>摘要：可灵AI在2026年3月ARR近5亿美元，较去年3月的1亿美元增长4倍，收入高速增长来自B端API调用和P端付费会员订阅双轮驱动，B端和P端用户均保持较好留存趋势。｜洞察：可灵AI在专业创作场景中的技术和产品实力获得市场验证，AI视频生成赛道的商业化路径已逐步清晰。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-<div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_5_5.jpg" alt="高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动" loading="lazy" />
-  <div class="card-body">
-    <div class="card-meta">36kr · </div>
-    <h3><a href="https://36kr.com/newsflashes/3827467208413825?f=rss" target="_blank">高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动</a> 🇺🇸</h3>
-    <p>摘要：高盛策略师将标普500指数年底目标点位上调至8000点，预测今年回报将达17%，主要受AI热潮推动的盈利增长所驱动。｜洞察：AI驱动的盈利增长预期正在重新定义全球股市估值基准，科技股估值逻辑正在被AI生产力革命全面重塑。</p>
-    <p style="color:#888;font-size:13px;">💡 </p>
-  </div>
-</div>
-  </div>
-
-  <!-- 开源社区热点 -->
-  <div class="section">
-    <div class="section-title oss">⚡ 开源社区热点</div>
-    
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank">sentence-transformers/all-MiniLM-L6-v2</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">轻量高效的文本相似度模型，两句话像不像问它就行</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank">open-llm-leaderboard/open_llm_leaderboard</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">全球大模型争霸榜，哪个最强一看便知</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory" target="_blank">jbilcke-hf/ai-comic-factory</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">输入故事自动生成漫画，创意工作者的神器</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On" target="_blank">Kwai-Kolors/Kolors-Virtual-Try-On</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">上传衣服图片就能看到上身效果，AI虚拟试衣</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/BAAI/bge-m3" target="_blank">BAAI/bge-m3</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">国产多语言向量模型，中英文语义检索样样精通</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/google-bert/bert-base-uncased" target="_blank">google-bert/bert-base-uncased</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">NLP基石模型，完形填空式的智能理解</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">支持中文等多语言的语义相似度模型</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">从零搭建AI应用的完整教程，工程师入门必备</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://github.com/HKUDS/ViMax" target="_blank">HKUDS/ViMax</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">视频理解与生成的前沿研究项目</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h3>
-      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
-      <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
-    </h3>
-    <div class="card-meta"> </div>
-    <p style="color:#aaa;font-size:14px;">Anthropic官方知识助手插件，加速研究效率</p>
-  </div>
-</div>
-  </div>
-
-  <div class="footer">
-    由 Hermes Agent 自动生成 · 2026-05-28 10:15:47
-  </div>
-</div>
-</body>
+<!-- 商业与行业动态 -->
+  <div class="section">
+    <div class="section-title biz">🏢 商业与行业动态</div>
+    
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_0_0.jpg" alt="腾讯游戏的One More Thing，是AI" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/p/3827658881323649?f=rss" target="_blank">腾讯游戏的One More Thing，是AI</a> 🇺🇸</h3>
+    <p>摘要：2026年腾讯游戏发布会上，腾讯推出三款AI重磅产品：AI渲染方案MagicDawn、模拟经营游戏《数字景德镇·瓷都小匠》及AI游戏创作平台「代号Craft」。｜洞察：腾讯AI布局已从早期客服、内容审核等后端应用，进入渲染、创作、玩法设计等开发核心环节，标志着腾讯游戏AI进入全链路落地阶段，技术开源策略也显示了其对技术实力的信心。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_1_1.jpg" alt="氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/p/3827497128465287?f=rss" target="_blank">氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</a> 🇺🇸</h3>
+    <p>摘要：高盛策略师将标普500指数目标点位上调至8000点，预测今年回报达17%；阿里宣布自2027财年起将十三薪并入年终奖；快手可灵AI 3月ARR近5亿美元同比增长4倍；台积电今年全员平均分红奖金涨幅将超30%。｜洞察：AI热潮推动的盈利增长正在全球资本市场持续发酵，同时中国科技巨头也在通过薪酬结构优化和AI商业化加速布局。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_2_2.jpg" alt="金仕达与华为联合发布AI风控一体机" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/newsflashes/3827488691212934?f=rss" target="_blank">金仕达与华为联合发布AI风控一体机</a> 🇺🇸</h3>
+    <p>摘要：金仕达与华为联合发布面向金融行业高性能计算的AI风控一体机，提供自主可控的软硬件一体化解决方案；同时金仕达与玻色量子达成战略合作，探索量子计算在投资组合优化、复杂风险模拟等前沿场景的应用。｜洞察：金融AI风控正在向软硬件一体化和量子计算等前沿技术方向演进，头部科技企业与垂直领域公司的联合成为重要落地模式。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_3_3.jpg" alt="程一笑：快手AI漫剧营销消耗同比增长超100倍，3月底单日营销消耗峰值突破2000万元" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/newsflashes/3827488082727812?f=rss" target="_blank">程一笑：快手AI漫剧营销消耗同比增长超100倍，3月底单日营销消耗峰值突破2000万元</a> 🇺🇸</h3>
+    <p>摘要：快手AI漫剧营销消耗在2026年第一季度同比增长超100倍，环比增长超150%；截至3月底单日营销消耗峰值突破2000万元。｜洞察：AI显著降低了漫剧生产成本和创作门槛，推动供给快速扩张，进而带动用户消费和投流需求释放，AI+内容营销模式已实现规模化商业变现。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_4_4.jpg" alt="程一笑：可灵AI 3月ARR近5亿美元，较去年同期增长4倍" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/newsflashes/3827487780492161?f=rss" target="_blank">程一笑：可灵AI 3月ARR近5亿美元，较去年同期增长4倍</a> 🇺🇸</h3>
+    <p>摘要：可灵AI在2026年3月ARR近5亿美元，较去年3月的1亿美元增长4倍，收入高速增长来自B端API调用和P端付费会员订阅双轮驱动，B端和P端用户均保持较好留存趋势。｜洞察：可灵AI在专业创作场景中的技术和产品实力获得市场验证，AI视频生成赛道的商业化路径已逐步清晰。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_5_5.jpg" alt="高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动" loading="lazy" />
+  <div class="card-body">
+    <div class="card-meta">36kr · </div>
+    <h3><a href="https://36kr.com/newsflashes/3827467208413825?f=rss" target="_blank">高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动</a> 🇺🇸</h3>
+    <p>摘要：高盛策略师将标普500指数年底目标点位上调至8000点，预测今年回报将达17%，主要受AI热潮推动的盈利增长所驱动。｜洞察：AI驱动的盈利增长预期正在重新定义全球股市估值基准，科技股估值逻辑正在被AI生产力革命全面重塑。</p>
+    <p style="color:#888;font-size:13px;">💡 </p>
+  </div>
+</div>
+  </div>
+
+  <!-- 开源社区热点 -->
+  <div class="section">
+    <div class="section-title oss">⚡ 开源社区热点</div>
+    
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank">sentence-transformers/all-MiniLM-L6-v2</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">轻量高效的文本相似度模型，两句话像不像问它就行</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank">open-llm-leaderboard/open_llm_leaderboard</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">全球大模型争霸榜，哪个最强一看便知</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory" target="_blank">jbilcke-hf/ai-comic-factory</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">输入故事自动生成漫画，创意工作者的神器</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On" target="_blank">Kwai-Kolors/Kolors-Virtual-Try-On</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">上传衣服图片就能看到上身效果，AI虚拟试衣</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/BAAI/bge-m3" target="_blank">BAAI/bge-m3</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">国产多语言向量模型，中英文语义检索样样精通</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/google-bert/bert-base-uncased" target="_blank">google-bert/bert-base-uncased</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">NLP基石模型，完形填空式的智能理解</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">支持中文等多语言的语义相似度模型</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">从零搭建AI应用的完整教程，工程师入门必备</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/HKUDS/ViMax" target="_blank">HKUDS/ViMax</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">视频理解与生成的前沿研究项目</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      <span style="color:#69db7c;font-size:12px;">[GitHub]</span>
+      <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
+    </h3>
+    <div class="card-meta"> </div>
+    <p style="color:#aaa;font-size:14px;">Anthropic官方知识助手插件，加速研究效率</p>
+  </div>
+</div>
+  </div>
+
+  <div class="footer">
+    由 Hermes Agent 自动生成 · 2026-05-28 10:15:47
+  </div>
+</div>
+</body>
 </html>
