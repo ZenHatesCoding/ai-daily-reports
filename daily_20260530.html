@@ -37,7 +37,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <p style="color:#6e7681;font-size:14px;">2026年05月30日 · 每日早7点更新</p>
   <div class="stats">
     <div class="stat">📰 <span>5</span> 条商业新闻</div>
-    <div class="stat">📄 <span>4</span> 篇论文深度解读</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
     <div class="stat">🔥 <span>6</span> 个开源热点</div>
   </div>
 </header>
@@ -45,20 +45,50 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <section>
 <h2>📰 AI 商业新闻</h2>
 
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_0.jpg" alt="I built an agent-run 1:1 email newsletter for competitive intelligence (free)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="#" target="_blank">I built an agent-run 1:1 email newsletter for competitive intelligence (free)</a></h3>
+  <p>📋 开发者用AI智能体打造一对一邮件通讯，主打竞争情报，限时免费。</p>
+  <p style="color:#8b949e;font-size:13px;">💡 垂直场景+自动化交付，是AI新闻产品差异化的新思路。</p>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_1.jpg" alt="21 days, $5K, 7 AI agents: how a non-programmer built a talent marketplace" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="#" target="_blank">21 days, $5K, 7 AI agents: how a non-programmer built a talent marketplace</a></h3>
+  <p>📋 非程序员用7个AI智能体、5000美元、21天搭建了一个人才市场平台。</p>
+  <p style="color:#8b949e;font-size:13px;">💡 AI降低创业门槛，但可复制性取决于场景选择。</p>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_2.jpg" alt="Flathub bans AI-generated apps and submissions" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="#" target="_blank">Flathub bans AI-generated apps and submissions</a></h3>
+  <p>📋 Linux应用商店Flathub宣布禁止AI生成的应用程序提交。</p>
+  <p style="color:#8b949e;font-size:13px;">💡 开源社区率先对AI生成内容设限，质量管控成焦点。</p>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_3.jpg" alt="Eqbench: Emotional Intelligence Benchmarks for LLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="#" target="_blank">Eqbench: Emotional Intelligence Benchmarks for LLMs</a></h3>
+  <p>📋 Eqbench推出大模型情感智能基准测试，评估LLM情绪识别与回应能力。</p>
+  <p style="color:#8b949e;font-size:13px;">💡 情商测试有望成为大模型竞争的新维度。</p>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_news_4.jpg" alt="GPT 5.5 Bro [video]" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="#" target="_blank">GPT 5.5 Bro [video]</a></h3>
+  <p>📋 一段关于GPT 5.5的演示视频在网络热传，引发社区关注。</p>
+  <p style="color:#8b949e;font-size:13px;">💡 视频传播比官方发布更能点燃话题，但真实性需验证。</p>
+</div>
 </section>
 
 <section>
 <h2>📄 论文深度解读</h2>
 
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30343.jpg" alt="Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3><a href="https://arxiv.org/abs/2605.30353" target="_blank">Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：AI代理作为科学软件开发工具的可靠性问题：代理将症状缓解当作根因解决，在无法表示目标物理学的代码架构内调整系数（33/57会话），且无法重新评估分支选择；仅在注入物理概念（各向异性BAO阻尼）时才触发重新设计。</span></div><div class="row"><span class="tech">⚙️ 方法：案例研究N=1：物理学家监督AI编码代理（Claude Code, Sonnet和Opus模型）历经12个工作日和57个会话构建CLAX-PT（JAX中的可微分单圈微扰理论模块，~2100行代码，经验证精度≲1%）；记录并分类15个监督事件按干预级别。</span></div><div class="row"><span class="cost">📦 代价：监督设计而非模型能力决定了代理输出是否可信；代理需要能够提出架构替代方案而非仅在给定结构内优化；需要区分预测充分性与解释正确性。</span></div><div class="row"><span class="highlight">📊 效果：代理自主解决10个问题（33/57会话），2个通过物理学家识别量级差异加速解决，3个无法解决——关键监督节点数量决定了系统可信度</span></div><div class="row"><span class="author">🏢 团队：Nguyen, Nhat-Minh</span></div></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30343.jpg" alt="Unlocking the Working Memory of Large Language Models for Latent Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://arxiv.org/abs/2605.30343" target="_blank">Unlocking the Working Memory of Large Language Models for Latent Reasoning</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：现有推理方法（CoT和隐式推理）将中间计算与自回归生成耦合，导致内部计算与外部通信混淆，且生成中间token的计算成本高。</span></div><div class="row"><span class="tech">⚙️ 方法：Reasoning in Memory (RiM)：用固定特殊token序列（memory blocks）作为工作记忆。两阶段训练 curriculum：Stage 1 在每个 memory block 后监督预测下一步推理；Stage 2 去掉推理步骤监督，改为在每个 memory block 后监督预测最终答案。所有 memory block 在单次前向传播中处理，避免自回归生成瓶颈。</span></div><div class="row"><span class="cost">📦 代价：牺牲：需要两阶段训练 curriculum 来让 memory blocks 获得预定义的计算角色；优势：固定 token 可单次前向传播处理，推理延迟与直接回答 SFT 相当，比 CoT 快 27 倍，比 Coconut 快 7 倍。</span></div><div class="row"><span class="highlight">📊 效果：Llama-3.2-3B: RiM 48.8% vs Coconut 41.3% on GSM8K (+7.5pp)；Llama-3.2-1B: RiM 42.1% vs Coconut 36.9% (+5.2pp)；GPT-2: RiM 33.6% vs Coconut 31.1% (+2.5pp)；推理延迟与直接回答 SFT 相当，比 CoT 快 27 倍。</span></div><div class="row"><span class="author">🏢 团队：Lukas Aichberger @ JKU Linz (ELLIS Unit Linz & LIT AI Lab)</span></div></div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30345.jpg" alt="VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3><a href="https://arxiv.org/abs/2605.30351" target="_blank">VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：长时序因果视频扩散依赖固定大小滑动窗口KV缓存，虽改变窗口内token或位置编码方式，但per-head KV布局本身（Streaming memory和延迟的主要贡献者）基本未变。</span></div><div class="row"><span class="tech">⚙️ 方法：VideoMLA首次将Multi-Head Latent Attention (MLA)应用于视频扩散：用共享低秩content latent和共享解耦3D-RoPE positional key替换per-head keys和values；在每层缓存将per-token KV内存降低92.7%。研究发现为何MLA在视频扩散中成功尽管语言模型中常用谱假设不成立：预训练视频注意力并非低秩（99%能量有效秩远高于任何实际潜在维度），但MLA瓶颈而非预训练谱决定有效秩。</span></div><div class="row"><span class="cost">📦 代价：需要三阶段训练 pipeline：Stage 1 Teacher Forcing → Stage 2 Consistency Distillation → Stage 3 Distribution Matching Distillation。</span></div><div class="row"><span class="highlight">📊 效果：KV内存降低92.7%，单卡B200吞吐量提升1.23x，VBench长时序总分最高，直接谱逼近预测大重构误差时仍保持视觉质量</span></div><div class="row"><span class="author">🏢 团队：Yesiltepe, Hu, Meral, Akan, Oktay, Eldardiry, Yanardag (Virginia Tech + fal)</span></div></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30345.jpg" alt="SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://arxiv.org/abs/2605.30345" target="_blank">SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：PCB原理图设计是几乎所有电子硬件的基础，但目前仍依赖人工且需要专业知识。生成式AI在数字/模拟IC设计已有进展，但PCB原理图从自然语言意图生成几乎未被探索。现有原理图格式多为冗长的工具特定语法和几何描述，难以可靠生成。</span></div><div class="row"><span class="tech">⚙️ 方法：SchGen：首个从自然语言请求生成可编辑PCB原理图的大语言模型。引入语义接地代码表示——编码原理图编辑原语、配以相对放置和基于引脚名的布线，将几何驱动生成问题转化为语义驱动匹配任务，更适合LLM处理。通过人机协作流程构建大规模PCB原理图数据集（将开源硬件设计转换为统一表示）。</span></div><div class="row"><span class="cost">📦 代价：需要构建新表示和大规模配对数据集；依赖人机协作 pipeline 完成数据转换。</span></div><div class="row"><span class="highlight">📊 效果：连线连接准确性显著优于替代表示（+15%），功能正确性提升12%，在通用LLM上也有大幅改进</span></div><div class="row"><span class="author">🏢 团队：Qinpei Luo @ UC San Diego; Ruichun Ma, Lili Qiu @ Microsoft Research Asia; Xinyu Zhang @ UC San Diego</span></div></div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30348.jpg" alt="LLMSurgeon: Diagnosing Data Mixture of Large Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
@@ -66,9 +96,14 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="tech-block"><div class="row"><span class="prob">🎯 问题：LLM的预训练数据混合组成模型的核心"数字DNA"，决定模型行为、能力与失败模式，但数据组成很少公开，导致事后审计数据组合或来源困难。</span></div><div class="row"><span class="tech">⚙️ 方法：Data Mixture Surgery (DMS)：给定目标LLM生成的文本，在预定义分类体系下估计其预训练语料库的域级分布。提出LLMSurgeon框架，将DMS建模为标签转移假设下的逆问题——不直接聚合分类器输出，而是估计校准的软混淆矩阵并求解约束逆问题，以纠正系统性域混淆并恢复潜在混合先验。</span></div><div class="row"><span class="cost">📦 代价：需要预先定义域分类体系；评估依赖LLMScan基准（基于透明预训练混合的开源LLM构建）。</span></div><div class="row"><span class="highlight">📊 效果：在LLMScan基准上，域混合比例估计误差低于5%；top-3域召回率达92%；在透明预训练混合的GPT-2规模模型上均能恢复真实域比例，误差与oracle基线差距在2%以内</span></div><div class="row"><span class="author">🏢 团队：Yaxin Luo, Jiacheng Cui, Xiaohan Zhao, Xinyi Shang, Jiacheng Liu, Xinyue Bi, Zhaoyi Li, Zhiqiang Shen @ VILA Lab, MBZUAI; UCL</span></div></div>
 </div>
 <div class="card">
-  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30351.jpg" alt="SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
-  <h3><a href="https://arxiv.org/abs/2605.30345" target="_blank">SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：PCB原理图设计是几乎所有电子硬件的基础，但目前仍依赖人工且需要专业知识。生成式AI在数字/模拟IC设计已有进展，但PCB原理图从自然语言意图生成几乎未被探索。现有原理图格式多为冗长的工具特定语法和几何描述，难以可靠生成。</span></div><div class="row"><span class="tech">⚙️ 方法：SchGen：首个从自然语言请求生成可编辑PCB原理图的大语言模型。引入语义接地代码表示——编码原理图编辑原语、配以相对放置和基于引脚名的布线，将几何驱动生成问题转化为语义驱动匹配任务，更适合LLM处理。通过人机协作流程构建大规模PCB原理图数据集（将开源硬件设计转换为统一表示）。</span></div><div class="row"><span class="cost">📦 代价：需要构建新表示和大规模配对数据集；依赖人机协作 pipeline 完成数据转换。</span></div><div class="row"><span class="highlight">📊 效果：连线连接准确性显著优于替代表示（+15%），功能正确性提升12%，在通用LLM上也有大幅改进</span></div><div class="row"><span class="author">🏢 团队：Qinpei Luo @ UC San Diego; Ruichun Ma, Lili Qiu @ Microsoft Research Asia; Xinyu Zhang @ UC San Diego</span></div></div>
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30351.jpg" alt="VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://arxiv.org/abs/2605.30351" target="_blank">VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：长时序因果视频扩散依赖固定大小滑动窗口KV缓存，虽改变窗口内token或位置编码方式，但per-head KV布局本身（Streaming memory和延迟的主要贡献者）基本未变。</span></div><div class="row"><span class="tech">⚙️ 方法：VideoMLA首次将Multi-Head Latent Attention (MLA)应用于视频扩散：用共享低秩content latent和共享解耦3D-RoPE positional key替换per-head keys和values；在每层缓存将per-token KV内存降低92.7%。研究发现为何MLA在视频扩散中成功尽管语言模型中常用谱假设不成立：预训练视频注意力并非低秩（99%能量有效秩远高于任何实际潜在维度），但MLA瓶颈而非预训练谱决定有效秩。</span></div><div class="row"><span class="cost">📦 代价：需要三阶段训练 pipeline：Stage 1 Teacher Forcing → Stage 2 Consistency Distillation → Stage 3 Distribution Matching Distillation。</span></div><div class="row"><span class="highlight">📊 效果：KV内存降低92.7%，单卡B200吞吐量提升1.23x，VBench长时序总分最高，直接谱逼近预测大重构误差时仍保持视觉质量</span></div><div class="row"><span class="author">🏢 团队：Yesiltepe, Hu, Meral, Akan, Oktay, Eldardiry, Yanardag (Virginia Tech + fal)</span></div></div>
+</div>
+<div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30353.jpg" alt="Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
+  <h3><a href="https://arxiv.org/abs/2605.30353" target="_blank">Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software</a></h3>
+  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：AI代理作为科学软件开发工具的可靠性问题：代理将症状缓解当作根因解决，在无法表示目标物理学的代码架构内调整系数（33/57会话），且无法重新评估分支选择；仅在注入物理概念（各向异性BAO阻尼）时才触发重新设计。</span></div><div class="row"><span class="tech">⚙️ 方法：案例研究N=1：物理学家监督AI编码代理（Claude Code, Sonnet和Opus模型）历经12个工作日和57个会话构建CLAX-PT（JAX中的可微分单圈微扰理论模块，~2100行代码，经验证精度≲1%）；记录并分类15个监督事件按干预级别。</span></div><div class="row"><span class="cost">📦 代价：监督设计而非模型能力决定了代理输出是否可信；代理需要能够提出架构替代方案而非仅在给定结构内优化；需要区分预测充分性与解释正确性。</span></div><div class="row"><span class="highlight">📊 效果：代理自主解决10个问题（33/57会话），2个通过物理学家识别量级差异加速解决，3个无法解决——关键监督节点数量决定了系统可信度</span></div><div class="row"><span class="author">🏢 团队：Nguyen, Nhat-Minh</span></div></div>
 </div>
 </section>
 
