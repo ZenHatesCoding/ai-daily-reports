@@ -34,7 +34,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <div class="container">
 <header>
   <h1>🤖 AI 技术洞察日报</h1>
-  <p style="color:#6e7681;font-size:14px;">2026年5月30日 · 周六 · 每日早7点自动更新</p>
+  <p style="color:#6e7681;font-size:14px;">2026年5月30日 · 周六 · 每日早7点更新</p>
   <div class="stats">
     <div class="stat">📰 <span>0</span> 条商业新闻</div>
     <div class="stat">📄 <span>4</span> 篇论文深度解读</div>
@@ -44,7 +44,10 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 
 <section>
 <h2>📰 AI 商业新闻</h2>
-<p style='color:#6e7681;font-size:14px;'>今日无AI商业新闻更新（数据源RSS 48h内无新内容）</p>
+
+<div class="card">
+  <p style="color:#6e7681;font-size:14px;text-align:center;padding:20px;">📭 今日新闻源暂无更新，明日再看</p>
+</div>
 </section>
 
 <section>
@@ -53,22 +56,46 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30353.jpg" alt="Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3><a href="https://arxiv.org/abs/2605.30353" target="_blank">Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：AI代理作为科学软件开发工具的可靠性问题：代理将症状缓解当作根因解决，在无法表示目标物理学的代码架构内调整系数（33/57会话），且无法重新评估分支选择；仅在注入物理概念（各向异性BAO阻尼）时才触发重新设计。</span></div><div class="row"><span class="tech">⚙️ 方法：案例研究N=1：物理学家监督AI编码代理（Claude Code, Sonnet和Opus模型）历经12个工作日和57个会话构建CLAX-PT（JAX中的可微分单圈微扰理论模块，~2100行代码，经验证精度≲1%）；记录并分类15个监督事件按干预级别。</span></div><div class="row"><span class="cost">📦 代价：监督设计而非模型能力决定了代理输出是否可信；代理需要能够提出架构替代方案而非仅在给定结构内优化；需要区分预测充分性与解释正确性。</span></div><div class="row"><span class="highlight">📊 效果：代理自主解决10个问题（33/57会话），2个通过物理学家识别量级差异加速解决，3个无法解决——关键监督节点数量决定了系统可信度</span></div><div class="row"><span class="author">🏢 团队：Nguyen, Nhat-Minh</span></div></div>
+  <div class="tech-block">
+    <div class="row"><span class="prob">🎯 问题：AI代理作为科学软件开发工具的可靠性问题：代理将症状缓解当作根因解决，在无法表示目标物理学的代码架构内调整系数（33/57会话），且无法重新评估分支选择；仅在注入物理概念（各向异性BAO阻尼）时才触发重新设计。</span></div>
+    <div class="row"><span class="tech">⚙️ 方法：案例研究N=1：物理学家监督AI编码代理（Claude Code, Sonnet和Opus模型）历经12个工作日和57个会话构建CLAX-PT（JAX中的可微分单圈微扰理论模块，~2100行代码，经验证精度≲1%）；记录并分类15个监督事件按干预级别。</span></div>
+    <div class="row"><span class="cost">📦 代价：监督设计而非模型能力决定了代理输出是否可信；代理需要能够提出架构替代方案而非仅在给定结构内优化；需要区分预测充分性与解释正确性。</span></div>
+    <div class="row"><span class="highlight">📊 效果：代理自主解决10个问题（33/57会话），2个通过物理学家识别量级差异加速解决，3个无法解决——关键监督节点数量决定了系统可信度</span></div>
+    <div class="row"><span class="author">🏢 团队：Nguyen, Nhat-Minh</span></div>
+  </div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30351.jpg" alt="VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3><a href="https://arxiv.org/abs/2605.30351" target="_blank">VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：长时序因果视频扩散依赖固定大小滑动窗口KV缓存，虽改变窗口内token或位置编码方式，但per-head KV布局本身（Streaming memory和延迟的主要贡献者）基本未变。</span></div><div class="row"><span class="tech">⚙️ 方法：VideoMLA首次将Multi-Head Latent Attention (MLA)应用于视频扩散：用共享低秩content latent和共享解耦3D-RoPE positional key替换per-head keys和values；在每层缓存将per-token KV内存降低92.7%。研究发现为何MLA在视频扩散中成功尽管语言模型中常用谱假设不成立：预训练视频注意力并非低秩（99%能量有效秩远高于任何实际潜在维度），但MLA瓶颈而非预训练谱决定有效秩。</span></div><div class="row"><span class="cost">📦 代价：需要三阶段训练 pipeline：Stage 1 Teacher Forcing → Stage 2 Consistency Distillation → Stage 3 Distribution Matching Distillation。</span></div><div class="row"><span class="highlight">📊 效果：KV内存降低92.7%，单卡B200吞吐量提升1.23x，VBench长时序总分最高，直接谱逼近预测大重构误差时仍保持视觉质量</span></div><div class="row"><span class="author">🏢 团队：Yesiltepe, Hu, Meral, Akan, Oktay, Eldardiry, Yanardag (Virginia Tech + fal)</span></div></div>
+  <div class="tech-block">
+    <div class="row"><span class="prob">🎯 问题：长时序因果视频扩散依赖固定大小滑动窗口KV缓存，虽改变窗口内token或位置编码方式，但per-head KV布局本身（Streaming memory和延迟的主要贡献者）基本未变。</span></div>
+    <div class="row"><span class="tech">⚙️ 方法：VideoMLA首次将Multi-Head Latent Attention (MLA)应用于视频扩散：用共享低秩content latent和共享解耦3D-RoPE positional key替换per-head keys和values；在每层缓存将per-token KV内存降低92.7%。研究发现为何MLA在视频扩散中成功尽管语言模型中常用谱假设不成立：预训练视频注意力并非低秩（99%能量有效秩远高于任何实际潜在维度），但MLA瓶颈而非预训练谱决定有效秩。</span></div>
+    <div class="row"><span class="cost">📦 代价：需要三阶段训练 pipeline：Stage 1 Teacher Forcing → Stage 2 Consistency Distillation → Stage 3 Distribution Matching Distillation。</span></div>
+    <div class="row"><span class="highlight">📊 效果：KV内存降低92.7%，单卡B200吞吐量提升1.23x，VBench长时序总分最高，直接谱逼近预测大重构误差时仍保持视觉质量</span></div>
+    <div class="row"><span class="author">🏢 团队：Yesiltepe, Hu, Meral, Akan, Oktay, Eldardiry, Yanardag (Virginia Tech + fal)</span></div>
+  </div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30348.jpg" alt="LLMSurgeon: Diagnosing Data Mixture of Large Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3><a href="https://arxiv.org/abs/2605.30348" target="_blank">LLMSurgeon: Diagnosing Data Mixture of Large Language Models</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：LLM的预训练数据混合组成模型的核心"数字DNA"，决定模型行为、能力与失败模式，但数据组成很少公开，导致事后审计数据组合或来源困难。</span></div><div class="row"><span class="tech">⚙️ 方法：Data Mixture Surgery (DMS)：给定目标LLM生成的文本，在预定义分类体系下估计其预训练语料库的域级分布。提出LLMSurgeon框架，将DMS建模为标签转移假设下的逆问题——不直接聚合分类器输出，而是估计校准的软混淆矩阵并求解约束逆问题，以纠正系统性域混淆并恢复潜在混合先验。</span></div><div class="row"><span class="cost">📦 代价：需要预先定义域分类体系；评估依赖LLMScan基准（基于透明预训练混合的开源LLM构建）。</span></div><div class="row"><span class="highlight">📊 效果：在LLMScan基准上，域混合比例估计误差低于5%；top-3域召回率达92%；在透明预训练混合的GPT-2规模模型上均能恢复真实域比例，误差与oracle基线差距在2%以内</span></div><div class="row"><span class="author">🏢 团队：Yaxin Luo, Jiacheng Cui, Xiaohan Zhao, Xinyi Shang, Jiacheng Liu, Xinyue Bi, Zhaoyi Li, Zhiqiang Shen @ VILA Lab, MBZUAI; UCL</span></div></div>
+  <div class="tech-block">
+    <div class="row"><span class="prob">🎯 问题：LLM的预训练数据混合组成模型的核心"数字DNA"，决定模型行为、能力与失败模式，但数据组成很少公开，导致事后审计数据组合或来源困难。</span></div>
+    <div class="row"><span class="tech">⚙️ 方法：Data Mixture Surgery (DMS)：给定目标LLM生成的文本，在预定义分类体系下估计其预训练语料库的域级分布。提出LLMSurgeon框架，将DMS建模为标签转移假设下的逆问题——不直接聚合分类器输出，而是估计校准的软混淆矩阵并求解约束逆问题，以纠正系统性域混淆并恢复潜在混合先验。</span></div>
+    <div class="row"><span class="cost">📦 代价：需要预先定义域分类体系；评估依赖LLMScan基准（基于透明预训练混合的开源LLM构建）。</span></div>
+    <div class="row"><span class="highlight">📊 效果：在LLMScan基准上，域混合比例估计误差低于5%；top-3域召回率达92%；在透明预训练混合的GPT-2规模模型上均能恢复真实域比例，误差与oracle基线差距在2%以内</span></div>
+    <div class="row"><span class="author">🏢 团队：Yaxin Luo, Jiacheng Cui, Xiaohan Zhao, Xinyi Shang, Jiacheng Liu, Xinyue Bi, Zhaoyi Li, Zhiqiang Shen @ VILA Lab, MBZUAI; UCL</span></div>
+  </div>
 </div>
 <div class="card">
   <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_paper_2605.30345.jpg" alt="SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3><a href="https://arxiv.org/abs/2605.30345" target="_blank">SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations</a></h3>
-  <div class="tech-block"><div class="row"><span class="prob">🎯 问题：PCB原理图设计是几乎所有电子硬件的基础，但目前仍依赖人工且需要专业知识。生成式AI在数字/模拟IC设计已有进展，但PCB原理图从自然语言意图生成几乎未被探索。现有原理图格式多为冗长的工具特定语法和几何描述，难以可靠生成。</span></div><div class="row"><span class="tech">⚙️ 方法：SchGen：首个从自然语言请求生成可编辑PCB原理图的大语言模型。引入语义接地代码表示——编码原理图编辑原语、配以相对放置和基于引脚名的布线，将几何驱动生成问题转化为语义驱动匹配任务，更适合LLM处理。通过人机协作流程构建大规模PCB原理图数据集（将开源硬件设计转换为统一表示）。</span></div><div class="row"><span class="cost">📦 代价：需要构建新表示和大规模配对数据集；依赖人机协作 pipeline 完成数据转换。</span></div><div class="row"><span class="highlight">📊 效果：连线连接准确性显著优于替代表示（+15%），功能正确性提升12%，在通用LLM上也有大幅改进</span></div><div class="row"><span class="author">🏢 团队：Qinpei Luo @ UC San Diego; Ruichun Ma, Lili Qiu @ Microsoft Research Asia; Xinyu Zhang @ UC San Diego</span></div></div>
+  <div class="tech-block">
+    <div class="row"><span class="prob">🎯 问题：PCB原理图设计是几乎所有电子硬件的基础，但目前仍依赖人工且需要专业知识。生成式AI在数字/模拟IC设计已有进展，但PCB原理图从自然语言意图生成几乎未被探索。现有原理图格式多为冗长的工具特定语法和几何描述，难以可靠生成。</span></div>
+    <div class="row"><span class="tech">⚙️ 方法：SchGen：首个从自然语言请求生成可编辑PCB原理图的大语言模型。引入语义接地代码表示——编码原理图编辑原语、配以相对放置和基于引脚名的布线，将几何驱动生成问题转化为语义驱动匹配任务，更适合LLM处理。通过人机协作流程构建大规模PCB原理图数据集（将开源硬件设计转换为统一表示）。</span></div>
+    <div class="row"><span class="cost">📦 代价：需要构建新表示和大规模配对数据集；依赖人机协作 pipeline 完成数据转换。</span></div>
+    <div class="row"><span class="highlight">📊 效果：连线连接准确性显著优于替代表示（+15%），功能正确性提升12%，在通用LLM上也有大幅改进</span></div>
+    <div class="row"><span class="author">🏢 团队：Qinpei Luo @ UC San Diego; Ruichun Ma, Lili Qiu @ Microsoft Research Asia; Xinyu Zhang @ UC San Diego</span></div>
+  </div>
 </div>
 </section>
 
@@ -76,52 +103,58 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <h2>🔥 开源热点</h2>
 
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_0.jpg" alt="harry0703/MoneyPrinterTurbo" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">harry0703/MoneyPrinterTurbo</a>
   </h3>
   <div class="card-meta"> Python</div>
-  <p style="color:#8b949e;font-size:14px;">AI视频生成工具，一键生成油管短视频</p>
+  <p style="color:#8b949e;font-size:14px;">AI自动生成短视频配图、配音和字幕的完整工具链</p>
 </div>
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_1.jpg" alt="rohitg00/ai-engineering-from-scratch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a>
   </h3>
   <div class="card-meta"> Python</div>
-  <p style="color:#8b949e;font-size:14px;">从零构建AI工程的实战教程</p>
+  <p style="color:#8b949e;font-size:14px;">从零实现AI工程能力的实战教程，涵盖RAG、Agent、Fine-tuning</p>
 </div>
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_2.jpg" alt="apps/github-actions" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/apps/github-actions" target="_blank">apps/github-actions</a>
   </h3>
   <div class="card-meta"> Python</div>
-  <p style="color:#8b949e;font-size:14px;">GitHub Actions自动化工作流</p>
+  <p style="color:#8b949e;font-size:14px;">GitHub官方Actions自动化流水线，用于CI/CD和自动化工作流</p>
 </div>
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_3.jpg" alt="anthropics/knowledge-work-plugins" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
   </h3>
   <div class="card-meta"> Python</div>
-  <p style="color:#8b949e;font-size:14px;">Claude知识工作插件集合</p>
+  <p style="color:#8b949e;font-size:14px;">Anthropic官方知识工作插件集，扩展Claude的搜索和工具能力</p>
 </div>
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_4.jpg" alt="anthropics/claude-plugins-official" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/anthropics/claude-plugins-official" target="_blank">anthropics/claude-plugins-official</a>
   </h3>
   <div class="card-meta"> Python</div>
-  <p style="color:#8b949e;font-size:14px;">Claude官方插件库</p>
+  <p style="color:#8b949e;font-size:14px;">Claude官方插件示例和实现规范，含代码和文档</p>
 </div>
 <div class="card">
+  <img src="https://raw.githubusercontent.com/ZenHatesCoding/ai-daily-reports/main/images/img_oss_5.jpg" alt="affaan-m/ECC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" />
   <h3>
     <span style="color:#69db7c;font-size:11px;">[GitHub]</span>
     <a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a>
   </h3>
   <div class="card-meta"> JavaScript</div>
-  <p style="color:#8b949e;font-size:14px;">优质开源项目</p>
+  <p style="color:#8b949e;font-size:14px;">轻量级椭圆曲线加密库，Rust实现，WebAssembly支持</p>
 </div>
 </section>
 
