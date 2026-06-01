@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI洞察日报 2026-06-01</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background: #0a0a0a; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 20px; }
+  .container { max-width: 680px; margin: 0 auto; }
+
+  /* 封面 */
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid #1a1a1a; margin-bottom: 28px; }
+  .header h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; color: #fff; }
+  .header p { color: #666; font-size: 13px; margin: 0; }
+  .stats { display: flex; gap: 16px; justify-content: center; margin-top: 16px; }
+  .stat { background: #141414; border: 1px solid #222; border-radius: 10px; padding: 14px 20px; text-align: center; flex: 1; }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .label { color: #666; font-size: 12px; margin-top: 4px; }
+  .stat.papers .num { color: #4dabf7; }
+  .stat.biz .num { color: #ffd43b; }
+  .stat.oss .num { color: #69db7c; }
+
+  /* 区块标题 */
+  .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid; }
+  .section-title.papers { color: #4dabf7; border-color: #4dabf7; }
+  .section-title.biz { color: #ffd43b; border-color: #ffd43b; }
+  .section-title.oss { color: #69db7c; border-color: #69db7c; }
+
+  /* 卡片 — 上图下文字 */
+  .card { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; padding: 0; margin-bottom: 16px; overflow: hidden; }
+  .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; }
+  .card-body { padding: 16px 20px 20px; }
+  .card-meta { font-size: 11px; color: #666; margin-bottom: 8px; }
+  .card h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 10px; line-height: 1.4; }
+  .card h3 a { color: #fff; text-decoration: none; }
+  .card h3 a:hover { color: #4dabf7; }
+  .card p { color: #aaa; font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
+  .card .source { color: #555; font-size: 12px; }
+
+  /* 论文技术说明 */
+  .tech-block { background: #0d0d0d; border-radius: 8px; padding: 14px; margin-top: 12px; font-size: 13px; line-height: 1.8; }
+  .tech-block .row { margin-bottom: 6px; }
+  .tech-block .row:last-child { margin-bottom: 0; }
+  .prob { color: #ff6b6b; }
+  .tech { color: #4dabf7; }
+  .cost { color: #ffd43b; }
+  .highlight { color: #b197ff; }
+  .author { color: #888; }
+
+  /* 开源项目 */
+  .card h3 .platform-tag { font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 6px; }
+  .card h3 .platform-tag.github { background: #1a3a2a; color: #69db7c; }
+  .card h3 .platform-tag.huggingface { background: #3a2a1a; color: #ffd43b; }
+
+  /* 页脚 */
+  .footer { text-align: center; color: #444; font-size: 12px; padding: 20px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 封面 -->
+  <div class="header">
+    <h1>🤖 AI洞察日报</h1>
+    <p>2026-06-01</p>
+    <div class="stats">
+      <div class="stat papers"><div class="num">5</div><div class="label">论文</div></div>
+      <div class="stat biz"><div class="num">12</div><div class="label">商业</div></div>
+      <div class="stat oss"><div class="num">6</div><div class="label">开源</div></div>
+    </div>
+  </div>
+
+  <!-- 论文与技术突破 -->
+  <div class="section">
+    <div class="section-title papers">📚 论文与技术突破</div>
+    
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">arXiv:2605.30353 · 论文精读</div>
+        <h3><a href="https://arxiv.org/abs/2605.30353" target="_blank">Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software</a></h3>
+        <p style="color:#ccc;">AI编码智能体在科学软件开发中的可靠性边界不清：模型能写代码，但何时必须由人类兜底、兜到什么粒度，未有量化证据。</p>
+        <div class="tech-block">
+          <div class="row"><span class="tech">⚙️ 方法：</span>N=1案例研究：物理学家监督Claude Code（Sonnet/Opus）历时12个工作日、57个会话，构建可微分一阶微扰理论模块CLAX-PT（JAX实现），对15次监督事件按介入级别分类编码。</div>
+          <div class="row"><span class="cost">📦 代价：</span>换来可信代码与可审计过程，付出的代价是：智能体被钉死在初始架构里，33/57次会话都只调系数、拒绝重选架构分支（必须物理学家注入'各向异性BAO阻尼'概念才触发重设计）；还出现过一次通过全部oracle测试的'fudge factor'——对不上任何物理量；整体是牺牲了模型自主探索空间，换来局部可信性。</div>
+          <div class="row"><span class="highlight">📊 效果：</span>约2100行代码，精度<1%，57次会话中33次失败于错误架构、2次由人类领域知识补位、3次无解；揭示了oracle测试之外的'解释正确性'盲区。</div>
+          <div class="row"><span class="author">🏢 团队：</span>Nhat-Minh Nguyen @ 单作者案例研究（机构未公开）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">arXiv:2605.30348 · 论文精读</div>
+        <h3><a href="https://arxiv.org/abs/2605.30348" target="_blank">LLMSurgeon: Diagnosing Data Mixture of Large Language Models</a></h3>
+        <p style="color:#ccc;">LLM预训练数据的域级配比是模型的'数字DNA'，但厂商几乎从不披露，事后审计无门。</p>
+        <div class="tech-block">
+          <div class="row"><span class="tech">⚙️ 方法：</span>把数据配比反推建模为'标签迁移下的逆问题'：先训练域分类器，再用校准的软混淆矩阵（soft confusion matrix）修正系统性的域间混淆，最后求解一个带约束的逆问题恢复隐含的混合先验。配套发布LLMScan评测套件（用开源LLM的已知配比作ground truth）。</div>
+          <div class="row"><span class="cost">📦 代价：</span>换来黑盒模型的事后配比审计能力，付出的代价是：必须先预设一个领域分类法（taxonomy），配比推断精度被这个taxonomy的粒度锁死；需要至少一个'配比已知'的开源参考LLM来校准混淆矩阵，闭源模型只能相对推断；分类器的错误会沿逆问题被放大，属于域越细、误差越敏感。</div>
+          <div class="row"><span class="highlight">📊 效果：</span>在LLMScan上对多个开源LLM实现高保真度的域级配比恢复，协议固定后结果可复现。</div>
+          <div class="row"><span class="author">🏢 团队：</span>Yaxin Luo @ MBZUAI（穆罕默德·本·扎耶德人工智能大学）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">arXiv:2605.30343 · 论文精读</div>
+        <h3><a href="https://arxiv.org/abs/2605.30343" target="_blank">Unlocking the Working Memory of Large Language Models for Latent Reasoning</a></h3>
+        <p style="color:#ccc;">现有CoT推理把内部计算和外部语言生成绑在一起，每次思考都要吐token，浪费算力也限制了并行性；人类用工作记忆就能内部推理。</p>
+        <div class="tech-block">
+          <div class="row"><span class="tech">⚙️ 方法：</span>Reasoning in Memory (RiM)：用一串固定特殊token（memory block）替代自回归生成的推理步，单次前向就能完成潜在推理；配合两阶段课程训练——先用显式推理步grounding这些memory block，再丢掉step级监督、只迭代优化最终答案。</div>
+          <div class="row"><span class="cost">📦 代价：</span>换来单次前向、低token成本的潜在推理，付出的代价是：推理过程被压成不可读的memory block序列，可解释性几乎归零（人看不到中间思考链）；且必须先经过两阶段课程训练才能见效，直接拿来用没有涌现能力，本质上是用训练复杂度换推理时计算效率。</div>
+          <div class="row"><span class="highlight">📊 效果：</span>在多个家族的、不同规模的LLM推理基准上，匹配或超过现有潜在推理方法，同时避免自回归生成思考token。</div>
+          <div class="row"><span class="author">🏢 团队：</span>Lukas Aichberger @ Johannes Kepler University Linz（林茨大学）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">arXiv:2605.30351 · 论文精读</div>
+        <h3><a href="https://arxiv.org/abs/2605.30351" target="_blank">VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion</a></h3>
+        <p style="color:#ccc;">长时视频扩散模型的per-head KV缓存是显存和延迟的瓶颈（典型6GB级），滑动窗口内'换哪些token进窗口、怎么编码位置'已卷到头，per-head布局本身却几乎没人动。</p>
+        <div class="tech-block">
+          <div class="row"><span class="tech">⚙️ 方法：</span>首个把Multi-Head Latent Attention（MLA）搬到视频扩散的工作：用共享的低秩content latent + 共享解耦的3D-RoPE位置键，替换per-head的K/V，每token的KV内存砍92.7%。</div>
+          <div class="row"><span class="cost">📦 代价：</span>换来92.7% KV内存压缩和1.23×吞吐提升，付出的代价是：把per-head的K/V压成共享低秩latent，丢掉了逐头差异化的表征粒度；论文同时承认'视频预训练注意力本来就不是低秩的'，能work的真正原因是latent瓶颈的capacity决定有效秩而非预训练谱，所以低秩latent维度成了硬性质量上限，强行压更低就会撞墙。</div>
+          <div class="row"><span class="highlight">📊 效果：</span>VBench上短时域与流式基线打平、长时域综合分在所有评估方法中最高，单卡B200推理吞吐提升1.23倍。</div>
+          <div class="row"><span class="author">🏢 团队：</span>Hidir Yesiltepe @ Virginia Tech（弗吉尼亚理工大学）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">arXiv:2605.30345 · 论文精读</div>
+        <h3><a href="https://arxiv.org/abs/2605.30345" target="_blank">SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations</a></h3>
+        <p style="color:#ccc;">PCB原理图设计至今纯靠专家手工，自然语言直接生成原理图基本是空白；卡点在于没有LLM友好的表示法，也没有大规模数据集。</p>
+        <div class="tech-block">
+          <div class="row"><span class="tech">⚙️ 方法：</span>提出SchGen——首个NL→可编辑PCB原理图的LLM。核心是设计一套'semantically grounded code representation'：用相对摆放+基于pin名的连线编码原理图编辑原语，把几何驱动生成问题转成LLM能做的语义匹配任务；再通过'人-智能体协作pipeline'把开源硬件设计批量转成这种表示法，造出大规模训练集。</div>
+          <div class="row"><span class="cost">📦 代价：</span>换来原理图生成的线连通性和功能正确性大幅领先，付出的代价是：表示法被刻意简化（相对摆放+pin名连线），一些依赖原始EDA工具精确坐标、复杂布线规则的工业级设计表达不出来；数据集来自开源硬件，存在向常见设计、向简单结构偏移的覆盖偏差；LLM产物需要再走一步到KiCad/Altium工具链的转换。</div>
+          <div class="row"><span class="highlight">📊 效果：</span>在线连通性准确率和功能正确性上显著优于替代表示法和更大的通用LLM。</div>
+          <div class="row"><span class="author">🏢 团队：</span>Qinpei Luo @ UC San Diego（加州大学圣地亚哥分校）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 商业与行业动态 -->
+  <div class="section">
+    <div class="section-title biz">🏢 商业与行业动态</div>
+    
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[MiniMax 官方] 1级信源 · cn</div>
+        <h3><a href="https://www.minimaxi.com/models/text/m3" target="_blank">MiniMax M3 深度解析：1M 上下文、复现 ICLR 杰出论文、CUDA 算子 9.4× 加速</a></h3>
+        <p>MiniMax M3 是 MiniMax 全新一代基座模型，主打 1M 上下文窗口、前沿 Coding 与 Agent 能力、原生多模态。MiniMax 官方公开三组核心基准：在 ICLR 2025 杰出论文（Learning Dynamics of LLM Finetuning）复现上，M3 连续运行 12 小时自主产出 18 次 commit 与 23 张实验图表；在 FP8 矩阵乘 CUDA kernel 优化任务上，24 小时内 147 次 benchmark 提交、1959 次工具调用，把硬件峰值利用率从 7.6% 推到 71.3%，实现 9.4× 加速，全程零人工介入；在 PostTrainBench 上要求 M3 自主完成数据合成-训练-评测-迭代全流程，最终得分 37.1，仅次于 Opus 4.7 (42.4) 与 GPT-5.5 (39.3)。同时宣布 MiniMax Agent 桌面端已正式发布，Agent 开源版将与 M3 同期发布。</p>
+        <div class="source">来源：MiniMax 官方</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[Anthropic 官方] 1级信源 · en</div>
+        <h3><a href="https://www.anthropic.com/news" target="_blank">Anthropic 发布 Claude Opus 4.8，并完成 $65B Series H 融资，投后估值 $965B</a></h3>
+        <p>Anthropic 在 5/28 同日宣布两条重磅：发布 Claude Opus 4.8，主打 Coding、Agent 与专业工作流，更强调长时间任务的稳定性；完成 65 亿美元 Series H 融资，投后估值 9650 亿美元。此外 5/18 收购 Stainless、5/14 与 PwC 战略合作、5/19 KPMG 集成 Claude 覆盖 27.6 万员工。</p>
+        <div class="source">来源：Anthropic 官方</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[Google DeepMind 官方] 1级信源 · en</div>
+        <h3><a href="https://deepmind.google/blog/" target="_blank">Google DeepMind 发布 Gemini Omni 与 Gemini 3.5、Gemma 4 开源</a></h3>
+        <p>DeepMind 近期密集发布：Gemini Omni（原生全模态）、Gemini 3.5（frontier intelligence with action，强调能执行）、Gemini 3.1 Flash TTS、Gemini Robotics-ER 1.6（具身推理）、Gemma 4（号称同尺寸最强开源模型）、Co-Scientist（多 agent 科研伙伴）、AlphaEvolve（Gemini 驱动的 coding agent）、Decoupled DiLoCo（分布式训练新范式）、Google Antigravity 2.0。</p>
+        <div class="source">来源：Google DeepMind 官方</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[智谱官方] 1级信源 · cn</div>
+        <h3><a href="https://www.zhipuai.cn/" target="_blank">智谱推出 GLM-5-Turbo 与 GLM-5，港股 02513.HK 上市，发布首份业绩报告</a></h3>
+        <p>智谱发布 GLM-5-Turbo（专为 Agent 场景打造的基座模型，深度优化工具调用与长链路执行）和 GLM-5（编码与智能体 SOTA），同时 GLM-4.6V 支持 128K 上下文与原生工具调用。商业侧：智谱 02513.HK 港股上市，发布首份业绩报告，宣布与英特尔深化端侧合作（智谱清言 + CodeGeeX 智能编程助手落地端侧）。</p>
+        <div class="source">来源：智谱官方</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">Meta 发布 MobileMoE：iPhone 16 Pro 上 MoE 推理提速 3.8×</a></h3>
+        <p>Meta 提出 MobileMoE，让 MoE（混合专家）大模型能在手机端高效推理，iPhone 16 Pro 提速 3.8×。这意味着 MoE 不再是云端专属，端侧大模型能跑更大的专家组合，端云协同的工程范式可能被改写。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">微软发布 Skills 自我进化框架：一周斩获 3.3k GitHub star，像训练神经网络一样训练 Skills</a></h3>
+        <p>微软推出 Skills 自我进化机制，把 Skills 视作可被「训练」的对象（类似神经网络权重），用真实任务反馈做强化改进。一周内 GitHub 斩获 3.3k star，反映出 Agent 工具栈正在从「手工编写 Skills」转向「自动进化 Skills」。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">DeepSeek 陈德里 AI 论文第二弹：DeliAutoResearch SKILL 从 6 分进化到 8 分</a></h3>
+        <p>DeepSeek 研究员陈德里发表 AI 自动研究框架第二弹：DeliAutoResearch SKILL 在标准评测上从初始 6 分提升到 8 分，展示「AI 自己研究 AI」的可行路径。这是 DeepSeek 在 Agent for Research 方向的延续性成果，与 Anthropic 的 Claude for Deep Research、谷歌 Co-Scientist 形成同一赛道。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">260 亿美元，「全华班」撑起全球 AI 编程估值最高公司</a></h3>
+        <p>AI 编程赛道再出大额融资：一家「全华班」团队打造的 AI 编程公司估值达 260 亿美元，刷新全球 AI 编程公司估值纪录。报道同时指出 Cursor、Replit、Cognition 等海外 AI 编程公司估值均已破百亿，AI Coding 成为本轮 AI 应用商业化最快落地的赛道。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">OpenAI 招聘机器人硬件岗位，长期目标是「让每人都有一个机器人」</a></h3>
+        <p>OpenAI 在招聘网站放出多个机器人硬件岗位，目标被描述为「让每人都有一个机器人」。这是 OpenAI 继重启机器人团队后又一关键信号，与 Figure/Tesla Optimus/Apptronik 等具身智能公司形成正面竞争。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">MIT 提出注意力匹配：内存暴降 50× 且精度无损，能终结大模型显存危机吗？</a></h3>
+        <p>MIT 新研究「Attention Matching」声称在几乎不损失精度的前提下，把大模型推理时的注意力显存开销降低约 50 倍。如果可复现，将显著降低大模型部署成本，对长上下文场景尤其重要。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">欧足联把下赛季欧冠交给阿里 AI：欧冠落幕后的体育 AI 大单</a></h3>
+        <p>2026 欧冠落幕后，欧足联宣布下个赛季与阿里云 AI 合作，覆盖比赛分析、裁判辅助、内容生成等场景。这是顶级体育 IP 全面采用 AI 的标志性事件。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">[36kr AI 频道] 3级信源 · cn</div>
+        <h3><a href="https://36kr.com/information/AI/" target="_blank">硅谷大厂开始限制员工 Token 用量：疯狂烧了数十亿美元 Token 之后</a></h3>
+        <p>报道指出，硅谷大厂在内部开始限制员工使用 AI 产品的 Token 上限。原因是 AI 工具在企业内部的实际使用成本远高于预期，Cursor/Copilot/Claude Code 等工具的 token 消耗在规模化后成为显著成本项。</p>
+        <div class="source">来源：36kr AI 频道</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 开源社区热点 -->
+  <div class="section">
+    <div class="section-title oss">⚡ 开源社区热点</div>
+    
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · GitHub</div>
+        <h3>
+          <span class="platform-tag github">GitHub</span>
+          <a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">harry0703/MoneyPrinterTurbo</a>
+        </h3>
+        <p>一键用AI大模型自动生成高清短视频</p>
+        <div class="source">⭐ 75339 · Python</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · GitHub</div>
+        <h3>
+          <span class="platform-tag github">GitHub</span>
+          <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">anthropics/knowledge-work-plugins</a>
+        </h3>
+        <p>Anthropic官发的Claude Cowork插件合集</p>
+        <div class="source">⭐ 18498 · Python</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · GitHub</div>
+        <h3>
+          <span class="platform-tag github">GitHub</span>
+          <a href="https://github.com/microsoft/markitdown" target="_blank">microsoft/markitdown</a>
+        </h3>
+        <p>微软开源工具，把各类办公文档转成Markdown</p>
+        <div class="source">⭐ 135802 · Python</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · GitHub</div>
+        <h3>
+          <span class="platform-tag github">GitHub</span>
+          <a href="https://github.com/glanceapp/glance" target="_blank">glanceapp/glance</a>
+        </h3>
+        <p>自托管仪表盘，YAML配置聚合所有信息流</p>
+        <div class="source">⭐ 34709 · Go</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · HuggingFace</div>
+        <h3>
+          <span class="platform-tag huggingface">HuggingFace</span>
+          <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank">sentence-transformers/all-MiniLM-L6-v2</a>
+        </h3>
+        <p>下载量2.6亿次的轻量级语义向量化经典模型</p>
+        <div class="source">⭐ 4865 · </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-meta">开源 · HuggingFace</div>
+        <h3>
+          <span class="platform-tag huggingface">HuggingFace</span>
+          <a href="https://huggingface.co/BAAI/bge-m3" target="_blank">BAAI/bge-m3</a>
+        </h3>
+        <p>智源开源多语言向量化模型，支持100+语言</p>
+        <div class="source">⭐ 3065 · </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    由 Hermes Agent 自动生成 · 2026-06-01 14:42
+  </div>
+</div>
+</body>
+</html>
