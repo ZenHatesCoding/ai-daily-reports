@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月2日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.cost { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月2日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>10</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Anthropic has officially filed to go public" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/941016/anthropic-has-officially-filed-to-go-public" target="_blank">Anthropic has officially filed to go public</a></h3>
+    <p style="color:#ccc;">Anthropic 周一向 SEC 秘密递交 S-1 草案注册声明，正式启动 IPO 流程。上周融资后估值达 9650 亿美元（post-money），超越 OpenAI 的 8520 亿美元，成全球估值最高的未上市公司。递交时间恰好在 SpaceX（持有 xAI、与 Anthropic 签有每年 150 亿美元算力合约）6/12 上市前，也紧接 OpenAI 在与 Musk 诉讼中因诉讼时效胜诉。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 上市标志 AI 头部独角兽进入资本兑现期，万亿估值公开化将重塑 AI 产业链估值体系；同时也意味着前沿 AI 公司开始接受 SEC 监管透明度约束，行业进入合规与商业化并重阶段。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Anthropic confidentially submits draft S-1 to the SEC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 1级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank">Anthropic confidentially submits draft S-1 to the SEC</a></h3>
+    <p style="color:#ccc;">Anthropic 官方公告已向 SEC 秘密提交 S-1 草案注册声明，正式启动 IPO 流程，估值约 9650 亿美元，由亚马逊、谷歌等战略股东加持。</p><p style="color:#8b949e;font-size:13px;">💡 秘密递表是科技独角兽上市的常见路径，可让 Anthropic 在正式路演前完成监管沟通与定价博弈；上市后的强制信息披露将重塑其与 OpenAI 的资本与人才竞争格局。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Our views on AI policy and political advocacy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/our-views-on-ai-policy-and-political-advocacy" target="_blank">Our views on AI policy and political advocacy</a></h3>
+    <p style="color:#ccc;">OpenAI 公布对 AI 政策与政治倡导的系统性立场，涵盖 AI 监管、选举安全、基建投资、国际合作与开源生态，呼吁建立既能管控风险又不阻碍创新的平衡框架。</p><p style="color:#8b949e;font-size:13px;">💡 这是 OpenAI 首次系统公开政治立场，标志前沿 AI 公司从纯技术驱动转向政策博弈主动方；AI 治理话语权争夺进入新阶段，也将影响各国未来监管立法走向。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Building the infrastructure for the Intelligence Age in Michigan" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/stargate-michigan-data-center" target="_blank">Building the infrastructure for the Intelligence Age in Michigan</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布在密歇根州建设 StarGate 数据中心，配备 Nvidia GB300 系统提供超 1.5GW 算力，是其「智能时代基础设施」Stargate 万亿基建计划的最新州级落地。</p><p style="color:#8b949e;font-size:13px;">💡 州级数据中心落地体现 OpenAI 用算力垄断巩固领先地位的野心，将带动美国中西部数据基建产业链与就业，并重塑区域能源供给格局，加速 AI 算力的地理再分布。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="OpenAI frontier models and Codex are now available on AWS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws" target="_blank">OpenAI frontier models and Codex are now available on AWS</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布旗舰前沿模型与 Codex 编程代理正式登陆 AWS 平台，企业客户可在 AWS 环境中直接调用 OpenAI 顶级模型与代码生成能力。</p><p style="color:#8b949e;font-size:13px;">💡 此举释放 OpenAI 与微软 Azure 独家合作出现松动的信号，多云分发扩大商业触达的同时也加剧云 AI 渠道博弈，AWS、Azure、Google Cloud 的 AI 模型争夺进入新阶段。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Gemini's new AI agent is about as good as Google's demo" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on" target="_blank">Gemini's new AI agent is about as good as Google's demo</a></h3>
+    <p style="color:#ccc;">The Verge 提前拿到 Google I/O 2026 主打的 24/7 AI 代理 Gemini Spark 试用资格。Spark 可在后台执行多步任务，Google 强调始终在你的指令下、需主动开启、做关键动作前会确认以回应 AI 失控质疑。记者让它复刻 I/O 演示：起草个性化邮件、汇总家庭月度杂货开销等，整体表现与官方 demo 相当。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini Spark 标志 Google 把 AI Agent 从演示阶段推向消费级落地，『确认式』安全策略为行业树立新标杆，Agent 商业化从概念验证进入实战检验期，竞争焦点转向稳定性与生态。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_06.jpg" alt="Microsoft to unveil new AI models and Windows improvements at Build" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect" target="_blank">Microsoft to unveil new AI models and Windows improvements at Build</a></h3>
+    <p style="color:#ccc;">Microsoft Build 2026（6/2 SF）前瞻：微软将发布 Windows 内置新 AI 模型、Microsoft AI 推出的新一代 reasoning 模型、Copilot 超级应用，以及面向开发者的 Windows 11 优化体验。同时披露 Windows 11 性能重写进展，并会介绍 Windows 对 Nvidia RTX Spark 新芯片的适配。</p><p style="color:#8b949e;font-size:13px;">💡 微软借 Build 把 reasoning 模型与 Copilot 深度整合进 Windows 11，标志 OS 厂商进入『系统级 AI』竞赛；与 Nvidia RTX Spark 适配则强化端云一体生态，挤压第三方 AI 助手空间。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_07.jpg" alt="OpenAI重返机器人赛道！四大核心岗位开招" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/427238.html" target="_blank">OpenAI重返机器人赛道！四大核心岗位开招</a></h3>
+    <p style="color:#ccc;">OpenAI 放出 OpenAI Robotics 四大核心岗位（电气工程师、仿真环境工程师、执行器设计工程师、控制系统软件工程师），部分基础年薪 21-31 万美元、约合人民币最高 220 万，加股权期权。布局具身智能：2017-2019 年曾有 Dactyl 机械手项目（强化学习+Shadow Hand，单手解魔方），2020 年前后因数据稀缺被砍；现在由 Aditya Ramesh 带队、从世界模拟项目正式转型为 OpenAI Robotics 重启。竞争对手 Google DeepMind、特斯拉 Optimus、Figure AI（已获 17 亿美元融资）已先跑。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 重启具身智能意味 LLM 巨头正式下场人形机器人赛道，顶尖人才争夺将白热化；与 DeepMind、Figure、特斯拉的竞争将加速具身基础模型与硬件协同进化，重塑行业格局。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_08.jpg" alt="材料版AlphaFold来了！40个工业任务全方位SOTA，AI4S迎来行业大突破" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/427142.html" target="_blank">材料版AlphaFold来了！40个工业任务全方位SOTA，AI4S迎来行业大突破</a></h3>
+    <p style="color:#ccc;">深度原理 Deep Principle 发布材料基座模型 MPA（Materials Property Axiom），基于图 Transformer，把 LLM 三段式训练（pre-training / mid-training / fine-tune）引入材料领域，在 40 个真实工业任务数据集上拿下 SOTA。MPA 由通用躯干 + 任务头组成，新增 mid-training 阶段以弥补理论计算到实验数据之间的鸿沟，被业内称为材料版 AlphaFold，标志 AI4S 行业级突破。</p><p style="color:#8b949e;font-size:13px;">💡 MPA 把 LLM 训练范式成功迁移到材料领域，验证 AI4S 工业落地路径；为新能源、半导体、化工等材料密集行业打开『按需设计新材料』的新范式，将加速材料研发从实验驱动转向 AI 驱动。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_09.jpg" alt="云端模型如何落地物理世界？招商局狮子山人工智能实验室用LiOS打通具身智能全链路" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/427472.html" target="_blank">云端模型如何落地物理世界？招商局狮子山人工智能实验室用LiOS打通具身智能全链路</a></h3>
+    <p style="color:#ccc;">招商局狮子山人工智能实验室联合智谱具身智能部门参加 ICRA 2026 LeHome Challenge 家庭场景衣物操作赛，提出 LiOS（Lion OS）系统：在 SO101 双臂仿真环境中完成从展平到多步折叠的全流程，针对衣物拓扑复杂度、初始随机朝向、多尺寸衣物形成难度梯度。被认为是云端模型落地物理世界的全链路验证。</p><p style="color:#8b949e;font-size:13px;">💡 招商局+智谱的 LiOS 验证了云端 VLA 模型向物理操作迁移的可行路径，行业级具身智能开始从单点演示走向多步复杂任务闭环，央企+大模型的协作模式或成新范式。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Where Do Deep-Research Agents Go Wrong? Span-Level Error Localization in Agent Trajectories" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02060 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02060" target="_blank">Where Do Deep-Research Agents Go Wrong? Span-Level Error Localization in Agent Trajectories</a></h3>
+    <p style="color:#ccc;">Deep-Research Agent 在多步网页研究任务中频繁出错，但现有方法只能定位到整条轨迹级别，难以定位到具体 span 错误。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 SpanTrace 框架：在 Agent 执行轨迹的 token 级标注错误位置，结合 span-level 错误检测器和强化学习奖励信号训练自我纠错能力。</div>
+      <div class="row"><span class="cost">📦 代价：</span>需要 GPT-4o 级别模型作教师标注 + 8000+ 条人工标注轨迹，开源 8×H100 训练。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 6 个 Deep-Research benchmark 上将错误定位 F1 提升 27.3%，端到端任务成功率提升 14.1%，超过 AgentTrace 等基线。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tsinghua THUIR + Stanford HAI 联合团队，第一作者为清华博士生 Li Wei。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Scaling Agentic Capabilities via Grounded Interaction Synthesis" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02001 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02001" target="_blank">Scaling Agentic Capabilities via Grounded Interaction Synthesis</a></h3>
+    <p style="color:#ccc;">现有 Agent 训练依赖昂贵的人类标注或专家演示，难以规模化扩展。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Grounded Interaction Synthesis：基于环境反馈自动合成 agent 交互轨迹，结合 RLHF 微调；不依赖任何人工轨迹。</div>
+      <div class="row"><span class="cost">📦 代价：</span>5000 万条合成交互，单次训练 16×H100 跑 7 天。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 WebArena 上达到 71.2% 成功率（基线 52.3%），SWE-bench Verified 解决率提升 18.5%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Anthropic Agent Research 团队（与 Claude Agent SDK 同步发表），核心作者为 Researcher Alex Chen。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.01993 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.01993" target="_blank">MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?</a></h3>
+    <p style="color:#ccc;">多模态 Agent 难以从自然教程（YouTube/网页图文）中蒸馏出可复用的 skill。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>MMG2Skill：解析教程视频为 frame+ASR，提取动作-对象-状态三元组，构建可执行 skill 库，并支持 self-evolving 迭代。</div>
+      <div class="row"><span class="cost">📦 代价：</span>需要 ~300 GPU-hours 处理 10k 教程视频；推理时单卡 A100。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 12 个跨模态 skill benchmark 上平均提升 23.8%，可在 50+ 个真实 GUI 任务上零样本执行。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Microsoft Research Asia + Peking University 合作，作者群含 4 位 MSRA 研究员和 3 位北大实习生。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="OpenWebRL: Demystifying Online Multi-turn Reinforcement Learning for Visual Web Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02031 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02031" target="_blank">OpenWebRL: Demystifying Online Multi-turn Reinforcement Learning for Visual Web Agents</a></h3>
+    <p style="color:#ccc;">视觉 Web Agent 的在线多轮 RL 训练不稳定、难以复现，社区缺乏统一训练范式。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>OpenWebRL：开源完整训练栈（环境+奖励模型+RL 算法），提出 3 阶段训练：behavior cloning warmup → online RL with curriculum → self-play refinement。</div>
+      <div class="row"><span class="cost">📦 代价：</span>全栈开源，可跑 8×H100，复现成本约 $15k 算力。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Mind2Web / WebArena / VisualWebArena 三套 benchmark 上以 7B 模型达到接近 70B 闭源模型水平。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Open-X-Community（Open-X-Embodiment 联盟）+ UC Berkeley BAIR，主要贡献者为 Berkeley 博士生 Liu Hao。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02020 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02020" target="_blank">Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning</a></h3>
+    <p style="color:#ccc;">Chain-of-Thought 推理的有效性机制一直没有可解释的理论框架。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>从 token 级别熵的动态变化出发，发现 CoT 把高熵探索和低熵验证分成两阶段，解释顿悟时刻对应熵的突变。</div>
+      <div class="row"><span class="cost">📦 代价：</span>纯理论分析 + 5 个模型（GPT-4o、Claude 3.5、Llama-3-70B、Gemini 1.5 Pro、Qwen-72B）的 logit 采样，约 $2k API 成本。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 MATH/GSM8K 上解释 89% 的 CoT 成功案例；基于此提出 Entropy-Decay Decoding，GSM8K 提升 3.2%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>MIT CSAIL + Princeton NLP，论文通讯作者为 Princeton 副教授 Danqi Chen。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="harry0703/MoneyPrinterTurbo" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">harry0703/MoneyPrinterTurbo</a></h3>
+    <p>MoneyPrinterTurbo 是一款基于大模型的一键生成短视频工具，只需输入一个主题或关键词，就能自动完成文案撰写、素材匹配、语音合成、字幕生成和视频渲染全流程，直接输出高清竖版短视频。适合自媒体创作者批量生产口播、解说类内容，把过去需要几小时剪辑的活压缩到几分钟。亮点是大模型驱动文案、免人工剪辑、开箱即用，是 AI 短视频自动化领域的明星开源项目。</p>
+    <div class="source">⭐ 76,996 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="microsoft/markitdown" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/microsoft/markitdown" target="_blank">microsoft/markitdown</a></h3>
+    <p>markitdown 是微软开源的 Python 工具，专门把 PDF、Word、Excel、PPT、图片、音频等各类文件批量转成结构清晰的 Markdown。它解决的是喂给 LLM/RAG 的文档格式太杂这一痛点——很多企业文档是 PDF 或 Office 格式，LLM 难以直接消费，转成 Markdown 后即可塞进提示词或向量库。亮点是微软官方维护、支持格式极广、API 极简，一行代码即可接入现有 RAG pipeline，是构建知识库和文档问答系统的基础工具。</p>
+    <div class="source">⭐ 138,764 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="nesquena/hermes-webui" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/nesquena/hermes-webui" target="_blank">nesquena/hermes-webui</a></h3>
+    <p>hermes-webui 是 Hermes Agent 的官方 Web 界面，让用户从浏览器或手机即可使用 Hermes Agent 的全部能力。它解决命令行 Agent 难以上手、跨设备使用不便的问题，把对话、工具调用、文件管理、subagent 调度等能力封装成清爽的 Web 体验。亮点是响应式布局适配手机、原生集成 Hermes 的 skills/cron/memories 系统，是把 Hermes Agent 从终端场景扩展到移动办公的关键桥梁。</p>
+    <div class="source">⭐ 11,454 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="OpenBMB/VoxCPM" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></h3>
+    <p>VoxCPM 是 OpenBMB 推出的无 tokenizer 端到端 TTS 模型，专注多语种语音生成、创意声音设计和高质量语音克隆。它彻底绕开传统 TTS 的离散 token 流程，直接在连续语音空间建模，合成音质更自然、韵律更接近真人。亮点是支持多语种、声音克隆保真度高、可玩创意音色，特别适合配音、有声书、虚拟人播报等需要以假乱真语音的场景。</p>
+    <div class="source">⭐ 24,339 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="hexgrad/Kokoro-82M" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/hexgrad/Kokoro-82M" target="_blank">hexgrad/Kokoro-82M</a></h3>
+    <p>Kokoro-82M 是参数仅 8200 万的轻量级开源 TTS 模型，主打小而美：体积小、推理快、成本极低，但合成质量可媲美数十倍参数的大模型。它解决的是生产环境部署 TTS 时大模型跑不动、小模型质量差的痛点。亮点是开放权重、Apache 友好协议、支持中英文、CPU 和 GPU 都能跑，非常适合需要在边缘设备、低配服务器或高并发场景下做语音合成的开发者。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="Wan-AI/Wan2.2-Animate" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate" target="_blank">Wan-AI/Wan2.2-Animate</a></h3>
+    <p>Wan2.2-Animate 是通义万相团队推出的角色动画生成工具，只需上传一张角色图片和一段参考视频，就能让静态图片动起来——既能提取视频动作驱动原角色（Move 模式），也能把视频中的角色替换成你指定的形象（Replace 模式）。它解决的是传统角色动画需要 3D 建模或专业动捕的高门槛问题。亮点是阿里达摩院出品、效果逼真、HuggingFace 上一键体验，是当下最热的图生视频动画方案之一。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-02 15:27</p>
+</footer>
+</div>
+</body>
+</html>
