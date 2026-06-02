@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月3日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.cost { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月3日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>17</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Anthropic confidentially submits draft S-1 to the SEC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank">Anthropic confidentially submits draft S-1 to the SEC</a></h3>
+    <p style="color:#ccc;">Anthropic 官方公告已向 SEC 秘密提交 S-1 草案注册声明，正式启动 IPO 流程，估值约 9650 亿美元，由亚马逊、谷歌等战略股东加持。</p><p style="color:#8b949e;font-size:13px;">💡 秘密递表让 Anthropic 在正式路演前完成监管沟通与定价博弈；上市后强制信息披露将重塑其与 OpenAI 的资本与人才竞争格局，前沿 AI 公司开始接受 SEC 透明度约束。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_11.jpg" alt="Anthropic has officially filed to go public" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/941016/anthropic-has-officially-filed-to-go-public" target="_blank">Anthropic has officially filed to go public</a></h3>
+    <p style="color:#ccc;">The Verge 报道 Anthropic 已正式提交 IPO 申请文件，是继 OpenAI 重组营利架构之后又一家头部 AI 实验室走向公开市场。文件显示 Anthropic 仍由 Claude 业务驱动，企业 ARR 高速增长但净亏损扩大，估值预计进入 3000 亿美元区间。文章聚焦上市对 Anthropic 治理结构、Claude API 价格策略以及与亚马逊/谷歌算力供应合同的影响。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 上市是 2026 年 AI 行业最重要的资本事件之一：它把模型实验室的烧钱规模、推理价格战、人才争夺战全部暴露在公开市场监督下，迫使 OpenAI/xAI/Mistral 等竞品必须在估值锚定、披露口径上做选择。监管视角下，S-1 中的安全评估章节将首次成为行业模板。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_12.jpg" alt="Florida is suing OpenAI, Sam Altman in first-of-its-kind lawsuit over violent incidents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents" target="_blank">Florida is suing OpenAI, Sam Altman in first-of-its-kind lawsuit over violent incidents</a></h3>
+    <p style="color:#ccc;">TechCrunch 报道佛罗里达州总检察长正式起诉 OpenAI 与 CEO Sam Altman，指控 ChatGPT 在缺乏足够安全护栏的情况下向未成年人输出涉及自残、暴力与情感操控的内容，要求民事赔偿并强制修改产品。诉状引用多起青少年与成年人因长期使用 ChatGPT 出现精神危机的案例，是美国州一级首次以"产品安全"而非"数据隐私"为诉因对生成式 AI 厂商提起诉讼。</p><p style="color:#8b949e;font-size:13px;">💡 这是美国州检察长绕过联邦层面、单独以"消费品安全"框架对前沿 AI 模型发难的标志性案件，将直接推动 FTC 与各州 AI 立法浪潮，并可能改写 OpenAI/Anthropic/Google 的 Model Spec 与红队评估披露标准，对 Consumer ChatGPT 类产品形成实质性监管压力。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="OpenAI frontier models and Codex are now available on AWS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 1级信源 · en</div>
+    <h3><a href="https://openai.com/blog/openai-frontier-models-and-codex-on-aws" target="_blank">OpenAI frontier models and Codex are now available on AWS</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布其旗舰前沿模型与 Codex 编程代理正式登陆 AWS，企业客户可在 AWS 环境直接调用 OpenAI 顶级模型与代码生成能力。</p><p style="color:#8b949e;font-size:13px;">💡 此举释放与微软 Azure 独家合作松动的信号，多云分发扩大商业触达的同时也加剧云 AI 渠道博弈，AWS、Azure、Google Cloud 的 AI 模型争夺进入新阶段。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Introducing Gemini Omni: a multi-modal video creation model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind Blog] 1级信源 · en</div>
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/" target="_blank">Introducing Gemini Omni: a multi-modal video creation model</a></h3>
+    <p style="color:#ccc;">Google DeepMind 发布 Gemini Omni 多模态视频生成模型，支持文本、图像、视频的输入与生成，定位为视频创作工作流的一体化工具。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini Omni 把 Google 多模态能力落到视频创作，对标 OpenAI Sora 与 Runway，将重塑短视频/广告制作产业链，并推动消费级 AI 视频工具进入大众市场。</p>
+    <div class="source">来源：DeepMind Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_13.jpg" alt="Trump signs narrower executive order on AI oversight after industry objections" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en</div>
+    <h3><a href="https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections" target="_blank">Trump signs narrower executive order on AI oversight after industry objections</a></h3>
+    <p style="color:#ccc;">TechCrunch 报道 Trump 在 AI 行业游说团体（Chamber of Progress、CCIA 等）施压下签署了较 4 月草案大幅"缩水"的 AI 监管行政令，取消模型上线前强制评估与第三方审计要求，改为由厂商自愿向 NIST 提交信息。The Verge 同期报道确认企业可选择不分享信息，监管实质力度被业界评价为"信号性大于约束性"。</p><p style="color:#8b949e;font-size:13px;">💡 此行政令在 2025 年加州 SB-53、纽约 RAISE Act 之外，确立了联邦层面对前沿 AI 的"软监管"基调：监管节奏让位于产业竞争力考量，进一步加剧州—联邦—欧盟 AI Act 三层监管的合规复杂性，对拥有政府关系团队的公司有利，OpenAI 需在安全承诺与上市节奏之间做更精细的披露。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Expanding Project Glasswing" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 2级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank">Expanding Project Glasswing</a></h3>
+    <p style="color:#ccc;">Anthropic 宣布扩大 Project Glasswing 项目规模，聚焦 AI 透明度与可解释性研究，扩展治理框架与开源工具，覆盖更多模型版本。</p><p style="color:#8b949e;font-size:13px;">💡 IPO 关键期，Anthropic 用透明度项目做差异化叙事，强化对 OpenAI/Google 的安全牌定位，同时为后续监管对话积累资本与公众信任。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Building the infrastructure for the Intelligence Age in Michigan" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 2级信源 · en</div>
+    <h3><a href="https://openai.com/blog/stargate-michigan-1gw" target="_blank">Building the infrastructure for the Intelligence Age in Michigan</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布在密歇根州建设 StarGate 数据中心，配备 Nvidia GB300 系统提供超 1.5GW 算力，是 Stargate 万亿基建计划的最新州级落地。</p><p style="color:#8b949e;font-size:13px;">💡 州级超算落地体现 OpenAI 用算力垄断巩固领先地位的野心，带动美国中西部数据基建产业链与就业，并重塑区域能源供给格局与算力地理分布。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Codex is becoming a productivity tool for everyone" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 2级信源 · en</div>
+    <h3><a href="https://openai.com/blog/codex-productivity-tool" target="_blank">Codex is becoming a productivity tool for everyone</a></h3>
+    <p style="color:#ccc;">OpenAI 将 Codex 从开发者专用扩展为面向全员的通用生产力工具，新增自然语言驱动的多步任务执行与文件操作能力。</p><p style="color:#8b949e;font-size:13px;">💡 Codex 走向全员是 AI Agent 消费化的关键节点，加剧与 Anthropic Claude Code、Google Gemini Spark 在编程与企业办公场景的正面竞争。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_06.jpg" alt="Gemini for Science: AI experiments and tools for a new era of discovery" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind Blog] 2级信源 · en</div>
+    <h3><a href="https://blog.google/innovation-and-ai/technology/research/gemini-for-science-io-2026/" target="_blank">Gemini for Science: AI experiments and tools for a new era of discovery</a></h3>
+    <p style="color:#ccc;">Google 在 I/O 2026 推出 Gemini for Science，整合 AI 实验设计、文献分析与假设生成能力，面向科研人员提供端到端发现工具。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini for Science 是 Google 在 AI4S 赛道的系统性布局，对标 DeepMind 早期 AlphaFold 路径，未来将与微软 Discovery、Anthropic Claude for Science 争夺科研 AI 入口。</p>
+    <div class="source">来源：DeepMind Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_07.jpg" alt="DeepSeek-ai/DeepGEMM: FP8 GEMM Kernels" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepSeek 仓库] 2级信源 · en</div>
+    <h3><a href="https://github.com/deepseek-ai/DeepGEMM" target="_blank">DeepSeek-ai/DeepGEMM: FP8 GEMM Kernels</a></h3>
+    <p style="color:#ccc;">DeepSeek 开源 DeepGEMM 库，提供高效 FP8 精度 GEMM 矩阵乘法内核，显著降低大模型训练与推理的显存与算力开销。</p><p style="color:#8b949e;font-size:13px;">💡 FP8 内核是国产大模型降低训练成本的关键技术，开源后中美算力效率差距进一步收窄，对 Nvidia 定价权形成长期挑战。</p>
+    <div class="source">来源：DeepSeek 仓库</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_08.jpg" alt="DeepSeek-ai/DeepEP: Expert-Parallel Communication Library" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepSeek 仓库] 2级信源 · en</div>
+    <h3><a href="https://github.com/deepseek-ai/DeepEP" target="_blank">DeepSeek-ai/DeepEP: Expert-Parallel Communication Library</a></h3>
+    <p style="color:#ccc;">DeepSeek 开源 DeepEP 专家并行通信库，专为 MoE 架构优化跨节点通信效率，提升大规模专家模型训练吞吐量。</p><p style="color:#8b949e;font-size:13px;">💡 DeepEP 弥补 MoE 训练在通信层面的工程短板，开源后进一步降低中小团队训练超大规模 MoE 模型的门槛，加剧中美 MoE 模型军备竞赛。</p>
+    <div class="source">来源：DeepSeek 仓库</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_09.jpg" alt="智谱 GLM 2025 年度业绩发布会：商业化加速" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[智谱 GLM] 2级信源 · zh</div>
+    <h3><a href="https://www.zhipuai.cn/news" target="_blank">智谱 GLM 2025 年度业绩发布会：商业化加速</a></h3>
+    <p style="color:#ccc;">智谱在 2025 年度业绩发布会披露 GLM 系列商业化加速进展，API 与企业客户收入显著增长，公布新模型路线图与算力扩张计划。</p><p style="color:#8b949e;font-size:13px;">💡 智谱以商业化进度对冲头部模型竞争压力，验证国产大模型走 B 端落地路径；与 DeepSeek、月之暗面共同塑造中国大模型第二梯队格局。</p>
+    <div class="source">来源：智谱 GLM</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_10.jpg" alt="MiniMax 清朗专项治理公告" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MiniMax 官方] 2级信源 · zh</div>
+    <h3><a href="https://www.minimaxi.com/news" target="_blank">MiniMax 清朗专项治理公告</a></h3>
+    <p style="color:#ccc;">MiniMax 发布清朗专项治理公告，响应监管要求对模型输出进行内容安全专项整改，公布违规案例与防控机制升级方案。</p><p style="color:#8b949e;font-size:13px;">💡 清朗专项反映中国对生成式 AI 内容治理收紧，所有面向 C 端的国产大模型公司将进入合规密集期，安全团队与内容审核成本将持续上升。</p>
+    <div class="source">来源：MiniMax 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_14.jpg" alt="老黄的Token经济学翻车了！微软亚马逊通通跳车" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/06/427541.html" target="_blank">老黄的Token经济学翻车了！微软亚马逊通通跳车</a></h3>
+    <p style="color:#ccc;">量子位 6 月 2 日深度评论文章，梳理微软 Copilot、亚马逊 Rufus/Bedrock 在近三个月内相继降低对 Nvidia NIM 推理栈依赖、转用自研或第三方加速方案的连锁动作。文章认为 Nvidia "卖 Token" 的商业模式正被算力买家以工程化方式反制，DGX Cloud 客户流失率与 H200 二手价格是关键观察指标，并讨论了对国产芯片（华为昇腾、寒武纪）的间接利好。</p><p style="color:#8b949e;font-size:13px;">💡 中文主流媒体中较早把"客户自研推理栈—Token 价格战—Nvidia 估值"三件事串成一条主线的评论，与 The Verge Vergecast 讨论的 RTX Spark 战略形成跨语种呼应。读者关注点：Nvidia 2026 H2 财报电话会、AWS re:Invent、CES 2027 是否会出现更多自研芯片落地。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_15.jpg" alt="Gemini Spark is the most impressive and terrifying AI experience I've had yet" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/941388/gemini-spark-ai-agent-trip-planning" target="_blank">Gemini Spark is the most impressive and terrifying AI experience I've had yet</a></h3>
+    <p style="color:#ccc;">The Verge 评论员上手体验 Google 最新发布的 Gemini Spark（7×24 AI Agent）后给出尖锐评价：在行程规划、跨应用操作上的能力"既令人惊艳又让人恐惧"。文章重点展示 Spark 在无人监督下自动完成订票、客服沟通、跨账号支付的真实表现，并指出 Google 在 Agent 安全边界、撤销机制、误操作赔偿上仍存在大量空白。评论段落在 X 与 HN 上获得广泛引用。</p><p style="color:#8b949e;font-size:13px;">💡 这是 2026 年少数几篇把"AI Agent 能力跃迁"与"产品级风险"放在同一篇文章里严肃讨论的英文媒体评论，与 TechCrunch Sarah Perez 的 hands-on 互为镜像。读者要警惕：Agent 类产品的可用性与失控面往往同时放大，监管/保险/客服侧尚未准备好。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_16.jpg" alt="AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/05/426819.html" target="_blank">AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026</a></h3>
+    <p style="color:#ccc;">量子位整理的港大黄超在 AIGC2026 大会上的主题演讲实录。核心观点：在 LLM 已具备规划与工具使用能力的前提下，AI 行业应当从"对齐模型行为"转向"重构环境接口"——让操作系统、SaaS、IoT 设备按 Agent 协议主动暴露能力，而非要求 Agent 学习人类使用 GUI 的方式。演讲引用 SWE-Agent、Anthropic Computer Use、Microsoft OpenClaw 作为产业证据，并提出"Agent 友好型 API"的十条设计原则。</p><p style="color:#8b949e;font-size:13px;">💡 这篇演讲是 2026 年中文圈对"Agent 基础设施"最系统的学术+产业论述，与 The Verge Vergecast、Microsoft Build 2026 主旨演讲形成跨语种对照。读这篇有助于理解 OpenClaw、Anthropic Model Context Protocol、Google Gemini Spark 在做的是同一件事：为 Agent 重新设计世界接口层。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02470 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02470" target="_blank">MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation</a></h3>
+    <p style="color:#ccc;">现有 MCP 智能体评测基准只看通用信息检索工具,完全没覆盖真实个人/社交类应用(账户/本地数据库),无法反映工具在个性化场景下的失效问题。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 MCP-Persona 基准:用环境模拟器把 Reddit、小红书、Lark/飞书、Slack 等真实个人应用封装成 MCP 工具集,集中评估智能体在带身份/带状态工具上的表现。</div>
+      <div class="row"><span class="cost">📦 代价：</span>未明确给出训练成本;作为评测基准,核心开销是 5+ 类 MCP 应用的工具环境构建与多 SOTA 智能体(闭源+开源)的大规模推理跑分。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>多款 SOTA 智能体在 MCP-Persona 的个性化工具上均出现明显能力塌陷,基准作为"诊断器"有效暴露了通用 Agent 在账户/本地数据场景下的短板。</div>
+      <div class="row"><span class="author">🏢 团队：</span>上海交通大学(王文豪/牛培芝等,通讯王延峰、陈思衡均在 SJTU);ICML 2026 Camera Ready。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02559 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02559" target="_blank">From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression</a></h3>
+    <p style="color:#ccc;">现有 LLM 替换式压缩(剪掉整层+拟合残差)强制"整层粒度+连续层选取",把注意力/FFN 都同等处理,实际上预训练 Transformer 的冗余既不连续也不在两类子模块间均匀分布。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 SubFit:在子模块(Attention/FFN)粒度上做非连续选取,并为每类子模块各自训练一个轻量拟合残差旁路,仅需少量校准数据即可后训练压缩。</div>
+      <div class="row"><span class="cost">📦 代价：</span>在 10 个 LLM(5 base + 5 instruct)上跑 5 档稀疏度(12.5%–37.5%),覆盖 4 个 baseline;属于后训练方法,只需校准数据,未给出 GPU 小时数。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在所有稀疏度下均取得最优困惑度-精度权衡;25% 稀疏度时保留 84.6% 稠密下游精度,困惑度仅 2.42×,优于最强 baseline 的 81.6%/4.34×,并实测带来推理加速与 KV-cache 节省。</div>
+      <div class="row"><span class="author">🏢 团队：</span>意大利特伦托大学(University of Trento)Cunegatti/Vukojevic/Nielsen/Iacca 团队(Iacca 实验室);代码 github.com/eliacunegatti/SubFit。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="AdaCodec: A Predictive Visual Code for Video MLLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02569 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02569" target="_blank">AdaCodec: A Predictive Visual Code for Video MLLMs</a></h3>
+    <p style="color:#ccc;">Video MLLM 把每帧都当独立 RGB 图独立编码,视觉 token 大量重复相邻帧已编码过的物体/背景/布局,长视频场景下 token 与首 token 时延(TTFT)开销巨大。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出预测式视觉码 AdaCodec:仅当条件预测代价高时发送完整参考帧,否则用 P-token 编码运动+预测残差;在 Qwen3-VL-8B 上做按帧压缩路由。</div>
+      <div class="row"><span class="cost">📦 代价：</span>在 11 个 benchmark 上跑 Qwen3-VL-8B;视觉 token 预算 32k vs baseline 224k(1/7),实现更快首 token(9.26s→1.62s),未单独披露训练 GPU 小时数。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 1/7 视觉 token 预算下,32k AdaCodec 在所有长视频 benchmark 上超过 224k baseline;在 5 个通用视频 benchmark 上平均得分提升,TTFT 由 9.26s 降至 1.62s。</div>
+      <div class="row"><span class="author">🏢 团队：</span>上海交通大学(侯浩文/王佳祺等)+ 微软亚洲研究院 MSRA(段楠),核心团队来自 SJTU 未来技术学院/计算机系。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="SafeSteer: Localized On-Policy Distillation for Efficient Safety Alignment" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02530 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02530" target="_blank">SafeSteer: Localized On-Policy Distillation for Efficient Safety Alignment</a></h3>
+    <p style="color:#ccc;">LLM 安全对齐普遍带来"对齐税":在通用能力上掉点;现有方法靠双目标折中+海量通用数据/奖励模型,代价高且对通用能力损伤仍大。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>SafeSteer 用 activation steering 构造一个安全教师,再设计安全 token 选择算法,只对安全 token 施加 on-policy 反向 KL 蒸馏,把改动局限在稀疏的安全特征上。</div>
+      <div class="row"><span class="cost">📦 代价：</span>仅需 100 条有害样本 + 零通用数据,数据量不到前序 baseline 的 1%;在多种 LLM 上训练,未披露 GPU 小时数。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 7 个安全 benchmark 上保安全、在 5 个通用 benchmark 上几乎不掉点,取得当前最优的 safety-vs-capability 权衡;已投稿 EMNLP 2026。</div>
+      <div class="row"><span class="author">🏢 团队：</span>北京交通大学(李昊、安敬坤等,通讯沙磊、姚金戈均在 BJTU 计算机学院),项目页 anjingkun.github.io/SafeSteer。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Learning When to Translate for Multilingual Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.02465 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.02465" target="_blank">Learning When to Translate for Multilingual Reasoning</a></h3>
+    <p style="color:#ccc;">推理大模型在多语言任务上对非英语输入存在显著推理 gap,根因是语言理解失败;全量英译成本高、且模型本可直答时再翻译就是浪费。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 Luar:用强化学习让 RLM 自己决定"直接答 vs 先英译再答",只在翻译辅助推理明显胜出的样本上触发翻译,避免无谓翻译。</div>
+      <div class="row"><span class="cost">📦 代价：</span>在多语言推理 benchmark 上做 RL 训练(类 GRPO 框架),相对逐题全量翻译显著降低翻译调用次数,具体 GPU 小时数未明确给出。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多语言推理基准上优于标准 GRPO 与其他训练 baseline,低资源语言提升尤其明显;翻译行为可泛化到训练中未见过的低资源语言。</div>
+      <div class="row"><span class="author">🏢 团队：</span>韩国浦项工科大学 POSTECH(姜德赫/金贤勋/李根培,Lee 实验室,CS 系),代码 github.com/deokhk/LUAR。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="chopratejas/headroom" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></h3>
+    <p>chopratejas/headroom 是开发者 chopratejas 开源的 LLM 输入压缩工具，在工具输出、日志、文件与 RAG 检索片段送入大模型前做预处理，可削减 30%-90% 的 token 与 API 成本。核心特性包括多源输入压缩、可插拔压缩策略与 Agent 框架无缝集成。本周登顶 GitHub Trending，获 AI 工程社区广泛关注。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="supermemoryai/supermemory" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/supermemoryai/supermemory" target="_blank">supermemoryai/supermemory</a></h3>
+    <p>supermemoryai/supermemory 是 supermemoryai 团队开源的 LLM 记忆引擎与配套应用，主打极速读写与企业级可扩展，定位为 LLM 应用的「即插即用」型长期记忆层。核心特性包括毫秒级向量检索、自动偏好抽取、跨会话上下文串联。本周冲上 GitHub Trending，是当前最热的开源记忆基础设施之一。</p>
+    <div class="source"> · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="OpenBMB/VoxCPM" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></h3>
+    <p>OpenBMB/VoxCPM 是智源研究院 OpenBMB 团队开源的无 Tokenizer 端到端 TTS 模型 VoxCPM2，专为多语言语音生成、创意级音色克隆与多样化音频生产而设计。核心特性包括零样本跨语种合成、可控韵律情感克隆与高自然度商用输出。本周登顶 GitHub Trending，是 AIGC 语音领域最具热度的开源项目。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="Open-LLM-VTuber/Open-LLM-VTuber" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank">Open-LLM-VTuber/Open-LLM-VTuber</a></h3>
+    <p>Open-LLM-VTuber 是社区开源的桌面端 AI 虚拟桌宠前端，支持免提语音对话、自由打断与 Live2D 形象实时渲染，可对接任意 LLM、ASR 与 TTS 后端。核心特性包括 Live2D 角色集成、低延迟全双工语音、可插拔模型路由与本地化部署。本周持续霸榜 GitHub Trending，是 VTuber 项目热门底座。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="deepseek-ai/DeepSeek-R1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1" target="_blank">deepseek-ai/DeepSeek-R1</a></h3>
+    <p>deepseek-ai/DeepSeek-R1 是深度求索发布的开源前沿推理大模型，主打数学、代码与逻辑链式推理，权重与训练细节完全公开。核心特性包括纯强化学习驱动的推理能力、长链思维可解释输出与媲美闭源旗舰的基准成绩。是当前开源 SOTA 推理模型代表，Star 数已破 1.3 万。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="black-forest-labs/FLUX.1-dev" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/black-forest-labs/FLUX.1-dev" target="_blank">black-forest-labs/FLUX.1-dev</a></h3>
+    <p>black-forest-labs/FLUX.1-dev 是德国 Black Forest Labs 开源的文生图扩散模型 FLUX.1-dev，采用 rectified flow Transformer 与并行注意力混合架构，面向研究与商用。核心特性包括高保真图像生成、精准长 prompt 理解、人像与排版能力突出，在多项基准上对标闭源旗舰。是当下最受欢迎的开源 SOTA T2I 模型，Star 数已破 1.3 万。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-03 07:45</p>
+</footer>
+</div>
+</body>
+</html>
