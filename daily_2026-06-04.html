@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月4日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月4日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>15</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Anthropic confidentially submits draft S-1 to the SEC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank">Anthropic confidentially submits draft S-1 to the SEC</a></h3>
+    <p style="color:#ccc;">Anthropic 正式向 SEC 秘密提交 S-1 招股书草案，标志其正式启动 IPO 流程；按惯例秘密递交后将进入静默期，估值与发行规模有待后续公开披露。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 仍困在非营利重组里，Anthropic 抢先走通 SEC 合规路径——意味着前沿大模型公司首次以独立上市公司身份站上公开市场，将成为后续资本锚点。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Alphabet's record-breaking $85B raise for Google's AI business is a helluva good signal" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/" target="_blank">Alphabet's record-breaking $85B raise for Google's AI business is a helluva good signal</a></h3>
+    <p style="color:#ccc;">Alphabet 完成 850 亿美元融资，创企业债与股权混合融资纪录，募集资金几乎全部投入 Google 的 AI 基础设施与模型训练。</p><p style="color:#8b949e;font-size:13px;">💡 850 亿规模超过过去 12 个月所有超大规模 AI 资本支出中的最大单笔——这一融资是市场对 AI 需求的最强确认信号，与同期微软、Meta 拉开身位。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="ChatGPT reportedly hit 1 billion monthly active users faster than any other app" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/942749/chatgpt-reportedly-hit-1-billion-monthly-active-users-faster-than-any-other-app" target="_blank">ChatGPT reportedly hit 1 billion monthly active users faster than any other app</a></h3>
+    <p style="color:#ccc;">据多家渠道报道，ChatGPT 月活跃用户已突破 10 亿门槛，成为历史上达成该用户规模最快的消费级应用，超越 TikTok、Instagram 的增长曲线。</p><p style="color:#8b949e;font-size:13px;">💡 10 亿 MAU 与同日 Alphabet 850 亿融资、Anthropic S-1 同步发生，'用户规模/资本规模/上市地位'三条分水岭在 72 小时内同时跨过，AI 已成消费基础设施。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Anthropic 提交了招股书" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 1级信源 · zh 🔥</div>
+    <h3><a href="https://www.qbitai.com/2026/06/428407.html" target="_blank">Anthropic 提交了招股书</a></h3>
+    <p style="color:#ccc;">量子位报道 Anthropic 正式向 SEC 提交 IPO 招股书草案，叠加其企业订阅高速增长与 Claude 多模型产品线，被视为本轮大模型公司公开市场的标志性事件。</p><p style="color:#8b949e;font-size:13px;">💡 中文媒体首次深度跟进前沿大模型 IPO——结合 ChatGPT 10 亿 MAU 与 Alphabet 850 亿融资，2026 Q2 已被市场默认是'AI 资本分水岭季度'。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Introducing new capabilities to GPT-Rosalind" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind" target="_blank">Introducing new capabilities to GPT-Rosalind</a></h3>
+    <p style="color:#ccc;">OpenAI 发布 GPT-Rosalind 的新能力更新，重点强化长上下文推理、工具调用与多模态一致性，企业级 API 同步上线。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 提交 S-1 同日，OpenAI 用'模型 + 能力'抢头条——意味着 OpenAI 暂时把叙事主战场放在产品迭代上，与 Anthropic 走两条资本路径。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Trump signs narrower executive order on AI oversight after industry objections" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/" target="_blank">Trump signs narrower executive order on AI oversight after industry objections</a></h3>
+    <p style="color:#ccc;">特朗普签署修订后的 AI 监管行政令，对比 5 月草案在监管范围、模型分级门槛与处罚力度上明显收窄，被视为对大模型厂商游说诉求的让步。</p><p style="color:#8b949e;font-size:13px;">💡 联邦从'前置合规'转向'事后追责'，短期给大模型厂商释放合规空间；但州级司法（如佛州诉 OpenAI）会迅速补上缺口，形成双层监管新格局。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_06.jpg" alt="Florida sues OpenAI, Sam Altman, in first-of-its-kind lawsuit over violent incidents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/" target="_blank">Florida sues OpenAI, Sam Altman, in first-of-its-kind lawsuit over violent incidents</a></h3>
+    <p style="color:#ccc;">佛罗里达州检察长正式起诉 OpenAI 与 CEO Sam Altman，理由是 ChatGPT 涉及多起暴力事件，是美国州一级对 OpenAI 提起的首例诉讼。</p><p style="color:#8b949e;font-size:13px;">💡 'first-of-its-kind' 标签意味着 AI 平台的产品责任边界开始被司法化——与 Trump 收窄的联邦 EO 互补，预示 AGI 治理进入'州检察长时代'。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_07.jpg" alt="Expanding Project Glasswing" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank">Expanding Project Glasswing</a></h3>
+    <p style="color:#ccc;">Anthropic 宣布扩大'Project Glasswing'项目，覆盖更广的企业客户与垂直行业，配套发布针对金融与生命科学的行业模型与合规白皮书。</p><p style="color:#8b949e;font-size:13px;">💡 S-1 提交同期，Anthropic 用 B 端垂直化叙事给 IPO 估值找支点——这把'通用大模型 → 行业模型'路线推到台前，OpenAI 的 Codex-on-AWS 将被迫跟进。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_08.jpg" alt="Strengthening Singapore's AI Future: A New National Partnership" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind Blog] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/" target="_blank">Strengthening Singapore's AI Future: A New National Partnership</a></h3>
+    <p style="color:#ccc;">Google DeepMind 与新加坡政府签署国家级 AI 合作，覆盖基础研究、本地算力中心、AI for Public Good 项目与东南亚多语种模型训练。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 的国家级合作从欧美/中东扩展到东南亚，是 Google 在'主权 AI'赛道抢跑中国云厂商的关键一步；算力与多语种数据将同时回流到 Gemini 训练管线。</p>
+    <div class="source">来源：DeepMind Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_09.jpg" alt="智谱首份业绩报告发布，探索AGI智能上界" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[智谱 GLM] 1级信源 · zh</div>
+    <h3><a href="https://www.zhipuai.cn/news" target="_blank">智谱首份业绩报告发布，探索AGI智能上界</a></h3>
+    <p style="color:#ccc;">智谱发布上市后首份业绩报告，披露营收、MaaS API 调用与模型矩阵进展，并提出'探索 AGI 智能上界'的长期技术路线。</p><p style="color:#8b949e;font-size:13px;">💡 国内大模型公司'上市—披露—路线图'链条里的第一份完整答卷，'AGI 智能上界'措辞会与 DeepSeek-V4-Pro、月之暗面路线图一起抬高国内资本对头部玩家的估值锚。</p>
+    <div class="source">来源：智谱 GLM</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_10.jpg" alt="A blueprint for democratic governance of frontier AI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 2级信源 · en</div>
+    <h3><a href="https://openai.com/index/frontier-safety-blueprint" target="_blank">A blueprint for democratic governance of frontier AI</a></h3>
+    <p style="color:#ccc;">OpenAI 发布'前沿 AI 民主治理蓝图'政策文件，提出由国际机构、公民社会与各国政府共同参与的治理框架，对应其即将到来的 GPT-Rosalind 时代。</p><p style="color:#8b949e;font-size:13px;">💡 监管收紧窗口期 OpenAI 主动给出治理'标准答案'——与同期 Trump EO、佛州诉讼并列第三种回应，用'自我规制'抢占治理话语权，避免被强制立法。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_11.jpg" alt="OpenAI frontier models and Codex are now available on AWS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 2级信源 · en</div>
+    <h3><a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws" target="_blank">OpenAI frontier models and Codex are now available on AWS</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布前沿模型与 Codex 正式登陆 AWS Bedrock，企业客户可在 AWS 上一键调用，覆盖从推理 Agent 到代码生成的完整套件。</p><p style="color:#8b949e;font-size:13px;">💡 多云分销对冲了微软 Azure 独家风险——Anthropic 提交 S-1 前夕，OpenAI 打破'OpenAI ≈ Azure'捆绑叙事，给企业客户提供选择权，反向抬升 IPO 估值。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_12.jpg" alt="DeepSeek-V4-Pro on Hugging Face" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepSeek 仓库] 2级信源 · en</div>
+    <h3><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">DeepSeek-V4-Pro on Hugging Face</a></h3>
+    <p style="color:#ccc;">DeepSeek 在 Hugging Face 开源 V4-Pro，主打更长上下文与 Agent 工具调用基准，权重与推理配置同步开放。</p><p style="color:#8b949e;font-size:13px;">💡 在 Anthropic/OpenAI 集中 IPO 与监管新闻之下，DeepSeek 选'开源 + 长上下文'切入——继续用'性能/价格'路线稳住中文社区基本盘，倒逼闭源厂商压价。</p>
+    <div class="source">来源：DeepSeek 仓库</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_13.jpg" alt="世界模型榜首易主！跨维智能登顶 WorldArena" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/06/428435.html" target="_blank">世界模型榜首易主！跨维智能登顶 WorldArena</a></h3>
+    <p style="color:#ccc;">量子位报道跨维智能在 WorldArena 世界模型评测中超越此前 SOTA，登顶榜首，刷新 embodied AI / 仿真推演赛道的国际榜单。</p><p style="color:#8b949e;font-size:13px;">💡 世界模型是继语言模型后的第二个'刷榜战场'——跨维智能登顶意味中国团队拿到首批国际话语权，与卧安机器人、银河通用形成'算法—硬件—范式'三角。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_14.jpg" alt="开展"清朗·整治AI应用乱象"专项公告" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MiniMax 官方] 2级信源 · zh</div>
+    <h3><a href="https://www.minimaxi.com/news" target="_blank">开展"清朗·整治AI应用乱象"专项公告</a></h3>
+    <p style="color:#ccc;">MiniMax 发布'清朗·整治 AI 应用乱象'专项行动公告，清理违规账号、虚假信息与违规 API 调用，配合监管节奏强化内容合规。</p><p style="color:#8b949e;font-size:13px;">💡 头部厂商主动把'自查自纠'做成公告——监管收紧窗口下，这是为后续商业化铺路的合规背书，也会成为其它大模型厂商的'标准动作'。</p>
+    <div class="source">来源：MiniMax 官方</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Agent libOS: A Library-OS-Inspired Runtime for Long-Running, Capability-Controlled LLM Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.03895 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.03895" target="_blank">Agent libOS: A Library-OS-Inspired Runtime for Long-Running, Capability-Controlled LLM Agents</a></h3>
+    <p style="color:#ccc;">LLM agent 正从一次性问答助手演化为长时运行的软件 actor：跨调用保持状态、fork 子任务、等待外部事件、申请人工授权、就地生成工具，副作用还要可恢复可审计。传统 agent 框架把这些能力散落在 prompt/tool/MCP 胶水里，进程一崩就丢上下文、长时任务没法接管、安全权限粒度粗到没法进生产。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>借鉴 Library-OS 思路，在宿主 OS 之上做一层 agent runtime substrate：把进程/地址空间/系统调用换成 capability-controlled 任务单元与受控副作用接口，让长时 agent 像传统进程一样可挂起、恢复、审计。优势是首次把 agent 当成可挂起恢复的'软件进程'管，状态、权限、副作用统一在 runtime 边界内可控可审。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为统一接管所有副作用，runtime 必须把所有工具调用/外部 IO 拦在 capability 网关后面，单步调用延迟上升、短任务 latency 反而被拖慢；定义良好的同步工具流可能反而比直接 prompt 慢，且 capability 模型越细，框架本身的开发与调试门槛越高。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>提出完整的 libOS 风格 agent runtime 抽象与 capability 控制模型，把 fork/挂起/恢复/审计这类长时操作当成一等公民；可承载生成式工具与跨事件副作用（具体 SOTA 数字需结合论文内实验章节）。</div>
+      <div class="row"><span class="author">🏢 团队：</span>arXiv 2026-06-02 预印；Yingqi Zhang 单作，背景为华盛顿大学（University of Washington）等院校，独立研究者路线（具体机构以论文署名页为准）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.03979 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.03979" target="_blank">Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories</a></h3>
+    <p style="color:#ccc;">过去十年 ML 从任务专一的浅层模型走向通用 LLM，但所有 LLM 都缺一件事：像人一样把临时上下文里的知识'睡一觉'就沉淀进长期参数。in-context 临时学到的时序知识一过窗口就丢，模型没法在长会话里真正持续学习、也没法把短期记忆迁移到长期行为，限制了部署成本和持续适配能力。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>仿照人类睡眠-记忆巩固机制，给 LLM 加一个 Self-Modify 通道：模型在'休眠'阶段用自己的输出回写自身参数，把上下文里的关键知识自我改写到长期权重。优势是不再只靠上下文窗口凑合，模型首次具备显式的自我参数改写能力，长会话记忆真正落进权重。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Self-Modify 让模型在权重上'自我手术'，副作用不可控：可能在不该改的通用能力上漂移、灾难性遗忘此前任务；触发频率和改写幅度越激进，回滚越难，长程一致性反而下降。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在长上下文/持续学习类任务上展示出对 in-context 时序知识的有效迁移（具体 benchmark 数字以论文实验章节为准），方向上首次把'睡眠巩固'做成可训练的 LLM 机制。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Google Research 与 Stanford 合作；通讯 Vahab Mirrokni（Google Research 算法 VP），一作 Ali Behrouz（Stanford PhD，Mamba/Cobra 作者），Farnoosh Hashemi 共同作者。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.03988 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.03988" target="_blank">Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models</a></h3>
+    <p style="color:#ccc;">VLM 在很多视觉任务上很强，但只要关键信息在画面外——遮挡、视角未给、路径要穿过盲区——空间推理就直接崩。人能凭'想象'脑补出没看到的视角、把多帧部分观察拼成完整空间，VLM 还停在'图里有什么答什么'，无法在遮挡/反事实视角下做可靠推理。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提 IPT（Imaginative Perception Tokens）：在 VLM 中间层插入一组'想象性感知 token'，让模型把'假如站在那个角度会看见什么'显式外化成 token 序列，再喂给后续推理。优势是 VLM 首次拥有可读、可干预的'脑补中间表征'，把不可见视角从黑箱变成可控输入。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为生成可信的想象 token，模型必须先在训练分布涵盖的视角/遮挡模式上做大量监督；遇到训练时没见过的奇异视角或长链反事实推理时，想象出来的 token 会跑偏，越长链偏差越累积，敏感度高的几何任务上反而掉点。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在需要'想象不可见视角'的空间推理 benchmark（遮挡、反事实视角、路径追踪等）上相对基线 VLM 取得显著提升，方向上首次把'想象性感知'做成显式 token 中间表示（具体百分点以论文实验章节为准）。</div>
+      <div class="row"><span class="author">🏢 团队：</span>arXiv 2026-06-02 预印；一作 Mahtab Bigverdi，通讯 Ranjay Krishna 与 Linda Shapiro，均来自 University of Washington（Paul G. Allen School of Computer Science & Engineering），UW 视觉-语言实验室。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Synthesize and Reward -- Reinforcement Learning for Multi-Step Tool Use in Live Environments (PROVE)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.03892 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.03892" target="_blank">Synthesize and Reward -- Reinforcement Learning for Multi-Step Tool Use in Live Environments (PROVE)</a></h3>
+    <p style="color:#ccc;">把 LLM 训成能编排多步工具调用的 agent 卡在三处：搭一个真状态、真可执行的环境太贵；合成的训练 query 经常和服务端真实状态对不上，训出来的工具调用上线就失败；用 recall 类奖励又会催生出'为命中而堆调用'的啰嗦模式。开源社区一直在拼数据集、拼 MCP server，缺一套端到端框架把这三件事一起治。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>PROVE 框架三件套：(1) 20 个有状态 MCP 环境库做真执行；(2) 合成 query 紧贴服务端实时状态生成；(3) 用程序化 reward（Programmatic Rewards On Verified Environments）替代 recall 奖励。优势是首次让多步工具调用的 RL 训练在'真状态 + 真执行 + 程序化判分'的闭环里跑，端到端避开了合成-现实 gap。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到'贴合真实状态'的训练信号，整个 pipeline 被绑在 20 个特定 MCP 环境的 schema 上；换协议/换工具类型就要重写环境与 reward；程序化判分只能量化可验证字段，对主观质量（回答好不好、对不对齐用户意图）这些'不可验'的维度无能为力。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 20 个有状态 MCP 环境上做 RL 训练，多步工具调用相对 recall-reward 基线在执行成功率/调用步数压缩上同时更优（具体百分点以论文实验章节为准），方向上首次给出'真状态 + 程序化 reward'的完整训练回路。</div>
+      <div class="row"><span class="author">🏢 团队：</span>IBM Research AI；一作 Ibrahim Abdelaziz，通讯 Pavan Kapanipathi（IBM Research Senior Manager），共同作者 Asim Munawar、Kinjal Basu、Maxwell Crouse、Chulaka Gunasekara、Suneet Katrekar 均来自 IBM T. J. Watson Research Center。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Reasoning Structure of Large Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.03883 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.03883" target="_blank">Reasoning Structure of Large Language Models</a></h3>
+    <p style="color:#ccc;">业界评 Large Reasoning Model（LRM）几乎只盯两件事：最终答案对不对、生成 token 多少。问题是同一个 final accuracy、同一个 token 数背后，推理结构可能天差地别——是直链式一条路走到黑，还是分叉后再汇聚、有没有无效自循环？只看这俩指标，看不出模型'怎么想'，更没法定位失败模式。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>构造一套可扩展的 LRM 逻辑谜题基准，并把模型非结构化 trace 自动转成'claim + 依赖关系'的可验证推理图，再做图拓扑量化分析。优势是首次把'推理结构'从黑箱文本变成可度量、可比较的有向图对象，模型的好坏第一次能被'画出来'。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把 trace 转成推理图本身是一次强抽象：所有中间步骤被压成'claim + 依赖'，丢掉语用、措辞、隐含比喻等软信息；对逻辑性弱、靠语言风格/类比取胜的任务（数学证明、形式逻辑）友好，但评文学/对话式推理时结构性指标会失真。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在自建的逻辑谜题基准上，把多种主流 LRM 推理 trace 全部转成可量化推理图，揭示出 final-accuracy 之外显著的'结构差异'（具体图指标/对比 baseline 以论文实验章节为准）。</div>
+      <div class="row"><span class="author">🏢 团队：</span>ETH Zurich；通讯 Roger Wattenhofer（ETH Zurich 信息与计算机科学教授），一作 Frédéric Berdoz，共同作者 Luca A. Lanzendörfer、Fabian Farestam，arXiv 2026-06-02 预印。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="chopratejas/headroom" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></h3>
+    <p>headroom 是 chopratejas 开源的 LLM 输入压缩工具，在工具输出、RAG 片段、日志、文件进入大模型前做分层压缩，可省 30%–90% token，减少延迟与 API 成本。本周 GitHub Trending 热门，适合 RAG 与 Agent 流水线。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="NousResearch/hermes-agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></h3>
+    <p>hermes-agent 是 NousResearch（Hermes 模型系列作者）推出的轻量级 Agent 框架，主打「随用户使用而自我进化」理念，支持工具调用、长期记忆与多步任务规划。本周新晋 GitHub Trending，是 Agent 基础设施层热门新项目。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="lyogavin/airllm" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lyogavin/airllm" target="_blank">lyogavin/airllm</a></h3>
+    <p>airllm 是 lyogavin 开源的超大模型平民化推理框架，主打「4GB 单卡跑 70B」——通过分层加载把 70B 模型参数按需从内存/CPU 搬运到 GPU，让消费级显卡也能本地推理 LLaMA-70B 等超大模型，打破必须 A100/H100 的硬件门槛。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="Open-LLM-VTuber/Open-LLM-VTuber" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank">Open-LLM-VTuber/Open-LLM-VTuber</a></h3>
+    <p>Open-LLM-VTuber 是社区开源的桌面端 LLM 对话前端，主打「虚拟主播式」交互：支持任意 OpenAI 兼容 LLM、实时语音输入输出、可随时打断，并加载 Live2D 角色模型驱动表情动画。比同类项目更轻量、可完全离线运行。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="deepseek-ai/DeepSeek-R1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1" target="_blank">deepseek-ai/DeepSeek-R1</a></h3>
+    <p>DeepSeek-R1 是深度求索（DeepSeek AI）开源的前沿级推理大模型，主打数学、代码与逻辑链式思考（CoT）能力，HuggingFace 已获约 1.34 万 stars。模型采用强化学习驱动的推理训练范式，在多项基准上对标 OpenAI o1。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="black-forest-labs/FLUX.1-dev" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/black-forest-labs/FLUX.1-dev" target="_blank">black-forest-labs/FLUX.1-dev</a></h3>
+    <p>FLUX.1-dev 是德国 Black Forest Labs 开源的文本生成图像扩散模型，是其商业版 FLUX.1 [pro] 的开放研究版本，遵循 FLUX.1-dev 非商业许可。主打高保真文字渲染与复杂指令遵循，HuggingFace 上已获约 1.3 万 stars。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-04 07:56</p>
+</footer>
+</div>
+</body>
+</html>
