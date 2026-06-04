@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月5日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月5日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Anthropic 正式启动 IPO 路径:已向 SEC 秘密递交 S-1 草案" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic Newsroom] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news" target="_blank">Anthropic 正式启动 IPO 路径:已向 SEC 秘密递交 S-1 草案</a></h3>
+    <p style="color:#ccc;">Anthropic 6/1 向 SEC 秘密递交 S-1 招股书草案,正式启动 IPO,估值锚定 5/28 完成的 650 亿美元 H 轮($965B post-money)。</p><p style="color:#8b949e;font-size:13px;">💡 S-1 递交标志头部大模型公司 IPO 周期正式开启,6/3 同步扩张 Project Glasswing 联盟把'关键软件安全'与上市叙事绑定,Anthropic 正借监管叙事拉高估值天花板。</p>
+    <div class="source">来源：Anthropic Newsroom</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Gemini Omni 与 Gemini 3.5:Google DeepMind 接连打出'行动型'前沿智能牌" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind Blog] 1级信源 · en 🔥</div>
+    <h3><a href="https://deepmind.google/blog/" target="_blank">Gemini Omni 与 Gemini 3.5:Google DeepMind 接连打出'行动型'前沿智能牌</a></h3>
+    <p style="color:#ccc;">DeepMind 6/5 同推 Gemini Omni 与 Gemini 3.5,首次以'with action'(智能+行动)为旗舰主轴,同步上线 Antigravity 2.0 与 Co-Scientist 多智能体研究伙伴。</p><p style="color:#8b949e;font-size:13px;">💡 Google 把 Agent/工具调用推为旗舰第一卖点,正面迎战 OpenAI GPT-5.5/Codex 的 Agent 路线;从'答题模型'转向'动手模型'已成头部实验室本周共识级转向。</p>
+    <div class="source">来源：DeepMind Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="ChatGPT 推出 Dreaming 记忆系统:更懂你的上下文与偏好" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Blog] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank">ChatGPT 推出 Dreaming 记忆系统:更懂你的上下文与偏好</a></h3>
+    <p style="color:#ccc;">OpenAI 6/4 上线 ChatGPT 全新记忆系统 Dreaming,后台整理历史对话、保存关键信息并跨会话持续调用,正分批向 Plus/Pro/免费用户铺开。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 把'记忆'做成默认能力,让 ChatGPT 进化为长期个性化助手,与 Anthropic Project、GPT-Rosalind 科研记忆形成对位;长期上下文正成继推理、多模态之后下一战场。</p>
+    <div class="source">来源：OpenAI Blog</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_07.jpg" alt="智谱(02513.HK)首份业绩报告:探索 AGI 智能上界" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[智谱 Z.ai News] 1级信源 · zh</div>
+    <h3><a href="https://www.zhipuai.cn/news" target="_blank">智谱(02513.HK)首份业绩报告:探索 AGI 智能上界</a></h3>
+    <p style="color:#ccc;">智谱(02513.HK)发布港股上市后首份业绩报告与年度业绩发布会安排,主题定为'探索 AGI 智能上界',选在 GLM-5 家族铺开窗口披露。</p><p style="color:#8b949e;font-size:13px;">💡 智谱把首份业绩发布与'AGI 智能上界'叙事绑定,延续资本市场对'中国 OpenAI'的期待;首份答卷+叙事驱动,是其估值能否守住的关键节点。</p>
+    <div class="source">来源：智谱 Z.ai News</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_10.jpg" alt="量子位:李飞飞亲自下场定义'世界模型',LeCun 押注的视觉大模型方向升温" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 1级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/06/428752.html" target="_blank">量子位:李飞飞亲自下场定义'世界模型',LeCun 押注的视觉大模型方向升温</a></h3>
+    <p style="color:#ccc;">量子位 6/4-6/5 连发三篇:李飞飞亲自定义'世界模型'、LeCun 10 亿押注方向已被视觉大模型团队提前布局、GPT Plus 月费可让机器人跑一个月世界模型。</p><p style="color:#8b949e;font-size:13px;">💡 中文 AI 媒体把'世界模型/具身智能'打成本周最热话题,学术(李飞飞)+ 资本(LeCun)+ 商业(订阅成本)三角共振,卧安机器人 OneModel 1.7'隐式通路'同框出现。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="DeepSeek 全组织仓库集中刷新:DeepSeek-V3.2-Exp 等 10+ 仓库 6/4 同步更新" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepSeek GitHub] 2级信源 · en</div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSeek-V3.2-Exp" target="_blank">DeepSeek 全组织仓库集中刷新:DeepSeek-V3.2-Exp 等 10+ 仓库 6/4 同步更新</a></h3>
+    <p style="color:#ccc;">DeepSeek 6/4 集中推送 V3.2-Exp、V3、R1、Coder-V2、OCR-2、Janus、Engram 等 10+ 仓库,GitHub 排序显示 2025-11 以来最大规模开源动作。</p><p style="color:#8b949e;font-size:13px;">💡 DeepSeek 用'全栈开源矩阵同步推送'方式迭代,延续低成本/全开源竞争策略;V3.2-Exp README 改动密集,或预示新论文与 Hugging Face 权重释出临近。</p>
+    <div class="source">来源：DeepSeek GitHub</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Streaming Communication in Multi-Agent Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.05158 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.05158" target="_blank">Streaming Communication in Multi-Agent Reasoning</a></h3>
+    <p style="color:#ccc;">多智能体推理普遍'生成完整推理链再传递',端到端延迟随管线深度线性增长,生产级 Agent 部署被时延卡死;不改范式就只能牺牲推理步数或并发。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>StreamMA 把每个推理 step 一旦生成即流式下推给下游 Agent,管线并行相邻步骤,把 K 步串行延迟压成'1 步 + 流水线填充';推理质量不降反升(早步置信度天然高于晚步,提早暴露高置信信号可减少错误传播)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>流式管线让后步 Agent 必须接受'不完整上下文'做决策,调度复杂度↑;若前步预测错且已被下游消费,纠错成本比串行基线更高(rollback 链路更深、影响面更广)。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多步推理 benchmark 上同时降低端到端延迟并提升最终准确率(具体倍数见正文表格),首个系统化把'流水线/流式'思想引入多智能体推理的工作。</div>
+      <div class="row"><span class="author">🏢 团队：</span>香港科技大学(HKUST)Ying-Cong Chen 团队,第一作者 Zhen Yang;面向多智能体推理的工程化加速。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="STRIDE: Training Data Attribution via Sparse Recovery from Subset Perturbations" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.05165 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.05165" target="_blank">STRIDE: Training Data Attribution via Sparse Recovery from Subset Perturbations</a></h3>
+    <p style="color:#ccc;">训练数据归因(TDA)是模型可解释/合规/数据治理刚需,但 LLM 规模下重训练(因果金标准)与全梯度追踪(近似法)都不可行,业界缺可用的 LLM 级归因工具。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>STRIDE 不算梯度,改为在'子集扰动'维度做稀疏恢复(Sparse Recovery):对多个小子集做扰动+观测输出变化,在扰动-影响矩阵上做 L1 稀疏回归识别关键训练样本,成本比 TRAK/Influence Functions 等梯度近似基线低一个数量级。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>稀疏恢复依赖'少数样本确实主导预测'这一假设,LLM 普遍对大量样本做平滑利用,稀疏解可能不稳定,归因结果对扰动子集选择敏感;且只能给出样本重要性排序,无法解释'为什么这条样本关键'。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>首次给出 LLM 级可扩展的因果近似 TDA,在精度与稳定性上优于 TRAK、Influence Functions 等梯度近似基线,成本远低于重训练(具体倍数见正文)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>MPI-IS(马克斯·普朗克智能系统研究所)Bernhard Schölkopf 团队 + 多伦多大学 Zhijing Jin 合作,第一作者 Rishit Dagli;因果/稀疏恢复派系。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Beyond Text Following: Repairable Arbitration Reversals in Audio-Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.05161 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.05161" target="_blank">Beyond Text Following: Repairable Arbitration Reversals in Audio-Language Models</a></h3>
+    <p style="color:#ccc;">音频-语言模型(ALM)在文本与音频冲突时系统性偏向文本,业界分不清'音频信号没学到'还是'学到但被文本压制';不区分就无法对症修复,模态仲裁已成 ALM 落地最大瓶颈之一。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 same-audio 反事实诊断:固定音频、移除冲突文本,测模型偏好是否反转;在 5 个 ALM + 4 个冲突任务上 64.1% 样本出现显著反转,证明音频答案在表征层是'在的',问题出在仲裁环节(repairable)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>反事实诊断只能区分'有没有学到',不指明'怎么修';移除文本后偏好反转证明表征存在,却没给出具体修复路径(改权重?改 prompt?改 token 优先级?),落地修复仍是开放问题。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>首次系统化证明 ALM 音频-文本冲突下 64.1% 属仲裁反转(repairable)而非表征缺失,给出可复现的 same-audio 反事实诊断流程与 5 模型对比表。</div>
+      <div class="row"><span class="author">🏢 团队：</span>东北大学(中国)计算机学院 NLP 实验室,通讯作者 Shi Feng(石锋)/ Daling Wang(王大龙)/ Yifei Zhang(张逸飞),第一作者 Yichen Gao(高艺琛)。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Reinforcement Learning from Rich Feedback with Distributional DAgger" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.05152 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.05152" target="_blank">Reinforcement Learning from Rich Feedback with Distributional DAgger</a></h3>
+    <p style="color:#ccc;">推理模型主流 RLVR 训练只给'对/错'一位奖励,执行轨迹、工具输出、专家修正、自评等富信号被全浪费,高难任务上单 bit 奖励方差极大、收敛慢,卡住了推理 RL 的进一步提效。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把经典 DAgger 做'分布化扩展' Distributional DAgger:把专家/工具/自评等富反馈建模为分布奖励,代入 on-policy 模仿学习回路;在数学/代码/工具调用等任务上,样本效率与最终准确率优于 1-bit RLVR 基线(具体倍数见正文)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>富反馈管线每步要跑执行/调工具/自评,单步训练成本远高于 1-bit RLVR;且高度依赖反馈源质量——若专家或自评本身有偏,反向传播会把偏置放大,适用场景受限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>首次把'富反馈 RL'从论文级 demo 推到可训练框架,在数学/代码/工具调用等多步推理任务上以更少环境步达到比 1-bit RLVR 更高的最终准确率。</div>
+      <div class="row"><span class="author">🏢 团队：</span>作者 Rishabh Agrawal / Jacob Fein-Ashley / Paria Rashidinejad,具体机构与会议信息以 arXiv 正文披露为准。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Failed Reasoning Traces Tell You What Is Fixable (But Not by Reading Them)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.05145 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.05145" target="_blank">Failed Reasoning Traces Tell You What Is Fixable (But Not by Reading Them)</a></h3>
+    <p style="color:#ccc;">后训练推理模型失败时,业界默认靠 test-time scaling 多 rollout 解决,但'失败 trace 里其实编码了修复路径';靠多采样是赌运气,该改测试时干预(prompt/工具/计划)却没改,算力被空转。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出'failed-trace recoverability'诊断:不读 trace 内容,只从其统计签名(长度/多样性/置信度曲线)区分'sampling 失败'与'structural 失败',为每类失败匹配不同测试时干预(更多 rollout vs. 改 prompt/工具/计划)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>诊断只判断'该改什么'不提供'怎么改'的最优解;落地到生产仍需人工或 Agent 闭环执行干预,且诊断本身要消耗一次推理开销,在极致低成本/低延迟场景不划算。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多个推理 benchmark 上把失败 trace 分类后匹配干预策略,等算力下准确率比盲目多 rollout 显著提升;首次把'失败 trace 的统计签名'作为可干预信号系统化使用。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Mila(蒙特利尔学习算法研究所) + 蒙特利尔大学,作者含 Irina Rish、Sarath Chandar、Eilif B. Muller 等;第一作者 Nizar Islah。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="chopratejas/headroom" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></h3>
+    <p>Headroom 是 LLM 上下文压缩中间件,在 token 进模型前对工具输出、日志、文件、RAG 切片做无损/近无损压缩,典型场景 60-95% 减 token 且答案不变;同时提供 library、HTTP 代理、MCP server 三种接入形态。不同于 LangChain splitter(只切不压)或 LlamaIndex node parser(按结构切),Headroom 走'保留语义+砍冗余'路线,在 Agent 与 RAG 场景直接替代简单 chunking,把 context window 预算花在刀刃上。</p>
+    <div class="source">⭐ 12,361 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="NVIDIA/cosmos" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NVIDIA/cosmos" target="_blank">NVIDIA/cosmos</a></h3>
+    <p>NVIDIA Cosmos 是面向 Physical AI(机器人/自动驾驶/智慧城市)的世界基础模型开源平台,提供预训练世界模型、大规模合成+真实数据集、训练/推理工具链,让开发者不必从零训感知-预测-规划模型。和 Tesla Dojo / Waymo 内部世界模型不同,Cosmos 直接开放权重与数据,定位类似'机器人界的 LLaMA';对硬件依赖 NVIDIA GPU/Isaac stack,本体厂商与机器人初创是其核心用户群。</p>
+    <div class="source">⭐ 8,970 · Jupyter Notebook</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="lfnovo/open-notebook" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lfnovo/open-notebook" target="_blank">lfnovo/open-notebook</a></h3>
+    <p>Open Notebook 是 Google NotebookLM 的开源复刻+增强版:把 PDF/音视频/网页丢进去,自动生成摘要、AI 播客、问答、研究简报;在 NotebookLM 之上开放了多 LLM 切换、自定义工作流、API 化扩展,数据完全本地可控。差异点:NotebookLM 闭源且绑 Google 生态,Open Notebook 主打'可自托管+可插拔',适合企业知识库、研究者、播客主、教育/咨询等需要私有资料+多模型切换的场景。</p>
+    <div class="source">⭐ 24,953 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="Open-LLM-VTuber/Open-LLM-VTuber" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank">Open-LLM-VTuber/Open-LLM-VTuber</a></h3>
+    <p>Open-LLM-VTuber 是开源虚拟主播桌面应用,接任意 LLM(本地/Ollama/在线 API)做带 Live2D 立绘的语音对话,主打语音打断、TTS 嘴型同步、跨平台桌面运行;相比商业 VTuber 工具链(绑 Live2D 公司)或 HeyGen 等闭源数字人,本项目是'AI 接管对话内容'的开源套皮方案,适合做陪伴型 AI、数字人 demo、教育/角色扮演与个人 Vtuber 自建。</p>
+    <div class="source">⭐ 9,556 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="PaddlePaddle/PaddleOCR" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank">PaddlePaddle/PaddleOCR</a></h3>
+    <p>PaddleOCR 是百度飞桨开源的 OCR 工具箱,从图片/PDF 抽取结构化文本(表格/版面/公式)直接喂给 LLM 用,支持 100+ 语言,模型轻量可端侧部署;相比 Tesseract(老牌但版面理解弱)、EasyOCR(轻量但中文差)、Surya(版面强但中文弱),PaddleOCR 在中文场景+版面还原+模型可商用上是国内最稳的工业级方案,80k+ stars 已是中文 OCR 工具的'事实标准'。</p>
+    <div class="source">⭐ 79,829 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="github/copilot-sdk" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/github/copilot-sdk" target="_blank">github/copilot-sdk</a></h3>
+    <p>GitHub Copilot SDK 是 GitHub 官方推出的多平台 Agent 集成 SDK,让第三方应用和服务(JVM/Android/Server 侧)把 Copilot Agent 嵌进自家产品,复用其代码理解/工具调用/仓库上下文能力;和直接调 GitHub REST API 不同,SDK 提供 Agent 生命周期、权限沙箱、上下文管理抽象。对标 Anthropic / OpenAI 的 Agent API,但 Copilot 背靠 GitHub 仓库与 Issue 数据,在开发者工具场景是天然入口。</p>
+    <div class="source">⭐ 8,949 · Java</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-05 07:29</p>
+</footer>
+</div>
+</body>
+</html>
