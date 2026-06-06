@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月6日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月6日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Anthropic raises $65B in Series H funding at $965B post-money valuation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/anthropic-raises-65b-in-series-h-funding" target="_blank">Anthropic raises $65B in Series H funding at $965B post-money valuation</a></h3>
+    <p style="color:#ccc;">5月28日 Anthropic 完成 65B 美元 H 轮融资,投后估值 965B 美元,为 AI 行业史上最大单笔私募融资,被普遍视为 IPO 前的临门一步。</p><p style="color:#8b949e;font-size:13px;">💡 本轮把 Anthropic 送入'万亿美元估值俱乐部',与 OpenAI 同档——单轮 65B 超过 2024 年任何 AI 融资,标志一级市场对头部公司'终局定价'。横向看 xAI 200 亿、OpenAI 软银 400 亿已是上一档,本轮把天花板再抬一倍。产业意义在于强化'算力换股权'闭环,融资主要转化为 NVIDIA/AMD GPU 与云合同,抬高算力侧议价权。3-6 个月看,Anthropic 大概率递交 S-1 走 IPO,带动 a16z、Sequoia 账面浮盈兑现压力。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="AirTrunk commits $30B to build 5GW of AI data centers in India" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/" target="_blank">AirTrunk commits $30B to build 5GW of AI data centers in India</a></h3>
+    <p style="color:#ccc;">6月5日 澳洲数据中心运营商 AirTrunk 宣布将在印度投资 300 亿美元建设 5GW AI 数据中心集群,是该国迄今最大单笔外资算力承诺。</p><p style="color:#8b949e;font-size:13px;">💡 AirTrunk 把'AI 主权基建'主战场从美东/北欧/中东推至南亚——5GW 约 30 座 1GW 园区,可吸纳 Microsoft/Amazon/Reliance 已宣布未落地的印度算力。横向对比 Saudi Humain 1.9GW、Microsoft 印度 3GW,5GW 是亚太最大单笔。上游 HVDC/UPS/光模块厂(Vertiv、Hitachi Energy)吃 2027-2028 设备订单,下游重塑 Reliance Jio 算力采购。3-6 个月看,有望推动印度'国家 AI 算力使命'补贴落地。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Some users may experience issues accessing OpenAI accounts" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Status] 1级信源 · en</div>
+    <h3><a href="https://status.openai.com/incidents/01KTBZDS20E3PZ53DH2SCKXN49" target="_blank">Some users may experience issues accessing OpenAI accounts</a></h3>
+    <p style="color:#ccc;">6月5日 OpenAI 状态页挂出 11 小时以上事故,部分用户无法登录账户,涉及订阅与额度系统异常,官方正修复并对受影响账户补偿。</p><p style="color:#8b949e;font-size:13px;">💡 事故发生在账户/计费层而非推理层,对 Team/Enterprise 客户冲击大于 ChatGPT 短暂宕机,直接威胁 ARR 稳定性。横向看 2024 年多次 SRE 事件后 OpenAI 已重写控制面,但账户与计费仍是 SRE 短板。产业链上,这给'非模型层 SLA'敲响警钟:ChatGPT 嵌入客服/销售后,账号不可用即等于业务中断。未来 3-6 个月,OpenAI 借机发布 Enterprise 账户级 RTO/SLO 承诺并对标 AWS IAM 拆账户/计费为独立可用区。</p>
+    <div class="source">来源：OpenAI Status</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Google follows Anthropic in signing a compute deal with SpaceX" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">Google follows Anthropic in signing a compute deal with SpaceX</a></h3>
+    <p style="color:#ccc;">6月5日 监管文件披露,Google 将于 2026 年 10 月至 2029 年 6 月按 9.2 亿美元/月向 SpaceX 采购算力,以应对 Gemini Enterprise 爆量需求。</p><p style="color:#8b949e;font-size:13px;">💡 这笔'短期'算力交易关键不在价格而在结构——Google 罕见绕开 AWS/Azure/Oracle 去找 SpaceX,折射 TPU+OCS 供应缺口,必须借外部 GPU 补位。横向对比 AWS×Anthropic 百亿长协、Oracle×OpenAI 4.5GW 大单,Google 的'短约'本质是给供应链打补丁。产业意义在于 SpaceX 完成从火箭卫星公司向'天基算力批发商'切换;H100 月度消耗锁定抬升现货租金。3-6 个月内 Gemini Enterprise 需跑出年化 100 亿美元才匹配此合同单位经济性。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="New York lawmakers pass one-year ban on new data centers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">New York lawmakers pass one-year ban on new data centers</a></h3>
+    <p style="color:#ccc;">6月5日 纽约州立法者通过为期一年的新建数据中心禁令,是美国首个州级 AI 算力'暂停键',对 Equinix、Digital Realty 本地运营及拟建项目直接形成冻结。</p><p style="color:#8b949e;font-size:13px;">💡 NY 法案表面是环保/电网压力,实质是'AI 算力 vs 居民电价'政治博弈的全美第一枪——Virginia、Texas 此前用补贴抢数据中心,NY 反向操作可能引发 PJM 互联区域其他州效仿。横向对比荷兰 Amsterdam 因电网饱和暂停新数据中心、爱尔兰 Dublin 类似冻结,NY 把这套'电网上限'逻辑引入美国最大市场之一。短期影响上,亚马逊/Google 在 NY 区域扩容将转向新泽西/宾州;3-6 个月看 NY 州长是否签署以及 PJM 邻州是否跟进。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="The token bill comes due: Inside the industry scramble to manage AI's runaway costs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 1级信源 · en</div>
+    <h3><a href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/" target="_blank">The token bill comes due: Inside the industry scramble to manage AI's runaway costs</a></h3>
+    <p style="color:#ccc;">6月5日 TechCrunch 长文报道,AI 实验室与企业正集体应对推理与训练算力支出失控,普遍采用 prompt 压缩、模型路由、KV cache 复用等节流手段。</p><p style="color:#8b949e;font-size:13px;">💡 本文是行业从'算力不足'切换到'算力太贵'叙事的标志性文章——2024 年主旋律是 GPU 缺货与排队,2026 年变成单位经济性跑不通。横向看,Anthropic 1M-context、OpenAI o-series 推理把单次请求推上 1-10 美元,企业被迫叠加小模型路由、KV cache 复用、prompt cache 补丁。to-C 订阅涨价空间已耗尽,to-B ROI 6-12 个月回本愈发困难。3-6 个月看,Groq/Cerebras 等推理公司或拿新一轮溢价融资,模型层或被迫'分级定价'。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06448 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06448" target="_blank">Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads</a></h3>
+    <p style="color:#ccc;">LLM agent 正在从一次性问答助手演变为长时运行的软件 actor，跨 session 持续推理、累积交互历史已是刚需。但市面 agent memory 方案形态迥异（flat retrieval / LLM 抽取 / fact store / agentic control flow），缺乏统一系统视角——写读路径开销怎么分摊、刷新与延迟怎么取舍、构造调度怎么编排全是黑盒，工程上无法规模化部署。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>首次对 agent memory 做系统级表征：四维分类法（构造/检索/生成/控制流）+ 阶段感知 profiling harness 把开销拆分到 construction / retrieval / generation 三段，再对 10 个代表系统跑两套基准定位写读路径上设计选择带来的成本迁移。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>taxonomy 是观察性总结而非算法，不直接给出最优 memory 配方；phased profiling 在闭源 agent 后端可观测性有限，结论外推到生产黑箱 agent 时衰减明显。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>覆盖 10 个开源/商用 agent memory 系统，量化 construction 调度、capability floor、query-volume 摊销、freshness-latency 取舍、fleet-scale 管理的成本曲线；提炼 10 条系统级工程建议。</div>
+      <div class="row"><span class="author">🏢 团队：</span>斯坦福（Stanford）/ 鲁汶大学（KU Leuven）等；Yasmine Omri、Ziyu Gan、Thierry Tambe 等（arXiv 2026-06）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06470 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06470" target="_blank">PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training</a></h3>
+    <p style="color:#ccc;">LLM 预训练中权重矩阵的奇异值谱常出现极端分布——少数高奇异值主导梯度流、压低低秩方向的学习速度；既有谱控制手段要么是 weight decay 这类间接正则、要么是 post-hoc 重参数化训完得换推理结构，训推无法同构。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在每个 Linear 层前插一个 polynomial preconditioner（PC layer）重塑奇异值谱；训完 PC 可吸收回原 Linear，推理时零结构开销。Llama-1B 上 AdamW / Muon 都跑通，理论证明谱均匀有界可保证深线性网络几何收敛到全局最小。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>PC 对权重做多项式变换，每步前向/反向多算几次低阶多项式，单步 wall-clock 略涨；阶数和频谱整形幅度需要超参搜索，不合适的阶数反过来抑制高阶谱方向的学习自由度。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>PC layer 在 Llama-1B 预训练上对 AdamW 和 Muon 都给出稳定增益（loss 曲线更平滑、收敛步数缩短），理论证谱均匀有界对深线性网络几何收敛到全局最小充分；代码开源 https://github.com/Empath-aln/PC-layer。</div>
+      <div class="row"><span class="author">🏢 团队：</span>伊利诺伊大学香槟分校（UIUC）；Senmiao Wang、Ruoyu Sun、Alex Schwing 等（arXiv 2026-06）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="A Vision-language Framework for Comparative Reasoning in Radiology" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06407 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06407" target="_blank">A Vision-language Framework for Comparative Reasoning in Radiology</a></h3>
+    <p style="color:#ccc;">医学影像 AI 长期停在'单图孤立读片'——一张胸片给一个结论。但真实放射科诊断依赖'跨片对比'：这次比上次好了多少？这个病灶和哪种典型最像？现有 vision-language 模型没把'跨片对比推理'做成 first-class 任务，临床可用性差。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把对比读片形式化为 entity-aware 跨图推理：建 MedReCo-DB（690k 影像 + 160k 患者、8 机构 / 4 国 / 7 模态），把报告拆为解剖/异常/病理三类实体做监督；训出 MedReCo 检索 encoder + MedReCo-VLM 生成式对比解读，支持 reference-case 检索与时序对比两种范式。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>实体分解依赖报告标注质量，不同医院报告模板和粒度差异大，跨中心迁移时 entity taxonomy 需要重新对齐；模型在罕见病种（训练样本稀薄）的 retrieval Recall@1 仍落后于常见病。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>MedReCo 在 12 个内部检索 setting 上 Recall@1 全 SOTA，外部检索平均 +6.0 pp；MedReCo-VLM 在所有对比生成 eval 上最佳，胸片 longitudinal 准确率 +14.5–46.5 pp，CT +13.0–27.9 pp。</div>
+      <div class="row"><span class="author">🏢 团队：</span>上海交通大学（Shanghai Jiao Tong University）与上海人工智能实验室（Shanghai AI Lab）；Tengfei Zhang、Weidi Xie、Yanfeng Wang 等（arXiv 2026-06）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06428 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06428" target="_blank">Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation</a></h3>
+    <p style="color:#ccc;">LLM 翻译极端低资源语言卡在两路：继续预训练/微调会过拟合到具体语言、零样本迁移差；塞语法书到 context 又只对个别语言有效。要让 LLM 真正'会一类从没学过的语言'，得让它习得'从 in-context 语料中调用语言学知识'这个 meta-skill，而不是死记某种语言。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用 outcome-based RL（chrF 作 reward，PPO 策略梯度）替代 SFT，让 LLM 学会从 rich linguistic context 中抓取语言学线索。证明 surface-level 翻译 metric 即可作 RL 信号，无需复杂奖励模型。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>chrF 是 surface-level n-gram 重叠，奖励形态简单，模型被引导到'词面像'的翻译；需句法/形态重排的语种（粘着语、声调语）fluency 提升有限；RL 训练对超参与 prompt 模板敏感，跨语族迁移时策略不稳。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在完全 unseen 的低资源语言上，RL 训练模型相对 in-context learning 和 SFT 都取得更高 chrF；说明 outcome-based RL 的'meta-skill 学习'能力可从数学/代码场景扩展到语言习得场景。</div>
+      <div class="row"><span class="author">🏢 团队：</span>苏黎世大学（University of Zurich）；Hanxu Hu、Rico Sennrich 等（arXiv 2026-06）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Latent Reasoning with Normalizing Flows" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06447 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06447" target="_blank">Latent Reasoning with Normalizing Flows</a></h3>
+    <p style="color:#ccc;">LLM 显式 chain-of-thought 推理强，但每步都要 verbalize 成 token——带宽低、必须串行、KV-cache 兼容性差；现有 latent reasoning 又常牺牲掉自回归 LLM 的关键能力：原生 left-to-right 生成、概率采样、KV-cache、可微 likelihood。要么改不了推理 backbone、要么训不起来。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>NF-CoT：在 LLM backbone 内嵌一个 TARFlow 风格 normalizing flow 作 NF head；token 仍走标准 LM head，连续 thought 由 NF head 在同一因果流中生成——既保留 left-to-right 解码、KV-cache、概率采样，又给 latent thought 配 tractable likelihood，可直接对 latent reasoning 空间做 policy gradient。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>NF head 在每个 continuous-thought 位置多算一次 normalizing flow，wall-clock 高于纯显式 CoT；NF 蒸馏的 continuous thought 来自显式 CoT teacher，质量上限被 teacher 限制，long-horizon 任务上 teacher 与 student 的 gap 会被放大。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 code-generation 基准上 NF-CoT 同时超过显式 CoT 和先前 latent-reasoning 基线，pass rate 提升且 intermediate-reasoning cost 显著下降；continuous thought 的 exact likelihood 让 latent-space policy gradient 可直接优化。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Apple ML Research 与伊利诺伊大学香槟分校（UIUC）；Guancheng Tu、Yizhe Zhang、Jiatao Gu 等（arXiv 2026-06）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="chopratejas/headroom" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></h3>
+    <p>headroom 是面向 LLM 应用的上下文压缩中间件，定位于工具输出、日志、文件与 RAG 结果送入大模型前的瘦身环节。提供 Library、Proxy、MCP server 三种形态，可将 token 量压缩 60-95% 而不损失答案质量。与单纯摘要去重不同，它面向工业级长上下文流水线，能在代理、RAG、Copilot 等多跳场景显著降低推理成本与延迟。技术栈以 Python 为主，配套 MCP 协议接入，便于在 Claude、Cursor 等生态快速集成。判断：随着 LLM 应用从原型走向生产，context 预算成为关键瓶颈，token 压缩层将和缓存、路由一样成为标准中间件。</p>
+    <div class="source">⭐ 14,505 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="CopilotKit/CopilotKit" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/CopilotKit/CopilotKit" target="_blank">CopilotKit/CopilotKit</a></h3>
+    <p>CopilotKit 是面向 AI 代理与生成式 UI 的前端框架，定义为代理与界面的完整前端栈，同时支持 React 与 Angular，并主导 AG-UI 协议标准化代理与前端的通信。不同于纯聊天式 Copilot，它将代理能力直接嵌入既有业务页面：表单、表格、看板都能被 LLM 现场改写、生成与解释，实现 Generative UI 的工业化落地。技术栈以 TypeScript 为主，强调可组合的 hook、组件与运行时协议，便于企业把代理能力嵌入 SaaS、CRM、内部工具。判断：Generative UI 正从 demo 进入工程化阶段，统一协议与组件化能力将决定代理生态的接入门槛。</p>
+    <div class="source">⭐ 32,679 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="lfnovo/open-notebook" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lfnovo/open-notebook" target="_blank">lfnovo/open-notebook</a></h3>
+    <p>open-notebook 是 Google NotebookLM 的开源替代，主打上传资料、与自有知识对话的播客式研究体验，但在数据主权、可扩展性与功能维度做了增强：本地优先存储、可接入任意 LLM 与向量库、支持多源资料（PDF、网页、YouTube、音频）与播客化输出。技术栈以 TypeScript + Python 组合，定位介于 NotebookLM 与 RAG 工具链之间。判断：NotebookLM 验证了个人研究助理的市场需求，但闭源 + 绑 Google 生态限制了大企业、教育与隐私场景的采纳；开源可插拔的同位替代是 2025 年最容易出爆款的方向之一。</p>
+    <div class="source">⭐ 26,002 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="PaddlePaddle/PaddleOCR" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank">PaddlePaddle/PaddleOCR</a></h3>
+    <p>PaddleOCR 是百度飞桨旗下的开源 OCR 工具集，覆盖 80+ 语种、横竖排、表格、版面分析与结构化输出，被誉为打通图像与 PDF 与 LLM 之间桥梁的关键工具。相比 Tesseract，它在中文场景、小字体、复杂版式、表格抽取上有明显优势，并原生支持 PP-Structure 等版面模型，可直接将扫描件转换为 LLM 可消费的结构化数据。技术栈以 Python 为主，模型轻量、可端侧部署，中文社区活跃。判断：在企业 RAG 与 Agent 流水线中，文档解析往往是第一道质量瓶颈，PaddleOCR + LLM 正在成为中文场景的事实标准。</p>
+    <div class="source">⭐ 80,538 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="NVIDIA/cosmos" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NVIDIA/cosmos" target="_blank">NVIDIA/cosmos</a></h3>
+    <p>NVIDIA Cosmos 是面向 Physical AI 的世界模型开源平台，提供预训练的世界基础模型、海量多模态数据集与仿真微调工具链，目标场景覆盖人形机器人、自动驾驶、智能基础设施与智慧城市。与纯仿真器（如 CARLA）不同，Cosmos 以视频即训练信号为核心，强调从真实驾驶与机器人视频中学习物理先验，再用于策略合成与闭环评测。技术栈以 PyTorch + Jupyter Notebook 为主，配套 Cosmos-Reason 等推理模型。判断：当 LLM 进入物理世界，世界模型 + 仿真成为下一阶段护城河，NVIDIA 正通过开源押注 Physical AI 标准制定权。</p>
+    <div class="source">⭐ 9,414 · Jupyter Notebook</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="withastro/flue" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/withastro/flue" target="_blank">withastro/flue</a></h3>
+    <p>flue 是 Astro 团队推出的沙箱代理框架，定位是为 AI 代理提供安全、可复现的代码执行与运行环境。与传统 sandbox 偏系统调用隔离不同，flue 强调代理友好：把沙箱、工具调用、文件系统与网络访问封装成统一接口，让代理在受限环境中完成多步任务时既有边界又有生产力。技术栈以 TypeScript 为主，复用 Astro 的运行时与构建体系。判断：随着 AI 代理从对话走向动手做事，沙箱将从 DevOps 工具升级为代理时代的核心运行时，类似浏览器之于 Web 应用的承载体。</p>
+    <div class="source">⭐ 4,516 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-06 09:32</p>
+</footer>
+</div>
+</body>
+</html>
