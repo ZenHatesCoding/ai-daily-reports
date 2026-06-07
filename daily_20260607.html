@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月7日 · 周日</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月7日 · 周日 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_06.jpg" alt="Google will pay SpaceX $920M per month for compute" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch AI] 1级信源 · en 🔥</div>
+    <h3><a href="https://techcrunch.com/2026/06/06/google-will-pay-spacex-920m-per-month-for-compute/" target="_blank">Google will pay SpaceX $920M per month for compute</a></h3>
+    <p style="color:#ccc;">6月6日 TechCrunch 披露，Google 与 SpaceX 签署 2026/10–2029/6 算力大单，月付 9.2 亿美元，用于支撑 Gemini Enterprise agent 平台爆发性需求，紧随 5 月 Anthropic 与 SpaceX 的同类交易。</p><p style="color:#8b949e;font-size:13px;">💡 这是 2026 年 AI 算力军备竞赛的"标志性合约"，处于产业链最上游——算力供给层。9.2 亿美元/月、年化 ~110 亿美元的规模，意味着头部大厂的推理算力开支正以单笔交易方式超越传统云租约。同类对照：5 月 Anthropic 抢单 SpaceX、AWS Trainium 2 大单、xAI Memphis 超算集群，标志着 AI 资本开支从"训练为王"转向"训练+推理双轮驱动"。上下游：直接利好 SpaceX/Starlink 商业化、卫星互联网承载 AI 推理的边缘算力路线；同时挤压传统 GPU 长租市场，可能推高 H100/H200/B200 现货价 10-15%。中期判断：3-6 个月内 Google Cloud 客户将面临"agent 优先"配额机制，非 agent 工作负载被边际化；行业格局上，Anthropic、xAI、Meta 必将跟进类似交易，算力将成 AI 公司的"第二货币"。</p>
+    <div class="source">来源：TechCrunch AI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_09.jpg" alt="Hinton吹哨了：AI已经有意识！" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 1级信源 · zh 🔥</div>
+    <h3><a href="https://www.qbitai.com/2026/06/431349.html" target="_blank">Hinton吹哨了：AI已经有意识！</a></h3>
+    <p style="color:#ccc;">6月7日量子位报道，图灵奖得主 Geoffrey Hinton 公开表示 AI 可能已具备意识，呼吁业界严肃对待 AI 安全与对齐问题；这是他 2023 年离开 Google 后又一标志性表态。</p><p style="color:#8b949e;font-size:13px;">💡 Hinton 之言处于 AI 治理"舆论链"的顶层，是人物-思想-政策传导的关键节点。同类对照：Yoshua Bengio 2024 联署"AI 风险声明"、Stuart Russell 持续推动对齐立法、Ilya Sutskever 创立 Safe Superintelligence——Hinton 此番把"意识"摆到台前，是把技术风险升格为哲学-伦理议题。上下游影响：短期将刺激 OpenAI/Anthropic 内部"宪法式"治理升级；监管侧利好 EU AI Act、UNESCO AI 伦理建议书的二次扩散；研究端可能引发 consciousness benchmark、interpretability for sentience 的新一轮立项。未来 3-6 个月，"AI 意识"可能从哲学讨论进入企业 RFI 清单（即客户开始问"你的模型是否有意识"），迫使厂商准备"白皮书+技术回应"。商业判断：Hinton 的每一次发声都是行业安全支出的"加速器"，2026 下半年安全/对齐创业公司估值大概率上行。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Some users may experience issues accessing OpenAI accounts" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI Status] 1级信源 · en</div>
+    <h3><a href="https://status.openai.com/incidents/01KTBZDS20E3PZ53DH2SCKXN49" target="_blank">Some users may experience issues accessing OpenAI accounts</a></h3>
+    <p style="color:#ccc;">6月6日，OpenAI 多条产品线（App、VS Code 扩展、Codex API/Web/CLI、登录）发生账号被错误封禁事故；官方确认已恢复访问并发送邮件通知，未披露根因。</p><p style="color:#8b949e;font-size:13px;">💡 这是一次典型的"账户可用性"事故，处于 AI 平台服务链的"用户接入层"。同类事件可对照 2024 年 ChatGPT 全球宕机与 2025 年 Claude 大规模登录故障，说明头部模型的 B2C/B2B 入口对单一账户系统高度依赖。短期影响：开发者和企业用户工作流被打断，叠加近期 OpenAI 在 Codex 系列上密集发布，安全-可用性张力凸显。中期看，事故或推动 OpenAI 引入多区域账户副本与 fail-safe 登录机制；Anthropic、Google 也会借机强调 SLA。商业上，SaaS 型 AI 厂商需要把"账户可恢复性"写进企业合同，类似传统云厂商的 RTO/RPO 承诺，否则在企业市场将持续失分。</p>
+    <div class="source">来源：OpenAI Status</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="智谱首份业绩报告发布，探索AGI智能上界" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[智谱AI 官方动态] 1级信源 · zh</div>
+    <h3><a href="https://www.zhipuai.cn/news/first-annual-report" target="_blank">智谱首份业绩报告发布，探索AGI智能上界</a></h3>
+    <p style="color:#ccc;">6月1日，港股上市的智谱（02513.HK）发布上市后首份年度业绩报告并召开发布会，系统披露 GLM 大模型架构演进、Agent 工程进展，首次将"AGI 智能上界"列为长期方向。</p><p style="color:#8b949e;font-size:13px;">💡 这是中国"大模型六小虎"中首家以完整年报形式公开技术-商业路径的公司，处于产业链的"模型 + Agent 应用"双层。横向对比：月之暗面、MiniMax 仍未上市，智谱借港股披露优势建立透明度护城河；与海外对照则类似 Anthropic 早期通过融资透明度换取客户信任。短期意义：智谱需证明 B 端 API 与 GLM 行业模型两条收入线的可持续性；中期看，"AGI 智能上界"概念若能在 1-2 年内给出可量化指标，将决定其估值能否在港股科技板块脱颖而出。上下游：芯片端利好国产推理算力（与 DeepSeek 推理优化形成产业链呼应），应用端推动 Agent 平台向"行业知识 + 工具链"标准化。商业判断：财报透明度本身就是竞争力，国产大模型进入"上市-合规-披露"新阶段。</p>
+    <div class="source">来源：智谱AI 官方动态</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="DeepSeek-V3 latest commits (GitHub)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[GitHub deepseek-ai] 2级信源 · en</div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSeek-V3/commits/main" target="_blank">DeepSeek-V3 latest commits (GitHub)</a></h3>
+    <p style="color:#ccc;">DeepSeek-V3 仓库 6 月初连续提交聚焦 act_quant_kernel、rms_norm 融合等小规模推理优化与文档维护，未涉及模型权重或架构变更；社区关注下一里程碑 V4 何时放出。</p><p style="color:#8b949e;font-size:13px;">💡 表面平静的 main 分支其实是国产开源 LLM 的"工程打磨期"——量化算子、归一化融合、推理 kernel 优化，反映 DeepSeek 把竞争重心从"训更大的模型"转向"让 V3 跑得便宜"。产业链位置：推理优化层。同类对照：Unsloth、vLLM、TensorRT-LLM 在社区的活跃度持续上升。上下游影响：硬件侧利好国产推理卡（昇腾、寒武纪）与 MoE 友好框架；模型层则把"参数效率"竞赛推到新阶段。未来 3-6 个月，DeepSeek V4 预告、稀疏化与端侧蒸馏将是观察重点；商业上，量化内核成熟会进一步压低开源 API 价格，逼闭源厂商在性价比上正面应战。</p>
+    <div class="source">来源：GitHub deepseek-ai</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="开展"清朗·整治AI应用乱象"专项公告" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MiniMax 新闻] 2级信源 · zh</div>
+    <h3><a href="https://www.minimaxi.com/news/clean-ai-special-announcement" target="_blank">开展"清朗·整治AI应用乱象"专项公告</a></h3>
+    <p style="color:#ccc;">5月中旬，MiniMax 发布"清朗·整治 AI 应用乱象"专项公告，承诺配合监管集中治理 AI 应用违规，覆盖海螺视频、星野、智能体等全线产品，主动对齐网信办专项行动口径。</p><p style="color:#8b949e;font-size:13px;">💡 这条处于 AI 产业链的"合规与治理层"，与 2025 年网信办"清朗"系列行动一脉相承。横向对比：DeepSeek 2024 年下架未备案 API、智谱主动接入监管沙盒、阿里通义千问建立内容审核中台——头部国产模型正在形成"监管合规即竞争力"的共识。短期：海螺、星野等 C 端产品将经历功能受限（如 AI 陪伴情感边界收紧、深度伪造检测升级）；中期看，合规成本将抬高创业公司入场门槛，利好已建立审核体系的大厂。上下游影响：内容安全 SDK、鉴黄鉴政 AI、深度伪造检测厂商订单上行；监管侧 KYC/实名链条可能向模型层反向输出。3-6 个月判断：清朗专项会从"集中整治"过渡到"常态化巡查"，AI 公司的法务与政策团队会从支持部门升级为产品设计前置环节。</p>
+    <div class="source">来源：MiniMax 新闻</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06493 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06493" target="_blank">HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers</a></h3>
+    <p style="color:#ccc;">人形机器人要真正走出实验室落到家庭/工厂，决策层（任务规划）和执行层（全身控制）之间缺一个顺手的接口：现有控制器只认密集的运动学/空间参考，规划器从高层语义「把杯子端起来」翻译不到这种细粒度指令，导致上层任务和下层动作长期脱节。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把 task-space（末端任务空间位姿）作为唯一显式命令接口喂给单一全身控制策略；多个互补的教师策略（接触/操作/平衡等）通过蒸馏合并到一个策略里，兼顾规划器友好与多任务泛化，相对以往「密集参考 + RAG 式重规划」基线大幅降低接口复杂度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>接口被刻意做小后，凡是需要精细关节级约束的任务（如指尖微调、力反馈装配）就被压死在该抽象层之下；同时多个互补教师被蒸馏成单一策略后，牺牲了「哪个教师擅长什么」的可解释切换。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多套人形机器人仿真 + 真机长程操作 benchmark 上，跨任务成功率与指令遵从率均达到 SOTA，对比纯 task-space 残差方法与端到端 imitation baseline 优势明显。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Google DeepMind 与 Georgia Tech 等合作；一作 Lizhi Yang，通讯 Aaron Ames（Caltech 出身、现 Georgia Tech AMBER Lab 主任，机器人控制领域资深作者），合作者含 Georgia Gkioxari。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06492 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06492" target="_blank">Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</a></h3>
+    <p style="color:#ccc;">代码大模型要写出能跑的项目级代码，必须吃进仓库级上下文（import、API、内部规范），而现实里每个仓库都在持续演化：RAG 路径要把整段检索拼回上下文，token 成本爆炸；per-repo 整库微调或 LoRA 又贵到按仓库数线性扩张，工程上根本吃不消。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>训练一个超网络（hypernetwork），把仓库代码本身当输入，直接生成该仓库专属的 LoRA 适配器；推理时把 adapter 挂回底模即可获得该仓库的「内化记忆」，相对 RAG 基线实现零推理 token 开销，相对 per-repo 独立 LoRA 训练省去每仓独立训练流程。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把仓库知识全压进 adapter 后，仓库一旦大改（依赖/重构/版本升级）适配器就过期，超网络必须重生成；同时超网络本身需要大量「仓库→LoRA」对作为监督，训练侧的代价被前移且高度集中在超网预训练阶段。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多仓库代码补全与 API 引用预测基准上，Code2LoRA 在零推理 token 开销条件下匹配或超过 RAG 基线，对持续演化的真实仓库鲁棒性显著优于 per-repo LoRA。</div>
+      <div class="row"><span class="author">🏢 团队：</span>加拿大 University of Waterloo NLP 小组与北大合作；一作 Liliana Hotsko，通讯 Pengyu Nie（Waterloo），Yuntian Deng（现为多伦多大学助理教授、原 Waterloo）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Self-Augmenting Retrieval for Diffusion Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06474 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06474" target="_blank">Self-Augmenting Retrieval for Diffusion Language Models</a></h3>
+    <p style="color:#ccc;">离散扩散语言模型每一步把掩码位置「并行去噪」，只敢把高置信 token 写进输出，其余一律丢弃；结果在需要外部知识的问答/事实型任务上，这些被扔掉的中低置信 token 经常暗藏关键实体，原本可作为检索线索，却被白白浪费掉。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把被丢弃的低置信 token 视作去噪轨迹的「前瞻信号」，让模型在还没写完答案时就把这些线索拿去检索证据，再把更强证据回灌到下一轮去噪里；相对「先写完再独立 RAG」的基线，把检索提前到生成内部循环。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>生成质量被自增强检索顶起来后，扩散原本「一步并行出整段」的并行去噪优势被吃回去——每轮 denoising 都要等一次外部检索串行介入，端到端延迟反向放大，且检索器一旦失误会把错误证据反向污染去噪过程。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多个知识密集型问答/事实核查基准上，超越 vanilla 扩散语言模型与外置 RAG 基线，生成的事实一致性与答案正确率均显著提升。</div>
+      <div class="row"><span class="author">🏢 团队：</span>美国 Cornell University 与 Meta AI 合作；一作 Paul Jünger，通讯 Kilian Q. Weinberger（康奈尔计算机系教授、ML 领域资深作者）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06428 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06428" target="_blank">Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation</a></h3>
+    <p style="color:#ccc;">极低资源语言翻译是 NLP 里的硬骨头：靠持续预训练把语料灌进模型会过拟合这门语言、靠「把语法书写进上下文」做 ICL 也会被格式与具体语言绑死——两种主流路线都牺牲零样本迁移能力，没法规模化复用到几十种新语言。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用强化学习把 LLM 训练成「会利用上下文语言学知识」的元技能者：奖励信号不是某门具体语言翻得准不准，而是鼓励模型在见到新语料时正确调用 in-context 规则；相对持续预训练基线强调泛化，相对 grammar-book ICL 基线放弃死记硬背。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>元技能被 RL 抬起来后，对单门低资源语言在域内测试集上的峰值翻译质量反而被压死——它刻意不「记住」具体语言，等于放弃了在固定测试集上死刷分的捷径。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 FLORES 等多语言基准的「完全未见语言」零样本翻译切片上，显著超过持续预训练与 grammar-book ICL 基线，并展现跨语种可迁移的元能力。</div>
+      <div class="row"><span class="author">🏢 团队：</span>英国 University of Edinburgh（School of Informatics）与瑞士 University of Zurich 合作；一作 Hanxu Hu，通讯 Rico Sennrich（爱丁堡机器学习教授，机器翻译领域资深作者），合作含 Pinzhen Chen（爱丁堡）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="RREDCoT: Segment-Level Reward Redistribution for Reasoning Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.06475 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.06475" target="_blank">RREDCoT: Segment-Level Reward Redistribution for Reasoning Models</a></h3>
+    <p style="color:#ccc;">推理型语言模型普遍用 GRPO/PPO 类算法做 CoT 强化学习，但答案只有 CoT 写完才能验证，奖励被压到 trajectory 末端一次性发放，等价于「延迟奖励」——Monte Carlo 估计高方差、稀疏信号，训练低效且容易塌到单一样式。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把 CoT 轨迹切成段，按段把终局奖励重分配回各段（segment-level reward redistribution），让中间推理步骤也吃到稠密信用；相对 GRPO 这种「整条 CoT 同奖励」的基线，缓解延迟奖励与信用分配稀疏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>稠密信号把训练效率顶起来后，凡是不符合「按段均匀/线性」贡献假设的 CoT 都被压死——比如关键推理突然出现在某一段、其余段都在铺垫时，重分配会人为稀释关键段信号，长 CoT 末端段仍可能回到稀疏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多套数学与代码推理基准上，相对 GRPO 等基线收敛更快、最终准确率更高，CoT 风格多样性也更稳。</div>
+      <div class="row"><span class="author">🏢 团队：</span>奥地利 ELLIS/IDSIA 与 JKU（Johannes Kepler University Linz）合作；一作 Mykyta Ielanskyi，通讯 Sepp Hochreiter（JKU 教授，LSTM 作者之一），合作含 Lukas Aichberger、Kajetan Schweighofer（JKU AI 实验室）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="mvanhorn/last30days-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></h3>
+    <p>定位:为 AI agent(如 Claude Code、Cursor)设计的「研究类 skill」,在 30 天时间窗内并行抓取 Reddit、X/Twitter、YouTube、Hacker News、Polymarket 与通用 Web 页面,再交叉验证、产出带来源的 grounded 总结。技术栈以 Python 为主,把多源研究→交叉印证→可引用输出封装为可复用工作流。差异:不同于 Perplexity 等 RAG 问答工具,它不依赖预建知识库,而把研究过程本身打包为 agent 可调用的 skill;对比 NotebookLM,它偏外部实时信号而非私人语料。场景:产品调研、热点追踪、竞品舆情复盘。判断:agent-native 趋势下「研究即 skill / 流程即资产」正在取代一次性 prompt。</p>
+    <div class="source">⭐ 28,817 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="Panniantong/Agent-Reach" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">Panniantong/Agent-Reach</a></h3>
+    <p>定位:Agent-Reach 是面向 AI agent 的统一互联网读取/检索 CLI,把 Twitter/X、Reddit、YouTube、GitHub、B 站、小红书等海内外平台封装成一套命令,主打「零 API 费用」——主要靠浏览器侧抓取而非付费 key。技术栈以 Python + Playwright/requests 为主。差异:相比 HeyGen、CopilotKit 等偏生成/交互型 SDK,它解决「agent 信息获取」层,可视为 agent 的外设;相比 tweepy 等单平台包装,它用统一 read/search 抽象覆盖十余站点,跨平台一致性更佳。场景:个人/团队舆情监控、跨平台内容研究、AI 副驾驶抓取素材。判断:跨平台抓取+agent 调用在中文社区需求强,零费用策略在 2025-2026 年粘性高。</p>
+    <div class="source">⭐ 22,332 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="MemPalace/mempalace" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MemPalace/mempalace" target="_blank">MemPalace/mempalace</a></h3>
+    <p>定位:MemPalace 是面向 LLM 的开源记忆系统,主打「benchmark 验证过的」长记忆与上下文管理,声称在召回与 token 成本上优于 MemGPT、Letta、mem0 等同类项目。技术栈以 Python 为主,集成 LangChain、LlamaIndex、CrewAI 等主流 agent 框架,存储后端兼容 SQLite/Postgres/向量库。差异:相比 NotebookLM 这类封闭产品,MemPalace 把记忆做成可被任意 agent 调用的中间件;对比单纯塞进向量库,它引入「宫殿式」层级与遗忘曲线,更贴近人脑长时记忆模型。场景:个人 AI 助理、陪伴/客服 agent、长期项目助理。判断:context window 扩容受限的现实下,外挂记忆层将在 2026 年成为 agent 标配。</p>
+    <div class="source">⭐ 54,288 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="obra/superpowers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></h3>
+    <p>定位:superpowers 是「agentic skills 框架 + 软件开发方法论」双轨项目,为 AI agent 提供可加载的 skills 包(git workflow、TDD、code review 等)与配套工作流规范,让 agent 编程彻底脱离零散 prompt 拼凑的低质量输出。技术栈以 Shell 脚本 + Markdown 为主,刻意轻量,适配任意 agent runtime。差异:相比 CopilotKit、HeyGen 等偏 UI/生成层 SDK,它解决「agent 怎么干工程」的方法层问题;对比 LangChain 的 ReAct/AutoGPT 模板,它强调工程纪律——每个 skill 都有明确触发条件与失败回退机制。场景:Claude Code/Cursor/Aider 能力增强、团队方法论沉淀。判断:方法论与工程纪律将成为 agent 工具链的质量分水岭。</p>
+    <div class="source">⭐ 219,662 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="danielmiessler/Personal_AI_Infrastructure" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/danielmiessler/Personal_AI_Infrastructure" target="_blank">danielmiessler/Personal_AI_Infrastructure</a></h3>
+    <p>定位:Personal_AI_Infrastructure(PAI)由 Daniel Miessler 发起,把「个人 AI 助理」做成开源可自部署的基础设施——不止聊天界面,而是「知识接入 + Agent 编排 + 工具调用 + 输出工作流」的中台,覆盖研究、写作、编码、决策等高阶场景。技术栈以 TypeScript 为主,兼容本地 LLM(Ollama/vLLM)与云端模型。差异:相比 HeyGen、CopilotKit 等偏单一交互的 SDK,PAI 更像「AI 时代的自托管 Linux」——一次搭底座、长期收益;对比 Notion AI/ChatGPT Team 等 SaaS,它用「个人主权」换掉「平台依赖」。场景:独立开发者私人 AI 工作台、小团队共享助理。判断:本地化、可控化、可组合化是 2026 年个人 AI 栈的关键趋势。</p>
+    <div class="source">⭐ 14,963 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="microsoft/VibeVoice" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/microsoft/VibeVoice" target="_blank">microsoft/VibeVoice</a></h3>
+    <p>定位:VibeVoice 是微软开源的前沿语音 AI 项目,覆盖 TTS、语音克隆、实时对话与多说话人长音频生成,定位「开源版 ElevenLabs / Fish Speech 替代品」。技术栈以 Python 为主,模型权重与推理管线一并放出,强调本地可部署。差异:相比 HeyGen、Tortoise TTS、Coqui TTS 等侧重「短句高保真」的项目,它主打长上下文、多说话人对话、情感与风格控制,更贴近有声书/虚拟主播/播客场景;对比商业 TTS API,它用「开源+自托管」换掉「按字符计费」。判断:基础模型同质化下,语音作为「人格化入口」差异化价值上升,在 2026 年内容创作与陪伴赛道潜力高。</p>
+    <div class="source">⭐ 48,478 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-07 09:31</p>
+</footer>
+</div>
+</body>
+</html>
