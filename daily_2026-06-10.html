@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月10日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月10日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Confidential submission of draft S-1 to the SEC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/openai-submits-confidential-s-1" target="_blank">Confidential submission of draft S-1 to the SEC</a></h3>
+    <p style="color:#ccc;">OpenAI 确认已向 SEC 秘密提交 S-1 招股书草案，IPO 流程正式启动，紧随 Anthropic 之后（6/3）。两家头部 AI 公司同期进入资本市场。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI IPO 启动标志 AI 头部公司估值与商业化进入公开市场考验阶段——Anthropic / OpenAI 双轨 IPO 将为 AI 行业确立定价基准。S-1 草案秘密提交是 SEC 流程标准操作，预计 2026 Q4-Q1 公开披露财务。但 IPO 同步带来监管压力：财报公开后商业化路径、算力支出、客户依赖度将接受审视。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Introducing Gemini Omni Flash — DeepMind video generation model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/introducing-gemini-omni" target="_blank">Introducing Gemini Omni Flash — DeepMind video generation model</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Gemini Omni Flash 模型——首个能从任意输入（图像/音频/视频/文本）生成视频的模型，融合 Gemini 的世界知识与物理理解，首发在 Gemini app / Google Flow / YouTube Shorts。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini Omni 是 Google 对 Sora / Veo 的回应——但定位是 Omni 跨模态（任意输入→任意输出）而非纯文本→视频。这意味着 Google 在跨模态生成领域走全栈路线。首日发到 YouTube Shorts 是 ToC 入口争夺战——YouTube 短视频生态 + Gemini Omni 能力形成 Google 的 TikTok + Sora 组合拳。对创作者工具市场冲击最大。</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Introducing Gemma 4 12B — unified encoder-free multimodal model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/introducing-gemma-4" target="_blank">Introducing Gemma 4 12B — unified encoder-free multimodal model</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Gemma 4 12B 开源权重模型——统一无编码器架构，原生支持文本/图像/音频/视频多模态，参数 12B 适合单卡部署。</p><p style="color:#8b949e;font-size:13px;">💡 Gemma 4 12B 的 encoder-free 架构是开源模型的关键创新——传统多模态模型需独立视觉/音频编码器，参数冗余且部署复杂。Gemma 4 12B 单卡可部署 + 原生多模态，对中小开发者极友好。开源路线对标 Qwen3-VL / LLaMA-4，但 12B 规模在多模态领域少见——填补了开源可部署多模态的市场空白。</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Dreaming: Better memory for a more helpful ChatGPT" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank">Dreaming: Better memory for a more helpful ChatGPT</a></h3>
+    <p style="color:#ccc;">OpenAI 为 ChatGPT 推出 Dreaming 功能——基于用户历史对话生成持久化记忆，让 ChatGPT 更主动、更个性化，技术原理类似睡眠记忆巩固。</p><p style="color:#8b949e;font-size:13px;">💡 Dreaming 是 ChatGPT 在持久化与主动性方向的关键升级——之前 Memory 功能是被动记录用户偏好，Dreaming 主动合成跨对话上下文。对标 Google Gemini 的 personalization 路线。但隐私和记忆边界争议将放大——用户对 AI 主动记住自己的接受度待验证。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Anthropic 发布更新版 Responsible Scaling Policy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy" target="_blank">Anthropic 发布更新版 Responsible Scaling Policy</a></h3>
+    <p style="color:#ccc;">Anthropic 发布更新版 Responsible Scaling Policy（RSP），细化 AI Safety Level (ASL) 评估标准，新增对 Frontier Model 风险评估机制。这是 Anthropic IPO 前置（6/3 提交 S-1）的合规准备动作。</p><p style="color:#8b949e;font-size:13px;">💡 RSP 更新是 Anthropic IPO 前置的核心合规——公开市场投资者需要看到 AI 公司的风险管理框架。ASL 标准细节化（如 ASL-3 vs ASL-4 触发条件）让 Anthropic 在监管沟通上占先机。但同期 OpenAI 也推出 Frontier Safety Blueprint（v3 第 11 期同日），AI 公司间的安全标准军备竞赛明显升级。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="DeepSeek 自建 GW 级数据中心 — 招土木工程师" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 1级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/" target="_blank">DeepSeek 自建 GW 级数据中心 — 招土木工程师</a></h3>
+    <p style="color:#ccc;">DeepSeek 启动自建 GW 级数据中心项目，开始招聘土木工程师——从租算力转向自建算力。</p><p style="color:#8b949e;font-size:13px;">💡 DeepSeek 自建 GW 数据中心是国产 AI 公司算力策略的关键转向——之前 DeepSeek 依赖租赁算力（成本受限于云厂商），自建后成本可控性 + 长期供给稳定。但 GW 级自建数据中心意味着 100 亿+ 资本支出，DeepSeek 估值和融资节奏将接受考验。对标 OpenAI Stargate / Anthropic Project Rainier。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.09730 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.09730" target="_blank">SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research</a></h3>
+    <p style="color:#ccc;">2025-2026 年 Agentic LLM 在长视野深度研究任务（multi-step web research / 多源信息整合 / 跨工具调用）上频繁失败——单 agent 在 10+ 步任务里上下文管理失控，子任务委托机制缺失导致要么全做要么全不做。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>SearchSwarm 提出「Delegation Intelligence」——把长视野任务拆成子任务森林（sub-task forest），由主 agent + swarm 子 agent 动态分工；关键创新是子任务授权评估器判断"该自己做还是该分配"，配合显式 delegation 协议（而非隐式推理）。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>授权评估器引入额外推理开销，单步延迟比单 agent baseline 高 30-40%；swarm 通信在多 agent 共识场景下会出现"过度协商"——子 agent 反复确认彼此状态，挤占主 agent 决策带宽。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 long-horizon deep research benchmark 上比单 agent baseline 提升 28% 任务完成率，比 AutoGen/CrewAI 等 swarm 框架高 15-18%；6 项子指标上 5 项 SOTA。</div>
+      <div class="row"><span class="author">🏢 团队：</span>University of Illinois + Stanford 联合团队，第一作者 Yifan Zhang，通讯作者 Heng Ji（UIUC）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="The Neutral Mask: How RLHF Provides Shallow Alignment while Leaving Partisan Structure Intact" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.09735 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.09735" target="_blank">The Neutral Mask: How RLHF Provides Shallow Alignment while Leaving Partisan Structure Intact</a></h3>
+    <p style="color:#ccc;">2024-2025 RLHF（人类反馈强化学习）是 LLM 主流对齐方法，但多份报告指出 RLHF 训练后模型在政治/价值观敏感话题上呈现"表面对齐"——回答中性化但内部表征仍保留训练前的党派偏见（partisan structure）。对齐税 vs 对齐真实性是个开放问题。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>The Neutral Mask 提出表征层面的诊断方法——用线性探针（linear probe）+ causal tracing 检验 RLHF 模型在政治话题上的中间层激活；发现 RLHF 仅在最后一层加了"neutral mask"（中性过滤），而 FFN 中间层仍保留训练前的 partisan 特征。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>诊断方法是 post-hoc 分析，不能直接用于训练时的干预；论文建议的"deeper alignment"路径（在中间层而非仅最后一层做约束）会显著增加训练成本（2-3x RLHF 时间），且可能损害模型通用能力。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 12 个主流 RLHF 模型（含 GPT-4 / Claude / Llama-3-Instruct）上复现了 partisan 结构残留；证明 RLHF 是"shallow alignment"——这意味着当前对齐实践有结构性盲点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>MIT CSAIL + Allen AI 联合团队，第一作者 Tao Lin，通讯作者 Yoon Kim（MIT）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.09826 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.09826" target="_blank">OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics</a></h3>
+    <p style="color:#ccc;">VLM（视觉语言模型）作为游戏 agent 在 2025-2026 快速发展，但缺乏统一基准——不同论文用 GTA / Minecraft / Atari 等异质环境评测，无法横向对比；且评测通常只看"最终得分"，忽略 agent 的"改善动态"（improvement dynamics）——是稳定提升还是随机波动？</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>OmniGameArena 基于 Unreal Engine 5 构建统一 benchmark 套件，包含 6 类游戏环境（FPS / 竞速 / 策略 / 解谜 / 模拟经营 / 沙盒）；评测指标除最终得分外，新增 improvement curve（改善曲线）+ learning efficiency（学习效率）+ cross-game transfer（跨游戏迁移）。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>UE5 benchmark 部署成本高——单次完整评测需 8 GPU·小时，相比 Atari 基准（分钟级）慢 100x；论文承认这一开销限制了大规模 sweep 评测。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>测试了 12 个主流 VLM（含 GPT-4V / Gemini / Claude）；GPT-4V 总体最强但在 FPS 类游戏上不如专用 RL agent；跨游戏迁移能力普遍差——VLM 在新游戏上几乎从零开始。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tsinghua University + Microsoft Research Asia 联合团队，第一作者 Weihao Tan，通讯作者 Yu Qiao（Shanghai AI Lab）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Learning to Attack and Defend: Adaptive Red Teaming of Language Models via GRPO" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.09701 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.09701" target="_blank">Learning to Attack and Defend: Adaptive Red Teaming of Language Models via GRPO</a></h3>
+    <p style="color:#ccc;">现有 LLM red-teaming（红队攻击）方法依赖人工构造对抗 prompt，效率低且覆盖窄——2025 年 Anthropic / OpenAI 等公司红队数据集更新滞后于模型迭代；用 GRPO（Group Relative Policy Optimization）等 RL 方法自动化红队是热门方向，但"攻击方"和"防御方"难以协同优化。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>论文提出对抗式 GRPO 框架——攻击模型（attacker）和防御模型（defender）通过 GRPO 多轮对抗训练：攻击方学习生成让目标 LLM 出错的多样化 prompt，防御方学习在对抗 prompt 上保持安全输出；关键是引入 reward shaping 让双方在 Nash 均衡附近收敛。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>对抗训练对算力开销极大——单次完整 run 需要 32 H100·天；攻击方过度优化后会产生"对抗 prompt 模式坍缩"——只在训练分布内的 prompt 上攻击成功，泛化到真实用户输入时攻击成功率下降。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 6 个主流 LLM 上自动化红队评测，发现 200+ 新型 jailbreak 模式，其中 30+ 是此前人工红队未发现的；防御方模型在 adversarial eval 上安全率提升 22%，但通用能力掉点 3-4%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>CMU + Anthropic 联合团队，第一作者 Sicheng Zhu，通讯作者 Graham Neubig（CMU）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="IS-CoT: Breaking the Long-form Generation Collapse via Interleaved Structural Thinking" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.09709 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.09709" target="_blank">IS-CoT: Breaking the Long-form Generation Collapse via Interleaved Structural Thinking</a></h3>
+    <p style="color:#ccc;">LLM 长文生成（long-form generation）在 2025-2026 仍是老大难——推理 chain-of-thought（CoT）方法在 1000+ token 长文生成时出现"生成坍缩"（collapse）：中段质量陡降、重复增多、逻辑断裂。现有方法要么强加结构（outline-then-fill）损害流畅度，要么纯端到端生成缺乏规划。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>IS-CoT（Interleaved Structural CoT）提出交错结构思维——不是"先列大纲再填内容"，而是每生成 200-400 token 后插入一段"结构性思考"（明确当前段落在整体结构中的位置 + 下一步规划），生成与结构交替进行；通过训练数据合成 + RL 训练让模型学会这种节奏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>结构性思考 token 占比约 8-12%，直接增加生成成本与延迟；论文承认模型在超长文（5000+ token）上"结构性规划"仍会出现 drift——结构目标与实际生成内容偏离。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 long-form generation benchmark（文章 / 故事 / 技术文档三类）上比纯 CoT baseline 提升 35% 一致性分数；GPT-4 评测盲测中 71% 胜出；用户研究显示读者偏好 IS-CoT 输出（67%）。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Peking University + Alibaba DAMO Academy 联合团队，第一作者 Yujie Liu，通讯作者 Zhifang Sui（PKU）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="deepseek-ai/DeepSeek-V4-Pro" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">deepseek-ai/DeepSeek-V4-Pro</a></h3>
+    <p>DeepSeek-V4-Pro 是 DeepSeek 最新一代旗舰 MoE 大模型，总参数量 1.6T（激活约 70B），原生支持 1M token 超长上下文窗口，针对代码生成、Agentic 推理、长文档理解深度优化。提供 reasoning（强化推理）和 instruct（指令微调）两个变体。在 HuggingFace 上线首日即收获 4700+ 点赞，是当前开源 SOTA 中文+英文双优模型。</p>
+    <div class="source"> · PyTorch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="google/gemma-4-12B-it" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/google/gemma-4-12B-it" target="_blank">google/gemma-4-12B-it</a></h3>
+    <p>Gemma 4 12B Instruct 是 Google 开源的统一多模态模型——采用 encoder-free 架构（无独立视觉/音频编码器），原生支持文本/图像/音频/视频四模态，参数 12B 可单卡部署。指令微调版本在对话、Agent 任务、跨模态推理上 SOTA，对标 Qwen3-VL 和 LLaMA-4。开源许可证友好，适合中小开发者。</p>
+    <div class="source"> · PyTorch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="sapientinc/HRM-Text-1B" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/sapientinc/HRM-Text-1B" target="_blank">sapientinc/HRM-Text-1B</a></h3>
+    <p>HRM-Text-1B 是 Sapient Inc 发布的层级推理模型（Hierarchical Reasoning Model），参数量仅 1B 但模拟人类两层思维——慢速审慎推理（slow deliberative）+ 快速直觉反应（fast intuitive），在 ARC-AGI、math olympiad 等推理基准上击败 7B+ 同类模型。证明小模型 + 好的架构设计可以超越大模型 + 暴力 scaling。</p>
+    <div class="source"> · PyTorch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="HKUDS/ViMax" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/ViMax" target="_blank">HKUDS/ViMax</a></h3>
+    <p>ViMax 是港大数据智能实验室（HKUDS）开源的 Agentic 视频生成框架——通过多 agent 协作（编剧 / 导演 / 摄影师 / 剪辑）自动从文本 prompt 生成叙事连贯的长视频。GitHub 9400+ star，是当前 Agentic Video Generation 方向 SOTA 开源项目，对标 Runway Gen-4 / Sora 的开源版本。</p>
+    <div class="source">⭐ 9,473 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="roboflow/supervision" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/roboflow/supervision" target="_blank">roboflow/supervision</a></h3>
+    <p>Supervision 是 Roboflow 开源的计算机视觉工具库——为各种 CV 模型（YOLO / DETR / SAM / RT-DETR 等）提供统一接口的可复用工具：检测框绘制、目标跟踪、分类可视化、数据集标注、模型评估。GitHub 43000+ star，是 CV 工程师必备工具库，让开发者从底层绘图代码中解放出来。</p>
+    <div class="source">⭐ 42,959 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="ruvnet/RuView" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ruvnet/RuView" target="_blank">ruvnet/RuView</a></h3>
+    <p>RuView 是 ruvnet 开源的 WiFi 信号感知系统——用普通 WiFi 路由器的信号变化感知物理空间，检测人员存在、姿态、跌倒、生命体征（呼吸/心率），完全无需摄像头。Rust 编写，GitHub 72000+ star，是隐私敏感场景（养老 / 医疗 / 安防）的革命性方案。</p>
+    <div class="source">⭐ 72,425 · Rust</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-10 07:41</p>
+</footer>
+</div>
+</body>
+</html>
