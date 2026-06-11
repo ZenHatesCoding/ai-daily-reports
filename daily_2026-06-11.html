@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月11日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月11日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Claude Fable 5 and Claude Mythos 5 — Anthropic next generation intelligence" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/claude-fable-5-and-claude-mythos-5" target="_blank">Claude Fable 5 and Claude Mythos 5 — Anthropic next generation intelligence</a></h3>
+    <p style="color:#ccc;">Anthropic 发布下一代旗舰模型 Claude Fable 5 + Claude Mythos 5，针对最难的知识工作和编程问题设计。这是 Anthropic 在提交 S-1（6/3）后第一次重大模型发布，向公开市场投资者展示技术实力。</p><p style="color:#8b949e;font-size:13px;">💡 Claude Fable 5 + Mythos 5 是 Anthropic 在 IPO 前的关键展示——前作 Claude Opus 4.8（5/28）和 Sonnet 系列定位 mid-range，新旗舰 Fable/Mythos 瞄准 GPT-5.5 / Gemini 3.5 顶级对手。但 The Verge 同日评测（媒体 4）发现 Fable 5 在基础生物学问题上过度谨慎——过度对齐税的典型表现。这意味着 Anthropic 在安全 vs 实用性上的取舍正成为讨论焦点。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="DiffusionGemma: 4x faster text generation — DeepMind 新扩散模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation" target="_blank">DiffusionGemma: 4x faster text generation — DeepMind 新扩散模型</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 DiffusionGemma ——基于扩散架构的文本生成模型，比自回归 baseline 快 4 倍。</p><p style="color:#8b949e;font-size:13px;">💡 DiffusionGemma 是 DeepMind 在文本生成范式上的关键探索——扩散范式（Diffusion Models）此前主要统治图像生成（DALL-E 3 / Stable Diffusion / Imagen），但因并行性 + 双向注意力机制难以迁移到文本。DeepMind 的方案是 4x 速度提升，配合 Gemma 4 12B 多模态定位，DiffusionGemma 可能成为 DeepMind 在实时生成场景的关键武器（直播字幕 / 实时翻译 / 流式对话）。</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Access OpenAI models and Codex through your Oracle cloud compute" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/openai-on-oracle-cloud" target="_blank">Access OpenAI models and Codex through your Oracle cloud compute</a></h3>
+    <p style="color:#ccc;">OpenAI 模型和 Codex 接入 Oracle Cloud Compute——企业客户可在 Oracle 云环境直接调用 OpenAI 服务。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 多云战略关键一步——之前主要绑定 Microsoft Azure（独占期 2019-2023），现在扩展到 Oracle、AWS（2024）。这意味着（1）企业客户有更多选择，（2）削弱 Microsoft 对 OpenAI 的独家控制，（3）OpenAI 在 IPO 前夕扩大企业 ARR 基础。Oracle 客户群（金融 / 政府 / 制造）正是 OpenAI 企业扩张的关键目标。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="How an astrophysicist uses Codex to help simulate black holes" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/using-codex-to-simulate-black-holes" target="_blank">How an astrophysicist uses Codex to help simulate black holes</a></h3>
+    <p style="color:#ccc;">OpenAI 报道天体物理学家用 Codex 模拟黑洞——Codex 作为科学计算工具的应用案例扩展。</p><p style="color:#8b949e;font-size:13px;">💡 Codex 模拟黑洞是 OpenAI 展示 Codex 价值的核心 PR——证明 Codex 不仅能写代码还能加速前沿科研（黑洞物理模拟需要海量数值计算）。这与 Anthropic 强调 Claude 是"知识工作工具"形成对比——OpenAI 在编程 + 科研双重定位。IPO 前夕这类案例可拉升 OpenAI 在专业开发者 + 科研用户中的认知。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="HiDream-O1-Image-1.5 文生图登顶全球第二 — 国产超越谷歌/英伟达" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/" target="_blank">HiDream-O1-Image-1.5 文生图登顶全球第二 — 国产超越谷歌/英伟达</a></h3>
+    <p style="color:#ccc;">国产文生图模型 HiDream-O1-Image-1.5 登顶全球第二，超越谷歌 Imagen 和英伟达 Picasso。</p><p style="color:#8b949e;font-size:13px;">💡 HiDream 是中国文生图模型首次进入全球前二，对标 Midjourney / DALL-E 3——背后是中国文生图团队从追赶（Stable Diffusion）到局部超越的转折点。技术路线可能采用了 Diffusion + Transformer 混合架构，配合高质量中文 prompt 理解。在 OpenAI Sora / Gemini Omni / Veo 的视频生成竞争之外，文生图仍是中国 AI 公司的差异化赛道。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="GPT-5.6 首批实测 — 精准狙击 Claude Mythos 5" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/" target="_blank">GPT-5.6 首批实测 — 精准狙击 Claude Mythos 5</a></h3>
+    <p style="color:#ccc;">OpenAI GPT-5.6 首批实测出炉，对标 Anthropic Claude Mythos 5。GPT-5.6 在编程 / 长上下文 / 工具调用三个维度对 Mythos 5 形成精准狙击。</p><p style="color:#8b949e;font-size:13px;">💡 GPT-5.6 的时机选择耐人寻味——在 Anthropic Claude Fable 5 + Mythos 5 发布次日（6/9 vs 6/10）由 OpenAI 通过媒体公布实测数据。这是 AI 头部公司"对标发布"策略的标准操作：对手发布 → 我也发布实测对标，保持媒体话语权。GPT-5.6 在编程 + 工具调用上的优势是 OpenAI 在 IPO 前夕的核心叙事——"OpenAI 仍是开发者首选 AI 平台"。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Pushing the Limits of LLM Tool Calling via Experiential Knowledge Integration and Activation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.10875 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.10875" target="_blank">Pushing the Limits of LLM Tool Calling via Experiential Knowledge Integration and Activation</a></h3>
+    <p style="color:#ccc;">2025-2026 LLM tool calling 框架在长视野 Agent 任务里频繁失败——工具调用的"经验知识"（哪个工具好用 / 哪个 API 易踩坑 / 哪个错误码常见）未结构化积累，每次新任务都要重新摸索。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出"Experiential Knowledge Integration"（经验知识集成）——从历史 Agent 执行轨迹中提炼工具调用经验知识（哪类工具适合哪类任务、哪些 prompt 模式有效），嵌入到 LLM 工具调用的激活层中；同时通过 Activation Steering 让模型在工具调用时主动检索相关经验。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>经验知识库需要持续更新——新增工具 / API 变更时旧经验可能误导；Activation Steering 引入额外推理延迟，单次工具调用延迟比 baseline 高 15-25%。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 ToolBench + 真实企业 API benchmark 上比 ReAct / Toolformer 提升 22% 工具调用成功率；新型未见过的工具上泛化能力提升 18%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Microsoft Research + Peking University 联合团队，第一作者 Wei Liu，通讯作者 Yansong Feng（PKU）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="The Shibboleth Effect: Auditing the Cross-Lingual Distributional Skew of Large Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.11082 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.11082" target="_blank">The Shibboleth Effect: Auditing the Cross-Lingual Distributional Skew of Large Language Models</a></h3>
+    <p style="color:#ccc;">LLM 在多语言任务上呈"英语霸权"——主流 benchmark 显示 GPT-4 / Claude 在非英语任务上准确率下降 20-40%，但根因不明：是训练数据分布偏英语，还是模型对低资源语种表征能力本身弱？</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>"Shibboleth Effect"提出跨语言分布偏差的审计方法——通过 controlled probing 检查 LLM 在不同语言下"语义等价输入"的表征是否真的一致；用 cross-lingual probing + causal intervention 定位表征偏差来源。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>审计方法不能直接修复偏差——论文定位问题但未给完整修复方案；建议的"训练数据再平衡"成本极高（需重新训练 LLM）。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>审计 12 个主流 LLM 跨语言偏差——平均 35% 的非英语 prompt 触发了英语"惯性"（即使语义上可以用本地语言完成）。Shibboleth 偏差与模型规模呈反比（越大越均衡），但绝对偏差仍显著。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Stanford University + ETH Zurich 联合团队，第一作者 Anna Chen，通讯作者 Tatsunori Yamamoto（Stanford NLP Group）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Modeling Complex Behaviors: Multi-Personality Composition and Dynamic Switching in Vision-Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.11074 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.11074" target="_blank">Modeling Complex Behaviors: Multi-Personality Composition and Dynamic Switching in Vision-Language Models</a></h3>
+    <p style="color:#ccc;">Vision-Language Models (VLM) 在"单角色一致行为"上表现好，但现实场景需要模型在不同上下文切换不同"人格 / 行为模式"（医生模式 vs 老师模式 vs 调试模式）。现有 VLM 切换是手工 prompt 工程，无法自动且持续。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出"Multi-Personality Composition and Dynamic Switching"——为 VLM 引入"personality slot"（人格槽），每个槽绑定一组行为参数；通过 dynamic router 根据当前输入上下文自动选择 / 混合多个 personality slot；训练数据用 GPT-4V 自动合成多角色对话对。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>多个 personality slot 同时激活时 GPU 显存占用线性增长（4 个 slot → 4x 显存）；dynamic router 在 ambiguous 输入（不属于任何已知人格）上决策不确定，需要 fallback 策略。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 multi-personality VLM benchmark 上比 baseline 提升 28% 行为一致性；在角色切换速度上 5x 快于手工 prompt 切换；用户研究显示"医生 + 老师"双角色 VLM 在医疗教育场景接受度 78%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tsinghua University + Microsoft Research Asia 联合团队，第一作者 Zhihong Chen，通讯作者 Jie Zhou（Tsinghua）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Beyond Uniform Token-Level Trust Region in LLM Reinforcement Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.10968 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.10968" target="_blank">Beyond Uniform Token-Level Trust Region in LLM Reinforcement Learning</a></h3>
+    <p style="color:#ccc;">LLM RL（PPO / GRPO / DPO 等）的 trust region（信任域）约束通常在 token 级别——限制每个 token 概率变化幅度。但在长视野任务里，token 级信任域过松或过紧都会导致训练不稳定：过松策略崩溃，过紧学不到新行为。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出"非均匀 token 级信任域"——不同 token 位置用不同 trust region 阈值，关键 token（决定推理走向的逻辑词）紧约束，常见 token（停用词 / 标点）松约束；通过 learned critic 预测每个 token 的"重要性"。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Critic 预测 token 重要性本身是 overhead——训练时间比标准 PPO 增加 35%；不同任务的关键 token 集合不同，迁移到新任务时需要重新训练 critic。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 math reasoning + code generation 两个 RL 任务上，比标准 PPO/GRPO 提升 18% 收敛速度 + 12% 最终性能；训练稳定性显著提升（reward 曲线方差减少 40%）。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tsinghua + Beijing Academy of AI (BAAI) 联合团队，第一作者 Jiawei Zhang，通讯作者 Yujia Qin（BAAI）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.11052 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.11052" target="_blank">Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It</a></h3>
+    <p style="color:#ccc;">Hybrid LLM（Transformer + 其他架构混合）在 CoT（Chain-of-Thought）微调后出现"Attention Amnesia"——长程推理能力退化，模型在中后段丢失对前文的注意力，导致 1000+ token 推理链条崩溃。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>诊断"Attention Amnesia"的根因——CoT 微调让模型"过度关注局部推理步骤"，训练目标让 short-range attention 增强但 long-range attention 衰减；提出 Long-Range Anchor Loss 作为正则项，强制模型在每个推理段保留对初始 query 的注意力。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Long-Range Anchor Loss 增加 20% 训练成本；论文承认这一方法对纯 Transformer 的 LLM 效果有限——主要解决 Hybrid 架构的特定问题。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 long-form reasoning benchmark（数学竞赛 + 长文档 QA）上恢复 Hybrid LLM 长程推理能力到接近非微调 baseline；推理链条 1000+ token 准确率从 32% 提升到 71%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Stanford University + MIT CSAIL 联合团队，第一作者 Yifei Wang，通讯作者 Diyi Yang（Stanford NLP）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="FareedKhan-dev/train-llm-from-scratch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank">FareedKhan-dev/train-llm-from-scratch</a></h3>
+    <p>从零训练 LLM 的开源教程项目——step-by-step 实现 GPT / Llama / Qwen 等架构，包含数据预处理 / 预训练 / 微调 / RLHF 全流程，配 Colab 一键运行。GitHub 5000+ star，是入门 LLM 训练的最佳实践项目。</p>
+    <div class="source">⭐ 5,240 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="activeloopai/hivemind" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/activeloopai/hivemind" target="_blank">activeloopai/hivemind</a></h3>
+    <p>Activeloop 推出的多 Agent 协作平台——"One brain for all your agents"，支持多个 LLM Agent 共享记忆 / 任务分发 / 协同推理。基于 Deep Lake 数据湖构建，专为 Multi-Agent 生产部署设计。</p>
+    <div class="source">⭐ 821 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="nvidia/LocateAnything-3B" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></h3>
+    <p>NVIDIA 发布的视觉定位模型——3B 参数版本原生支持 Referring Expression Segmentation（按文本描述定位并分割图像区域），对标 SAM2 + GroundingDINO 但更轻量。在 11 个视觉定位 benchmark 上 SOTA。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="Lifelong-Robot-Learning/LIBERO" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Lifelong-Robot-Learning/LIBERO" target="_blank">Lifelong-Robot-Learning/LIBERO</a></h3>
+    <p>LIBERO 是 Lifelong Robot Learning 实验室发布的机器人终身学习 benchmark——5 类任务（拾取 / 操作 / 推拉 / 排序）+ 多任务迁移评估，包含 100+ 操作场景，对标 RT-1 / RT-2 训练数据扩展。GitHub 1900+ star，是具身智能方向重要评测基准。</p>
+    <div class="source">⭐ 1,926 · Jupyter Notebook</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="nex-agi/Nex-N2-Pro" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/nex-agi/Nex-N2-Pro" target="_blank">nex-agi/Nex-N2-Pro</a></h3>
+    <p>Nex AGI 发布的推理 LLM——基于 Qwen3.5-MoE 架构，专攻数学 / 代码 / 逻辑推理，1B 激活参数但性能对标 70B dense 模型。在 AIME / MATH / Codeforces benchmark 上 SOTA。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="trpc-group/trpc-agent-go" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/trpc-group/trpc-agent-go" target="_blank">trpc-group/trpc-agent-go</a></h3>
+    <p>tRPC 团队推出的 Go 语言 Agent 框架——集成 tRPC（远程过程调用）+ MCP（Model Context Protocol）+ A2A（Agent-to-Agent）三大通信协议，目标是生产级 Agent 服务化部署。GitHub 1300+ star，是 Go 生态里少有的工业级 Agent 框架。</p>
+    <div class="source">⭐ 1,319 · Go</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-11 08:16</p>
+</footer>
+</div>
+</body>
+</html>
