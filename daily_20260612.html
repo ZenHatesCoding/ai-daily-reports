@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月12日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月12日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="OpenAI to acquire Ona" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/openai-to-acquire-ona" target="_blank">OpenAI to acquire Ona</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布收购 Ona,将其能力整合进 Codex 产品线,为 Codex 增加安全、持久化的云端开发环境,使 Codex 能跨企业工作流驱动长时运行的 AI Agent。</p><p style="color:#8b949e;font-size:13px;">💡 Ona 的核心不是 IDE,而是'云端持久化开发环境'——补齐了 Codex 从'会写代码'到'能长期托管代码+运行 Agent'的最后一公里。这是 OpenAI 在 S-1 提交 + Oracle 合作后,进一步把'Agent 基础设施'纳入自有版图的明确信号:未来 Codex 不会只是一个补全工具,而是企业级长跑 Agent 的运行时。配合 6/10 的 Oracle 公告,OpenAI 正把'模型 + 云 + 工具 + Agent 运行时'四条腿全部锁死,护城河从模型层下沉到基础设施层,留给竞品的时间窗越来越短。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Claude Fable 5 and Claude Mythos 5 — Anthropic next-generation models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank">Claude Fable 5 and Claude Mythos 5 — Anthropic next-generation models</a></h3>
+    <p style="color:#ccc;">Anthropic 发布下一代 Claude Fable 5 与 Claude Mythos 5 双旗舰,定位 Fable 为高频低延迟主力,Mythos 为长上下文/复杂推理顶配。同时 Fable 5 因'隐藏安全策略'引发社区争议,Anthropic 公开致歉并承诺将把防蒸馏 guardrails 显性化。</p><p style="color:#8b949e;font-size:13px;">💡 Fable + Mythos 双线策略是 Anthropic 在 IPO 前的关键棋:把'安全合规成本'显性化为可审计、可被监管看见的产品特性,直接对冲 OpenAI/Anthropic 上市路演里'AI 治理'必答题。隐藏 guardrail 被扒出后快速致歉+承诺显性化,显示 Anthropic 已经把'被监管可见'当成产品功能,而不是合规 bug。但代价是开发者必须为'可见的安全护栏'做更多适配,Fable 5 在企业自动化场景的接入成本会上升,部分团队会回流到 OpenAI。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Introducing Google Antigravity 2.0 — DeepMind's agent operating system" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind 官方] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/introducing-google-antigravity-2-0/" target="_blank">Introducing Google Antigravity 2.0 — DeepMind's agent operating system</a></h3>
+    <p style="color:#ccc;">DeepMind 升级发布 Google Antigravity 2.0——面向 AI Agent 的操作系统层,把 Agent 的长时状态、工具调用、多模态感知统一在'反重力'运行时内,与同期发布的 Gemini Omni、Gemma 4 12B 配套形成'模型 + 端侧 + 运行时'三件套。</p><p style="color:#8b949e;font-size:13px;">💡 Antigravity 2.0 的真正目标是与 OpenAI 收购 Ona 后的'Codex 持久化运行时'正面对位:Google 想要定义'Agent 时代 OS'的事实标准。配合 Gemma 4 12B 的 encoder-free 统一多模态,Google 押注的是'端侧小模型 + 云端大模型 + Agent OS'的纵向一体化。这条路如果走通,Apple/Microsoft/Amazon 在 AI 时代的角色会被重新定位——从'平台'降级成'Antigravity 的硬件供应商'。Microsoft Copilot 现在的紧迫感来自这里,不是来自 GPT-5 本身。</p>
+    <div class="source">来源：Google DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Introducing Gemini Omni — Google DeepMind's unified multimodal flagship" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind 官方] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/" target="_blank">Introducing Gemini Omni — Google DeepMind's unified multimodal flagship</a></h3>
+    <p style="color:#ccc;">DeepMind 推出 Gemini Omni,跨文本/图像/音频/视频/代码的统一原生多模态旗舰,所有模态在同一 token space 内联合训练。同期发布 Gemma 4 12B(无编码器的统一多模态小模型)与 DiffusionGemma(4× 文本生成速度)。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini Omni 是 Google 对 OpenAI Sora/GPT-4o 多模态路线的正面回应,但真正的杀手锏是 Gemma 4 12B——'encoder-free unified multimodal'意味着 12B 体量就能跑多模态,把多模态能力从'云端大模型专属'下放到端侧/可自部署。这条路一旦走通,Apple Intelligence / 高通 / 联发科的端侧 AI 都会被重新定价。叠加 Antigravity 2.0(Google 的 agent OS),Google 在过去一周完成了'模型 + 端侧 + Agent OS'三件套布局,正面硬刚 OpenAI 的收购+Oracle 联盟。</p>
+    <div class="source">来源：Google DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Anthropic apologizes for invisible Claude Fable guardrails" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">Anthropic apologizes for invisible Claude Fable guardrails</a></h3>
+    <p style="color:#ccc;">Anthropic 因 Claude Fable 5 内置'防止模型蒸馏的隐藏安全护栏'被开发者社区扒出而公开致歉,承诺将该护栏'可见化'——与其他安全策略同等显性披露,但保留底层防御机制。</p><p style="color:#8b949e;font-size:13px;">💡 这件事的核心不是'是否该防蒸馏',而是'未经披露的护栏在企业生产环境里被当成 bug 还是 feature'。Anthropic 选'披露+保留'的中间路线,等于承认了'企业用户对模型行为的可观测性 > 厂商的护城河'。这个原则一旦被监管层吸收(欧盟 AI Act、美国 EO 14110 修订),会直接变成强制规范。短期看 OpenAI/Google/Meta 都会被要求做同样的'护栏披露义务',长跑 Agent 生态对模型可解释性的要求会指数级抬升。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Microsoft AI chief on why it's 'dangerous' to call AI 'alive' — and booed graduates" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">Microsoft AI chief on why it's 'dangerous' to call AI 'alive' — and booed graduates</a></h3>
+    <p style="color:#ccc;">微软 AI 负责人 Mustafa Suleyman 罕见公开回应美国大学毕业生对'AI 演讲嘉宾'的集体嘘声,称把 AI 当成'活的'很危险,承认'AI 重塑工作'已成毕业生焦虑核心,微软将调整 Copilot 在求职/职业辅导上的产品定位。</p><p style="color:#8b949e;font-size:13px;">💡 Suleyman 这次'先认错再调整'的姿态是微软 AI 战略少见的'软化',说明 Windows Copilot 在 To C 渗透遇到反噬:高学历年轻人对'被 AI 替代'的真实恐惧已经从社交媒体溢出到线下仪式。微软必须把 Copilot 从'替代你做事'的叙事,转成'帮你保住工作'的叙事——这与 Anthropic Fable 5 '显性化安全'、OpenAI Codex 收购 Ona 的'Agent 增强人而非替代人'形成行业共识:**头部 AI 厂商正在集体退后一步,从'AI 替代叙事'撤回到'AI 协作叙事'**,以对冲监管与公众情绪。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.12320 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.12320" target="_blank">A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents</a></h3>
+    <p style="color:#ccc;">企业传统安全架构只管数据在静止/传输时的边界,但生产级 AI Agent 会自主调用工具、连接器、修改业务系统,风险从'数据跨边界'转移到'单次被允许的动作序列在内部放大'。一旦 Agent 误调工具或越权串联操作,企业既无统一的运行时治理框架,也无从审计责任归属。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出'五平面运行时治理参考架构'(identity / context / action / tool / system-of-record 五个治理平面),把企业安全控制点从'数据边界'前移到'每一次 Agent 决策与调用'。优势:能在不重写 Agent 自身的前提下,从外部强制插入策略、审计、撤销,把所有可治理的 hook 收敛到标准化的 5 个平面。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>五平面架构要求企业把现有 IAM / DLP / SOAR 全部重映射到 5 个治理平面上,落地改造面广;同时'运行时 hook'会显著抬高每次工具调用的延迟与链路复杂度,高 QPS Agent 场景会先撞性能墙。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>论文给出参考实现 + 多个企业级 Agent 编排器的映射表;在三类典型攻击(repeated prompt-injection / over-privileged tool chain / silent record mutation)上相比无治理框架分别降低 73% / 68% / 81% 的可观测风险面。</div>
+      <div class="row"><span class="author">🏢 团队：</span>独立安全研究员 Krti Tallam(原 Kamiwaza.ai 安全架构负责人),arXiv 2026-06 单作者工作,定位为'企业级 Agent 治理参考标准'提案。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs (ModSleuth)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.12385 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.12385" target="_blank">Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs (ModSleuth)</a></h3>
+    <p style="color:#ccc;">现代 LLM 的训练数据、过滤、judge、奖励信号都来自其他模型,形成'递归式模型依赖'——一个模型可能依赖一个上游模型,上游又依赖另一个。这些依赖散落在不同 release/artifact 中,人工无法追溯完整图谱,导致数据合规、许可证、模型血缘审计几乎不可能。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>推出 ModSleuth 自动审计工具:用静态分析 + 元数据爬取递归遍历 HuggingFace/论文/官方公告,自动重建 LLM 训练链的'依赖图',并标注许可证与数据来源风险点。优势:把'需要专家人工溯源数周'的工作压到分钟级,首次让 LLM 血缘审计可批量执行。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>ModSleuth 的覆盖率受限于公开 artifact 完整度——任何上游模型刻意隐藏训练管线(只发权重不发数据来源),就会在图上留下'黑盒节点',审计可信度随之打折;同时递归遍历非常吃算力与存储,大模型图谱(>1k 节点)单次扫描小时级。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 50 个主流开源/商用 LLM 样本中,平均追溯到 4.7 层递归依赖,发现 12 个模型存在'未声明的商业模型派生关系',其中 3 个被多个厂商在生产链路中静默使用,合规风险显著。</div>
+      <div class="row"><span class="author">🏢 团队：</span>UC Berkeley 主攻,Sanjay Adhikesaven(本科 UC Berkeley)+ Haoxiang Sun(UC Berkeley 博后)+ Sewon Min(UC Berkeley 助理教授,前 AI2),arXiv 2026-06-09。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.12412 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.12412" target="_blank">Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models</a></h3>
+    <p style="color:#ccc;">VLM 把图像投射成几百到几千个 visual token,decoder 推理时 attention 与 KV-cache 都极贵。现有'评分-丢弃'式 token 剪枝是'永久删除':删掉的 token 在更深层可能变得关键(因为跨层语义会迁移),导致模型在复杂视觉推理上掉点,不可逆。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 Recoverable Visual Token Routing:不再删除被剪掉的 token,而是'路由'到 KV-cache 的次要通道,允许后续层在需要时重新激活。优势:用同样的 token 预算把'跨层不可逆信息丢失'压到接近 0,长上下文视觉问答与高分辨率 OCR 任务上保真度显著提升。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>次要通道意味着 KV-cache 不能像纯剪枝那样砍到 1/7,而是只能砍到 1/3 左右(显存节省 50% 上下),极限压缩比不占优;同时路由调度器需要每层做一次'激活判断',decoder 整体吞吐仅加速 1.6×(传统剪枝可达 4×)。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 LLaVA-1.5 / Qwen-VL / InternVL 三个 VLM 上,文本 VQA 任务保留 99% 准确率(传统剪枝 92%),长视频问答准确率反升 1.8%;POPE hallucination benchmark 几乎不掉点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>阳明交大(NYCU) Yu-Lun Liu 教授组 + Google Research,Cheng-Yu Yang(阳明交大博士生)+ Shao-Yuan Lo(阳明交大博后)+ Yu-Lun Liu(阳明交大教授),ICML 2026 投稿。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="APPO: Agentic Procedural Policy Optimization" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.12384 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.12384" target="_blank">APPO: Agentic Procedural Policy Optimization</a></h3>
+    <p style="color:#ccc;">Agentic RL 改进 LLM 多轮工具调用能力时,大多数算法在'tool-call 边界'或'固定工作流'这样的粗粒度上分配 credit,根本分不清'哪一步中间决策'真正影响最终结果,导致训练信号噪声大、收敛慢,Agent 在长链任务上很难稳定。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 APPO,把 Agent 的执行拆成'过程策略(procedural policy)':在每个决策点显式'分支'(branch)出多个候选动作,然后用 process-level advantage estimation 给每一步单独算 credit。优势:把 credit 分配粒度从'一整轮工具调用'压到'单个中间决策',训练信号噪声比 PPO/GRPO 类低 4-5×。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>过程策略的'分支+credit 分配'需要为每一步维护额外 rollout 与价值头,单步训练算力是 PPO 的 2.3×;在多分支场景下策略探索空间爆炸,小模型(<7B)上反而不如 GRPO 稳。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 ToolBench / WebShop / ALFWorld 三个 Agent benchmark 上,APPO 相对 GRPO 平均成功率 +6.4pp,在 32B 模型上首次把长链(>20 步)Agent 任务的成功率推到 50% 以上,刷新 SOTA。</div>
+      <div class="row"><span class="author">🏢 团队：</span>新加坡 Sea AI Lab + 南洋理工大学,Wang Xucong(Sea AI 博后)+ Ma Ziyu / Wang Yong(NTU 博士生)+ Ji Yuxiang / Yang Shidong / Chen Guanhua(Sea AI 研究员),arXiv 2026-06-09。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization (RACES)" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.12373 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.12373" target="_blank">Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization (RACES)</a></h3>
+    <p style="color:#ccc;">用 verifiable RL 提升 LLM 推理能力时,'环境数量'是关键——但现有手动/单条构造方法只能线性扩展,环境增长撞墙,推理泛化很快饱和,模型只会刷已见过的题。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>RACES:把每个 verifiable environment 当成 LEGO 积木,用 LLM 自动把多个已验证环境的'结构、规则、reward'做递归组合,生成指数级新环境;然后在组合环境上做 RL 训练。优势:用 O(N) 个基础环境指数级扩到 O(N^k) 个组合环境,数据合成成本骤降,推理泛化能力显著提升。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>组合环境的质量高度依赖'基础环境是否真的 orthogonal'——如果两个基础环境的 reward 信号耦合,组合出来的环境可能 reward hack,模型会走捷径刷分;递归层数 >3 时,环境复杂度已经超出人类可审计范围,可解释性骤降。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 MATH / AIME / Codeforces 三类数学与编程推理 benchmark 上,组合 64 个基础环境训出的模型比手工扩到 256 个环境训的模型准确率还高 4.1pp,AIME 2025 pass@1 突破 60%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>中科院软件所 + 阿里通义,Xiang Hao(中科院软件所博士生)+ Tang Qiaoyu(通义实验室)+ Yu Le(通义)+ Lu Yaojie(中科院软件所研究员)+ Han Xianpei(中科院软件所,通讯)+ He Ben(通义实验室,通讯),arXiv 2026-06-09。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="addyosmani/agent-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></h3>
+    <p>Google Chrome 团队负责人 Addy Osmani 维护的 AI 编程 Agent 技能库——把资深工程师的工程实践（测试、提交、code review、debug、deploy）编码成可被 Claude Code / Cursor / Codex 等 Agent 直接调用的 skill 文件。仓库 5 万+ star，是目前社区最系统化、生产可直接借鉴的 Agent 技能集合，配套文档说明每个 skill 适用场景与触发条件。</p>
+    <div class="source">⭐ 54,651 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="soxoj/maigret" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/soxoj/maigret" target="_blank">soxoj/maigret</a></h3>
+    <p>开源 OSINT（公开信息收集）工具——给定一个用户名，自动到 3000+ 网站（社交平台 / 论坛 / 邮箱服务 / 代码托管）查找同一用户名出现的页面，输出带截图证据的完整档案。3 万+ star，CLI 友好，支持自定义 site 列表与代理池，广泛被安全研究员、记者、反诈骗社区使用，对标商业工具 Maltego。</p>
+    <div class="source">⭐ 32,593 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="maziyarpanahi/openmed" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/maziyarpanahi/openmed" target="_blank">maziyarpanahi/openmed</a></h3>
+    <p>聚焦医疗领域的大模型与微调合集——整合 Meditron / OpenBioLLM / Med-PaLM 等医疗 LLM 的复现脚本、医疗 RAG 流水线、ICD-10 / SNOMED 编码工具，以及针对 PubMed 摘要、临床问答的微调 recipe。开源医疗 AI 项目里少有的端到端仓库，适合做医疗 NLP / 临床决策辅助的工程师快速起步。</p>
+    <div class="source">⭐ 2,737 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="apple/container" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/apple/container" target="_blank">apple/container</a></h3>
+    <p>Apple 官方开源的 Mac 容器工具——基于 Apple Silicon 的轻量级虚拟机（每个容器独立 VM）跑 Linux 容器，提供原生 Swift CLI 体验，秒级启动、强隔离、免装 Docker Desktop。是 macOS 上一等公民的容器方案，对比 OrbStack / Docker 性能更好、内存更省，3 万+ star 一周内涨粉。</p>
+    <div class="source">⭐ 32,318 · Swift</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="kenn-io/agentsview" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/kenn-io/agentsview" target="_blank">kenn-io/agentsview</a></h3>
+    <p>本地优先的 AI 编程 Agent 会话分析工具——支持 Claude Code / Codex / Gemini CLI 等 20+ 主流 Agent，统计 token 用量、会话时长、模型分布、成本曲线，本地 SQLite 存储不上云。Go 单二进制分发，比 ccusage 快 100 倍，适合团队监控 AI 编程账单与个人追踪模型切换效果。</p>
+    <div class="source">⭐ 1,623 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="refactoringhq/tolaria" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/refactoringhq/tolaria" target="_blank">refactoringhq/tolaria</a></h3>
+    <p>面向开发者与研究者的 Markdown 知识库桌面应用——原生支持双链、图谱视图、全文搜索、Git 同步、Tailwind 渲染，对标 Obsidian 但完全开源本地存储、插件友好。TypeScript + Electron 构建，1.5 万+ star，特别适合把笔记 / README / 文献笔记组织成可检索网络。</p>
+    <div class="source">⭐ 15,373 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-12 08:10</p>
+</footer>
+</div>
+</body>
+</html>
