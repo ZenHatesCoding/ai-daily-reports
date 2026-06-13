@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月13日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月13日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Statement on the US government directive to suspend access to Fable 5 and Mythos 5" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy" target="_blank">Statement on the US government directive to suspend access to Fable 5 and Mythos 5</a></h3>
+    <p style="color:#ccc;">美国政府发布出口管制指令,要求暂停所有对 Claude Fable 5 与 Mythos 5 旗舰模型的访问权限。Anthropic 同步发布声明,确认已执行指令并暂停对外服务,转向评估豁免路径与替代部署方案。</p><p style="color:#8b949e;font-size:13px;">💡 Fable 5/Mythos 5 是 Anthropic 在 IPO 前夜最关键的产品资产(旗舰+合规叙事双锚),出口管制直击其商业化收入与路演故事。这是'AI 算力/模型即战略物资'叙事的标志性事件——继 GPU/HBM 出口管制之后,大模型本身首次被纳入同类监管工具箱。对 Anthropic 而言,短期是收入断崖 + 监管摩擦成本;长期会反向推动'主权模型'(主权云、本地化训练)成为新赛道,Anthropic 可能在欧盟/中东加速自建训练集群,把'被管制'转化为'被需要'。对 OpenAI/Google/DeepSeek 的影响更微妙——他们的国际客户会重新评估单一供应商风险,采购策略从'选最强模型'切到'选政治上最稳的模型'。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="OpenAI to acquire Ona — Codex 升级为企业级长跑 Agent 运行时" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/openai-to-acquire-ona" target="_blank">OpenAI to acquire Ona — Codex 升级为企业级长跑 Agent 运行时</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布收购 Ona,将其云端持久化开发环境整合进 Codex 产品线,使 Codex 能托管长时运行的企业级 AI Agent,跨工作流自动驱动代码改动与运维任务。</p><p style="color:#8b949e;font-size:13px;">💡 Ona 补齐了 Codex 从'会写代码'到'能托管代码 + 跑 Agent'的最后一公里,OpenAI 在 S-1 提交 + Oracle 合作后进一步把'Agent 基础设施'锁进自有版图。这与 Anthropic 把安全护栏显性化、DeepMind 推 Antigravity 2.0 Agent OS 同方向——三家头部厂商都意识到:模型层差异化窗口已收窄,真正的护城河在'Agent 运行时 + 工具链 + 治理'。留给第二梯队(Llama、Mistral、DeepSeek)的窗口可能只剩 6-9 个月。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="SpaceX SPCX 上市开盘 $150,马斯克跨入万亿富翁俱乐部" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/2026/06/13/spacex-spcx-ipo-opening-price-trillionaire" target="_blank">SpaceX SPCX 上市开盘 $150,马斯克跨入万亿富翁俱乐部</a></h3>
+    <p style="color:#ccc;">SpaceX 以代码 SPCX 登陆纳斯达克,IPO 定价 $135、开盘 $150(高出 11%),盘中一度冲到 $167,市值突破 $2 万亿成为美国第 6 大上市公司;只要股价守住 $138,马斯克即跨入'全球首位万亿富翁'行列。</p><p style="color:#8b949e;font-size:13px;">💡 SPCX 上市是 2026 年 AI 资本叙事的转折点:资本首次承认'AI 时代的基础设施公司'(火箭 + Starlink + Colossus 数据中心)的估值范式应与 OpenAI/Anthropic 等纯软件模型公司不同——SpaceX 同时拥有物理基础设施、订阅收入(SpaceX 卫星宽带)和 AI 训练资源(Grok 用 Colossus)。马斯克的'万亿富翁'不只是个人财富数字,而是市场为'AI + 物理基础设施一体化'给出了定价。这会直接重估所有同时拥有算力 + 物理资产的混合玩家,包括 NVIDIA(已被视为'电力公司'而非'芯片公司')、Oracle、CoreWeave、Lambda。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Introducing Gemini Omni — DeepMind 全模态大一统模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind 官方] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/introducing-google-deepmind-gemini-omni/" target="_blank">Introducing Gemini Omni — DeepMind 全模态大一统模型</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Gemini Omni,把文本/图像/音频/视频/代码统一在单一多模态架构下,支持任意模态之间的实时生成与转换,并在 Gemini Live 3.5 多语言翻译等场景落地。</p><p style="color:#8b949e;font-size:13px;">💡 Omni 不是又一个大模型发布,而是'多模态大一统架构'的事实标准——不再区分 encoder-free/encoder-based/text-only,统一一个端到端模型吃所有模态。这与同期 Gemma 4 12B(端侧 encoder-free)形成'云端大一统 + 端侧精简'的纵深布局。真正的对手是 OpenAI 收购 Ona 后的 Agent 闭环(模型+工具+运行时)和 Anthropic 的合规叙事(护栏+双旗舰)——Google 选择用'模态广度'对位'Agent 深度'和'合规高度',三条路线第一次清晰分叉。</p>
+    <div class="source">来源：Google DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="SpaceX Colossus 1 数据中心因延迟问题向 Anthropic/Google 出租算力" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en</div>
+    <h3><a href="https://www.theverge.com/2026/06/13/spacex-colossus-1-rental-anthropic-google" target="_blank">SpaceX Colossus 1 数据中心因延迟问题向 Anthropic/Google 出租算力</a></h3>
+    <p style="color:#ccc;">Bloomberg 援引消息人士称,SpaceX 因 Memphis Colossus 1 与其他两个数据中心间出现延迟与硬件差异问题,把容量出租给 Anthropic(年付 $150 亿)与 Google(月付 $9.2 亿),用于跑 Grok 训练/推理。</p><p style="color:#8b949e;font-size:13px;">💡 Colossus 1 是 SpaceX 押注'AI 时代火箭公司'的核心资产,这次'出租给对手'说明:即使物理基础设施公司,在 AI 训练任务面前仍然遇到'集群内 latency 不达标'的硬约束。Anthropic 一年 $150 亿、Google 一月 $9.2 亿(年化 $110 亿)的对价,把'AI 算力即战略物资'的市场价格再次拉高一档——这与 6/12 Anthropic Fable/Mythos 出口管制形成对照:管制让算力变稀缺、稀缺让价格暴涨、价格暴涨让自有算力方有底气涨价。下一代 Grok 训练窗口极可能部分跑在 Google/Anthropic 自有集群上,而不是 SpaceX 自家 Colossus。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Meshy 发布全球首个 3D AI Agent — 3D 创作迎来 ChatGPT 时刻" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/06/434317.html" target="_blank">Meshy 发布全球首个 3D AI Agent — 3D 创作迎来 ChatGPT 时刻</a></h3>
+    <p style="color:#ccc;">Meshy 发布全球首个面向 3D 创作的 AI Agent,从文本/图像直接生成可编辑的 3D 资产、贴图、骨骼绑定与动画,支持工业级 3D 工作流一键接入。</p><p style="color:#8b949e;font-size:13px;">💡 Meshy 把'3D 生成'从单帧模型输出拉到'完整生产管线'(建模 + 贴图 + 绑定 + 动画),这是生成式 3D 的'ChatGPT 时刻'——意味着 3D 资产生成的单位成本开始追平 2D 图像,游戏/影视/工业设计/电商展示的成本结构会重写。对 NVIDIA Omniverse、Adobe Substance、Unity Asset Store 来说,这是'开源生态入侵'的开始——Meshy 这种第三方模型可以在标准 3D 工作流中作为插件被任何 DCC 软件调用,绕过平台型公司的'模型-工具'绑定。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Recursive Agent Harnesses" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13643 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13643" target="_blank">Recursive Agent Harnesses</a></h3>
+    <p style="color:#ccc;">生产级编码 agent 要处理百万到四百万 token 的长上下文任务，但单次模型调用很难吃下这么大的工作负载；现有子代理方案缺少一个统一的命名和设计框架，业界难以横向比较与复用。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 Recursive Agent Harness (RAH)：父 agent 写出一段可执行脚本，按子任务粒度并行拉起带文件系统、代码执行、规划工具的子 agent harness，小子任务则直接用结构化函数调用。优势是 harness 级递归（不只是模型调用递归），并行度与上下文分片更细。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把"并行拉起子 harness"作为默认单元，代价是父 agent 编排复杂度升高、脚本调试链路变长，错误定位和小任务同步开销被放大；模型选择也受限于能稳定生成可执行脚本的强 backbone。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Oolong-Synthetic（199 条，13 个上下文长度桶，最高 4M token）上，固定 GPT-5 backbone 时，RAH 把 Codex 编码 agent 基线从 71.75% 拉到 81.36%；换更强的 Claude Sonnet 4.5 同样设计可到 89.77%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Anthropic 应用研究团队；一作 Elias Lumer，合作者 Sahil Sen、Kevin Paul、Vamse Kumar Subbiah，对应其 dynamic workflows 产线方向。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Influcoder: Distilling Decoders' Gradient Influence Rankings into an Encoder for Data Attribution" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13668 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13668" target="_blank">Influcoder: Distilling Decoders' Gradient Influence Rankings into an Encoder for Data Attribution</a></h3>
+    <p style="color:#ccc;">数据归因（Data Attribution）用影响函数能定位训练样本对模型行为的因果贡献，但计算和存储代价随数据规模爆炸，工业级 LLM 训练语料上几乎跑不动。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Influcoder 先用 decoder 跑全量梯度影响排序得到"教师"影响分数，再把样本级影响排名蒸馏进一个轻量 encoder；查询时只跑 encoder 一次前向即可估影响，优势是推理开销和数据存储压到极小。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把影响估计从"重做梯度"压成"encoder 单次前向"，代价是排序精度被蒸馏损失吃掉，跨模型族和跨任务泛化能力有限，训练/查询分布漂移时影响排名会偏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在数据归因任务上 Influcoder 速度比传统影响函数高数个量级且显存占用大幅下降，同时对毒性样本溯源等用例的影响排序与原方法相关性接近，仍能定位到引发负面行为的关键样本。</div>
+      <div class="row"><span class="author">🏢 团队：</span>法国 CRIL/Université de Lille/CNRS 团队；一作 Dimitri Kachler，通讯 Damien Sileo、Pascal Denis，属 CRIL 影响力函数与数据归因方向。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13572 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13572" target="_blank">ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages</a></h3>
+    <p style="color:#ccc;">英语中心的多模态大模型在医疗这类专业场景表现一般，到了印度农村的多语种、多模态问诊场景就基本失灵，母语患者很难获得可靠的 AI 辅助。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>ArogyaSutra 采用 actor-critic 多智能体框架，串起工具调用与双重记忆机制做步进式、可反思的医疗推理；配套 ArogyaBodha 数据集（8 个异构源、31 个身体系统、6 种影像模态、21 个临床域、含 7 种印度语言+英语）。优势是同时覆盖多语种和医学多模态的端到端推理。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把多语种 + 多模态 + actor-critic + 双重记忆 + 工具调用同时堆上去，代价是系统耦合度高、单条问诊延迟与 token 消耗明显高于单模型方案，临床安全护栏和评测标准也尚未在该框架上充分建立。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 7 种印度语言 + 英语的医疗多模态问答基准上，ArogyaSutra 相对英文中心 MLLM 全面提升准确率；消融实验显示 actor-critic、双重记忆、工具调用各组件均有独立贡献。</div>
+      <div class="row"><span class="author">🏢 团队：</span>印度 IIT Patna 自然语言处理实验室；一作 Tanmoy Kanti Halder，通讯 Sriparna Saha，合作者 Akash Ghosh、Subhadip Baidya、Arijit Roy。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13604 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13604" target="_blank">Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch</a></h3>
+    <p style="color:#ccc;">三方外卖派单需要在顾客送达质量、骑手利用率、商家拥堵之间持续权衡，但反馈信号延迟、噪声大、互相耦合，传统监督学习无法在线自适应这些运营目标。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在 DoorDash 已部署的派单系统里保留组合优化器不动，叠加一个门店级多智能体策略：它从离线日志学到一组"派发乘子"去微调优化器的质量-效率权衡点，并用共享价值函数 + Double Q + 保守正则化抑制分布外过估。优势是不破坏生产可行性约束就能在线调整目标权重。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>把学习范围压缩成"在现有派发优化器上加乘子"，换来了生产安全，却也把策略表达力锁在离散乘子这一薄层；延迟反馈+多 agent 价值共享在门店分布大幅漂移时仍有 OOD 风险。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 DoorDash 生产环境的 switchback 实验中，离线训练的策略在保证面向顾客的送达质量不退化的同时，提高了拼单率并压低骑手侧时间成本，验证了用世界反馈安全在线适配决策策略的可行路径。</div>
+      <div class="row"><span class="author">🏢 团队：</span>DoorDash 派单/运筹团队；一作 Haochen Wu，合作者 Yi Hou、Shiguang Xie，对应 ICML 2026 RLxF workshop 接收论文。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13603 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13603" target="_blank">Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning Models</a></h3>
+    <p style="color:#ccc;">推理模型生成的长 chain-of-thought 中，真正决定答案的往往只是一两个关键步，但模型仍然继续"写"，既烧 token，也让人无法判断哪些步骤是因果必要、哪些只是表演。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用"早退"衡量每一步对最终答案的因果重要性，定位到一个陡峭的 commitment boundary（承诺边界），过界后 CoT 变成不影响答案概率的 epiphenomenal 副现象；并用 attention probe 从中间隐状态线性解码出"已定型"信号，据此在该边界早退。优势是不改训练就能砍掉最多 ~55% 的 CoT 长度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>用 attention probe 做边界检测换取大幅省 token，代价是这套"承诺边界"只对被探查的模型族和任务分布成立，跨域泛化与早退阈值需要重新校准，而且 epiphenomenal 步骤对人类可读解释仍可能有用。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多个大推理模型和任务上，承诺边界后的步骤基本不改变答案概率；用 attention probe 触发早退后，CoT 长度平均最多压缩 55%，对最终性能几乎无影响。</div>
+      <div class="row"><span class="author">🏢 团队：</span>意大利 University of Trieste / Groningen / Milano-Bicocca 合作团队；一作 Daniel Scalena，通讯 Gabriele Sarti、Luca Bortolussi、Elisabetta Fersini、Malvina Nissim，跨校 NLP 与可解释 AI 实验室。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="addyosmani/agent-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></h3>
+    <p>项目提供一套面向 AI 编码 Agent 的工程化技能集合，覆盖代码评审、性能优化、测试与构建等常见工程场景。区别于网上散落的 prompt 模板，它把“工程最佳实践”封装成可被 Claude Code、Cursor、Copilot 等 Agent 直接调用的 skill，强调开箱即用与跨 Agent 兼容。核心优势在于门槛低、覆盖面广、由 Google Chrome 团队负责人 Addy Osmani 亲自维护，可信度高。适合希望让 AI 助手长期承担生产级编码任务的中高级工程师、工程团队负责人以及正在搭建 Agent 工作流的小型团队。</p>
+    <div class="source">⭐ 57,106 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="maziyarpanahi/openmed" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/maziyarpanahi/openmed" target="_blank">maziyarpanahi/openmed</a></h3>
+    <p>OpenMed 是一个面向医疗场景的开源 AI 模型库，聚焦医学命名实体识别、临床文本分类与医学问答等任务，模型基于 PubMed 与临床语料微调而成。与通用大语言模型相比，它专门针对医学术语、缩写与病历表述做了优化，体积小、可在单卡甚至 CPU 上本地部署，规避隐私合规风险。核心差异在于“专科化 + 离线可用”，免去调用云端 API 的顾虑。适合医院信息科、临床科研团队、医学 AI 创业公司以及需要在隐私敏感或断网环境下跑医学 NLP 的开发者。</p>
+    <div class="source">⭐ 3,250 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="LMCache/LMCache" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/LMCache/LMCache" target="_blank">LMCache/LMCache</a></h3>
+    <p>LMCache 是为大语言模型推理加速设计的 KV Cache 缓存层，通过跨请求、跨实例复用已计算的 KV 显存，显著降低首 token 延迟并提升整体吞吐量。区别于 vLLM、TGI 等推理框架自带的进程内缓存，它专注“跨实例共享”与“分层存储”（GPU/CPU/磁盘），可作为旁路插件无缝接入主流推理服务。核心优势是把 LLM 服务的“显存水库”做大做活，长上下文与多轮对话场景收益尤为明显。适合自建 LLM 在线服务的中大型团队、需要降本增效的推理平台运维者以及面向企业的高并发对话产品。</p>
+    <div class="source">⭐ 8,684 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="msitarzewski/agency-agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/msitarzewski/agency-agents" target="_blank">msitarzewski/agency-agents</a></h3>
+    <p>agency-agents 是一套“虚拟代理公司”模板集合，预定义了前端开发、社区运营、内容创作、QA 等十余个角色化 Agent，每个 Agent 都带有鲜明人设、流程脚本与作战手册，可直接挂到 Claude Code、Cursor 等 Agent 框架上运行。区别于 LangGraph、CrewAI 等通用多 Agent 框架，它强调“开箱即用的人设 + 流程”，使用者无需从零编排工作流即可获得一支数字团队。核心亮点是角色颗粒度细、可玩性强、上手成本低。适合想快速搭一支 AI 数字团队的产品经理、独立创业者、内容运营从业者以及做 Agent 演示的讲师与培训师。</p>
+    <div class="source">⭐ 112,542 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="karpathy/autoresearch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/karpathy/autoresearch" target="_blank">karpathy/autoresearch</a></h3>
+    <p>autoresearch 是 Andrej Karpathy 推出的自动化研究助手，专门在单块 GPU 上让 Agent 自主迭代 nanochat 训练实验，覆盖数据筛选、超参调优、日志分析与训练脚本改进。区别于昂贵的大规模 AutoML 或 Ray Tune 集群方案，它以“单卡 + 小模型 + 自主 agent 循环”为核心，把“Agent for Research”的范式门槛降到个人研究者也能跑的程度。核心亮点是极简、可复现、贴近真实训练闭环。适合想复现 Agent-for-Research 范式的 AI 爱好者、高校研究生、自建训练流水线的独立工程师，以及希望以低成本试验新训练技巧的初创团队。</p>
+    <div class="source">⭐ 86,440 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="NVIDIA/SkillSpector" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NVIDIA/SkillSpector" target="_blank">NVIDIA/SkillSpector</a></h3>
+    <p>SkillSpector 是 NVIDIA 开源的 Agent Skill 安全扫描器，专门审计 Agent 技能包中的提示注入、恶意命令、数据外泄、越权调用与可疑外连等风险点。区别于传统 SAST/DAST 工具，它理解 Agent skill 的语义结构与调用链，能识别“伪装成正常工具的危险行为”，这是通用扫描器难以覆盖的盲区。核心优势在于厂商背书强、对 Agent 生态适配深、可在 CI 中自动化扫描。适合运营企业级 Agent 平台的安全工程师、IT 治理与合规团队、需要审核第三方技能市场的平台方，以及关心供应链安全的独立 Agent 开发者。</p>
+    <div class="source">⭐ 3,669 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-13 14:22</p>
+</footer>
+</div>
+</body>
+</html>
