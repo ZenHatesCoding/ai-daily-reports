@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月14日 · 周日</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月14日 · 周日 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Amazon 安全研究推动白宫对 Anthropic Fable 5 禁令 — 独家内幕" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/2026/06/14/amazon-security-research-anthropic-fable-ban" target="_blank">Amazon 安全研究推动白宫对 Anthropic Fable 5 禁令 — 独家内幕</a></h3>
+    <p style="color:#ccc;">Bloomberg / Verge 披露:Amazon CEO Andy Jassy 在 6/12 出口管制指令生效前与白宫官员会面,提交 Amazon 内部安全研究,陈述 Anthropic Fable 5 模型的'双重用途'风险,直接推动 BIS 出口管制。Anthropic 同步切断 Fable 5/Mythos 5 全部访问。</p><p style="color:#8b949e;font-size:13px;">💡 Amazon 主动游说白宫封禁对手的旗舰模型——这是 AI 行业首次出现'头部厂商用监管工具打击商业对手'的标志性事件。AWS Bedrock 同时是 Anthropic Claude 的最大分销渠道之一,Amazon 既是合作伙伴又是推手,利益冲突极其微妙:它可能用监管切断 Anthropic 在美国市场的供应,同时保住 Claude 在 AWS 上的存量收入。对 Anthropic 而言,'被最亲密的云分销商背刺'比政府管制更棘手——'Fable 5 被禁'的反噬会让所有 Anthropic 客户重新评估'合作稳定性'。Anthropic 必须加快'主权模型'(欧盟/中东自建训练集群)以减少对美国监管/云生态的依赖。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Anthropic 切断 Fable 5 / Mythos 5 全部访问" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/2026/06/13/anthropic-cuts-off-fable-mythos-access" target="_blank">Anthropic 切断 Fable 5 / Mythos 5 全部访问</a></h3>
+    <p style="color:#ccc;">在 6/12 BIS 出口管制指令发布后,Anthropic 在 24 小时内切断 Fable 5 与 Mythos 5 的全部 API 访问;既有企业客户被通知迁移到 Claude Opus 4.8 / Sonnet 系列。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 在 24 小时内完成'Fable 5/Mythos 5 → Claude Opus 4.8'的客户迁移,这种执行速度在企业级 AI 厂商里极其罕见——说明 Anthropic 早就为'旗舰被管制'做过迁移预案,把'监管可见'当成产品功能。这也意味着 IPO 路演中,Anthropic 可以告诉投资人:'我们的旗舰可以随时被关,但我们有不依赖该旗舰的替代收入流'。对监管机构而言,这个'快速切换'案例会成为未来 AI 出口管制范本——'管制一个模型不会让厂商死掉,但会让客户回流到更稳的供应链',监管的'有效性'被市场自证。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="OpenAI on Oracle Cloud — 算力供应扩展" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/openai-on-oracle-cloud" target="_blank">OpenAI on Oracle Cloud — 算力供应扩展</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布把更多训练与推理负载迁移到 Oracle OCI 基础设施,与 Microsoft Azure 形成'第二云'供应方,以应对 S-1 路演中'单点风险'监管提问。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 走出'Microsoft Azure 唯一云'的单点风险,这是 S-1 路演里监管和投资人的必答题。配合 6/12 收购 Ona(Agent 运行时)+ SpaceX Colossus 出租传闻,OpenAI 正在搭建'多云 + Agent 运行时 + 自有模型'的完整基础设施层,把供应链的不可控风险降到最低。对 Microsoft 来说,这是'OpenAI 不再独家依赖 Azure'的明确信号,接下来 Copilot 与 OpenAI 的关系可能从'独家合作'转为'多云分销',Microsoft 在 AI 资本故事里的权重会被市场重新评估。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="DeepMind Gemini Omni — 多模态大一统架构" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind 官方] 1级信源 · en</div>
+    <h3><a href="https://deepmind.google/blog/introducing-google-deepmind-gemini-omni/" target="_blank">DeepMind Gemini Omni — 多模态大一统架构</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Gemini Omni,把文本/图像/音频/视频/代码统一在单一多模态架构下,支持任意模态之间的实时生成与转换,并在 Gemini Live 3.5 多语言翻译等场景落地。</p><p style="color:#8b949e;font-size:13px;">💡 Gemini Omni 与 Anthropic 把安全护栏显性化、OpenAI 收购 Ona 后的 Agent 闭环形成第三条路线:用'模态广度'对位'合规高度'和'Agent 深度',三条路线第一次清晰分叉。配合 6/14 Apple iOS 27 端侧 AI、Gemma 4 12B(端侧 encoder-free)形成'云端大一统 + 端侧精简'的纵深布局。Google 的真正对手已经不是 OpenAI 一家——是'被监管禁掉的 Anthropic + 端侧化的 Apple + 收购 Ona 的 OpenAI'的联合战线,Google 押注'模态广度 + 端云协同'是这轮 AI 监管/资本重估中唯一能保持'不被任何单点风险打中'的策略。</p>
+    <div class="source">来源：Google DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="HuggingFace CEO 力荐,Bengio 团队押注:HRM 模型 $1500 训出" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 1级信源 · zh</div>
+    <h3><a href="https://www.qbitai.com/2026/06/435483.html" target="_blank">HuggingFace CEO 力荐,Bengio 团队押注:HRM 模型 $1500 训出</a></h3>
+    <p style="color:#ccc;">HuggingFace CEO Clem Delangue 与 Bengio 团队公开力荐一个新模型 HRM(Hierarchical Reasoning Model),号称 $1500 训练成本就达到与十亿参数模型相当的推理表现,在 HuggingFace 趋势榜冲上第一。</p><p style="color:#8b949e;font-size:13px;">💡 HRM 的真正信号不是模型本身,而是'小模型 + 极少算力'的范式回归——这是对当前'大厂用 $1B+ 训练前旗舰 + 算力即战略'叙事的根本质疑。如果 HRM 范式被验证:'训练成本'会成为比'模型大小'更被市场看重的指标,Bengio 等学术权威背书+HF CEO 力推形成'开源轻量 vs 闭源大模型'的舆论分水岭。对 OpenAI/Anthropic 的 IPO 估值是直接挑战——市场会问:'如果 $1500 就能达到你们 1% 性能,你们 100 亿训练投入的护城河在哪?'对 NVIDIA 是另一个打击:训练算力需求长期可能被结构性压缩。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Apple iOS 27 AI 照片编辑工具上线 — 端侧 Apple Intelligence 升级" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en</div>
+    <h3><a href="https://www.theverge.com/2026/06/13/apple-ios-27-ai-photo-editing-tools" target="_blank">Apple iOS 27 AI 照片编辑工具上线 — 端侧 Apple Intelligence 升级</a></h3>
+    <p style="color:#ccc;">Apple 推送 iOS 27,把 Apple Intelligence 全面整合到照片 App,支持一键消除路人/物体、AI 修图(类似 Adobe Firefly 风格迁移)、自动生成回忆相册。处理在端侧 Neural Engine 完成,云端 fallback 受限。</p><p style="color:#8b949e;font-size:13px;">💡 Apple 押注'端侧 AI'路线——把'什么算照片'的定义权牢牢握在 iOS 系统级,而不是像 Google/Adobe 那样给用户'生成 vs 真实'的二元选择。这是 6/12 Anthropic Fable 5 被禁的同一天,Apple 却在用端侧 AI 巩固'不受云端监管波及'的产品定位。对 Google/Samsung/中国手机厂商来说,'端侧 AI'是绕开美国出口管制的另一条路——硬件即主权,模型即应用,不再依赖云端订阅。这意味着 Apple Intelligence 的下一步可能是'非英语本地化大模型'(中文/阿拉伯语),让非美市场直接买断式销售而非云订阅。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Agents-K1: Towards Agent-native Knowledge Orchestration" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13669 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13669" target="_blank">Agents-K1: Towards Agent-native Knowledge Orchestration</a></h3>
+    <p style="color:#ccc;">现有 LLM 研究型 agent 只编排调用什么工具,却极少编排知识本身。文献系统把论文压缩成摘要、提一句引用就完事,把实体、断言、证据、机理和方法谱系全丢了,科研推理所需的细粒度知识结构长期缺位。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出端到端知识编排流水线 Agents-K1,核心是多模态解析器按五模块 schema 抽取实体、证据、引用、关系,用 4B 抽取模型加 GRPO 规则奖励,并以 graphanything 命令行工具统一网页搜索、多模态图检索、跨文档遍历。优势是把摘要级知识升级成 agent-native 全文档知识图。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求结构化与细粒度,schema 强约束了大量文献类型;同一流水线在非学术域(新闻、代码库)复用时需要重写 schema 与抽取规则,迁移成本被科研专属设计压死了泛化端。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在科学信息抽取、知识图谱构建、多跳科学推理上全面优于基线。处理了 246 万篇跨 6 个学科的论文,开源百万级 Scholar-KG 子集。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zongsheng Cao、Bihao Zhan、Jinxin Shi 等,聚焦 Agent + 知识图谱研究方向。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Operadic consistency: a label-free signal for compositional reasoning failures in LLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13649 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13649" target="_blank">Operadic consistency: a label-free signal for compositional reasoning failures in LLMs</a></h3>
+    <p style="color:#ccc;">推理时如何在没有标准答案的情况下识别 LLM 答错的多跳题?自一致性、语义熵、P(True) 等置信度信号全部依赖题内自采样与自评,碰到需要组合推理的问题就区分不开答错但很自信。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>引入操作一致性 OC,把直接答复合查询与按显式分解逐子问再合成两个答案对齐作为无标签信号。优势是从组合结构本身取证,无需真值标签即可定位组合推理崩盘。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为换取对组合失败的高灵敏度,OC 强依赖一个清晰可分解的子问题链;面对需要隐式分解或开放式发散推理的问题,显式分解步骤本身可能引入新噪声,简单短答场景的边际增益被组合诊断的定位压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>12 个 4B 到 671B 指令模型、4 个多跳 QA 数据集上,OC 与准确率的 Pearson r 落在 0.86 至 0.94,全数据集 r 不低于 0.85;选择性预测在 K=3 等成本下 AUARC 提升 0.086 至 0.096,AUROC 提升 0.092 至 0.164。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Nathaniel Bottman、Yinhong Liu、Kyle Richardson。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13578 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13578" target="_blank">LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories</a></h3>
+    <p style="color:#ccc;">AI 已能读论文、生假设、排实验,但在实验室台面上亲手操作仍然只能靠人。现有 VLA 主要在家庭、桌面演示上训练,没见过移液器、透明液体、固定 SOP 工作流,科学实验室场景长期缺数据、缺统一策略。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 LabVLA:数据侧用 RoboGenesis 仿真引擎把原子技能拼成完整 SOP 并筛选导出;模型侧先用 FAST 动作 token 预训练让 Qwen3-VL-4B-Instruct 学会动作语,再以流匹配后训练挂上 DiT 动作专家并做知识隔离。优势是打通协议到机器人端到端执行,首次覆盖真实实验台流程。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求多机器人本体兼容与流程化操作,仿真合成数据主导让模型对真实实验台的视觉细节(光斑、折射、液体挂壁)泛化偏弱;快速过滤流水线同时压死了非标仪器、长尾器械那一头的覆盖。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 LabUtopia 基准的同分布与分布外设置下,LabVLA 平均成功率均为所有评估基线中最高。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Baochang Ren、Xinjie Liu、Xi Chen、Yanshuo Li、Chenxi Li、Daqi Gao、Zeqin Su、Jintao Xing,聚焦机器人 + 多模态策略研究。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Reward Modeling for Multi-Agent Orchestration" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13598 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13598" target="_blank">Reward Modeling for Multi-Agent Orchestration</a></h3>
+    <p style="color:#ccc;">LLM 多智能体系统很依赖一个编排器,但编排器训练缺监督、贵且难。现有测试时扩展和编排训练方法普遍要为每个子 agent 做昂贵 rollout,标注稀缺把这条路堵死了。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 OrchRM:在编排层直接做自监督,用多智能体执行产生的中间产物构造赢/输对,喂给 Bradley-Terry 奖励模型。优势是跳过子 agent rollout,直接在编排层打分,训练与测试时扩展都便宜。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求编排层的训练效率与可扩展性,奖励信号高度依赖中间产物之间的相对胜负;一旦子 agent 输出物本身同质化、对比信号弱,编排层奖励就被低方差中间产物压死了细粒度区分端。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>编排器训练 token 用量最高降 10 倍,MAS 测试时扩展准确率最高提升 8%;在数学推理、网页 QA、多跳推理多域稳定迁移。</div>
+      <div class="row"><span class="author">🏢 团队：</span>King Yeung Tsang、Zihao Zhao、Vishal Venkataramani、Haizhou Shi、Zixuan Ke、Semih Yavuz、Shafiq Joty、Hao Wang,聚焦多智能体编排研究。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13680 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13680" target="_blank">Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</a></h3>
+    <p style="color:#ccc;">传统 RAG 用词法或语义相似度检索,但复杂推理里长得像和解法像经常错位:语义相似的题解法南辕北辙,表观不同却共享同一推理骨架,标准 RAG 因此经常递错示范。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 RA-RFT:用 gold-relevance 蒸馏训练一个按推理收益排序的检索器,再用检索到的类比示范配合可验证结果奖励对策略模型做强化微调。优势是检索从语义相似升级为推理同构,示范质量按解法骨架对齐。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求类比推理的高上限,检索器对 gold-relevance 标注与可验证奖励依赖很深;在缺乏清晰可验证答案或类比库稀疏的任务上,gold 蒸馏噪声被推理导向检索的强假设放大,通用域检索的简易性被牺牲。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在数学推理基准上一致优于标准 RFT:AIME 2025 average@32 在 Qwen3-1.7B 与 Qwen3-4B 上相对 GRPO 分别提升 7.1 与 2.8 分,正交于奖励设计与课程优化方向。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zilin Xiao、Qi Ma、Chun-cheng Jason Chen、Xintao Chen、Avinash Atreya、Hanjie Chen、Vicente Ordonez。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="kenn-io/agentsview" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/kenn-io/agentsview" target="_blank">kenn-io/agentsview</a></h3>
+    <p>agentsview 是一个面向 AI 编程助手的本地会话分析与统计工具，原生支持 Claude Code、Codex 等二十多款主流 coding agent。它把散落在各 agent 客户端里的对话记录、token 用量、花费成本统一汇集到本地数据库，提供跨工具的可视化仪表盘和时间线回溯，让用户清楚看到每个项目、每个会话到底跑了多少模型、调了多少次。与同类项目 ccusage 等命令行统计脚本相比，agentsview 用 Go 写成，提供完整的 Web 界面与本地数据库，统计速度号称快上百倍，并支持自动适配新出现的 agent 协议。适合每天重度依赖 AI 写代码、想精细控制成本与使用情况的独立开发者和工程团队。</p>
+    <div class="source">⭐ 2,367 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="andrewyng/aisuite" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/andrewyng/aisuite" target="_blank">andrewyng/aisuite</a></h3>
+    <p>aisuite 是一个极简的统一接口库，把 OpenAI、Anthropic、Google、AWS、Azure 等十几家生成式 AI 提供商的对话、嵌入、语音接口封装成同一套 Python API，开发者只需要改一行模型名字符串，就能把同一段代码从 GPT 切到 Claude 或 Gemini，无需重写调用逻辑。与 LangChain、LlamaIndex 等重型框架相比，aisuite 不绑定 agent 工作流、不强加检索增强范式，定位是纯胶水层，几十行代码就能读完核心源码，便于审计和按需裁剪。它适合需要在多模型间快速 A/B 对比、想避免被单一厂商锁定，又不想引入复杂框架的应用开发者和研究团队。</p>
+    <div class="source">⭐ 14,123 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="deepseek-ai/DeepSeek-R1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSeek-R1" target="_blank">deepseek-ai/DeepSeek-R1</a></h3>
+    <p>DeepSeek-R1 是 DeepSeek 推出的第一代推理模型系列，包含完全靠大规模强化学习训练、跳过监督微调步骤的 R1-Zero，以及在此基础上继续优化的 R1。它在数学竞赛、代码生成、逻辑推理等任务上达到与 OpenAI-o1 相当的水准，并把整套训练流程、模型权重和技术报告全部开源，允许商用。与同期的 o1、Claude 3.7 等闭源推理模型相比，R1 的差异化在于把"纯 RL 也能涌现推理能力"这条路完整跑通，并提供多个蒸馏小尺寸变体，让本地部署门槛大幅降低。适合做基础模型研究、需要私有化部署推理服务，以及在数学和代码任务上寻求高性价比替代方案的团队。</p>
+    <div class="source">⭐ 92,012 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="openai/whisper" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/openai/whisper" target="_blank">openai/whisper</a></h3>
+    <p>whisper 是 OpenAI 开源的多语言语音识别模型，基于 68 万小时多语种弱标注音频训练而成，支持近百种语言的转录与英译，能够处理口音、背景噪音和专业术语，比传统 ASR 鲁棒得多。它同时提供 Python 命令行工具和 PyTorch/TensorFlow 实现，模型分为 tiny/base/small/medium/large 五档，开发者可以按精度与算力灵活取舍。与 Kaldi、Vosk 等传统语音工具包相比，whisper 胜在开箱即用的多语种能力与零样本表现；与云端 STT API 相比，它完全本地运行，隐私友好。适合做会议记录、播客字幕、视频配音翻译、无障碍工具和语音助手后端的开发者。</p>
+    <div class="source">⭐ 102,651 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="hexgrad/kokoro" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/hexgrad/kokoro" target="_blank">hexgrad/kokoro</a></h3>
+    <p>kokoro 是由 hexgrad 发布的开源轻量级语音合成模型，参数量仅 8200 万，在 Hugging Face 上以 Kokoro-82M 的名字开放下载，可在普通 GPU 甚至 CPU 上实时推理。它提供多种英文音色，生成的语音自然度在小型 TTS 中名列前茅，并采用宽松许可证允许商用。与 ElevenLabs、OpenAI TTS 等云端服务相比，kokoro 完全离线、零调用费用、体积小到可以塞进边缘设备；与 Piper、Coqui 等同类开源 TTS 相比，它在音质与推理速度上做了更细致的折中。适合做本地有声书、应用内语音播报、辅助阅读工具以及游戏 NPC 配音的开发者。</p>
+    <div class="source">⭐ 7,456 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="Tongyi-MAI/Z-Image" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Tongyi-MAI/Z-Image" target="_blank">Tongyi-MAI/Z-Image</a></h3>
+    <p>Z-Image 是阿里通义实验室开源的图像生成模型系列，主模型参数量为 60 亿，同时发布了蒸馏版 Z-Image-Turbo，仅需 8 步函数求值即可完成推理，单张图像延迟进入亚秒级。它的两大卖点是照片级写实感与中英双语文字渲染——长期以来，文生图模型在画面中"正确写出文字"这件事上普遍翻车，Z-Image 把这条短板补到了商用可用水平。与 Stable Diffusion 3、FLUX 等主流文生图模型相比，Z-Image 体量更小、推理更快、文字渲染更稳；与同门的 Qwen-Image 相比，它更聚焦生成速度与真实感。适合设计师、营销团队、需要快速产出带文字海报和写实素材的应用开发者。</p>
+    <div class="source">⭐ 11,540 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-14 09:54</p>
+</footer>
+</div>
+</body>
+</html>
