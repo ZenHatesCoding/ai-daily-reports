@@ -128,7 +128,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
       <div class="row"><span class="tech">⚙️ 方法：</span>提出端到端知识编排流水线 Agents-K1,核心是多模态解析器按五模块 schema 抽取实体、证据、引用、关系,用 4B 抽取模型加 GRPO 规则奖励,并以 graphanything 命令行工具统一网页搜索、多模态图检索、跨文档遍历。优势是把摘要级知识升级成 agent-native 全文档知识图。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求结构化与细粒度,schema 强约束了大量文献类型;同一流水线在非学术域(新闻、代码库)复用时需要重写 schema 与抽取规则,迁移成本被科研专属设计压死了泛化端。</div>
       <div class="row"><span class="highlight">📊 效果：</span>在科学信息抽取、知识图谱构建、多跳科学推理上全面优于基线。处理了 246 万篇跨 6 个学科的论文,开源百万级 Scholar-KG 子集。</div>
-      <div class="row"><span class="author">🏢 团队：</span>Zongsheng Cao、Bihao Zhan、Jinxin Shi 等,聚焦 Agent + 知识图谱研究方向。</div>
+      <div class="row"><span class="author">🏢 团队：</span>上海人工智能实验室（Shanghai AI Laboratory）+ 华东师范大学（East China Normal University）+ 复旦大学（Fudan University）。一作 Zongsheng Cao，通讯 Bo Zhang（zhangbo@pjlab.org.cn）与 Bailei（bailei@pjlab.org.cn）。</div>
     </div>
   </div>
 </div>
@@ -143,7 +143,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
       <div class="row"><span class="tech">⚙️ 方法：</span>引入操作一致性 OC,把直接答复合查询与按显式分解逐子问再合成两个答案对齐作为无标签信号。优势是从组合结构本身取证,无需真值标签即可定位组合推理崩盘。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为换取对组合失败的高灵敏度,OC 强依赖一个清晰可分解的子问题链;面对需要隐式分解或开放式发散推理的问题,显式分解步骤本身可能引入新噪声,简单短答场景的边际增益被组合诊断的定位压死。</div>
       <div class="row"><span class="highlight">📊 效果：</span>12 个 4B 到 671B 指令模型、4 个多跳 QA 数据集上,OC 与准确率的 Pearson r 落在 0.86 至 0.94,全数据集 r 不低于 0.85;选择性预测在 K=3 等成本下 AUARC 提升 0.086 至 0.096,AUROC 提升 0.092 至 0.164。</div>
-      <div class="row"><span class="author">🏢 团队：</span>Nathaniel Bottman、Yinhong Liu、Kyle Richardson。</div>
+      <div class="row"><span class="author">🏢 团队：</span>剑桥大学（University of Cambridge）+ Allen Institute for Artificial Intelligence（AI2）。一作 Yinhong Liu（剑桥），通讯 Kyle Richardson（AI2）。</div>
     </div>
   </div>
 </div>
@@ -158,7 +158,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
       <div class="row"><span class="tech">⚙️ 方法：</span>提出 LabVLA:数据侧用 RoboGenesis 仿真引擎把原子技能拼成完整 SOP 并筛选导出;模型侧先用 FAST 动作 token 预训练让 Qwen3-VL-4B-Instruct 学会动作语,再以流匹配后训练挂上 DiT 动作专家并做知识隔离。优势是打通协议到机器人端到端执行,首次覆盖真实实验台流程。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求多机器人本体兼容与流程化操作,仿真合成数据主导让模型对真实实验台的视觉细节(光斑、折射、液体挂壁)泛化偏弱;快速过滤流水线同时压死了非标仪器、长尾器械那一头的覆盖。</div>
       <div class="row"><span class="highlight">📊 效果：</span>在 LabUtopia 基准的同分布与分布外设置下,LabVLA 平均成功率均为所有评估基线中最高。</div>
-      <div class="row"><span class="author">🏢 团队：</span>Baochang Ren、Xinjie Liu、Xi Chen、Yanshuo Li、Chenxi Li、Daqi Gao、Zeqin Su、Jintao Xing,聚焦机器人 + 多模态策略研究。</div>
+      <div class="row"><span class="author">🏢 团队：</span>浙江大学（Zhejiang University）+ 上海人工智能实验室（Shanghai AI Laboratory）+ 哈尔滨工业大学（Harbin Institute of Technology, HIT）。一作 / 通讯 Baochang Ren（北航博士，浙大系）。</div>
     </div>
   </div>
 </div>
@@ -173,7 +173,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
       <div class="row"><span class="tech">⚙️ 方法：</span>提出 OrchRM:在编排层直接做自监督,用多智能体执行产生的中间产物构造赢/输对,喂给 Bradley-Terry 奖励模型。优势是跳过子 agent rollout,直接在编排层打分,训练与测试时扩展都便宜。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求编排层的训练效率与可扩展性,奖励信号高度依赖中间产物之间的相对胜负;一旦子 agent 输出物本身同质化、对比信号弱,编排层奖励就被低方差中间产物压死了细粒度区分端。</div>
       <div class="row"><span class="highlight">📊 效果：</span>编排器训练 token 用量最高降 10 倍,MAS 测试时扩展准确率最高提升 8%;在数学推理、网页 QA、多跳推理多域稳定迁移。</div>
-      <div class="row"><span class="author">🏢 团队：</span>King Yeung Tsang、Zihao Zhao、Vishal Venkataramani、Haizhou Shi、Zixuan Ke、Semih Yavuz、Shafiq Joty、Hao Wang,聚焦多智能体编排研究。</div>
+      <div class="row"><span class="author">🏢 团队：</span>罗格斯大学（Rutgers University）+ Salesforce AI Research。一作 King Yeung Tsang，通讯：罗格斯 Hao Wang（hw488@cs.rutgers.edu）、Haizhou Shi；Salesforce Zixuan Ke、Shafiq Joty。</div>
     </div>
   </div>
 </div>
@@ -188,7 +188,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
       <div class="row"><span class="tech">⚙️ 方法：</span>提出 RA-RFT:用 gold-relevance 蒸馏训练一个按推理收益排序的检索器,再用检索到的类比示范配合可验证结果奖励对策略模型做强化微调。优势是检索从语义相似升级为推理同构,示范质量按解法骨架对齐。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求类比推理的高上限,检索器对 gold-relevance 标注与可验证奖励依赖很深;在缺乏清晰可验证答案或类比库稀疏的任务上,gold 蒸馏噪声被推理导向检索的强假设放大,通用域检索的简易性被牺牲。</div>
       <div class="row"><span class="highlight">📊 效果：</span>在数学推理基准上一致优于标准 RFT:AIME 2025 average@32 在 Qwen3-1.7B 与 Qwen3-4B 上相对 GRPO 分别提升 7.1 与 2.8 分,正交于奖励设计与课程优化方向。</div>
-      <div class="row"><span class="author">🏢 团队：</span>Zilin Xiao、Qi Ma、Chun-cheng Jason Chen、Xintao Chen、Avinash Atreya、Hanjie Chen、Vicente Ordonez。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Meta Superintelligence Labs（Meta 超级智能实验室）+ Rice 大学（Rice University）。一作 / 通讯 Zilin Xiao（zilin@meta.com，Meta），通讯导师 Vicente Ordonez（Rice 教授）。</div>
     </div>
   </div>
 </div>
@@ -261,7 +261,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <footer>
   <p>Generated by Hermes Agent · AI Tech Daily Report</p>
   <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
-  <p>2026-06-14 09:54</p>
+  <p>2026-06-14 10:53</p>
 </footer>
 </div>
 </body>
