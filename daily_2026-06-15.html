@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月15日 · 周一</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月15日 · 周一 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="OpenAI to acquire Ona" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/openai-to-acquire-ona" target="_blank">OpenAI to acquire Ona</a></h3>
+    <p style="color:#ccc;">OpenAI 宣布收购 Ona（Git 协作工具公司）。Ona 的核心能力是把代码仓库转成桌面 IDE 与远程开发环境，让开发者从浏览器或手机就能 push/PR/调试代码仓库。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 把 Ona 写进 Codex 体系——这意味着 Codex 的定位从'写代码'升级为'开发环境'：用户用自然语言起需求，Codex 直接 fork Ona 的桌面 IDE 在云端跑沙盒、装依赖、调试、生成 PR；开发链路从'代码生成器'延展到'代码托管 + 协作工作流'，与 GitHub Copilot Workspace / Cursor 拉开身位。Claude Code 靠 CLI 切入，OpenAI 选择走 IDE + 协作层，路径更重也更接近开发者日常。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Results from the first Anthropic Public Record" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://www.anthropic.com/news/anthropic-public-record" target="_blank">Results from the first Anthropic Public Record</a></h3>
+    <p style="color:#ccc;">Anthropic 发布首个'Public Record'公众态度调查：2025 年 11-12 月对 51,993 名美国成年人（覆盖全部 50 州）的全国代表性调查。48% 把'治愈疾病'列为 AI 三大期待之首，64% 担心 AI 替代工作（民主党 67% / 共和党 62%），71% 支持政府介入 AI 监管，但只有 15% 信任 AI 公司自己决定发展走向——比联邦政府（20%）还低。</p><p style="color:#8b949e;font-size:13px;">💡 调查里最反直觉的数字是'政府介入 71% / 信任 AI 公司 15%'——说明公众对'AI 公司自治'路线已经厌倦。Anthropic 用 Public Record + Economic Index + Interviewer 三件套在做的事，本质是把'监管合法性'外包给数据：未来无论 EU AI Act 还是美国国会立法，Anthropic 都可以指着 5.2 万人样本说'民意就是这样'。比起 OpenAI 用 EU Code of Practice 走'与监管合作'路线，Anthropic 走的是'用民调证明监管合理'，两者策略完全不同但都在抢监管话语权。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Supporting Europe's work in ensuring a trustworthy AI ecosystem" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en</div>
+    <h3><a href="https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem" target="_blank">Supporting Europe's work in ensuring a trustworthy AI ecosystem</a></h3>
+    <p style="color:#ccc;">OpenAI 正式表态支持欧盟 AI 生成内容透明度实践守则（EU Code of Practice on Transparency of AI-generated Content），承诺在 ChatGPT / DALL·E / Sora 等产品里继续推进内容溯源（provenance）工作。</p><p style="color:#8b949e;font-size:13px;">💡 在 EU AI Act 进入 enforcement 倒计时 + 美国联邦层面仍无统一立法的真空期，OpenAI 选择主动靠拢欧盟标准——这是把'监管趋同'当成出海筹码：一旦欧盟守则成为全球事实标准，提前签字的厂商就拿到了英国、加拿大、澳洲等'欧盟规则邻居'市场的合规先发优势。竞争对手 Anthropic 还在用 RSP / Claude Constitution 走'内部自治'路线，OpenAI 这步棋把'自治 vs 监管'切到了'与监管合作 vs 不合作'的二元博弈上。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Anthropic partners with TCS to deploy Claude across 56 countries" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · en</div>
+    <h3><a href="https://www.anthropic.com/news/tcs-anthropic-partnership" target="_blank">Anthropic partners with TCS to deploy Claude across 56 countries</a></h3>
+    <p style="color:#ccc;">Anthropic 与印度 IT 巨头 Tata Consultancy Services（TCS）达成多年合作：TCS 将在 56 个国家向自己的 5 万名员工部署 Claude，并为金融、医疗、公共部门等受监管行业客户构建 Claude 驱动的产品。TCS 同时加入 Claude Partner Network。</p><p style="color:#8b949e;font-size:13px;">💡 TCS 是全球员工数最多的 IT 服务公司之一（50w+），这一次拿下 56 国 5 万员工 + 受监管行业落地权，相当于 Anthropic 拿到了'印度 IT 出口引擎'作为分发渠道。在 OpenAI 仍在和印度本土 Reliance / Infosys 谈总代合作的当口，Anthropic 用一个签字就把'全球 IT 服务前 5'的渠道锁死了——Claude 在印度 / 中东 / 非洲的 B2B 渗透速度，会比硅谷直营快得多。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Amazon employees ask Seattle to put the brakes on new data centers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/945809/amazon-employees-seattle-data-center-moratorium" target="_blank">Amazon employees ask Seattle to put the brakes on new data centers</a></h3>
+    <p style="color:#ccc;">The Verge 披露：亚马逊员工联名向西雅图市议会请愿，要求暂停新建数据中心，理由是噪声、用水、电力压力以及对周边社区生活质量的冲击。这与上周 Jassy 游说白宫推动 AI 算力出口管制形成镜像——'自家后院反 AI 基建' vs '对外封锁对手算力'。</p><p style="color:#8b949e;font-size:13px;">💡 当'AI 基建围城'同时打到内外两端：对外，AWS / Amazon 推白宫阻止中国 / 中东拿到英伟达 Blackwell；对内，自己总部所在城市的员工开始反弹。这背后是 AI 算力扩张的物理外溢——变电站、冷却塔、柴油发电机对居民区的影响已不能靠 PR 化解。短期看不会停建（AI 资本支出是上市公司命脉），但会催生'噪声税 / 用水披露'类地方立法，反过来变成 OpenAI / Anthropic / xAI 选址博弈的新变量。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="实测小米最快 1T 大模型：吞吐量每秒 1000+ Tokens，Vibe Coding 七秒交付" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh 🔥</div>
+    <h3><a href="https://www.qbitai.com/2026/06/434225.html" target="_blank">实测小米最快 1T 大模型：吞吐量每秒 1000+ Tokens，Vibe Coding 七秒交付</a></h3>
+    <p style="color:#ccc;">量子位拿到小米 MiMo-V2.5-Pro-UltraSpeed（1T 参数级）测试资格：推理阶段吞吐量实测 600+ TPS，输出阶段飙到 3300+ TPS；用 Claude Code 接入后 Vibe Coding 任务 7 秒交付一个完整 Web 应用，对比 Claude Haiku + Low Effort 同样任务要 40+ 秒。</p><p style="color:#8b949e;font-size:13px;">💡 国产模型第一次在'TPS / 端侧延迟'维度把 Claude 甩开一个数量级——这不是参数大小问题（1T 跟 Sonnet 同一档），是推理栈（小米自研的 UltraSpeed 推测解码 + 端云协同调度）做出来的硬功夫。短期意义：国产端侧 Copilot / 国产手机助手会用它做'本地秒回'差异化卖点；中期意义：API 价格战再开一档，海外厂商被迫在'快 + 便宜'维度跟牌，Anthropic / OpenAI 的利润率要重新定价。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13662 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13662" target="_blank">EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery</a></h3>
+    <p style="color:#ccc;">当前 LLM 科研 agent 在不少基准上已能反超人类设计的方案,但真实科研流程里,瓶颈其实在'给 agent 装一个什么样的实验室':数据、算力、工具、接口、SOP 都很零散,模型再强也只能在贫瘠沙盒里反复低水平试错,自主科研长期卡在环境工程这一关。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 EurekAgent,把研究流程拆为研究计划、基线构建、实验迭代三大环境接口,并在 9 个领域把 Gemini-2.5-Pro 等 4 类模型跑成 9 套 SOTA。优势是把科研瓶颈从 agent workflow 推到 environment engineering 一侧,让'造好实验室'本身就是研究产出。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为把环境工程抬到一等公民,整条 pipeline 与具体领域的工具/SOP 强耦合;换到材料、生物等新领域仍要重新对接仪器接口与数据源,跨域可迁移性被领域特化压死,通用 agent workflow 的简洁性被牺牲。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 9 个科研子任务上,EurekAgent 用 Gemini-2.5-Pro、Claude-Sonnet-4-5、GPT-5、O3 等 4 类模型跑出 9 套 SOTA,并开源 EurekBench 基准与可复现环境代码。</div>
+      <div class="row"><span class="author">🏢 团队：</span>清华大学（Tsinghua University, KEG 知识工程组）+ 伦敦大学学院（UCL）。一作 Amy Xin，通讯 Juanzi Li。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13681 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13681" target="_blank">EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments</a></h3>
+    <p style="color:#ccc;">现有 LLM agent 评测几乎都假设世界静止:任务、工具、文档都不变。真实部署里系统升级、依赖改版、UI 翻新每时每刻都在发生,agent 一旦被旧记忆带偏就反复犯同样的错,如何衡量并提升'环境在变'下的鲁棒性,长期缺基准。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 EvoArena,把环境变化建模为渐进式更新序列,横跨 command shell、software stack、system upgrade 三类,配合记忆机制与诊断协议来追踪 LLM agent 内部记忆随环境的演化轨迹。优势是把'环境变了 agent 会怎样'变成可量化、可纵向追踪的指标。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到细粒度的记忆演化曲线,benchmark 紧绑 command shell / software stack / system upgrade 三大类环境栈;碰到新的环境类型(浏览器插件、嵌入式设备、跨云 SaaS)就要重新设计更新源与回放管线,生态多样性被评测可控性压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验覆盖 11 个 LLM agent 框架、4 类动态场景,系统揭示了'记忆陈旧是性能下滑主因'这一普遍现象,配套开源评测、诊断协议与排行榜,为动态环境鲁棒性提供可比较基线。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Salesforce AI Research + 伦敦大学学院（UCL）+ NUS + KAIST + NTU。一作 Jundong Xu，通讯 Bryan Hooi（bhooi@comp.nus.edu.sg）与 Zhiyuan Hu。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13673 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13673" target="_blank">SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning</a></h3>
+    <p style="color:#ccc;">空间推理——判断物体在哪、如何相关、如何在 3D 中运动——一直是 VLM 的硬骨头。Tool-augmented agent 想用专业感知模块补齐短板,但效果却被'怎么调这些工具'的动作接口卡死:接口粒度不对,工具再强也接不上开放式的空间问题。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 SpatialClaw,重新设计面向空间推理的 action interface:把工具调用从离散动作升级为更细粒度的连续化、带几何语义的指令通道,让 VLM 能像'手'一样直接操控 3D 场景。优势是把空间推理的天花板从'会不会选工具'挪到'接口本身能不能托住几何语义'。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求几何级细粒度,新 action interface 与具体 3D 引擎/感知栈强绑定;一旦换底层渲染器或感知模块,接口契约就要重写,通用 agent 框架的即插即用被空间专属接口压死,跨引擎迁移性被牺牲。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 3D 物体定位、关系推理、运动预测等多类空间基准上全面超越现有 VLM-agent 基线,同步开源新动作接口协议、训练流水线与多视角空间评测集,并发布完整复现包。</div>
+      <div class="row"><span class="author">🏢 团队：</span>NVIDIA Research + 延世大学（Yonsei University）+ KAIST + 伊利诺伊大学香槟分校（UIUC）。一作 Seokju Cho，通讯 Seungryong Kim 与 Min-Hung Chen（NVIDIA）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13657 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13657" target="_blank">Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation</a></h3>
+    <p style="color:#ccc;">On-policy distillation 把 on-policy 学生轨迹与密集教师监督拼成一道新菜,后训练圈纷纷上桌,但它究竟改动了模型的哪几根骨头,业界一直说不清:学生像在'小步快跑',却没人能讲清这些步子落在参数空间的哪里、为什么收敛。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>论文系统分析 OPD,得出两个核心发现:其一,更新是 coordinate-sparse 且偏向 FFN;其二,这些稀疏更新在参数空间形成清晰的几何结构。优势是把 OPD 从'玄学配方'变成有可解释结构的现象,为后续稀疏化、对齐、压缩提供几何地图。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为追求对参数几何的精细刻画,分析框架强依赖 on-policy 滚动与教师可达的设定;一旦换成 off-policy 数据、非自回归学生或非密集教师监督,稀疏-几何结论就要重做,通用 post-training 工具箱的灵活性被 OPD 专属结构压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多组语言与视觉语言模型对上验证:OPD 更新小而稀疏、集中于 FFN、且几何上高度结构化,据此可显著压缩更新量并保留性能,实证稀疏-几何假说并提出剪枝新视角。</div>
+      <div class="row"><span class="author">🏢 团队：</span>南京大学（LAMDA 组, Nanjing University）+ 字节跳动（ByteDance）。一作 Guo Yu，通讯 Han-Jia Ye（yehj@lamda.nju.edu.cn）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Operads for compositional reasoning in LLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.13634 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.13634" target="_blank">Operads for compositional reasoning in LLMs</a></h3>
+    <p style="color:#ccc;">'把复杂问题拆成子问题再合成'是 LLM 推理里最常用的招式,但它至今没有一个严谨的数学骨架:子问题怎么拼、能不能拼、拼错会出什么,大家都凭直觉。组合推理失败怎么定位、怎么预测,长期缺一个能站住脚的理论语言。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>论文引入 operad 这一数学结构——天然刻画'多入一出'操作及其复合——提出 questions operad Q,把子问题合成形式化,并据此分析 LLM 组合推理在什么条件下崩盘。优势是把组合推理从工程经验升级为可代数验证的数学对象。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到可复合的代数结构,问题必须能被拆成有限、良序的子问题链;面对开放式发散、需要隐式分解或多步非确定性合成的推理任务,operad 框架要先做离散化近似,直觉驱动的隐式分解那一头的灵活性被形式化压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>给出 questions operad 的形式定义与多组算例,展示 operad 不变量可定位组合失败模式,为'问题分解类提示工程'提供理论支点并系统刻画失败谱。</div>
+      <div class="row"><span class="author">🏢 团队：</span>艾伦人工智能研究院（Allen Institute for AI, AI2）+ 剑桥大学（University of Cambridge）。一作 Nathaniel Bottman，通讯 Kyle Richardson（AI2）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="danny-avila/LibreChat" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/danny-avila/LibreChat" target="_blank">danny-avila/LibreChat</a></h3>
+    <p>LibreChat 是开源的自托管 AI 对话平台,作为 ChatGPT 增强克隆,在统一界面里聚合 DeepSeek、Anthropic Claude、GPT-4o、Gemini、Groq、Azure、OpenRouter、Vertex AI 等十几家模型。它内置 Agents、MCP、Skills、工具函数、Artifacts、多模态视觉与语音模式,支持 RAG、消息分支编辑、代码解释器、Token 统计、提示词共享与多用户鉴权。技术亮点在于完全开源、Docker 一键部署,既适合个人本地替代 ChatGPT,也适合作为企业多模型协作中台,面向需要数据可控的开发者与团队。</p>
+    <div class="source">⭐ 39,144 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="ollama/ollama" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ollama/ollama" target="_blank">ollama/ollama</a></h3>
+    <p>Ollama 是让大语言模型在本地轻松跑起来的开源工具,基于 Go 编写,提供极简命令行与 REST API。它内置对 Kimi-K2.6、GLM-5.1、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等数十种开源模型的拉取、量化与运行,自动处理权重下载、显存分配与多 GPU 调度,Mac/Windows/Linux 一键安装。技术亮点在于极低上手门槛、统一的 Modelfile 配置、模型热切换以及 OpenAI 兼容 API,让本地 LLM 开发与离线推理像装普通软件一样简单,适合本地原型、隐私敏感场景以及无云端依赖的应用嵌入。</p>
+    <div class="source">⭐ 174,165 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="shiyu-coder/Kronos" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/shiyu-coder/Kronos" target="_blank">shiyu-coder/Kronos</a></h3>
+    <p>Kronos 是首个面向金融市场的开源基础大模型,专为处理 K 线 (candlestick) 时间序列而设计。它使用海量 A 股、加密货币、期货等历史行情进行大规模无监督预训练,通过分词器把连续 OHLCV 序列转化为离散 token,从而像自然语言模型一样对金融时间序列进行生成、预测与补全。技术亮点在于首次把金融序列视为一种语言的范式落地,支持零样本与少样本的价格走势预测、波动率建模与合成行情生成,并提供完整训练脚本与推理接口,适合量化研究员、交易员与金融科技团队作为策略与组合模型的预训练底座。</p>
+    <div class="source">⭐ 29,893 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="modelscope/FunASR" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/modelscope/FunASR" target="_blank">modelscope/FunASR</a></h3>
+    <p>FunASR 是阿里达摩院 ModelScope 开源的工业级语音识别工具包,基于 PyTorch,提供覆盖 50 多种语言的 ASR、说话人分离、语音端点检测、标点恢复、多格式音频加载与 170 倍实时推理,并能对接大语言模型实现语音理解与摘要。技术亮点在于预训练模型仓库丰富 (Paraformer、SenseVoice、SeACo-Paraformer 等),支持流式与非流式推理,pip 一键安装即可使用,大幅降低从研究到生产的门槛。它被广泛用于客服通话转写、会议字幕、智能硬件语音交互以及视频字幕本地化。</p>
+    <div class="source">⭐ 17,977 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots" target="_blank">Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots</a></h3>
+    <p>本项目是 Magnus Egerstedt 教授撰写的开源教材《Introduction to Autonomous Robots》,使用 LaTeX 排版,系统覆盖运动学、动力学、传感器与感知、定位建图、路径规划、机器学习、强化学习与多机器人协作等核心主题,并配有示例代码与图示,可作为本科高年级或研究生入门课程的配套教材。技术亮点在于把数学、算法与机器人实物三层知识串联,每章从直觉推导到代码实现,既可独立阅读也能配合实平台做实验,适合机器人专业学生、爱好者以及补足自主系统理论的工程师作为自学讲义。</p>
+    <div class="source">⭐ 2,697 · TeX</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="andrewyng/aisuite" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/andrewyng/aisuite" target="_blank">andrewyng/aisuite</a></h3>
+    <p>aisuite 是 Andrew Ng 团队开源的轻量级 Python 库,为多家生成式 AI 提供商提供统一的 OpenAI 风格接口。它把 OpenAI、Anthropic Claude、Gemini、AWS Bedrock、Mistral、Groq、Hugging Face、Ollama 等的对话与文本生成封装为相同的 chat.completions.create 风格 API,只需把 provider 写进模型字符串即可无缝切换。技术亮点在于零依赖代理层,通过环境变量管理 API Key,几行代码即可让既有 OpenAI 客户端支持多家模型,适合跨厂商模型对比、多模型路由与灾备方案。</p>
+    <div class="source">⭐ 14,375 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-15 08:03</p>
+</footer>
+</div>
+</body>
+</html>
