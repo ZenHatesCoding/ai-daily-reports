@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月16日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月16日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="Introducing the OpenAI Partner Network" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · en 🔥</div>
+    <h3><a href="https://openai.com/index/introducing-openai-partner-network" target="_blank">Introducing the OpenAI Partner Network</a></h3>
+    <p style="color:#ccc;">OpenAI 正式推出 Partner Network——把现有的系统集成商、独立软件供应商、咨询机构按行业（金融、医疗、公共部门、零售、能源等）织成一张统一渠道网络，承诺共享线索、共建解决方案、共担交付。这是 OpenAI 第一次正面回应 Anthropic 此前与 TCS / DXC 的'IT 服务巨头结盟'打法。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 看到 Anthropic 用 TCS（56 国 5 万员工）和 DXC（多年全球联盟）拿下受监管行业后，决定不再单点直营，而是织一张'行业 SI/ISV 联邦'：每家 SI 都把自己行业 know-how 喂给 OpenAI 生态，反过来 OpenAI 给 SI 优先技术通道和合规背书。短期内 OpenAI 的 enterprise pipeline 会从'巨头直销 + 长尾自助'切到'行业 SI + 自助'，Anthropic 必须加快 partner 招募速度才能保住 B2B 先发优势。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[HuggingFace / NVIDIA] 1级信源 · en 🔥</div>
+    <h3><a href="https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai" target="_blank">Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action</a></h3>
+    <p style="color:#ccc;">NVIDIA 在 HuggingFace 首发 Cosmos 3——首个开源'全模态物理 AI 基础模型'，基于 MoT backbone 把文本、图像、视频、音频、动作五种模态统一编码进同一架构，发布两个尺寸版本（Nano + 标准），并配套发布 Synthetic Data Generation 数据集供社区训练世界基础模型。</p><p style="color:#8b949e;font-size:13px;">💡 Cosmos 3 把'物理 AI'从机器人单点能力推进到'全模态世界模型'：以前要让机器人看图、做动作、听懂指令要拼三个模型（VLM + 动作预测 + ASR），现在一个 Omni 模型出所有模态。这对 robotics / 自动驾驶 / 智能空间开发者意味着训练 pipeline 短一截、推理延迟低一档；NVIDIA 通过开源 Cosmos 锁定'物理 AI 时代的 PyTorch 地位'，配合自家 GPU 形成生态闭环，竞争对手（Tesla Dojo / Waymo / Figure）想绕开 NVIDIA 算力栈越来越难。</p>
+    <div class="source">来源：HuggingFace / NVIDIA</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Seattle officially enacted an emergency one-year moratorium on new data centers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/948031/seattle-officially-enacted-an-emergency-one-year-moratorium-on-new-data-centers" target="_blank">Seattle officially enacted an emergency one-year moratorium on new data centers</a></h3>
+    <p style="color:#ccc;">The Verge 报道：西雅图市议会正式通过紧急法案，在全市范围内对新建数据中心实施为期一年的暂停令——这是 6/14 Amazon 员工请愿的直接延伸，也是美国主要科技城市第一次把 AI 算力扩张推到'官方管制'层面。</p><p style="color:#8b949e;font-size:13px;">💡 西雅图这一步是 AI 算力'社区反弹 → 立法落地'的样板：从员工请愿到市议会紧急立法只用了 5 天，说明居民对噪声 / 用水 / 电力的容忍度已到临界点。一年暂停令的影响远超 Seattle 本地：Microsoft（Redmond 总部）/ Amazon 总部所在的普吉特湾地区都会跟进类似立法，相当于把'美国西部 AI 算力枢纽'放进一年观察期。短期内 AI 公司会把新数据中心选址推到 Phoenix / Dallas / 北弗吉尼亚（已经数据中心密集），AI 资本支出结构可能从'西部集中'切到'分布式 + 异地复制'。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="All the news about Anthropic's new AI fight with the White House" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en 🔥</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown" target="_blank">All the news about Anthropic's new AI fight with the White House</a></h3>
+    <p style="color:#ccc;">The Verge 综合报道：白宫以'国家安全'为由要求 Anthropic 暂停 Fable 5 / Mythos 5 的访问权（6/12 公开声明），Anthropic 公开发声明反对，Amazon / 国防部部分官员公开站 Anthropic，形成'硅谷 vs 白宫'罕见对峙。Fable 5 据报导连基础生物学问题都拒绝回答——引发'安全护栏 vs 国家安全'的法理争论。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic Fable/Mythos 事件已经从'商业合同纠纷'升级为'AI 公司是否应被政府强制关停模型'的宪法级问题——一旦白宫禁令被法院支持，未来任何被认为'对国家安全敏感'的模型都可能以同样理由被叫停。Anthropic 用 Public Record（5.2 万人调查 71% 支持监管）当盾牌，赌的是'公开透明的 AI 公司比政府关停更值得信任'。这条线决定未来 AI 监管是走'司法审查 + 公司自治'还是'行政命令 + 强制下线'。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="Agent 时代，华为云开始重新造地基了" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 2级信源 · zh 🔥</div>
+    <h3><a href="https://www.qbitai.com/2026/06/435531.html" target="_blank">Agent 时代，华为云开始重新造地基了</a></h3>
+    <p style="color:#ccc;">量子位报道：华为云推出面向 Agent 时代的新一代企业级存储方案 OceanStor Pacific 系列，重新定义'AI 原生存储'——把向量数据库、模型权重缓存、Agent 状态持久化三类工作负载统一进一套存储底座，对标 AWS S3 + Pinecone + Redis 的拼凑式架构。</p><p style="color:#8b949e;font-size:13px;">💡 华为云这一步直接对应 OpenAI / Anthropic 同期在做的'Agent infra 收敛'：当 Agent 需要长上下文记忆（向量）+ 高速权重加载（缓存）+ 跨会话状态（持久化）三类完全不同 workload，AWS 时代靠 S3 + Pinecone + Redis 拼凑已经不够。华为把三者统一进一个存储底座，本质是抢'Agent 时代的存储标准'——和 NVIDIA Cosmos 抢'物理 AI 模型标准'、OpenAI Partner Network 抢'行业 SI 标准'是同一周内的连续三手，反映'AI 基建从单点工具切到垂直整合底座'是头部玩家共识。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="SpaceX reportedly rented out Colossus 1 AI data center after it ran into latency issues" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[The Verge] 2级信源 · en</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/949520/spacex-reportedly-rented-out-colossus-1-ai-data-center-after-it-ran-into-latency-issues" target="_blank">SpaceX reportedly rented out Colossus 1 AI data center after it ran into latency issues</a></h3>
+    <p style="color:#ccc;">The Verge 报道：SpaceX 的 Colossus 1（孟菲斯 10 万 H100 级超算集群）因为延迟问题不再为 xAI 独占，开始对外出租算力。Colossus 1 原本是马斯克为 xAI / Grok 训练的旗舰基础设施，现在被迫商业化——AI 算力从'自建独占'切到'算力交易'。</p><p style="color:#8b949e;font-size:13px;">💡 Colossus 1 转对外出租暴露了 AI 算力供需的一个隐藏矛盾：即便有 10 万 H100 级集群，'地理位置 × 推理延迟 × 训练-推理混部'三个变量任一不匹配都会让自建独占不划算。SpaceX 把闲置算力当 commodity 卖，本质是承认'AI 算力已经成为像电力一样的可交易资产'。对市场意味着：(1) AWS / Azure / GCP 的核心客户也开始在第三方超算上跑 workload，(2) 算力交易所（类似 CoreWeave / Lambda）会拿到更多锚定客户，(3) 马斯克集团内部资源分配从'xAI 优先'切到'现金回流优先'。</p>
+    <div class="source">来源：The Verge</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.14672 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.14672" target="_blank">Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows</a></h3>
+    <p style="color:#ccc;">大模型正在被当成 agent 的执行引擎,但所有分支结果最终还是被塞回一条单向的文本流:多路探索、各自检索、并行试解,最后都靠'字符串拼接+再 prefill'交给模型合并。结构化并行探索被迫拍扁成串行文本,先并行后串行的红利几乎全被这一步抹平。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 Direct Latent-Space Synthesis:让 LLM 在隐空间里直接读入各分支已经生成好的 latent 状态,跳过把分支再渲染回 token、再 prefill 的回路。跷跷板翘起的是'并行结构信息被原样保留'这一头——模型看到的是分支的中间表征,而不是被人类文本格式压扁后的代理,合并阶段终于不再替序列化买单。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为了吃下隐空间 latent,整个方案被绑死在某一个具体 LLM backbone 的隐层几何上:换基模、换词表、换分词器,这套 latent 合成接口就作废,跨模型的可移植性被自家 backbone 的特异性压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多分支 agent 工作流上,DLS 用同一 LLM 即可把端到端合成阶段的延迟和 token 开销打掉相当比例,且合并质量相对文本拼接基线更稳;具体数字与所测 backbone 在论文主表里给出。</div>
+      <div class="row"><span class="author">🏢 团队：</span>第一作者 Shikun Liu（联合发起人之一）；作者群体覆盖上海/北京/香港多所机构（包含 Mufei Li、Dongqi Fu、Pan Li 等），通讯待原文确认。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Neither Parallel Nor Sequential: How DiffusionGemma Actually Commits Tokens" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.14620 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.14620" target="_blank">Neither Parallel Nor Sequential: How DiffusionGemma Actually Commits Tokens</a></h3>
+    <p style="color:#ccc;">开源离散扩散语言模型一直被宣传成'并行、非自回归'的下一代解码器,但工业界真正在用的 checkpoint 在每一轮 unmask 时到底先落哪些位置、什么时候落、以多高置信度落,几乎没人去量;用户以为拿到了并行推理,实际拿到的是另一台 AR 机器,这种'宣传-行为'错位是当下扩散语言模型推广最危险的暗坑。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出一套轻量探针方法:hook 进 DiffusionGemma 26B 的 sampler accept 步,记录每个画布位置何时 commit、以何置信度 commit;用 686 条 prompt、6 种 regime 的探针 suite 做压力测试。翘起的是'显式测得'这一头——首次系统给出扩散语言模型真实的 commit 时序,撕开'纯并行'的市场话术。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为了把 commit 行为测得细,整套 hook、accept 记录和 regime 探针都是为 DiffusionGemma 26B 的 sampler 内部结构定制的:换别的扩散语言模型就要重写 hook 位置与 accept 协议,可复用的诊断框架被模型内部黑盒压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 6-regime、686 prompt 的探针下,DiffusionGemma 26B 的解码被证实既非纯并行也非 block-AR,而是处于中间地带;论文同时给出 confidence 时序、位置分布与若干 regime 下的边界,直接驳斥其并行声明。</div>
+      <div class="row"><span class="author">🏢 团队：</span>作者：Ali Asaria、Tony Salomone、Deep Gandhi（独立/小团队研究，机构信息以论文首页为准）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="Gaze Heads: How VLMs Look at What They Describe" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.14703 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.14703" target="_blank">Gaze Heads: How VLMs Look at What They Describe</a></h3>
+    <p style="color:#ccc;">视觉-语言模型描述图像时,究竟在看图里的哪一块、什么时候看,内部机制长期是黑盒;研究者只能看到最终文字,看不到'说这一句时眼睛落在画面哪一格'。这种内部不可观测性,让 VLM 的可解释性、可控编辑和故障归因都缺少一个最朴素的物理锚点。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在 VLM 的语言 backbone 注意力头里定位出'注视头 (gaze heads)':用连环画这种'叙事顺序按空间排开'的图像做受控 testbed,只需少量 forward pass 的相关度打分就能挑出那批头。翘起的是'极低开销+物理直觉'这一头——几遍前向就能圈出'描述某处时正盯某处'的注意力头,把不可见的对齐变成可指认的部件。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到'头部-图像区域'这种一对一的可读对应,整套定位严重依赖叙事顺序与图像空间排布一致的控制场景(如 comic strips):换成自然照片、视频或抽象图,空间-语义的对齐不再同构,方法的直观性就被场景特异性压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多种 VLM 上稳定找到一小撮 gaze heads,它们在描述某区域时注意力确实追踪到该图像块;论文给出 head 数量、跨模型复现率与若干可视化证据,展示这批头可被用来做局部编辑与失败归因。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Northeastern University（美国东北大学）。一作 Rohit Gandikota，通讯作者 David Bau。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.14691 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.14691" target="_blank">CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment</a></h3>
+    <p style="color:#ccc;">把可验证奖励的 RLVR 搬到多模态后,大家都在抢两件事:让推理 trace 覆盖到图,别让模型在图上幻觉;但一个被低估的暗病是'想的过程'和'最终答案'语义对不上——模型嘴上推理得头头是道,落笔给的答案却和推理里那句结论相反,这种 thinking-answer 错位在多模态 RLVR 里比纯文本更普遍、更难抓。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 CORA:在多模态 RLVR 里显式建模'推理-答案一致性'作为额外优化目标,用 consistency-oriented reasoning alignment 把这条一致性直接抬到与可验证 reward 同级的训练信号里。翘起的是'一致性'这一头——把'说的和给的必须自洽'从隐式偏好变成显式奖励,专门打击 thinking-answer 错位。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为精确度量并对齐 thinking-answer 一致性,框架需要稳定的 thought/answer 切分与多模态 reward 拆解:reward 信号被一致性判别器的设计空间绑死,一旦判别器和 backbone 的输出分布耦合,跨任务的可校准性就被自家一致性判别器压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多种多模态推理基准上,CORA 相对现有 RLVR 基线在一致性指标上取得显著提升,同时保持或提高准确率;论文给出 thinking-answer gap 的量化分析与若干边界 case。</div>
+      <div class="row"><span class="author">🏢 团队：</span>机构以原文为准（作者：Jiayue Cao、Zhicong Lu、Xuehan Sun、Wei Jia、Hongling Zheng、Changyuan Tian、Zichuan Lin、Wenqian Lv）。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.14694 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.14694" target="_blank">AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization</a></h3>
+    <p style="color:#ccc;">大推理模型默认是'读完再想':一次性拿到完整输入,在静态上下文里推完再答。但真实场景(音视频流、直播、传感器)信息是连续涌进来的,模型必须边读边想、边想边改、边改边答;现有 streaming reasoning 又多靠在固定轨迹上做监督模仿,适应性差,遇到分布外就崩。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 AdaSR + Hierarchical Relative Policy Optimization:把'读'和'想'分成层级策略,用相对策略优化(HRPO)在层级粒度上做在线适配,让模型学会在流还没读完时动态决定何时更新推理、何时落子输出。翘起的是'自适应'这一头——把'想'从一次性静态计算改成随流速动态调节的阀门,让模型在部分观测下也能边读边改边答。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为做到层级粒度的相对策略优化,训练信号被锁在'读-想'分层结构与相对优势估计的设计选择上:这套层级抽象一旦换任务类型(比如从视频流换成交互式对话)就得重做层级划分与 reward shaping,通用性被自定义层级压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多种 streaming reasoning 基准上,AdaSR 用 HRPO 相对静态'读完再想'和纯模仿式 streaming 基线取得稳定优势,在流速扰动与早答准确率上均给出提升;具体数字以论文主表为准。</div>
+      <div class="row"><span class="author">🏢 团队：</span>作者：Junlong Tong、Wenqi Xu、Yingqi Fan、Anhao Zhao、Xuan Lu、Yang Tan、Xiaoyu Shen（机构以论文首页为准）。</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="trycua/cua" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/trycua/cua" target="_blank">trycua/cua</a></h3>
+    <p>cua（Computer-Use Agents）是一套面向「电脑操控型 AI Agent」的开源基础设施。它提供跨 macOS、Linux、Windows 三大平台的虚拟桌面沙箱、Python/TypeScript SDK 以及标准化评测基准，让开发者可以训练、部署并评测能让 Agent 像真人一样点击屏幕、操作软件、跨应用完成任务的模型。技术上，cua 通过 Lume 等虚拟化层提供可快照、可复现的高保真操作系统环境，并集成计算机视觉、屏幕解析（grounding）与 GUI 操作链路。适用场景包括自动化办公、RPA 替代、软件测试 Agent、以及作为 OpenAI Operator、Anthropic Computer Use 等系统的开源复现底座，被研究者与产品团队广泛用于构建可上桌面的智能助手。</p>
+    <div class="source">⭐ 18,134 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="vllm-project/vllm" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/vllm-project/vllm" target="_blank">vllm-project/vllm</a></h3>
+    <p>vLLM 是目前最主流的开源大模型推理与 serving 引擎，专注于把 GPU 显存用满、把吞吐拉满。它的核心创新是 PagedAttention——借鉴操作系统虚拟内存的分页机制来管理 KV cache，使显存碎片大幅减少、batch 并发能力提升数倍。在此基础上，vLLM 提供了与 OpenAI 兼容的 HTTP 服务、流式输出、Continuous batching、Speculative decoding、Tensor/Pipeline/Expert 并行、张量量化（GPTQ/AWQ/FP8/INT4）以及多模态模型支持，号称是 HuggingFace 模型「开箱即用」的最高性能部署方案。广泛被企业用于生产环境替代昂贵闭源推理服务，支撑聊天机器人、代码助手、搜索增强生成（RAG）以及大规模在线推理平台，单卡 H100 即可服务数十路并发请求。</p>
+    <div class="source">⭐ 82,969 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="axolotl-ai-cloud/axolotl" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/axolotl-ai-cloud/axolotl" target="_blank">axolotl-ai-cloud/axolotl</a></h3>
+    <p>Axolotl 是社区最受欢迎的大模型微调（fine-tuning）框架之一，以 YAML 配置驱动、覆盖从单卡到多节点全栈训练流程。它原生支持 HuggingFace transformers、trl、PEFT/LoRA/QLoRA/DoRA 等高效参数微调方法，并集成 FSDP、DeepSpeed、Flash Attention 2/3、liger-kernel 等加速组件，能在 7B–70B+ 模型上做预训练、SFT、DPO/ORPO/IPO/KTO 等对齐训练，以及多模态模型微调。亮点是「一份 yaml 跑天下」：用户只需声明模型、数据集、超参和并行策略，无需改代码即可在 H100/A100/4090/Apple Silicon 上启动训练。适合需要定制化行业大模型、垂直领域助手、研究团队复现论文以及中小公司低成本做私有化模型对齐的开发者，是 Ollama、Unsloth 之外训练侧的事实标准之一。</p>
+    <div class="source">⭐ 12,053 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="microsoft/TRELLIS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/microsoft/TRELLIS" target="_blank">microsoft/TRELLIS</a></h3>
+    <p>TRELLIS 是微软研究院发布的 3D 生成模型，对应 CVPR 2025 Spotlight 论文《Structured 3D Latents for Scalable and Versatile 3D Generation》。它用统一的「结构化 3D 潜空间」同时支持文生 3D、图生 3D，并能输出 mesh、辐射场（Radiance Field）、3D Gaussian 等多种表征，质量与可控性显著优于此前的逐方案路线。技术上核心是 OVL（Organic Versatile Lattices）稀疏结构潜表示，加上 rectified flow transformer 与 DPO 对齐训练，使生成既快又精细。适用场景包括游戏资产生成、AR/VR 物体建模、产品设计快速打样、影视概念资产、研究人员探索 3D 基础模型——一句话：输入一句话或一张图，输出一只可旋转、可渲染、可 3D 打印的实体。</p>
+    <div class="source">⭐ 12,925 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="huggingface/lerobot" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/huggingface/lerobot" target="_blank">huggingface/lerobot</a></h3>
+    <p>LeRobot 是 Hugging Face 推出的开源机器人学习框架，把视觉-动作模仿学习（imitation learning）与强化学习真正「平民化」。它内置 ALOHA、SO-100/101 等开源低成本机械臂硬件参考设计与 3D 打印文件，配套数据集格式、可视化工具与训练管线（ACT、Diffusion Policy、VQ-BeT、TDMPC 等 SOTA 策略），让研究者甚至爱好者花几百美元就能复现「教机器人叠衣服、拿积木」等任务。技术上，LeRobot 基于 PyTorch + HuggingFace Hub，用户可在 Hub 上像分享模型一样分享数据集、checkpoint 与机器人演示片段。适用人群包括机器人研究者、AI for Robotics 教育者、具身智能初创团队以及希望低成本搭原型的人，是当前具身智能（embodied AI）社区事实上的入门首选库。</p>
+    <div class="source">⭐ 24,999 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="MODSetter/SurfSense" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MODSetter/SurfSense" target="_blank">MODSetter/SurfSense</a></h3>
+    <p>SurfSense 是一款开源、注重隐私的团队级「第二大脑」与知识助手，被视作 Google NotebookLM 的开源替代品，但更强调本地化与无数据上限。它能把你的网页浏览记录、Notion/Obsidian 笔记、PDF、Slack/Discord、GitHub Issues、Linear、YouTube 字幕、学术论文等数十种来源统一接入索引，再借助大模型（支持任意 OpenAI 兼容 API、Ollama 本地模型）做语义检索、跨源问答、播客式语音对话生成。技术上基于向量检索 + RAG + 多 Agent 协作，所有数据默认存本地、可自托管、无 token 计费。适合研究人员整理文献、产品经理聚合调研素材、咨询团队沉淀客户资料，以及任何希望「把散落的网络笔记变成一个可对话的私有知识库」的个人或小团队。</p>
+    <div class="source">⭐ 14,749 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-16 08:00</p>
+</footer>
+</div>
+</body>
+</html>
