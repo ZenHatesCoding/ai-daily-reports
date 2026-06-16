@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月17日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月17日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_00.jpg" alt="Predicting model behavior before release by simulating deployment" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[openai.com] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">Predicting model behavior before release by simulating deployment</a></h3>
+    <p style="color:#ccc;">Predicting model behavior before release by simulating deployment</p>
+    <div class="source">来源：openai.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_01.jpg" alt="Introducing Claude Corps" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[anthropic.com] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">Introducing Claude Corps</a></h3>
+    <p style="color:#ccc;">Introducing Claude Corps</p>
+    <div class="source">来源：anthropic.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_02.jpg" alt="Introducing Gemini Omni" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind.google] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">Introducing Gemini Omni</a></h3>
+    <p style="color:#ccc;">Introducing Gemini Omni</p>
+    <div class="source">来源：deepmind.google</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_03.jpg" alt="DiffusionGemma: 4x faster text generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind.google] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">DiffusionGemma: 4x faster text generation</a></h3>
+    <p style="color:#ccc;">DiffusionGemma: 4x faster text generation</p>
+    <div class="source">来源：deepmind.google</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_04.jpg" alt="Want to get a data center online quickly? Give it some flex." style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[technologyreview.com] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">Want to get a data center online quickly? Give it some flex.</a></h3>
+    <p style="color:#ccc;">Want to get a data center online quickly? Give it some flex.</p>
+    <div class="source">来源：technologyreview.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/images/news_items_v2_05.jpg" alt="Investing in multi-agent AI safety research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind.google] 2级信源 · cn</div>
+    <h3><a href="#" target="_blank">Investing in multi-agent AI safety research</a></h3>
+    <p style="color:#ccc;">Investing in multi-agent AI safety research</p>
+    <div class="source">来源：deepmind.google</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="The Value Axis: Language Models Encode Whether They're on the Right Track" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p01 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p01" target="_blank">The Value Axis: Language Models Encode Whether They're on the Right Track</a></h3>
+    <p style="color:#ccc;"></p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span></div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到干净可解释的 value axis,整套方法被锁死在 Qwen3-8B 与合成 in-context RL 数据这一对组合上:换基模、换训练分布,轴的线性方向和因果可干预性都会漂移;in-the-wild 部分的高/低 value 解读又依赖人对'自信'/'政治敏感'的事后归类,一旦 reward model 的目标与论文隐含的目标分布不完全对齐,这条轴承载的就不是真正的策略价值,而是 reward 模型自身偏好的代理——清晰度与跨分布鲁棒性之间的权衡在所难免。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="ContextRL: Context-Aware RL for Agentic and Multimodal LLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p02 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p02" target="_blank">ContextRL: Context-Aware RL for Agentic and Multimodal LLMs</a></h3>
+    <p style="color:#ccc;"></p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span></div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为让模型学会'选对的上下文',ContextRL 必须构造两份只在目标线索处不同、其余高度相似的对照样本:在 coding 轨迹上靠条件过滤勉强可控,但在通用多模态场景里,'只差一个像素级细节'的对比数据本身就要靠生成式编辑+相似度搜索合成,质量和覆盖面被对照数据的构造管线绑死——一旦目标任务的对照数据难以批量生成(例如法律、医学里'只差一条引用'的样本),这套奖励就无处安放。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p03 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p03" target="_blank">BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering</a></h3>
+    <p style="color:#ccc;"></p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span></div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为同时拿到'物理可控'与'生成逼真',BRDFusion 让两套系统的误差互相掩盖:物理反演的歧义靠生成先验去糊,生成模型的幻觉靠物理配置去锚,任何一端精度掉链,另一端都会先于用户察觉异常;城市这种大体量、强反射、复杂光照场景的训练与调试成本远超室内静态物体,换到稀疏视角或非朗伯表面场景时,这层'互相兜底'反而会把问题藏得更深。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Qwen-RobotWorld: Unifying Embodied World Modeling through Language-Conditioned Video Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p04 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p04" target="_blank">Qwen-RobotWorld: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></h3>
+    <p style="color:#ccc;"></p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span></div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到'一个模型打全部具身'的统一性,Qwen-RobotWorld 把动作语义压进自然语言,这同时带来两个代价:一是文本接口天然离散,无法承载高频精细的连续控制信号,真要把生成的视频接到下游策略执行,中间必须再补一层动作解码器;二是 8.6M 视频与 General+Expert 课程让训练成本极高,中小团队无法复现,所谓'统一'目前只在 Qwen 这条特定 backbone 与特定课程节奏下成立,换基模或换训练序都得重做一遍。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="ExpRL: Exploratory RL for LLM Mid-Training" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p05 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p05" target="_blank">ExpRL: Exploratory RL for LLM Mid-Training</a></h3>
+    <p style="color:#ccc;"></p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span></div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>为拿到稠密过程级信号,ExpRL 把奖励质量完全外包给 LLM judge 与参考答案构造的 rubric:judge 与 policy 的输出分布一旦耦合,就会出现 judge 给高分的 reasoning 风格被反复强化,真实解题能力反而被风格同质化覆盖;此外 rubric 的质量上限被参考答案绑死,参考答案只展示一种解法时,policy 学到的是'沿着这条路径走才有奖',跨解法/跨任务的迁移性会被参考答案的多样性与 judge 的判别粒度同时压死。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/OpenBMB/VoxCPM" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 30,108 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/alibaba/zvec" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 10,425 · C++</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Egonex-AI/Understand-Anything" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 61,556 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/dmtrKovalenko/fff" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 8,859 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 5,117 · Gradio</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://huggingface.co/spaces/mrfakename/Z-Image-Turbo" target="_blank"></a></h3>
+    <p></p>
+    <div class="source">⭐ 3,406 · Gradio</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-17 07:29</p>
+</footer>
+</div>
+</body>
+</html>
