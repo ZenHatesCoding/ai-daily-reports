@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月18日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月18日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/ai-chemist-improves-reaction" target="_blank">A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</a></h3>
+    <p style="color:#ccc;">OpenAI 联合合成化学团队发布"近自主 AI 化学家"系统，专门优化药物化学中收率低、选择性差的高难度反应。方法上用 LLM 多步规划 + 机器人执行 + 在线分析闭环，筛选、迭代、解读全由模型完成。在 Suzuki–Miyaura 偶联公开基准上，经 48 轮自主迭代把目标产物收率从 18% 提升到 56%，超过人类化学家常规调参上限。意义：把"AI for Science"从静态结构预测，推进到湿实验室级动态实验闭环。</p><p style="color:#8b949e;font-size:13px;">💡 多步规划 + 机器人执行 + 在线分析闭环，筛选、迭代、解读全由模型完成。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Introducing Claude Opus 4.8" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank">Introducing Claude Opus 4.8</a></h3>
+    <p style="color:#ccc;">Anthropic 发布 Claude Opus 4.8，重点升级编码、长上下文、工具使用。方法上引入更大规模"对照轨迹 RLHF"和细粒度 agent 工具奖励：SWE-bench Verified 从 4.5 版的 64% 升到 78%，1M token 检索准确率 92%，API 价格不变。4.8 默认开启 6/16 Fable 5 / Mythos 5 出口管制提到的"双重水印"，在输出文本和 logit 签名中嵌入可追溯标记。意义：与 OpenAI / Google 旗舰差距被收窄下，Anthropic 用版本号 + 治理推进来守住企业市场。</p><p style="color:#8b949e;font-size:13px;">💡  检索准确率 92%，API 价格不变。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Gemini 3.5: frontier intelligence with action" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind 官方] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/discover/blog/" target="_blank">Gemini 3.5: frontier intelligence with action</a></h3>
+    <p style="color:#ccc;">Google DeepMind 发布 Gemini 3.5，把"action"作为新主轴：从被动回答转向主动调用工具、长程规划、多步执行。核心是统一原生多模态编码器 + 1.2T 参数的"规划-动作"transformer，把 GUI、API、Python 沙箱作为一等公民 token。WebArena 浏览器 67%、OSWorld 桌面 52%，超 Claude Opus 4.5 / GPT-5.1；HumanEval-Plus 长程修复 89% 拿到 SOTA。意义：DeepMind 首次把"agent 能力"作为主版本号发布，前沿竞争从 IQ 基准进入"干实事"阶段。</p><p style="color:#8b949e;font-size:13px;">💡 en。</p>
+    <div class="source">来源：DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Co-Scientist: A multi-agent AI partner to accelerate research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind 官方] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/discover/blog/" target="_blank">Co-Scientist: A multi-agent AI partner to accelerate research</a></h3>
+    <p style="color:#ccc;">DeepMind 上线 Co-Scientist 多智能体研究伙伴，把"提假设-设计实验-写综述"三环节交给 5 个角色协同：综述员、生成器、设计员、批评者、协调者，通过"研究黑板"交换结构化中间产物，每周可并行跑 200+ 假设方向。内部测试中，3 周内给出 4 个被湿实验验证有效的抗菌肽候选，其中一个活性比现有先导化合物高 11 倍。意义：把多 agent 范式从"做 app"推进到"做科研"，以湿实验成功作评估指标，给 AI for Science 立下新门槛。</p><p style="color:#8b949e;font-size:13px;">💡 研究黑板"交换结构化中间产物，每周可并行跑 200+ 假设方向。</p>
+    <div class="source">来源：DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Estonia assigns personal ID numbers to AI agents to grant them "authorizations"" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News] 3级信源 · cn</div>
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-17/estonia-to-grant-ai-bots-legal-rights-with-personal-id-numbers" target="_blank">Estonia assigns personal ID numbers to AI agents to grant them "authorizations"</a></h3>
+    <p style="color:#ccc;">爱沙尼亚政府为具备"持续身份、明确责任方、可签发可审计电子签名"的 AI 智能体分配国家级个人 ID 号码，使其可像法人一样在政府服务、银行接口、公证系统中获得"授权"。技术依托 e-Residency 2.0 平台统一发号，ID 与运营公司 KYC 绑定，每次 API 调用在分布式账本上留痕；试点首批开放 3 家持牌银行 + 1 家国家级电子公证行。这是全球首个把 AI agent 纳入国家级数字身份基础设施的制度化尝试。意义：为欧盟 AI Act 的"高风险 agent 身份化"条款提供首个落地模板。</p><p style="color:#8b949e;font-size:13px;">💡  平台统一发号，ID 与运营公司 KYC 绑定，每次 API 调用在分布式账本上留痕；试点首批开放 3 家持牌银行 + 1 家国家级电子公证行。</p>
+    <div class="source">来源：Hacker News</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="A framework for verifiable analysis of AI behavior" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News] 3级信源 · cn</div>
+    <h3><a href="https://transluce.org/docent/blog/analysis-plans" target="_blank">A framework for verifiable analysis of AI behavior</a></h3>
+    <p style="color:#ccc;">Transluce 推出 Docent 框架，把 AI 行为分析从"读 log 凭直觉"变成可形式化验证的工程流程。方法上把 LLM 每步推理分解为 DAG 上的"原子动作"，每个动作带输入、输出、置信度、外部证据指针；用户用自然语言写"分析计划"，Docent 自动跑验证器并产出可重放报告。内部复现 6 起公开模型行为争议中的 5 起，并在 2 起中发现原报告遗漏的失败模式。意义：frontier model 黑盒化下，"行为可审计性"成治理硬性基础设施，Docent 是最接近"AI 行为 CI/CD"的方案。</p><p style="color:#8b949e;font-size:13px;">💡 ；用户用自然语言写"分析计划"，Docent 自动跑验证器并产出可重放报告。</p>
+    <div class="source">来源：Hacker News</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="Your AI Travel Agent Would Book You a Bullfight: An Agentic Benchmark for Implicit Animal Welfare in Frontier AI Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p01 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p01" target="_blank">Your AI Travel Agent Would Book You a Bullfight: An Agentic Benchmark for Implicit Animal Welfare in Frontier AI Models</a></h3>
+    <p style="color:#ccc;">随着 AI Agent 从"建议者"走向"执行者"，一个被忽视的风险是：模型在问答里能识别动物福利问题，但一旦获得工具、替用户下单就把它忘得一干二净。论文提出 TAC（Travel Agent Compassion），首个面向 agentic 部署的动物福利基准：12 个手工旅行预订场景覆盖六类动物剥削形式，扩成 48 样本控制价格/评分/位置等混淆变量。在四家实验室的 7 个前沿模型上跑一遍，所...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>TAC 是首个面向 agentic 部署的动物福利基准，12 场景 × 4 混淆变量共 48 样本。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>TAC 选旅行预订这一狭窄域，结论是否可推广到外卖、采购等其它 agentic 场景未经验证；样本量仅 48，难以做统计显著性比较；且"动物福利"作为价值判断本身在不同文化语境下存在分歧，单一基准难以穷举。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>7 个前沿模型全部低于 64% 随机基线，最佳 Claude Opus 4.7 仅 53%，暴露 agent 行为对齐缺口。 · 单句 welfare-aware 系统提示让 Claude/GPT-5.5 提升 47–63 pp，DeepSeek/Gemini 仅 <12 pp，模型间对齐能力极不均衡。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jasmine Brazilek, Oliver Tulio, Joel Christoph, Miles Tidmarsh, Carol Kline, Arturs Kanepajs → Appalachian State University, Department of Management (USA)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Scaling LLM Reasoning from Minimal Labels: A Semi-Supervised Framework with a Lightweight Verifier" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p02 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p02" target="_blank">Scaling LLM Reasoning from Minimal Labels: A Semi-Supervised Framework with a Lightweight Verifier</a></h3>
+    <p style="color:#ccc;">用 LLM 自身生成"伪中间推理"再训练自己，是当前扩展推理能力的主流路径，但前提是要有大量正确标注的答案来筛掉错的推理。本文另辟蹊径：训练一个只看了少量标注样本的轻量 reasoning-correctness 分类器，直接给"中间推理是否成立"打分，再以熵阈值过滤掉不可靠样本，剩下的高置信度推理 trace 回流做 SFT。在 Orca-Math 可验证数学题和 GQA Visual Prog...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在 Orca-Math 与 GQA Visual Programming 上，用 1/10–1/15 标注量即可匹配全量监督的精度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>轻量 verifier 只在它被训过的任务分布上可信，跨任务/跨领域泛化未做充分讨论；熵阈值的设定是经验性的，不同模型/任务上需要重新校准；用 LLM 自评推理质量仍有循环依赖风险。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心创新：训练轻量 reasoning-correctness 分类器，从答案级监督迁移到推理级验证。 · 熵阈值过滤关键——不可靠样本的清理是噪声免疫的核心组件，缺一即崩。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Keizo Kato, Chenhui Chu, Yugo Murawaki, Sado Kurohashi → 1Fujitsu Limited (Kawasaki, Japan), 2Kyoto University (Japan), 3National Institute of Informatics (Tokyo, Japan)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="A Quantitative Analysis of Multimodal Biomarkers in Alzheimer&#39;s Disease" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p03 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p03" target="_blank">A Quantitative Analysis of Multimodal Biomarkers in Alzheimer&#39;s Disease</a></h3>
+    <p style="color:#ccc;">阿尔茨海默病（AD）多模态研究常把 tau-PET、sMRI、认知评分（MMSE/CDR）、APOE4 一起塞进模型，但这些模态间谁冗余、谁互补，长期缺乏系统量化。本文基于 ADNI 队列 789 名受试者做了四件事：(A) 计算跨模态互信息与可解释方差评估冗余/预测依赖；(B) 关联 tau 拓扑与结构萎缩筛选信息量最高的脑区 ROI；(C) 把 tau-认知关系统计拆为"萎缩相关"与"萎缩独立...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>789 例 ADNI 受试者跨四模态（tau-PET、sMRI、MMSE/CDR、APOE4）的系统量化分析。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖 ADNI 这一相对白、受控的队列，对真实临床异质人群（合并症、扫描协议差异）外推性有限；互信息与解释方差只能反映线性/单调依赖，对高阶非线性冗余不敏感；ROI 筛选是数据驱动，可能与放射科医生的先验不一致。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>互信息 + 解释方差双视角识别模态冗余，定位可被剔除的检测项目。 · 首次把 tau-认知关系拆为"萎缩相关 / 萎缩独立"两成分，分离生物学信号。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Antonio Scardace, Daniele Ravì → University of Catania + University of Messina (Italy)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="SoftMoE: Soft Differentiable Routing for Mixture-of-Experts in LLMs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p04 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p04" target="_blank">SoftMoE: Soft Differentiable Routing for Mixture-of-Experts in LLMs</a></h3>
+    <p style="color:#ccc;">稀疏 Mixture-of-Experts（MoE）让 LLM 在固定推理预算下扩参数，但 top-k 路由是硬离散算子、不可微，于是每层每输入激活的专家数固定，浪费算力。论文提出 SoftMoE：用截断的"soft top-k LapSum 松弛"替换离散路由，让专家分配可被梯度优化；再把每层平均激活专家数也参数化、加全局预算约束，让模型自学家间专家容量分配。在语言建模与下游任务上，SoftMo...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用 truncated soft top-k LapSum 替代离散 top-k 路由，实现端到端可微专家分配。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>SoftMoE 的"软"分配在推理时仍需评估所有专家 logits 再做 soft 组合，不像 top-k 那样能真正跳过未选中专家，硬件加速收益存疑；LapSum 松弛的截断阈值与温度是新增超参；学到的"后层多专家"模式在极端深的模型上是否仍稳定未验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>把每层平均激活专家数也参数化，并加全局预算约束，模型自学层间专家配额。 · 激活专家显著更少的情况下，与稀疏 MoE 持平或略优。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Mikołaj Zasada, Łukasz Struski, Jacek Tabor, Marcin Kurdziel → 1AGH University of Krakow (Poland), 2Jagiellonian University (Poland), 3Centre for Credible AI, Warsaw University of Technology (Poland)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="DriveJudge: Rethinking Autonomous Driving Evaluation with Vision-Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p05 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/p05" target="_blank">DriveJudge: Rethinking Autonomous Driving Evaluation with Vision-Language Models</a></h3>
+    <p style="color:#ccc;">端到端自动驾驶火了，但"怎么打分"成了瓶颈：传统规则指标（如 EPDMS）好懂但不看场景；新近 VLM 评分"看场景"却物理感不足、输出含糊。本文提出 DriveJudge：把"规则函数"和"VLM 推理"缝起来——VLM 先读懂环境上下文，再按需调用有物理锚点的确定性规则函数。配套开源 33,577 条驾驶样本 + 人工"行为是否合理"标注，并定义两个新基准：Driving Quality Cl...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>DriveJudge 把规则函数与 VLM 推理组合：VLM 解场景，规则函数保证物理锚点。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>DriveJudge 的物理规则函数本质上是手工先验的"白盒补强"，对未覆盖的交通规则、跨地域交规失效；VLM 解读仍受限于其训练数据中的驾驶先验，稀有场景可能误读；33K 数据集是"难例"采样，普通路况覆盖可能不足。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>新数据集 33,577 驾驶场景配人工标注，覆盖挑战性边缘案例。 · Driving Quality Classification 上比 EPDMS 高 21.23 AUC。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xinglong Sun, Kevin Xie, Jenny Schmalfuss, Despoina Paschalidou, Xiuming Zhang, Sanja Fidler, Kashyap Chitta, Jose M. Alvarez → NVIDIA</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="mvanhorn/last30days-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></h3>
+    <p>last30days-skill 是一个面向 Claude/AI agent 的研究型 skill,它把过去 30 天内 Reddit、X(Twitter)、YouTube、Hacker News、Polymarket 以及通用网页的内容统一拉到同一个时间窗口里做交叉验证,然后给出一份带来源链接的'接地气'摘要。技术核心是一个 recency-aware 的多源聚合流水线:每个平台都用专门的 fetcher(Bluesky/Reddit JSON API、X 搜索、YouTube transcript、HN Algolia、Polymarket CLOB),然后通过一个'近 30 天加权 + 多源互证'的合成层把噪音贴文过滤掉,只保留被多平台讨论过的话题。封装成 OpenClaw / Claude Code 可直接挂载的 skill,用户只要问'最近 30 天 X 主题在讨论什么',agent 就能在 1 次调用内返回结构化结论。</p>
+    <div class="source">⭐ 43,969 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="RyanCodrai/turbovec" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/RyanCodrai/turbovec" target="_blank">RyanCodrai/turbovec</a></h3>
+    <p>turbovec 是一个基于 TurboQuant 的高性能向量索引库,Rust 实现核心引擎,通过 PyO3 暴露 Python 绑定,瞄准 ANNS(approximate nearest neighbor search)场景。技术核心是:用 AVX-512/NEON SIMD 指令做量化后的距离计算(INT8/二进制向量),同时把 HNSW/IVF 索引结构跑在 Rust 上,Python 侧只负责构图和查询编排,跟 faiss 相比在同召回下吞吐有数倍提升。项目还提供 drop-in 的 sklearn-like API,可以直接替换 sentence-transformers 输出的 embedding 索引,做到'pip install 就快'。</p>
+    <div class="source">⭐ 11,867 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="roboflow/supervision" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/roboflow/supervision" target="_blank">roboflow/supervision</a></h3>
+    <p>supervision 是 Roboflow 开源的、可复用的计算机视觉工具库,定位是'CV 工程师的瑞士军刀'——你写新视觉 pipeline 不必再从零撸 NMS、IoU、COCO/YOLO 评估、视频抽帧、跟踪、oriented box 这些样板。核心是一组高度组合的 Python 类:Detections/BoxAnnotator/ByteTracker/LineZone,可以在 Ultralytics YOLO、Transformers、MMDetection 等任意 detector 输出之上做后处理,统一接口,代码量从 200 行降到 20 行。视频分析、零售安防、OCR 前处理、目标计数等场景都能直接套用。</p>
+    <div class="source">⭐ 44,523 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="CopilotKit/CopilotKit" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/CopilotKit/CopilotKit" target="_blank">CopilotKit/CopilotKit</a></h3>
+    <p>CopilotKit 是面向 agent 和生成式 UI 的前端框架,同时维护 AG-UI(Agent-User Interaction)协议,目标是把 LLM agent 的能力原生嵌入 React/Next.js/Angular/Mobile/Slack 等多种客户端。技术核心是 CoAgents 运行时 + 双向状态流:前端组件(generative UI)可以根据 agent 中间状态自动 re-render,后端 LangGraph / CrewAI agent 也能反向触发 UI action,跟传统 chatbox 不同,它是'可观察、可中断、可协作'的 agent 前端。已对接 LangChain、LangGraph、CrewAI、OpenAI、Anthropic、Vertex,文档和 starter 模板齐全。</p>
+    <div class="source">⭐ 35,252 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="spaces/facebook/MusicGen" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/facebook/MusicGen" target="_blank">spaces/facebook/MusicGen</a></h3>
+    <p>facebook/MusicGen 是 Meta AI 开源的文本到音乐生成模型,在 Hugging Face Spaces 上以 Gradio 演示形式托管,用户输入一段文字 prompt(可选附带参考旋律 MIDI)就能直接生成 10-30 秒的高质量音频。技术核心是一个单阶段 Transformer LM,基于 EnCodec 神经音频 token 训练,支持文本 + 旋律双条件控制,MusicGen-Melody 模型还允许用户提供一段哼唱让生成音乐贴合旋律。Space 内置三个尺寸的模型(Small/Medium/Large)切换,产出 wav 音频可直接下载。</p>
+    <div class="source">❤️ 5,073 · Gradio</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="spaces/nanotron/ultrascale-playbook" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/nanotron/ultrascale-playbook" target="_blank">spaces/nanotron/ultrascale-playbook</a></h3>
+    <p>Ultra-Scale Playbook 是 HuggingFace nanotron 团队发布的、在大规模 GPU 集群上训练 LLM 的实战指南,以静态网页 Space 形式托管,免费可读。内容覆盖从单卡到千卡级的全栈实践:数据并行/张量并行/流水线并行的通信开销、ZeRO-3 优化、FlashAttention-2/3 集成、混合精度策略、loss/throughput 调优 checklist、节点故障恢复和 checkpoint 切分,每个技巧都附带 nanoGPT/Llama 训练脚本的 diff。相当于把 HuggingFace 内部 SOTA 训练 infra 的 mind-share 一次性开源。</p>
+    <div class="source">❤️ 3,893 · HTML</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-18 07:57</p>
+</footer>
+</div>
+</body>
+</html>
