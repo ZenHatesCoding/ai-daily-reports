@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月18日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月18日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_00.jpg" alt="A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/ai-chemist-improves-reaction" target="_blank">A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</a></h3>
+    <p style="color:#ccc;">OpenAI 联合 LILA 与多伦多大学推出 AI 化学院士,可半自主设计、运行、迭代实验,在公开 ACS Catalysis 论文的方法学上把反应良率显著提升。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_01.jpg" alt="Statement on the US government directive to suspend access to Claude Mythos in federal agencies" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank">Statement on the US government directive to suspend access to Claude Mythos in federal agencies</a></h3>
+    <p style="color:#ccc;">Anthropic 公开声明回应美国联邦机构暂停 Claude Mythos 访问的指令,阐述其在 safety 评估与公共部门应用上的边界立场。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_02.jpg" alt="Introducing Claude Opus 4.8" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank">Introducing Claude Opus 4.8</a></h3>
+    <p style="color:#ccc;">Anthropic 发布 Claude Opus 4.8,聚焦长上下文与 agent 编排,benchmark 全面对标 GPT-5.5 与 Gemini 3.5。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_03.jpg" alt="Introducing LifeSciBench" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/introducing-life-sci-bench" target="_blank">Introducing LifeSciBench</a></h3>
+    <p style="color:#ccc;">OpenAI 发布 LifeSciBench,生命科学领域综合基准,覆盖分子设计、实验方案、文献综合、protocol 编写 4 个核心能力。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_04.jpg" alt="Expanding Project Glasswing" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank">Expanding Project Glasswing</a></h3>
+    <p style="color:#ccc;">Project Glasswing 是 Anthropic 的 AI x 生物多样性保护项目,本次扩展覆盖到 12 个新国家,联合本地 NGO 训练濒危物种识别模型。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/news_items_v2_05.jpg" alt="AI-enabled cyber threats in MITRE ATT&CK" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank">AI-enabled cyber threats in MITRE ATT&CK</a></h3>
+    <p style="color:#ccc;">Anthropic 联合 MITRE 发布 AI-enabled cyber threats 报告,首次将 LLM 在 ATT&CK 矩阵中的真实使用模式系统化记录。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_00.jpg" alt="STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p01 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19236" target="_blank">STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability</a></h3>
+    <p style="color:#ccc;">问题：GRPO 类可验证强化学习已成为 LLM 推理后训练的事实标准，但工程上始终被 policy 熵崩塌困扰——训练数千步后模型熵迅速跌到 0，探索枯竭，丧失长链推理能力。论文对 token 级熵动力学做一阶梯度分析，发现核心症结是 token 级信用分配错位：每 token 的熵变化可分解为轨迹级 advantage 与"下一 token 分布上的熵敏感函数"之积，从而呈现 advantage...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>对 GRPO 下的 token 级熵做一阶分析，推导出 advantage × surprisal 四象限结构与近临界性。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>STARE 对 batch 内 surprisal 分布敏感，小 batch 场景下分位数估计不稳，需配合大批量 rollout 才能发挥优势；目标熵带本身是经验超参，不同模型/任务需重新标定；surprisal 重加权只在 GRPO 这类 advantage-based 框架下有理论支撑，迁移到 PPO / DPO 等策略优化范式未做充分验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>STARE 用 batch 内部 surprisal 分位数筛熵关键 token 子集，对其 advantage 选权重加权。 · 加目标熵闭环门控，可在 1.5B–32B 三类任务上稳定训练数千步不崩。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Haipeng Luo, Qingfeng Sun, Songli Wu, Can Xu, Wenfeng Deng, Han Hu, Yansong Tang → Appalachian State University, Department of Management (USA)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_01.jpg" alt="Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p02 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19168" target="_blank">Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection</a></h3>
+    <p style="color:#ccc;">问题：当前大模型安全对齐多在 post-training 做 RLHF，但事后修补来得太晚——模型已从看似无害的知识组合出危险行为；数据过滤与改写只是堵漏，并不解决"无害组件→有害组合"这一能力本身。论文提出 Safety Reflection Pretraining：在 pretraining 语料中规律性插入简短的安全反思段，让自监控能力在语言建模阶段就被编织进底座，再由兼容的 post-tr...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 Safety Reflection Pretraining：在 pretraining 语料规律插入自监控反思段，把安全内化为建模目标。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>反思段的插入频率与位置是关键超参，频率过高会稀释语言建模密度，过低又丧失反射触发能力，需逐模型尺度调优；MedSafetyWorld 是受控合成环境，复杂真实世界威胁的多步骤推理攻击可能外推有限；与已有 pretraining recipe 的兼容性、是否与高质量数据存在天然权衡未做系统讨论。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>1.7B + FineWeb-Edu 上安全分类精度提升，推理期与 finetuning 攻击成功率显著下降。 · 构建 MedSafetyWorld 全受控合成环境，明确定义安全 + 可推理结构，暴露过滤范式的盲区。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jinhan Li, Kexian Tang, Yihan Xu, Zhuorui Ye, Kaifeng Lyu → 1Fujitsu Limited (Kawasaki, Japan), 2Kyoto University (Japan), 3National Institute of Informatics (Tokyo, Japan)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_02.jpg" alt="User as Engram: Internalizing Per-User Memory as Local Parametric Edits" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p03 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19172" target="_blank">User as Engram: Internalizing Per-User Memory as Local Parametric Edits</a></h3>
+    <p style="color:#ccc;">问题：个性化 LLM 助手面临一个本质矛盾——大脑把"事实记忆"放在稀疏局部的海马体 engram、把"推理技能"放在慢速共享的新皮层；现有方案要么把事实留在权重外（自然语言记忆 / 检索索引），要么用 per-user LoRA 把事实和技能混在同一份全局 ΔW 里。后者会导致写一个用户的事实污染与该事实无关的文本，且事实数随用户线性增长时全局 ΔW 不可组合。论文提出 User as Engr...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用 Engram 模型的 hash-keyed 记忆表承载用户事实，per-user LoRA 改成"内容 / 技能"分层。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Engram 模型本身的训练范式并非主流，开源实现与生态兼容性受限；hash 槽位的容量受限于嵌入维度，长尾用户的事实碰撞概率随用户数上升可能放大；外科式 edit 要求事先明确"触发位—值"配对，对话式追加事实的实时性与稳健性需额外维护机制。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>直接召回持平 per-user LoRA，间接推理精度平均高 5.6 倍，单用户占用小 33000 倍。 · Glass-box 编辑：写入触发位精确点亮，不相关位置 bit 级不变，写错层立即报错。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Bojie Li → University of Catania + University of Messina (Italy)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_03.jpg" alt="Complementary Attention Head Pruning for Efficient Transformers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p04 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19150" target="_blank">Complementary Attention Head Pruning for Efficient Transformers</a></h3>
+    <p style="color:#ccc;">问题：Transformer 架构通过堆层堆头扩展能力，但部署到资源受限环境时，结构化剪枝普遍依赖梯度重要性排序或随机门控——这两种方式都不稳定、易结构退化、且要大量手动调 sparsity ratio。本文提出 CAHP（Complementary Attention Head Pruning）：把 head 选择重新表述为全局图论问题，用基于图聚类结合信息论距离，识别并保留一个拓扑上互补、互不...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把 head 选择重新建模为图论问题：图聚类 + 信息论距离识别拓扑互补的 head 子集。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>图聚类与信息论距离的计算复杂度随 head 数呈超线性关系，大模型（百亿级以上）剪枝的开销可能反而成为瓶颈；"边际性能下降曲线"依赖一个验证集，多项式度选取仍是经验性的；目前只在 encoder 类 Transformer 与分类任务上验证，decoder-only 与生成任务的可移植性未证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>无需预设 sparsity ratio，由边际性能下降曲线与多项式度自动决定每层保留数。 · 在 SST-5、MNLI 上跨模型规模稳定优于梯度排序与随机门控剪枝。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yaniv Livertovsky, Shahar Somin, Gonen Singer → 1AGH University of Krakow (Poland), 2Jagiellonian University (Poland), 3Centre for Credible AI, Warsaw University of Technology (Poland)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/paper_summaries_v2_04.jpg" alt="Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p05 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19120" target="_blank">Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation</a></h3>
+    <p style="color:#ccc;">问题：On-Policy Self-Distillation（OPSD）让模型用自己的 rollout 训练自己，固定 copy 提供 dense token 级目标，对纯文本 LLM 推理非常有效；但把这一招直接搬到多模态大模型，会引发 shortcut——特权目标其实在根据文本参考答案而非图像引导 token。论文提出 ViGOS：把流程显式拆成"先看图，再推理"——学生先写视觉描述、再推理出...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>诊断 OPSD 迁移到 MLLM 的核心失败模式：特权目标被文本参考而非图像主导引导。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>三 teacher 框架显著增加训练时的显存与通信开销，对小规模 MLLM 不友好；视觉描述的触发条件与生成长度仍是工程超参，不同任务上需要标定；特权 reasoning teacher 仍依赖参考答案作为锚点，扩展到无参考答案的真实开放场景需要额外设计。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>ViGOS：先写视觉描述再推理，perception / reasoning teacher 分工监督不同 prefix。 · 无效 rollout 用参考 teacher 救回输出格式，避免全流程重启。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Sihan Wang, Xiyao Liu, Lianqing Liu, Zhi Han → NVIDIA</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_00.jpg" alt="alexzhang13/rlm" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/alexzhang13/rlm" target="_blank">alexzhang13/rlm</a></h3>
+    <p>alexzhang13/rlm 是 MIT CSAIL / Alex Zhang 团队开源的 Recursive Language Models (RLM) 通用推理库,定位是 'plug-and-play 的长上下文/复杂推理 inference 框架'。它把 LLM 当作可以递归调用的 'reasoning cell'——主模型对一段超大上下文(10M+ token 代码库、整本书、长对话历史)先做摘要分块,然后把子任务再丢回同一个 LLM 反复迭代,直到产出可验证的最终答案,中间每一步都可以调用外部 tool(Python REPL、grep、SQL)。底层用 vLLM/Transformers 兼容接口,支持 OpenAI/Anthropic API 模式,只用一个 Python 装饰器就能让任意长 prompt 走 RLM 路径。仓库里预置了 4 个 benchmark(HumanEval-Long、Repo-QA、PaperQA、OOXML)与基线对比,在 '1M token 代码库回答细粒度问题' 上比 vanilla GPT-5/o3-pro 准确率平均高 28-40 个百分点。</p>
+    <div class="source">⭐ 4,944 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_01.jpg" alt="bytedance/UI-TARS-desktop" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank">bytedance/UI-TARS-desktop</a></h3>
+    <p>bytedance/UI-TARS-desktop 是字节跳动 Seed 团队发布的开源多模态 GUI Agent 全栈,UI-TARS 模型家族的桌面 runtime + Agent Infra。技术核心是 '原生 GUI 操作模型 + 跨平台 runtime'——UI-TARS-2 是一个 70B 多模态模型,直接在屏幕像素上预测 mouse/keyboard 动作(点击坐标、滚动、双击、拖拽),不需要 DOM/Accessibility API 兜底;desktop 端 runtime 用 Electron + Rust hybrid,跑在 macOS/Windows/Linux 上,内置屏幕录制、human-in-the-loop 接管、回放 + 步骤级 audit log。配套 SDK 允许开发者把任意 desktop app(浏览器、IDE、Photoshop、自研 SaaS)暴露成 Agent 可调用的 '工具',并通过 MCP 协议与 Claude/Cursor/Cline 等外部 agent 框架对接。已开源 1.5B/7B/72B 三个尺寸 + 完整训练数据(屏幕截图 + 鼠标轨迹对)。</p>
+    <div class="source">⭐ 36,721 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_02.jpg" alt="calesthio/OpenMontage" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio/OpenMontage</a></h3>
+    <p>calesthio/OpenMontage 是号称 '世界第一个开源 agentic 视频制作系统' 的项目,12 条内容流水线(脚本/分镜/旁白/TTS/配乐/画面合成/字幕/剪辑/封面/多平台比例适配/审核) + 52 个独立工具(每个都对应一个 CLI/Python API,可单独调用) + 500+ agent skill 模板。核心是 '把整支短视频拆成 DAG,每个节点跑独立 LLM agent + specialized tool'——输入一句创意 prompt,系统自动产出 30 秒 - 3 分钟的多镜头视频,带 B-roll、转场、配音、字幕、Sora/Runway 调度的 video segments。底层用 LangGraph 做任务编排 + 显式 retry/branch/merge,每个 agent 节点都可以替换成自定义模型(包括本地 LLaMA/SD)。</p>
+    <div class="source">⭐ 5,403 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_03.jpg" alt="DeusData/codebase-memory-mcp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank">DeusData/codebase-memory-mcp</a></h3>
+    <p>DeusData/codebase-memory-mcp 是一个 'C 实现 + 持久知识图谱' 的高性能 MCP(Model Context Protocol) Server,专门给 Claude Code / Cursor / Cline 这类 coding agent 当长期记忆层。它把代码库先静态分析成 AST(支持 TypeScript/JavaScript/Python/Go/Rust),再在 C 内核里建一张带时间戳的增量式知识图谱(谁 import 谁、哪个函数被谁改过、PR diff 的因果链),通过 MCP tools 暴露 'recall(symbol/feature/PR/breaking change)'、'subscribe_to_file'、'explain_history' 三个核心调用,agent 不再需要每次把整仓库 re-index。性能方面:100 万行 monorepo 增量 reindex < 30 秒,查询端到端 P99 < 50ms,内存常驻 < 200MB。</p>
+    <div class="source">⭐ 5,503 · C</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_04.jpg" alt="black-forest-labs/FLUX.1-dev" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/black-forest-labs/FLUX.1-dev" target="_blank">black-forest-labs/FLUX.1-dev</a></h3>
+    <p>black-forest-labs/FLUX.1-dev 是德国 Black Forest Labs 在 Hugging Face Spaces 上以 Gradio 形式托管的开源文生图演示,基于 FLUX.1 [dev] 12B 参数 rectified flow transformer,商业可用(non-commercial license for dev 版)。用户输入自然语言 prompt(支持中英多语,可负向提示、aspect ratio、seed 锁定、ControlNet 边缘/深度/姿态条件),实时生成 1024×1024 高质量图像,内置 LoRA 加载面板,允许用户上传自己训练的风格/角色 LoRA 直接合成。Space 内置 fp8/int8 量化,单 24G 消费卡即可 inference,输出 PNG 可直接下载,带 metadata 写入 prompt + seed。</p>
+    <div class="source"> · Gradio</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/oss_summaries_v2_05.jpg" alt="microsoft/TRELLIS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/microsoft/TRELLIS" target="_blank">microsoft/TRELLIS</a></h3>
+    <p>microsoft/TRELLIS 是微软研究院开源的 '结构化 3D 生成' 模型,在 Hugging Face Spaces 上以 Gradio 演示形式托管,支持从单张图像或一段文本 prompt 直接生成高质量、可带 PBR 材质的 3D mesh / Gaussian Splatting 输出。技术核心是 '统一的结构化潜空间(Structured LATent, SLAT)':把稀疏 3D 体素 + 多视图图像特征在同一个 latent 空间里对齐,既能生成几何(三角面 mesh)又能生成外观(Albedo / Roughness / Metallic),后处理内置 mesh 简化 + 纹理烘焙 + GLB 导出。Space 提供 Image-to-3D、Text-to-3D、Multi-view 三个 tab,单 A100 即可 30 秒内出资产。</p>
+    <div class="source"> · Gradio</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-18 11:08</p>
+</footer>
+</div>
+</body>
+</html>
