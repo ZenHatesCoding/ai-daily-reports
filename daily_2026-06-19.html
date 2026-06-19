@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月19日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月19日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_00.jpg" alt="New usage analytics and updated spend controls for ChatGPT Enterprise" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/chatgpt-enterprise-spend-controls" target="_blank">New usage analytics and updated spend controls for ChatGPT Enterprise</a></h3>
+    <p style="color:#ccc;">OpenAI 为 ChatGPT Enterprise 上线使用分析 + 支出控制中心,管理员可按部门/项目/用户下钻 token 用量、API 成本、Seat 占用,并按月设置硬性 budget 上限 + 软提醒。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_01.jpg" alt="Improving health intelligence in ChatGPT" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/improving-health-intelligence-in-chatgpt" target="_blank">Improving health intelligence in ChatGPT</a></h3>
+    <p style="color:#ccc;">OpenAI 升级 ChatGPT 在医疗问答上的整体智能,覆盖症状推理、检验报告解读、药物相互作用提醒、就诊路径建议 4 个高风险场景,同时显式提示非医嘱边界。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_02.jpg" alt="Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic 官方] 1级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem" target="_blank">Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem</a></h3>
+    <p style="color:#ccc;">Anthropic 正式开设首尔办公室,联合 Naver Cloud、SK Telecom、LG AI Research、Kakao 等韩国头部玩家,在企业部署、政府、教育、Sovereign AI 4 条线同时落地。</p>
+    <div class="source">来源：Anthropic 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_03.jpg" alt="Securing the future of AI agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind 官方] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/" target="_blank">Securing the future of AI agents</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Agent 安全方法论,把 agent lifecycle 拆成 planning / tool-use / action / memory 4 个攻击面,提出对应纵深防御 + CalypsoAI-style 行为审计,可与 Gemini Agent 部署配套。</p>
+    <div class="source">来源：DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_05.jpg" alt="Exclusive eBook: How AI is becoming the next military advisor" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Tech Review] 2级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/16/1138905/exclusive-ebook-how--is-becoming-the-next-military-advisor" target="_blank">Exclusive eBook: How AI is becoming the next military advisor</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 推出 AI 军事顾问专题 eBook,系统梳理 LLM 在战场态势感知、OODA 决策循环、后勤优化、虚假信息反制 4 类军事场景的成熟度 + 风险。</p>
+    <div class="source">来源：MIT Tech Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/news_items_v2_2026-06-19_04.jpg" alt="北京 AI 工厂正式落地:目标 10 万 P 算力、日产 10 万亿 Token" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[qbitai.com] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/436456.html" target="_blank">北京 AI 工厂正式落地:目标 10 万 P 算力、日产 10 万亿 Token</a></h3>
+    <p style="color:#ccc;">北京国家级 AI 工厂一期正式落地,目标 10 万 P 国产算力 + 单日 10 万亿 Token 推理产能,首批接入政务、金融、医疗、自动驾驶 4 大行业,定价对标国产芯片 TCO 而非海外 H100。</p>
+    <div class="source">来源：qbitai.com</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/paper_summaries_v2_2026-06-19_00.jpg" alt="Native Active Perception as Reasoning for Omni-Modal Understanding" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p01 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19341" target="_blank">Native Active Perception as Reasoning for Omni-Modal Understanding</a></h3>
+    <p style="color:#ccc;">问题：长视频 omni-modal 理解主流仍是 watch-it-all 范式，所有帧均匀过一遍网络，计算成本随视频时长超线性增长；既有交互式方案要么全局预扫描，要么靠密集视觉 buffer 决定 "看哪里"，都没有真正把推理复杂度从视频长度里解耦出来。方法：提出 OmniAgent，把视频理解形式化为 POMDP 下的 Observation-Thought-Action 迭代环，按需触发动作...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>OmniAgent 把 omni-modal 视频理解形式化为 POMDP 下的迭代 Observation-Thought-Action 环，按需选择性蒸馏</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>按需动作循环引入额外推理轮次延迟，短视频上固定预扫描可能更快；TAURA 的 turn-level 熵统计依赖充分 rollout，低流量场景分位数估计抖动；持久文本记忆容量有上界，超长视频仍需外部检索补足。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Agentic SFT 用 best-of-N 轨迹合成 + 双阶段质量控制完成冷启动 · TAURA 把 turn-level entropy 用作 advantage 重标度信号，把信用分配压到决定性发现轮次</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhenghao Xing, Ruiyang Xu, Yuxuan Wang, Jinzheng He, Ziyang Ma, Qize Yang, Yunfei Chu, Jin Xu, Junyang Lin, Chi-Wing Fu, Pheng-Ann Heng → Appalachian State University, Department of Management (USA)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/paper_summaries_v2_2026-06-19_01.jpg" alt="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p02 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19327" target="_blank">Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation</a></h3>
+    <p style="color:#ccc;">问题：推理 LLM 后训练两条主线各有硬伤——supervised distillation 依赖昂贵 CoT 标注，而 CoT 哪怕最终答案对了也可能含噪声、不完整甚至错；RL with verifiable rewards 把反馈压成单标量，遮蔽了 "到底哪一段响应该改"，GRPO 在 token 级只能做 outcome-level 信用分配。方法：提出 Rubric-Conditioned...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>首次把 rubric 作为 on-policy 自蒸馏的细粒度条件，绕过单条参考 CoT 的噪声问题</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>rubric 自身质量成为新瓶颈，rubric 生成阶段错标会把噪声往下游传播；细粒度 criterion 把 token 级信号密度拉高，训练时显存与算力开销显著大于 GRPO；评估集中在科学推理，对开放对话 / 长篇生成的可迁移性尚未充分验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>两阶段管线：先生成任务特定 rubric，再以 rubric 引导 student 做 token 级自蒸馏 · 把 rubric 准则转译成推理轨迹上的 token 级信号，细于 GRPO 的 outcome reward</div>
+      <div class="row"><span class="author">🏢 团队：</span>Siyi Gu, Jialin Chen, Sophia Zhou, Arman Cohan, Rex Ying → 1Fujitsu Limited (Kawasaki, Japan), 2Kyoto University (Japan), 3National Institute of Informatics (Tokyo, Japan)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/paper_summaries_v2_2026-06-19_02.jpg" alt="Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p03 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19315" target="_blank">Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation</a></h3>
+    <p style="color:#ccc;">问题：自回归 LLM 在形式化定理证明（Lean4 / Isabelle 等）上主流，但 next-token 范式天生受限——长程一致性难以维持，错误在长序列上雪球式累积。扩散 LLM（dLLM）以多 token block 迭代去噪生成，本来对长程结构更友好，但被应用到形式数学里几乎空白。方法：提出 Diffusion-Proof 框架——首个端到端用 dLLM 做形式定理证明的方案；同时训练...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>首个端到端用扩散 LLM 做形式定理证明的框架，把生成范式从自回归里解耦</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>扩散模型的迭代去噪在推理时需要多轮 forward，证明生成端到端延迟显著高于单 pass 自回归；dLLM 的训练数据规模与质量与自回归 LLM 不在同一量级，社区可复现性受限；当前实验集中在 Lean 系语言，对 Isabelle / HOL 系的高阶逻辑体系外推尚未验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>dLLM-Prover-7B 负责整段长程一致证明撰写 · dLLM-Corrector-7B 利用双向 in-filling 做局部证明纠错</div>
+      <div class="row"><span class="author">🏢 团队：</span>Ruida Wang, Rui Pan, Pengcheng Wang, Shizhe Diao, Tong Zhang → University of Catania + University of Messina (Italy)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/paper_summaries_v2_2026-06-19_03.jpg" alt="Enhancing Decision-Making with Large Language Models through Multi-Agent Fictitious Play" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p04 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19308" target="_blank">Enhancing Decision-Making with Large Language Models through Multi-Agent Fictitious Play</a></h3>
+    <p style="color:#ccc;">问题：现有 LLM 多智能体系统（MAS）以 divide-and-conquer 为主轴，把长链推理 / 信息覆盖 / 异质技能拆给协作 agent——这解决的是执行复杂度；但真实世界大量决策任务（谈判、对抗博弈、竞争市场）本质是立场纠缠：每个利益相关方的决策相互依赖，没法被孤立求解。方法：提出 MAFP（Multi-Agent Fictitious Play），把不同利益方立场显式建模为独立 ...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>首次把立场纠缠（stance entanglement）作为 MAS 决策复杂度的独立类别</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>多轮 fictitious play 推理成本随 agent 数线性增长，对 10+ 利益方的复杂博弈延迟不可忽略；均衡搜索过程对 prompt 设计敏感，立场描述偏差会让 best response 漂移到错误均衡；对自然语言博弈的可形式化部分依赖任务结构，纯定性谈判场景难直接套用。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>MAFP 把决策过程形式化为博弈均衡搜索，每个 agent 用其他 agent 决策分布的 best response 迭代更新 · fictitious play 机制让各方互相暴露并修补彼此弱点</div>
+      <div class="row"><span class="author">🏢 团队：</span>Leyang Shen, Yang Zhang, Xiaoyan Zhao, Chun Kai Ling, Tat-Seng Chua → 1AGH University of Krakow (Poland), 2Jagiellonian University (Poland), 3Centre for Credible AI, Warsaw University of Technology (Poland)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/paper_summaries_v2_2026-06-19_04.jpg" alt="Learning User Simulators with Turing Rewards" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:p05 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19336" target="_blank">Learning User Simulators with Turing Rewards</a></h3>
+    <p style="color:#ccc;">问题：训练用户模拟器（让 LLM 扮演真实用户）能推动 agent 助手训练、个性化系统评估、社交科学研究——但现有做法要么用 log 概率匹配单一 ground-truth 回复，要么用相似度 reward，本质都在拟合 "像不像某条具体回复"，而忽略了用户身份的核心：能不能在历史条件下生成与该用户不可区分的回复。方法：提出 Turing-RL，把图灵测试判别器做成可微 RL 信号——LLM j...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Turing-RL 首次以图灵测试判别度作 RL reward 训练 user simulator</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>LLM judge 自身存在偏差与奖励劫持风险，模拟器可能学会针对特定 judge 的偏门话术；图灵判别度天然倾向 "平均用户"，对极端少数派个体的可复现性未做系统验证；图灵 reward 与 ground-truth 回复似然之间可能产生张力，需要额外约束防止模拟器沦为 "判官驱动型用户"。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>LLM judge 评估 "模拟回复 vs 真实用户在同等历史下的可能回复" 的不可区分度 · 把优化目标从 "匹配某条具体回复" 升到 "生成与真实用户不可区分的回复"</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yingshan Susan Wang, Cedegao E. Zhang, Linlu Qiu, Zexue He, Pengyuan Li, Alex Pentland, Roger P. Levy, Yoon Kim → NVIDIA</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_00.jpg" alt="vercel/eve" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/vercel/eve" target="_blank">vercel/eve</a></h3>
+    <p>vercel/eve 是 Vercel 官方在 2026-06-16 开源的 'Building Agents Framework',定位为企业级 AI Agent 的运行时加编排层,把大模型调用、工具执行、人机协作、状态持久化打包成一套 TypeScript-first SDK。核心技术栈是 '工作流加沙箱加 MCP' 三件套:工作流用有向无环图描述 agent 的规划-执行-验证循环,内置 checkpoint、断点续跑、分支、重放能力;沙箱基于 Firecracker microVM 给每个工具调用做隔离,网络、文件系统、外联全部可声明式策略化,适合让 agent 跑不可信代码;MCP 客户端层把任意 MCP 服务器直接接进 agent 工具集,官方同时给 eve 配套自己的 MCP 服务器供外部 agent 反向调用。框架还内置 harness 模式,开发者用 Markdown 写 agent 的系统提示、工具契约、行为守则,框架负责每次调用前自动重读并校验,避免提示词漂移。Apache-2.0 协议,1356 星,Vercel 团队首周亲自高强度迭代。</p>
+    <div class="source">⭐ 1,356 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_01.jpg" alt="localai-org/privacy-filter.cpp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/localai-org/privacy-filter.cpp" target="_blank">localai-org/privacy-filter.cpp</a></h3>
+    <p>localai-org/privacy-filter.cpp 是 LocalAI 社区在 2026-06-13 开源的 'OpenAI 隐私过滤命名实体识别模型' 极简 C++ 加 GGML 实现,定位是把 OpenAI 在 ChatGPT 里用来识别个人可识别信息(姓名、邮箱、电话、地址、证件号)的命名实体识别模型完整复刻到可本地、单文件、无 Python 依赖的 C++ 运行时里,让任何人都可以零成本做本地化敏感信息脱敏。技术栈是 GGML 张量库加纯 C++ 推理循环加 OpenAI 公开的命名实体识别架构权重,模型本身约 30MB,CPU 上单句推理延迟低于 5 毫秒,Apple Silicon、x86_64、ARM 全平台都跑得动,全程无网络请求、零数据外传,可直接命令行调用或嵌入到任意 C++ 应用。MIT 协议,LocalAI 主线产品正在把它集成进自家大模型代理做系统级输入输出脱敏,可作为反向代理插件无侵入式接入任何 OpenAI 兼容 API。</p>
+    <div class="source">⭐ 211 · C++</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_02.jpg" alt="renee-jia/scholar-loop" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/renee-jia/scholar-loop" target="_blank">renee-jia/scholar-loop</a></h3>
+    <p>renee-jia/scholar-loop 是独立研究者 Renee Jia 在 2026-06-15 开源的 '自主 AI 科学家' 多智能体框架,定位为把 '读论文、设计实验、跑代码、自批判、写综述' 的科研循环交给一组互相校验的大模型智能体自主完成。技术核心是五个角色化智能体的循环加可复现执行环境:读者智能体从 arXiv 抓论文并结构化抽取主张、方法、数据;设计师智能体基于文献缺口生成可执行假设加 Python 实验代码;执行者智能体在隔离容器里跑实验、把日志写到不可变制品存储;批评者智能体对结果做统计显著性检查加反例搜索,失败就回到设计师修订;写作者智能体产出符合 ICLR、NeurIPS 风格的 Markdown 报告,带引用图。整套循环支持确定性重放,内置自我预算机制防止智能体无限循环烧 token。MIT 协议,首周就在 Reddit 机器学习板块刷屏。</p>
+    <div class="source">⭐ 126 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_03.jpg" alt="TestSprite/testsprite-cli" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/TestSprite/testsprite-cli" target="_blank">TestSprite/testsprite-cli</a></h3>
+    <p>TestSprite/testsprite-cli 是 TestSprite 团队在 2026-06-11 开源的 'AI 驱动全栈自动化测试' 终端工具,定位是给开发者一条命令就让 AI 把任意 Web 应用、REST 接口、数据库模式跑成一套可执行回归测试。技术栈是 '智能体测试发现加无头浏览器集群加自愈断言':命令行先用大模型智能体把仓库源码加运行时行为(路由、接口端点、数据库迁移)理解一遍,自动生成 Playwright、Pytest 用例覆盖正常路径、边界、权限、错误码,然后在云端无头浏览器集群并行执行,失败的断言会让大模型反向读堆栈加 DOM 快照,自动修测试代码或上报真实缺陷。已集成 GitHub Actions、GitLab CI、Jenkins,自带抖动检测和 PR 级回归差异,Apache-2.0 协议。</p>
+    <div class="source">⭐ 482 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_04.jpg" alt="signsur4739379373/LTX-2.3-Finetuned-I2V" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/signsur4739379373/LTX-2.3-Finetuned-I2V" target="_blank">signsur4739379373/LTX-2.3-Finetuned-I2V</a></h3>
+    <p>signsur4739379373/LTX-2.3-Finetuned-I2V 是社区开发者在 HuggingFace Spaces 上以 Gradio 形式托管的 LTX-2.3 视频生成模型微调版,定位是面向 '说话人视频生成' 这一细分场景的即开即用在线演示,核心是在官方 LTX-2.3 图生视频基础上叠加 '身份加语音双条件' 微调:用户上传一张参考人像加一段参考音频,模型就能生成一段 '该人物以该声音说话' 的高质量短视频,默认 1216×704 分辨率、24 帧率、最长十秒,人物口型、表情、头部姿态都跟音频节奏对齐。底层是 LTX-Video 2.3 的扩散变换器架构加团队自训的身份、语音 LoRA 适配器,通过 ComfyUI 工作流 json 导出(项目内置 runexx_msr_workflow.json),支持 A100、4090 单卡实时生成,模型权重完全开源可下载本地推理。trendingScore 131(全站 HF Space 周榜第一),230 个赞,最后更新 6 月 18 日。</p>
+    <div class="source"> · Gradio</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-19/oss_summaries_v2_2026-06-19_05.jpg" alt="VAST-AI/TripoSplat" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/VAST-AI/TripoSplat" target="_blank">VAST-AI/TripoSplat</a></h3>
+    <p>VAST-AI/TripoSplat 是 VAST-AI(以 Tripo3D 系列三维生成模型闻名的开源团队)在 HuggingFace Spaces 上托管的 '图片 → 三维高斯泼溅' 在线演示,定位为把单张或多张输入图一次性产出可渲染、可下载、可直接进虚幻引擎、Unity、Blender 的三维高斯泼溅资产,推动 AIGC 三维资产生成从 '网格时代' 进入 '神经辐射场时代'。底层是 VAST 自研 TripoSplat 大模型,把 SAM、DINOv2 二维视觉先验加多视角扩散先验蒸馏进一个端到端的三维高斯泼溅回归网络,输入一到四张图、十到三十秒内输出带 PBR 材质、近乎几何正确的高斯泼溅文件(.ply / .splat),可直接在 Web 查看器里三百六十度旋转,也能导出网格兼容传统数字内容创作流程。trendingScore 48,257 个赞,持续稳定运行。</p>
+    <div class="source"> · Gradio</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-19 08:31</p>
+</footer>
+</div>
+</body>
+</html>
