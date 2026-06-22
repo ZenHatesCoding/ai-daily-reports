@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月22日 · 周一</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月22日 · 周一 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_00.jpg" alt="OpenAI:Samsung 全球部署 ChatGPT Enterprise 与 Codex,500 万人每周使用 Codex" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank">OpenAI:Samsung 全球部署 ChatGPT Enterprise 与 Codex,500 万人每周使用 Codex</a></h3>
+    <p style="color:#ccc;">OpenAI 与 Samsung Electronics 达成全球最大规模 ChatGPT Enterprise + Codex 部署。ChatGPT Enterprise 与 Codex 覆盖 Samsung 韩国全体员工 + 全球 Device eXperience (DX) 部门员工,涵盖研发、制造、营销、企业职能等场景。Codex 周活在韩国自 2/1 以来增长 ~800%,全球周活突破 500 万。</p><p style="color:#8b949e;font-size:13px;">💡  + Codex 部署。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_02.jpg" alt="DeepMind:Securing the future of AI agents — AI 控制路线图" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind 官方] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/" target="_blank">DeepMind:Securing the future of AI agents — AI 控制路线图</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 AI Agent 安全三步走路线图:1) 内部系统防 agent 滥用保护 2) AI 控制缓解措施应对不对齐风险 3) 持续测量三个关键指标(coverage / recall / false positive rate)。文章把 agent 安全问题从『模型对齐』扩展到『系统级防护』,针对未来能力更强的 agent 假设最坏情况。</p>
+    <div class="source">来源：DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_01.jpg" alt="TechCrunch:Trump 政府打击 Anthropic,谁受益?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch.com] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-w" target="_blank">TechCrunch:Trump 政府打击 Anthropic,谁受益?</a></h3>
+    <p style="color:#ccc;">TechCrunch 周末深度分析:Trump 政府以『国家安全/出口管制』为由加大对 Anthropic 的 Claude Mythos 5 系列限制,直接受益方是 OpenAI / Google 在联邦合同上的份额,以及 Anthropic 的国际办公室加速落地(韩国/欧洲)。</p>
+    <div class="source">来源：techcrunch.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_03.jpg" alt="TechCrunch:iPhone iOS 27 实用 AI 功能详解 — 超越 Siri" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch.com] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27" target="_blank">TechCrunch:iPhone iOS 27 实用 AI 功能详解 — 超越 Siri</a></h3>
+    <p style="color:#ccc;">Apple iOS 27 在 WWDC 之后发布首批实用 AI 功能清单,涵盖视觉搜索、实时翻译(离线)、照片 AI 编辑、邮件智能回复、Health AI 助理等。Apple 选择把 AI 嵌入系统级 App 而不是单做 Siri 升级,目标是『用户日常任务的 AI 化』而非炫技。</p>
+    <div class="source">来源：techcrunch.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_04.jpg" alt="The Atlantic 发布可搜索 AI 训练用音乐数据库" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[theverge.com] 3级信源 · cn</div>
+    <h3><a href="https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data" target="_blank">The Atlantic 发布可搜索 AI 训练用音乐数据库</a></h3>
+    <p style="color:#ccc;">The Atlantic 与多位音乐研究者合作发布公开数据库,系统整理了数百万首被用于训练主流 AI 音乐生成模型(Suno/Udio/Stable Audio 等)的曲目。即便版权方声明『不应公开使用』,许多曲目实际上已流入训练集,数据库让记者和版权方能自查训练数据来源。</p>
+    <div class="source">来源：theverge.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/news_items_v2_2026-06-22_05.jpg" alt="量子位:Meta 员工士气跌至 20 年谷底,CTO 公开承认 AI 重组糟糕" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[qbitai.com] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/436966.html" target="_blank">量子位:Meta 员工士气跌至 20 年谷底,CTO 公开承认 AI 重组糟糕</a></h3>
+    <p style="color:#ccc;">Meta 内部直播中 CTO Andrew Bosworth 公开承认过去一年的 AI 重组『执行糟糕』,员工士气跌至 20 年谷底。报告指向 Llama 系列持续掉队 + Reality Labs 持续烧钱 + 大规模裁员后 AI 团队归属不清。Meta 近期在天价 GPU 集群上重押 Superintelligence 路线,但内部组织整合远未完成。</p>
+    <div class="source">来源：qbitai.com</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/paper_summaries_v2_2026-06-22_00.jpg" alt="FreeStyle: Free Control of Style-Content Dual-Reference Generation from Community LoRA Mining" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20506 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20506" target="_blank">FreeStyle: Free Control of Style-Content Dual-Reference Generation from Community LoRA Mining</a></h3>
+    <p style="color:#ccc;">Style-Content 双参考图像生成的关键瓶颈是缺乏大规模三元组数据。FreeStyle 从社区(Civitai/SeaArt/Liblib 等)挖掘 LoRA,通过标准化 workflow 自动组合成 style + content 双参考对,构造首个大规模 FreeStyle 数据集(百万级三元组)。提出两阶段课程:attention-level disentangle + freque...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>社区 LoRA Mining pipeline：从 Civitai/SeaArt/Liblib 自动挖掘 + 配对，构造百万级三元组数据集</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖社区 LoRA 质量和标准化 workflow 复杂度,新风格 / 小众风格覆盖差;attention 监督对长尾 style 鲁棒性弱;双参考推理比单参考慢 1.5-2x,工程落地成本高。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>两阶段课程:attention disentangle + frequency-aware RoPE modulation,分别压制两类泄漏 · Style-invariant CAS + VLM Verification 评测:Style 对齐 + Content 保留 + 美学 + Instruction following 四维度</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jinghong Lan, Wei Cheng, Yunuo Chen, Ziqi Ye, Peng Xing, Yixiao Fang, Rui Wang, Yufeng Yang, Xuanyang Zhang, Xianfang Zeng, Difan Zou, Gang Yu, Chi Zhang → Fudan University (复旦大学), StepFun (步瞳), Westlake University (西湖大学), University of Hong Kong (香港大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/paper_summaries_v2_2026-06-22_01.jpg" alt="FlowBender: Feedback-Aware Training for Self-Correcting Conditional Flows" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20404 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20404" target="_blank">FlowBender: Feedback-Aware Training for Self-Correcting Conditional Flows</a></h3>
+    <p style="color:#ccc;">Conditional diffusion/flow 模型经常违反 task 本身的约束(深度条件模型生成图的 re-extracted depth 与输入不符)。FlowBender 提出 feedback-aware training:训练时通过 forward operator(depth predictor)反推当前 sample 是否满足约束,违反时加权 gradient,使模型自我纠错...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Forward operator 反推:训练时把约束违反当 loss signal,模型自纠</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>训练时需要 forward operator 本身可微 + 计算开销大;对新约束类型需重新训练;违反约束的概率分布与推理时的真实分布不完全对齐,长尾 case 仍可能违反。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>推理时不需要外部 feedback:在 ImageNet 256x256 class-conditional FID 显著改善 · 通用性:同样机制可扩展到 depth / segmentation / pose 等条件约束</div>
+      <div class="row"><span class="author">🏢 团队：</span>Daniel Gilo, Sven Elflein, Ido Sobol → Vector Institute (Toronto, Canada)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/paper_summaries_v2_2026-06-22_02.jpg" alt="FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.19605 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.19605" target="_blank">FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines</a></h3>
+    <p style="color:#ccc;">Multi-step LLM pipeline 失败的瓶颈常在 retrieval + reasoning + formatting 步骤的交互处。FAPO 用 Claude Code 作为 optimizer,在标准化 codebase 里反复评估 pipeline、检查中间步骤、诊断失败、提出局部修改、验证变体,完全自主完成 prompt 优化。在医疗 RAG / 多跳 QA 等 4 个真实任...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Claude Code as optimizer:在标准化 codebase 里全自主 prompt 工程</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖 Claude Code 这种强代码 agent 的可用性;每次优化需要数十次 LLM 调用,优化成本是 prompt 工程的 50-100x;对未见过 pipeline 结构需重写 codebase,迁移成本高;无法保证全局最优,可能陷入局部最优 prompt。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>诊断中间步骤:不只是端到端 loss,检查 retrieval / reasoning / formatting 各自的失败模式 · 4 个真实 RAG / multi-hop QA 任务平均 +18% 准确率</div>
+      <div class="row"><span class="author">🏢 团队：</span>Paul Kassianik, Baturay Saglam, Huaibo Zhao → Foundation AI (Cisco Systems Inc), Yale University</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/paper_summaries_v2_2026-06-22_03.jpg" alt="HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20521 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20521" target="_blank">HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining</a></h3>
+    <p style="color:#ccc;">Embodied foundation model 受限于 teleoperated 真实机器人数据(成本高、多样性低、采集难)。HumanScale 首次系统对比 egocentric human video(YouTube 一类)与 teleoperated real-robot trajectories 作为预训练数据。惊人发现:在 egocentric 数据上预训练 + 小量 labele...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>系统对比:egocentric human video vs teleoperated real-robot trajectory 作为 embodied pretraining 源</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖大规模 egocentric human video 数据(版权/隐私风险);真实机器人 fine-tuning 数据仍需小量采集;distribution shift 比想象大,新场景 / 新 embodiment 迁移难;评估仅在 manipulation 类任务,locomotion / mobile robot 未覆盖。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Egocentric pretraining + 小量 real-robot post-training:比纯 real-robot 低 24% validation loss · In-dist / OOD real-robot 任务成功率分别 +52.5% / +90%(vs 纯 real-robot baseline)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Juncheng Ma, Jianxin Bi, Yufan Deng, Xuanran Zhai, Kewei Zhang, Ye Huang, Bo Liang, Shukai Gong, Jiankai Tu, Xiaotian Tang, Jiaxin Li, Kaiqi Chen, Duomin Wang, Yuqi Wang, Bingyi Kang, Eric Huang, Zhiyang Dou, Zhen Dong, Enze Xie, Wojciech Matusik, Tat-Seng Chua, Daquan Zhou → PKU (北京大学), NUS (新加坡国立大学), MIT, UCSB, NVIDIA</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/paper_summaries_v2_2026-06-22_04.jpg" alt="The FID Lottery: Quantifying Hidden Randomness in Generative-Model Evaluation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20536 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20536" target="_blank">The FID Lottery: Quantifying Hidden Randomness in Generative-Model Evaluation</a></h3>
+    <p style="color:#ccc;">FID 是图像生成的事实标准,几乎所有论文都报单一数字。但 FID 本身是一个随机变量(同时依赖训练 seed 和 generation seed)。Kyutai + UC Berkeley 团队在几百个 SiT 模型上系统测量:相同 recipe 不同 seed 重训练,FID 浮动 3.2x;增大 compute / model size 只把 CoV 收窄到 1-2%;per-cell cl...</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>FID Lottery:相同 recipe 不同 seed,FID 浮动 3.2x,差 seed 需 2x compute 才能追平</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>新协议要求每个模型跑多个训练 seed,对小实验室成本翻倍;per-cell guidance tuning 改变 FID 排序,需要 paper / leaderboard 重新校准;FID 仍是 industry de facto 标准,新协议推广需要时间。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Compute scaling 只把 FID CoV 收窄到 1-2%,FID 复现性的根因在训练 / 采样随机性 · 新 FID 协议:per-cell optimal guidance + 多 seed error bar,< 1.3% CoV 的 FID 差距视为不显著</div>
+      <div class="row"><span class="author">🏢 团队：</span>Nicolas Dufour, Alexei A. Efros, Patrick Pérez → Kyutai (Paris AI research institute), UC Berkeley</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_00.jpg" alt="openai/openai-agents-python" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/openai/openai-agents-python" target="_blank">openai/openai-agents-python</a></h3>
+    <p>OpenAI 官方开源的多 Agent 工作流框架,轻量级 SDK 提供 agents / handoffs / guardrails / tracing 等核心抽象。在 Responses API + 工具调用基础上提供 Pythonic 编排接口,与 OpenAI 新出的 Agent Kit 配套。</p>
+    <div class="source">⭐ 27,307 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_01.jpg" alt="NousResearch/hermes-agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></h3>
+    <p>Nous Research 推出的『grows with you』agent runtime,定位是与具体任务解耦的通用 agent 执行框架。Hermes 系列模型的 agent runtime 层,提供长期记忆 + 工具调用 + 多 Agent 协作 + 自我演化能力。</p>
+    <div class="source">⭐ 199,075 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_02.jpg" alt="Wan-AI/Wan2.2-Animate" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag huggingface">HuggingFace</span></div>
+    <h3><a href="https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate" target="_blank">Wan-AI/Wan2.2-Animate</a></h3>
+    <p>阿里 Wan 团队的开源 Wan2.2 视频生成模型的 Animate 专用变体,支持人物动作迁移 / 角色动画 / 视频续写。在 HuggingFace Spaces 提供在线 demo,Apache-2.0 协议,可商用。</p>
+    <div class="source">❤️ 5,113 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_03.jpg" alt="infiniflow/ragflow" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/infiniflow/ragflow" target="_blank">infiniflow/ragflow</a></h3>
+    <p>InfiniFlow 的 RAGFlow 是当前最成熟的开源 RAG 框架,在 GitHub Trending 长期占据 RAG 类榜首。基于深度文档理解(DeepDoc) + GraphRAG + Agentic RAG,企业部署友好,支持多种 LLM + 向量库后端。</p>
+    <div class="source">⭐ 83,302 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_04.jpg" alt="pytorch/torchtitan" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/pytorch/torchtitan" target="_blank">pytorch/torchtitan</a></h3>
+    <p>PyTorch 官方的 native 训练框架,专为 LLM / 扩散模型大规模分布式训练设计。基于 PyTorch FSDP + TP + PP + AC 并行,无需外部框架(不再依赖 fairscale / deepspeed)。</p>
+    <div class="source">⭐ 5,452 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-22/oss_summaries_v2_2026-06-22_05.jpg" alt="Tencent/AI-Infra-Guard" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Tencent/AI-Infra-Guard" target="_blank">Tencent/AI-Infra-Guard</a></h3>
+    <p>腾讯 AI Infra Guard 是一站式 AI Red Teaming 平台,覆盖 prompt 注入 / 模型越狱 / 数据泄漏 / 工具调用滥用等攻击面,提供自动化攻击 + 防御评估 pipeline。</p>
+    <div class="source">⭐ 3,946 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-22 10:51</p>
+</footer>
+</div>
+</body>
+</html>
