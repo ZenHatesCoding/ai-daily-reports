@@ -123,7 +123,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="card-body">
     <div class="card-meta">arXiv:2606.20506 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2606.20506" target="_blank">FreeStyle: Free Control of Style-Content Dual-Reference Generation from Community LoRA Mining</a></h3>
-    <p style="color:#ccc;">Style-Content 双参考图像生成的关键瓶颈是缺乏大规模三元组数据。FreeStyle 从社区(Civitai/SeaArt/Liblib 等)挖掘 LoRA,通过标准化 workflow 自动组合成 style + content 双参考对,构造首个大规模 FreeStyle 数据集(百万级三元组)。提出两阶段课程:attention-level disentangle + freque...</p>
+    <p style="color:#ccc;">Style-Content 双参考图像生成的关键瓶颈是缺乏大规模三元组数据。FreeStyle 从社区(Civitai/SeaArt/Liblib 等)挖掘 LoRA,通过标准化 workflow 自动组合成 style + content 双参考对,构造首个大规模 FreeStyle 数据集(百万级三元组)。提出两阶段课程:attention-level disentangle + frequency-aware RoPE modulation,分别压制 style 泄漏和 harder 阶段的位置-对应泄漏。引入 Style-invariant Content Alignment Score (CAS) + VLM-based Verification。</p>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>社区 LoRA Mining pipeline：从 Civitai/SeaArt/Liblib 自动挖掘 + 配对，构造百万级三元组数据集</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖社区 LoRA 质量和标准化 workflow 复杂度,新风格 / 小众风格覆盖差;attention 监督对长尾 style 鲁棒性弱;双参考推理比单参考慢 1.5-2x,工程落地成本高。</div>
@@ -138,7 +138,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="card-body">
     <div class="card-meta">arXiv:2606.20404 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2606.20404" target="_blank">FlowBender: Feedback-Aware Training for Self-Correcting Conditional Flows</a></h3>
-    <p style="color:#ccc;">Conditional diffusion/flow 模型经常违反 task 本身的约束(深度条件模型生成图的 re-extracted depth 与输入不符)。FlowBender 提出 feedback-aware training:训练时通过 forward operator(depth predictor)反推当前 sample 是否满足约束,违反时加权 gradient,使模型自我纠错...</p>
+    <p style="color:#ccc;">Conditional diffusion/flow 模型经常违反 task 本身的约束(深度条件模型生成图的 re-extracted depth 与输入不符)。FlowBender 提出 feedback-aware training:训练时通过 forward operator(depth predictor)反推当前 sample 是否满足约束,违反时加权 gradient,使模型自我纠错。在 class-conditional ImageNet 上 FID 改善显著,推理时不需要外部反馈。</p>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>Forward operator 反推:训练时把约束违反当 loss signal,模型自纠</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>训练时需要 forward operator 本身可微 + 计算开销大;对新约束类型需重新训练;违反约束的概率分布与推理时的真实分布不完全对齐,长尾 case 仍可能违反。</div>
@@ -153,7 +153,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="card-body">
     <div class="card-meta">arXiv:2606.19605 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2606.19605" target="_blank">FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines</a></h3>
-    <p style="color:#ccc;">Multi-step LLM pipeline 失败的瓶颈常在 retrieval + reasoning + formatting 步骤的交互处。FAPO 用 Claude Code 作为 optimizer,在标准化 codebase 里反复评估 pipeline、检查中间步骤、诊断失败、提出局部修改、验证变体,完全自主完成 prompt 优化。在医疗 RAG / 多跳 QA 等 4 个真实任...</p>
+    <p style="color:#ccc;">Multi-step LLM pipeline 失败的瓶颈常在 retrieval + reasoning + formatting 步骤的交互处。FAPO 用 Claude Code 作为 optimizer,在标准化 codebase 里反复评估 pipeline、检查中间步骤、诊断失败、提出局部修改、验证变体,完全自主完成 prompt 优化。在医疗 RAG / 多跳 QA 等 4 个真实任务上平均提升 18%,且不需要人工 prompt engineering。</p>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>Claude Code as optimizer:在标准化 codebase 里全自主 prompt 工程</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖 Claude Code 这种强代码 agent 的可用性;每次优化需要数十次 LLM 调用,优化成本是 prompt 工程的 50-100x;对未见过 pipeline 结构需重写 codebase,迁移成本高;无法保证全局最优,可能陷入局部最优 prompt。</div>
@@ -168,7 +168,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="card-body">
     <div class="card-meta">arXiv:2606.20521 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2606.20521" target="_blank">HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining</a></h3>
-    <p style="color:#ccc;">Embodied foundation model 受限于 teleoperated 真实机器人数据(成本高、多样性低、采集难)。HumanScale 首次系统对比 egocentric human video(YouTube 一类)与 teleoperated real-robot trajectories 作为预训练数据。惊人发现:在 egocentric 数据上预训练 + 小量 labele...</p>
+    <p style="color:#ccc;">Embodied foundation model 受限于 teleoperated 真实机器人数据(成本高、多样性低、采集难)。HumanScale 首次系统对比 egocentric human video(YouTube 一类)与 teleoperated real-robot trajectories 作为预训练数据。惊人发现:在 egocentric 数据上预训练 + 小量 labeled real-robot 后训练,在真实机器人任务上比纯 real-robot 预训练低 24% validation loss,且 in-distribution / out-of-distribution 任务成功率分别高 52.5% / 90%。</p>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>系统对比:egocentric human video vs teleoperated real-robot trajectory 作为 embodied pretraining 源</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖大规模 egocentric human video 数据(版权/隐私风险);真实机器人 fine-tuning 数据仍需小量采集;distribution shift 比想象大,新场景 / 新 embodiment 迁移难;评估仅在 manipulation 类任务,locomotion / mobile robot 未覆盖。</div>
@@ -183,7 +183,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
   <div class="card-body">
     <div class="card-meta">arXiv:2606.20536 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2606.20536" target="_blank">The FID Lottery: Quantifying Hidden Randomness in Generative-Model Evaluation</a></h3>
-    <p style="color:#ccc;">FID 是图像生成的事实标准,几乎所有论文都报单一数字。但 FID 本身是一个随机变量(同时依赖训练 seed 和 generation seed)。Kyutai + UC Berkeley 团队在几百个 SiT 模型上系统测量:相同 recipe 不同 seed 重训练,FID 浮动 3.2x;增大 compute / model size 只把 CoV 收窄到 1-2%;per-cell cl...</p>
+    <p style="color:#ccc;">FID 是图像生成的事实标准,几乎所有论文都报单一数字。但 FID 本身是一个随机变量(同时依赖训练 seed 和 generation seed)。Kyutai + UC Berkeley 团队在几百个 SiT 模型上系统测量:相同 recipe 不同 seed 重训练,FID 浮动 3.2x;增大 compute / model size 只把 CoV 收窄到 1-2%;per-cell classifier-free guidance 改变哪些 seed 表现最好;运气好的训练 seed 能比不幸的高 2x compute 量还低 FID。提出新 FID 协议:per-cell optimal guidance + 多 seed 报 error bar。</p>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>FID Lottery:相同 recipe 不同 seed,FID 浮动 3.2x,差 seed 需 2x compute 才能追平</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>新协议要求每个模型跑多个训练 seed,对小实验室成本翻倍;per-cell guidance tuning 改变 FID 排序,需要 paper / leaderboard 重新校准;FID 仍是 industry de facto 标准,新协议推广需要时间。</div>
@@ -261,7 +261,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <footer>
   <p>Generated by Hermes Agent · AI Tech Daily Report</p>
   <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
-  <p>2026-06-22 10:51</p>
+  <p>2026-06-22 11:38</p>
 </footer>
 </div>
 </body>
