@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月23日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月23日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_00.jpg" alt="Patch the Planet: OpenAI 推出 Daybreak 计划支持开源维护者" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/patch-the-planet" target="_blank">Patch the Planet: OpenAI 推出 Daybreak 计划支持开源维护者</a></h3>
+    <p style="color:#ccc;">OpenAI 启动 Patch the Planet 计划, 与开源安全工具 Daybreak 联合, 通过资金、模型 API credits 和安全扫描工具帮助开源维护者识别并修复高危漏洞。首批合作包括 Linux Foundation、Python Software Foundation、Apache Software Foundation 等 20+ 主流基金会, 覆盖 PyTorch、Kubernetes、Linux kernel 等关键基础设施。OpenAI 承诺首年投入 1 亿美元等值资源, 包括 GPT 系列模型 API credits 和 Codex agent 自动化漏洞挖掘能力, 用于自动生成 patch PR 并协助 review。这是 OpenAI 首次将 Codex agent 用于非内部产品的对外公共安全基础设施, 也是首次向开源维护者开放 agent 自主提交流程。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 从模型 API 销售走向开源安全基础设施的战略延伸, 把 Codex agent 从闭源研发工具变成开源维护者的协作工具, 实质上是在与 Anthropic (Claude Code) + Google (Project Zero + OSS-Fuzz) 争夺 AI 时代的安全基础设施话语权。开源维护者基金这套玩法 (资金 + 模型 credits + 工具) 是 Anthropic 不会跟的赛道, 因为 Anthropic 一直把 safety 留在内部研究。Linux Foundation 等 20+ 基金会首批站台说明 OpenAI 在不到一年内完成了从营利公司到开源公共物品提供者的信任建设, 对 OSS 生态是真实利好, 但需要警惕 OpenAI 把 Codex agent 训练数据从开源项目 patch review 中汲取 (训练用 vs 安全用的边界)。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_01.jpg" alt="Codex-maxxing: OpenAI 让 Codex agent 能跑跨周长任务" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/codex-maxxing-long-running-work" target="_blank">Codex-maxxing: OpenAI 让 Codex agent 能跑跨周长任务</a></h3>
+    <p style="color:#ccc;">OpenAI 发布 Codex agent 的长任务模式 (codex-maxxing), 允许 Codex 在云端持续运行跨天到跨周的复杂软件工程项目, 期间可自主重启、恢复上下文、跨 PR 推进任务。技术核心是把上下文窗口从单 session 8K-32K 扩到长任务记忆池 (persistent memory pool), agent 在任务中途被 pre-empt 后能无缝从上次检查点恢复, 配合 Codex 自带的任务规划-执行-验证循环 (plan-execute-verify) 自动重构失败的代码路径。OpenAI 内部 benchmark 显示, 跨周长任务的成功率从原 34% 提升到 67%, 单任务平均完成时间从 4.2 天降到 1.8 天。配套推出 Codex Tasks dashboard, 用户可监控 agent 的实时进度、cost 消耗、上下文摘要。</p><p style="color:#8b949e;font-size:13px;">💡 Codex 从 chatbot IDE 补全升级到云端常驻工程师是 agent 工程化的关键一步 — Anthropic 的 Claude Code 仍是 session 模式 (用户要主动 keep alive), Cursor 仍是 IDE 嵌入式。OpenAI 把 agent 推到云端持久化是把 AI 员工从概念变成可计费 SKU (Codex Tasks dashboard 直接显示 cost), 商业模式上更接近 AWS Lambda (按 compute 时间计费) 而非 ChatGPT (按 message 计费)。跨周任务的持久记忆 + 任务规划循环是 agent 区别于长上下文 LLM 的关键能力 — Anthropic / Google 必须 6 个月内跟, 否则在企业软件工程市场会被甩开。67% 成功率听着不高, 但比人类初级工程师跨周独立完成任务的 60-75% 已经接近, 这就是为什么企业 CTO 在认真考虑把 Codex Tasks 当作虚拟 SDE 团队采购。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_02.jpg" alt="Anthropic 与白宫最新冲突: 三件值得关注的事" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Tech Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/22/1139424/three-things-to-watch-amid-anthropics-latest-feud-with-the-government/" target="_blank">Anthropic 与白宫最新冲突: 三件值得关注的事</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 分析 Anthropic 与特朗普政府的最新一轮冲突: 6/12 Anthropic 因合规问题暂停 Fable 5 / Mythos 5 在联邦机构的使用, 政府随即发布出口管制升级指令。三件值得关注的事: (1) Anthropic 拒绝披露 Fable 5 / Mythos 5 的训练数据中敏感来源的具体数量 (声称 trade secret), 政府要求公开但被联邦法院驳回, 案子进入上诉; (2) Anthropic 6/12 发布 Anthropic Public Record 公开其与政府的 17 次正式通信, 把政府要求训练的细节公之于众, 是 AI 公司首次系统性反向披露政府指令; (3) Anthropic 6/17 宣布首尔办公室, 启动与韩国 Naver / LG / Samsung 的 partner 计划, 同步在英国伦敦扩展, 实质上是把对美出口管制担忧的客户分流到亚太 + 欧洲。MIT TR 视角是 Anthropic 的策略是接受美境内合规义务, 但把全球扩张重心挪到盟国。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 走的是合规 + 反向披露 + 盟国扩张三件套, 跟 OpenAI 的主动参与政府项目 (如 Stargate) 和 Google 的政府合同 + 多元化完全不同的政治路线。这背后是 Anthropic 把自己定位为 AI 安全优先于商业增长的公司, 用 Public Record 这种 reverse transparency 工具把政治成本转嫁给政府 (政府以后再要求 AI 公司做什么都要三思公开记录的后果)。出口管制升级对 Anthropic 在亚太市场是负向短期冲击 (中国客户不能用), 但中长期把客户逼向 Naver/LG/Samsung 这些 Anthropic 战略 partner, 反而强化 Anthropic 在盟国生态的护城河。MIT TR 没明说但暗示的: Anthropic 在赌 2028 美国大选 (无论是哪一方赢) 都会重新校准 AI 政策, 提前在盟国建立非美依赖是关键保险。</p>
+    <div class="source">来源：MIT Tech Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_03.jpg" alt="AI 芯片公司 Groq 确认 6.5 亿美元融资, 在 Nvidia 撤回 200 亿美元挖人后重组团队" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/" target="_blank">AI 芯片公司 Groq 确认 6.5 亿美元融资, 在 Nvidia 撤回 200 亿美元挖人后重组团队</a></h3>
+    <p style="color:#ccc;">AI 推理芯片公司 Groq 正式确认完成 6.5 亿美元 D 轮融资, 估值 65 亿美元, 领投方包括 D1 Capital、Sands Capital、BlackRock。本轮融资距 Nvidia 6 月初宣布 200 亿美元非收购挖角计划 (20B not-acqui-hire deal) 仅 3 周 — 该计划被广泛解读为 Nvidia 用高薪 + 期权挖走 Groq、AMD、Intel 等竞争对手的核心工程师, 而不直接触发反垄断。Groq 用 6.5 亿美元融资中约 40% (2.6 亿) 用于员工留任 (留任奖金 + 加速股权 vesting), 实质上是对冲 Nvidia 挖角。同期 Groq 重组工程团队, 把原本按 LPU 架构 / 软件栈 / 客户集成的 3 个部门重新分成推理优化 (Inference Optimization) 和模型编译 (Model Compilation) 两个核心部门 + 1 个客户成功部门, 缩减管理层级。CEO Jonathan Ross 表示融资后公司 run rate 可支撑 18 个月运营, 不急于 IPO。</p><p style="color:#8b949e;font-size:13px;">💡 Groq 这次融资是 2026 年 AI 芯片领域非 Nvidia 阵营求生存的标志事件 — Cerebras / Groq / Tenstorrent / Etched / Rebellions 这 5 家独立推理芯片公司都在用高估值融资 + 留任奖金对冲 Nvidia 的挖角不收购策略。20B 挖角计划实质上是一种反垄断灰色地带操作 — Nvidia 不直接收购竞争对手避免 FTC 审查, 而用高薪挖人削弱对手, 业内称之为人才并购 (talent acquisition)。Groq 6.5 亿估值相对 2025 年 80 亿估值大幅缩水, 反映独立推理芯片市场在 Nvidia Blackwell / Rubin 系列量产 + Microsoft / Google 自研 TPU / Trainium 双重夹击下融资估值进入下行周期。CEO 不急于 IPO 是务实判断, 因为 IPO 市场对非 Nvidia 推理芯片公司的估值倍数已经压到 5-8x ARR, 远低于 2024 的 30x。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_04.jpg" alt="Google DeepMind 押注 7500 万美元投资 AI 在好莱坞的未来, 与 A24 达成合作" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/" target="_blank">Google DeepMind 押注 7500 万美元投资 AI 在好莱坞的未来, 与 A24 达成合作</a></h3>
+    <p style="color:#ccc;">Google DeepMind 与独立电影公司 A24 达成 7500 万美元战略合作, 重点投资 Veo 视频生成模型在电影制作流程的应用。这是 DeepMind 自 2025 年与 Disney / Pixar 合作后第二次大型影视投资, 但 A24 合作的独立电影 + 实验叙事定位跟 Disney 的主流商业片流水线完全不同。合作分 3 个层次: (1) Veo 模型获得 A24 完整片库 (含 Everything Everywhere All at Once / Moonlight / Hereditary 等 80+ 部) 的训练授权, 用于改进电影镜头语言理解和长视频一致性; (2) DeepMind 工程师入驻 A24 后期制作部门, 开发导演意图解析 agent, 把分镜脚本转成 Veo 可控生成的 prompt 序列; (3) A24 导演可优先使用 DeepMind 还未公开发布的 Veo 3 模型, 用于独立电影实验短片制作。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 选 A24 而不是 Disney / Netflix 走的是高质量数据 + 艺术实验性路线, 实质上是用 A24 电影作为 Veo 模型的长视频叙事能力训练场 — Disney 数据太多但风格同质化, A24 数据少但每部都是精品且叙事结构独特。DeepMind 把导演意图解析 agent 做成 Veo 商业化的关键中间件, 是把生成式 AI 从短视频 demo 推进到专业影视工作流的卡位战。这个合作对 Runway (Gen-4) / Pika / Sora 是降维打击, 因为 DeepMind 直接用 A24 真实片库训练, 而 Runway / Pika 只能用公开互联网视频。但风险在于 SAG-AFTRA 工会对 AI 训练用表演片段的版权追溯仍未解决, A24 这次的合作可能成为工会新一轮诉讼的焦点。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/news_items_v2_2026-06-23_05.jpg" alt="AI 的 Brokenomics: AI 行业的经济学已经崩溃" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News (Ed Zitron)] 3级信源 · cn</div>
+    <h3><a href="https://www.wheresyoured.at/brokenomics/" target="_blank">AI 的 Brokenomics: AI 行业的经济学已经崩溃</a></h3>
+    <p style="color:#ccc;">科技评论家 Ed Zitron 发布长文 AI's Brokenomics, 引用最新财报数据系统论证 AI 行业的经济学已经崩溃。核心论点: (1) OpenAI 2026 年 ARR 预计 120 亿美元, 但 compute cost 估算 180 亿美元 (含 GPT-5 / GPT-5.5 / o-series 推理), 单 ARR 烧钱率 1.5x, 是任何 SaaS 公司的 10 倍; (2) Anthropic ARR 30 亿但 compute cost 估算 55 亿, 同样 1.8x 烧钱率; (3) Microsoft Azure OpenAI Service 单 GPU 小时毛利率约 -25% (微软自己披露), 是 Azure 历史上唯一亏损的核心服务; (4) NVIDIA 数据中心营收 70% 来自 5 家 hyperscaler (Microsoft / Google / Meta / Amazon / Oracle), 形成循环交易 (circular financing), 即 NVIDIA 投资 CoreWeave / Lambda / Crusoe, 这些公司用 NVIDIA 投资款买 NVIDIA GPU, 推动 NVIDIA 营收虚高; (5) GenAI 真正变现路径只有两条: (a) ChatGPT 订阅 + 企业 license, (b) Copilot 类 IDE 集成 — 但前者用户增长已放缓, 后者被 Cursor 等专业工具分食。文章结论: AI 行业 2027 年将经历 OpenAI 上市 / 被收购 / 拆分的格局剧变。</p><p style="color:#8b949e;font-size:13px;">💡 Ed Zitron 的 Brokenomics 是 2026 年 AI 行业最尖锐的清醒派分析, HN 上 13 个 upvotes + Twitter 上万次引用, 已经成为 AI 泡沫论的核心引用文章。文章里的数字并非独家披露, 但首次系统性串联起 OpenAI ARR / compute cost / NVIDIA circular financing 三条线, 给 AI 估值是否可持续提供了清晰的数据框架。需要注意 Ed Zitron 自己的立场偏 negative (他运营科技 newsletter Where is Your Ed At, 长期批评 Big Tech), 但这次文章引用数据均可一手验证, 不是 AI doomer 的纯情绪宣泄。AI 行业内部对这篇文章的反应两极: (a) 同意方 (Anthropic / Mistral / Cohere 高管私下转发) 认为 OpenAI 的先烧钱后变现模式不可持续, 2027 是拐点; (b) 反对方 (OpenAI / NVIDIA 公关) 反驳 compute cost 估算偏高。无论立场, 文章给企业 CIO 一个清晰的采购参考: AI 工具采购合同应增加 compute cost 透明度 + vendor 财务健康度条款, 避免被未来 vendor 倒下拖下水。</p>
+    <div class="source">来源：Hacker News (Ed Zitron)</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/paper_summaries_v2_2026-06-23_00.jpg" alt="S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20515 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20515" target="_blank">S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</a></h3>
+    <p style="color:#ccc;">论文提出 S-Agent 框架, 把多模态大模型 (VLM) 从单帧图像理解改造为带空间工具调用能力的 agent, 在 MMSI-Bench 上 zero-shot 让 Gemini-3-Pro 提升 1.2%, 让 Qwen-VL-8B 提升 10.5%。核心机制是 3 层: (1) 层次化空间工具 (Hierarchical Spatial Tools) — 把空间推理拆成 grounding / 2D-to-3D lifting / aggregation 三个子工具, 每个子工具调用专业 CV 模型 (depth estimation / NeRF / pose estimation) 完成几何推理; (2) 双记忆系统 (Dual Memory) — Scene Memory 维护 3D 物体+空间事实, Agent Memory 维护工具调用 trace + 推理历史, 支持跨多视图多帧的 stateful reasoning; (3) 主动证据积累 (Active Evidence Accumulation) — agent 主动决定下一步需要什么证据 (query / condition / tool-use), 而不是单次 forward pass 输出所有结果。S-Agent 把当前 SOTA 空间 VLM 从 frame-centric recognition 推进到 scene-centric understanding, 支持视频级别的 spatio-temporal reasoning。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>S-Agent 的核心算法是 spatio-temporal evidence accumulation, 通过 VLM 作为 semantic planner 决策 evidence needs, 配合 hierarchy of spatial tools 调取几何专家 (depth / 3D / NeRF), 同时维护 Scene Memory + Agent Memory 双系统, 让推理从单次预测变成跨帧的状态追踪循环。配套 benchmark MMSI-Bench 验证 zero-shot + SFT 两种 setting 的提升幅度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理延迟高 — agent 模式比 VLM 单次 forward pass 慢 8-15 倍 (3-5 次工具调用), 在实时视频分析场景 (自动驾驶 / 机器人) 难以直接部署, 需配合 tool 蒸馏 (把 agent trace 蒸馏成单次 forward 模型) 才能落地。代价 2: 工具调用可靠性 — hierarchy tools 依赖 depth / NeRF 等子模型的精度, 在 transparent / reflective / textureless 物体 (玻璃镜面 / 白墙) 上 NeRF 重建失败会传导到 agent 推理, 鲁棒性受限。代价 3: 训练数据稀缺 — MMSI-Bench 仅 4.5K 样本, agent 需要大量空间推理 trace 数据, 扩展到工业场景 (工厂 / 仓储) 需要重新标注。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span>Yalun Dai, Hao Li, Shulin Tian, Runmao Yao, Yuhao Dong, Fangzhou Hong, Zhaoxi Chen, Fangfu Liu, Baoliang Tian, Dingwen Zhang, Tao Wang, Kim-Hui Yap, Ziwei Liu → NTU (Nanyang Technological University) + THU (Tsinghua University) + ByteDance + NWPU (Northwestern Polytechnical University) + Ropedia</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/paper_summaries_v2_2026-06-23_01.jpg" alt="JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20563 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20563" target="_blank">JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising</a></h3>
+    <p style="color:#ccc;">论文解决 3D 视觉错觉生成问题 — 生成一个 3D mesh 从不同视角看到完全不同的语义 (例如某视角看到孔雀, 旋转 90 度看到菠萝)。传统方法分两类: (a) SDS-based optimization 慢且颜色过饱和; (b) naive stitching 拼接导致几何不连贯, 在目标视角出现明显接缝和语义泄露 (semantic leakage)。本文提出 JanusMesh, 第一个 fast and training-free 框架, 通过 cross-space dual-branch denoising 解决。核心思路: (1) 双分支 denoising — text-to-3D 阶段同时跑两个 latent space 分支 (text-A 空间 + text-B 空间), 每步去噪时跨空间交换 semantic guidance; (2) geometric consistency loss — 通过 depth alignment + normal consistency 强制 mesh 在任意视角都保持几何平滑, 杜绝接缝; (3) 无需训练 — 整个 pipeline 跑在预训练 text-to-3D diffusion model 上, 不需要 per-shape optimization。结果: 3-5 分钟生成一个高质量 3D 错觉 mesh (传统方法 30+ 分钟), 接缝率从 38% 降到 2.1%。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>JanusMesh 方法核心是 cross-space dual-branch denoising: 在 SDS diffusion 阶段同时维护两个 latent space (target A + target B), 每步去噪 cross-attention 时同时 attend 两个 text embedding, 通过 attention mask 控制不同视角的主导语义; 几何一致性靠 depth map alignment + normal field smoothness 约束, 训练阶段完全冻结, 只在 inference 跑 cross-space guidance。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理显存高 — dual-branch denoising 比单分支需要 2x 显存, 在消费级 GPU (RTX 4090 24GB) 仅能跑 256^3 分辨率 mesh, 高分辨率 (512^3+) 需 A100/H100 80GB。代价 2: 几何复杂度受限 — 在 highly concave / multi-layer 目标 (如城堡 / 树枝) 上仍出现几何冲突, 跟单目标 text-to-3D 比仍逊 15-20% FID。代价 3: 视角范围有限 — JanusMesh 在 ±60 度视角内两个目标语义都能保持, 超过 ±90 度仍会出现语义模糊, 距离真正的任意视角错觉 (true omnidirectional illusion) 还有差距。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span>Siang-Ling Zhang, Huai-Hsun Cheng, Tsung-Ju Yang, Yu-Lun Liu → National Yang Ming Chiao Tung University (國立陽明交通大學, 台湾)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/paper_summaries_v2_2026-06-23_02.jpg" alt="EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.21649 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.21649" target="_blank">EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory</a></h3>
+    <p style="color:#ccc;">论文指出当前 embedding 模型 (BGE / E5 / Qwen3-Embedding) 存在根本性限制: 它们在 encode 单段文本时忽略 surrounding context 和 temporal order, 只能在 static semantic search 上工作, 不适合 long-context + agentic memory 场景 (需要 state tracking)。本文提出 EvoEmbedding, 通过 latent memory 机制让 embedding 可演化: (1) 维护 continuously updated latent memory, 处理每个新 segment 时根据 memory 调整当前 embedding; (2) 同样 query 在不同 context 下能 retrieve 不同结果, 实现 context-aware retrieval; (3) 配套 EvoTrain-180K 数据集 (180K 样本), 联合优化 latent memory + retrieval; (4) 引入 memory queue 防 representation collapse, segment-batching 训练加速 3.8x。EvoEmbedding 在 long-context retrieval benchmark 上超越 Qwen3-Embedding-8B 和 KaLM-Embedding-Gemma3-12B 等更大模型, 同时在 RAG + agent memory 下游任务上平均提升 8-15%。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>EvoEmbedding 算法核心是 recurrent latent memory + context-conditioned embedding: encoder 维护 fixed-size latent memory state, 每段输入后用 gated update 更新 memory, 当前 embedding 由 raw content + memory 联合生成 (类似 RNN hidden state 但仅用于 retrieval 而非 generation), 训练用 contrastive loss + memory queue + segment-batching 三件套, 推理时 memory state 跨 query-turn 持久, 实现 multi-turn context-aware retrieval。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理状态不可序列化 — EvoEmbedding 跨 turn 需要维护 latent memory state, 跟传统 embedding 的 stateless API 不兼容, 在分布式 retrieval service (Faiss / Milvus) 中需要改造 serving 框架支持 state passing, 短期内难以直接替换 BGE/E5。代价 2: 训练数据稀缺 — EvoTrain-180K 虽然比之前 best 多 6x, 但对比 embedding pretraining 用的 1B+ pair 数据仍小 5 个数量级, 在 niche domain (医学 / 法律) 仍欠拟合。代价 3: 显存开销 — 跨 batch 共享 memory state 需要 cross-batch state passing, 训练时 batch size 受限 (8-16 而非常规 64-256), 实际训练成本反而高于同参数量 baseline。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span>Chang Nie, Chaoyou Fu, Junlan Feng, Caifeng Shan → Nanjing University (南京大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/paper_summaries_v2_2026-06-23_03.jpg" alt="Pose6DAug: Physically Plausible Multi-view Object Swapping for Robot Data Augmentation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20118 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20118" target="_blank">Pose6DAug: Physically Plausible Multi-view Object Swapping for Robot Data Augmentation</a></h3>
+    <p style="color:#ccc;">论文解决机器人 VLA (vision-language-action) policy 在 out-of-distribution 物体上的失败问题。传统 remedy 是收集每个失败 case 的 multi-view teleoperation data, 但 cost / time 都很高。Pose6DAug 提出 failure-driven data augmentation: 把 policy 自己成功的 episode 转成针对 failure mode 的 demonstration, 不需要任何新数据采集。核心 insight: 每个成功 episode 已经 encode 了 physically valid action trajectory + calibrated multi-view observations, 通过 3D 操作 (只 swap 操作的物体) 同时保留 trajectory, 就能得到 physically grounded new demonstration。技术核心: (1) 3D mesh anchoring — 在 3D 空间显式锚定 target object 的 mesh, 用 temporally coherent 6D pose trajectory 驱动, 保证 multi-view consistency; (2) geometric occlusion handling — 在 heavy occlusion / egocentric viewpoint 下仍能保持物理合理性, 避免 naive 2D video editing 的一致性破坏; (3) failure-driven sampling — 根据 policy 当前的 failure mode 选 augmentation 的物体 (texture / shape / size 维度)。在 5 个 manipulation benchmark 上平均提升 success rate 18-32%, 不需要任何额外采集。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Pose6DAug 方法分 3 步: (1) 重建原始 episode 的 3D scene (multi-view NeRF / 3D Gaussian Splatting) + 提取物体 6D pose trajectory; (2) 用 mesh swap 替换目标物体 (从候选库选 OOD 物体), 沿原 trajectory 重新 render multi-view frames; (3) failure-mode classifier 选 swap 物体 — 根据当前 policy 失败模式 (texture confusion / shape unfamiliarity / size mismatch) 选最有效的 augmentation 物体类别。整个 pipeline 不需要 policy gradient 或 fine-tune, 是纯数据增强。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 3D 重建依赖 — pipeline 需要对每个原始 episode 做 NeRF / 3D Gaussian 重建, 单 episode 重建时间 5-15 分钟 (用 GPU), 对大规模 dataset (1M episodes) 不现实, 仅适合 demo-augmentation 而非 pretraining-scale。代价 2: 物理仿真精度受限 — mesh swap 假设物体交互符合刚体动力学, 在 deformable objects (布料 / 食物 / 软体) 上物理合理性失效, 生成的 augmentation 数据反而会误导 policy。代价 3: 失败模式识别瓶颈 — failure-mode classifier 需要足够失败的 episodes 来训练, 在数据稀疏的 niche manipulation (手术 / 装配) 上 classifier 不可靠, augmentation 方向可能跑偏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span>Jonghoon Lee, Seong Hyeon Park, Byungwoo Jeon, Minha Lee, Jinwoo Shin → KAIST (Korea Advanced Institute of Science and Technology) + Korea University + RLWRLD</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/paper_summaries_v2_2026-06-23_04.jpg" alt="EFIQA: Explainable Fundus Image Quality Assessment via Anatomical Priors" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.20108 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.20108" target="_blank">EFIQA: Explainable Fundus Image Quality Assessment via Anatomical Priors</a></h3>
+    <p style="color:#ccc;">论文聚焦眼底图像 (fundus image) 质量评估, 这是糖尿病视网膜病变 (DR) 自动筛查 pipeline 的关键前置步骤 — 质量差的眼底图像直接送入诊断模型会导致 30%+ 假阳性。传统 IQA (Image Quality Assessment) 模型是黑盒 CNN, 给出 score 但不解释为什么差, 医生无法 trust 且无法针对性补救。EFIQA 提出 explainable IQA: 通过 anatomical priors 把质量评估问题转化为 anatomical structure visibility 判断。具体: (1) 用预训练的 anatomical segmentation model (optic disc / macula / vessel) 抽取眼底图像的解剖结构; (2) 训练 quality regressor 不仅预测 overall score, 还预测每个解剖结构的 visibility score (optic disc visible / macula visible / vessel clarity 等), 给医生可解释的 failure mode; (3) 配套 dataset EyeQ-Public (扩展自 Eye-Q + Kaggle DR + 5 个公开眼底 dataset), 包含 15K 眼底图像 + 6 个 quality attribute 标注。在 6 个 IQA benchmark 上 AUC 平均提升 7.2%, 在 DR 筛查 pipeline 上 end-to-end 假阳性率降低 22%。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>EFIQA 算法分两阶段: (1) anatomical feature extraction — 用预训练的 fundus segmentation model (RetinaNet / DeepLab) 抽取 optic disc / macula / vessel / lesion 的 mask + confidence score; (2) explainable quality regression — 用 anatomical feature + original image 联合训练 quality regressor, 输出 overall score + 6 个 anatomical visibility 子 score, 子 score 通过 attention-weighted pooling 解释 quality 衰减源头。整体架构是 dual-head CNN, head A 预测 overall, head B 预测 anatomical sub-scores, 两个 head 共享 backbone, 用 multi-task loss 联合优化。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: anatomical segmentation 依赖 — pipeline 前置 segmentation model 自身的 failure 会传导到 IQA (segmentation 失败的图像同时会被判为低质量, 但原因错配), 在罕见眼底病理 (罕见 DR 病变) 上 segmentation 本身就不准, 解释性反成噪音。代价 2: 多任务训练开销 — 6 个 anatomical sub-score 联合训练需要 multi-task loss 调参, 在不同 dataset 上权重敏感 (Eye-Q 跟 Kaggle DR 最佳权重差 30%+), 跨 dataset 迁移需重新调参。代价 3: 6 个 sub-score 信息冗余 — 实操中医生只关心 1-2 个关键结构 (optic disc / macula visibility), 6 个 sub-score 中 3-4 个冗余, 增加 UI 复杂度而不直接提升诊断准确度。</div>
+      <div class="row"><span class="highlight">📊 效果：</span></div>
+      <div class="row"><span class="author">🏢 团队：</span>Pengwei Wang, Jose Morano, Qian Wan, Hrvoje Bogunovic → Medical University of Vienna (奥地利维也纳医科大学) + Christian Doppler Lab for Artificial Intelligence in Retina</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_00.jpg" alt="Forsy-AI/agent-apprenticeship" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Forsy-AI/agent-apprenticeship" target="_blank">Forsy-AI/agent-apprenticeship</a></h3>
+    <p>Forsy-AI 推出的 agent apprenticeship 框架, 让 AI agent 通过真实世界任务的迭代 workflow 循环 + reusable experience + 集体训练信号交换 (collective training signal exchange) 进行持续学习。核心创新是把 agent 训练从 supervised fine-tuning 改成 apprenticeship learning — 每个 agent 在真实任务 (Claude Code / Codex / Cursor 等 IDE 中) 留下的 trace 自动成为其他 agent 的训练样本, 形成 living ecosystem。配套 Hermes Agent / OpenClaw / OpenCode 等多 agent harness 集成, 支持 ecosystem-level reinforcement learning。</p>
+    <div class="source">⭐ 688 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_01.jpg" alt="HKUDS/AgentSpace" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/AgentSpace" target="_blank">HKUDS/AgentSpace</a></h3>
+    <p>香港大学 Data Science Lab (HKUDS) 发布的 multi-agent 协作工作空间, 核心理念 Human + Agents. One Team. One Workspace, 把人类用户和多个 AI agent 整合到同一个 workspace 中协同工作, 类似 Notion + Linear + Claude Code 的 agent 协作层。AgentSpace 提供 shared canvas + multi-agent task delegation + human-in-the-loop approval 等核心能力, 支持 Claude / GPT / Gemini / 本地 LLM 多 model 切换, 同时跟 Slack / Linear / GitHub 等工具集成。</p>
+    <div class="source">⭐ 239 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_02.jpg" alt="raiyanyahya/recall" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/raiyanyahya/recall" target="_blank">raiyanyahya/recall</a></h3>
+    <p>Claude Code 的离线持久记忆插件, 解决 Claude Code 用户每次 session 都要重新 explain 项目背景的痛点。Recall 通过 offline-first 设计把所有项目上下文 (代码库 / 文档 / 历史对话 / 决策记录) 持久化到本地, 通过 TextRank 算法自动提取关键上下文, Claude Code 启动时自动注入到 context window, 避免每个 session 浪费 tokens 重复解释。完全 local-first + privacy-preserving, 不上传任何项目数据到云端。</p>
+    <div class="source">⭐ 329 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_03.jpg" alt="tongxuluo/gamecraft-bench" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/tongxuluo/gamecraft-bench" target="_blank">tongxuluo/gamecraft-bench</a></h3>
+    <p>论文 GameCraft-Bench 的官方代码和数据集, 提出 agent 在真实游戏引擎 (Unity / Unreal / Godot) 中端到端构建可玩游戏能力的 benchmark。区别于 SWE-bench (代码任务) / WebArena (网页任务) / OSWorld (OS 任务), GameCraft-Bench 评估 agent 在游戏引擎内从零构建可玩关卡的能力, 包括 game logic / level design / asset pipeline / playability test 4 个子任务, 配套 50 个从简单 (2D 平台跳跃) 到复杂 (3D 第一人称射击) 的 reference game。评估 agent 包括 Claude Code / Codex / Cursor / Devin / 各种开源 agent。</p>
+    <div class="source">⭐ 137 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_04.jpg" alt="hustvl/Moebius" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/hustvl/Moebius" target="_blank">hustvl/Moebius</a></h3>
+    <p>ECCV 2026 收录的轻量化图像修复 (inpainting) 框架, 仅 0.2B 参数即达到 10B 级模型的 inpainting 性能。Moebius 通过 MoE (Mixture of Experts) routing + 渐进式训练策略, 让小模型在 mask 区域填充 + 边界平滑 + 纹理一致性 3 个维度同时接近大模型表现。配套 ONNX / TensorRT / CoreML 导出, 在 RTX 3060 / iPhone 15 / 树莓派 5 等边缘设备上达到 30+ FPS, 适合 AR 滤镜 / 视频会议背景移除 / 老照片修复等实时场景。</p>
+    <div class="source">⭐ 215 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-23/oss_summaries_v2_2026-06-23_05.jpg" alt="cloudflare/security-audit-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/cloudflare/security-audit-skill" target="_blank">cloudflare/security-audit-skill</a></h3>
+    <p>Cloudflare 官方发布的 coding-agent 安全审计 skill, 让 Claude Code / Codex / Cursor 等 AI agent 能进行多阶段 (multi-phase) 安全审计, 输出 independently verified, machine-readable findings。skill 包含 5 个阶段: reconnaissance (资产发现) / static analysis (SAST) / dynamic testing (DAST) / dependency audit (CVE 检查) / reporting (机器可读 JSON 报告)。每个 finding 都附带 PoC 验证步骤, 减少 AI agent 常见的 false positive 问题。</p>
+    <div class="source">⭐ 379 · JavaScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-23 22:17</p>
+</footer>
+</div>
+</body>
+</html>
