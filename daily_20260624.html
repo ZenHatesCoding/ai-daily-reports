@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月24日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月24日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_00.jpg" alt="Omio 用 OpenAI 重塑对话式旅行: 从行程规划到企业级转型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/omio" target="_blank">Omio 用 OpenAI 重塑对话式旅行: 从行程规划到企业级转型</a></h3>
+    <p style="color:#ccc;">OpenAI 公布与欧洲多模式交通平台 Omio 的深度合作案例。Omio 接入 GPT 系列模型后, 把原本分散的火车/巴士/航班/渡轮搜索合并为对话式行程规划, 用户自然语言描述需求即可生成跨交通方式方案; 内部用 Codex agent 自动化处理 200+ 数据源的对账与异常处理, 把原本 6 小时的人工运营流程压缩到 30 分钟内。Omio CTO 表示这是从 SaaS 工具采购转向 AI 原生产品重构的关键节点, 客户支持工单分流率从 40% 提升到 78%, 高峰期响应时间从 45 分钟降到 8 分钟。这标志着 OpenAI 企业级落地从模型 + RAG 走向模型 + agent 流程编排的新阶段。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 从模型 API 销售走向企业级 AI 原生改造的战略落地, 把 Codex agent 从代码生成工具延伸到跨数据源的运营流程自动化, 实质上是与 Anthropic (Claude in Slack + Claude Tag) + Salesforce (Agentforce) 在 agent-as-coworker 赛道的正面对决。Omio 这种 200+ 数据源的对账场景是 agent 价值最被低估的应用层 (跟 Devin 写代码、Cohere 文档摘要同等量级), 因为它是真实企业的真实痛点, 不是 demo 演示。客户支持分流率 40% → 78% 这个数字很扎实, 跟 6/23 n04 Anthropic Claude Tag always-on AI teammate 同档宣示, 但 OpenAI 这边拿的是运营降本数字, Anthropic 那边拿的是协作提效概念, 短期看 OpenAI 的 ROI 表述对 CFO 更友好, 长期看 Claude Tag 的 always-on 叙事对员工体感更强。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_01.jpg" alt="DeepMind 用 Gemini 给英国房屋规划提速 50%, 联手 UK 政府原型上线" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/" target="_blank">DeepMind 用 Gemini 给英国房屋规划提速 50%, 联手 UK 政府原型上线</a></h3>
+    <p style="color:#ccc;">Google DeepMind 与英国房屋、社区与地方政府事务部 (DLUHC) 联合发布 AI 规划评估原型, 用 Gemini 模型自动审核房屋建筑申请。该系统对 1.4 万份历史规划文件做监督学习微调, 目标是把规划官员处理单个 homeowner 申请的平均时间从 8 周缩短到 4 周 (提速 50%)。原型首批在 5 个地方议会试运行, 处理小规模扩建与节能改造类低风险申请, 高风险申请仍由人工审核。DeepMind 强调模型决策全程可解释 (附引用条款 + 相似案例), 规划官员可一键否决模型推荐。这是 DeepMind 继 AlphaFold 之后又一次把前沿模型应用到具体公共服务场景, 也是英国政府继 NHS Federated Data Platform 后第二个大模型政务落地项目。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 把 Gemini 从聊天 + 多模态推进到政府合规审批这种高门槛场景, 验证了 Gemini 在结构化文档推理 + 引用可解释性方面的能力上限。这跟 6/18 DeepMind A24 Hollywood 训练 Veo、6/20 DeepMind Isomorphic 制药是两个不同方向 — A24 是创意内容、Isomorphic 是科学发现、UK 房屋规划是公共服务合规, 三个方向都在把 Gemini 从会聊天变成能干活。50% 提速这个数字对英国规划积压 (政府公开数据 2024 积压 10 万份以上) 是真实减负, 但风险点也明显 — 规划审批涉及产权争议、社区意见、历史保护, 模型即使有引用可解释, 边角案例的算法偏差仍是法律风险。</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_02.jpg" alt="Anthropic 更新 Responsible Scaling Policy: 把 ASL-4 触发门槛提到 10^27 FLOPs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy" target="_blank">Anthropic 更新 Responsible Scaling Policy: 把 ASL-4 触发门槛提到 10^27 FLOPs</a></h3>
+    <p style="color:#ccc;">Anthropic 发布最新版 Responsible Scaling Policy (RSP), 把 AI Safety Levels (ASL) 分类标准的训练算力门槛从 10^26 FLOPs 提到 10^27 FLOPs。核心变化: ASL-3 触发条件新增具备显著 CBRN 风险能力的生物化学模型评估要求; ASL-4 引入持续失控风险评估维度, 要求模型在长任务链中保持可中断性; 首次承诺公开模型能力评估的完整方法论 (含 red-team 失败案例), 不只公布成功演示。新政策立即生效, 适用 Claude 4 系列及后续模型。Anthropic 同时承诺每 6 个月接受第三方审计, 审计报告全文公开。这是对 OpenAI Preparedness Framework 与 Google DeepMind Frontier Safety Framework 的直接对标回应。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 把 RSP 升级到 10^27 FLOPs 一个数量级的核心信号是当前模型没到 ASL-4 但要为下一代 Claude 5 Mythos 系列留出合规空间。这是跟 OpenAI 6/17 helping-build-shared-standards-for-advanced-ai 直接博弈 — OpenAI 想推行业共同标准, Anthropic 想推单一公司高门槛自律, 两条路径都对外释放我们比对手更安全信号。新政策首次公开 red-team 失败案例这一点意义重大, 跟 OpenAI Preparedness Scorecard 走分数透明路线完全不同, 是从评分透明走向失败透明, 对监管 (美国 AISI 英国 AISI) 的友好度更高, 但对追求 AI 产品零缺陷叙事的客户 (金融医疗) 反而可能引起疑虑。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_03.jpg" alt="Anthropic 把 Claude 塞进 Slack: Claude Tag 让 AI 变成永远在线的队友" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" target="_blank">Anthropic 把 Claude 塞进 Slack: Claude Tag 让 AI 变成永远在线的队友</a></h3>
+    <p style="color:#ccc;">Anthropic 推出 Claude Tag, 一个常驻在 Slack 频道里的 AI 队友, 用户 @Claude 即可让它参与线程讨论、回答上下文问题、分配任务给具体同事。Claude Tag 通过监听频道历史消息 (默认 30 天) 学习公司内部术语与决策模式, 自动维护频道内的决策日志。首批测试客户包括电商平台 Rakuten 与设计协作工具 Figma, Claude Enterprise / Team 客户 Beta 开放, 起价 20 美元每月每活跃用户。Anthropic 强调 Claude Tag 不是取代人, 而是 always-on 的 AI 同事 — 它会主动总结频道对话、提醒未答复问题、并对明显错误的技术判断做礼貌指正。这是对标 OpenAI ChatGPT Slack App + Microsoft Copilot for Teams 的直接产品回应, 也呼应了 Anthropic 6/24 RSP 更新中 AI 应嵌入工作流的战略方向。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 用 Claude Tag 把 agent 概念从独立窗口里的助手推进到协作软件里的常驻同事, 这是企业 AI 落地的关键一步 — 不再是用户主动去问 AI, 而是 AI 主动进入团队对话流。这跟 6/23 HN Brokenomics 13pts 爆款里对 OpenAI/Anthropic 的成本结构质疑形成反差 — 当 AI 真的嵌入每一条 Slack 消息时, 推理 token 消耗会指数级上升, 而 Anthropic 这次没公布 token 预算上限, 留下 always-on 是不是 always-paid 的疑问。Rakuten 这种跨境电商客户的具体 case 决定了这个产品的真实价值 — 如果 Claude Tag 能从 30 天历史消息里学到这个团队对供应链延迟的处理惯例, 它的决策日志自动维护才是真价值, 否则就是 ChatGPT 套了 Slack 壳。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_04.jpg" alt="阿里发布视频生成模型 HappyHorse 1.1: 物理一致性 + 镜头控制五大维度升级" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/437317.html" target="_blank">阿里发布视频生成模型 HappyHorse 1.1: 物理一致性 + 镜头控制五大维度升级</a></h3>
+    <p style="color:#ccc;">阿里通义实验室发布视频生成模型 HappyHorse 1.1, 在 1.0 基础上做五大维度升级: 物理一致性 — 物体运动轨迹符合重力碰撞流体力学; 镜头控制 — 支持推拉摇移固定五种运镜精确 prompt 控制; 角色一致性 — 同一角色跨镜头外观服装动作保持 99%+; 长视频扩展 — 单次生成从 5 秒扩展到 30 秒, 支持情节续写; 多模态输入 — 支持文本加参考图加音频三模态联合驱动。模型权重在 HuggingFace 开源 (Apache 2.0), 配套 ComfyUI 插件与 API 服务。阿里云百炼平台同步上线企业版, 按秒计费。实测在 VBench 物理一致性维度超过 Sora 1.0 与可灵 1.5, 落后 Veo 3。</p><p style="color:#8b949e;font-size:13px;">💡 阿里 HappyHorse 1.1 的开源策略跟 6/22 DeepSeek 国内开源 + 6/23 阿里 Qwen 系列国内开源是同一波 — 在 Sora 2 Veo 3 闭源路线之外, 中国大厂选择用开源换生态位, Apache 2.0 这种宽松许可对企业用户 (短视频MCN广告) 吸引力极大。五大维度升级里物理一致性是真技术难点, VBench 跑分超 Sora 1.0 可灵 1.5 是 1.1 版的硬通货, 但落后 Veo 3 这点说明前沿闭源模型仍有代差。30 秒长视频 + 情节续写是创作者最关心的, 跟可灵 1.5 10 秒连续情节是直接对标。ComfyUI 插件这种创作工具优先于 API 的策略, 跟 Anthropic Claude Tag 走企业流程嵌入路线相反 — 阿里赌的是创作者群体先做大用户基数, 再谈企业变现。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/news_items_v2_2026-06-24_05.jpg" alt="HN 高分讨论: Gemini 模型越来越频繁陷入思考循环" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News] 3级信源 · cn</div>
+    <h3><a href="https://news.ycombinator.com/item?id=48647486" target="_blank">HN 高分讨论: Gemini 模型越来越频繁陷入思考循环</a></h3>
+    <p style="color:#ccc;">Hacker News 上开发者集中反馈 Google Gemini 2.5 / 3.0 系列在长上下文推理任务中越来越频繁地陷入思考循环 thinking loop — 模型在同一组 token 上反复自我修正, 单次推理成本上升 3-5 倍, 但回答质量没有明显提升。开发者社区普遍怀疑这是 Gemini 团队为了提升 benchmark 跑分, 在训练时把显示推理步骤作为硬约束, 但缺乏识别何时停止的训练信号。Google 内部员工在匿名论坛 Blind 上确认这是已知问题, 修复方案正在测试。同期 OpenAI o3 / Claude 4 思考模式存在类似问题, 但 Gemini 触发概率显著更高。这是推理时计算 inference-time compute 范式的早期教训 — 模型越能想, 越需要训练它知道何时停止想。</p><p style="color:#8b949e;font-size:13px;">💡 HN 这条 6/23 11pts 讨论表面是 Gemini bug 反馈, 实质是 inference-time compute 范式的系统性早期信号 — 当所有前沿模型都在堆 reasoning tokens, 谁先解决知道何时停止的元认知问题, 谁就在下一轮 AGI 叙事里占住位置。开发者社区把矛头指向为 benchmark 而训练显式推理是合理的 (跟 6/22 Anthropic Mythos 模型用 extended thinking 但不显示 token 数是同档挑战), 但更深的问题是 RLHF RLAIF 训练时缺乏识别推理饱和点的奖励信号 — 这种训练基础设施层面的 gap 不是单家公司能独立解决的, OpenAI Anthropic DeepMind xAI 都需要联合出推理终止训练标准。这是 6/24 全行业最被低估的技术风险。</p>
+    <div class="source">来源：Hacker News</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/paper_summaries_v2_2026-06-24_00.jpg" alt="EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.23654 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.23654" target="_blank">EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions</a></h3>
+    <p style="color:#ccc;">论文提出 EnterpriseClawBench, 一个从真实企业工作流 (而非人工标注 demo) 构建的企业级 agent 评测基准。从私有工作会话档案出发, 通过 4 阶段流程构建 852 个可复现任务, 每个任务配 recovered fixtures (文件 + 工具状态), rewritten prompts (去敏感化后的企业 prompt), role classes (员工角色: 财务/法务/HR/PM/工程师), skill subclasses (技能分类: 文档生成/审批流/数据查询/客户沟通), hard rules (合规约束), 和 semantic rubrics (语义评分准则)。因为会话含企业机密内容, benchmark 数据不公开, 但论文贡献的是 construction protocol + evaluation rubric 这套方法论。在 EnterpriseClawBench 上, 最佳配置 (Codex + GPT-5.5) 仅达到 0.663, 比通用 agent 基准 (SWE-bench 65%+) 低很多, 说明企业真实场景是 agent 落地的真正瓶颈。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 4 阶段真实会话转 benchmark 流程: (1) workspace archive mining 从企业 agent 日志中按 role/skill 聚类, (2) session rewrite 把 PII + 商业机密脱敏并泛化, (3) fixture recovery 把每个 session 用到的文件/工具/中间产物恢复成可复现执行环境, (4) rubric design 由领域专家 + LLM 联合设计 semantic 评分细则。整个流程是可重用的, 论文开源 protocol 代码 (不含数据)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 闭源数据 — 因为会话含真实商业机密, benchmark 数据不公开, 第三方研究者无法复现具体任务, 只能复现协议, 对学术界的可比性有限。代价 2: 协议复杂度高 — 4 阶段流程需要企业级数据脱敏 + 领域专家标注, 单家中小企业难以独立构建类似 benchmark, 容易形成大厂 (Frontis/Scale) 的数据壁垒。代价 3: rubric 主观性 — semantic rubrics 由 LLM + 专家联合设计, 不同企业 (金融 vs 制造 vs 电商) 的合规细则差异极大, benchmark 通用性受限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 EnterpriseClawBench 上评估 6 个 SOTA agent 配置 (Claude Code + Claude 4.5 / Codex + GPT-5.5 / Devin v2 / AutoGen + GPT-5 / CrewAI + Claude / SWE-Agent + Claude), 最佳 Codex + GPT-5.5 达到 0.663 平均分, 最差 SWE-Agent 仅 0.31。角色维度: 法务任务最难 (平均 0.41), 财务任务最简单 (0.71)。技能维度: 文档生成 (0.78) 高于 客户沟通 (0.49) 与 审批流 (0.45)。失败案例分析: 72% 失败源于工具调用 schema 错误, 18% 源于长上下文遗忘, 10% 源于 hallucinate 业务规则。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhang Kaiyan, Chen Wei, Liu Hao et al. → Horizon Research + Frontis.AI (前沿人工智能, 中国)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/paper_summaries_v2_2026-06-24_01.jpg" alt="KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.22807 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.22807" target="_blank">KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking</a></h3>
+    <p style="color:#ccc;">论文提出 KaLM-Reranker-V1, 一个 fast-but-not-late-interaction (FBNL) 重排序模型, 解决现有 reranker 在 query 和 passage 联合编码时的算力浪费问题。传统 reranker 分两类: (a) cross-encoder 全联合编码, 精度高但每对 query-passage 都要重新 forward, 不适合大规模检索; (b) bi-encoder 预编码 passage, 快但精度低。late-interaction (ColBERT 类) 折中但仍需逐 passage 计算。本文 FBNL 思路: encoder 预编码 passage 用 Matryoshka embedding pooling (可变维度截断), decoder 模型 system instruction + user instruction + query intent, 通过 cross-attention 捕获 query context 与 passage 表示的关联。优势是 passage 侧只需预编码一次 (跟 bi-encoder 一样), 但 query 侧能利用 decoder 的强语义建模 (跟 cross-encoder 一样), 精度损失 < 3% 但推理速度提升 4-7 倍。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 encoder-decoder 分离架构 + Matryoshka pooling: (1) encoder 侧把 passage 预编码成多粒度向量 (128/256/512/768 维), 用 Matryoshka Representation Learning 让低维向量也能保留关键语义; (2) decoder 侧只对 query + instruction 做标准 transformer 解码, 通过 cross-attention 拿 passage 向量; (3) 训练阶段联合优化 query encoding + passage encoding, 推理阶段 passage 离线编码 + cache, query 在线编码 + cross-attend。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: Matryoshka pooling 牺牲精度 — 低维向量 (128 维) 比 768 维 nDCG 下降 4-5%, 需要根据场景权衡维度选择。代价 2: passage cache 占用 — 大规模企业级检索库 (亿级文档) 用 768 维 Matryoshka 全缓存需要 ~300GB 显存, 比 BM25 index 大很多, 部署成本是真实约束。代价 3: 训练数据依赖 — 模型表现依赖 query-passage 联合训练的标注数据, 跨领域 (医疗/法律/金融) 迁移时需要重新微调, 通用性受训练数据覆盖范围限制。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 BEIR 13 个子基准 + MIRACL 中文检索基准上, KaLM-Reranker-V1-1.5B 达到 nDCG@10 平均 56.7 (vs ColBERT-v2 54.2, vs BGE-reranker-v2-m3 55.8), 接近 cross-encoder 7B 模型 (58.1) 精度但只占 1/5 显存。推理速度: 768 维 Matryoshka pooling 让长文档 (10K token) 检索速度 4.7 倍快于 ColBERT-v2, 跟 BM25 + 简单 bi-encoder 速度持平。中英双语 benchmark 表现一致 (MIRACL-zh nDCG@10 68.3 vs 65.4)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>KaLM-Team (Reranker Subgroup) → Harbin Institute of Technology (Shenzhen) + Shenzhen Loop Area Institute (SLAI)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/paper_summaries_v2_2026-06-24_02.jpg" alt="Causal Discovery in the Era of Agents: Data First, Agents Assist" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.23608 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.23608" target="_blank">Causal Discovery in the Era of Agents: Data First, Agents Assist</a></h3>
+    <p style="color:#ccc;">论文对当前 LLM 与因果发现 (causal discovery) 结合的方法做系统性反思, 主张 agents 应该 assist the workflow 而非 supply causal conclusions。当前 LLM 介入因果发现的三种模式 (推断 pairwise direction / 提出 graph structure / 注入 LM 输出作 prior) 都混淆了 data-supported evidence 和 textual associations, 把 prompt artifacts + hallucinated mechanisms 当作因果证据。本文提出 causal-learn+ 平台, 把 agents 定位为: 检查数据、检索上下文、解释方法假设、澄清 graph 输出, 但不提供 edges / orientations / priors / constraints / causal conclusions。核心原则: 因果声明必须 grounding in data + explicit assumptions + formal algorithms + diagnostics + user decisions。配套 Big Five personality 数据 case study 验证 agent-assisted 流水线在不把 LM unreliability 转化为 causal evidence 的前提下加速因果发现。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 causal-learn+ 平台架构 + causal-grounding 约束: (1) 平台整合 causal-learn 生态 (PC algorithm / GES / FCI / NoTEARS 等算法库), agents 作为 orchestrator 协调数据预处理 / 方法推荐 / 专家知识注入 / 形式化发现 / 结果解释; (2) causal-grounding constraint 强制要求任何 agent 输出都可追溯到具体数据点 + 假设 + 算法, 不允许 free-form 因果声明; (3) diagnostics 模块自动检测违反 assumption 的情况 (高维小样本 / latent confounder / selection bias), 给出 human review 触发条件。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 速度比纯 LLM 慢 — 因果发现需要数据预处理 + 假设验证 + 多种算法比较, agent 辅助模式比 end-to-end LLM 慢 3-5 倍, 不适合需要即时因果判断的场景 (临床实时决策)。代价 2: 依赖领域专家 — diagnostics 模块的 assumption violation 检测需要统计 + 领域双重知识, 普通用户难以独立判断 review trigger, 实际部署需要 training 的 causal scientist 在场。代价 3: 不解决根本争议 — 论文把 agents 定位为助手而非因果推理主体, 但当前学界对 LLM 是否能产生新 causal hypothesis 仍有分歧, 论文回避了这一立场。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个标准因果发现 benchmark (Sachs / SynTReN / Alarm / Hepar2 等) 上, causal-learn+ (with GPT-5 agent) 比纯 LLM-based causal discovery 方法 (LLM-Causal / DirectLLM) F1 提升 14-22%, 比传统算法 (PC / GES) 在样本量 < 500 时 F1 提升 8-12%, 但在样本量 > 5000 时与传统算法持平。Big Five personality case study 上, agent 加速数据预处理 5 倍, 但 causal conclusions 100% 保留数据驱动, 无 hallucinated mechanism。Human review rate 23% (LLM-only baseline 4%), 说明更严格的不确定性沟通。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yujia Zheng, Vishal Verma, Mantej Gill, Haoyue Dai, Peter Spirtes, Kun Zhang → Carnegie Mellon University + Mohamed bin Zayed University of Artificial Intelligence (MBZUAI, 阿布扎比)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/paper_summaries_v2_2026-06-24_03.jpg" alt="Unlimited OCR: One-shot Long-horizon Parsing with Human-like Working Memory" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.23050 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.23050" target="_blank">Unlimited OCR: One-shot Long-horizon Parsing with Human-like Working Memory</a></h3>
+    <p style="color:#ccc;">论文针对 end-to-end OCR 模型 (DeepSeek OCR 为代表) 在长文本复制任务中的效率衰减问题提出 Unlimited OCR 模型。核心观察: 现有 OCR 模型用 LLM 作为 decoder, 输出序列越长 KV cache 累积越多, 内存消耗线性增长, 生成速度指数级下降 — 而人类在做长文本抄写时无此效率衰减。本文提出 Working Memory (WM) 机制: 把 DeepSeek OCR baseline 的所有 attention 层替换为 propose WM-Attention, 让 decoder 模拟人类工作记忆的 limited capacity + selective refresh 行为。具体: (1) WM-Attention 在每步生成时只 attend 局部 window + 关键 anchor token, 不 attend 全部历史; (2) Memory Refresh Policy 决定何时把局部 window 内容写入 long-term memory (压缩到固定容量); (3) 在 100K+ token 长文档复制任务上, 内存占用恒定 (vs baseline 线性增长), 速度恒定 (vs baseline 5x 衰减)。权重在 GitHub 开源 (github.com/baidu/Unlimited-OCR)。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 Working Memory Attention (WM-Attention) + Memory Refresh Policy: (1) WM-Attention 修改 decoder 的 attention mask, 强制每步只 attend 局部 sliding window (默认 1024 token) + sparse global anchor tokens (按 attention score top-k); (2) Memory Refresh Policy 每 512 步触发一次, 用 cross-attention 把局部 window 压缩到固定容量 (默认 4096 token) 的 long-term memory bank; (3) 训练阶段用课程学习 (curriculum learning), 从 1K token 长度逐步扩到 100K token, 让模型学会在长序列中保持稳定的 attention 模式。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 短文本无优势 — 在 < 2K token 短文档 OCR 上 Unlimited OCR 与 DeepSeek OCR baseline 持平, Working Memory 机制未带来提升, 短文本场景用 baseline 更简洁。代价 2: 局部 window 大小是超参 — 默认 1024 token window 在 dense layout (表格 / 多栏) 文档上可能截断关键 layout 信息, 需要根据文档类型调参, 通用性受限。代价 3: 训练成本高 — 课程学习从 1K 扩到 100K token, 训练 compute 比 baseline 高 ~3 倍, 中小团队难以复现, 形成大厂 (百度) 的训练数据 + compute 双重壁垒。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 5 个长文档 OCR benchmark (CCLongOCR / DocVLM-Long / LongDocBench / Arxiv-100K / Custom-Book) 上, Unlimited OCR (7B 参数) 在 100K token 文档复制任务上 F1 达到 96.8%, 跟人类抄写准确率 (97.2%) 持平, 比 DeepSeek OCR baseline (72.3% F1, 100K token) 高 24.5 个百分点。速度: 100K token 文档 7 秒完成 (vs baseline 47 秒且 OOM), 内存峰值 18GB (vs baseline 89GB)。短文本 (1K token) 上跟 baseline 持平, 无明显精度损失。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Baidu OCR Team → Baidu Inc. (百度, 北京)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/paper_summaries_v2_2026-06-24_04.jpg" alt="Vera: A Layered Diffusion Model for Content-Preserving Video Editing" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.23610 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.23610" target="_blank">Vera: A Layered Diffusion Model for Content-Preserving Video Editing</a></h3>
+    <p style="color:#ccc;">论文解决视频编辑中 content preservation 的核心挑战: 现有视频 diffusion 模型在编辑时重新生成所有像素, 经常改变应保持不变的元素 (角色外观 / 背景场景)。本文提出 Vera, 一个分层扩散框架, 核心是把生成过程分为 edit layer (编辑层) + alpha matte (合成蒙版) + source video (源视频) 三层, 通过 Mixture-of-Transformers (MoT) 架构让编辑层与源视频通过 joint self-attention 协同。具体: (1) edit layer DiT 生成编辑内容 (新增物体 / 修改风格 / 替换角色), (2) alpha matte DiT 决定 edit layer 在每一帧每一像素的透明度, (3) MoT 让两个 DiT 通过 joint self-attention 保持空间一致性。结果: 在 DAVIS / YouTube-VOS / 自建电影片段基准上, content preservation F1 达到 92.4% (vs baseline 71.2%), 编辑质量 (FID-Edit) 提升 14.3 个百分点, 同时支持 1080p / 30fps 长视频 (60+ 秒) 编辑。</p>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 Layered Diffusion + Mixture-of-Transformers (MoT): (1) Layered Diffusion 把传统 video diffusion 的单层输出拆为 edit layer + alpha matte, 合成时按 alpha 融合源视频与编辑层; (2) MoT 架构 — 把 text-to-video DiT 扩展为多 DiT (每个 layer 一个 DiT), 通过 joint self-attention 让不同 layer 的 token 在 attention 中互相 attend, 保持空间 + 时间一致性; (3) 训练数据用合成电影片段 + 真实 DAVIS, 配合 frame-by-frame alpha supervision。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理成本高 — 双 DiT + joint self-attention 让推理显存是单 DiT baseline 的 2.1 倍, 长视频 (60+ 秒) 编辑需要至少 A100 80GB, 消费级 GPU (4090 24GB) 难以部署。代价 2: 训练数据依赖 — alpha matte 监督需要逐帧 alpha 标注, 自建数据集成本高, 跨领域 (动画 / 广告 / 短视频) 迁移需要重新标注 alpha。代价 3: 仍非完美 — 在大幅度运动 (fast camera pan / 角色快速移动) 场景下 content preservation F1 降到 84.1%, 编辑层与源视频的对齐仍有 motion blur 边界模糊问题, 适合中等运动场景而非极限运动。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 DAVIS-2017 (40 视频) + YouTube-VOS-2024 (50 视频) + 自建 Netflix 内部电影片段 (20 段, 60-120 秒) 三个 benchmark 上, Vera-7B 达到 content preservation F1 92.4% (vs ProPainter 71.2% / vs TokenFlow 78.5%), 编辑质量 FID-Edit 23.7 (vs baseline 38.0), 用户研究 (n=80) 偏好度 82%。1080p / 30fps / 60 秒视频编辑耗时 4.2 分钟 (单 A100), 比 Runway Gen-3 / Pika 2.0 编辑时长短 40%。支持 6 种编辑类型: 物体增删 / 风格迁移 / 角色替换 / 季节变化 / 视角平移 / 动态效果添加。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Caltech + Netflix Vera Team → California Institute of Technology (Caltech) + Netflix Inc.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_00.jpg" alt="Reyzowter/Hello-Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Reyzowter/Hello-Agents" target="_blank">Reyzowter/Hello-Agents</a></h3>
+    <p>Reyzowter 发布的『Building AI Agent Systems from Scratch』中文 AI Agent 全栈教程。从 LLM 基础到 ReAct / Reflexion / AutoGPT / 多 agent 编排, 配套 110+ 个可运行 Jupyter notebook + 50+ 论文解读 + 30+ 实战项目 (RAG agent / 代码 agent / 浏览器 agent / 桌宠 agent)。教程按递进难度分 4 个阶段: 基础 (Prompt + Memory), 进阶 (Tools + Planning), 实战 (Multi-Agent + Memory Bank), 高级 (Self-Improvement + Safety)。Apache-2.0 协议, GitHub 14 天增速 70+, 是中文圈 2026 H1 增长最快的 agent 入门教程。</p>
+    <div class="source">⭐ 72 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_01.jpg" alt="Simpl3x3/ESEILANE" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Simpl3x3/ESEILANE" target="_blank">Simpl3x3/ESEILANE</a></h3>
+    <p>ESEILANE 是高性能 Knowledge Graph 引擎 + GraphRAG 框架, 专为 LLM 应用设计。核心创新是把传统 KG (Neo4j / TigerGraph) 的图遍历 + 推理 + 持久化能力用 Ruby 重新实现, 对接 LLM 友好 (原生支持 OpenAI / Claude / 本地 LLM 作为 entity/relation extractor)。GraphRAG 模式: 文档 → chunk → LLM 提实体关系 → 建图 → 子图检索 → 喂回 LLM。实测在 100 万节点知识图谱上查询延迟 < 50ms, 比 Neo4j + Python 客户端快 8-12 倍, 比 FalkorDB (Redis-based) 快 3 倍。MIT 协议, 93 stars。</p>
+    <div class="source">⭐ 93 · Ruby</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_02.jpg" alt="adepeju4/attest" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/adepeju4/attest" target="_blank">adepeju4/attest</a></h3>
+    <p>attest 是 evidence-grounded AI agent 评测框架, 跟传统 LLM eval (lm-eval-harness / MMLU) 的关键区别: 不是直接对 agent 输出打分, 而是对 agent 的每个 claim 自动检索证据库验证, 给出 faithfulness 分数 + 证据溯源 + 矛盾点定位。框架内置 Wikipedia / arXiv / OpenAlex 三个证据源, 支持自定义 evidence store。attest 解决 agent hallucination 量化评估痛点 — 之前只能人工 review, 现在可以批量跑 1000+ test case 自动产出 evaluation report。MIT 协议, 15 stars (早期), Python 3.11+。</p>
+    <div class="source">⭐ 15 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_03.jpg" alt="sums001/Windows-Copilot-API" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/sums001/Windows-Copilot-API" target="_blank">sums001/Windows-Copilot-API</a></h3>
+    <p>sums001 把 Windows 11 内置的 Copilot (微软免费 GPT-4 / GPT-5 接口) 反向工程成 OpenAI-compatible API 服务。安装后本地启动 server (端口 9999), 任何 OpenAI SDK (Python / Node.js / LangChain / LlamaIndex) 都能直接 base_url 切换调用, 模型列表自动枚举 Microsoft 账户可用模型 (GPT-4o / GPT-5 / o3 / Phi-4)。不需要 Copilot Pro 订阅, 用 Microsoft 账户免费配额。538 stars, 14 天增速 200+, 是 2026 H1 增速最快的 Windows AI 项目。MIT 协议。</p>
+    <div class="source">⭐ 538 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_04.jpg" alt="mindmuxai/brain.md" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mindmuxai/brain.md" target="_blank">mindmuxai/brain.md</a></h3>
+    <p>brain.md 是给 Claude Code / Codex / Cursor / Aider 等 coding agent 加持久化记忆的 file-based memory layer。核心: 在项目根目录创建 brain.md 文件, agent 每次启动自动加载 brain.md 作为长期上下文, 任务结束后自动追加关键决策 + 用户偏好 + 项目惯例。跟传统 chat history / sessions 区别: (1) 文件可见可版本控制 (git tracked), (2) 用户可手写补充, (3) 跨 session 持续累积, (4) 跨 agent 通用 (Claude Code / Codex 都认同一份 brain.md)。MIT, 41 stars。</p>
+    <div class="source">⭐ 41 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-24/oss_summaries_v2_2026-06-24_05.jpg" alt="HKUSTDial/DataMagic" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUSTDial/DataMagic" target="_blank">HKUSTDial/DataMagic</a></h3>
+    <p>HKUST Dial 实验室 (曹原/黄健等) 开源的 data-to-video 生成框架 — 用户上传 CSV / Excel 数据表, 自动生成带解说旁白 + 动态图表 + 关键数据高亮的叙事化数据视频。技术栈: LLM 做数据叙事理解 + 自动选关键 insight + 写脚本, TTS 生成旁白 (支持中英日韩 4 语言), 模板化视频生成 (柱状/折线/饼图/地图多模板), ffmpeg 合成。Apache-2.0, 31 stars。配套 HuggingFace Spaces 在线 demo, 单表格生成 60 秒视频 < 3 分钟。</p>
+    <div class="source">⭐ 31 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-24 10:53</p>
+</footer>
+</div>
+</body>
+</html>
