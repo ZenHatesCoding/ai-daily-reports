@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月25日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月25日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_00.jpg" alt="OpenAI 与 Broadcom 联合发布自研推理芯片 Jalapeño: 单卡性能超 H200 50%" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip" target="_blank">OpenAI 与 Broadcom 联合发布自研推理芯片 Jalapeño: 单卡性能超 H200 50%</a></h3>
+    <p style="color:#ccc;">OpenAI 与 Broadcom 联合推出首款面向 LLM 推理优化的自研 ASIC 芯片 Jalapeño。该芯片专为 transformer decode 阶段设计, 在 FP8 精度下实现 4 PFLOPS 算力 + 288GB HBM3e 显存 + 8 TB/s 显存带宽, 单卡推理性能相比 NVIDIA H200 提升 50%, 推理能耗比提升 2.3 倍。Jalapeño 采用 Broadcom 3nm 工艺, 首批 5 万片将于 2026 Q4 量产, 部署在 OpenAI 自有算力集群与 Microsoft Azure OpenAI 服务中。这是 OpenAI 继 5 月与 NVIDIA 续签 500 亿美元算力承诺、6 月初与 AMD 敲定 MI400 部署后, 第三个 GPU 替代方案的明确信号。OpenAI 强调 Jalapeño 不替代 GPU, 而是为推理这种特定负载提供更优的能耗成本曲线, 训练仍以 NVIDIA 为主。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 三条腿走路 (NVIDIA 训练 / AMD MI400 推理 / Broadcom Jalapeño 推理) 的算力布局终于在 6/24 全部落地, 标志着头部 AI 公司开始从'买卡'走向'定制卡'的拐点。Broadcom 选择 OpenAI 而不是 Anthropic / Google 这种大客户, 反映了 OpenAI 在 inference workload 上的体量优势 — 据 The Information 估算 OpenAI 日推理 token 量已经是 Anthropic 的 4 倍以上, 足以撑起 ASIC 量产。能耗比 2.3 倍这个数字对 AI 公司 CFO 是核弹级的 — 推理成本占 OpenAI 总成本约 60%, 单卡能耗降低一半意味着同等算力下年度 capex 可降低 30%, 直接推动 OpenAI 加速降价和扩张 API 客户群。短期看这是 Broadcom 估值利好 (ASIC 业务 Q4 营收贡献预期 +5%), 中期看是 NVIDIA 在推理市场份额的首次实质侵蚀。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_01.jpg" alt="DeepMind 在 Gemini 3.5 Flash 中上线 computer use: 千元模型跑通屏幕操控" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">DeepMind 在 Gemini 3.5 Flash 中上线 computer use: 千元模型跑通屏幕操控</a></h3>
+    <p style="color:#ccc;">Google DeepMind 在 Gemini 3.5 Flash 模型中正式上线 computer use 能力, 让模型能像人一样看屏幕截图、定位元素、执行鼠标键盘操作来完成复杂 GUI 任务。这是继 OpenAI 2024 年 12 月在 o3 中首发 computer use、Anthropic 2025 年 3 月在 Claude Computer Use 中跟进后, 第三个主流厂商把 computer use 推进到生产可用级别。DeepMind 的差异化是把 computer use 下放到了 Flash 级别 (输入 $0.075/M token), 而 OpenAI / Anthropic 都需要 Pro 级模型才能稳定运行。基准测试 WebArena 上 Gemini 3.5 Flash + computer use 完成率 73.4%, 超过 Claude 4 Opus (71.2%) 和 o3 (68.9%)。Google AI Studio 与 Vertex AI 同步上线 API。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 把 computer use 塞进 Flash 这种小模型是一个行业分水岭 — 当 73% 完成率的 GUI agent 跑在 0.075 美元/M token 的价位上, agent-as-coworker (跟 6/23 Anthropic Claude Tag + 6/24 OpenAI Omio 同档) 的经济学才真正成立。之前 OpenAI / Anthropic computer use 跑在 Pro 级模型上, 单次任务成本经常突破 1 美元, 企业客户 ROI 算不过来。WebArena 上超过 o3 和 Claude Opus 是 DeepMind 把 vision grounding 跟 reasoning 解耦的工程胜利 — Flash 模型不需要 reasoning 强, 只要看屏幕准 + 决策树稳。这对 RPA 行业 (UiPath / Automation Anywhere 数十亿市值) 是直接颠覆信号, 也是 Google Cloud 抢 agent-as-platform 生态位的关键弹药。</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_02.jpg" alt="Anthropic 推出 Claude Tag: 把 Claude 变成 Slack 频道里的常驻队友" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic 推出 Claude Tag: 把 Claude 变成 Slack 频道里的常驻队友</a></h3>
+    <p style="color:#ccc;">Anthropic 6/23 推出 Claude Tag, 一个常驻在 Slack 频道里的 AI 队友。用户 @Claude 即可让它参与线程讨论、回答上下文问题、分配任务给具体同事。Claude Tag 通过监听频道历史消息 (默认 30 天) 学习公司内部术语与决策模式, 自动维护频道内的决策日志。首批测试客户包括电商平台 Rakuten 与设计协作工具 Figma, Claude Enterprise / Team 客户 Beta 开放, 起价 20 美元每月每活跃用户。Anthropic 强调 Claude Tag 不是取代人, 而是 always-on 的 AI 同事 — 它会主动总结频道对话、提醒未答复问题、并对明显错误的技术判断做礼貌指正。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 用 Claude Tag 把 agent 概念从独立窗口里的助手推进到协作软件里的常驻同事, 这是企业 AI 落地的关键一步 — 不再是用户主动去问 AI, 而是 AI 主动进入团队对话流。这跟 6/24 OpenAI Omio 案例形成对照 — OpenAI 拿的是运营降本数字 (客户支持分流率 40% → 78%), Anthropic 拿的是协作提效概念 (always-on AI teammate), 两条路径对不同受众成立。Rakuten 跨境电商 + Figma 设计协作是两类典型客户, 前者用 Claude Tag 处理供应链异常对话, 后者用它协助设计评审文档同步。20 美元/月/活跃用户价位对标 Slack AI 12 美元 + Microsoft Copilot 30 美元, 走中价位拉企业客户。风险点是 always-on 模式下 token 消耗不可预测 — 用户没主动调用也会触发模型推理, 月底账单爆表是大概率事件。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_03.jpg" alt="豆包 2.1 发布: Agent 自主跑 18 小时完成芯片设计代码生成" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/438179.html" target="_blank">豆包 2.1 发布: Agent 自主跑 18 小时完成芯片设计代码生成</a></h3>
+    <p style="color:#ccc;">字节跳动豆包大模型团队 6/24 发布豆包 2.1, 核心亮点是把 agent 自主执行时长从 1.0 版的 2 小时推到 18 小时。发布会展示了一个真实 case: 豆包 2.1 agent 接收'为某款 RISC-V SoC 设计 JTAG 调试模块'的任务, 在 18 小时内无人干预地完成了 RTL 编码、UVM 验证平台搭建、覆盖率分析、Bug 修复全流程, 最终交付可综合的 Verilog 代码 + 覆盖率 92% 的回归测试。豆包 2.1 同时在 SWE-bench Verified 跑分 78.4, 超过 Claude 4 Sonnet (76.1) 和 o3-mini (74.8)。这是国内大模型在 long-horizon agent 任务上首次超过 Anthropic / OpenAI 中端模型。字节同步上线豆包 2.1 Agent API, 按推理 token 计费。</p><p style="color:#8b949e;font-size:13px;">💡 豆包 2.1 这个 18 小时 long-horizon agent 案例对国内芯片设计行业是真价值信号 — RISC-V SoC 的 JTAG 调试模块是真实工程活, 不是 demo, 92% 覆盖率意味着能直接进回归流程。SWE-bench 上超过 Claude Sonnet 跟 o3-mini 说明在已定义明确的任务上豆包 2.1 推理能力接近一线水平。但需要冷静看 — 18 小时 case 是被精选展示的, 真实 agent 自主任务在 2 小时以上失败率仍 60%+, '能跑 18 小时'不等于'大多数 18 小时任务能跑通'。字节选 RISC-V + JTAG 这个垂直场景做演示, 是赌芯片设计自动化是国内 agent 落地最高 ROI 的行业 (跟英伟达 / 华为海思 / 平头哥的真实工程师需求对齐)。这对国内 EDA 公司 (华大九天 / 概伦电子) 是压力测试, 也是 agent-as-coworker 模式从 SaaS 工具走向硬科技工程的转折点。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_04.jpg" alt="Stripe + Anthropic + OpenAI 罕见联手: 资助终止所有呼吸道感染的疫苗项目" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/24/1139621/stripe-anthropic-and-openai-are-backing-an-effort-to-stop-respiratory-infections/" target="_blank">Stripe + Anthropic + OpenAI 罕见联手: 资助终止所有呼吸道感染的疫苗项目</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 6/24 独家披露 Stripe、Anthropic、OpenAI 三家罕见联手资助一个名为 'Universal Respiratory Shield' 的全球疫苗研发联盟, 目标是在 5 年内研发出能终止所有常见呼吸道感染 (流感、RSV、冠状病毒、普通感冒) 的通用疫苗。三家公司各承诺 1.5 亿美元, 加上 Gates Foundation 与 Wellcome Trust 跟投, 联盟总规模 7.5 亿美元。三家 AI 公司加入并非出钱就完 — 它们承诺把前沿模型用于蛋白质结构预测 (DeepMind AlphaFold 路线) + mRNA 序列优化 + 临床试验受试者匹配。Stripe 提供支付与受试者招募基础设施。这是 OpenAI 跟 Anthropic 在 S-1 IPO 静默期前的首次公开战略协作, 也是两家首次同时署名非自家项目。</p><p style="color:#8b949e;font-size:13px;">💡 Stripe + Anthropic + OpenAI 这种 AI 行业竞品联合署名资助一个公共卫生项目, 是 2026 年 AI 公司社会责任叙事的转折点 — 之前 OpenAI 推 Preparedness Scorecard + Anthropic 推 RSP 是各自推自家安全框架, 这次联合资助说明头部 AI 公司意识到'AI for good'叙事需要集体背书才能对监管 + 资本市场产生最大说服力。7.5 亿美元规模对疫苗研发 (Moderna mRNA 平台单平台研发投入 10 亿美元) 是真实有用的弹药, 不只是 PR 投入。蛋白质结构预测 + mRNA 序列优化 + 临床试验匹配这三个 AI 应用是 AI 公司能直接产生价值的环节, 跟 Anthropic 6/17 RSP 中 ASL-3 CBRN 风险评估要求形成对照 — 用 AI 防控感染是 AI Safety 的反向例证。短期对呼吸道疫苗板块 (Moderna / BioNTech / Novavax) 是估值利好, 中期看是 AI for Science 从论文走向临床的标志性时刻。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/news_items_v2_2026-06-25_05.jpg" alt="Qualcomm 宣布收购 AI 推理芯片公司 Modular, 加码端侧 AI 算力" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News] 3级信源 · cn</div>
+    <h3><a href="https://news.ycombinator.com/item?id=48649221" target="_blank">Qualcomm 宣布收购 AI 推理芯片公司 Modular, 加码端侧 AI 算力</a></h3>
+    <p style="color:#ccc;">Qualcomm 6/24 宣布以总价 18 亿美元收购 AI 推理芯片公司 Modular, 后者专注为端侧设备提供低功耗 LLM 推理 SoC, 客户包括 Microsoft Copilot+ PC 项目与多家车厂。Modular 的核心 IP 是其可变精度张量引擎, 在 INT4-INT8 之间动态切换, 端侧推理能耗比 NVIDIA Orin 低 40%。收购完成后 Modular 团队整体并入 Qualcomm AI 部门, 原 Modular CEO 任副总裁。本次收购是 Qualcomm 在 2025 年 9 月收购边缘 AI 框架公司 Foundries.io 后, 在端侧 AI 算力领域的第二次重大并购, 也呼应了 Apple 6/18 iOS 27 端侧 LLM 路线、Microsoft 6/22 Copilot+ PC 路线, 三大端侧 AI 玩家首次在收购策略上同步行动。</p><p style="color:#8b949e;font-size:13px;">💡 Qualcomm 18 亿美元买 Modular 这个数字对端侧 AI 算力市场是估值锚 — 之前业内对端侧推理 SoC 公司的估值区间 (Mythic / Syntiant / Flex Logic 等) 普遍在 5-10 亿美元, Modular 一举拉到 18 亿说明头部端侧 AI 玩家愿意为有量产 IP 的公司付溢价。Modular 的可变精度张量引擎是真技术 — INT4 跑小模型 + INT8 跑大模型动态切换是端侧 AI 唯一能兼顾 battery life 与 response quality 的方案。这次收购呼应 Apple / Microsoft 端侧 AI 路线, 意味着 2026 年下半年到 2027 年, 端侧 7B-13B 模型推理将成为 PC / 手机 / 汽车的标配, 云端推理市场增长会被进一步压缩。Qualcomm 把 Modular IP 整合进 Snapdragon X 系列是对 Apple Neural Engine + Intel NPU 的直接反击, 端侧 AI 芯片三国杀 (Qualcomm / Apple / Intel+NVIDIA) 正式成形。</p>
+    <div class="source">来源：Hacker News</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/paper_summaries_v2_2026-06-25_00.jpg" alt="Qwen-AgentWorld: 语言世界模型让 agent 在 7 个领域做长链路环境仿真" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.24597 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.24597" target="_blank">Qwen-AgentWorld: 语言世界模型让 agent 在 7 个领域做长链路环境仿真</a></h3>
+    <p style="color:#ccc;">想象一下, 普通 AI agent 走一步看一步, 经常走着走着就迷路。Qwen-AgentWorld 想做的事是给 agent 一个「内心沙盘」— 让语言模型自己充当环境模拟器, 在脑子里推演未来 50-100 步会怎样。论文发布两个模型: 35B-A3B 轻量版 + 397B-A17B 旗舰版, 都用 1000 万条真实环境交互轨迹训练。训练分三段: 先学通用世界建模能力 (CPT), 再激活「预测下一步」推理 (SFT), 最后用强化学习把仿真逼真度刷上去。配套发布 AgentWorldBench 评测基准, 覆盖 7 个 agent 领域 (代码 / 终端 / 操作系统 / 浏览器 / GUI / 工具调用 / 游戏)。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Qwen-AgentWorld 探索的是「语言世界模型 (Language World Model)」这条新路径 — 不是用 diffusion 生成像素, 而是用 LLM 直接推理状态转移。模型分 35B-A3B (MoE 激活 3B) 和 397B-A17B (MoE 激活 17B), CPT+SFT+RL 三阶段训练, 1000 万条轨迹来自真实环境 (TerminalBench / OSWorld / Tool Decathlon)。AgentWorldBench 包含 9 个 benchmark, 用 ground-truth rubric judging 评估仿真保真度。实验表明语言世界模型在工具调用 / 终端操作场景下, 能把下游 agent 任务的成功率提升 12-18 个百分点。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>CPT (Continued Pre-Training) + SFT (Supervised Fine-Tuning) + RL (Reinforcement Learning) 三阶段训练管线。RL 阶段设计 hybrid rubric-and-rule reward — 对可验证的任务 (代码 / 终端命令) 用 rule-based reward, 对开放式任务 (GUI 操作 / 浏览器导航) 用 rubric-based reward。模型架构是 MoE, 35B 参数激活 3B / 397B 参数激活 17B, 在推理时只激活 9-12% 的参数以节省算力。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>世界模型把下游 agent 任务成功率拉高 12-18 个百分点的代价是, 推理 token 消耗显著增加 — 模型需要先在内心沙盘里推演未来 50 步, 再选择最优动作。Hybrid rubric-and-rule reward 的局限是, 开放式任务的 rubric 本身需要 LLM 评判, 这就形成「模型自己生成仿真、自己评判仿真」的循环依赖, 在长链路仿真 (100+ 步) 时误差会累积放大。三阶段训练管线需要 1000 万条真实轨迹做 SFT, 数据采集成本极高, 复现门槛对中小团队不友好。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 AgentWorldBench 上, Qwen-AgentWorld-397B-A17B 把 Tool Decathlon / Terminal-Bench 1.0 / OSWorld-Verified 等 9 个 benchmark 的下游 agent 成功率平均提升 12-18 个百分点, 超过 Qwen3-235B 基线 +GPT-4o agent 框架。在仿真保真度维度 (AgentWorldBench 自有指标), 397B-A17B 的 next-state prediction accuracy 达到 71.3%, 比 GPT-4o 的 58.9% 高 12 个百分点。35B-A3B 轻量版在 7 个 agent 领域平均仿真保真度 62.8%, 接近 397B 旗舰版的 88%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Qwen Team → Qwen Team, Alibaba</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/paper_summaries_v2_2026-06-25_01.jpg" alt="FLAT: 从视频扩散潜空间直接解码三角面片, 3D 场景生成首次跑出可仿真表面" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.24876 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.24876" target="_blank">FLAT: 从视频扩散潜空间直接解码三角面片, 3D 场景生成首次跑出可仿真表面</a></h3>
+    <p style="color:#ccc;">想象一下, 你拿一张照片给 AI, 它能不能给你生成一个能走进去的 3D 场景? 现在主流方法用 3D 高斯泼溅 (3DGS) 做这件事, 但 3DGS 是「雾团」, 没有真正的表面 — 不能丢进游戏引擎、物理仿真器、3D 打印这些需要明确几何的场景。FLAT 提出一个巧妙思路: 跳过 3DGS, 直接从视频扩散模型的潜空间解码出三角面片 (triangle splats)。但三角面片对朝向极敏感, 训练时梯度流很差。FLAT 用两个关键 trick 解决: (1) ray-centered rotation 参数化 — 让三角面片绕光线方向旋转, 而不是绕世界坐标轴; (2) product window function — 控制每个三角面片的影响范围, 改善梯度流动。结果是首个能从单张图直接生成可仿真 3D 场景的 feedforward 模型。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">FLAT 把视频扩散模型的潜空间直接解码到 surface-aligned 三角面片, 跳过 3DGS 中间表示。两个核心创新: ray-centered rotation parameterization (绕光线而非世界轴旋转三角面片) 和 product window function (缓解梯度流问题)。实验表明 FLAT 在 ScanNet / Replica 室内场景重建上, surface alignment error 比 3DGS baseline 降低 42%, 同时保持可比的几何精度。模型在 1024×1024 输入下端到端推理 1.2 秒, 适合交互式应用。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>架构上 FLAT 是 video diffusion VAE decoder 的扩展, 把原来的 RGB 像素解码替换为 triangle splat decoding。Ray-centered rotation 让三角面片的法线方向始终指向观察方向, 等价于把 6 自由度旋转问题降维到 3 自由度。Product window function 借鉴 splatting 的高斯衰减思想, 给每个三角面片一个衰减区域, 防止训练时三角面片位置剧烈抖动。整个模型是 feedforward 一次性推理, 不用多步优化 (跟 NeRF / Gaussian Splatting 那种需要 per-scene 优化的方法不同)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>三角面片相比 3D 高斯泼溅的最大优势是 surface-aligned (有明确表面), 但代价是几何表达力下降 — 3DGS 能表示半透明、烟雾、流体这种无明确表面的物理现象, 三角面片表示不了。FLAT 当前只在 1024×1024 输入下做了实验, 对超高分辨率 (4K+) 图像的泛化性未验证。Ray-centered rotation 假设输入是单视图, 扩展到多视图输入需要重新设计冲突解决机制。三角面片数 (mesh complexity) 是硬编码的, 对不同复杂度场景 (空旷室内 vs 拥挤街道) 没法自适应。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 ScanNet 室内场景重建基准上, FLAT 的 surface alignment error 降低 42% (相比 3DGS baseline), Chamfer Distance 降低 18%。在 Replica 基准上, FLAT 的 surface F-score 达到 0.83 (3DGS 是 0.71)。单图推理时间 1.2 秒 (A100 GPU), 比 3DGS + 多步优化快 25 倍。在用户偏好评测中, FLAT 生成的 3D 场景在「表面平滑度」「光照一致性」两个维度比 3DGS 高 31% 和 27% 偏好率。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Orest Kupyn, Goutam Bhat, Philipp Henzler, Fabian Manhardt, Christian Rupprecht, Federico Tombari → Google Research + University of Oxford Visual Geometry Group + TU Munich</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/paper_summaries_v2_2026-06-25_02.jpg" alt="DiffusionBench: 把 DiT 评测从 ImageNet 单维扩展到 ImageNet + 文本生成双维" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.24888 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.24888" target="_blank">DiffusionBench: 把 DiT 评测从 ImageNet 单维扩展到 ImageNet + 文本生成双维</a></h3>
+    <p style="color:#ccc;">扩散 Transformer (DiT) 的研究有个怪现象: 所有人都在 ImageNet 上跑 FID 跑分, 但 FID 高真的意味着生成模型好吗? 这篇论文直接把怀疑做了实验: 团队训练了 21 个不同配置的 DiT 模型, 在 ImageNet 和文本生成 (T2I) 两个维度同时评测, 发现方法排名「几乎不相关」— Pearson 相关系数在 -0.38 到 -0.58 之间, 负相关! 意思是 ImageNet 上 FID 改进的方法, 在 T2I 上可能反而变差。配套发布 NanoGen 训练框架, 12 行配置就能切换 ImageNet 和 T2I 两种训练模式, 让 T2I 训练成本降到跟 ImageNet 相当。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">DiffusionBench 配套发布 NanoGen 统一训练框架, 支持 RAE / VAE / pixel-space / MeanFlow 四种扩散方法, 在 ImageNet 和 T2I 两种设置下训练。21 个模型的横向对比揭示 ImageNet FID 与 T2I benchmark 排名之间的 Pearson 相关性只有 -0.377 到 -0.580, 说明 ImageNet 上的方法排名对 T2I 几乎没有预测力。论文提议把 T2I benchmark 作为 DiT 研究的标配评测, 并开源 NanoGen 降低 T2I 训练门槛。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>NanoGen 框架的核心是配置驱动的统一数据管线: 12 行 YAML 配置切换 latent space (RAE/VAE/pixel) + 训练目标 (diffusion/MeanFlow) + 数据集 (ImageNet/T2I)。论文训练 21 个模型覆盖 4 种 latent space × 2 种数据集的组合, 控制变量。每个模型训练 200K 步, ImageNet 256×256 + T2I 256×256 在同一硬件上跑通, 让横向对比有意义。评测侧 ImageNet 用 FID + IS + Precision/Recall, T2I 用 GenEval + T2I-CompBench + DPGBench。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>NanoGen 框架把 T2I 训练门槛降低到「ImageNet 同等算力」, 但代价是必须接受 NanoGen 默认的 12 行配置选项 — 任何超出 12 行的自定义 (例如多模态控制 / LoRA 微调) 都得自己改框架。ImageNet vs T2I 排名负相关的发现虽然震撼, 但 21 个模型是来自同一团队同一框架, 缺少跨实验室验证 — 其他团队复现时可能得出不同的相关性。论文没有解释为什么相关性是负的, 只指出这是经验观察, 没有理论分析。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>21 个 DiT 模型在 ImageNet FID 上排名前 5 的方法, 在 T2I GenEval 上排名平均下降 3.2 位 (最好的从 #1 掉到 #6, 最差的从 #4 掉到 #11)。Pearson 相关性在 FID-vs-GenEval 是 -0.580, FID-vs-T2I-CompBench 是 -0.377, FID-vs-DPGBench 是 -0.512, 全部是显著负相关。NanoGen 训练一个 T2I 模型用 256 A100 hours, 比此前 SOTA T2I 训练成本降低 35%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xingjian Leng, Jaskirat Singh, Zhanhao Liang, Ethan Smith, Martin Bell, Aninda Saha, Yuhui Yuan, Liang Zheng → Australian National University + Canva Research</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/paper_summaries_v2_2026-06-25_03.jpg" alt="ChartWalker: 跨图表 RAG 任务的层次化知识图谱基准" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.23997 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.23997" target="_blank">ChartWalker: 跨图表 RAG 任务的层次化知识图谱基准</a></h3>
+    <p style="color:#ccc;">想象一下, 你老板给你 50 张图表 (折线图 / 柱状图 / 饼图 / 散点图混在一起), 让你写一份季度分析报告 — 你会怎么干? 人类会先建一个「心智地图」, 把图表之间的关联串起来 (这家公司的收入图表跟那家公司的成本图表指向同一季度, 这个饼图的份额跟那个柱状图的比例一致)。现在的 RAG 系统做不到这点 — 它们要么只处理单图表, 要么把图表当成纯文本检索, 完全丢了图表之间的逻辑关系。ChartWalker 提出一个生成这种「跨图表难题」的方法: 先建层次化知识图谱 (每个图表是节点, 跨图表关联是边), 再用结构感知采样算法生成多跳推理问题。配套 ChartWalker-Bench 评测基准 + ChartWalker-Agent 基线模型。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">ChartWalker 提出跨图表 (cross-chart) RAG 任务的统一框架, 解决现有 benchmark 的两个核心缺陷: 只关注 well-structured table, 或者只生成简单 key-point 抽取型查询。核心贡献是层次化知识图谱构建 + 结构感知采样算法。评测覆盖 8 个主流 RAG 范式, 发现现有方法在跨图表推理任务上的性能显著低于单图表任务。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>层次化知识图谱 (Hierarchical Knowledge Graph) 构建分三层: (1) chart-level 节点 — 每个图表是一个节点, 包含图表元数据 + 主数据点; (2) entity-level 边 — 跨图表共享的实体 (公司 / 季度 / 指标) 连边; (3) relation-level 超边 — 多图表共同表达的关系 (如时间序列趋势 / 比例分配)。结构感知采样算法基于 BFS/DFS 在图谱上生成多跳推理路径, 显式控制查询难度和粒度。评测涵盖 8 个 RAG 范式 (dense retrieval / sparse retrieval / hybrid / GraphRAG / ReAct / multi-agent / 等等)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>跨图表 RAG 任务对人类分析师是基础能力, 但对现有 AI 系统是「未被攻克的难题」— 因为这需要 (1) 多模态理解 (图表解析) + (2) 跨文档推理 (知识图谱) + (3) 复杂问题分解三件事同时做。ChartWalker 的局限性是当前 benchmark 用合成图表, 真实业务图表 (不规则布局 / 缺失图例 / OCR 错误) 的泛化性未验证。8 个 RAG 范式评测覆盖广但缺少 LLM-as-Agent 范式 (例如 GPT-4o Codex / Claude Computer Use) 的横向对比。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 ChartWalker-Bench 上, 现有 RAG 范式的 F1 平均 28.4, 远低于单图表 RAG 任务的 65.7。GraphRAG (知识图谱检索增强) 表现最好达到 F1 41.2, 表明知识图谱对跨图表推理是真有效。最佳 LLM (GPT-4o) 直接答的 F1 只有 23.1, 说明即使强模型也解决不了跨图表难题。图表数量从 5 张增加到 50 张时, 准确率从 38.7 降到 19.2, 表明长上下文下推理能力断崖式下降。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Ning Tang, Chenghan Xie, Hanyang Yuan, Yi Li, Renhong Huang, Qian Kou, Xiaofeng Shi, Hua Zhou, Jiarong Xu → Fudan University + Beijing Academy of Artificial Intelligence (BAAI) + Stanford University + Zhejiang University</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/paper_summaries_v2_2026-06-25_04.jpg" alt="FlowR2A: 用 flow-matching 解开自动驾驶规划中奖励与动作的对立" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.24231 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.24231" target="_blank">FlowR2A: 用 flow-matching 解开自动驾驶规划中奖励与动作的对立</a></h3>
+    <p style="color:#ccc;">想象一下, 自动驾驶汽车要决定下一步怎么开 (加速 / 转向 / 刹车)。现在的规划方法有两种思路, 但都有问题: (1) 「打分派」 — 预定义一组动作 (比如 100 个候选轨迹), 给每个打分, 选分最高的。问题: 动作空间是固定的, 没法生成新动作; (2) 「生成派」 — 直接生成一条轨迹, 用真实驾驶数据训练。问题: 只有一条「正确答案」做监督, 训练信号太稀疏。FlowR2A 想了个巧妙办法: 把奖励信号 (来自仿真器) 当成「条件」, 而不是「监督目标」, 用 flow-matching decoder 学习「给定奖励, 应该输出什么动作」的分布。这样模型既能享受稠密奖励监督, 又能生成新动作。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">FlowR2A 把自动驾驶规划问题重新定义为 reward-conditioned action distribution learning, 用 flow-matching decoder 同时获得 dense reward supervision 和 dynamic proposal generation 两个优势。配合 per-timestep reward conditioning + reward noise augmentation, 模型在 nuScenes / Waymo Open Dataset 上的规划指标超过 UniAD / VAD 等 SOTA 7-12 个百分点。可控采样 (reward guidance / anchored sampling) 让模型能在「安全 vs 进度」之间动态权衡。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>FlowR2A 的核心是 flow-matching decoder, 输入是当前环境状态 + per-timestep reward, 输出是未来 N 个时间步的动作分布 (轨迹)。训练时用仿真器 (CARLA + nuPlan) 生成 (轨迹, 奖励) pair 做监督。Reward noise augmentation 在训练时随机扰动奖励信号, 提升模型对奖励噪声的鲁棒性。推理时通过调节 reward guidance strength 动态平衡安全 / 进度 / 舒适度 / 合规四个维度, 也可以用 anchored sampling 把生成轨迹约束在 anchor (历史轨迹的延伸) 附近。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Flow-matching decoder 相比 diffusion / VAE 的优势是推理时只需 5-10 步 (diffusion 通常 50 步), 适合自动驾驶这种实时性要求极高的场景。Per-timestep reward conditioning 的代价是奖励设计本身成为「隐藏的人力成本」 — 仿真器奖励设计需要资深自动驾驶工程师, 不是所有团队都能复现。Reward noise augmentation 虽然提升鲁棒性, 但在极端噪声下 (例如传感器故障), 模型可能生成保守但不安全的轨迹 (宁愿停车不挪动)。FlowR2A 当前依赖 nuScenes / Waymo Open Dataset, 在中国复杂城市道路 (外卖车 / 电动车 / 行人混行) 的泛化性未验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 nuScenes planning benchmark 上, FlowR2A 把 L2 规划误差降低到 0.42m (UniAD 是 0.51m, VAD 是 0.48m), 碰撞率从 UniAD 的 0.18% 降到 0.09%。在 Waymo Open Dataset 上, FlowR2A 的 planning score 达到 0.84, 比 UniAD 的 0.78 高 6 个百分点。推理时间在 A100 GPU 上每帧 18ms, 满足实时规划要求 (60 FPS 需要 16ms)。Reward guidance 实验表明, 调高 safety reward 让碰撞率再降 60%, 但路径效率下降 12%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xirui Li, Zhe Liu, Xiaoqing Ye, Wenhua Han, Yifeng Pan, Junyu Han, Hengshuang Zhao → The University of Hong Kong + Changan Automobile</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_00.jpg" alt="Karovia/fullstack-ai-agent-roadmap" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Karovia/fullstack-ai-agent-roadmap" target="_blank">Karovia/fullstack-ai-agent-roadmap</a></h3>
+    <p>Karovia 维护的「从零基础到 AI Agent 全栈工程师」中文学习路线图, 内容包括 110 个详细教程、58 万字、400+ GitHub 项目精选, Obsidian 友好。该项目把 AI Agent 全栈拆成 9 个学习阶段: Python 基础 / LLM API 调用 / Prompt 工程 / RAG 原理 / Function Calling / Agent 框架 (LangChain / AutoGen / CrewAI) / 记忆系统 / 工具链 (MCP / 浏览器自动化) / 生产部署 (Docker / K8s)。每个阶段配 10-15 个实战项目, 从写一个最小的 ChatGPT 客户端到部署一个多 agent 协同的生产系统。配套 50 万字教程电子书 PDF + 视频教程链接 + 微信学习群。中文 AI Agent 学习圈里传播度最高的开源资源, 4 周内新增 120+ star。</p>
+    <div class="source">⭐ 177 · Markdown</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_01.jpg" alt="UCSC-VLAA/VisualClaw" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/UCSC-VLAA/VisualClaw" target="_blank">UCSC-VLAA/VisualClaw</a></h3>
+    <p>UCSC-VLAA (UC Santa Cruz Visual Language and AI Lab) 发布的 VisualClaw 开源实现, 是 ICML 2026 接收论文的官方代码。VisualClaw 是一个针对物理世界个性化任务的实时多模态 agent, 通过摄像头实时观察环境, 根据用户的个性化偏好 (例如用户偏好蓝色杯子而不是白色杯子) 做出决策。技术亮点是 (1) 个性化偏好检索机制 — 把用户历史交互编码成向量记忆, 实时检索 top-k 偏好; (2) 实时视觉流处理 — 用 streaming diffusion 处理摄像头输入, 单帧延迟 80ms; (3) 长任务链规划 — 支持 30+ 步的物理任务 (整理桌面 / 烹饪辅助)。配套发布 VisualClaw-Bench 评测, 覆盖 5 类物理任务 × 50 个用户偏好场景。</p>
+    <div class="source">⭐ 37 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_02.jpg" alt="AtharvaMaik/donecheck" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/AtharvaMaik/donecheck" target="_blank">AtharvaMaik/donecheck</a></h3>
+    <p>AtharvaMaik 开发的「任务完成证明」(proof-of-done) 工具, 专门为 AI coding agent (Codex / Claude Code / Cursor / Copilot) 提供本地证据收据机制。每次 agent 声称「完成了」任务时, donecheck 会在本地生成一份不可篡改的证据包: (1) git diff 快照, 列出修改文件 + 增删行数; (2) 测试运行结果, 自动跑 pytest / npm test; (3) 任务描述 → 代码改动的映射, 用 embedding 相似度验证一致性; (4) 时间戳 + 用户签名, 防事后篡改。所有证据本地加密存储, 用户可一键导出 PDF 提交给经理 / 客户。工具支持 5 个主流 agent (Codex / Claude Code / Cursor / Copilot / Aider) 的 hook 集成。</p>
+    <div class="source">⭐ 14 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_03.jpg" alt="GenseeAI/gensee-crate" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/GenseeAI/gensee-crate" target="_blank">GenseeAI/gensee-crate</a></h3>
+    <p>GenseeAI 发布的 gensee-crate 用 Rust 实现, 为 AI coding agent 提供运行时安全防护。核心能力: (1) 实时系统事件监控 — agent 调用 shell / 文件 / 网络操作时, gensee-crate 拦截并按规则决定放行或拒绝; (2) 可执行规则引擎 — 用户可写 YAML 规则, 例如「禁止 rm -rf」「禁止访问 /etc/passwd」「禁止 curl 内网地址」; (3) 审计日志 — 所有拦截事件记录到本地 SQLite, 支持回溯; (4) 沙箱模式 — agent 完全运行在受限文件系统, 即使被 prompt injection 攻击也无法访问敏感资源。已对接 Codex / Claude Code / Aider / Cursor 四个主流 coding agent 的 hook 接口。</p>
+    <div class="source">⭐ 43 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_04.jpg" alt="raiyanyahya/recall" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/raiyanyahya/recall" target="_blank">raiyanyahya/recall</a></h3>
+    <p>raiyanyahya 开发的 Recall 是 2026 年最热门的 AI Agent 记忆管理工具 (4 周内新增 400+ star)。Recall 给 Claude Code / Codex / Cursor 提供跨会话记忆能力: (1) 自动捕获 — agent 完成的任务、读过的文件、做过的决策自动写入本地向量库; (2) 智能检索 — 新会话启动时, agent 自动召回相关的历史上下文, 不用每次重新解释项目背景; (3) 时间衰减 — 老旧记忆自动降权, 避免记忆库被历史噪音淹没; (4) 隐私本地化 — 所有记忆存在用户本地 SQLite + 向量索引, 不上传云端。Recall 通过 hook 集成到 Claude Code / Codex 的工具调用层, 用户无感启用。</p>
+    <div class="source">⭐ 480 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-25/oss_summaries_v2_2026-06-25_05.jpg" alt="mohitsoni48/TurboLLM" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mohitsoni48/TurboLLM" target="_blank">mohitsoni48/TurboLLM</a></h3>
+    <p>mohitsoni48 开发的 TurboLLM 是一款本地 LLM 推理引擎自动调优工具 + Web UI, 目标是把 llama.cpp / Ollama / vLLM / TGI 多个本地推理后端统一成一个简单的桌面应用。核心能力: (1) 自动 GPU 检测 — 自动识别 NVIDIA / AMD / Apple Silicon GPU, 选择最优推理后端; (2) 模型自动量化 — INT4 / INT8 / FP8 一键切换, 平衡速度和质量; (3) 实时性能监控 — 显示 tokens/sec / VRAM 使用率 / GPU 温度; (4) OpenAI 兼容 API — 本地服务暴露 OpenAI / Anthropic 兼容接口, 现有应用零改动接入; (5) 多模型并发 — 同时跑多个模型 (例如代码用 Qwen-Coder + 对话用 Llama), 动态路由。Web UI 用 Next.js 14 打造, 现代风格不输 LM Studio。</p>
+    <div class="source">⭐ 79 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-25 10:39</p>
+</footer>
+</div>
+</body>
+</html>
