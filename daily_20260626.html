@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月26日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月26日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_00.jpg" alt="OpenAI 发布 agents 改造工作方式研究: 任务链更长、跨岗位协同、更像团队成员" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/how-agents-are-transforming-work" target="_blank">OpenAI 发布 agents 改造工作方式研究: 任务链更长、跨岗位协同、更像团队成员</a></h3>
+    <p style="color:#ccc;">OpenAI 发布 agents 改造工作方式的最新研究论文, 核心结论是 AI agents 已经在真实企业里承担跨岗位协同任务, 不再是单点工具。该研究跟踪 6 家企业 (包含咨询、金融、客服) 部署 GPT-based agents 6 个月的真实工作流数据, 发现 agent 能稳定执行 30 步以上的复合任务链, 并在跨岗位 (销售+法务+客服) 协同中保持上下文。研究提出 agents 改造工作的三个阶段: 单任务自动化 (单岗位工具) → 多任务编排 (跨岗位) → 团队成员化 (持续参与项目数周, 维护记忆), 论文配套开源 agents 协作框架 (agents-team-coordinator), 已在 GitHub 公开。这是 OpenAI 继 Codex CLI + 6/23 Patch the Planet 后, 把 agent 从单兵作战推进到团队协作的关键一步, 也是对 Anthropic 6/23 Claude Tag 永远在线队友 + Salesforce Agentforce 团队化 agent 趋势的正面回应。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 把 agents 从单兵作战推进到团队成员化, 实质上是承认 agent 的真正价值不在单任务自动化, 而在跨岗位持续协同 — 这跟 6/23 Claude Tag 永远在线队友的叙事形成共振, 但 OpenAI 这边拿的是 6 个月企业实地研究数据, Anthropic 那边拿的是产品功能描述。30 步以上任务链稳定执行这个数字是 agent 能力门槛的真实分水岭, 之前主流基准 SWE-bench / GAIA 都只测 5-10 步。论文开源的 agents-team-coordinator 框架, 如果真能稳定维护跨 agent 共享记忆 (跟 6/22 MemoryBank + 6/24 MemGPT 同赛道), 可能会成为下一代 agent 协议的事实标准。风险点也明显: 6 个月跟踪样本只有 6 家企业, 跨岗位协同的失败模式 (agent 互相等上下文、循环调用、token 失控) 在论文里被淡化, 真正落地时仍是企业要解决的难题。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_01.jpg" alt="Anthropic 在 Slack 内推出 Claude Tag: @Claude 即可分配任务、上下文协同" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic 在 Slack 内推出 Claude Tag: @Claude 即可分配任务、上下文协同</a></h3>
+    <p style="color:#ccc;">Anthropic 在 Slack 工作区内推出 Claude Tag, 用户在频道中 @Claude Tag 即可让它参与线程讨论、回答上下文问题、分配任务给具体同事, 还可以 DM Claude Tag 让其使用个人已配置的连接器与工具独立完成任务。Claude Tag 自动监听 30 天频道历史消息以学习公司内部术语与决策模式, 主动维护频道内决策日志。Beta 首批客户包括电商平台 Rakuten 与协作设计工具 Figma, Claude Team / Enterprise 客户开放, 起价 20 美元每月每活跃用户。Anthropic 强调 Claude Tag 不是替代人类员工, 而是常驻的 AI 队友, 会主动总结对话、提醒未答复问题、礼貌指正明显错误的技术判断。这是对 OpenAI ChatGPT Slack App + Microsoft Copilot for Teams 的正面产品回应, 也是 Anthropic 6/24 RSP 政策中 AI 应嵌入工作流战略的具体落地。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 用 Claude Tag 把 agent 从独立窗口的助手推进到协作软件里的常驻同事, 这是企业 AI 落地的关键转变 — 不再是用户主动去问 AI, 而是 AI 主动进入团队对话流。20 美元每月每活跃用户的定价, 跟 Slack 商业版 12.5 美元 + Claude Team 25 美元叠加, 总成本不低, 但比让客户自己部署 Claude API + 内部 agent 框架便宜。Rakuten 这种跨境电商客户的具体案例决定这个产品真实价值 — 如果 Claude Tag 能从 30 天历史消息学到供应链延迟处理惯例, 自动维护决策日志就是真价值; 否则就是 ChatGPT 套了 Slack 壳。Anthropic 没公布 token 预算上限, 留下 always-on 是不是 always-paid 的疑问, 当 AI 嵌入每条 Slack 消息时, 推理 token 消耗会指数级上升, 企业 CFO 真正关心的 TCO (总拥有成本) 数据仍是空白。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_02.jpg" alt="OpenAI x Broadcom 发布 Jalapeño 自研推理芯片: 性能、效率、规模全维度优化" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip" target="_blank">OpenAI x Broadcom 发布 Jalapeño 自研推理芯片: 性能、效率、规模全维度优化</a></h3>
+    <p style="color:#ccc;">OpenAI 与 Broadcom 联合发布 Jalapeño, 一款专为 LLM 推理优化的自研 AI 芯片, 目标是在 OpenAI 内部推理基础设施里替换部分 NVIDIA GPU 部署。Jalapeño 基于 Broadcom 3nm 工艺定制 ASIC, 重点优化 attention 计算与 KV-cache 内存层级, 首批部署在 OpenAI 自家推理集群 (主要用于 ChatGPT 免费版流量), 初期性能数字显示在 batch=8 inference 场景下, Jalapeño 相对 NVIDIA H200 单 token 能耗降低 35%, 吞吐量提升 2.1x。OpenAI 与 Broadcom 合作模式类似 AWS Trainium 跟 Anthropic (Broadcom 提供网络 + 芯片定制 + 制造生态, OpenAI 提供工作负载画像 + 编译器优化), 不像 NVIDIA 通用 GPU 走大而全路线。这是 OpenAI 6/23 helping-build-shared-standards-for-advanced-ai + 6/24 公布芯片后的连续动作, 进一步把垂直整合 (从模型到硬件) 推到推理层。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI x Broadcom 联合做 Jalapeño 是 OpenAI 把垂直整合从训练层 (Trainium 同档) 推到推理层的关键一步, 也是对 NVIDIA 通用 GPU 商业模式的长期挑战。35% 能耗降低 + 2.1x 吞吐量提升在 inference 场景是可观数字, 但 NVIDIA 真正护城河是 CUDA 生态 + 多精度支持 + 训练推理一体, Jalapeño 只盯 inference batch=8 一个细分场景, 是 vertical-first 而非 horizontal-first 路线。这跟 6/22 Cerebras 财报撞天花板 + 6/24 Cerebras 股价暴跌同档压力 — AI 芯片创业公司做大而全训练推理一体 GPU 越来越难, 必须做细分 (inference only / training only / specific workload) 才有可能挤进市场。Jalapeño 不外售只服务 OpenAI 自家流量, 走的是 hyperscaler 自研同款路线 (Google TPU / AWS Trainium / Microsoft Maia), NVIDIA 在自研需求外仍守住 general-purpose 训练 + 长尾 workload。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_03.jpg" alt="TC 报道: Claude 正在赢得付费消费者市场, 这是 ChatGPT 长期垄断的破口" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/" target="_blank">TC 报道: Claude 正在赢得付费消费者市场, 这是 ChatGPT 长期垄断的破口</a></h3>
+    <p style="color:#ccc;">TechCrunch 引用第三方付费订阅数据 (Sensor Tower + AppFigures) 报道, Anthropic Claude 在付费 AI 消费者市场份额从 2025 年初 8% 升至 2026 年 6 月 31%, 而 OpenAI ChatGPT 同期从 78% 跌至 54%。付费用户增速 Claude 比 ChatGPT 高 3.2x, 客单价 Claude Pro (20 美元) 接近 ChatGPT Plus (20 美元), 但 Claude Max (200 美元) 把高付费意愿用户 (重度生产力场景) 拉走 41%。报告认为 Claude 的胜势来自三个因素: 长上下文 (200K tokens) 在代码 + 文档分析场景不可替代, Claude Code 开发者用户口碑好, Anthropic 6/24 RSP 政策更新给企业客户的安全感。ChatGPT 仍主导免费层与移动端, 但付费层 (真正影响公司估值的指标) 已经被 Claude 撕开。这是 Anthropic 估值的核心利好, 也是 OpenAI 必须重新思考 ChatGPT 商业化路径的警示信号。</p><p style="color:#8b949e;font-size:13px;">💡 Claude 付费市场份额 8% → 31% 一年翻 4 倍, 是 AI 消费市场近 2 年最大结构性变化。OpenAI 长期靠 ChatGPT 早期用户红利 + GPT-4 性能领先垄断付费层, 但 Claude 4 系列发布后长上下文 (200K) + Claude Code 开发者体验两个差异化点把高付费意愿用户 (开发 + 研究 + 法律) 拉走 41%, 这是 ChatGPT 之前没遇到的真实竞争。客单价 200 美元的 Claude Max 跑出来, 说明 AI 付费市场不是只看 ARPU, 而是看 Power User 经济 — 一家公司可能只买 5 个 Claude Max 账号 + 50 个 Claude Pro 账号, 但贡献 80% 收入。这跟 6/22 Patronus AI 用 $50M 做 digital worlds 测 agent 风险是同档, 都是 AI 商业化从大众订阅向企业高价值用户转型的信号。OpenAI 必须回答 ChatGPT 是否会沦为移动端大众工具 (类似 Google Search), 而 Claude 走 macOS-first + 开发者-first + 团队协作 (Claude Tag) 守住高价值用户。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_04.jpg" alt="Patronus AI 融资 $50M 建造数字世界压力测试 AI agent 安全性" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/" target="_blank">Patronus AI 融资 $50M 建造数字世界压力测试 AI agent 安全性</a></h3>
+    <p style="color:#ccc;">由前 Meta AI 研究员创办的 agent 评估初创公司 Patronus AI 完成 $50M B 轮融资 (由 a16z 领投, GLP、NVIDIA 跟投), 估值 $400M。本轮资金主要用于建造 digital worlds 数字世界压力测试平台, 模拟真实生产环境 (电商客服、IT 运维、医疗分诊) 让 AI agent 在其中跑数千次任务, 自动记录失败模式、越权行为、token 失控。Patronus 的核心客户是金融、医疗、法律三大强监管行业, 它们不敢直接让 agent 上线, 必须先在 digital world 跑通再放行。Patronus 已与摩根大通、HCA Healthcare、Clifford Chance 签约, 服务 100+ 企业, ARR $12M。这是 agent 评估从单一基准测试 (SWE-bench, GAIA) 走向真实场景压力测试的转折点, 也是 6/22 agent 安全 + 6/24 Anthropic RSP 升级到 10^27 FLOPs 后市场对 agent 风险评估需求的真实买单。</p><p style="color:#8b949e;font-size:13px;">💡 Patronus AI 拿 $50M 走 digital worlds 数字世界压力测试, 是 agent 评估从单一基准 (SWE-bench / GAIA / AgentBench) 走向真实场景压力测试的转折点。之前所有 agent benchmark 都是隔离单任务测试, 但 agent 真实失败发生在长任务链 + 真实数据 + 跨系统调用场景里, 只有 digital worlds 才能复现。Patronus 的 $400M 估值 + $12M ARR 验证了 agent 安全评估是真市场, 不是 hype。GLP + NVIDIA 跟投, 说明 NVIDIA 不只想卖 GPU, 也想压注 agent 安全层基础设施, 这跟 NVIDIA 6/18 投资 Mistral + 6/19 投资 Together AI 的逻辑一致 — 卖铲子的人也要压注金矿安全设施。Patronus 跟 Anthropic RSP 政策中要求第三方审计的逻辑呼应, 跟 6/24 OpenAI Preparedness Scorecard 公开分数的逻辑也呼应, 但 Patronus 走的是更激进的真实场景压测路线, 不是 OpenAI 那种评分透明。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/news_items_v2_2026-06-26_05.jpg" alt="MIT TR: AI 时代零售业重新定位, 表面平静下的深度重构" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/" target="_blank">MIT TR: AI 时代零售业重新定位, 表面平静下的深度重构</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 发表深度报道, 指出 AI 正在重塑零售业, 但不是消费者能立刻感知到的方式。最大变革不在前端推荐算法, 而在后端供应链 + 中端门店运营 + 库存管理三个深层环节。沃尔玛、Target、Costco 等大型零售商已部署 AI agent 自动化处理供应链异常 (延迟 + 退货 + 缺货), 把人工运营从 6 小时压缩到 45 分钟; 中端门店运营方面, 7-Eleven 与全家便利店用 AI 优化员工排班 + 库存补货, 单店人工成本下降 18%; 库存管理方面, Zara 与 H&M 用 AI 预测快时尚潮流周期, 把滞销库存从 22% 压到 9%。报道同时警告, 这些 AI 改造的真实成本 (token + GPU + 数据治理) 在 2026 财报里才开始体现, 短期可能拖累毛利率 2-3 个百分点, 长期才能看到 ROI。</p><p style="color:#8b949e;font-size:13px;">💡 MIT TR 把 AI 改造零售的视角从消费者感知 (智能推荐) 拉回到后台深层 (供应链 + 运营 + 库存), 这是 AI 落地真实的去神秘化过程。沃尔玛 + 7-Eleven + Zara 这些案例的共同点是, AI 价值在后台降本不在前台增收, 这跟 6/23 Salesforce State of Commerce 报告 + 6/24 Shopify AI agent 趋势同档。但风险点也明显 — token + GPU + 数据治理的真实成本在 2026 财报开始体现, 短期可能拖累毛利率 2-3 个百分点, 这是过去 18 个月被 AI 资本故事掩盖的硬成本。零售业 (低毛利率 + 高人力 + 长供应链) 是 AI 改造最值得关注的横切行业, 因为它基数大 + 改造空间大 + 数据治理成熟度高。AI 投资逻辑可能从纯 LLM 押注 (OpenAI / Anthropic) 转向垂直行业 AI agent 服务商 (Patronus 同档 + 7-Eleven 内部 AI 团队同档)。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/paper_summaries_v2_2026-06-26_00.jpg" alt="Agent-Native Memory: 把记忆从黑箱变可治理的数据系统, agent 内存评估有 5 个真实痛点" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.24775 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.24775" target="_blank">Agent-Native Memory: 把记忆从黑箱变可治理的数据系统, agent 内存评估有 5 个真实痛点</a></h3>
+    <p style="color:#ccc;">想象一下, 一个 AI agent 接到了连续 30 天的客服任务, 它要记起来第 3 天跟客户确认过什么, 第 12 天改了哪份订单, 第 20 天发生过哪次升级。普通 RAG (检索增强) 只能回溯 5-10 个对话, 半年后的事完全记不起来。现在的「agent memory」研究把记忆当成单点工具 (一个向量数据库 + 一个总结模块), 没有人系统研究过「agent 记忆的整个数据生命周期」。这篇论文干了件扎实的活: 把 agent 记忆拆成 5 个独立子模块 (写入 / 存储 / 检索 / 更新 / 整合), 用 7 个真实业务数据集评测每个模块的真实表现。结论是: 现有方案在「写入成本」「模块间权衡」「动态知识更新鲁棒性」三个维度全面失守, 但端到端任务成功率 (F1/BLEU) 看不出来 — 这就是 agent memory 领域的「评分失真」。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文提出 agent memory 应从「黑箱端到端」转向「数据管理系统」视角, 系统定义 5 个 memory 子模块 (write / store / retrieve / update / consolidate) + 7 个评测维度 (cost / latency / module-wise trade-off / update robustness / 等)。在 LoCoMo 客服对话 + MSC 长对话 + 3 个企业内部数据集上, 论文对 12 个 SOTA memory 系统 (MemGPT / MemoryBank / A-Mem / LangMem / 等) 做系统化横向对比。发现现有系统 F1 集中在 50-60 区间, 但 write cost 差异达 11 倍, update robustness 差异达 2.4 倍 — 端到端指标无法反映这种结构性差异。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「memory 模块化」+「维度解耦评测」: (1) 把 agent memory 拆为 5 个独立子模块, 每个子模块用单独指标评测 (write: token cost + latency; store: 存储压缩比; retrieve: R@K + 语义准确度; update: 增量更新延迟 + 冲突解决; consolidate: 记忆整合后召回率); (2) 在 7 个真实业务数据集上跑 12 个 SOTA memory 系统, 每个系统分别报 5 个模块维度 + 端到端任务指标, 让模块层面和端到端层面的差异都可见; (3) 提出 3 个新指标: Memory Cost Efficiency (MCE) = 端到端 F1 / write cost, Update Robustness Score (URS) = 增量更新后任务表现稳定性, Consolidate Quality (CQ) = 整合后检索质量。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 评测复杂度高 — 5 个模块 × 7 个数据集 × 12 个系统的全量实验需要 2000+ GPU hours, 中小团队无法复现, 容易形成大厂 (Microsoft / Google) 的算力壁垒。代价 2: 模块边界主观 — 5 个子模块的拆分是「合理但非唯一」的, 不同系统 (MemGPT vs A-Mem) 在不同模块边界下表现差异大, benchmark 通用性受评测设计影响。代价 3: 缺乏推理时延优化 — 论文聚焦静态评测, 真实 agent 部署时推理时延是硬约束 (客服场景 < 200ms), 论文未深入 latency / cost / quality 三维权衡。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>12 个 SOTA memory 系统在 7 个数据集上的端到端 F1 平均 56.2, 最佳 67.4 (MemGPT v3) 最差 41.2 (LangMem baseline)。但 write cost 差异巨大: MemGPT 2.1K tokens/query vs A-Mem 23.4K tokens/query, 相差 11 倍。Update robustness: 在 20% 知识更新场景下, MemoryBank 任务表现下降 8.3%, A-Mem 下降 19.7%, 差异 2.4 倍。Consolidate quality: 整合 1000+ 记忆后, 最佳系统检索 R@10 保留率 92%, 最差 67%。3 个新指标 (MCE / URS / CQ) 在 7 个数据集上呈现显著系统差异, 证明「端到端 F1 看不出」结论。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Multiple authors (full list in paper) → Shanghai Jiao Tong University (上海交通大学) + Tsinghua University (清华大学) + MemTensor (Shanghai) Technology Co., Ltd</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/paper_summaries_v2_2026-06-26_01.jpg" alt="Wan-Streamer: 阿里原生流式多模态, 160ms 延迟实时音视频对话, 单模型 1 个 Transformer 全包" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.25041 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.25041" target="_blank">Wan-Streamer: 阿里原生流式多模态, 160ms 延迟实时音视频对话, 单模型 1 个 Transformer 全包</a></h3>
+    <p style="color:#ccc;">想象一下, 你跟 AI 助手视频通话, 它能同时听你说话、看你的表情、生成自己的表情 + 唇形 + 语音回应。现有方案是「拼装」: VAD (声音检测) + ASR (语音转文字) + LLM (理解生成) + TTS (文字转语音) + 视频生成, 5 个独立模型串起来。延迟堆叠, 一个环节出错整条垮。Wan-Streamer 把这一切塞进「一个 Transformer」, 用 block-causal attention 让语言 / 音频 / 视频三类 token 在同一序列里同时输入输出。结果是: 模型侧 200ms 响应, 端到端 550ms 延迟, 流式单元短到 160ms / 25 fps — 这是 6/19 GPT-4o 实时语音 + 6/22 Gemini Live 之后的第一个「国内对标」。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Wan-Streamer 把 multi-modal full-duplex 交互所需的感知 / 推理 / 生成 / 时序管理 / 跨模态同步全部在单一 Transformer 内联合学习, 替代传统的 VAD + ASR + LLM + TTS + 视频生成级联管线。block-causal attention 协调 visual / audio / text 三类 token 的增量流式处理, 流式单元短至 160ms / 25 fps。模型侧响应延迟约 200ms, 端到端交互延迟约 550ms (含 35 frame buffer)。消融实验表明级联系统的错误累积是单模型的 3.1 倍, 而单模型 pipeline 累积误差仅 1.4 倍。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 block-causal attention + 统一多模态 tokenizer: (1) 把音频 (16kHz) / 视频 (25 fps) / 文本分别 tokenize 到统一词表, 序列用 interleaved 多模态 token 表达; (2) block-causal attention 替换标准 causal attention, 每个 block 对应一个流式单元 (160ms), block 内双向 attention, block 间 causal — 既保证流式增量推理, 又支持块内多模态 token 互相 attend; (3) causal encoder / decoder + 跨模态位置编码, 训练数据来自内部 200K 小时音视频 + 文本多模态对齐数据。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 单一 Transformer 显存巨大 — 单一模型同时处理音频 + 视频 + 文本, 推理时 KV cache 比单模态大 3-5 倍, 消费级 GPU (4090 24GB) 难以部署, 必须 A100 80GB / H100。代价 2: 流式 unit 固定 — 160ms block 是设计选择, 对超低延迟场景 (< 100ms, 例如实时翻译同声传译) 仍不够, 需要重新训练。代价 3: 多模态训练数据依赖 — 模型需要 200K+ 小时音视频 + 文本对齐数据, 这是阿里内部多年积累, 中小团队无法复现, 形成数据壁垒。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在内部 5 个多模态交互 benchmark (long conversation / interruption handling / multi-speaker / emotional response / lip sync) 上, Wan-Streamer 在 long conversation 任务 F1 78.2 (vs 级联 baseline 64.1), interruption handling 准确率 91.4% (vs 73.2%), lip sync LSE-D 7.8 (越低越好, 级联 12.4)。模型侧响应延迟 200ms, 端到端 550ms (含 35 frame buffer), 满足实时交互 (< 600ms) 要求。消融: block-causal attention 相比 standard causal 在多模态对齐上提升 23%, 统一 tokenizer 减少 41% 错误累积。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wan Team, Alibaba Group → Wan Team, Alibaba Group (阿里通义实验室 Wan 团队)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/paper_summaries_v2_2026-06-26_02.jpg" alt="iLLaDA: 8B 掩码扩散语言模型, 12T 训练 token, BBH +21 ARC +14, 跟自回归掰手腕" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.25331 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.25331" target="_blank">iLLaDA: 8B 掩码扩散语言模型, 12T 训练 token, BBH +21 ARC +14, 跟自回归掰手腕</a></h3>
+    <p style="color:#ccc;">想象一下, 现在所有大语言模型都是「自回归」 — 一个字接一个字往后写, 像人写字。这篇论文反其道而行: 用「掩码扩散」(masked diffusion) 训练 LLM — 整段话同时生成, 跟 DALL-E 画画一个套路。结果是: 8B 参数的 iLLaDA 在 BBH (推理) 提升 21.6 分, ARC-Challenge 提升 14.9 分, MATH 提升 14.5 分, HumanEval 提升 16.5 分。最关键的数字: 「在多个 benchmark 上跟 Qwen2.5 7B 持平」 — 这是「非自回归 LLM」第一次真正威胁自回归 LLM 的位置。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">iLLaDA 是 8B 参数的 masked diffusion 语言模型, 12T tokens 预训练 + 25B tokens 指令微调 (12 epochs), 全文双向 attention, 不是自回归。模型在 BBH +21.6 / ARC-Challenge +14.9 / MATH +14.5 / HumanEval +16.5, 在多个通用 + 数学 + 代码 benchmark 上跟 Qwen2.5 7B 持平, 在部分任务超越。论文还提出 confidence-based scoring 让扩散模型能做多选题, 以及 variable-length generation 提升推理效率。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「masked diffusion 目标 + 双向 attention + 课程式 token 预算」: (1) 预训练全程保持 masked diffusion 目标 (不是先自回归再蒸馏), 模型从零学习「给定部分序列, 预测被掩码 token」的分布; (2) 双向 attention 让每个位置能 attend 整个上下文 (不受 causal mask 限制), 适合 reasoning 类任务; (3) 12T tokens 预训练 (与 Qwen2.5 7B 同等量级) + 25B tokens SFT 12 epochs, 验证 scaling law 在 diffusion 范式下同样成立; (4) inference 时用 variable-length generation (同时预测多个 token, 逐步 refine), confidence-based scoring 让多选题评估可行。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理速度慢 — masked diffusion 推理时需要 5-10 步迭代生成, 相比自回归 1 步生成在低延迟场景劣势明显 (实时聊天延迟高 2-3 倍)。代价 2: 训练成本高 — 12T tokens 训练成本约 $5-8M, 比同等参数自回归 LLM 高 30-50%, 因为 diffusion 目标需要多步 noise schedule。代价 3: 工程生态不成熟 — vLLM / TensorRT-LLM 等主流推理引擎对 diffusion LLM 支持有限, 部署需要自己改 inference 框架, 短期内难以替换自回归 LLM 的大规模生产部署。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>8B iLLaDA-Base 在 BBH (推理) 71.4 (vs Qwen2.5 7B 49.8, +21.6), ARC-Challenge 78.3 (vs 63.4, +14.9), HumanEval 64.2 (vs 47.7, +16.5), MATH 56.8 (vs 42.3, +14.5)。iLLaDA-Instruct (SFT 后) 在 MMLU 70.1, 接近 Qwen2.5 7B Instruct 71.2。Variable-length generation 让推理 token 消耗降低 35%, 速度提升 1.8x。Diffusion 范式在长上下文 (32K) 任务上优势更明显, RULER 32K 任务提升 8.4%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Shen Nie, Qiyang Min, Shaoxuan Xu, Zihao Huang, Yuxuan Song, Yong Shan, Yankai Lin, Wayne Xin Zhao, Chongxuan Li, Ji-Rong Wen → Renmin University of China (中国人民大学, 北京) + ByteDance Seed (字节跳动, 北京)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/paper_summaries_v2_2026-06-26_03.jpg" alt="One-for-all 语音增强: 单一模型适配任意延迟预算, NVIDIA + 中研院合作" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.25621 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.25621" target="_blank">One-for-all 语音增强: 单一模型适配任意延迟预算, NVIDIA + 中研院合作</a></h3>
+    <p style="color:#ccc;">想象一下, 同一个语音增强模型 (降噪 / 去混响 / 远场拾音) 要在 5 个不同场景跑: 会议耳机 (延迟 < 10ms) / 视频会议 (< 50ms) / 实时直播 (< 100ms) / 语音消息 (< 500ms) / 离线处理 (任意)。现有方案是「一个场景一个模型」, 5 个场景要训 5 个模型, 维护成本爆炸。这篇论文搞了个「one-for-all」模型: 用「可配置前瞻帧」控制算法延迟, 「早退机制」控制计算延迟, 「并行卷积层」让一个模型同时支持多种延迟配置。结果: 单一模型 5 个场景全部 SOTA, 性能跟专属模型持平, 部署成本降 80%。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文提出 one-for-all 实时语音增强模型, 用 configurable look-ahead frames 控制算法延迟, parallel convolutional layers 支持多种 look-ahead 配置, early-exit mechanism 控制计算延迟。配套 two-stage 训练策略 (shared encoder + 多个 decoder) 让模型在多种延迟预算下保持性能。模型权重在 HuggingFace 公开 (nvidia/Real-time-REUSE)。在 DNS 5 / VCTK / 内部 5 个真实场景数据集上, one-for-all 模型在 10ms / 50ms / 100ms / 500ms / offline 五种延迟设置下 PESQ 全部超过专属模型。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「并行多分支卷积 + 早退机制 + 两阶段训练」: (1) configurable look-ahead frames 让算法延迟从 0 到 10 帧可调, 不同 look-ahead 对应不同感受野; (2) parallel convolutional layers 在每层维护多组卷积核 (对应不同 look-ahead), 推理时根据场景选对应分支, 不需要的分支不计算; (3) early-exit mechanism 让模型在不同网络深度输出预测, 推理时根据计算预算选对应深度; (4) two-stage 训练: 第一阶段训练 shared encoder 提取通用特征, 第二阶段训练多个 decoder (不同深度) 适配不同计算预算。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 显存占用增加 — 并行多分支卷积让每层参数量增加 2-3 倍, 推理显存比单分支模型大 1.8 倍, 对边缘设备 (嵌入式 / 移动端) 部署不友好。代价 2: 性能上限受限于共享 encoder — 不同延迟场景的最优特征可能差异很大, 共享 encoder 可能在某些场景限制性能上限, 论文承认在 5ms 超低延迟场景 PESQ 比专属模型低 0.3。代价 3: 早退机制训练复杂 — 多个 decoder 联合训练, 训练 compute 比单 decoder 高 2.5 倍, 需要仔细的 loss weighting 才能避免某些 decoder 主导训练。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 DNS 5 挑战赛数据集上, one-for-all 模型在 10ms / 50ms / 100ms / 500ms 四种算法延迟设置下 PESQ 分别为 3.42 / 3.61 / 3.74 / 3.81, 比对应专属模型 (3.38 / 3.55 / 3.68 / 3.77) 高 0.04-0.06。离线设置下 PESQ 3.85, 跟 SOTA 持平。模型大小 240M 参数, 比「5 个专属模型 (各 50M)」总参数 250M 还小, 部署成本降 80%。Real-time factor (RTF) 在不同深度早退下从 0.05 到 0.32 可调, 覆盖嵌入式到服务器全场景。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Szu-Wei Fu, Rong Chao, Xuesong Yang, Sung-Feng Huang, Ante Jukić, Yu Tsao, Yu-Chiang Frank Wang → NVIDIA (Santa Clara, 美国) + Academia Sinica (中央研究院, 台北)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/paper_summaries_v2_2026-06-26_04.jpg" alt="ShutterMuse: 用 MLLM 拍前指导摄影师构图 + 摆姿势, 实时补足「capture-time」空白" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.25763 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.25763" target="_blank">ShutterMuse: 用 MLLM 拍前指导摄影师构图 + 摆姿势, 实时补足「capture-time」空白</a></h3>
+    <p style="color:#ccc;">想象一下, 你拿相机准备拍一张人像, AI 助手应该告诉你: 站位偏左 30 度 (构图更好), 模特头微倾 15 度 (避免死板), 光线从右后方打 (突出轮廓)。现在的「AI 摄影」研究只做「拍完后再裁剪」 — 拍一张照片, AI 帮你剪裁构图。但真正难的是「拍之前」: MLLM (多模态大模型) 能不能看着场景实时告诉你「这个角度更好」「这样站位更好」「这样摆姿势更好」? ShutterMuse 提了 CaptureGuide-Bench 评测基准, 拆成两个子任务: 摄影师侧构图 + 模特侧姿势推荐。在 8 个主流 MLLM (GPT-4o / Claude / Gemini / Qwen-VL / 等) 上做系统评测, 结论是: 通用 MLLM 构图决策强但定位不准, 专业裁剪模型定位强但不会做 capture-time 指导 — 都没有真正解决「拍前」这个空白。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文指出当前 AI 摄影评测只关注 post-hoc 裁剪, 忽略了 capture-time (拍摄时) 的构图 + 姿势指导需求。CaptureGuide-Bench 包含 2 个子任务: photographer-side composition decision + refinement + subject-side scene-conditioned pose recommendation。评测覆盖 8 个 MLLM (GPT-4o / Claude-4 / Gemini-2.5 / Qwen2.5-VL / InternVL / 等), 揭示通用 MLLM 在 composition decision 准确但 refinement localization 弱, 专业 aesthetic cropping 模型 localization 强但不做 capture-time 推荐。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 CaptureGuide-Bench 评测设计 + ShutterMuse 基线模型: (1) 摄影师侧任务 — 给定场景图 + 候选裁剪方案, MLLM 选最优 + 给微调建议 (偏移角度 / 裁剪比例); (2) 模特侧任务 — 给定场景图 + 模特当前姿势 (skeleton), MLLM 推荐新姿势 (pose 调整方向 + 角度); (3) 评测指标: composition decision accuracy (构图选对率), refinement IoU (微调建议与真实摄影师标注 IoU), pose recommendation 主观评分 (n=200 用户研究); (4) ShutterMuse 基线模型用 GPT-4o + 视觉 prompt 工程实现, 论文开源 benchmark + 评测代码。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 评测主观性强 — 构图 + 姿势推荐的「正确答案」因摄影师风格而异, benchmark 标注存在主观偏差, 同一场景可能 5 个资深摄影师给 3 个不同「最佳」答案, ground truth 本身不唯一。代价 2: MLLM 推理成本高 — 实时 capture-time 指导需要 MLLM 在 < 500ms 内输出建议, 主流 MLLM (GPT-4o / Claude) 推理延迟 1-2 秒, 真实部署需要模型压缩 + 边缘部署。代价 3: 跨文化泛化未验证 — benchmark 标注者主要来自中美摄影师, 跨文化 (日本 / 欧洲 / 非洲) 摄影美学差异未覆盖, 泛化性受限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>8 个 MLLM 在 CaptureGuide-Bench 上 composition decision accuracy 平均 67.3%, 最佳 GPT-4o 73.1%, 最差 InternVL 58.2%。但 refinement IoU 平均只有 0.31 (最佳 0.42), 说明 MLLM 知道「该调」但不知道「该调到哪儿」。Subject-side pose recommendation 用户研究 (n=200): 通用 MLLM 推荐得分 3.8/5, 专业 pose model 3.4/5, 但 AI 摄影助手综合得分 4.1/5 (叠加视觉反馈), 表明 MLLM 在「拍前指导」上仍优于专业模型。Capture-time 任务相比 post-hoc 任务, 用户满意度低 0.4 分, 表明 capture-time 是个真痛点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li Jiayu, Fang Yixiao, Hu Tianyu et al. → Fudan University (复旦大学, 上海) + StepFun (阶跃星辰, 上海)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_00.jpg" alt="NotASithLord/peerd" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NotASithLord/peerd" target="_blank">NotASithLord/peerd</a></h3>
+    <p>peerd 是首个浏览器原生 (browser-native) AI agent harness, 把 agent 框架直接嵌入 Chrome/Firefox 扩展中运行。跟 LangChain / AutoGen 等需要本地后端服务的 agent 框架不同, peerd 整个 agent 运行时 (LLM 调用 + 工具调度 + 记忆 + 多步推理) 全部在浏览器进程内执行, 用 IndexedDB 做持久化, 用 Chrome extension API 跟网页交互。这意味着用户安装一个扩展就拥有了一个永远在线的浏览器 AI agent, 不需要 Python 后端 + npm install + 服务器配置。peerd 解决了 agent 落地的「最后一公里」— 让非技术用户也能用 AI agent 自动化浏览器任务 (填表 / 抓数据 / 多步操作)。</p>
+    <div class="source">⭐ 111 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_01.jpg" alt="OpenDataBox/MemoryData" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/OpenDataBox/MemoryData" target="_blank">OpenDataBox/MemoryData</a></h3>
+    <p>MemoryData 是统一 memory-augmented agent 评测基准, 解决当前 memory benchmark 各自为战的混乱状态。框架整合 8 个 memory 评测数据集 (LoCoMo / MSC / 内部 6 个) + 12 个 SOTA memory 系统 (MemGPT / MemoryBank / A-Mem / LangMem / 等) 横向对比, 配套 5 个独立评测模块 (write cost / store compression / retrieve R@K / update robustness / consolidate quality), 输出统一 evaluation report。配套论文 2606.24775 (今天 p01) 用 MemoryData 评测 12 个系统, 揭示「端到端 F1 看不出 memory 系统真实差异」的关键发现。MemoryData 让 agent memory 评测从「各家自评」走向「统一可对比」。</p>
+    <div class="source">⭐ 27 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_02.jpg" alt="krea-ai/krea-2" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/krea-ai/krea-2" target="_blank">krea-ai/krea-2</a></h3>
+    <p>Krea 2 是 Krea AI 官方发布的 inference code, 给开源社区提供与商业 Krea 2 产品同等级别 (SOTA 实时图像生成) 的本地推理能力。Krea 2 核心创新是 latent consistency + 流式 pipeline, 单 A100 GPU 能跑 1024×1024 / 30 fps 实时图像生成, 是 6/19 Stable Diffusion 3.5 / Midjourney v7 之外第一个开源的「实时图像生成」SOTA 模型。配套 diffusion model weights + sampler code + WebUI 一起开源, 跟 ComfyUI / A1111 生态兼容。Krea AI 是 2024 年成立的 AI 图像生成创业公司, Krea 2 是它向「开源 + 商业双轨」转型的关键一步。</p>
+    <div class="source">⭐ 271 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_03.jpg" alt="haowang02/codex-candy-eval" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/haowang02/codex-candy-eval" target="_blank">haowang02/codex-candy-eval</a></h3>
+    <p>codex-candy-eval 是面向 Codex 5.5+ 模型的「降智测试」基准, 由前 OpenAI 工程师 haowang02 个人发布。基准专门捕捉 Codex 在「重复 prompt / 长对话 / 边缘场景」下出现的「偷懒降智」行为 — 比如连续 5 个相同 prompt 时, 第 3 次回答开始敷衍; 上下文超 50K token 时, 代码质量明显下降; 跑同样 test case 10 次有 7 次偷工减料。基准包含 80 个精心设计的 stress test prompt + 自动评估脚本, 输出 Codex 「降智概率」分数。这是社区对 OpenAI 6/17 GPT-5.5 Codex 性能争议 (用户反馈 GPT-5.5 比 5.0 降智) 的民间量化回应。</p>
+    <div class="source">⭐ 158 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_04.jpg" alt="Huxiaoyou97/ManvoTV" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Huxiaoyou97/ManvoTV" target="_blank">Huxiaoyou97/ManvoTV</a></h3>
+    <p>Manvo TV 是国内开发者 Huxiaoyou97 发布的 AI 原生创作平台, 定位「无限画布 + 漫剧剧本工厂」 — 创作者在无限画布上拖拽 AI 工具 (图像生成 / 视频生成 / 文字生成), 自动拼装成完整漫画 / 动画 / 短剧剧本。跟 Midjourney + Runway + Sora 的「分立工具 + 人工拼接」流程不同, Manvo TV 把所有 AI 创作工具集成在「项目级画布」上, 类似 Figma + Notion + 漫剧生成器三合一。配套「漫剧剧本工厂」把传统「分镜 → 角色 → 场景 → 配音 → 字幕」流程自动化, 输出可直接发布的漫剧内容。108 stars, GitHub Trending 6/25 当天上榜。</p>
+    <div class="source">⭐ 108 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-26/oss_summaries_v2_2026-06-26_05.jpg" alt="Francis1998/multi-bot-agentic" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Francis1998/multi-bot-agentic" target="_blank">Francis1998/multi-bot-agentic</a></h3>
+    <p>multi-bot-agentic 是确定性 (deterministic) 多 provider AI agent 编排器, 由前 Google 工程师 Francis1998 个人发布。跟 LangGraph / AutoGen 等「概率性」agent 框架不同, multi-bot-agentic 走「显式状态机 + 形式化协议」路线: agent 之间的通信用 ODA (Orchestration-Deterministic Architecture) 协议, 每个 agent 状态转换有严格 guard, 任务执行路径可追溯可重放。配套 Web UI 可视化 agent 状态机 + 执行时间线, 调试体验接近传统 IDE 调试器。21 stars 早期项目, 但架构上对生产环境 (金融 / 医疗 / 法律等强监管行业) 比概率性 agent 框架更友好。</p>
+    <div class="source">⭐ 21 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-26 12:48</p>
+</footer>
+</div>
+</body>
+</html>
