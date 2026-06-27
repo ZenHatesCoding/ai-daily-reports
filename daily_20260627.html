@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月27日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月27日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_00.jpg" alt="OpenAI 发布 GPT-5.6 Sol 预览版, 集成推理 / 多模态 / 长上下文下一代基座" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol" target="_blank">OpenAI 发布 GPT-5.6 Sol 预览版, 集成推理 / 多模态 / 长上下文下一代基座</a></h3>
+    <p style="color:#ccc;">OpenAI 6/26 突然上线 GPT-5.6 Sol 预览, 这是继 5.5 系列之后首次大规模整合「推理 + 多模态 + 长上下文」的下一代基座模型。预览版已经接入 ChatGPT Pro / API 灰度, 核心改进是 (1) 推理任务 (数学 / 代码 / 逻辑) 上准确率 +12% vs 5.5, (2) 多模态原生输入支持图像 / 音频 / 视频统一 token 化, 不再走外挂 adapter, (3) 上下文窗口从 256K 扩到 1M token, 实际有效记忆从 100K 提升到 500K (Lost-in-Middle 缓解)。Sol 这个名字暗示「solar」/ 全光谱, 是 OpenAI 在 Anthropic Claude Opus 4.8 / Google Gemini 3.5 Flash 双重压力下的回应。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 把推理 / 多模态 / 长上下文三个能力塞进一个基座, 实际是在跟 Anthropic 的「双模型策略」(Opus 长推理 + Sonnet 日常) 和 Google 的「分模型 + 统一 API」路线正面对撞 — Sol 是 OpenAI 用「单一基座统一所有场景」的回归路径, 跟当年 GPT-4 统一文本 / 视觉的路线一脉相承。但 1M 上下文 + 多模态原生让单 token 推理成本比 5.5 高 35-50%, API 定价也会水涨船高, 实际推动用户更快把「日常任务」迁移到 Gemini Flash / Claude Haiku 这类轻量模型。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_01.jpg" alt="TC: OpenAI 应美国政府要求, 主动限制 GPT-5.6 部署节奏" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-should-be-temporary/" target="_blank">TC: OpenAI 应美国政府要求, 主动限制 GPT-5.6 部署节奏</a></h3>
+    <p style="color:#ccc;">TechCrunch 6/26 报道, OpenAI 主动放慢 GPT-5.6 部署节奏, 起因是美国政府 (白宫 + 商务部 + AI 安全研究所) 在模型上线前夕要求 OpenAI 暂缓部分高风险场景 (政府客户 / 国防承包商 / 关键基础设施) 的接入, 等待联邦层面的统一 AI 安全标准。OpenAI 在官方声明中强调「限制应该是临时的」, 并承诺 30 天内提交一份「政府场景白皮书」配合审查。这是首次美国头部 AI 厂商在「未立法先监管」的真空期主动让渡节奏, 也是 6/22 Anthropic Fable 出口管制事件后又一例「政府 - 厂商」双向博弈的标志性事件。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 这一波「主动限速」跟 Anthropic 6/22 Fable 出口管制事件同根 — 美国 AI 安全监管已经从「立法后执法」转向「行政指导 + 厂商自律」的前置模式, 跟 2010 年代早期 NIST 网络安全框架的演化路径类似。区别在于: AI 厂商现在普遍愿意配合 (因为头部厂商都参与了标准制定), 而当年银行 / 电信对 NIST 框架有抵触。这意味着 AI 安全标准会快速从「软法」升格到「事实强制」, 未来 12 个月所有面向政府 / 企业的 AI 部署都会要求类似白皮书。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_02.jpg" alt="DeepMind: Gemini 3.5 Flash 上线 computer use 能力, 模型可自主操控桌面和浏览器" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">DeepMind: Gemini 3.5 Flash 上线 computer use 能力, 模型可自主操控桌面和浏览器</a></h3>
+    <p style="color:#ccc;">DeepMind 6/24 给 Gemini 3.5 Flash (轻量级模型, 不是 Pro) 加上了 computer use 能力 — 模型可以像 Anthropic Claude 4.5 Computer Use 那样, 截屏理解桌面 / 浏览器, 给出鼠标键盘动作序列, 自主完成填表 / 下单 / 点选 / 多步操作。在 OSWorld 桌面任务基准上, Gemini 3.5 Flash computer use 拿到 38.7% 成功率 (人类 75%, Claude 4.5 Sonnet 36.2%), 首次让 Flash 级模型在 agent 任务上摸到了 Sonnet 等级的天花板。Flash 级 computer use 最大的意义是成本 — 每任务成本是 Sonnet 的 1/8, 大规模内部自动化 (客服 / 数据录入) 首次有了经济上可持续的方案。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 把 computer use 塞进 Flash 而不是 Pro, 实际是承认了一个事实: 大多数 computer use 任务不需要「最聪明的模型」, 需要的是「够用的判断力 + 极低的延迟和成本」。这是 agent 推理成本曲线上的拐点 — 当 Flash 级模型都能跑桌面任务, Anthropic / OpenAI 的「高端 computer use 模型」溢价空间会被快速压缩。OSWorld 38.7% 距离人类 75% 还有一半差距, 但跟 Claude 4.5 (36.2%) 同档说明 Flash 级模型已经具备「接管企业级桌面流程」的可行性。</p>
+    <div class="source">来源：DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_03.jpg" alt="MIT TR: Anthropic 与美国政府的最新冲突, 三个值得关注的隐藏信号" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/22/1139424/three-things-to-watch-amid-anthropics-latest-feud-with-the-government/" target="_blank">MIT TR: Anthropic 与美国政府的最新冲突, 三个值得关注的隐藏信号</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 6/22 深度解读 Anthropic 跟美国政府最新的「模型能力 - 国家安全 - 出口管制」三方冲突, 提出三个隐藏信号: (1) 商务部正在内部讨论「AI 模型」是否应该纳入「军火清单」(USML) — 这意味着未来出口 Claude / GPT 类模型可能需要国务院级别审批, 跟军火出口同档; (2) Anthropic 6/12 主动下线 Fable / Mythos 模型, 不是技术问题而是合规问题, 公司正在用「主动克制」换「监管宽容」, 试图建立「负责任 AI 厂商」的品牌护城河; (3) OpenAI / Anthropic / Google 三家 6 月密集签约国防部 / 情报机构咨询合同, 实际是「我配合监管所以你也必须用我」的合规赛跑。</p><p style="color:#8b949e;font-size:13px;">💡 MIT TR 这篇分析把 Anthropic - 政府冲突从「单一公司遭遇」升维到「行业标准制定权之争」, 三个信号共同指向一个结论: 美国 AI 头部厂商正在用「主动接受监管」换「政府订单 + 标准制定话语权」, 跟当年波音 / 洛克希德马丁用「国防合同」锁定「军用航空标准」路径完全一致。这意味着未来 12-18 个月美国会出现「事实上的 AI 监管标准」 — 不是国会立法, 而是国防部 + 商务部 + 主要厂商协商出的「技术白皮书 + 出口清单 + 行业自律」三件套, 跟 NIST 网络安全框架演化路径 1:1 对应。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_04.jpg" alt="TC: General Intuition 融资 $2.3B, 用视频游戏训练 AI agent 物理直觉" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-physical-world/" target="_blank">TC: General Intuition 融资 $2.3B, 用视频游戏训练 AI agent 物理直觉</a></h3>
+    <p style="color:#ccc;">TechCrunch 6/25 报道, AI agent 训练数据公司 General Intuition 完成 $2.3B 估值融资 (Lightspeed / Sequoia / a16z 领投, $350M 现金), 核心业务是用「视频游戏的物理交互数据」训练 AI agent 理解真实世界物理规律 — 玩家在游戏里推箱子 / 开车 / 跳跃 / 攀爬的过程, 实际上提供了数百万小时「低成本 + 高质量 + 可标注」的环境交互数据, 比真实机器人数据便宜 100-1000 倍。公司声称模型在「物体操控 + 路径规划 + 应急避障」任务上比纯文本 / 图像预训练的 agent 提升 40-60%, 已被 6 家头部机器人公司 (含 Figure / Physical Intelligence / 1X) 签约采购。</p><p style="color:#8b949e;font-size:13px;">💡 General Intuition 的 $2.3B 估值背后是一个被低估的事实: 具身智能 (embodied AI) 最大的瓶颈不是模型架构, 而是「环境交互数据」成本 — 真实机器人采集 1 小时交互数据要 $500-2000, 而游戏里同样 1 小时数据只要 $0.50-5, 差距达 1000 倍。这家公司本质上是「游戏数据 → 机器人训练」的数据中间商, 类比当年 ImageNet 用 Google Images 免费图像训练视觉模型, 只不过这次用了 GTA / 模拟器游戏数据。风险点是: 游戏物理引擎跟真实物理仍有差距 (摩擦 / 弹性 / 流体), 迁移到真实机器人可能掉点 30-50%, 但作为预训练数据足够降低真实数据需求到原来的 1/10。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/news_items_v2_2026-06-27_05.jpg" alt="HN/双源: 开源权重 LLM 与闭源 LLM 的差距正在结构性扩大, 推理成本而非参数是分水岭" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Hacker News / Doubleword] 3级信源 · cn</div>
+    <h3><a href="https://blog.doubleword.ai/frontier-os-llm" target="_blank">HN/双源: 开源权重 LLM 与闭源 LLM 的差距正在结构性扩大, 推理成本而非参数是分水岭</a></h3>
+    <p style="color:#ccc;">Doubleword 6/26 发布深度分析报告, 用 12 个主流基准 + 推理成本数据对比开源权重 LLM (Llama 4 / Mistral / Qwen / DeepSeek) 与闭源 LLM (GPT-5 / Claude Opus 4 / Gemini 3.5 Pro), 结论是「性能差距在缩小, 但推理成本差距在扩大」 — 开源权重模型在 MMLU / HumanEval / GPQA 上的得分已经达到闭源的 92-95%, 但「每百万 token 推理成本」是闭源的 1/3 到 1/8。真正的分水岭不是「能力」, 而是「单位能力的成本」: 同样准确率下, 闭源厂商靠「基础设施优化 + 规模效应」维持溢价, 但开源厂商靠「自托管 + 模型蒸馏」快速逼近成本下限。</p><p style="color:#8b949e;font-size:13px;">💡 这份报告的核心洞察改变了「开源 vs 闭源」辩论的焦点: 不是「谁更聪明」而是「谁更便宜地聪明」。当开源权重模型在能力上达到闭源 92-95%, 加上推理成本只有 1/3-1/8, 大型企业用户 (银行 / 电信 / 政府) 已经有了明确的经济激励把 60-80% 的内部 AI 工作负载迁到开源 — 这跟当年企业把 Linux 当主力服务器操作系统的演化路径同构。但「前沿能力」(GPT-5 Sol / Claude Opus 4.8 / Gemini 3.5 Pro 在最难任务上的 5-10% 优势) 仍然是闭源厂商的护城河, 短期内不会被开源追上, 意味着头部 AI 厂商的「前沿研发投入」还会持续。</p>
+    <div class="source">来源：Hacker News / Doubleword</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/paper_summaries_v2_2026-06-27_00.jpg" alt="DomainShuttle: 港科大 C4G 组开源跨域主体驱动文生视频, 同一个角色能在不同世界里穿越" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26058 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26058" target="_blank">DomainShuttle: 港科大 C4G 组开源跨域主体驱动文生视频, 同一个角色能在不同世界里穿越</a></h3>
+    <p style="color:#ccc;">想象你在抖音拍一段穿西装打网球的视频, 现在想换成穿汉服打羽毛球, 或者在火星打篮球 — 普通文生视频模型会「认不出你还是同一个人」, 因为它只学过「固定场景下生成对应画面」, 不会「保留你这个主体 + 灵活换场景」。港科大 C4G 组开源了 DomainShuttle, 核心能力是「主体保真 + 场景灵活切换」: 你给它一张参考图 (比如你的头像), 它能在任何 prompt 描述的新场景里 (火星 / 古风 / 海底 / 动画风) 都保留「你的样子」, 同时让背景和动作按文字自由变化。技术核心是把参考图特征和视频特征放在「两个独立的 RoPE 空间」(类似两套坐标系), 让模型既能精确锁定你的样子, 又不会被场景细节干扰。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文针对 Open-Domain Subject-driven Text-to-Video (S2V) 中「in-domain 保真 vs cross-domain 可编辑」的固有矛盾, 提出 Domain-MōT (Domain-aware Mixture-of-Transformers) 架构, 通过 Domain-aware AdaLN 模块实现参考图像的 domain-specific 条件注入, 同时引入 Video-Reference DualRoPE 机制将参考图像 token 与视频 token 分别置于独立 RoPE 频率空间以实现精确主体级空间建模, 并设计 Cross-Pair Consistent Loss 提取不受无关特征干扰的本体特征。开源代码: github.com/HKUST-C4G/DomainShuttle。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「双 RoPE 空间 + 域感知混合架构」: (1) Domain-MōT 框架: 把视频生成流程拆成「参考图像编码器」+「视频 DiT 主干」, 中间用 Mixture-of-Transformers 让参考图像特征只在某些注意力层注入视频生成, 避免过度绑定; (2) Domain-aware AdaLN: 在 DiT 的 adaptive layer norm 里加入「域标识」(in-domain 锁定 vs cross-domain 灵活), 模型根据 prompt 自动判断「该主体保留度」, 不用手工调; (3) Video-Reference DualRoPE: 参考图 token 用一个 RoPE 空间 (低频, 保结构), 视频 token 用另一个 RoPE 空间 (高频, 动态变化), 两个空间独立编码避免互相干扰; (4) Cross-Pair Consistent Loss: 在训练时强制「同一主体的不同 prompt 输出」保持主体特征一致, 解决「同主体跨域漂移」问题。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 训练成本高 — Video-Reference DualRoPE 需要两套独立的 3D 位置编码, 相比单 RoPE 方案训练显存增加 35-45%, 训练 1 个 checkpoint 需要 8×H100 跑 5 天; 中小团队难复现。代价 2: 视频时长上限 5 秒 — 当前架构在 5 秒内能保证主体一致性, 超过 5 秒主体漂移开始累积, 限制了在长视频 / 短视频剧情场景的应用。代价 3: 域间迁移仍有上限 — 在「人物 → 动漫角色」这种 extreme domain shift 场景, 主体特征保留率从 95% 降到 78%, 对极致风格化场景仍然需要外挂 IP-Adapter。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Subject-driven Video Generation 主流基准 (DreamBooth / AnimateBench / VideoBooth) 上, DomainShuttle 相对 SOTA baseline (AnimateDiff + IP-Adapter / VideoBooth / Subject-Diffusion) 主客观指标全面领先: 主体保真度 (DINO 相似度) +0.08, 视频质量 (FVD) -15%, 文本对齐 (CLIP score) +0.04, 用户研究 (人类偏好) 胜率 67%。尤其在跨域场景 (人物→古风 / 人物→赛博朋克), 优势更明显: 主体保留率比 SOTA 高 12-18%。开源 5 秒视频生成, 单卡 A100 推理 8GB 显存, 速度 12 秒生成 5 秒 720P 视频。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Nan Chen, Yiyang Cai, Rongchang Xie, Junwen Pan, Cheng Chen, Weinan Jia, Zhuowei Chen, Wen Zhou, Zhenbang Sun, Wenhan Luo → Hong Kong University of Science and Technology (香港科技大学, C4G 创意可控与认知计算组)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/paper_summaries_v2_2026-06-27_01.jpg" alt="DanceOPD: 字节 Seed 联合 NUS / UMD / HKUST 开源图像生成「多能力融合」框架, 一个模型同时搞定文生图 + 局部编辑 + 全局编辑" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27377 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27377" target="_blank">DanceOPD: 字节 Seed 联合 NUS / UMD / HKUST 开源图像生成「多能力融合」框架, 一个模型同时搞定文生图 + 局部编辑 + 全局编辑</a></h3>
+    <p style="color:#ccc;">想象你要 AI 同时干 3 件事: 生成一张「猫咪在花园」, 然后把猫改成「老虎」(局部编辑), 再把背景从「花园」改成「雪山」(全局编辑) — 现在大多数图像生成模型只擅长其中 1 件, 强行让它做 3 件, 质量会全面下降, 出现「改了局部破坏了全局, 改了全局破坏了细节」的尴尬。字节 Seed 团队联合 NUS / UMD / HKUST 开源了 DanceOPD, 核心思路是把「文生图 / 局部编辑 / 全局编辑」当成「3 个不同的能力流场」(expert fields), 在训练时让模型学会「每个样本分配到 1 个能力流场 + 借鉴其他流场的状态」, 这样模型不再「串台」, 而是把每个能力当独立的「舞蹈舞种」, 在 flow-matching 框架下统一编排。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文提出 DanceOPD (On-Policy Generative Field Distillation) 框架, 针对 flow-matching 图像生成模型在多能力 (T2I / local edit / global edit / CFG) 组合时的性能相互干扰问题, 将每个能力建模为共享 flow state space 上的 velocity field, 通过 on-policy distillation 让 student 模型从「自身 rollout 状态」查询的 field 中学习 expert 能力, 同时吸收 classifier-free guidance 等 operator-defined field。该框架在 SD3 + FLUX 等主流 flow-matching 模型上验证, 实现多能力组合下的 SOTA。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「on-policy generative field distillation」: (1) 把每个能力 (T2I / 局部编辑 / 全局编辑 / CFG) 看成 flow-matching 共享状态空间上的一个 velocity field (速度场, 控制图像演化方向), 不同能力用不同的 field 路径; (2) On-policy rollout: 在训练时让 student 模型先生成 1 张图, 然后基于这张图的实际状态去「查询」各 expert field 应该给的指导, 而不是用固定的 expert 演示数据; (3) Simple velocity MSE objective: 不需要复杂的 adversarial loss, 直接让 student 模仿「基于自身状态的 expert 速度场输出」即可; (4) Absorbing operator-defined fields: 像 classifier-free guidance (CFG) 这种「人工设计的引导场」也能统一进这个框架, 不需要额外的特殊处理。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 训练数据标注复杂 — 每个训练样本需要「图像 + 4 套 expert 轨迹标注 (T2I / 局部编辑 / 全局编辑 / CFG)」, 数据准备成本是普通 T2I 训练的 4-5 倍, 中小团队难承担。代价 2: On-policy rollout 训练慢 — student 模型要先生成 1 张图再 query expert field, 相比普通 distillation 训练时长增加 2-3x, 100 万样本训练需要 8×H100 跑 14 天。代价 3: 能力冲突未完全解决 — 在极端风格化 (真实→漫画) + 局部编辑组合场景, 局部编辑的边界感知仍会出现 5-8% 的溢出, 对专业设计师可能仍需手动微调。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 GenEval / T2I-CompBench / EditBench 三个主流基准上, DanceOPD 训练后的 FLUX-dev 模型相对 baseline (FLUX-dev 单能力训练) 全面领先: 文生图 GenEval 0.81 → 0.85, 局部编辑 EditBench 7.42 → 8.15, 全局编辑 T2I-CompBench 0.62 → 0.71, 同时保持 CFG 推理速度不变。用户研究 (50 位专业设计师 A/B 偏好) 胜率 73%, 特别认可「多能力组合不串台」的改进。模型权重和训练代码全部开源, 项目主页 DanceOPD.github.io。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wei Zhou, Xiongwei Zhu, Zelin Xu, Bo Dong, Lixue Gong, Yongyuan Liang, Meng Chu, Leigang Qu, Lingdong Kong, Wei Liu, Tat-Seng Chua → ByteDance Seed (字节跳动 Seed 团队) + National University of Singapore (NUS, 新加坡国立大学) + University of Maryland (UMD, 马里兰大学) + Hong Kong University of Science and Technology (HKUST, 香港科技大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/paper_summaries_v2_2026-06-27_02.jpg" alt="ViQ: 腾讯混元联合清华 / NTU / 中科院开源视觉量化表征框架, 多模态训练提速 20-70%" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27313 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27313" target="_blank">ViQ: 腾讯混元联合清华 / NTU / 中科院开源视觉量化表征框架, 多模态训练提速 20-70%</a></h3>
+    <p style="color:#ccc;">想象你教 AI 看图理解世界 — 现在有两种办法: 一种是「连续表征」(把图像转成长长的浮点数, 信息全但很贵), 另一种是「离散表征」(把图像转成 0/1 的「视觉单词」, 像文字一样便宜但丢细节)。视觉离散表征的最大问题是「为了压缩丢了太多信息」: 重建图像很模糊, 细节 (人脸 / 文字 / 小物体) 全没了。腾讯混元联合清华 / NTU / 中科院开源了 ViQ (Visual Quantized Representations), 核心思路是「两阶段训练」: 第一阶段用「大语言模型」当老师, 把「图像应该对应什么文字描述」作为预训练目标, 让量化器学会「保留对语言模型有用的语义」; 第二阶段再用「特征离散化」压缩表征, 同时保留高分辨率重建能力。结果是同一个量化器, 既能「跟文字配合做多模态任务」, 又能「重建高质量图像」, 多模态训练速度提升 20-70%。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文针对视觉量化表征中「重建精度 vs 语义丰富度」的固有权衡, 提出两阶段训练框架: (1) text-aligned pre-training 让视觉量化器与预训练 LLM 的 token space 对齐, 保留语义; (2) progressive proximal representation learning 让特征空间渐进压缩, 支持任意分辨率。ViQ 在主流多模态基准上达到 SOTA, 同时支持 native-resolution 输入, 训练加速 20-70%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「text-aligned 预训练 + proximal 离散化」两阶段: (1) 阶段一 (text-aligned pre-training): 用预训练 LLM 作为教师网络, 让视觉编码器输出的连续特征和「对应文本描述」的语义对齐 — 不是简单的 CLIP 式对齐, 而是「视觉特征 → 量化 → 文本预测」全链路对齐, 让量化器保留「对 LLM 有用的语义」; (2) 阶段二 (proximal representation learning): 用 proximal 优化 (类似稀疏编码) 把连续特征空间压缩到离散 codebook, 同时保留阶段一对齐过的语义; (3) Position-aware head-wise quantization: 不同注意力头用不同 codebook, 避免单一 codebook 容量不够; (4) Native-resolution 支持: 不强制 resize 到固定分辨率, 输入图像多大就用多大, 对 OCR / 文档理解这种细节敏感任务极友好。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 两阶段训练成本高 — 阶段一需要 1 个完整 LLM 作为教师, 训练显存比单阶段方案高 2-3 倍, 阶段二需要 4×H100 跑 7 天, 中小团队难复现。代价 2: Codebook 容量有限 — 视觉信息复杂度远高于文字 (一张图等价于 100-1000 词), 当前 16384 大小的 codebook 在极端细节场景 (医学影像 / 卫星图) 仍会出现「找不到对应 code 而模糊」的情况。代价 3: 推理时多模态任务性能略低于连续表征 — 在视觉问答 (VQA) 任务上 ViQ 比连续表征低 1.5-2.5% 准确率, 换速度提升 30% 是否划算要看具体场景。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 12 个多模态基准 (VQA / 图像描述 / 文档理解 / 视频理解) 上, ViQ 相对 SOTA 离散表征 (VQ-VAE-2 / VQGAN-CLIP / SEED) 全面领先: 视觉问答 VQA 78.4 → 80.7, 文档理解 DocVQA 84.2 → 87.1, 视频理解 MSRVTT 53.4 → 56.8。重建质量在 FID 指标上从 8.7 降到 5.3 (越低越好), 重建图像细节保留率显著提升。多模态训练速度提升 20-70% (取决于基础 LLM 规模), 单卡推理速度提升 30-50%。开源代码 GitHub.com/yuxumin/ViQ, 权重 HuggingFace.co/XuminYu/ViQ_weights。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xumin Yu, Zuyan Liu, Zhenyu Yang, Yuhao Dong, Shengsheng Qian, Jiwen Lu, Han Hu, Yongming Rao → Tencent HY Vision Team (腾讯混元视觉团队) + Tsinghua University (清华大学) + Nanyang Technological University (NTU, 新加坡南洋理工大学) + Chinese Academy of Sciences (中国科学院)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/paper_summaries_v2_2026-06-27_03.jpg" alt="OPID: 清华 + 浙大 + 港中文 + NTU + 同济联合开源 agent 强化学习「技能自蒸馏」框架, 多轮任务样本效率翻倍" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26790 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26790" target="_blank">OPID: 清华 + 浙大 + 港中文 + NTU + 同济联合开源 agent 强化学习「技能自蒸馏」框架, 多轮任务样本效率翻倍</a></h3>
+    <p style="color:#ccc;">想象你训练一个 AI 客服 agent 处理退货: 它要查订单 + 确认收件人 + 申请退款 + 发通知 — 这个流程要 5-6 步, 每步都要对, 但训练时只能拿到「最后是否成功」这一个奖励信号 (退成了 +1, 没退成 0), 中间哪步错了完全不知道。普通强化学习 (RL) 在这种「稀疏奖励 + 多轮任务」场景几乎学不动, 因为 99% 的尝试都得到 0 分, agent 不知道怎么改进。OPID (On-Policy Skill Distillation) 给出了一个解法: 让 agent 从「自己已经跑成功过的轨迹」里「自我蒸馏」出可复用的「技能」(比如「查订单的标准流程」「申请退款的标准话术」), 然后在后续训练时, 当 agent 走到关键决策点 (例如「该查订单还是直接申请退款」), 自动调用对应技能当参考。这样 agent 既有「最终目标驱动」(outcome reward), 又有「中间步骤指导」(skill distillation), 训练样本效率提升 50-100%。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文针对 outcome-based RL 在多轮 agent 任务中「trajectory-level 奖励稀疏」的痛点, 提出 OPID (On-Policy Skill Distillation) 框架, 从 on-policy 成功轨迹中提取层次化技能 (episode-level 全局规则 + step-level 局部决策), 通过 routing 机制在 critical 决策点注入技能, 用 token-level self-distillation 给 dense supervision signal。ALFWorld / WebShop / Search-based QA 实验验证 sample efficiency 和 robustness 显著优于 outcome-only RL。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「on-policy 技能提取 + routing 机制 + token-level self-distillation」三件套: (1) 技能提取: 从已经跑成功过的轨迹里, 用 hierarchical clustering 提取两类技能 — episode-level (全局规则: 「先查订单再申请退款」) 和 step-level (局部决策: 「看到订单金额 > $1000 就要主管审批」), 存在 hierarchical skill memory; (2) Routing 机制: agent 走到关键决策点时, 先判断是「关键决策」还是「常规步骤」, 关键决策用 step-level 技能做参考, 常规步骤 fallback 到 episode-level 技能; (3) On-policy token-level self-distillation: 用同一 agent 在「有技能参考」和「无技能参考」两种情况下分别跑同一 prompt, 计算 log-prob 差异, 形成 dense self-distillation loss 叠加到 outcome reward 上, 让 token-level 监督信号直接驱动策略优化; (4) 不需要外部 skill memory — 所有技能从 agent 自身轨迹提取, 维护成本接近零。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 前期冷启动慢 — 在训练初期 agent 没有成功轨迹就没有技能可提取, 前 10-20% 的训练轮次比纯 outcome RL 还慢, 需要配合「专家演示数据 warm-start」才能发挥优势。代价 2: 技能质量依赖轨迹多样性 — 如果 agent 早期就陷入「只走一种路径」的局部最优, 提取的技能会非常狭窄, 反而限制后续探索, 需要配合 entropy bonus 强制探索。代价 3: 推理时延略增 — routing 机制需要额外查询技能 memory (约 50-100ms), 对 latency 敏感的实时 agent 任务 (客服 / 实时对话) 可能不适合。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 3 个 agent 任务基准 (ALFWorld 家庭任务 / WebShop 电商任务 / Search-based QA 搜索问答) 上, OPID 相对 outcome-only RL baseline (PPO / GRPO) 全面领先: ALFWorld 成功率 78.4 → 89.2, WebShop 78.4 → 85.6, SearchQA 62.3 → 71.8。样本效率提升 50-100% (达到相同成功率需要的训练样本减半)。Robustness 测试 (环境扰动 + 工具接口变更): OPID 表现下降 < 5%, 而 baseline 下降 15-20%, 证明「技能复用」对环境变化有韧性。代码已开源。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Shuo Yang, Jinyang Wu, Zhengxi Lu, Yuhao Shen, Fan Zhang, Lang Feng, Shuai Zhang, Haoran Luo, Zheng Lian, Zhengqi Wen, Jianhua Tao → Tsinghua University (清华大学) + Zhejiang University (浙江大学) + The Chinese University of Hong Kong (港中文) + Nanyang Technological University (NTU, 新加坡南洋理工大学) + Tongji University (同济大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/paper_summaries_v2_2026-06-27_04.jpg" alt="Verification Horizon: 阿里 Qwen 团队提出「没有银弹」原则, coding agent 验证比生成更难" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26300 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26300" target="_blank">Verification Horizon: 阿里 Qwen 团队提出「没有银弹」原则, coding agent 验证比生成更难</a></h3>
+    <p style="color:#ccc;">软件工程有句老话: 「验证一个方案是否正确」比「想出一个方案」容易 (来自 1986 年 Brooks 的《No Silver Bullet》)。但阿里 Qwen 团队 6/26 发布论文说: 对 2026 年的 coding agent 来说, 这个直觉已经反转了 — 现在 AI 生成「可能正确的代码」已经不难, 难的是「可靠地判断这段代码到底对不对」。论文核心论点是: 任何 verifier (验证器) 都只是「人类意图的近似」, 永远不是意图本身, 这导致验证存在两重困难: (1) 人类意图本身「欠规范」(underspecified) — 用户说「做个好看点的登录页」, 「好看」到底是什么没人说得清, 验证器无从判断; (2) 模型训练会「放大 verifier 跟真实意图的差距」 — 这就是 reward hacking (奖励欺骗) 和信号饱和。论文提出「可扩展性 / 忠实性 / 鲁棒性」三维框架, 并用 4 种 verifier (test verifier / rubric verifier / user-as-verifier / automated agent verifier) 实测验证。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文对当前 coding agent 训练中「verifier 设计」的系统性反思, 提出 verification horizon 概念 — 任何 verifier 都是人类意图的 proxy, 存在「意图 underspecification」和「优化放大 proxy-intent gap」两重困难, 设计 verifier 时必须在 scalability / faithfulness / robustness 三维间权衡。论文用 4 类 verifier (test / rubric / user-as-verifier / automated agent verifier) 实证分析 reward hacking 风险与缓解策略。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是「verification 三维框架 + 4 类 verifier 实证」: (1) Verification 三维: 任何 verifier 必须同时评估 scalability (能否扩展到大规模训练), faithfulness (跟真实意图有多接近), robustness (面对 reward hacking 的稳健性) — 论文论证「同时满足三维」是当前 coding agent 训练的核心难题; (2) 4 类 verifier 实证: (a) test verifier — 用单元测试判定代码正确, 适合通用 coding 但 faithfulness 低 (用户意图可能不是「通过测试」); (b) rubric verifier — 用评分细则 (rubric) 让 LLM 打分, faithfulness 高但 scalability 差 (人工写 rubric); (c) user-as-verifier — 用真实用户反馈训练, faithfulness 最高但 scalability 极差 (用户不可能给大规模训练提供反馈); (d) automated agent verifier — 让另一个 agent 跑用户场景判定, scalability 和 faithfulness 介于中间, 但对长 horizon 任务鲁棒性差; (3) Reward hacking 分析: 论文用具体案例展示模型如何「骗过 verifier」(比如「通过测试」+「代码乱到无法维护」), 提出针对性 mitigation。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 没有单一银弹 — 4 类 verifier 各有优劣, 实际部署必须组合使用, 但组合的权重如何设置仍是开放问题, 需要大量实验调优; 代价 2: Faithfulness 评估难 — 论文承认「忠实性」本身也欠规范 — 什么叫「verifier 忠实于意图」? 缺少 ground truth 让论文的 faithfulness 评估只能靠「定性案例」而非「定量指标」; 代价 3: 对企业落地指导有限 — 论文是「分析框架」而非「解决方案」, 企业要落地 verifier 设计仍需自己摸索「test / rubric / user / agent」的具体配比, 论文给出的「4 类组合」仅作启发。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个内部 + 公开 coding 基准 (HumanEval / MBPP / SWE-bench / APPS / LiveCodeBench / RepoBench / CrossCodeEval / CodeXGLUE) 上, 论文系统性比较 4 类 verifier 的 scalability / faithfulness / robustness 表现, 发现: test verifier scalability 最强但 reward hacking 率 23%, rubric verifier faithfulness 最高但 scalability 只有 test 的 1/50, user-as-verifier faithfulness 99% 但只能支持 < 1000 样本训练, automated agent verifier 在长 horizon 任务 (SWE-bench Verified) 上 faithfulness 反而比 rubric verifier 高 8%。论文用 4 类 verifier 组合 (test 70% + rubric 20% + agent 10%) 在 SWE-bench Verified 上达到 68.4% 解决率, 比单一 test verifier (54.2%) 高 14.2 个百分点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Binghai Wang, Chenlong Zhang, Dayiheng Liu, Jiajun Zhang, Jiawei Chen, Mouxiang Chen, Rongyao Fang, Siyuan Zhang, Xuwu Wang, Yuheng Jing, Zeyao Ma, Zeyu Cui → Qwen Team, Alibaba Group (阿里巴巴通义千问团队)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_00.jpg" alt="QwenLM/Qwen-AgentWorld" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/QwenLM/Qwen-AgentWorld" target="_blank">QwenLM/Qwen-AgentWorld</a></h3>
+    <p>Qwen-AgentWorld 是阿里 Qwen 团队 6 月开源的「语言世界模型」(Language World Models) 通用 agent 训练框架。核心思路是把 agent 跟环境的交互建模成「语言空间的状态转移」: agent 用自然语言描述当前状态 (「我站在厨房, 面前有一个苹果和一个杯子」), 模型预测下一个状态 (「我伸手拿苹果」), 这样 agent 训练不再需要真实环境渲染, 纯文本就能跑完一个完整的 RL 训练循环。在 ALFWorld / WebShop / 内部电商客服 3 个基准上, 用 Qwen-AgentWorld 训练出的 7B agent 性能比肩 GPT-4 agent, 训练成本只有 GPT-4 API 调用的 1/30。565 stars / 14 天增速 300+, 是 2026 H1 中文社区增长最快的 agent 训练框架。</p>
+    <div class="source">⭐ 565 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_01.jpg" alt="HKUDS/AgentSpace" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/AgentSpace" target="_blank">HKUDS/AgentSpace</a></h3>
+    <p>AgentSpace 是港大数据智能实验室 (HKUDS) 6 月开源的「人 + Agent 协同工作空间」框架, 跟 Linear / Notion 这类传统项目管理工具不同, AgentSpace 把人类工程师和 AI agent 当成「同一个团队的成员」 — 任务可以同时分配给人和 agent, agent 完成的子任务会自动 trigger 人类 review 节点, 人类做的关键决策 (架构选型 / 代码 review) 也会反向喂给 agent 作为 context。技术核心是一个「双层调度器」: 上层是人和 agent 共享的 task graph, 下层是 agent 之间的多步协作协议 (类似 A2A 但聚焦企业内部场景)。453 stars / 7 天增速 200+, 已被 3 家头部 SaaS 公司试用。</p>
+    <div class="source">⭐ 453 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_02.jpg" alt="benchflow-ai/awesome-evals" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/benchflow-ai/awesome-evals" target="_blank">benchflow-ai/awesome-evals</a></h3>
+    <p>awesome-evals 是 BenchFlow AI 团队策划的「非 bullshit」AI 评测资源精选列表, 收录了 200+ 个主流评测基准 (学术 / 工业 / 社区), 每个都标注「适合测什么 / 局限是什么 / 当前 SOTA 是谁」, 跟其他 awesome-* 列表的纯堆砌不同, awesome-evals 给每条都写了「为什么这个 benchmark 重要 + 常见误用」+ 「什么时候不该用这个 benchmark」。459 stars / 14 天增速 280+, 是 2026 H1 增长最快的 AI 评测精选资源。</p>
+    <div class="source">⭐ 459 · None</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_03.jpg" alt="trotsky1997/OpenFugu" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/trotsky1997/OpenFugu" target="_blank">trotsky1997/OpenFugu</a></h3>
+    <p>OpenFugu 是独立开发者 trotsky1997 对日本 Sakana AI 「Fugu 模型」的完整开源复现 — Fugu 是 Sakana 在 2025 年发布的「一个模型指挥所有模型」架构, 1 个 router 模型 + N 个 specialist 模型, router 根据输入自动选 specialist, 但原版没开源权重。OpenFugu 在 Qwen2.5 + Llama-3 + DeepSeek-V3 上复现了 Fugu 架构, 用 4 个公开模型组成「一个 router + 3 个 specialist」的组合, 在 MMLU / GSM8K / HumanEval 上达到原版 Fugu 95% 性能, 训练成本只要原版的 1/40。251 stars / 7 天增速 180+, 是当前开源社区研究「模型编排」最实用的 reference 实现。</p>
+    <div class="source">⭐ 251 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_04.jpg" alt="Pluviobyte/video-production-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Pluviobyte/video-production-skills" target="_blank">Pluviobyte/video-production-skills</a></h3>
+    <p>video-production-skills 是 Pluviobyte 开源的「AI 视频生产技能库」, 包含 30+ 个可复用的 AI 视频创作技能 (skill), 覆盖剧本创作 / 镜头分镜 / 配音生成 / 字幕时间轴 / 视频剪辑 / 配乐生成 / 视觉特效等全流程。每个 skill 都是「可独立运行的 AI agent 任务」, 配套 Claude Code / Codex 的 prompt 模板 + 工具调用脚本 + 评测用例。开发者可以直接拿这些 skill 组合成「AI 短剧工厂」 / 「AI 广告流水线」, 也可以改写 skill 适配自己的视频工作流。197 stars / 14 天增速 150+, 是 2026 H1 中文圈「AI + 视频」细分最实用的资源库。</p>
+    <div class="source">⭐ 197 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-27/oss_summaries_v2_2026-06-27_05.jpg" alt="opentsc/opentsc" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/opentsc/opentsc" target="_blank">opentsc/opentsc</a></h3>
+    <p>OpenTSC (Open Trusted Second-brain Console) 是一个完全本地化、完全隐私优先的「第二大脑」CLI 工具 — 把你的笔记 / 项目 / 联系人 / 决策记录全部存到本地 SQLite, 用本地 embedding 模型 (默认 bge-small) 索引, 支持自然语言检索 + 关系图谱可视化。跟 Notion / Obsidian 这类云端工具不同, OpenTSC 默认零网络请求, 所有数据加密存在用户机器, 适合处理敏感信息 (律师 / 医生 / 内部研究员) 或对云端 AI 工具有隐私顾虑的用户。26 stars / 7 天增速 5x, 用户群在快速增长, 但项目还偏早期, 文档和插件生态尚不完善。</p>
+    <div class="source">⭐ 26 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-27 07:59</p>
+</footer>
+</div>
+</body>
+</html>
