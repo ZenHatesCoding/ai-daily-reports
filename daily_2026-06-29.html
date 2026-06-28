@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月29日 · 周一</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月29日 · 周一 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_00.jpg" alt="Anthropic 把 Claude 塞进 Slack: Claude Tag 让 AI 变成永远在线的队友" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic 把 Claude 塞进 Slack: Claude Tag 让 AI 变成永远在线的队友</a></h3>
+    <p style="color:#ccc;">Anthropic 在 Slack 工作区推出 Claude Tag —— 一个新型的 AI 协作原语。团队成员只需在 Slack 任意频道输入 @Claude, 后面跟任务描述 (例如 @Claude 帮我 review 这段 PR 改动), Claude 就会在同一个线程里基于上下文完成工作, 不需要切换到外部 web/app。Claude Tag 把协作从「打开 Claude.ai 复制粘贴」变成「在你已经在的地方 @ 它一下」, 跟 Anthropic 当下推动的 agent / 工具使用路线一致: 让模型嵌入既有工作流, 而不是强迫用户跳到模型世界。</p><p style="color:#8b949e;font-size:13px;">💡 Claude Tag 是 Anthropic 在企业协同市场跟 Slack 深度绑定的信号。Slack 是企业 IM 事实标准, Anthropic 提前占据「@AI」这个交互槽位, 用户习惯一旦养成, 切换到其他 AI 助手的迁移成本会非常高 (类似 Twitter @mention 的网络效应)。这跟 OpenAI 在企业侧推动 ChatGPT 企业版的「独立部署」路径形成对比: Anthropic 选择的是「嵌入既有 SaaS」路径, 优势是分发快, 风险是平台依赖 (Slack 政策变化就受影响)。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_01.jpg" alt="DeepMind 在 Gemini 3.5 Flash 引入 computer use, Flash 模型也能看屏幕点鼠标" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">DeepMind 在 Gemini 3.5 Flash 引入 computer use, Flash 模型也能看屏幕点鼠标</a></h3>
+    <p style="color:#ccc;">DeepMind 把 computer use (让模型看屏幕截图 + 操作浏览器/桌面) 能力从 Gemini Pro 下放到 Gemini 3.5 Flash。Flash 是 Gemini 系列的轻量档 (低延迟 + 低成本), 此前主要做摘要/分类这类被动任务。引入 computer use 后, Flash 可以驱动 GUI agent 在浏览器里点按钮、填表单、做页面跳转, 把 agent 类工作流的成本压到 Pro 的一小部分, 适合高频 + 短流程的自动化场景。</p><p style="color:#8b949e;font-size:13px;">💡 computer use 从 Pro 下放到 Flash 标志着 GUI agent 进入了「成本可大规模部署」阶段 —— 当 agent 每步成本从 ~$0.01 降到 ~$0.001 量级, 之前算不过账的客服/数据录入/网页监控等长尾场景突然变得可行。这是 agent 商业化的关键拐点: 之前 OpenAI / Anthropic 都有 computer use, 但仅限旗舰模型, 用起来贵; DeepMind 把这个能力铺到 Flash, 等于给整个生态发了一张低价入场券, 后续 SaaS 公司会大批量集成 GUI agent 到自家工作流。</p>
+    <div class="source">来源：DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_02.jpg" alt="Samsung 全球员工部署 ChatGPT + Codex, 迄今最大企业 AI 落地" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank">Samsung 全球员工部署 ChatGPT + Codex, 迄今最大企业 AI 落地</a></h3>
+    <p style="color:#ccc;">Samsung Electronics 宣布在其全球员工范围内部署 ChatGPT 企业版 + Codex, 覆盖工程、芯片设计、营销、法务、HR 等多个部门。这是 OpenAI 迄今公布的规模最大的单一企业 AI 部署, 涉及数十万员工。Samsung 选择把 ChatGPT (对话/总结/翻译) 和 Codex (代码生成/重构) 分场景使用 —— 非工程岗走 ChatGPT, 工程岗用 Codex, 既覆盖白领知识工作, 也覆盖工程师生产力场景。</p><p style="color:#8b949e;font-size:13px;">💡 Samsung 这种体量的企业部署, 是 OpenAI 在「企业市场 vs 消费市场」分水岭上非常重要的样本。消费市场 ChatGPT 增长放缓, 真正的增长来自企业; Samsung 选了 ChatGPT + Codex 双产品组合而不是单一 API, 反映企业买家的偏好 —— 想要的是「成品工具」不是「底层模型」, 越像 SaaS 越好卖。竞争对手 Anthropic (Claude for Work) 和 Google (Gemini for Workspace) 都需要面对这个变化: 企业买家不再关心参数/benchmark, 他们要的是工作流集成 + 数据治理 + SSO, 这些不是模型能力。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_03.jpg" alt="Ford 重新招募资深工程师: AI 工具失败了, 老兵比 AI 更可靠" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-af" target="_blank">Ford 重新招募资深工程师: AI 工具失败了, 老兵比 AI 更可靠</a></h3>
+    <p style="color:#ccc;">Ford 在 AI 工具大规模落地后, 决定重新招募资深工程师 (内部称为「gray beard」, 灰胡子) 回到关键岗位。Ford 高层公开反思: 「我们错误地以为, 只要引入 AI, 产品就会自动变好 —— 但实际上 AI 需要高质量的工程输入才能输出高质量结果。」 这是一次罕见的大企业公开承认 AI 工具落地的局限性, 强调工程师经验在 AI 时代仍然不可替代。</p><p style="color:#8b949e;font-size:13px;">💡 Ford 的反思不是反 AI, 而是「AI 不会自动替代好工程师, 但会放大好工程师和差工程师的差距」。这跟 OpenAI Codex / Anthropic Claude Code 真正的最佳实践一致 —— AI 工具的产出质量取决于使用者的 prompt 能力 + 工程判断 + 验证纪律, 不是「输入需求 → 等待代码」就能搞定。Ford 重新招募资深工程师, 实际上是承认: 真正稀缺的不是 AI, 是知道如何用 AI 的人。这对 AI 工具厂商是警钟: 如果没有配套的「人机协作方法论」培训, 客户会觉得 AI 没用, 然后退订。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_04.jpg" alt="Wall Street 押注 Micron 是 AI 时代的下一个 Nvidia" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-mak" target="_blank">Wall Street 押注 Micron 是 AI 时代的下一个 Nvidia</a></h3>
+    <p style="color:#ccc;">华尔街分析师开始把 Micron (美光) 视为 AI 时代的下一个 Nvidia 级标的。核心理由: HBM (高带宽内存) 是 AI 加速卡 (GPU/ASIC) 的硬瓶颈 —— Nvidia H200/B200、AMD MI400、Google TPU 等都需要 HBM3/HBM4 堆叠, 而 HBM 全球供应商只有 SK hynix、Samsung、Micron 三家, 其中 Micron 是唯一纯美国玩家, 在地缘 + 出口管制背景下估值溢价显著。</p><p style="color:#8b949e;font-size:13px;">💡 Micron 故事的实质是「AI 算力链路的瓶颈环节」。当 GPU 已经变成 commodity (各家 ASIC 都在追), 真正稀缺的是 HBM —— 三星/SK hynix 主导, Micron 抢到第三把交椅。地缘政治进一步放大 Micron 的稀缺性: 美国客户在「非韩系 HBM」选项上, Micron 是唯一。这不是 Micron 一家的事, 整个 HBM 供应链 (包括 TSV 封装、ABF 基板、HBM 测试设备) 都会吃到订单溢出。投资角度, Micron 涨不涨取决于 HBM 利润率能不能从「memory 公司溢价」升级到「AI 公司溢价」, 这取决于未来 2-3 个季度财报。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/news_items_v2_2026-06-29_05.jpg" alt="DeepSeek 梁文锋署名 DSpark: 10 个点读懂新框架精髓" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/439548.html" target="_blank">DeepSeek 梁文锋署名 DSpark: 10 个点读懂新框架精髓</a></h3>
+    <p style="color:#ccc;">DeepSeek 发布新框架 DSpark, 由创始人梁文锋署名, 量子位总结 10 个要点。精髓在于极强的系统工程 —— DSpark 把数据预处理、训练调度、推理优化、部署打包整合到一个统一框架里, 降低从研究到生产的摩擦。这跟 DeepSeek 一贯的「全栈开源 + 极致工程」风格一致: 不是单点突破 (新模型架构), 而是整套基础设施革新, 让其他研究者能基于 DSpark 快速搭出可用系统。</p><p style="color:#8b949e;font-size:13px;">💡 DeepSeek 的节奏很有意思: 每隔几个月发一个框架级更新 (DeepSeek-V3 / DeepSeek-R1 / DeepSpec / DSpark), 都在推动中国 AI 工程能力边界。DSpark 这种「端到端框架」, 对标的是 HuggingFace Transformers + vLLM + DeepSpeed 这一类组合, 但把分散的工具整合到一起 + 性能调优做得更深。这是中国 AI 实验室从「跟跑 (复现)」到「领跑 (原创框架)」的标志 —— 之前 DeepSeek 的工作很多是「在已有范式上做优化」, DSpark 看起来是想定义一种新工作流。如果开源后生态跟得上 (有外部贡献者补功能), DSpark 可能成为中国版的 PyTorch / vLLM, 影响力跨出国界。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/paper_summaries_v2_2026-06-29_00.jpg" alt="OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26790 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26790" target="_blank">OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning</a></h3>
+    <p style="color:#ccc;">想象一下, 你让 AI 帮你做家务 (做饭 + 打扫 + 整理衣柜), 每一步做完才告诉你「这顿饭做砸了」或「衣柜整理失败」 —— 这种「结局才给反馈」的训练方式, 在 AI 学术上叫 outcome-based RL (基于结局的强化学习)。问题是反馈太稀疏: 中间哪一步走错了? 不知道。OPID 这篇论文的核心想法是: 让 AI 自己「回放」已经走完的整段操作, 从中提取出「关键技能点」(例如「火候太大时应该调小」/「袜子应该叠成三折」), 把这些技能作为「老师指导」注入到后续训练里。相当于让 AI 自己给自己当教练, 在每一步都有「这样做更好」的提示, 而不是稀稀拉拉的结局评分。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">OPID 提出 On-Policy Skill Distillation 框架, 通过 hierarchical skill 表征 (episode-level 抓全局工作流/失败避免规则, step-level 抓局部决策知识), 用 critical-first routing 机制选择最相关的 skill 注入上下文, 计算 log-probability shift 得到 token-level self-distillation advantage, 与 outcome advantage 联合优化。实验在 ALFWorld / WebShop / Search-based QA 三个 agent benchmark 上验证, OPID 在性能 / 样本效率 / 鲁棒性上都优于纯 outcome RL 和已有 skill-distillation baseline。代码: github.com/jinyangwu/OPID</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 hierarchical skill 表征 + on-policy self-distillation: (1) episode-level skill 抓全局工作流/失败避免规则, step-level skill 抓局部关键决策; (2) critical-first routing 根据当前状态决定注入哪一层 skill; (3) 同一 response 在 original 和 skill-augmented 上下文下分别打 log-prob, 差值作为 token-level self-distillation advantage; (4) 与 outcome advantage 加权联合优化, 保持 RL 作为主训练目标, 引入 dense distribution-matched hindsight supervision。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: critical-first routing 引入额外推理开销 —— 每一步都需要判断「当前是否 critical decision」, 增加了 latency。代价 2: step-level skill 的质量取决于 hindsight 轨迹是否覆盖到关键失败点, 稀疏失败的 long-horizon 任务可能仍然学不好。代价 3: hierarchical skill 表征目前依赖规则化分段 (episode vs step), 对超长 horizon 任务粒度划分仍需调优。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 ALFWorld (ALFWorld 整体任务成功率) / WebShop (电商场景任务) / Search-based QA (检索增强问答) 三个 agent benchmark 上, OPID 相对纯 outcome-only GRPO 基线在成功率 / 样本效率 / 鲁棒性 (环境扰动下性能下降幅度) 三个维度都有提升, 相对已有 skill-distillation 方法 (需要 external skill memory / retrieval) 也更稳定。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Shuo Yang, Jinyang Wu, Zhengxi Lu, Yuhao Shen, Fan Zhang, Lang Feng, Shuai Zhang, Haoran Luo, Zheng Lian, Zhengqi Wen, Jianhua Tao → Tsinghua University (清华大学, 北京) + Zhejiang University (浙江大学, 杭州) + The Chinese University of Hong Kong (CUHK, 香港中文大学) + Nanyang Technological University (南洋理工大学, 新加坡) + Tongji University (同济大学, 上海)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/paper_summaries_v2_2026-06-29_01.jpg" alt="JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.18394 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.18394" target="_blank">JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting</a></h3>
+    <p style="color:#ccc;">想象一下你去奶茶店点单: 你跟店员说「一杯珍珠奶茶, 微糖, 加椰果」, 店员不是一杯一杯给你做, 而是同时问后面 5 个人的单 (这是「draft 草稿」), 一次做完再倒回来核对 (这是「verify 验证」), 总时间反而更快 —— 这就是「speculative decoding」(推测解码) 的思路, AI 一次预测多个 token 然后并行验证, 加速 LLM 推理。问题是当你想一次草稿更多 token (增大 draft budget), 边际收益迅速消失: 草稿错一个就要全部重做。JetSpec 的创新点是: 让「草稿」本身可以「分支」, 一次出多个候选路径, 同时保持「草稿本身是因果的」(不像之前的 block-diffusion 草稿会内部矛盾)。效果是 H100 GPU 上 MATH500 推理 9.64 倍加速, 真实对话场景 4.58 倍加速。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">JetSpec 是 head-based speculative decoding 框架, 在 frozen target model 上训练 causal parallel draft head, 用 fused hidden states 生成 tree candidates, 分数与目标模型 autoregressive factorization 对齐, 从而把更大的 draft budget 转化为更长的 accepted prefix + 更高的端到端加速比。实验在 dense + MoE Qwen3 模型上验证 math / coding / chat 三类 benchmark, JetSpec 相对 bidirectional-head 和 tree-based SD baseline 全面领先。在 H100 GPU 上 MATH500 最高 9.64x speedup, 开放对话 4.58x, vLLM 集成后真实 serving 负载下还有进一步 latency 收益。代码: github.com/hao-ai-lab/JetSpec</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 causal parallel draft head + tree scoring alignment: (1) 在冻结 target model 之上训练一个 parallel draft head, 输入是 fused hidden states; (2) draft head 同时生成多个候选 token (tree branches), 但每个 branch 的 score 严格对齐目标模型的 autoregressive factorization (避免之前 bidirectional drafters 那种 branch-agnostic marginals 内部矛盾问题); (3) target model 一次性验证整棵树, 接受最长公共前缀。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: draft head 训练需要高质量 target-model 输出做监督, 数据准备成本不低。代价 2: tree 深度增大后 draft head 的并行度受 GPU 显存限制, scaling ceiling 仍然存在 (只是从「完全卡住」变成「缓慢爬升」)。代价 3: 对 MoE 模型加速效果略低于 dense 模型 (MoE routing 增加 draft 难度)。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 dense Qwen3 / MoE Qwen3 上, math / coding / chat 三类 benchmark 全面 SOTA: MATH500 9.64x speedup (H100 GPU), 开放对话负载 4.58x speedup, vLLM 集成后真实 serving 流量下还有进一步 latency 收益。相对 EAGLE-3 / DFlash / Medusa 这类已有 head-based SD 方法全面胜出。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Lanxiang Hu, Zhaoxiang Feng, Yulun Wu, Haoran Yuan, Yujie Zhao, Yu-Yang Qian, Bojun Wang, Peng Zhao, Daxin Jiang, Yibo Zhu, Tajana Rosing, Hao Zhang → UC San Diego (加州大学圣地亚哥分校) + Zhejiang University (浙江大学) + UIUC (伊利诺伊大学香槟分校) + Nanjing University (南京大学) + StepFun (阶跃星辰, 上海)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/paper_summaries_v2_2026-06-29_02.jpg" alt="InfoKV: Information-Aware KV Cache Compression for Long Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26875 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26875" target="_blank">InfoKV: Information-Aware KV Cache Compression for Long Reasoning</a></h3>
+    <p style="color:#ccc;">想象一下你读一本 1000 页的小说, 但你只能记住 50 页内容: 之前的 KV cache 压缩方法都基于「最近出现过的就重要」(attention 权重), 但这有个问题 —— 50 页之前的伏笔 (对结局至关重要的细节) 反而被淘汰了。InfoKV 这篇论文指出: 真正应该保留的是「对未来影响大的 token」, 而不是「过去关注过的 token」。他们引入「Forward Influence」(前向影响力) 指标, 用 predictive uncertainty (预测不确定性) 衡量一个 token 对未来上下文的影响 —— 不确定性越高的 token, 越值得保留。结果是 attention 选出的 token 主要影响附近上下文, 而不确定性高的 token 反而对远处未来影响更大。基于这个观察, 他们做了 entropy-aware 的压缩框架 InfoKV, 在 Llama-3.1 / Llama-3.2 / DeepSeek-R1 长推理 benchmark 上稳定优于之前 attention-based 方法。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">InfoKV 提出 Forward Influence 指标, 用 predictive uncertainty 衡量 token 对未来上下文的影响 (区别于传统 attention-based backward-looking 信号)。论文分析表明 attention 选择的 token 主要影响 nearby context, 而高 uncertainty 的 token 对 distant future context 影响更大。基于此设计 entropy-aware KV cache 压缩框架 InfoKV, 综合 token-level predictive uncertainty + layer-wise representation evolution + attention score。在 Llama-3.1 / Llama-3.2 / DeepSeek-R1 长上下文推理 benchmark 上, InfoKV 在 long prefilling 和 decoding 两个场景均优于已有 attention-based KV 压缩方法。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 Forward Influence metric + entropy-aware KV selection: (1) 用 predictive uncertainty (从 language model head 输出的 entropy 推算) 衡量每个 token 对未来上下文的影响力, 区别于 attention 的 backward-looking 信号; (2) 综合 token-level uncertainty + layer-wise representation evolution + attention score, 加权得到 KV 保留优先级; (3) 在 prefilling 和 decoding 两个阶段都做压缩, 维持 long-context 推理质量。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 计算 Forward Influence 需要在 prefilling 阶段额外跑一遍 model head 拿 entropy, 增加了 prefilling latency (虽然 decoding 阶段受益)。代价 2: entropy-based 选择对模型校准质量敏感, 如果 LM head 校准差, 选出的 token 不一定真的好。代价 3: 当前实验在 8B-70B 规模, 更大模型 (>100B) 是否仍然成立需要验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Llama-3.1 / Llama-3.2 / DeepSeek-R1 长上下文推理 benchmark 上 (long prefilling + long decoding 两种场景), InfoKV 相对已有 attention-based KV 压缩方法 (H2O / Scissorhands / StreamingLLM) 在 long-context 任务准确率上稳定领先, 同时保持更高的压缩率 (即 KV cache 占用更少)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jushi Kai, Zhuiri Xiao, Alexandra Birch, Zhouhan Lin → LUMIA Lab, School of Artificial Intelligence, Shanghai Jiao Tong University (上海交通大学, 上海) + School of Informatics, University of Edinburgh (爱丁堡大学, 英国)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/paper_summaries_v2_2026-06-29_03.jpg" alt="Robust-TO: Confidence-Aware Tool Orchestration for Robust Video Understanding" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26904 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26904" target="_blank">Robust-TO: Confidence-Aware Tool Orchestration for Robust Video Understanding</a></h3>
+    <p style="color:#ccc;">想象一下你看一段模糊的行车记录仪视频, 视频里有人闯红灯 —— 你会怎么做? 你不会直接说「有人闯红灯」, 而是先评估哪几帧画面清晰、哪几帧被雨刮器糊住了, 然后只对清晰帧做仔细分析 (检测车牌、识别红绿灯颜色), 对模糊帧标记「这帧不可信」, 最后综合判断。Robust-TO 这篇论文把这个「人脑」过程搬到 AI: 让视频推理模型学会「先评估每一帧可信度, 再决定用哪个工具去分析」。结果在 8 个 video reasoning 任务上, 干净输入 56.4% 平均准确率 (超过最强开源 baseline 10.6 个百分点, 也超过 Gemini-2.5-Pro 的 46.2%); 5 种真实损坏 (运动模糊 / 强光 / 遮挡) 下保持 54.3% 准确率, clean-to-corrupted 下降幅度最小。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Robust-TO 提出 agentic video understanding 框架, 显式建模每帧 trustworthiness 注入到推理每一阶段: (1) reliability-relevance score 给每帧打可信度分; (2) 异构视觉感知工具 (检测 / tracking / OCR / 动作识别) 接受 sub-query + trustworthy frames, 输出统一格式 evidence (具体预测 + 时间定位 + 校准 reliability score); (3) 三层 synthesis (high/medium/low) 加权; (4) confidence-cost GRPO reward 联合优化 correctness + reliability + efficiency。在 8 个 video reasoning 任务上: clean 56.4% / 5 种 corruption 下 54.3%, 超过最强开源 baseline 10.6%p, 超过 Gemini-2.5-Pro (46.2%), clean-to-corrupted 下降幅度最小。代码: rova-v2.github.io</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 reliability-relevance score + 异构工具 orchestration + confidence-cost reward: (1) 给每帧算 reliability-relevance score (考虑清晰度 + 与问题的相关性); (2) sub-query + trustworthy frames 喂给异构工具 (bounding box / motion trajectory / OCR / action label), 工具返回统一格式 (prediction + temporal grounding + reliability); (3) 三层 synthesis (high/medium/low confidence) 加权综合; (4) GRPO reward 同时优化 correctness + evidence reliability + efficiency, 鼓励模型在不确定时主动调用工具。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 每帧都跑 reliability-relevance score 增加了预处理开销, 单 query 推理时间比 baseline 长 30-40%。代价 2: 异构工具 orchestration 需要事先定义工具接口和返回 schema, 对新任务 (新工具类型) 迁移成本高。代价 3: confidence-cost reward 训练需要可靠的 reliability 监督信号, 在没有 ground-truth 可信度标注的领域 (例如医疗内镜视频) 应用受限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个 video reasoning 任务 (clean 5 + corrupted 5) 上: clean 输入 56.4% 平均准确率, 超过最强开源 baseline (InternVideo / Video-LLaMA 等) 10.6 个百分点, 也超过 Gemini-2.5-Pro (46.2%); 5 种真实 corruption (运动模糊 / 强光 / 雨刮遮挡 / 摄像头抖动 / 夜视噪声) 下保持 54.3%, clean-to-corrupted 下降幅度仅 2.1 个百分点 (对比 baseline 5-8 个百分点)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yangfan He, Yujin Choi, Jaehong Yoon → NTU Singapore (南洋理工大学, 新加坡) + University of Minnesota, Twin Cities (明尼苏达大学, 美国) + UNIST (蔚山科学技术院, 韩国)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/paper_summaries_v2_2026-06-29_04.jpg" alt="Hallucination in World Models is Predictable and Preventable" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27326 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27326" target="_blank">Hallucination in World Models is Predictable and Preventable</a></h3>
+    <p style="color:#ccc;">想象一下你训练了一个 AI 司机模拟器 (world model), 它能预测「如果方向盘左转 5 度, 接下来 1 秒画面会怎么变」。但 AI 司机经常「幻觉」: 在某些不熟悉的场景下, 它会一本正经地预测「前面有车」但其实没有 —— 这种幻觉不是模型不够大、训练数据不够多, 而是「训练数据没覆盖到这个状态」(data coverage 问题)。这篇论文的核心发现: 世界模型的幻觉集中在 state-action 空间的低覆盖区域, 而且可以用轻量的 data-centric 信号 (例如模型的 predictive uncertainty) 在推理时就检测出来, 同时反过来指导训练时应该多采集哪些数据。他们在 427 小时 / 210 个任务的 MMBench2 benchmark 上验证, 发现 3 种独立的幻觉模式 (perceptual / action-marginalized / scene-diverging), 每一种都能用专门的信号提前检测。最后给出一个完整方案: 训练时用 coverage-aware sampling, 推理时 hallucination predictor 作为 curiosity reward 引导新数据采集 —— 50 条真实轨迹就能让模型适应全新环境。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文系统研究 world model hallucination 的根因, 提出 hallucination 主要是 data coverage 问题 (而非架构问题), 集中在 state-action 空间的低覆盖区域, 因此 both detectable (用 lightweight runtime signals) 和 preventable (调整训练数据分布而非改架构)。具体贡献: (1) MMBench2 benchmark: 427 小时 / 210 任务 / 含 ground-truth actions+rewards+live simulators; (2) 350M world model 上识别 3 种 hallucination 模式 (perceptual / action-marginalized / scene-diverging) 和对应的 3 类 prediction signals; (3) coverage-aware sampling (训练时) + curiosity reward (在线) 联合方案, 50 条真实轨迹就能 finetune 适应全新环境。Webpage: nicklashansen.com/mmbench2</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 data-centric 视角 + 3 类 prediction signal + coverage-aware 训练/推理闭环: (1) 识别 3 种独立 hallucination 模式 (perceptual / action-marginalized / scene-diverging), 每种对应不同 pipeline 阶段的覆盖 gap; (2) 对每种模式开发 prediction signal (运行时可计算的 lightweight metric, 例如 predictive entropy / action-marginal probability / scene-coverage score); (3) 训练时用 coverage-aware sampling 主动填补 gap, 在线时把 prediction signal 转成 curiosity reward 引导探索。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: prediction signal 依赖轻量级 uncertainty / coverage 估计, 对世界模型的校准质量敏感 (欠校准的模型 signal 不可靠)。代价 2: coverage-aware sampling 需要维护 state-action 覆盖统计, 工程实现复杂, 不适合 small-scale 实验。代价 3: curiosity reward 引导的在线采集可能陷入「只采模型觉得难的数据」导致 exploration 偏窄, 仍需配合一定比例的 uniform 采样。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 MMBench2 (427 小时 / 210 任务) 上: 3 类 prediction signal 在 350M world model 上对 hallucination 检测 AUC 都达到 0.8+ (远超 random baseline 0.5); coverage-aware sampling 在训练数据有限时比 uniform sampling 性能高 15-25%; curiosity-reward 在线 finetune 仅需 50 条真实轨迹就能让模型适应全新环境 (uniform sampling baseline 需要 500+ 条)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Nicklas Hansen, Xiaolong Wang → UC San Diego (加州大学圣地亚哥分校)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_00.jpg" alt="deepseek-ai/DeepSpec" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSpec" target="_blank">deepseek-ai/DeepSpec</a></h3>
+    <p>DeepSeek 官方开源的 DeepSpec 是 speculative decoding (推测解码) 的「训练 + 评估」全栈 codebase: 包含数据准备工具 (scripts/data) + draft model 实现 + 训练代码 + 评测脚本。研究者可以直接 fork 用自己的 target model 训练专属 draft head, 也可以用现成的 benchmark 评估自己方法的加速比。github.com/deepseek-ai/DeepSpec 是 6 月公开后 GitHub 上 speculative decoding 方向最权威的 reference 仓库之一, 2117 颗星, 主要贡献者是 DeepSeek 团队。</p>
+    <div class="source">⭐ 2,117 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_01.jpg" alt="nova452/ComfyUI-Conditioning-Rebalance" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/nova452/ComfyUI-Conditioning-Rebalance" target="_blank">nova452/ComfyUI-Conditioning-Rebalance</a></h3>
+    <p>ComfyUI-Conditioning-Rebalance 给 ComfyUI (主流 Stable Diffusion 节点式工作流工具) 加了一组新的 conditioning optimizer 节点, 支持 per-layer 加权 + IP-Adapter 风格的多模态 conditioning 控制。其中最新功能是 Krea 2 Image Edit Rebalance: 专门给 Krea 2 图像编辑模型做 CLIP encode 调优, 让局部编辑的 prompt 响应更精准。298 颗星, 主要面向 ComfyUI 重度用户和图像编辑工作流开发者。</p>
+    <div class="source">⭐ 298 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_02.jpg" alt="amplifthq/opentag" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/amplifthq/opentag" target="_blank">amplifthq/opentag</a></h3>
+    <p>OpenTag 是开源版的 @agent mentions 协议 —— 让你在 Slack 和 GitHub 里直接 @ 各种 AI agent (Claude / Codex / 自家 agent), agent 自动接收任务上下文并执行。支持在 Slack 频道里直接 mention, 也支持在 GitHub PR / Issue 里 mention agent (自动响应 @opentag 开头的指令)。353 颗星, 主要解决「AI agent 跟团队工作流脱节」的问题: 之前要用 agent 必须打开 web UI 或 IDE 插件, OpenTag 把 agent 拉到团队已经在用的协作工具里。</p>
+    <div class="source">⭐ 353 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_03.jpg" alt="AlexandrosGounis/pdfx" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/AlexandrosGounis/pdfx" target="_blank">AlexandrosGounis/pdfx</a></h3>
+    <p>pdfx 是 PDF 标准的 TypeScript 扩展, 允许在 PDF 文档里嵌入多种富媒体/交互能力 —— 远超 Adobe PDF 原生支持的 form / annotation。481 颗星, 主要面向需要在 PDF 里嵌入复杂交互 (3D 模型 / 视频 / 表单逻辑) 的开发者, 比如法律合同交互填写、电子教材富媒体、医疗报告内嵌影像。TypeScript 实现, 适合 Node.js / 浏览器端 PDF 工作流。</p>
+    <div class="source">⭐ 481 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_04.jpg" alt="Pluviobyte/video-production-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Pluviobyte/video-production-skills" target="_blank">Pluviobyte/video-production-skills</a></h3>
+    <p>video-production-skills 是给 AI coding agent (Claude Code / Codex / Cursor) 用的可复用视频生产 skills 库, 包含从脚本撰写、分镜设计、配音生成、视频剪辑、特效合成到最终导出的端到端工作流。359 颗星, 跟之前 Anthropic 推动的「skills for AI agents」概念一致 —— 不再让 agent 凭空写代码, 而是给它一组预定义的 skill (类似函数库), agent 根据任务调用对应 skill 完成工作。这套 skills 库专门面向 AI 视频创作场景。</p>
+    <div class="source">⭐ 359 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-29/oss_summaries_v2_2026-06-29_05.jpg" alt="0xShug0/audio.cpp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/0xShug0/audio.cpp" target="_blank">0xShug0/audio.cpp</a></h3>
+    <p>audio.cpp 是基于 ggml (跟 llama.cpp 同源的 C++ ML 推理框架) 的高性能 audio 推理框架, 把 TTS (语音合成) / 语音克隆 / 声音转换 / ASR (语音识别) / 说话人分离 / VAD (语音活动检测) / 音源分离 / 对齐 / codec 类模型全部整合到一个统一 runtime 里。关键性能数据: 多个 TTS 路径比 Python 参考实现快 1.8x-5.0x, 端到端延迟降低 45%-80%。217 颗星, 适合需要在端侧 / 边缘设备跑语音模型 (例如浏览器插件、嵌入式设备、桌面应用) 的开发者。</p>
+    <div class="source">⭐ 217 · C++</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-29 07:26</p>
+</footer>
+</div>
+</body>
+</html>
