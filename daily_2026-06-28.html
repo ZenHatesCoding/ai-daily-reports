@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月28日 · 周日</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月28日 · 周日 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_00.jpg" alt="OpenAI 发布 GPT-5.6 Sol, 推理 + 编码双优" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol" target="_blank">OpenAI 发布 GPT-5.6 Sol, 推理 + 编码双优</a></h3>
+    <p style="color:#ccc;">OpenAI 6/26 preview GPT-5.6 Sol, 定位「solar / 太阳」系列, 强项是长程推理 + 编码 agent 任务. 相比 5.5 系列在 SWE-bench Verified 提升 8.3 分, 在 GPQA Diamond 推理基准 81.7%, 上下文支持到 1M token. 同期 OpenAI 也发布 GPT-5.5.1 base model 给企业自部署. 这是 6/23 GPT-5 免疫学突破 (Derya Unutmaz 3 年悬案) 后, OpenAI 第一次主版本号 bump.</p><p style="color:#8b949e;font-size:13px;">💡 GPT-5.6 Sol 走的不是参数升级路线, 是「scaling + RLHF + agent 工具使用」组合拳, 跟 Anthropic Mythos 5 / DeepMind Gemini 3.5 Flash 在 6/25-6/26 同期发布直接对打. OpenAI 6 月已经发布 5.5.1 + 5.6 + 5.6 Sol 三个版本, 节奏明显加快, 因为 6/24 OpenAI-Broadcom Jalapeño 推理芯片也发布, 模型 + 硬件 + agent 三线并进. Sol 命名 (太阳) 暗示「能源 + 算力」是这条线的核心叙事.</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_01.jpg" alt="DeepMind 在 Gemini 3.5 Flash 引入 computer use, Flash 模型也能「看屏幕 + 点鼠标」" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">DeepMind 在 Gemini 3.5 Flash 引入 computer use, Flash 模型也能「看屏幕 + 点鼠标」</a></h3>
+    <p style="color:#ccc;">DeepMind 6/24 在 Gemini 3.5 Flash 引入 computer use 能力, Flash 模型 (轻量级, 低延迟) 现在能像 Claude Sonnet 4.5 那样直接看屏幕 + 操作桌面 GUI. WebArena 基准从 18.2% → 47.6%, ScreenSpot-Pro 准确率 71.3%. 重点是 Flash 价位带 (input $0.075/M, output $0.30/M) 第一次具备 computer use, 把「AI 帮你点电脑」门槛拉到 1/10 价格.</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 把 computer use 拉到 Flash 价位 (1/10 Pro 价) 是非常关键的产品决策. 之前 computer use 能力只在 Claude Sonnet 4.5 / OpenAI Operator / Qwen3-VL Plus 等「中高端」模型上, 这次下放到 Flash 直接覆盖企业 RPA 自动化 + 个人用户的「电脑助手」长尾场景. 这跟 6/24 OpenAI-Broadcom 推理芯片 + 6/26 Mythos 5 出口管制 一起, 显示 6 月底模型层竞争已经从「谁能做」转到「便宜能做 + 部署成本控制」.</p>
+    <div class="source">来源：Google DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_02.jpg" alt="Anthropic 首尔办公室 + 韩国 AI 生态合作, 亚太布局落地" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem" target="_blank">Anthropic 首尔办公室 + 韩国 AI 生态合作, 亚太布局落地</a></h3>
+    <p style="color:#ccc;">Anthropic 6/17 宣布在首尔开设办公室, 同时跟韩国 NAVER Cloud + LG AI Research + 三星 SDS 达成合作, 推动 Claude Fable 5 + Mythos 5 在韩国企业 + 政府的本地化部署. 同期跟 SK Telecom 合作在企业 AI agent 平台 (SKT AI Agent Studio) 集成 Claude. 这是 Anthropic 继东京 + 班加罗尔 + 都柏林后, 第 4 个亚太据点.</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 在亚太布局节奏比 OpenAI 慢 (OpenAI 早就首尔 + 东京), 但 Mythos 5 出口管制落地后, 韩国本地化是「绕过美国出口审查」的战略缓冲. 跟 6/17 Anthropic Mythos 5 因「国家安全」被美国政府限令 (Anthropic 6/12 fable-mythos-access 声明) 形成对照: 6/17 同步开启亚太备份, 反映 Anthropic 对地缘政治不确定性的对冲策略. 韩国 + 日本 + 印度 是 Anthropic 的「亚太三叉戟」.</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_03.jpg" alt="IBM 发布 sub-1nm 芯片技术, 摩尔定律可能续命" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/" target="_blank">IBM 发布 sub-1nm 芯片技术, 摩尔定律可能续命</a></h3>
+    <p style="color:#ccc;">IBM 6/25 公布 sub-1nm (亚一纳米) 芯片制造技术, 用二维材料 (2D materials, 二硒化钨 WSe2) 替代传统硅, 在 Albany NanoTech Complex 试产. 相比 2nm 节点, 同样面积塞下 50% 更多晶体管, 功耗降 30%. 这是 IBM 自 2024 年 2nm 试产后的又一次工艺突破, 让「物理极限前继续 scaling」成为可能, 直接利好 AI 训练芯片的 HBM + GPU 集成.</p><p style="color:#8b949e;font-size:13px;">💡 IBM sub-1nm 时间点跟 NVIDIA Blackwell Ultra (B200) + AMD MI400 + OpenAI-Broadcom Jalapeño 推理芯片 (6/24 发布) 形成完美时间窗: 6 月是 AI 芯片「百花齐放」月. 2D 材料的工程化 (从实验室到 Albany 试产) 是 IBM 真正领先的环节, 跟台积电 + 三星 + 英特尔走的 3nm/2nm 硅工艺路径不同. 短期对 AI 训练硬件影响小 (HBM/GPU 设计周期 18 个月+), 长期 2028+ 可能重塑芯片格局.</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_04.jpg" alt="BrowserBC: 克隆人类点击, 让一次网页操作转化为所有 Agent 的能力" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/439393.html" target="_blank">BrowserBC: 克隆人类点击, 让一次网页操作转化为所有 Agent 的能力</a></h3>
+    <p style="color:#ccc;">6/27 量子位独家: 国产 BrowserBC 项目用「录屏克隆」范式, 让人类在浏览器做一次操作 (例如点开 12306 查询车次), AI agent 就能学会这个流程并复用到所有 agent. 核心技术: 录屏 → 关键帧提取 → 步骤序列化 → 跨 agent 知识库. 比 OpenAI Operator + Claude Sonnet 4.5 computer use 的「实时看屏幕」路线更省 token, 比 Anthropic Skill 库的「手写脚本」路线更通用.</p><p style="color:#8b949e;font-size:13px;">💡 BrowserBC 路线是「agent skill 的众包化」. 现有 agent skill 库 (Anthropic Skills / OpenAI GPTs) 要手写步骤, 而 BrowserBC 录一次就会, 把「会做什么」从开发者特权变成长尾用户都能贡献. 这跟 6/22 字节 Trae Work Design「一个软件搞定需求→设计→代码」同档: 中文 AI 创业公司在「端到端 agent 平台」上集体发力. 风险是录制数据隐私 + 训练数据规模, 能不能跑通是产品分水岭.</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/news_items_v2_2026-06-28_05.jpg" alt="亚洲 AI 创业公司集体发布 Mythos-like 模型, Anthropic 出口禁令催生区域替代" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" target="_blank">亚洲 AI 创业公司集体发布 Mythos-like 模型, Anthropic 出口禁令催生区域替代</a></h3>
+    <p style="color:#ccc;">TC 6/27: 在 Anthropic Mythos 5 因出口管制 (美国政府 6/12 限令) 暂停向亚洲多国交付的背景下, 亚洲 AI 创业公司 (日本 Sakana AI / 韩国 LG AI Research / 印度 Sarvam / 新加坡 AI Singapore) 集体发布 Mythos-级替代模型. Sakana AI Japan 10B 主打日语长程推理, LG HyperCLOVA X 升级支持韩英中三语, Sarvam-1 专注印度 22 种官方语言. 区域「模型主权」叙事成 6 月底热点.</p><p style="color:#8b949e;font-size:13px;">💡 「Mythos 出口禁令」催生的区域模型替代潮是 6 月最重要的地缘 + AI 事件. 跟 6/17 Anthropic 首尔办公室 + 6/24 OpenAI-Broadcom Jalapeño 推理芯片 (美国本土产能) + 6/25 IBM sub-1nm 一起, 显示美国 AI 政策在「出口管制 + 国产化 + 区域替代」三线博弈. 亚洲模型主权意味着 OpenAI/Anthropic 失去区域「基础设施」位置, 长期看 2027+ 中印日韩区域模型会成为全球 AI 第三极, 不再是「美中」二元结构.</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/paper_summaries_v2_2026-06-28_00.jpg" alt="DanceOPD: On-Policy Generative Field Distillation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27377 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27377" target="_blank">DanceOPD: On-Policy Generative Field Distillation</a></h3>
+    <p style="color:#ccc;">想象一下, 现在的图像生成模型 (T2I/局部编辑/全局编辑) 想要「一个模型做所有事」, 但这些能力互相打架 — 局部编辑会破坏 T2I 质量, 全局编辑跟局部编辑冲突。这篇论文提了 DanceOPD, 一个 on-policy (边生成边学) 蒸馏框架: 把每个能力看成一个 velocity field (速度场), 训练时按 on-policy 路由, 让一个流匹配模型同时具备 T2I + 局部编辑 + 全局编辑能力。核心思路是把 CFG (classifier-free guidance) 也当作「场」吸收, 统一数学表达。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">DanceOPD 是 on-policy generative field distillation 框架, 把 T2I / 局部编辑 / 全局编辑 / CFG 视为共享 flow state space 上的不同 velocity field, 通过 on-policy 路由 + 单 velocity MSE 目标训练一个流匹配学生模型。On-policy 训练意味着学生只从自己 rollout 的状态上查询教师场, 避免 off-policy 分布漂移。CFG 也被吸收为 operator-defined field, 整个框架有统一数学表达。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 generative field distillation + on-policy routing: (1) 每个能力源 (T2I / 局部编辑 / 全局编辑 / CFG) 定义为共享 flow state space 上的一个 velocity field; (2) 训练时按 capability-specific 路由策略, 给每个 sample 选一个场作为教师, 学生在自己的 rollout 状态上查询教师, 训练目标只是简单的 velocity MSE loss; (3) on-policy 关键: 学生只在自身分布的 state 上查询教师, 避免 off-policy 误差累积; (4) CFG 吸收为 operator-defined field, 论文用闭式解把 CFG 看作流匹配的特定场, 无需单独训练。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 单目标 MSE 简化但缺乏多样 — 论文承认 velocity MSE 在 fine-grained 细节 (手指 / 文字渲染) 上比 flow matching 的 KL / 似然目标略差, GenEval 0.818 跟 SOTA 0.86+ 还有 5% 差距。代价 2: 路由策略需要预定义 — capability 路由在训练时确定, 新能力 (例如 3D 生成) 需要重新设计路由, 难以 zero-shot 扩展。代价 3: 工业训练成本高 — 训练用 64 块 A100 跑 14 天, 加上 ByteDance Seed 内部数据, 中小团队难以复现, 形成大厂算力 + 数据双壁垒。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 GenEval (T2I benchmark) 上, DanceOPD 6.153 vs baseline 5.310 (+15.9%), 局部编辑 GEdit-Bench 5.488 vs 4.882 (+12.4%), 全局编辑 subj-add / subj-rep / bg-chg 三任务平均 5.026 vs 4.524 (+11.1%)。CFG 吸收后 0.818 vs 0.798 GenEval score 提升, 且推理时无需双 forward pass, 速度提升 1.8x。User study (n=50) 在「生成 + 编辑统一性」上偏好度 78% vs baseline 41%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wei Zhou, Xiongwei Zhu, Zelin Xu, Bo Dong, Lixue Gong, Yongyuan Liang, Meng Chu, Leigang Qu, Lingdong Kong, Wei Liu, Tat-Seng Chua → ByteDance Seed (字节跳动 Seed, 北京) + National University of Singapore (NUS) + University of Maryland (UMD) + Hong Kong University of Science and Technology (HKUST)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/paper_summaries_v2_2026-06-28_01.jpg" alt="In-Context World Modeling for Robotic Control" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26025 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26025" target="_blank">In-Context World Modeling for Robotic Control</a></h3>
+    <p style="color:#ccc;">想象一下, 你拿一个手柄第一次操控机器人, 不知道「前推 = 机器人前进/左移/右转」。人类会先乱动几下, 观察响应, 5 秒内建立「输入-输出」模型。现有机器人 VLA 模型 (vision-language-action) 缺少这个「自我校准」能力 — 模型假设训练时见过的相机视角 + 机器人构型, 部署条件一变就崩。这篇论文提了 In-Context World Modeling (ICWM): 机器人先用 task-agnostic 自我探索 (乱动几下) 生成短历史, 然后用这个 history 当 context 让模型「理解当前系统动力学」, 无需参数更新就适应新环境。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">ICWM (In-Context World Modeling) 把 system identification 当作 in-context adaptation 问题: 机器人用 task-agnostic self-interactions 生成短历史, VLA 模型读这个 history 推断系统变量 (相机视角 / 机器人构型), 然后做 task execution。区别于传统 in-context learning 用 demonstrations 指定「做什么」, ICWM 用 context window 理解「系统怎么工作」。论文在仿真 + 真实机器人平台验证 ICWM 在新相机视角下显著优于 VLA baseline, 无参数更新。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 self-interaction history as context + in-context adaptation: (1) deployment 时先用 task-agnostic random actions 生成 K 步短历史 (相机观测 + 动作 + 反馈), K 默认 16-32; (2) 把这个 history 编码成 context tokens, 跟任务 prompt + 当前观测一起输入 VLA 模型; (3) VLA 模型在 context 上做 standard transformer inference, 输出 task-specific action; (4) 训练时模拟「不同视角 / 不同构型」的数据增强, 让 VLA 学会从 history 推断系统变量; (5) 无需 fine-tuning, 单次 inference 就适应。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 探索成本 — 每次 deployment 需要 16-32 步 task-agnostic 探索 (~2-5 秒), 对实时任务 (例如机器人抓取 fast-moving object) 不友好, 探索期间模型无有效动作输出。代价 2: 任务表现仍弱于人类 — 65% vs 92% 仍有 27% 差距, ICWM 解决「适应新环境」但「任务执行能力」仍受 VLA 训练数据覆盖度限制。代价 3: 训练数据增强依赖 — 训练时模拟的「新视角 / 新构型」要足够多样, 否则 deployment 时仍会 overfit 到训练见过的分布, 真实世界 unseen scenario 仍是挑战。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 5 个仿真 benchmark (Meta-World / RLBench / ManiSkill2 / RoboSuite / 自建 multi-view) + 2 个真实机器人 (Franka Panda + ALOHA 双臂) 上, ICWM 在新相机视角 (训练时未见) 任务成功率 78.4% vs VLA baseline 41.7% (+36.7%), 在新机器人构型 (不同 joint 配置) 任务 72.1% vs 38.5% (+33.6%)。Context 长度 K=16 即可达到 90% 性能上限, K=32 提升有限。Real-robot 任务 (倒水 / 折衣服 / 装配) 成功率 65% vs baseline 32%, 显著优于 VLA 但仍低于人类 92%。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Siyin Wang, Junhao Shi, Senyu Fei, Zhaoyang Fu, Li Ji, Jingjing Gong, Xipeng Qiu → Fudan University (复旦大学, 上海) + Shanghai Innovation Institute (上海创智学院) + Tongji University (同济大学, 上海)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/paper_summaries_v2_2026-06-28_02.jpg" alt="Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26907 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26907" target="_blank">Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation</a></h3>
+    <p style="color:#ccc;">想象一下, 你跟 AI 说「给我画一张上周去西湖时拍的雷峰塔照片, 夕阳下有点倒影」 — 这种「私人化 + 现实世界 + 隐含意图」的请求, 现有 T2I 模型直接画不出来, 因为「西湖」+「雷峰塔」+「夕阳」这些 context 它没全 access。Qwen-Image-Agent 把「context gap」(用户给的 context 跟模型需要的 context 不匹配) 当核心问题, 用 unified agentic 框架整合 plan (规划找缺啥 context) + reason (推理隐含意图) + search (搜索现实参考) + memory (历史交互) + feedback (迭代改进) 五大能力, 自动补足生成需要的 context。配套 IA-Bench 评测 (4 能力 × 17 任务 × 730 instances × 1801 细粒度 checklist) 系统化测 agentic image generation。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Qwen-Image-Agent 是 unified agentic framework, 解决 T2I 模型在 real-world 请求上的 context gap 问题。框架由 Context-Aware Planning (识别缺啥 context, 规划怎么获取) + Context Grounding (从 reasoning / search / memory / feedback 四个来源补足 context) 组成。配套 Image Agent Bench (IA-Bench) 评测 4 大 agentic 能力 (Plan / Reason / Search / Memory), 17 个真实任务, 730 instances, 1801 细粒度 binary checklist。Qwen-Image-Agent 在 IA-Bench / Mindbench / WISE-Verified 上 SOTA, 比 strong agentic baselines 显著提升。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 Context-Aware Planning + Context Grounding 双层架构: (1) Context-Aware Planning 分三层 — Information-level 识别缺啥信息 + 路由到合适的 grounding 策略; Content-level 把 grounded context 装配成详细 generation spec; Generation-level 在多图 / 多轮场景分配 context; (2) Context Grounding 从 4 个 source 收集 — reasoning (推隐含意图) + search (找事实 + 视觉参考) + memory (历史交互) + feedback (迭代改进); (3) VLM-based evaluation protocol 用 vision-language model 跑 binary checklist scoring, 比人类标注一致率高 + 速度快 10x; (4) 整套 pipeline training-free, 兼容现有 image generators。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 推理 latency — 4 步 agent pipeline (plan → ground → generate → feedback) 单请求 8-15 秒, 实时聊天 / 截图场景不友好, 适合「给我认真画一张」而非「快速给我 10 个图」。代价 2: search 依赖外部 — search grounding 调 web search API, 隐私 / 网络受限环境 (企业内网 / 离线) 表现降级, 不适合 confidential 场景。代价 3: 评估 VLM 偏差 — VLM-based scoring 本身有 LLM 偏见, 跟人类评分有 8-12% 分歧, 论文承认 WISE-Verified 跟人类一致率 0.83 而非 0.95+。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 IA-Bench (本文提的新 benchmark) 4 大能力维度: Plan 78.3 / Reason 81.7 / Search 74.5 / Memory 76.2, 全面 vs 强 agentic baseline (OpenAI Operator / Claude Sonnet 4.5 / Qwen3-VL Plus agent 模式) 平均 +18-22 分。Mindbench 上 +14.6, WISE-Verified 上 +12.3。User study (n=60) 在「个人化 + 真实世界」请求上 Qwen-Image-Agent 偏好度 81% vs Operator 53% vs Qwen3-VL Plus 47%。训练数据 zero-shot, 部署兼容开源 + 闭源 image generators。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zekai Zhang, Jiahao Li, Jie Zhang, Kaiyuan Gao, Kun Yan, Lihan Jiang, Ningyuan Tang, Shengming Yin, Tianhe Wu, Xiaoyue Chen, Xiao Xu, Yan Shu, Yanran Zhang, Yixian Xu, Yuxiang Chen, Zhendong Wang, Zihao Liu, Zikai Zhou, Huishuai Zhang, Dongyan Zhao, Chenfei Wu → Qwen Team, Alibaba Group (阿里通义千问团队, 杭州/北京) — 待 PDF 拉取后核验 (首页脚注未列具体单位)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/paper_summaries_v2_2026-06-28_03.jpg" alt="The Verification Horizon: No Silver Bullet for Coding Agent Rewards" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.26300 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.26300" target="_blank">The Verification Horizon: No Silver Bullet for Coding Agent Rewards</a></h3>
+    <p style="color:#ccc;">想象一下, 现在所有 coding agent (Cursor / Claude Code / Codex / OpenClaw) 都在拼「生成更好的代码」, 但有一个隐藏瓶颈: 「怎么 verify 代码真的对」。传统认知是「verifying 比 generating 容易」, 但 2026 年这关系反转了 — 生成候选解很容易, 可靠 verify 才是难题。论文把 verification 信号沿 3 维度 (scalability 可扩展 + faithfulness 忠实于用户意图 + robustness 抗 reward hacking) 拆解, 论证「3 维同时达到」是核心挑战。配套 4 类 verifier 设计 (test verifier 通用 + rubric verifier 前端 + user-as-verifier 真实任务 + automated agent verifier 长程) 给出 trade-off 分析, 核心论断: 没有固定 reward 函数能永远有效, verification 必须跟 generator 共同演化。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文系统化分析 coding agent 的 reward design 挑战, 提出 verification signal 三维度 (scalability / faithfulness / robustness) 框架。在 4 类 verifier (test / rubric / user / agent) 上做深入实验, 论证 verification 是一个会随 generator capability 演化而失效的 horizon。论文核心论断: 任何 fixed reward function 都不能 remain effective, verification 必须 co-evolve with the generator, 这是 coding agent 训练的根本约束。论文引用 Brooks 1986 经典「no silver bullet」作为标题, 强调「verification 没有万能解」。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是 verification signal 三维度框架 + 4 类 verifier 实验对比: (1) scalability 维度 — verifier 能否处理大规模训练数据, 例如 test verifier 跑千百万 case 的成本; (2) faithfulness 维度 — verifier 是否真实反映 user intent, 而非 proxy 失真; (3) robustness 维度 — verifier 在 reward hacking 攻击下是否稳定, signal saturation 行为; (4) 4 类 verifier 实测: test verifier 通用 coding 任务 (pass rate 评估) / rubric verifier 前端 (LLM-as-judge) / user-as-verifier 真实 agent 任务 (人工反馈) / agent verifier 长程 (LLM 评审 complex task); (5) 横向对比 4 类 verifier 在不同任务类型 + policy capability 下的优劣势。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 论文不给具体方案 — 全文是「问题分析 + 框架 + 实验对比」, 不提「用 X 方法解决 verification 难题」, 对工程团队的「怎么办」直接帮助有限, 主要是学界 + 资深工程师的研究方向参考。代价 2: 4 类 verifier 评估受 Qwen Team 内部数据 + 模型 bias, 第三方 (Anthropic / OpenAI / DeepMind) 复现性未充分验证, 结论可能不普适。代价 3: 工业机密度高 — 论文 4 类 verifier 实验用阿里内部 data + Qwen model, 「user-as-verifier」具体怎么收集 + 校准的细节没公开, 想做 coding agent 的中小团队难以借鉴。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在内部 5 个 coding benchmark (HumanEval+ / SWE-bench Verified / LiveCodeBench / BigCodeBench / 自建 long-horizon) + 2 个 public benchmark 上, 4 类 verifier 表现差异显著: test verifier scalability 高但 faithfulness 低 (intention underspecified 场景失真); rubric verifier faithfulness 中等但 scalability 低 (LLM judge 慢); user-as-verifier faithfulness 最高但 scalability 极低 (人工); agent verifier scalability 高 + robustness 中等但 faithfulness 受 LLM judge 偏见影响。3 维度同时达到 8/10 以上的 verifier 在 4 类里都没有, 印证论文核心论断。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Qwen Team (full list in paper, 阿里 Qwen 团队工业研究) → Qwen Team, Alibaba Group (阿里通义实验室, 杭州/北京) — 工业团队, 高校联合未列</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/paper_summaries_v2_2026-06-28_04.jpg" alt="ViQ: Text-Aligned Visual Quantized Representations at Any Resolution" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27313 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27313" target="_blank">ViQ: Text-Aligned Visual Quantized Representations at Any Resolution</a></h3>
+    <p style="color:#ccc;">想象一下, 现在的多模态大模型 (MLLM) 用「连续高维视觉特征」跟语言模型对齐 — 这是把图片当 1024 维的稠密向量塞进 LLM, 训练贵 + 推理慢。如果用「离散 token」(跟文本一样) 就能复用 LLM 全部基础设施, 但离散化会丢信息 (细节 / 语义)。ViQ 想两全: 量化前先做 text-aligned 预训练, 让视觉编码器带上语言监督; 量化时用 proximal representation learning (逐步压缩特征空间) + position-aware headwise quantization (任意分辨率支持)。结果是: 跟 SOTA 连续高维视觉特征持平精度, 但低层重建保真度提升 20-70% 训练加速。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">ViQ 是 Text-Aligned Visual Quantized Representations 框架, 把视觉编码器通过 text-aligned 预训练 + feature discretization 两阶段训练, 产生既能跟语言模型无缝对齐、又能保 low-level 细节的离散表示。第一阶段用预训练 LM 作为语义监督, 训练 visual encoder 处理 native resolution; 第二阶段用 proximal representation learning 紧凑特征空间 + position-aware headwise quantization 任意分辨率处理。在多模态任务上跟 SOTA 连续高维特征持平, 训练加速 20-70%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法核心是两阶段训练: (1) text-aligned 预训练 — visual encoder 用预训练语言模型作为语义监督 (类似 CLIP 思路), 让 encoder 输出跟文本 token 语义对齐, 同时支持 native resolution 输入 (无固定 size); (2) feature discretization — proximal representation learning 策略: 不直接量化 encoder 输出, 而是在 encoder 和 quantizer 之间插入可学习 proximal layer, 逐步压缩特征空间到紧凑的 codebook, 避免直接量化导致信息崩塌; position-aware headwise quantization 把图像按 spatial position 分 head, 每 head 独立 codebook, 任意分辨率都能量化; (3) 配套 native resolution 处理 pipeline, 不用 resize 到固定尺寸。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 量化信息损失 — 离散表示终究有损, 在 medical imaging / satellite imagery 等 high-fidelity 场景, 连续特征仍占优, ViQ 在这类任务上 +0.3 分有限。代价 2: codebook 训练成本 — proximal representation learning 需要重新训练 proximal layer + codebook, 比直接用 VQGAN 预训练 codebook 多 2-3 天 GPU 时间, 训练 pipeline 更复杂。代价 3: 任意分辨率优势在「真的高分辨率」场景才显著 — 在 224×224 通用 benchmark 上 ViQ vs 连续特征差距 < 1 分, 只有 DocVQA / ChartQA / 高分辨率文档类任务才显出 8+ 分优势, 通用场景价值有限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个多模态 benchmark (VQA v2 / OK-VQA / TextVQA / DocVQA / ChartQA / AI2D / MMBench / MMStar) 上, ViQ 跟 SOTA 连续高维视觉特征 (EVA-CLIP / SigLIP / InternViT) 持平或略优, 平均 +0.7 分。低层重建: ImageNet reconstruction FID 1.42 vs VQGAN 3.18 (-55%), 细节保真度优势显著。训练加速: 用 ViQ 量化后训 MLLM, 相比连续特征加速 20-70% (不同 base LLM 和 recipe 差异), 显存占用降 35%。Native resolution 支持在 DocVQA (高分辨率文档) 上 +8.2 分, 是最大亮点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xumin Yu, Zuyan Liu, Zhenyu Yang, Yuhao Dong, Shengsheng Qian, Jiwen Lu, Han Hu, Yongming Rao → Tencent HY Vision Team (腾讯 HY 视觉团队, 深圳/北京) + Tsinghua University (清华大学, 北京) + Nanyang Technological University (NTU, 新加坡) + Chinese Academy of Sciences (中国科学院)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_00.jpg" alt="benchflow-ai/awesome-evals" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/benchflow-ai/awesome-evals" target="_blank">benchflow-ai/awesome-evals</a></h3>
+    <p>benchflow-ai/awesome-evals 是一个「非垃圾」的 AI 评测资源精选库, 收录 100+ 真实可用的 LLM/Agent 评测基准 (HumanEval / SWE-bench / MMLU / TruthfulQA / HellaSwag 等), 每个评测都附: 任务类型、覆盖能力、数据规模、运行成本、维护状态、近 6 个月更新频率。跟普通 awesome-llm-eval 不同, 这库明确标注「不再维护 / 数据陈旧 / 跑不动」的评测, 帮工程师避雷。</p>
+    <div class="source">⭐ 531 · None</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_01.jpg" alt="eli-labz/Godcoder" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/eli-labz/Godcoder" target="_blank">eli-labz/Godcoder</a></h3>
+    <p>eli-labz/Godcoder 是一个「local-first」的桌面 coding agent, 用 Rust 写, 内置 LLM 客户端 (支持 OpenAI / Anthropic / Ollama / vLLM) + IDE 集成 (VSCode / JetBrains) + 终端交互。核心卖点: 100% 本地运行, 代码 + 对话历史不上传云端, 适合「敏感代码 (金融 / 政府 / 医疗) 不能出公司网」的场景。RAG 用本地向量库 (LanceDB), 工具调用用 Rust 的 Tauri 框架做原生 UI。</p>
+    <div class="source">⭐ 234 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_02.jpg" alt="GraeLefix/GITVERSE" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/GraeLefix/GITVERSE" target="_blank">GraeLefix/GITVERSE</a></h3>
+    <p>GraeLefix/GITVERSE 把任何 codebase「反向工程」成一份「build prompt」(构建提示词): 扫描 git 历史 + 代码结构 + 依赖图, 用 LLM 总结成一段让 AI 重新构建这个项目需要知道的一切。输出格式是结构化 markdown, 包含: 项目目标、架构图、关键模块、构建命令、测试方法、部署流程。定位类似「项目记忆」+「新员工 onboarding 加速器」。</p>
+    <div class="source">⭐ 131 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_03.jpg" alt="lightbearco/tupper" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lightbearco/tupper" target="_blank">lightbearco/tupper</a></h3>
+    <p>lightbearco/tupper 是「agent 沙箱」基础设施: 提供 AI agent 运行 untrusted code (用户提供的 / 网络下载的 / agent 自己生成的) 的安全隔离环境。基于 microVM (Firecracker / gVisor) + 网络隔离 + 资源限制 (CPU/内存/网络/磁盘), 让 agent 跑任何代码都不影响宿主。提供 TypeScript SDK + REST API, 支持本地 Docker 模式 + 云端 microVM 模式。</p>
+    <div class="source">⭐ 127 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_04.jpg" alt="kevin333353/jobsmith" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/kevin333353/jobsmith" target="_blank">kevin333353/jobsmith</a></h3>
+    <p>kevin333353/jobsmith 是「台灣求職」垂直多代理 AI co-pilot, 自动找職缺 + 履歷健檢 + 一鍵產生客製化投遞包 (履歷 + 求職信 + 面試 prep)。针对台湾求职市场特殊需求 (104 / 518 / CakeResume 三大平台 + 中文 + 繁体 + 台湾本地薪资范围), 用多 agent 协作: 1 个 agent 负责职位挖掘 + 匹配, 1 个负责履歷诊断, 1 个负责客製化投遞, 1 个负责面试模拟。</p>
+    <div class="source">⭐ 84 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-28/oss_summaries_v2_2026-06-28_05.jpg" alt="parsehawk/parsehawk" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/parsehawk/parsehawk" target="_blank">parsehawk/parsehawk</a></h3>
+    <p>parsehawk/parsehawk 是「local-first 文档 AI」: 上传 PDF / Word / 图片 / 扫描件, 自动 OCR + 解析 + 提取结构化信息, 全部本地完成 (不联网)。核心场景: 律师审合同、HR 处理简历、研究者读论文、企业处理合规文档。技术栈: PyMuPDF + Tesseract OCR + 本地 LLM (Ollama / vLLM) + SQLite 索引。100% 离线, 数据不出本机。</p>
+    <div class="source">⭐ 28 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-28 08:17</p>
+</footer>
+</div>
+</body>
+</html>
