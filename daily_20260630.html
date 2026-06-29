@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年6月30日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年6月30日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_00.jpg" alt="DeepMind 把「computer use」塞进 Gemini 3.5 Flash: 屏幕操作能力正式下放轻量模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" target="_blank">DeepMind 把「computer use」塞进 Gemini 3.5 Flash: 屏幕操作能力正式下放轻量模型</a></h3>
+    <p style="color:#ccc;">DeepMind 6/24 发布 Gemini 3.5 Flash 加入「computer use」能力, 模型可以直接读取屏幕截图, 操作鼠标键盘完成多步任务 (填表 / 点按钮 / 拖拽)。这一能力之前只在 Gemini 2.5 Pro 完整版上提供, Flash 版本响应延迟 < 200ms, 价格降一个数量级。</p><p style="color:#8b949e;font-size:13px;">💡 computer use 是 2025 年 Anthropic / OpenAI 都在抢的方向, 但都把能力放在大模型上, 单次调用贵 + 慢。DeepMind 这次把 Flash 版的延迟压到 200ms, 等于把屏幕操作能力从「实验室 demo」推到「实时嵌入 UI」可用 —— 之后任何 GUI 自动化场景 (legacy 软件 / 远程桌面 / RPA) 都可以用 Flash 版替代大模型, 成本结构会发生质变。</p>
+    <div class="source">来源：DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_01.jpg" alt="Anthropic 推出 Claude Tag: 把 Claude 永久塞进 Slack 工作流" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic 推出 Claude Tag: 把 Claude 永久塞进 Slack 工作流</a></h3>
+    <p style="color:#ccc;">Anthropic 6/23 发布 Claude Tag —— 一个 Slack 原生集成, 任何频道用 @Claude 即可触发, 模型持续在该频道「在场」, 看到上下文就能被召回, 不需要每次重新 @。Anthropic 把这定位为「always-on teammate」, 跟 6 月初的 Claude Code Slack 集成是一套体系。</p><p style="color:#8b949e;font-size:13px;">💡 企业 IM 三大平台 (Slack / Teams / Workspace) 都已经或正在被 AI 占领, 「@Claude / @Copilot / @Gemini」会变成新的交互范式。Anthropic 抢先把 Tag 做成「always-on」 (不需要每次召唤) 而不是「on-demand」, 这个设计选择比技术本身更重要 —— 用户习惯一旦养成, 切换成本是几个月级别的。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_02.jpg" alt="Anthropic 跟加州州长 Newsom 签协议: 加州政府部门用 Claude 打五折" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/" target="_blank">Anthropic 跟加州州长 Newsom 签协议: 加州政府部门用 Claude 打五折</a></h3>
+    <p style="color:#ccc;">Anthropic 6/29 宣布跟加州州长 Gavin Newsom 办公室达成协议, 加州政府机构 (含 360,000 公务员) 使用 Claude 享受 50% 折扣, 同时 Claude 承诺符合加州 AI 安全法规要求。协议包括政务场景定制 (公共安全 / 福利申请 / 文档处理), 跟州 IT 部门合作部署。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 跟美国联邦政府有 ChatGPT Gov 协议, 微软有 Azure Gov, 谷歌有 Gemini for Government —— Anthropic 之前在政务市场缺位。跟加州签 50% 折扣的协议等于「低价换入场券」, 加上加州本身就是 AI 监管先行者 (SB 1047 等), Anthropic 拿下这个标对未来美国其他州有示范效应。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_03.jpg" alt="Cursor 推出手机 App: 移动端可以「遥控」本地编码 Agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/" target="_blank">Cursor 推出手机 App: 移动端可以「遥控」本地编码 Agent</a></h3>
+    <p style="color:#ccc;">Cursor 6/29 发布移动端 App (iOS + Android), 核心场景不是手机敲代码, 而是用户在路上用手机给家里 / 公司的 Cursor Agent 下指令 (「修一下 build 报错」「跑测试」「commit 之后开 PR」), Agent 在本机继续跑, 手机收到进度通知 + 关键 diff 摘要。</p><p style="color:#8b949e;font-size:13px;">💡 「移动端 + 本地 agent」是开发者工具的新品类, 跟 GitHub Mobile / VS Code Remote 都不太一样 —— 后两者是看结果, Cursor 这次是「在路上也能指挥」。对独立开发者 + 小团队尤其有用 (通勤 / 出差 / 远程办公), Agent 工作流终于不被绑死在工位前。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_04.jpg" alt="MIT Tech Review: AI Agents 还不是你的「同事」" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/" target="_blank">MIT Tech Review: AI Agents 还不是你的「同事」</a></h3>
+    <p style="color:#ccc;">MIT TR 6/29 发文, 核心论点: 业界 (Anthropic / Salesforce / Microsoft) 都在用「AI coworker」/「digital colleague」包装 agent 产品, 但实际工作场景里 agent 跟同事有本质区别 —— agent 没责任 (出错了不能被追责), 没信用 (无法积累声誉), 没上下文连续性 (每次新会话从零开始)。文章建议企业把 agent 当「highly capable intern」而不是「coworker」。</p><p style="color:#8b949e;font-size:13px;">💡 当下 agent 估值 + 商业宣传已经把「coworker」叙事推到极致, MIT TR 这篇是稀缺的反向信号。对企业决策者 (尤其是 CIO / 采购) 的实操影响: 部署 agent 时按 intern 心态 (强 guardrail + 人在环路 + 责任归属清晰), 而不是按 coworker 心态 (放手让它自己跑)。叙事跟现实的 gap, 是 2026 下半年 agent 落地的最大风险。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/news_items_v2_2026-06-30_05.jpg" alt="QbitAI: Claude Mythos 发布让梁文锋决定启动 DeepSeek 新一轮融资" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/06/439863.html" target="_blank">QbitAI: Claude Mythos 发布让梁文锋决定启动 DeepSeek 新一轮融资</a></h3>
+    <p style="color:#ccc;">量子位 6/29 独家, DeepSeek CEO 梁文锋 (Liang Wenfeng) 在 Anthropic 6/12 发布 Claude Mythos 之后, 内部判断中美前沿模型差距重新拉大到 6 个月以上, 启动新一轮融资备战下一代模型训练 (DeepSeek V5 路线图)。知情人士透露融资规模约 300-400 亿人民币, 由红杉 + 高瓴领投。</p><p style="color:#8b949e;font-size:13px;">💡 中国大模型 2024-2025 一度领先 (DeepSeek V3 / Qwen3 比 GPT-5 同期便宜 90%), 但 Claude Mythos / GPT-5.5 / Gemini 3 Pro 在 agent + 长上下文重新拉开身位。DeepSeek 这次「被融资」本质是承认单靠成本优势不足以保持前沿, 需要更多算力 (H100 / H200) + 数据 (人工 + 合成) 才能追上 Mythos 级别能力。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/paper_summaries_v2_2026-06-30_00.jpg" alt="Qwen-Image-2.0-RL Technical Report" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27608 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27608" target="_blank">Qwen-Image-2.0-RL Technical Report</a></h3>
+    <p style="color:#ccc;">想象一下, 你让 AI 画一张「夕阳下的雪山 + 一只狐狸」, AI 画出来像但细节不对 (狐狸眼睛不像动物, 雪山光照奇怪) —— 普通训练只能让 AI 学会「像不像真的图片」, 但学不会「人眼觉得好不好看」+「跟文字描述对不对得上」。Qwen-Image-2.0-RL 走的是用人类反馈当老师 (RLHF) 的路子, 但跟 ChatGPT 那种语言模型上 RLHF 不一样, 它专门给「画图模型」设计了一套奖励系统 + 训练框架。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Qwen-Image-2.0-RL 提出针对扩散模型的后训练 pipeline, 结合 RLHF (Reward Model from human feedback) 和 on-policy distillation (OPD)。Reward system 为 T2I 和 image editing 分别设计复合 reward (alignment / aesthetics / portrait fidelity for T2I; instruction-following + face identity for editing), 基于 fine-tuned VLM 用 chain-of-thought 做 pointwise scoring。训练侧用 GRPO 算法 + 混合 CFG 策略 + intra-group reward 过滤 + per-category reward 权重校准。最后用 on-policy distillation 把 T2I 跟 editing 两个专家合并到单一学生模型 (trajectory-level velocity matching)。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>核心是 reward system + RL 训练 framework + on-policy distillation 三件套: (1) Reward: 为 T2I 训练 alignment / aesthetics / portrait fidelity 三类 reward model; 为 editing 训练 instruction-following + face identity preservation reward, 全部基于 fine-tuned VLM + CoT pointwise scoring。(2) Training: GRPO 算法 + 混合 CFG 保留预训练知识 + intra-group reward range filtering 做 prompt curation + per-category reward weight calibration。(3) Distillation: on-policy distillation 用 trajectory-level velocity matching 把多个 task-specialized policy 合并到单学生模型。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 多 reward model + per-category weight calibration 引入显著训练成本, 不适合小团队复现 —— 需要为每个 reward 维度独立 fine-tune VLM。代价 2: on-policy distillation 阶段需要多个 task-specialized teacher 同时采样, 显存 + 计算开销 ≈ 3x single-teacher distillation。代价 3: 评估依赖 Elo rating + Qwen-Image-Bench, 这些 benchmark 本身偏向 Qwen 优势场景, 跨 benchmark 泛化性 (GenEval / T2I-CompBench 等) 还需要更多验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Qwen-Image-2.0-RL 在 Qwen-Image-Bench 拿到 57.84 overall score (+2.61 over base); text-to-image arena Elo 1193 (+78); image edit arena Elo 1349 (+93)。在三个维度 (审美质量 / prompt adherence / editing accuracy) 都有 consistent gain, 验证了 RLHF + on-policy distillation 在 diffusion 后训练上的可扩展性。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yixian Xu, Kaiyuan Gao, Yuxiang Chen, Yilei Chen, Zecheng Tang, Zihao Liu, Zikai Zhou, Deqing Li, Hao Meng, Kuan Cao, Jiahao Li, Jie Zhang, Liang Peng, Lihan Jiang, Ningyuan Tang, Shengming Yin, Tianhe Wu, Xiaoyue Chen, Yan Shu, Yanran Zhang, Yi Wang, Yu Wu, Yujia Wu, Zekai Zhang, Zhendong Wang, Xiao Xu, Kun Yan, Chenfei Wu → Alibaba Qwen team (通义千问团队, Alibaba DAMO Academy), based at Hangzhou + Beijing</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/paper_summaries_v2_2026-06-30_01.jpg" alt="PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.28128 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.28128" target="_blank">PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation</a></h3>
+    <p style="color:#ccc;">想象一下, 你让 AI 学「抓杯子放桌上」, AI 看了一堆视频, 模拟器生成的视频里杯子「瞬移」、手指「穿模」、桌子「自己动」 —— 这些都是「物理不像真」的 bug。PhysisForcing 想让 AI 生成的视频在「物理规律」层面更像真, 这样机器人拿这个视频当训练数据, 学到的策略才不会在真实世界翻车。它专门盯「物理出问题的局部」(物体变形 + 多物体时空关系不对), 用两个 loss 一起纠错。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">PhysisForcing 针对 embodied world simulation 里的物理不一致问题, 提出 scalable training framework。核心观察: 物理不稳定主要由两个因素造成 —— (1) 运动物体自身变形; (2) 接触期间交互实体之间不合理的时空相关性。框架由两层 loss 组成: (a) pixel-level trajectory alignment loss, 用 reference point trajectories 监督 DiT features; (b) semantic-level relational alignment loss, 用 frozen video understanding encoder 抽取的 inter-region relations 对齐 DiT features。实验在 R-Bench / PAI-Bench / EZS-Bench 上验证, 改进 Wan2.2-I2V-A14B 和 Cosmos3-Nano base models。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-level physics-informed loss: (1) Pixel-level: trajectory alignment loss 用 reference point trajectories 监督 DiT intermediate features, 强制模型学运动物体在时间维度上的几何一致性; (2) Semantic-level: relational alignment loss 用 frozen video understanding encoder 抽取的 inter-region 关系 (接触 / 推动 / 抓握) 对齐 DiT features, 强制模型学多物体交互语义。Both losses 加权联合优化, focus supervision 在 physics-informative 区域 (物体运动 + 接触时刻)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 两个 loss 加权联合训练需要 reference point trajectories annotation, 数据准备成本比 vanilla video generation 高。代价 2: frozen video understanding encoder 引入额外 inference 开销, training 阶段显存增加约 30-40%。代价 3: 评估只在 3 个 closed-loop benchmark (R-Bench / PAI-Bench / EZS-Bench) 上, 真实机器人部署 (manipulation success rate on hardware) 的 end-to-end gain 还需要更广泛验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 R-Bench 上改进 Wan2.2-I2V-A14B 和 Cosmos3-Nano base models 22.3% 和 9.2%, 比 vanilla finetuning 进一步提升 7.1% 和 3.7%。Cosmos3-Nano 变体拿到 best overall score。作为 world model 在 WorldArena action-planner protocol 下 closed-loop success rate 从 16.0% 提升到 24.0%, downstream policy success 也显著提升。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Peiwen Zhang, Yufan Deng, Shangkun Sun, Juncheng Ma, Duomin Wang, Jonas Du, Zilin Pan, Ye Huang, Hao Liang, Songyan Huang, Ruihua Zhang, Enze Xie, Ming-Yu Liu, Daquan Zhou → Peking University (北京大学, 北京) + NVIDIA Research</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/paper_summaries_v2_2026-06-30_02.jpg" alt="GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.28187 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.28187" target="_blank">GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems</a></h3>
+    <p style="color:#ccc;">想象一下, 你让 5 个 AI 同事合作做一个项目 (一个查资料, 一个写代码, 一个检查 bug...), 出了错你怎么知道「到底是谁的那一步搞砸了」? 现在的多 Agent 系统只能给你「最终任务成功 / 失败」这个粗粒度反馈, 想精确定位 bug 来源很难。GBC 把多 Agent 系统当成一个有向图, 每一步算「梯度」(类似深度学习的反向传播), 找出「谁对最终错误贡献最大」, 针对性改 prompt。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">GBC (Gradient-Based Connections) 提出针对 LLM multi-agent systems (MAS) 的 fine-grained credit assignment 方法。把 MAS 建模成 directed computational graph, 引入 gradient-based connection weights 在 token-level 量化每个 agent 的 output 对 downstream agents 的影响。通过构建 attribution graph + 沿 task-specific loss 反向传播, 实现 error source 的精确定位 + targeted prompt optimization。配套实现 AgentChord, 利用 prefix-based gradient computation 提升 efficiency。在 MultiWOZ 和 τ-bench 上验证, GBC 改善 multi-agent 性能, attribution quality 跟 optimization effectiveness 正相关。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-stage framework: (1) Attribution: 把 MAS 建模成 directed graph, 每个 edge 是 token-level gradient-based connection weight, 反向传播 task loss 得到 attribution graph, 精确定位 error source。(2) Optimization: 基于 attribution graph 做 targeted prompt optimization, 优先优化对错误贡献最大的 agent / step。Implementation: AgentChord 利用 prefix-based gradient computation, 复用 KV cache + prefix 共享, 大幅降低 attribution 的 compute cost。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: Gradient-based attribution 需要 task-specific loss 反向传播, 跟 supervised fine-tuning 流程深度耦合, 对 zero-shot agent pipeline 适用性有限。代价 2: Prefix-based 优化要求 agent 间 prompt 有 shared prefix, 对独立实现的 heterogeneous agents 不友好。代价 3: 实验只在 dialogue (MultiWOZ) + customer service (τ-bench) 两个 domain, coding agent / research agent 等其他 multi-agent 场景的泛化性未验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 MultiWOZ (multi-domain dialogue) 和 τ-bench (customer service benchmark) 上, GBC 提升 multi-agent performance, 超过 strong single-agent + multi-agent baselines。Higher attribution quality (gradient weights 更准确) 关联 greater optimization effectiveness, 验证了 attribution → optimization 的因果链。AgentChord 比 naive gradient computation 快 5-10x, 接近 practical deployment 门槛。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xiaocheng Yang, Abdulrahman Alrabah, Dilek Hakkani-Tür, Gokhan Tur → University of Illinois Urbana-Champaign (UIUC, 伊利诺伊大学厄巴纳-香槟分校, 美国伊利诺伊州)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/paper_summaries_v2_2026-06-30_03.jpg" alt="When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27288 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27288" target="_blank">When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models</a></h3>
+    <p style="color:#ccc;">想象一下, 你同时用 GPT-5.5 + Claude Opus 4.8 + Gemini 3 Pro + DeepSeek V4 + Qwen3.7 + Kimi K2.7 ... 总共 67 个顶级模型, 让他们投票 / 路由 / cascade 看答案是不是更准。作者发现: 这种「多模型 ensemble」准确率有个数学天花板 —— 等于「1 减去所有模型一起错的概率」(β)。市面上常见的「配对错误相关性」(ρ) 这个指标, 根本测不出 β, 所以大家高估了 ensemble 的增益。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">论文挑战 multi-model LLM systems (routing / voting / cascades / fusion / MoA) 领域的核心 diagnostic。理论证明: 任何「输出是某个成员模型答案」的 policy (router / vote / cascade), 准确率不可能超过 1 - β (β = all-wrong rate)。然而业界普遍报告的是 pairwise error correlation ρ, 但 ρ cannot identify β: 即便 marginals + pairwise correlations 相同, β 可以差很大。给出 Clopper-Pearson bound, 把一个 graded held-out query set 转化成「任何 policy 的最大增益都有 $0 certificate」的 bound, 在 router 训练之前就能算。跨 67 frontier models (GPT-5.5 / Claude Opus 4.8 / Gemini 3.1 Pro / Grok-4.3 / DeepSeek V4 / Qwen3.7-Max / Kimi K2.7) 21 个 provider 实测。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Three components: (1) Theoretical: 证明 accuracy ceiling = 1 - β, 给出 Clopper-Pearson bound 把单 graded held-out query set 转化成对 β 的置信区间, 任何 ensemble policy 的最大增益都有可计算的 upper bound。(2) Empirical: 跨 67 个 frontier models (21 个 provider) 实测 β vs ρ, 验证 calibrated single-factor model 仍然 underprices all-wrong tail, 偏差随 pool size 扩大 (open-ended math 上 2.5x)。(3) Format sensitivity: 把 GPQA-Diamond 改成 free-response 而非 multiple-choice 时, β 从 0.073 升到 0.127, 把效果归因于 task format 而非 subject domain。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: 实验集中在 reasoning / coding 等可验证任务, creative writing / open-ended generation 等任务 β 定义本身模糊, 论文结论对那部分场景不直接适用。代价 2: 67 models pool 是 2026 上半年的快照, 新 model (GPT-5.6 / Claude Mythos 等) 出现后需要重新校准 β vs ρ 关系。代价 3: 论文主要验证 upper bound, 对如何 exploit 这个 bound 设计 better ensemble policy (具体 architecture / routing algorithm) 提供的 actionable guidance 较少。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>67 frontier models 跨 21 provider 的 β 比 calibrated ρ 预测的高约 2.5 倍 (90% CI 1.7-3.4, k=17), 在 full 67-model Gaussian copula 下保持 (ρ=0.052 vs predicted 0.023)。在 execution-graded code task 上 β=0.079。论文给了一个 actionable 结论: 「diverse low-ρ ensemble 优于 high-ρ Self-MoA」 + 「task format (free-response vs MC) 比 subject domain 更影响 ensemble 上限」, 工程上 ensemble 大部分时候打不过 single best model 除非有 strong query-level routing signal。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Josef Chen → KAIKAKU (新加坡 AI 创业公司, Josef Chen 是创始人)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/paper_summaries_v2_2026-06-30_04.jpg" alt="Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustively Enumerating Sets by Web Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.27595 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.27595" target="_blank">Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustively Enumerating Sets by Web Agents</a></h3>
+    <p style="color:#ccc;">想象一下, 你让 AI 「列出 2026 年 6 月韩国所有廉航, 每家写母公司 + 成立年份 + 主基地 + 当前机队规模」 —— 这不是「搜一个答案」, 是「找全一个集合 + 给每个成员填好几个字段」。Ko-WideSearch 是首个专门测 AI 「广度搜索」能力的韩文 benchmark, 228 张表 4,262 行 14,560 个 cell, Item-F1 高 (92.8) 但 Row-F1 只有 53.7, 说明 AI 找得到集合却填不全字段。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Ko-WideSearch 是 Korean breadth-search benchmark, 自动化 synthesize-and-verify pipeline 构建。每个 task 命名一个 set-parent entity (TV season / dynasty / league / administrative region / election), 要求 enumerate 完整集合 + 给每项填 attribute table, 按 Item-F1 / Column-F1 / Row-F1 三层评分。228 tables 跨 190 entities + 16 categories, 三个难度 tier 由两个 structural knob 独立控制: table width (列数) 和 2-D composite key (复合键复杂度)。一个 normalization-aware comparator 在 gold construction 和 grading 之间共享, 防止稳定 date / count column 因为 formatting 被误 drop。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Three contributions: (1) Ko-WideSearch 数据集: 228 韩语 breadth-search tables, 4,262 gold rows + 14,560 attribute cells, 跨 190 set-parent entities + 16 categories, 全部 web-sourced + decontaminated。(2) 自动化 synthesize-and-verify pipeline: build agent 自动生成候选 set + verify step 验证 completeness, 让韩语 breadth evaluation scalable 同时保证 gold trustworthy。(3) 评分设计: Item-F1 (找对集合成员) / Column-F1 (列定义正确) / Row-F1 (每行填全), 三层独立评分 + 一个 normalization-aware comparator 共享于 gold 构建 + 评分, 防止 date / count 因 formatting 被误 drop。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价 1: Ko-WideSearch 专门针对韩语 + structured table, 对长文档 / 多跳 reasoning 评估仍然缺位 (跟 BrowseComp / K-BrowseComp 互补但不替代)。代价 2: 自动化 synthesize-and-verify pipeline 本身依赖 build agent 质量, gold set 仍有 ~5-10% 错误率, 影响 benchmark ceiling。代价 3: 评估只跨 20 个 agents, 未涵盖 specialized enterprise agents (RAG + tool use workflow), 这类 agent 在 production 场景更普遍。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>跨 20 个 web agents (含 GPT-5.5 + Claude Opus 4.8 + Gemini 3 Pro + Qwen3.7-Max + 多个 specialized Korean agents) 实测, failure pattern 一致: agents 找得到 set (Item-F1 92.8) 但填不全 rows (Row-F1 53.7), accuracy 随 knob 收紧稳定下降, 更多 search / 更多 spend 都 close 不了 gap。Cell-level breakdown 显示 hard part 是「找到 right value」而非「format 正确」: open-ended free-text cells 失败最多, 标准答案 cells (date / name) 通常能答对。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Minbyul Jeong → Upstage AI (韩国首尔, Solar / LLM 厂商)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_00.jpg" alt="TheAli711/zvec-server" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/TheAli711/zvec-server" target="_blank">TheAli711/zvec-server</a></h3>
+    <p>把嵌入式向量数据库 Zvec 装上 HTTP 接口, 让 RAG 系统可以跨节点远程调用。原本 Zvec 是嵌入进程内的 in-memory 引擎, 只支持单机访问; zvec-server 用 FastAPI + uvicorn 包了一层轻量 HTTP 服务, 支持 collection CRUD + 批量 vector insert + 相似度查询 + metadata 过滤, 单二进制部署 (237KB), 6/24 创建 6/29 还活跃维护。</p>
+    <div class="source">⭐ 3 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_01.jpg" alt="maci0/beam" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/maci0/beam" target="_blank">maci0/beam</a></h3>
+    <p>纯 Python 实现的 Ray API 子集, 让 vLLM 分布式推理可以跨节点工作而不依赖完整 Ray 集群 (~1.5K 行核心代码)。Beam 提供了 Ray 关键 API 的最小子集 (actor / task / placement group), 但去掉了 Ray 的 C++ actor 管理 + 调度器 + Plasma object store, 只保留 vLLM 多卡分布式推理真正需要的那部分。</p>
+    <div class="source">⭐ 1 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_02.jpg" alt="Menfre01/waveloom" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Menfre01/waveloom" target="_blank">Menfre01/waveloom</a></h3>
+    <p>为 DeepSeek 前缀缓存 (prefix cache) 深度定制的终端 Code Agent, 纯 Go 实现 (~12MB), 通过最大化缓存命中 (95-99%) 把 DeepSeek API 输入成本压到原来的 1/50。Waveloom 用 Go 重写了 Claude Code 风格的交互循环, 但在每次请求时做 prompt diff, 找出跟历史会话共享的前缀段, 把前缀从 prompt 砍掉, 直接命中服务端缓存。</p>
+    <div class="source">⭐ 13 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_03.jpg" alt="YeJe-cpu/talk-to-fengge" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/YeJe-cpu/talk-to-fengge" target="_blank">YeJe-cpu/talk-to-fengge</a></h3>
+    <p>「Talk to 峰哥」克隆任意人的声音和性格, 做实时语音对话, 工程延迟 < 1 秒。背后是 CosyVoice + LLM 推理 pipeline: 先用 30 秒参考音频做 voice cloning, 再用 LLM 生成符合对方说话风格的回复, 最后 TTS 合成出来流式推送。已预置几个公开人物预设 (峰哥 / 雷军 / 周鸿祎等), 用户也可以上传自己的参考音频。</p>
+    <div class="source">⭐ 142 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_04.jpg" alt="ardhaecosystem/synapse" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ardhaecosystem/synapse" target="_blank">ardhaecosystem/synapse</a></h3>
+    <p>Synapse 是面向 AI agent 的时序知识图谱 (Temporal KG) 记忆系统, 自托管基于 FalkorDB + Graphiti, 模拟人类大脑的海马体机制。区别于传统 RAG 的固定 chunk 检索, Synapse 把每段交互当成「事件」写入时序图, 通过实体关系 + 时间线查询做记忆召回, 62★ 是 GraphRAG 领域近一周最高星项目。</p>
+    <div class="source">⭐ 62 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-06-30/oss_summaries_v2_2026-06-30_05.jpg" alt="rickicode/patchright-browser" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/rickicode/patchright-browser" target="_blank">rickicode/patchright-browser</a></h3>
+    <p>基于 Patchright 的 MCP (Model Context Protocol) 浏览器自动化服务器, 支持多 profile Chromium 实例 + headed/headless 切换 + Streamable HTTP transport。Patchright 是 Playwright 的 stealth fork (绕过 bot 检测), rickicode 把它包装成 MCP server, 让 Claude Code / Cursor 等支持 MCP 的 IDE 可以直接调用浏览器自动化。</p>
+    <div class="source">⭐ 18 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-06-30 07:29</p>
+</footer>
+</div>
+</body>
+</html>
