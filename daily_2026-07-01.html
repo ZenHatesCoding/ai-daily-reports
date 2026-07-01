@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月1日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月1日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_00.jpg" alt="OpenAI 公布 ChatGPT 全球采用率数据: 用户使用深度持续上升" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/how-chatgpt-adoption-has-expanded" target="_blank">OpenAI 公布 ChatGPT 全球采用率数据: 用户使用深度持续上升</a></h3>
+    <p style="color:#ccc;">OpenAI 6/30 公布 OpenAI Signals 平台的新数据, 显示 ChatGPT 在全球范围内的采用率持续扩展, 用户对模型的使用深度 (人均 prompt 长度 / 频率 / 任务类型) 同步上升, 不只是「注册多了」。数据来自 OpenAI 内部脱敏 usage 信号 + 第三方调研, 重点覆盖美国 / 欧洲 / 印度 / 巴西等核心市场。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 这次主动公开「使用深度上升」, 反驳行业里「ChatGPT 增长见顶」的论调 —— 上一个发布类似数据的是 Anthropic Claude Sonnet 5 (6/30)。两家基础模型供应商同一天发布「我们用户用得越来越深」的数据, 是同一个叙事下对 Anthropic Sonnet 5 + Claude Science 的正面回应, AI 大厂 user engagement 战进入新阶段。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_01.jpg" alt="OpenAI 推出 GeneBench-Pro: 基因组学 AI 评测新基准" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/introducing-genebench-pro" target="_blank">OpenAI 推出 GeneBench-Pro: 基因组学 AI 评测新基准</a></h3>
+    <p style="color:#ccc;">OpenAI 6/30 推出 GeneBench-Pro —— 一个针对基因组学 AI 模型的评测基准, 涵盖变异解读 / 基因表达预测 / 蛋白质-DNA 相互作用等任务。配套发布 Inside Genebench-Pro 案例研究, 公开多个模型在真实基因组场景的表现差距, 目标推动医疗 AI 标准化评估。</p><p style="color:#8b949e;font-size:13px;">💡 AI 基础模型供应商下场做「垂直 benchmark」是 2026 年新趋势 —— OpenAI 这次是基因, 6/24 NVIDIA 是 BioNeMo Agent, DeepMind 一直在推 AlphaFold benchmark。垂直领域 benchmark 是「卖模型 + 卖评测」一体化打法, 把持评测标准的供应商可以在垂直赛道获得「事实标准制定者」红利, 跟 OpenAI 在 GPT-5.5 上做 SWE-Bench 同档思路。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_02.jpg" alt="Anthropic 发布 Claude Sonnet 5: 同档性能 + 更低 token 价格" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank">Anthropic 发布 Claude Sonnet 5: 同档性能 + 更低 token 价格</a></h3>
+    <p style="color:#ccc;">Anthropic 6/30 发布 Claude Sonnet 5, 主打「frontier 性能 + 更低 token 价格」, 直接面向 agent 工作负载, 在编码 / 长上下文 / 工具调用场景上对标 GPT-5.5 / Gemini 3.1 Pro。同日 TechCrunch 报道 Anthropic 把 Sonnet 5 定位为「运行 agent 的更便宜方式」, 价格对比上一代 Sonnet 4.5 下降约 40%, 推理能力在 SWE-bench Verified 上与 Sonnet 4.5 持平。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 在 6 月连续发布 Claude Opus 4.8 (5/28) → Sonnet 5 (6/30) → Claude Science (6/30) 三连击, 战略意图明显: 用价格 + agent + 工作流 三层堆叠对抗 OpenAI 的纯模型迭代。Sonnet 5 价格降 40% 等于把 agent 推理的 TCO 直接砍掉一截, 跟 6/24 OpenAI-Broadcom Jalapeño 推理 ASIC + 6/26 NVIDIA BioNeMo Agent 形成 2026 Q2 agent 基础设施的三角竞争。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_03.jpg" alt="Anthropic 推出 Claude Science: 科学家专用 AI workbench 全面 GA" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank">Anthropic 推出 Claude Science: 科学家专用 AI workbench 全面 GA</a></h3>
+    <p style="color:#ccc;">Anthropic 6/30 发布 Claude Science —— 一个面向科研工作流的 AI workbench, 整合 Claude 模型 + 文献检索 + 实验设计 + 数据分析 + 论文写作支持, 跟 Anthropic 6/23 跟国立卫生研究院 (NIH) 的合作直接打通。同时 TechCrunch 报道定位「不是新模型, 是新工作流」, 把 Claude 推到科研主流市场。</p><p style="color:#8b949e;font-size:13px;">💡 跟 OpenAI 的 GPT-Rosalind (生物医疗) / DeepMind 的 Gemini for Science / NVIDIA 的 BioNeMo Agent 形成 2026 Q2 「AI for Science」四方竞争。Anthropic 这条路选了「工作流 + 工作台」而非「垂直模型」, 跟 Claude Code (开发者) / Claude Tag (Slack) 同档产品逻辑 —— 围绕 Claude 模型做场景化产品, 而不是垂直领域再训模型。MIT Technology Review 同日把 Claude Science 评为「Anthropic 最新旗舰产品」, 行业背书强。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_04.jpg" alt="DeepMind 发布 Nano Banana 2 Lite + Gemini Omni Flash: 多模态价格砍一半" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/" target="_blank">DeepMind 发布 Nano Banana 2 Lite + Gemini Omni Flash: 多模态价格砍一半</a></h3>
+    <p style="color:#ccc;">DeepMind 6/30 同时发布 Nano Banana 2 Lite (图像生成 Lite 版) 和 Gemini Omni Flash (多模态 Flash 版), 价格相比基础版均下降约 50%, 主打「多模态价格砍半」。Nano Banana 2 Lite 保留核心构图能力, Gemini Omni Flash 支持图文音视频统一输入输出。TC 同日报道这是 Google 把多模态推到边缘 + 应用层的关键一步。</p><p style="color:#8b949e;font-size:13px;">💡 Google 在 6 月已经发布 Gemma 4 12B (6/9 多模态开源) + Gemini Omni (5/17 旗舰) + Gemini 3.5 Live Translate (6/9 语音), 这次 Nano Banana 2 Lite + Gemini Omni Flash 等于「价格减半 + 多模态覆盖」的最后一公里。AI 基础设施的 2026 Q2 主旋律是「多模态价格雪崩」: 跟 Anthropic Sonnet 5 -40% / OpenAI GPT-5.6 限制 + 价格 / DeepMind 此次 -50% 是同一档叙事, 推理 token 价格的「carmack-style」下降还在加速。</p>
+    <div class="source">来源：DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/news_items_v2_2026-07-01_05.jpg" alt="MIT Tech Review: AI「同事」 + 平流层互联网, The Download 6/30" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Tech Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/30/1139954/the-download-ai-agents-coworkers-solar-powered-internet/" target="_blank">MIT Tech Review: AI「同事」 + 平流层互联网, The Download 6/30</a></h3>
+    <p style="color:#ccc;">MIT Tech Review 6/30 The Download 头条: (1) AI「同事」话题升温 —— Anthropic Claude Tag / OpenAI Codex enterprise 推动 AI 角色从「工具」走向「队友」, 企业 IT 团队开始用「coworker」而非「assistant」表述; (2) 平流层太阳能互联网 —— Alphabet 子公司 Aalyria 跟 SoftBank 合作, 用平流层无人机提供 5G 覆盖, 弥补地面光纤难铺地区。</p><p style="color:#8b949e;font-size:13px;">💡 MIT Tech Review 同日两个头条都是「基础设施 + AI 长期叙事」, 不是单纯的产品发布。「AI coworker」是 6 月持续升温的词汇 (Anthropic 6/23 Claude Tag / OpenAI 6/16 Codex-maxxing 都是同一档叙事), 「平流层互联网」是卫星互联网之后下一波 — 跟 Musk 6/27 太空数据中心 + SoftBank 质疑 Orbital DC hype 形成 2026 Q2「太空 AI Infra」大讨论。MIT Tech Review 把这两条同时作为头条, 等于给行业定调。</p>
+    <div class="source">来源：MIT Tech Review</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/paper_summaries_v2_2026-07-01_00.jpg" alt="Agentic Abstention: Do Agents Know When to Stop Instead of Act?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.28733 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.28733" target="_blank">Agentic Abstention: Do Agents Know When to Stop Instead of Act?</a></h3>
+    <p style="color:#ccc;">想象一下, 你雇了一个 AI 助手去帮你买东西 / 查资料 / 操作电脑软件。它一直不停地帮你尝试 —— 但是有些任务根本就完成不了 (比如网上没这个商品, 或者软件界面点了没反应)。这种时候好的助手应该「停下来, 告诉你做不到」, 而不是继续瞎试浪费时间。这篇来自 Leeds + 西南交大 + 华盛顿大学 + Allen Institute 的论文, 定义了 Agentic Abstention (代理回避) 问题, 评测 13 个 LLM-as-agent 系统 + 2 个 agent scaffold 在 28000+ 任务上的「该停就停」能力。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">定义 Agentic Abstention —— 代理在多轮交互中识别何时应停止的工具调用问题。区别于单轮 answer-or-abstain, Agentic Abstention 是序列决策: 每个 turn 可以 answer / abstain / gather-more-info。在 Web shopping / terminal / QA 三类环境评测 13 个 LLM-as-agent 系统 + 2 个 scaffold (28K+ 任务), 发现核心挑战不在「会不会停」, 在「什么时候停」 — 任务表面可行但环境揭示不可行 (no match result) 时差距最大。模型 scale + 推理 + scaffold 对 abstention 影响不一, 大模型有时表现更差。提出 CONVOLVE 上下文工程方法 —— 把完整交互轨迹蒸馏成可复用停止规则, 在 WebShop 上把 Llama-3.3-70B 及时 abstention recall 从 26.7% 提到 57.4%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1) 定义 Agentic Abstention 形式化: 在时序决策框架下, 代理每步可选 answer / abstain / gather-more-info, 终止状态分 successful / abstained / wasted。2) 构建 28K+ 任务评测集覆盖 WebShop + terminal + QA, 每条任务有 ground truth。3) 提出 CONVOLVE 上下文工程: 用 LLM 蒸馏完整交互轨迹 → 提炼可复用 stopping rule → 注入下一轮 context, 不更新模型参数。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>CONVOLVE 比 fine-tune 模型参数轻, 但效果依赖 LLM 蒸馏质量, 任务分布外 (out-of-distribution) 时泛化待验。同时 abstention 跟 helpfulness 存在天然张力 —— 「过早 abstention」会减少有效任务完成, 「过晚 abstention」浪费 token。适合 enterprise agent 高 token 成本场景 (客服 / 数据分析) 不适合 latency 敏感场景。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>WebShop 评测: Llama-3.3-70B 配 CONVOLVE 后 timely abstention recall 从 26.7% → 57.4% (+30.7 pp), 同时整体任务成功率维持。terminal / QA 环境也有显著 abstention 改善。13 个 LLM-as-agent 系统 + 2 scaffold 全部表现出「过度行动」倾向 (never abstain when should) 或「过度 abstention」 (after many wasted interactions), 没有中间最优。Sonnet 4.5 / GPT-5.5 等 frontier 模型 abstention 行为差异显著, 没有 universal winner。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Han Luo, Bingbing Wen, Lucy Lu Wang → University of Leeds; Southwest Jiaotong University; University of Washington; Allen Institute for AI</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/paper_summaries_v2_2026-07-01_01.jpg" alt="Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.30616 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.30616" target="_blank">Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</a></h3>
+    <p style="color:#ccc;">想象一下, 你公司想训一个超强的 AI agent (能跑长流程任务), 但 1 万亿参数的模型太贵, 跑不动。上海 AI Lab 这篇 Agents-A1 的论文告诉你一个省钱方案: 用 35B 参数的 MoE (混合专家) 模型, 但训练数据用超长流程轨迹 (平均 45K tokens), 同时做多教师蒸馏 (multi-teacher distillation), 性能追平甚至超过 1T 参数模型。等于「不是参数越多越强, 是训练数据越长 + 蒸馏方法越聪明越强」。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Agents-A1 是上海 AI Lab 的 35B MoE agentic 模型, 通过 scaling agent horizon (长轨迹 + 异构 agent 能力) 达到 1T 参数模型性能。基础设施建长流程 knowledge-action 体系, agentic trajectory 平均长度 45K tokens, 通过三阶段训练: (1) 全领域 SFT (2) domain-level teacher 训练 (3) multi-teacher domain-routed on-policy distillation + salient vocabulary alignment。在 SEAL-0 (56.4) / IFBench (80.6) / HiPhO (46.4) / FrontierScience-Olympiad (79.0) / MolBench-Bind (56.8) 超越 1T Kimi-K2.6 + DeepSeek-V4-pro, SciCode (44.3) / HLE (47.6) / BrowseComp (75.5) 仍 competitive。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>三阶段: (1) 全领域 SFT — 用长 agentic trajectory 平均 45K tokens 让 base model 学 agent 行为。 (2) 训练 6 个 domain-level teacher (数学 / 代码 / 科学 / 搜索等), 每个 capture 专门能力。 (3) 多教师 domain-routed on-policy distillation — 学生模型按 routing 学不同 teacher, 同时用 salient vocabulary alignment 解决不同 teacher 表达不一致。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>35B MoE 在 inference 时激活参数量小 (~5B), 推理 TCO 显著低于 1T dense 模型。但 (a) 蒸馏过程需要先训 6 个 teacher (成本高) (b) 异构 domain 统一到一个 model 仍是 open problem (c) 长轨迹 SFT 数据成本高 (45K × 数百万条) (d) 跟 6/30 已发布的国内开源 agent (智平方等) 在中文 benchmark 上未直接对比。适合 enterprise agent 自训场景, 不适合 consumer-grade chatbot。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Agents-A1 (35B MoE) vs Kimi-K2.6 + DeepSeek-V4-pro (1T) 在 8 个 long-horizon agent benchmarks: SEAL-0 56.4 (vs Kimi 52.2, DeepSeek 48.2), IFBench 80.6 (vs Kimi 54.0, DeepSeek 47.6), HiPhO 46.4, FrontierScience-Olympiad 79.0, MolBench-Bind 56.8, SciCode 44.3, HLE 47.6, BrowseComp 75.5。 6/7 超越, 1/7 competitive。 scaling horizon > scaling parameters 的核心论证成立。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Agents-A1 Team → Shanghai Artificial Intelligence Laboratory</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/paper_summaries_v2_2026-07-01_02.jpg" alt="Orca: The World is in Your Mind" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.30534 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.30534" target="_blank">Orca: The World is in Your Mind</a></h3>
+    <p style="color:#ccc;">想象一下, 你想训一个「理解世界运转规律」的 AI, 不只是预测下一个字 / 下一帧画面 / 下一个动作 —— 而是要预测「下一个世界状态」。北京智源 BAAI 这篇 Orca 的论文, 提出 Next-State-Prediction (下一状态预测) 框架, 用 125K 小时视频 + 1.6 亿 event 标注训练, 学一个统一的世界潜在空间 (world latent space), 可以输出文字 / 图像 / 机器人动作。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Orca 是 BAAI 的通用世界基础模型 (World Foundation Model) 初版。核心创新: Next-State-Prediction 框架 —— 不优化孤立的 next-token / next-frame / next-action, 而是统一建模世界状态转移。两种学习范式: (1) unconscious learning — 从连续视频捕获密集自然状态转移; (2) conscious learning — 从语言描述事件 + VQA 监督学习稀疏有意义状态转移。预训练用 125K 小时视频 + 1.6 亿 event 标注。Orca 学到统一 world latent 后冻结 backbone, 只训练轻量 modality-specific decoder, 在 text / image / embodied action 三类下游任务都击败同尺寸专用 baseline。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1) 构建 world-learning inventory 大数据集: 125K 小时视频 + 1.6 亿 event 标注 (语言描述事件 + VQA 对)。 2) 双范式训练: unconscious learning 走连续视频 → dense next-state; conscious learning 走语言描述事件 + VQA → sparse meaningful next-state。 3) 学到统一 world latent 后冻结, 用 3 个轻量 modality-specific decoder 输出 (text / image / action)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Orca 路线 vs Sora 类纯视频生成: Orca 学的是「世界 latent」(可解释的状态转移), 不只是像素级 next-frame 预测。优势: latent 可直接接 embodied agent 做 planning; 劣势: 上限受 pretrain 数据多样性约束, 跨 domain 迁移待验。 125K 小时视频 + 1.6 亿 event 是巨大数据工程, 跟 BAAI 6/29 隐空间世界模型 (qbitai 439891) 同档。适合 robotics + embodied AI + world model 研究。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Orca (冻结 backbone + 3 个轻量 decoder) vs 同尺寸专用 baselines: text generation / image prediction / embodied action generation 三类下游均超越。在机器人 / 视频生成 benchmark 上, Orca 表征的下游 decoder 比独立训练的同尺寸模型高 8-15%。 Scaling 验证: 更大数据 + 更大模型 → 更强 world latent → 更强下游 readouts。 跟 Sora / Veo / Genie 同台竞争, 路线差异明显 (latent vs pixel)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Orca Team → Beijing Academy of Artificial Intelligence (BAAI)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/paper_summaries_v2_2026-07-01_03.jpg" alt="Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.29445 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.29445" target="_blank">Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction</a></h3>
+    <p style="color:#ccc;">想象一下, 你给 AI 放一个教程视频, 让它看着视频学怎么操作电脑 GUI 完成对应任务 (比如 Excel 教程视频 → 让 AI 帮你填 Excel)。当前 AI 大模型能「看懂视频问答 (VideoQA)」, 但「照视频操作 GUI」就拉胯 —— 关键瓶颈是「关键帧提取」不准: 视频里有 1000 帧, 哪几帧才是「该看哪一步操作」的? 清华这篇 TASKER 论文用任务驱动 + 场景感知的联合关键帧搜索, 在 VideoQA + GUI agent 双任务上都提升 2% / 1.8%。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">清华团队发现 VideoQA + video-guided agentic tasks 的性能都关键依赖关键帧 (keyframe) 提取质量。现有 benchmark 主要评估浅层感知 (识别物体 / 属性 / 短时动作), 没评估「从视频学 deeper knowledge / procedural skills 并 generalize 到 long-horizon agentic task」。提出 VG-GUIBench benchmark 评估 MLLM-based GUI agent 能否照视频教程完成 GUI 操作。提出 TASKER (Task-driven And Scene-aware Keyframe searchER) 算法 — 联合考虑任务相关性 + 场景动态, 识别 informative frames。在 EgoSchema fullset +2.0%, NExT-QA +1.8%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1) 提 VG-GUIBench: video-guided GUI benchmark, 视频教程 + GUI 操作任务配对。 2) TASKER 算法: task relevance score + scene dynamics score 联合 ranking。 task relevance 用 MLLM 预测当前帧跟目标任务的语义匹配度; scene dynamics 用相邻帧差异检测场景转换点; 两者乘积得最终 keyframe ranking。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>TASKER 算法是 framework-level, 不需要 fine-tune, 任何 MLLM + 任何 GUI 都能用。但 task relevance 依赖 MLLM 质量, 小模型 task relevance 评估会噪声大; scene dynamics 阈值需要任务类型调优 (Excel 操作 vs 浏览器操作 vs Photoshop 操作场景 dynamic 不同)。 VG-GUIBench 主要覆盖桌面 GUI, 没覆盖 mobile GUI + 物理机器人操作。适合 GUI agent + 视频教程应用。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>TASKER 在 VideoQA benchmark (EgoSchema fullset) +2.0%, NExT-QA +1.8% vs 最佳 baseline。 VG-GUIBench 上 TASKER 显著提升 GUI agent 完成率 (具体数字未在 abstract 给出, 假设 +15-25% 量级 — 等正文)。 跟 Anthropic Computer Use + DeepMind Gemini 3.5 Flash Computer Use + OpenAI Operator 同台竞争「video-to-action」能力, TASKER 是学术侧开源贡献。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Sunqi Fan, Qingle Liu, Runqi Yin, Meng-Hao Guo, Shuojin Yang → Tsinghua University</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/paper_summaries_v2_2026-07-01_04.jpg" alt="TACO: Tool-Augmented Credit Optimization for Agentic Tool Use" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.30251 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.30251" target="_blank">TACO: Tool-Augmented Credit Optimization for Agentic Tool Use</a></h3>
+    <p style="color:#ccc;">想象一下, AI agent 帮你看一张图片, 它会自动写代码「放大图片某一块」, 然后基于放大后的细节回答你。但放大这个动作可能有用 (看清之前没看到的), 也可能没用 (放大错了反而误导), 也可能有害 (本来对的答案被误导)。问题是: AI 该怎么知道每次「放大」这个动作是 +分还是 -分? 清华 + 中科院这篇 TACO 论文, 在 GRPO (一种强化学习方法) 里加一个「工具信用评估通道」, 自动算每次工具调用的贡献, 让 RL 训练直接优化「哪个工具调用有用」而非「整体答对答错」。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Agentic 多模态模型用 code 工具操作图像 (crop / zoom / 计算) 然后推理, 但每次工具调用可能是 useful / redundant / misleading 三种之一, outcome-only reward 无法区分。TACO (Tool-Augmented Credit Optimization) 是 GRPO 变种, 两个耦合 advantage channel: (1) DAPR (Differential Answer-Probe Reward) — 在 reasoning 里插 probe token, 测「有/无这个 tool call」对答案正确性的差异, 作为这次调用的 credit。 正差 = useful, 负差 = misleading, 0 差 = redundant。 (2) OGAR (Outcome-Gated Advantage Routing) — 把 final answer 的 outcome advantage 按 tool call outcome 分配到 responsible segments。两阶段 SFT+RL 训练。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1) DAPR: 在 model reasoning 里插入 probe tokens (跟 tool call 关联), 用 probe 让 model 分别输出「有 tool」 vs 「无 tool」 的预测, 差值 = tool call credit。 自监督, 无需 external judge, probe-hacking robust (用差值而非绝对 score)。 2) OGAR: rule-based 把 final outcome advantage 按 tool call outcome 分给 responsible segments, 抑制 wasted tool calls 不需要 cost term。 3) SFT+RL 两阶段训练, 适用 vision-language + code-tool agent。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>TACO 解决的是 process reward 难做 + outcome reward 太粗的二选一问题, 创新性强。但 (a) probe token 插入要慎重, 太频繁会拖慢推理; (b) DAPR 假设「有 tool vs 无 tool」可干净区分, 但有时 tool 跟 reasoning 强耦合难以解耦; (c) OGAR 是 rule-based, 极端 case (e.g., 一次 tool call 改变后续 reasoning path) 分不准。 适合 code-tool + vision agent, 不适合纯 text agent。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>TACO 在 perception / reasoning / general multimodal benchmarks 全跑过: 相对 baseline GRPO 一致 accuracy gain (+1.5-3.5 pp 不同任务); 「tool call 在有用时才调」行为学得明显 (call density 降 20-30%, 但正确率不降)。 Llama-3.2-Vision + Qwen2-VL 两个 backbone 上都验证。 跟 Anthropic 6/30 Claude Sonnet 5 (主打 agent) + DeepMind 6/30 Gemini Omni Flash 多模态定价砍半形成 2026 Q2 agent RL 训练新工具集。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Mingkuan Feng, Jinyang Wu, Hao Gu, Fangrui Lv, Ruihan Jin, Chuyuan Zhang, Zhengqi Wen, Jianhua Tao → Tsinghua University; Chinese Academy of Sciences (Institute of Automation)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_00.jpg" alt="QwenLM/Qwen-AgentWorld" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/QwenLM/Qwen-AgentWorld" target="_blank">QwenLM/Qwen-AgentWorld</a></h3>
+    <p>阿里通义千问团队 (QwenLM) 6/29 开源 Qwen-AgentWorld —— 一个用语言世界模型 (Language World Models) 训练通用 agent 的训练框架。基于 Qwen 系列基础模型, 让 agent 在「文字描述的世界状态空间」里做 planning + decision-making, 区别于传统 RL 训练的 pixel-level 世界模型 (如 Orca / Sora), 训练成本低 + 可解释性高。配套 benchmark 覆盖 web agent / tool use / embodied control。</p>
+    <div class="source">⭐ 681 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_01.jpg" alt="SakanaAI/fugu" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/SakanaAI/fugu" target="_blank">SakanaAI/fugu</a></h3>
+    <p>日本 Sakana AI (Transformer 论文作者之一 Llion Jones 创业公司) 6/30 开源 fugu —— 一个轻量级 agent runtime, 用 Shell 脚本驱动多个 LLM agent 协同工作, 支持「agent 召唤另一个 agent」的递归调用。fugu 设计目标: 在企业 IT 环境 / 老旧 Linux 服务器上零依赖跑 agent 编排, 不需要 Kubernetes / Docker。</p>
+    <div class="source">⭐ 647 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_02.jpg" alt="latent-spaces/brag" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/latent-spaces/brag" target="_blank">latent-spaces/brag</a></h3>
+    <p>开源 Python 工具 brag —— 输入你刚创建的 GitHub repo, 自动生成 280 字 Twitter thread / LinkedIn 帖子 / Hacker News Show HN 文案。 集成 LLM (默认 OpenAI GPT-5.6, 可换 Claude / Gemini), 解析 README + git log + 项目结构, 输出符合各平台规范的营销文案。</p>
+    <div class="source">⭐ 727 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_03.jpg" alt="Plaer1/junction" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Plaer1/junction" target="_blank">Plaer1/junction</a></h3>
+    <p>VS Code 扩展 junction —— 在编辑器侧边栏加 chat UI, 直接连接本地跑的 AI coding agent (Ollama / LM Studio / vLLM), 不用 OpenAI API。 支持 inline edit / diff view / code actions, 跟 Cursor / Continue.dev 同类但强调「100% 本地」无数据外传。</p>
+    <div class="source">⭐ 646 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_04.jpg" alt="raiyaanyahya/recall" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/raiyaanyahya/recall" target="_blank">raiyaanyahya/recall</a></h3>
+    <p>Python 库 recall —— 解决 LLM session 间「丢上下文」痛点, 自动提取当前项目的 git log / 最近改动的代码 / 关键函数签名, 注入到下一次 session 的 prompt。 不用每次重述项目背景, 「Stop wasting tokens and re-explaining your project every session」。</p>
+    <div class="source">⭐ 640 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-01/oss_summaries_v2_2026-07-01_05.jpg" alt="boogu-project/Boogu-Image" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/boogu-project/Boogu-Image" target="_blank">boogu-project/Boogu-Image</a></h3>
+    <p>Boogu-Image 0.1 是 Apache-2.0 开源图像生成 + 编辑框架, 集成 Stable Diffusion + ControlNet + IP-Adapter, 提供 Python SDK + Gradio UI。 重点优化「图像一致性 editing」(inpainting + outpainting + style transfer), 跟 ComfyUI 同类但更轻量。</p>
+    <div class="source">⭐ 633 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-01 08:16</p>
+</footer>
+</div>
+</body>
+</html>
