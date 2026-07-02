@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月2日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月2日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_00.jpg" alt="Anthropic 重新部署 Claude Fable 5 + Mythos 5: 7/1 起全球开放, 出口管制解除" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank">Anthropic 重新部署 Claude Fable 5 + Mythos 5: 7/1 起全球开放, 出口管制解除</a></h3>
+    <p style="color:#ccc;">Anthropic 6/30 宣布 Claude Fable 5 + Mythos 5 重新部署, 7/1 起在 Claude Platform / Claude.ai / Claude Code / Claude Cowork 面向全球用户开放, Pro/Max/Team/部分 Enterprise 计划首周 50% 用量免费。背景: 6/12 美国政府对 Fable 5 + Mythos 5 实施出口管制, 6/26 美国政府批准 Mythos 5 给美国机构恢复访问, 6/30 管制全面解除。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 走完 18 天「从全网下架 → 行业组织获准 → 全球恢复」的政策避险闭环, 同步在 Glasswing 项目跟政府保持协调。值得注意的是, 这次「政府介入 → AI 厂商被动应对」是 2026 年首个完整样板, 跟 6/12 NVIDIA H200 出口管制 + 6/22 Trump vs Anthropic Mythos 是同一叙事下三条新闻链 —— 美国政府对前沿 AI 模型的「点对点」管制新常态已成型, 后续任何发布都需要先评估「模型名是否进出口管制清单」。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_01.jpg" alt="Google Gemini Spark agentic 助手正式登陆 Mac, 抢桌面 agent 入口" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Google] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/" target="_blank">Google Gemini Spark agentic 助手正式登陆 Mac, 抢桌面 agent 入口</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/1 报道, Google 的 Gemini Spark agentic 助手正式发布 Mac 客户端, 面向 macOS 用户开放下载, 主打「常驻桌面 + 自动接管长流程任务」, 跟 Anthropic Claude (Mac/Web) + OpenAI ChatGPT (Mac) + Apple Intelligence (macOS Sequoia 内建) 同台竞争。</p><p style="color:#8b949e;font-size:13px;">💡 Google 把 Gemini Spark 推 Mac 是「桌面 agent 入口战」的强信号 —— 6/24 Apple Intelligence 已内建 macOS, 6/29 Anthropic Claude Desktop GA, 7/01 Google Spark 跟进, 三大厂在「桌面常驻 agent」这个新战场首次正面交锋。Google 选在 Apple 主场 (macOS 而非 ChromeOS/Windows) 推, 是抢 macOS 高价值开发者/创作者用户, 跟 Gemini Omni Flash 价格砍半 (6/30) 同期形成 Google「价格战 + 入口战」组合拳。</p>
+    <div class="source">来源：Google</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_02.jpg" alt="Cloudflare 新政策: 推动 AI 公司向内容出版商付费" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Cloudflare] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/" target="_blank">Cloudflare 新政策: 推动 AI 公司向内容出版商付费</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/1 报道, Cloudflare 推出新政策, 推动 AI 公司就「爬取 / 训练 / 检索增强」三类用途向内容出版商付费, 政策面向其 CDN 客户中所有 AI 训练数据来源方, 平台通过给出版商加默认 paywall + 收单通道, 强制 AI 公司走付费协议。这是 6 月「AI vs 出版商」博弈以来首个由基础设施厂商主导的强制方案。</p><p style="color:#8b949e;font-size:13px;">💡 Cloudflare 用 CDN 主导权做「AI 内容付费」强制, 是 2026 年 AI 版权争议从「诉讼 / 谈判」升级到「基础设施层强制」的关键节点。跟 6/22 OpenAI NYT 案的司法路径不同, Cloudflare 这条路是「不立法、不诉讼, 改收过路费」, 给整个 CDN 行业立了新规矩。后续影响: (1) HuggingFace / OpenAI / Anthropic 训练数据合规成本上升; (2) 中小 AI 创业公司被「免费数据」卡死的可能性变高, 行业马太效应加深; (3) Cloudflare 自身估值逻辑从「CDN」变成「AI 时代版权清算所」。</p>
+    <div class="source">来源：Cloudflare</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_03.jpg" alt="MIT Tech Review: LLMs 卡在「群体思维」僵局, 创业公司尝试破局" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Tech Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/" target="_blank">MIT Tech Review: LLMs 卡在「群体思维」僵局, 创业公司尝试破局</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 7/1 发布深度报道, 指出当前主流 LLMs (GPT-5.5 / Claude Sonnet 5 / Gemini 3.1 Pro) 在多次「群体决策」场景下表现出趋同输出 / 思路同质化, 行业内称之为「groupthink groove」。报道聚焦一家创业公司尝试用「多模型对抗 + 主动分歧」架构打破这一僵局, 给企业用户更「不墨守成规」的 agent 行为。</p><p style="color:#8b949e;font-size:13px;">💡 「LLM 群体思维」是 RLHF 后期训练 + 模型蒸馏 + 共享预训练语料的副产品, 2026 Q2 终于从「学术论文」进入「产品级关注」阶段。这是 6/25 NYT AI 评测危机 + 6/28 OpenAI Signals 数据 (「ChatGPT 用户用得越来越深」) 之后, 又一个对「大模型趋同」的实证挑战。创业公司押注「多模型分歧」架构, 跟 6/24 Apple Foundation Models 强调「端侧小模型 + 个性化」是同一波「反 LLM 同质化」主题, 反映行业对 foundation model 趋同的焦虑已经从研究院传到产品端。</p>
+    <div class="source">来源：MIT Tech Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_04.jpg" alt="OpenAI 预览 GPT-5.6 Sol: 新一代推理模型主打科学任务" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol" target="_blank">OpenAI 预览 GPT-5.6 Sol: 新一代推理模型主打科学任务</a></h3>
+    <p style="color:#ccc;">OpenAI 6/26 预览 GPT-5.6 Sol —— 一个新一代推理模型, 主打「科学任务长链推理」(物理 / 化学 / 数学), 在 GPQA / FrontierMath / ScienceQA 等基准上比 GPT-5.5 提升 18-25%, 价格跟 GPT-5.5 持平, 计划 7 月底 GA。这是 OpenAI 自 GPT-5.5 (5/14) 以来首次推出专门面向科学场景的子代模型。</p><p style="color:#8b949e;font-size:13px;">💡 GPT-5.6 Sol 是 OpenAI 对 Anthropic Claude Science (6/30) + DeepMind Gemini for Science + NVIDIA BioNeMo Agent (6/24) 的「正面回应」, 但 OpenAI 选了「专门子代模型」而非「工作台产品」, 跟 Anthropic 选了「工作流 + 工作台」形成产品策略对比。6/26 距 7/02 6 天, 仍处 7 天阈值内, 是 7/02 跑通时唯一剩下的「OpenAI 6/26 强候选」。注意: OpenAI 自 GPT-Rosalind (生物医疗) 之后走「垂直子代」路线, 跟 Claude 「垂直产品」路线正式分叉。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/news_items_v2_2026-07-02_05.jpg" alt="Meta 学 SpaceX: 把过剩 AI 算力变成现金" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Meta] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/" target="_blank">Meta 学 SpaceX: 把过剩 AI 算力变成现金</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/1 报道, Meta 计划效仿 SpaceX 把过剩 AI 算力对外销售, 重点面向中小 AI 创业公司 + 学术研究机构, 价格比 AWS / GCP / Azure 等公有云便宜 30-40%。Meta 拥有全球最大 GPU 集群之一, 之前主要用于自家 Llama 系列训练 + 推理, 现在开始商业化「富余算力」。</p><p style="color:#8b949e;font-size:13px;">💡 Meta 卖算力是 2026 Q2 「AI 算力货币化」新浪潮的标志性事件 —— 6/29 SpaceX 推「自有 GPU 集群 + 卫星网络」卖算力, 7/01 Meta 跟进, 6/24 Microsoft Azure 推「AI 算力现货市场」是同一主题。算力从「AI 公司自用资源」变成「可交易商品」, 反映 2026 年 GPU 供给侧 (Hopper / Blackwell 出货高峰) 跟需求侧 (agent / 推理 / 训练) 的供需错配。Meta 这条路如果跑通, 会从「Llama 开发商」变成「Llama + 算力」双业务线, 直接挑战 AWS / GCP / Azure 的 AI 算力护城河。</p>
+    <div class="source">来源：Meta</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/paper_summaries_v2_2026-07-02_00.jpg" alt="Scaling the Horizon: 35B MoE Agent Agents-A1 跑出万亿参数性能" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.30616 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.30616" target="_blank">Scaling the Horizon: 35B MoE Agent Agents-A1 跑出万亿参数性能</a></h3>
+    <p style="color:#ccc;">想象你只请了一个 35B 参数的「小经理」(MoE 模型) 去干活, 但他手下管的工具和数据流程特别长 —— 这篇论文就是想说, 哪怕模型不大, 只要「管事的范围」(agent horizon) 拉到足够大, 性能可以追平甚至超过 1 万亿参数的大模型。他们做了一个 35B 的 Mixture-of-Experts 模型 Agents-A1, 平均每次跑 45K token 的长流程任务, 在 12 个长流程 agent 评测上跟 Kimi-K2.6 / DeepSeek-V4-pro 等 1T 模型打得有来有回。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Agents-A1 是 Shanghai AI Lab 提出的 35B MoE agentic 模型, 通过三阶段训练 (全监督微调 + 域级教师模型 + 多教师域路由 on-policy 蒸馏 + salient vocabulary 对齐) 在长流程 agent 任务上达到 SEAIL-0 56.4 / IFBench 80.6 / HiPhO 46.4 / FrontierScience-Olympiad 79.0 / MolBench-Bind 56.8, 与 1T 参数模型 Kimi-K2.6 / DeepSeek-V4-pro 持平或超越。核心论点是「agent horizon scaling」(长流程轨迹 + 异构 agent 能力扩展) 优于「parameter scaling」, 训练采用平均 45K token 的长流程轨迹 + verifier 反馈, 推理成本降低约 30 倍。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>三阶段训练: (1) 全域监督微调对齐基模型与基础 agent 行为; (2) 域级教师模型捕获每个域的专长; (3) 多教师域路由 on-policy 蒸馏 + salient vocabulary 对齐, 把六个异构域统一到一个可部署的 35B student model。平均轨迹 45K token。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 35B 即可追平 1T 性能, 推理成本骤降; 限制: 训练阶段仍依赖大规模长流程轨迹 + 多教师蒸馏, 训练基础设施门槛高 (Shanghai AI Lab 自有集群), 中小机构难以复现; 长流程任务的 verifier 反馈依赖外部工具。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>12 个长流程 agent 评测: SEAIL-0 56.4, IFBench 80.6, HiPhO 46.4, FrontierScience-Olympiad 79.0, MolBench-Bind 56.8, SciCode 44.3, HLE 47.6, BrowseComp-zh 75.5; 跟 Kimi-K2.6 / DeepSeek-V4-pro 1T 模型持平或超越, 推理成本降低约 30 倍。</div>
+      <div class="row"><span class="author">🏢 团队：</span> → Shanghai Artificial Intelligence Laboratory</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/paper_summaries_v2_2026-07-02_01.jpg" alt="DOPD: 双路 on-policy 蒸馏破解「特权幻觉」陷阱" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.30626 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.30626" target="_blank">DOPD: 双路 on-policy 蒸馏破解「特权幻觉」陷阱</a></h3>
+    <p style="color:#ccc;">学生抄老师答案抄得越像越好? 这篇论文说不一定。当老师和学生都能看到「考试答案」(privileged information) 时, 学生会学会「看答案」, 而不是「学能力」—— 这就是他们说的「privilege illusion 特权幻觉」。DOPD 用「双路蒸馏」让每个 token 根据「到底是不是真的需要看答案」来动态选老师, 既学到真能力, 也不浪费额外信号。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">DOPD (Dual On-policy Distillation) 由 NUS + MMLab CUHK + PKU + 京东探索研究院联合提出, 针对 on-policy 蒸馏中 privileged information 导致的「privilege illusion」失败模式: 学生模型把「能力差」和「信息差」混为一谈, 表面指标高但实际能力未提升。DOPD 提出 advantage-aware 双路蒸馏范式, 对每个 token 的监督信号动态选择「teacher branch」或「student self branch」, 配合 auxiliary signals 缓解特权幻觉。在 8 个 LLM + VLM benchmark 上稳定优于 Vanilla OPD, 并在 stability / robustness / continual learning / OOD 任务上验证。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Advantage-aware 双路蒸馏: 对每个 token 动态选择「teacher 路径」或「student 自身路径」作为监督源, 配合 auxiliary signals 缓解 privilege illusion; 训练保留 on-policy 性质 (用 student 自己采样轨迹)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个系统性解决 privilege illusion 的蒸馏方案, 双路机制可插拔; 限制: 双路蒸馏训练开销是单 teacher 的约 1.5-2 倍; 对 privileged information 的定义依赖任务域, 跨域泛化需要重新校准; 部署时仍需保留 teacher 模型 (或蒸馏到更强 student)。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>8 个 LLM + VLM benchmark 一致优于 Vanilla OPD; stability / robustness / continual learning / OOD 任务上均验证优越性; 在 8× NVIDIA H200 141GB GPU 上完成全部实验。</div>
+      <div class="row"><span class="author">🏢 团队：</span> → NUS + MMLab CUHK + PKU + Explore Academy, JD (京东探索研究院)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/paper_summaries_v2_2026-07-02_02.jpg" alt="BlockPilot: 让扩散式投机解码学会「按样本选块大小」" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.31315 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.31315" target="_blank">BlockPilot: 让扩散式投机解码学会「按样本选块大小」</a></h3>
+    <p style="color:#ccc;">想象你在做「猜词游戏」: 一个小模型先猜 5 个词, 大模型一次性验证 5 个词对不对。这就是「投机解码」, 让推理快几倍。但作者发现「一次猜几个」这个数不能写死, 不同的输入该用不同的块大小 —— 他们做了 BlockPilot, 每次推理时根据 prompt 的特征动态选最优块大小, 在 Qwen3-4B 上拿到 4.2 倍加速。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">BlockPilot 由阿里 AMAP 团队提出, 针对扩散式投机解码 (diffusion-based speculative decoding) 中「块大小写死」导致的次优问题: 作者通过实验发现最优块大小在不同样本间差异显著, 且呈现「聚集在训练块大小附近」的低维结构。基于此设计 sample-adaptive policy, 在 prefill 阶段后基于 prefill 表示预测最优块大小, 仅一次预测即可无缝集成到推理流程。在 Qwen3-4B + 多个 dLLM draft 模型上验证, acceptance length 5.92, 加速 4.20× (temperature=1)。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把块大小选择建模为「轻量级 policy learning」: 在 prefill 完成后, 用一个轻量级 policy 模型从 prefill 表示中预测最优块大小, 预测一次后即可用于整段解码。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 sample-adaptive 块大小机制, 加速效果显著 (4.2×), plug-and-play 不改推理流程; 限制: 训练 policy 模型需要收集「不同块大小对应的 acceptance rate」数据, 训练成本高; policy 模型的泛化到不同 target LLM / draft 模型需要重新校准; 推理时多一次 forward (policy 预测), 但 overhead 极小。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Qwen3-4B + dLLM draft: acceptance length 5.92, 4.20× 加速 (T=1); plug-and-play, 极低 overhead, 一致改进 efficiency, 跨多个 draft / target 组合验证。</div>
+      <div class="row"><span class="author">🏢 团队：</span> → AMAP, Alibaba Group (阿里高德)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/paper_summaries_v2_2026-07-02_03.jpg" alt="GEAR: 端到端联合训练 VQ tokenizer + AR generator, 图像生成 10× 加速" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.32039 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.32039" target="_blank">GEAR: 端到端联合训练 VQ tokenizer + AR generator, 图像生成 10× 加速</a></h3>
+    <p style="color:#ccc;">现在做图像生成, 都是「两步走」: 先训一个「分词器」(VQ tokenizer) 把图转成码, 再训一个「生成器」(AR generator) 学这些码。但这两步是分开训的, 配合不好。这篇论文说「一起训」, 用「双读头」让生成器既能预测下一个码, 又能反向指导分词器。在 ImageNet 上, GEAR 比 LlamaGen-REPA 快 10 倍收敛, 还能泛化到 VQVAE / LFQ / IBQ 不同分词器。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">GEAR (Guided End-to-end AutoRegression) 由北大 + 腾讯混元联合提出, 针对传统「VQ tokenizer + AR generator」解耦训练导致 tokenizer 不知道 generator 觉得「什么容易生成」的问题。核心创新是 dual read-out 的 codebook assignment: 一路 hard one-hot 训练 AR 预测下一 token, 另一路 differentiable soft branch 携带 representation-alignment loss 反向指导 tokenizer 优化。AR 学会把 tokenizer 推向「对 AR 友好的 index distribution」, tokenizer 自身特征变得不再 DINOv2-like, AR 反过来更 DINOv2-like。ImageNet gFID 收敛加速 10× (vs LlamaGen-REPA), 跨 VQVAE / LFQ / IBQ 泛化, 推广到 text-to-image。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>VQ tokenizer + AR generator 端到端联合训练; dual read-out codebook assignment (hard one-hot 训练 AR + soft differentiable branch 反向指导 tokenizer); representation-alignment loss 让 tokenizer 朝 AR 友好的方向优化。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 端到端联合训练打破 VQ + AR 解耦瓶颈, 10× 加速 + 跨量化器泛化; 限制: 端到端训练显存压力大 (tokenizer + generator 联合优化), 需要较大 batch; soft branch 的 representation-alignment loss 设计需要先验, 不同 backbone 需要重新调; 评估集中在 class-conditional ImageNet, 复杂场景 (高分辨率 / 文生图细节) 还需要验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>ImageNet gFID 收敛加速 10× (vs LlamaGen-REPA baseline); patch-level + 空间连贯特征显著更好; 跨 VQVAE / LFQ / IBQ 量化器泛化; text-to-image 也可推广。</div>
+      <div class="row"><span class="author">🏢 团队：</span> → Peking University + Tencent Hunyuan (腾讯混元)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/paper_summaries_v2_2026-07-02_04.jpg" alt="MemLearner: 用「学到的记忆」打破视频世界模型长时不一致" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.31734 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.31734" target="_blank">MemLearner: 用「学到的记忆」打破视频世界模型长时不一致</a></h3>
+    <p style="color:#ccc;">想象你玩「无限续写小说」: AI 写一段, 你给个开头, AI 接着写, 但写到第 10 段时, 角色穿的衣服颜色变了, 场景也跑偏了 —— 这就是视频世界模型的「长时不一致」问题。这篇论文做了一个 MemLearner, 让 AI 学会「自动选最相关的记忆帧」, 不用硬规则, 也不用人标, 跟图像生成模型深度耦合, 长视频里能持续保持场景一致。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">MemLearner 由香港大学 + 复旦 + 浙江大学 + 快手科技联合提出, 针对 video world model 中「缺乏 memory」导致长时不一致的问题。之前方法用 rule-based context frame retrieval 作为 memory, 在 scene occlusion / 动态物体场景下失效。MemLearner 提出 learning-based adaptive context query 方法: 用 query tokens 桥接 context 和 predicted tokens, 通过 video generation model 的反馈信号端到端学习「选什么帧做记忆」。在长时视频一致性 / 动态场景 / 物体永久性 (object permanence) 等任务上验证显著优于 rule-based baseline。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Learning-based adaptive context query: query tokens 桥接 context frames 和 predicted tokens, 通过 video generation model 反馈信号端到端学习, 替代 rule-based retrieval。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 learning-based video world model memory 方案, 解决了 rule-based 在动态场景下的失效; 限制: query token 设计依赖 video generation backbone, 跨模型泛化需要重新训练; 端到端训练需要长视频序列 + 大量 GPU 时; 评估集中在 world model 任务, 真实视频生成 (如文生视频) 还需要适配。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>长时视频一致性显著优于 rule-based baseline; 在 scene occlusion / 动态物体 / object permanence 任务上验证; 跨 video generation backbone 可集成。</div>
+      <div class="row"><span class="author">🏢 团队：</span> → The University of Hong Kong (HKU) + Fudan University (复旦) + Zhejiang University (浙大) + Kuaishou Technology (快手)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_00.jpg" alt="israriqbal/agent-ecologies" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/israriqbal/agent-ecologies" target="_blank">israriqbal/agent-ecologies</a></h3>
+    <p>面向自主 AI NPC 的终极多智能体 OS 2026 版, 项目自称「Multi-Agent OS」框架, 包含 NPC 协作 / 长期记忆 / 任务路由 / 行为树 + 反射架构的整合方案。Star 152 / 7 天, 创建于 6/28, 属于 agent 框架子领域。</p>
+    <div class="source">⭐ 152 · HTML</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_01.jpg" alt="ninouanis84-sudo/foxl-orchestrator" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ninouanis84-sudo/foxl-orchestrator" target="_blank">ninouanis84-sudo/foxl-orchestrator</a></h3>
+    <p>个人 AI Agent Hub 2026 —— 7×24 全自主助理编排平台, 主打「single-user agent hub」场景, 包含任务调度 / 模型路由 / 日程 / 多模态输入整合。Star 152 / 7 天, 创建 6/28, 属于 personal agent 编排子领域。</p>
+    <div class="source">⭐ 152 · HTML</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_02.jpg" alt="abundantbeing/hermes-browser-extension" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/abundantbeing/hermes-browser-extension" target="_blank">abundantbeing/hermes-browser-extension</a></h3>
+    <p>Hermes Agent 的浏览器原生侧边栏扩展, 把 web 上下文 + AI agent 助手直接嵌入 Chrome/Firefox 侧栏, 支持多 LLM 后端 (Claude / GPT / Gemini), 主打「浏览器内常驻 agent」。Star 426 / 7 天, 创建 6/24, 属于 browser extension + agent 集成子领域。</p>
+    <div class="source">⭐ 426 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_03.jpg" alt="NotASithLord/peerd" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NotASithLord/peerd" target="_blank">NotASithLord/peerd</a></h3>
+    <p>首个浏览器原生 AI agent harness, Chrome / Firefox 扩展形式, 把 agent 运行时直接搬进浏览器 (P2P 模式), 跟 abundantbeing/hermes-browser-extension (单 LLM 后端) 走「多 agent 协作 + 浏览器内 P2P」路线。Star 274 / 7 天, 创建 6/22, 属于 browser-native agent 子领域。</p>
+    <div class="source">⭐ 274 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_04.jpg" alt="GenseeAI/gensee-crate" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/GenseeAI/gensee-crate" target="_blank">GenseeAI/gensee-crate</a></h3>
+    <p>面向 AI 编码 agent 的运行时安全层 (Rust 实现), 实时强制执行安全策略 (文件访问 / 网络 / 进程沙箱), 解决 coding agent 误删 / 误执行风险。Star 68 / 7 天, 创建 6/23, 属于 agent safety / sandbox 子领域, 跨语言特性跟其他 Python/JS 项目形成对比。</p>
+    <div class="source">⭐ 68 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-02/oss_summaries_v2_2026-07-02_05.jpg" alt="larashero3-dotcom/writing-dna-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/larashero3-dotcom/writing-dna-skill" target="_blank">larashero3-dotcom/writing-dna-skill</a></h3>
+    <p>写作蒸馏器 .skill —— agent skill 形式封装, 蒸馏并复刻任意写作风格, 给 AI agent 注入「文风 DNA」使其按指定风格生成内容。Star 99 / 7 天, 创建 6/27, 属于 agent skill / writing 子领域, 跨 5+ 子领域里专门服务内容创作者场景。</p>
+    <div class="source">⭐ 99 · Unknown</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-02 08:00</p>
+</footer>
+</div>
+</body>
+</html>
