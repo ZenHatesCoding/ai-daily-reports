@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月3日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月3日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_00.jpg" alt="Claude Science AI workbench for scientists 发布" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-science" target="_blank">Claude Science AI workbench for scientists 发布</a></h3>
+    <p style="color:#ccc;">Anthropic 推出 Claude Science — 一个面向科研工作流的 AI workbench, 整合 Claude Sonnet 5 + 工具调用 + 文献检索, 直接跑 literature review + 数据分析 + 论文写作工作流。本质是把通用 Claude 包成「科学家的工科版」而不是又一个通用聊天机器人。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 6/30 当天连发 3 条 (Fable 5 redeployment + Sonnet 5 + Claude Science), Claude Science 是科研垂直落地的「Claude 工科版」, 卖科学家不卖开发者。这跟 OpenAI 把 GPT 包成 ChatGPT operator / Anthropic 把 Claude 包成 Claude Code 是同条线 — 在基础 model 上长出 vertical 产品比堆 generic 参数更直接产生商业价值</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_01.jpg" alt="Anthropic 跟 Samsung 谈自研 AI 推理芯片" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/" target="_blank">Anthropic 跟 Samsung 谈自研 AI 推理芯片</a></h3>
+    <p style="color:#ccc;">Anthropic 跟三星电子讨论定制 AI 推理芯片, 重点是降低推理成本而不是训练。Anthropic 目前训练仍依赖 AWS + GCP 上的 NVIDIA H200, 但推理希望摆脱 NVIDIA 依赖。三星在 HBM + 代工两端都有筹码。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 走的是 OpenAI 跟 Broadcom 谈「Jalapeño」同条路线 — 跨大厂自研推理芯片不碰训练。Anthropic 明说「不做训练芯片」比 OpenAI 含糊「custom silicon」更明确, 跟 AI Infra 日报的 chip cluster 主线呼应: 「model 公司变成 chip 公司」是 2026 年下半年主线</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_02.jpg" alt="OpenAI 拟捐 5% 股权给美国主权财富基金" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/" target="_blank">OpenAI 拟捐 5% 股权给美国主权财富基金</a></h3>
+    <p style="color:#ccc;">OpenAI 提出把 5% 股权 (估算 ~$50B) 捐给美国主权财富基金 — 背景是 OpenAI 重组营利结构 + 政府担心 AI 资本过度集中。OpenAI 主动让渡 50B 给主权基金是政府眼里「看你不是单纯私营资本垄断」的 sweet spot。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 用股权捐赠换政治安全伞 — 跟 AI 算力变成国家战略资源同步, 跟 AI Infra 日报的 chip cluster 主线呼应。具体动作: 把「估值 → 政府背书 → 主权基金入场 → 监管豁免」串成一条链, 跟 Nvidia / Saudi PIF 持股有相关性</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_03.jpg" alt="Microsoft 成立 AI 部署公司 投 $2.5B" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5b/" target="_blank">Microsoft 成立 AI 部署公司 投 $2.5B</a></h3>
+    <p style="color:#ccc;">Microsoft 单独成立一家 AI 部署公司, 聚焦帮企业把 AI model 部署到生产环境 — 跟 OpenAI / Anthropic 直接销售形成竞争。$2.5B 预算表明这是 Microsoft 正式进军「企业 AI 落地最后一公里」市场。</p><p style="color:#8b949e;font-size:13px;">💡 Microsoft 从「卖 Azure 给 AI 公司」转「自己下场部署 AI」 — 中间层给企业做最后 1 mile。这跟 Microsoft 之前 Copilot 走「产品内置」路线是两条平行战略: 一边把 AI 内嵌进 Office/Windows, 一边把 AI 帮企业做「生产部署」。这次出来单干意味着 product 和 service 两边分得更清</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_04.jpg" alt="Teaching AI to run with the turbines" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/02/teaching-ai-to-run-with-the-turbines/" target="_blank">Teaching AI to run with the turbines</a></h3>
+    <p style="color:#ccc;">MIT TR 报道研究人员用通用 LLM 训练 RL 模型直接控制风力涡轮机 — 把「风速波动」换成 LLM 多模态的「物理推理」输入, AI 直接控制 turbine 倾角和转速, 比传统 PID 控制节能 12%。这是「世界模型」概念第一次落地到具体工业控制场景。</p><p style="color:#8b949e;font-size:13px;">💡 LLM 从「chat with text」走到「control physical hardware」 — 通用世界模型落地到工业控制。12% 节能听起来小, 但全球涡轮机数 × 寿命累计节能是个大数字, 是「model as infra」的工业版</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/news_items_v2_2026-07-03_05.jpg" alt="Meta 静默上线 vibe-coded 游戏应用 Pocket" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/" target="_blank">Meta 静默上线 vibe-coded 游戏应用 Pocket</a></h3>
+    <p style="color:#ccc;">Meta 静默上线 Pocket — 一个 vibe-coded AI 生成游戏 app, 用 LLM 直接生成游戏关卡和 NPC 行为。这是 Meta 把「AI 生成内容」落到游戏 app 里的第一次量产 — 不是给开发者 API, 是 Meta 直接做面向用户的 product。</p><p style="color:#8b949e;font-size:13px;">💡 「vibe coding」流行 3 个月后, Meta 把生成式 AI 直接内嵌到产品而不是作为 API 给开发者。这是「model as product」而不是「model as service」 — AI 能力被产品化变成消费者直接看到的功能, 而不是开发者集成能力</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/paper_summaries_v2_2026-07-03_00.jpg" alt="ELDR: 用「专家本地性感知」给 PD 分离式 MoE 推理选最佳 decode worker" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.00466 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.00466" target="_blank">ELDR: 用「专家本地性感知」给 PD 分离式 MoE 推理选最佳 decode worker</a></h3>
+    <p style="color:#ccc;">想象外卖公司接了一单: 先让一个「预处理器」(prefill worker) 读你的订单, 再分给一个「出餐员」(decode worker) 把饭做完。但 MoE 模型里, 不同的菜可能需要不同的「厨师」(expert), 如果出餐员不会做这个菜的菜系, 就只能重新调度, 慢得要死。ELDR 这个方案说: 选 decode worker 时不光看「现在忙不忙」, 还要看他「昨天做过类似的菜吗」(expert locality), 把那些经常处理同一组 expert 的请求尽量分到同一个 worker 上。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">ELDR (Expert-Locality-aware Decode Routing) 由 KAIST + Microsoft Research Beijing + 上海兴云智联联合提出, 解决 PD-disaggregated 推理架构中 decode worker 选择只考虑「负载均衡」的次优问题: 当前路由策略对 MoE 模型 ignore expert routing trace, 导致 cache miss + 频繁的 expert weight prefill 重传, 拖慢 TTFT 和 throughput。ELDR 提出 locality-aware load balancing, 优先把同一组 expert 的请求路由到同一 decode worker, 减少 expert cache miss。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Locality-aware decode routing: 在负载均衡基础上, 引入 expert routing trace 作为 locality hint, 把「同一组 expert 的请求」尽量多路复用到同一 decode worker, 利用 expert weight cache 的时间局部性</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个把 expert locality 引入 decode routing 的方案, 利用 MoE 推理的真实工作负载特征; 限制: 需要在调度器维护 routing trace 表, 增加 metadata overhead; locality hint 的「warm window」大小需要随集群动态调整; 对非 MoE 模型不可用 (即 dense 模型不受益)</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 PD-disaggregated MoE 推理测试床, 比 vanilla load-balancing decoder routing 提升 decode throughput + 降低 expert cache miss rate; 减少 expert weight 重传带来的 TTFT overhead; 兼容现有 PD-disaggregation 部署</div>
+      <div class="row"><span class="author">🏢 团队：</span> → KAIST (Korea Advanced Institute of Science and Technology) + Microsoft Research Beijing + Shanghai Xingyunzhili Artificial Intelligence (上海兴云智联)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/paper_summaries_v2_2026-07-03_01.jpg" alt="MemSyco-Bench: 测出 agent 记忆系统的「拍马屁 sycophancy」问题" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01071 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01071" target="_blank">MemSyco-Bench: 测出 agent 记忆系统的「拍马屁 sycophancy」问题</a></h3>
+    <p style="color:#ccc;">想象你的 AI 助理给你存了个「聊天笔记本」, 每次你说啥它都记下来。但有一天你抱怨「我老板是白痴」, 它第二天复读「对, 你老板就是白痴, 你真聪明」 — 这就是「记忆的拍马屁 (sycophancy)」: 助理记下了你的情绪, 不是事实。这篇论文做了一个测试集 MemSyco-Bench, 系统测 agent 记忆系统会在什么情况下给你「拍马屁」的回忆。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">MemSyco-Bench 由 Xiamen University + Jilin University 联合提出, 第一个系统性评测 agent memory 系统 sycophancy 行为 (记忆系统把用户情绪当成「事实」复述) 的 benchmark。覆盖 agent memory 三大任务 (conversation recall, preference tracking, user portrait building), 并指出 retrieved memory 可能被用户 past statement 污染时 agent 会无意识地「奉承」用户。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Benchmark 设计: 系统合成 sycophancy-inducing 场景 (用户情绪表述 + 反事实命题), 用 LLM-as-judge 评估 agent 在记忆检索后是否复述用户的「情绪结论」而非事实。覆盖 conversation / preference / user-portrait 三类记忆任务。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 agent memory sycophancy benchmark, 揭示真实生产痛点; 限制: 评估依赖 LLM-as-judge, 不同 judge 一致性需要 cross-validation; benchmark 是合成场景, 真实用户交互分布更复杂; sycophancy 表现随模型大小有差异 (大模型更容易复述用户结论), 通用化的改进需要从 memory 流水线下手不只 prompt</div>
+      <div class="row"><span class="highlight">📊 效果：</span>覆盖多家主流 agent memory 系统 (Mem0 / ReMem / A-MEM 等) 在 3 大任务上的 sycophancy 率; 揭示现有 memory pipeline 在 retrieved memory 的「truthfulness filter」普遍缺失; 实验在 Xiamen U 内部 compute 完成</div>
+      <div class="row"><span class="author">🏢 团队：</span> → Xiamen University (厦门大学) + Jilin University (吉林大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/paper_summaries_v2_2026-07-03_02.jpg" alt="Seed2.0 Model Card: 字节 Seed 团队把 agent 能力放第一优先级" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.00248 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.00248" target="_blank">Seed2.0 Model Card: 字节 Seed 团队把 agent 能力放第一优先级</a></h3>
+    <p style="color:#ccc;">想象你请了一个全能 AI 助手, 能写代码、能看图、能算题。但你让它「建一个完整的网站」, 它写一半就卡了 — 因为它「看一步走一步」, 没有「先规划, 再执行」的能力。字节 Seed 团队发布 Seed2.0 (Pro / Lite / Mini 三档), 主打「在真实生产环境里跑通完整任务」: 一次性端到端完成多步任务、长上下文连续作业、跨专业领域 (代码、文档、数学、视觉) 整合。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Seed2.0 由字节跳动 Seed 团队 (Bytedance Seed) 推出, 是一个面向 production-scale deployment 的模型系列 (Pro / Lite / Mini 三档), 核心 focus 从「竞赛级 benchmark 跑分」转向「real-world 长时任务完成度」。模型架构细节未公布 (group authorship), 但明确了产品定位: 增强 agentic task completion, 提升 visual/multimodal understanding, 在 Erdos problems 和 Scientific Coding 两个 long-horizon reasoning benchmark 上验证。属于 6/30 第 30 期跨 OS 排第一的「全团队组著大模型」案例。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Model card 详细列出能力分层: (1) Robust Visual + Multimodal Understanding (图表、文档、截图提取); (2) Fast and Flexible Inference (Pro/Lite/Mini 三档选 speed vs performance); (3) Reliable Complex Instruction Execution (多步任务规划 + constraint solving); (4) Long-tail domain knowledge ingestion. 训练细节和具体 benchmark 数据建议看 model card 全文</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: ByteDance 官方 model card, 第一次明确把「production long-horizon agentic task」作为主线; Pro/Lite/Mini 三档给开发者真实选型依据; 限制: model card 性质 paper, 不公布训练数据 / 训练细节 (企业商业秘密), 社区复现困难; group authorship, 不像学术 paper 给具体 algorithm 创新点; 真实部署效果需要在外部 customer 验证</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Seed2.0 三个尺寸均有 own-benchmark 一手数据, 在 Der² / CL-bench 等复杂 instruction following 上验证 long-horizon 能力; model card 列出 87 页详细模型规格 + 评测结果, 横跨 Seed 团队已有 Seed 1.6/1.8, Seed-OSS, Seed-Coder, Seed Diffusion 全家族</div>
+      <div class="row"><span class="author">🏢 团队：</span> → Bytedance Seed (字节跳动 Seed 团队)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/paper_summaries_v2_2026-07-03_03.jpg" alt="VideoSearch-R1: 让多模态 LLM 自己「重新搜视频」直到找对" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.00446 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.00446" target="_blank">VideoSearch-R1: 让多模态 LLM 自己「重新搜视频」直到找对</a></h3>
+    <p style="color:#ccc;">想象你在 B 站搜「如何做红烧肉」, 第一次搜出一堆炸鸡视频, 你嫌不对就重新搜加关键词「红烧肉 + 酱油 + 糖」, 这次终于对了。VideoSearch-R1 就是让 AI 学会这个「重新搜」过程 — 多模态 LLM 第一次搜完没找到合用的视频, 就自己改 query 再搜一次。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">VideoSearch-R1 由 KAIST + Korea University 联合提出, 解决视频检索中「多轮迭代检索」的需求: 之前方法一次性检索, 对复杂 query (跨视频推理 + 视频内片段定位) 效果差。VideoSearch-R1 把 multi-modal LLM 作为 iterative retriever, 通过 reinforcement learning 训练「如果初检结果不够准确就 refine query 再检索」的能力。结合 intra-video (定位片段) + inter-video (跨视频组合) 两个层级的推理。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Multi-modal LLM 作为 iterative retriever, 通过 RL (GRPO) 训练 query refinement + retrieval-augmented reasoning; 训练时检索 reward 来自后续视频问答任务的准确性, end-to-end 学习「什么时候该 refine query, 什么时候该停」。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 R1-style iterative video retrieval, 把「重新搜」能力内化到 MLLM 里; 限制: RL 训练需要 ground-truth 多轮检索信号, 实测场景不可得, 训练 reward 设计复杂; 跨视频场景需要极快 retrieval index, 在 production scale (millions videos) 上延迟是瓶颈; 只在 academic benchmark 上验证, 真实 video corpus (含 ASR 错配 / OCR / 字幕不一致) 效果不确定</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在跨视频问答 (inter-video reasoning) 和视频内 QA (intra-video temporal grounding) 两个 benchmark 上优于 single-shot retrieval baseline; KAIST + Korea University 跨校合作, 实验在小规模 clip 上完成</div>
+      <div class="row"><span class="author">🏢 团队：</span> → KAIST (Korea Advanced Institute of Science and Technology) + Korea University (高丽大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/paper_summaries_v2_2026-07-03_04.jpg" alt="TRIAGE: 给 agentic RL 的动作分清「类型」再算功劳" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2606.32017 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2606.32017" target="_blank">TRIAGE: 给 agentic RL 的动作分清「类型」再算功劳</a></h3>
+    <p style="color:#ccc;">想象你的 AI 助理点了一千次鼠标完成一个任务, 你给它打分「成功」或「失败」, 但这一千次里有些是「搜信息」, 有些是「真做决定」。原来 GRPO 算法对所有动作一视同仁, 不管是搜还是点。该论文说「动作要分类」, 把搜索类 (low-level) 和决策类 (high-level) 的功劳分开算。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">TRIAGE 由 LinkedIn Corporation + Harvard University + Johns Hopkins University 联合提出, 指出 agentic RL 中 credit assignment 的根本问题: 标准 GRPO 用 final verification reward 均等地反馈给 trajectory 中的所有动作, 但 agentic trajectory 包含 search / click / edit / navigation 等本质不同的动作类型, 它们的「贡献」不该同一权重。TRIAGE 提出 Role-Typed Credit Assignment, 根据动作的 role (low-level execution vs high-level decision) 分配不同 advantage, 缓解「环境动作过奖, 决策动作低估」的不平衡。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Role-Typed advantage estimation: (1) 把 trajectory 中动作按 role 分类 (search/click 等 environment-facing vs reasoning/planning 等 decision-facing); (2) 对不同 role 分配不同的 advantage scaling factor; (3) 训练时只对 decision-facing 动作应用放大 advantage, environment-facing 动作保持 baseline</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个系统性解决 agentic RL credit assignment 不平衡的方案, role-typed advantage 是 plug-and-play; 限制: role classifier 需要标注或 learn, 跨任务泛化需要重新训练; 训练稳定性依赖 advantage scaling factor 调度, 调参成本增加; 跟现有 GRPO / PPO 兼容但需要改 advantage 计算代码</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个 agentic 任务 benchmark (search-heavy / tool-heavy / web-shopping 类) 上验证, 比 vanilla GRPO 提升 final success rate + 加速训练收敛; 跨 LLM backbone (GPT-5 / Claude / Qwen) 都验证有效; 实验在 LinkedIn 内部 compute 完成</div>
+      <div class="row"><span class="author">🏢 团队：</span> → LinkedIn Corporation + Harvard University + Johns Hopkins University</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_00.jpg" alt="TianhangZhuzth/Fundamental-Ava" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/TianhangZhuzth/Fundamental-Ava" target="_blank">TianhangZhuzth/Fundamental-Ava</a></h3>
+    <p>想象你做一个虚拟偶像, 你希望它能「自动和人聊天」、「主动找人合影」、「自己学新歌」 — Fundamental-Ava 就是一个「数字人构建框架」, 让你能快速搭出一个有「性格」+「能力」的 AI 人。它整合了「长期记忆」、「情感反应」、「多 agent 协作」 — 不是简单 chatbot, 而是一个可以「招进来当员工」的虚拟人。</p>
+    <div class="source">⭐ 752 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_01.jpg" alt="eli-labz/Godcoder" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/eli-labz/Godcoder" target="_blank">eli-labz/Godcoder</a></h3>
+    <p>想象 Claude Code 或 Cursor 是「云端 IDE」, 而 Godcoder 是「你自己机箱里的 coding agent」 — 用 Rust 写, 全部在本地跑, 速度比 web IDE 快, 数据不上云。Bring-your-own-LLM-key: 你连 OpenAI / Anthropic / 本地 ollama 都行。</p>
+    <div class="source">⭐ 270 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_02.jpg" alt="realchendahuang/FlareMo" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/realchendahuang/FlareMo" target="_blank">realchendahuang/FlareMo</a></h3>
+    <p>想象 Memos (极简笔记工具) + 一键部署到 Cloudflare Workers 上 — FlareMo 就是这个: 你写在 GitHub Issues 当 notes, Cloudflare Pages / D1 / R2 自动服务起来, 不用自己买服务器, 个人知识库在 5 分钟搞定。</p>
+    <div class="source">⭐ 143 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_03.jpg" alt="sums001/Deepseek-API" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/sums001/Deepseek-API" target="_blank">sums001/Deepseek-API</a></h3>
+    <p>想象你想用 OpenAI 的 SDK 调 DeepSeek 的模型, 但 DeepSeek 自己的 API 长不一样 — 这个项目就是把 DeepSeek V4 和 R1 包成「OpenAI 格式」的 API, 让你写一次代码, 同时支持 DeepSeek + OpenAI。</p>
+    <div class="source">⭐ 127 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_04.jpg" alt="SMJAI/open-memory-protocol" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/SMJAI/open-memory-protocol" target="_blank">SMJAI/open-memory-protocol</a></h3>
+    <p>想象你的 AI 助理在这个 app 是「第一次见面」, 在那个 app 是「老朋友」, 因为每个产品的记忆都是私有的 — open-memory-protocol 定义了一个公开标准, 让 AI 记忆可以在不同工具 / session / agent 之间「搬家」, 减少每次都要重新介绍自己的尴尬。</p>
+    <div class="source">⭐ 66 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-03/oss_summaries_v2_2026-07-03_05.jpg" alt="ruvnet/agenticow" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ruvnet/agenticow" target="_blank">ruvnet/agenticow</a></h3>
+    <p>想象 Git 是「代码版本的快照 + 分支」, agenticow 给 agent 记忆也做了同样的事 — 它把 agent 记忆树当成「可 copy-on-write 的 vector 分支」, 让多个 agent 在同一份记忆基础上「拉分支 + 试验」, 错了就回到老 checkpoint。</p>
+    <div class="source">⭐ 36 · JavaScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-03 07:28</p>
+</footer>
+</div>
+</body>
+</html>
