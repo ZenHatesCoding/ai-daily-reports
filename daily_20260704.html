@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月4日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月4日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_01.jpg" alt="How ChatGPT adoption has expanded" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/how-chatgpt-adoption-has-expanded" target="_blank">How ChatGPT adoption has expanded</a></h3>
+    <p style="color:#ccc;">OpenAI Signals 发布新数据: ChatGPT 全球渗透率持续加速, 用户从「尝鲜」转「日常使用」, 多语言区域同时起飞 — 不仅英语圈, 拉丁语 / 印地语 / 阿拉伯语等低资源语言增长更快。报告强调 ChatGPT 在工作流上替代搜索引擎、客服、文案、代码协作等场景, 而非仅 chat 玩具。</p><p style="color:#8b949e;font-size:13px;">💡 ChatGPT 不再是 chat 玩具而是「日常工具」 — 当渗透率跨过 daily-use 临界点, 收入和粘性都进入新阶段。这跟 AI Infra 日报的「AI consumer adoption 推动 GPU 长期需求」呼应 — 一份全球渗透数据是 model 公司估值的 fuel, 也是 GPU 订单的间接 forecast</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_02.jpg" alt="Google DeepMind and A24 announce first-of-its-kind research partnership" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/" target="_blank">Google DeepMind and A24 announce first-of-its-kind research partnership</a></h3>
+    <p style="color:#ccc;">Google DeepMind 与独立电影制片厂 A24 宣布首个 AI × 电影研究合作 — A24 接入 DeepMind 的 world model / video generation 工具, 探索 AI 辅助电影创作的边界。这是 DeepMind 第一次把生成模型给「文化 IP」用, 而不只是技术 demo。</p><p style="color:#8b949e;font-size:13px;">💡 AI 进好莱坞跟 AI 进 scienctific research 是同一条「vertical 落地」主线 — DeepMind 不再只输出 paper, 而是接入具体文化产业做合作。GenAI 从「敲敲文字」走到「敲电影」是 2026 下半年的质变, 也是 model 公司新一轮商业化的杀手锏</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_03.jpg" alt="Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/" target="_blank">Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped</a></h3>
+    <p style="color:#ccc;">Meta CEO 扎克伯格在内部会议坦承 AI agent 进展低于预期 — 训练数据 + reasoning 范式都没让 Meta Superintelligence Labs 拿到 leader 位置。这是 Meta 砸百亿做 superintelligence 第一次内部承认「卡住了」, 但仍拒绝放弃继续投入。</p><p style="color:#8b949e;font-size:13px;">💡 扎克伯格公开说 AI agents 没像他预期那么快 — 这是 2026 年首次 big tech CEO 公开承认 agent 失速。跟 OpenAI / Anthropic / Google 同期「agent 框架日新月异」形成反差, 暗示 agent 落地还没跨过 reliability 临界点, 业内出现的「agent fatigue」是真的</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_04.jpg" alt="Indian tech tycoon bets $30M of his own money to build AI alternative to Microsoft" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-of-his-own-money-to-build-an-ai-alternative-to-microsoft/" target="_blank">Indian tech tycoon bets $30M of his own money to build AI alternative to Microsoft</a></h3>
+    <p style="color:#ccc;">印度科技大亨 Bhavin Turakhia 个人出资 $30M 创办 Neo — 一个用 AI 重塑办公套件的新公司, 直接对标 Microsoft Office + Google Workspace。Turakhia 自掏腰包、不靠 VC, 也走 AI agent 自动化办公流程 — 跟传统 SaaS 「工具多而无 AI」形成对比。</p><p style="color:#8b949e;font-size:13px;">💡 印度自研 LLM 跟印度自研办公套件是同一思潮 — 大公司 (Microsoft / Google) 在 AI 时代慢半拍, 给新玩家留出窗口。$30M 个人投资对比 Microsoft 数 B 投入看似少, 但「独立 + 印度市场」组合在欧美 SaaS 杀价环境下是差异化路线</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_05.jpg" alt="Achieving operational excellence with AI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/" target="_blank">Achieving operational excellence with AI</a></h3>
+    <p style="color:#ccc;">MIT TR Insights 发布报告: 把 Lean Six Sigma + BPM 等传统运营改进方法接入 AI 之后, 制造业和服务业都能做到更低成本的「process excellence」。核心观点是「AI 不是用来替代流程, 是让现有流程可以走完完整 cycle」 — 把流程质量从「统计抽样」改成「全量分析」。</p><p style="color:#8b949e;font-size:13px;">💡 运营效率层面 AI 的落地比「AI 取代人工」更现实 — AI 帮已有流程做「全过程质控」, 让流程自反馈。这跟「世界模型」概念在工业上是一样的「数据回路反馈」思路, 区别只是数据来源是企业流程日志而不是物理传感</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/news_items_v2_2026-07-04_06.jpg" alt="AI 找出 4 种全新超导体，只用 28 个 GPU 时" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/442452.html" target="_blank">AI 找出 4 种全新超导体，只用 28 个 GPU 时</a></h3>
+    <p style="color:#ccc;">中国 + 国际联合团队用 AI (mat-proven / GNN + 物理约束) 在 28 个 GPU 小时内发现 4 种全新超导材料, 之前人类 100 年都没发现。AI 把候选材料空间从百万级压缩到几十, 大幅缩短发现周期 — 这是「AI for Science」在材料学的代表性进展。</p><p style="color:#8b949e;font-size:13px;">💡 「AI 找出 4 种全新超导体, 28 GPU 时」跟「AI 找出 4 种全新超导体, 100 年才发现」 — 数量级差是 AI for Science 的核心价值。28 GPU 时对比传统材料合成试错的 100 年, 是工业界一直在等的「AI 加速 science discovery」范式真正成型</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/paper_summaries_v2_2026-07-04_01.jpg" alt="WorldDirector: 用 LLM 当「3D 导演」让视频生成跨镜头保持物体一致" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02517 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02517" target="_blank">WorldDirector: 用 LLM 当「3D 导演」让视频生成跨镜头保持物体一致</a></h3>
+    <p style="color:#ccc;">想象你拍一部连续剧, 几十个镜头里同一个角色不能「换脸」, 同辆车不能突然变颜色。AI 生成视频最容易「失忆」 — 一旦镜头移开再回来, 物体就变了。WorldDirector 的思路是让一个 LLM 先当「3D 导演」, 把每个镜头里 3D 物体怎么动、相机怎么转先规划好, 再让视频模型照着规划合成画面。这样镜头出去再回来, 物体还是同一辆红色的车、还是同一个穿红衣的女人。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">WorldDirector 由 HKUST + Ant Group + Zhejiang University + CUHK 联合提出, 解决 video world model 中「跨镜头动态物体记忆丢失」的根本问题。现有的 video world model 把物理动态和像素渲染混在一起, 又依赖连续视觉观察维持运动, 一旦物体移出视野再回来就「换脸」。WorldDirector 显式解耦 3D semantic motion orchestration 与 latent video synthesis: 用 LLM 先 orchestrate 3D trajectories + camera movements 生成 control signal, 再用这个 control signal 指导 video diffusion 生成。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-stage framework: (1) LLM-based 3D Trajectory Orchestrator 接收文本 prompt + reference frames, 输出每个动态物体的 3D trajectory 和 camera path; (2) Trajectory-conditioned Video Diffusion 把 3D trajectory 作为 control signal 生成视频, 保持物体 appearance 在跨镜头一致性</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 explicit 解耦 3D motion + pixel render 的 world model 架构, 把 LLM 重新定位为 planner 而非 generator; 限制: 需要 3D trajectory ground truth 作为训练信号, 真实视频里获取成本高; LLM planner 增加 inference latency, 不适合实时视频应用; 多物体协调 (interaction) 还没完全解, 物体间碰撞物理还没在所有场景验证</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在长时序 world simulation + 自由视角探索 benchmark 上, 维持 dynamic object memory 跨镜头稳定性; 同时支持复杂多物体运动、镜头遮挡后重现; 实验在 HKUST + Ant Group 内部 GPU 集群完成</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wang, Hanlin, Ouyang, Hao, Wang, Qiuyu, Wang, Wen, Bai, Qingyan, Cheng, Ka Leong, Yu, Yue, Li, Yixuan, Meng, Yihao, Liu, Zichen, Zeng, Yanhong, Shen, Yujun, Chen, Qifeng → HKUST (Hong Kong University of Science and Technology, 香港科技大学) + Ant Group (蚂蚁集团) + Zhejiang University (浙江大学) + CUHK (Chinese University of Hong Kong, 香港中文大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/paper_summaries_v2_2026-07-04_02.jpg" alt="Program-as-Weights: 用「程序当权重」把模糊任务编译成可执行神经网络" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02512 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02512" target="_blank">Program-as-Weights: 用「程序当权重」把模糊任务编译成可执行神经网络</a></h3>
+    <p style="color:#ccc;">想象你让 AI 「写一个函数, 把重要的日志行挑出来」, 这个规则没法用代码精确写出来, 因为「重要」很模糊。现在大家直接调 GPT 大模型 API 来干这事, 但每次都付钱 + 不保证每次相同 + 一旦 GPT 升级行为就变。本文说: 试一次, 让大模型把这个模糊函数「编译」成一个本地能跑的小神经网络「权重文件」, 后续每次调用都读这个小文件, 又快又便宜还稳定。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Program-as-Weights (PAW) 由 University of Waterloo + Cornell + Harvard 联合提出, 提出 fuzzy-function programming 新范式: 把「自然语言描述的模糊函数」编译成本地可执行的 compact 神经网络 artifact (parameter-efficient adapter), 通过在 FuzzyBench (10M 样本基准) 训练一个 4B 编译器实现。0.6B Qwen3 interpreter 执行 PAW 输出可直接调用, 匹配 32B Qwen3 直接 prompt 的性能, 但推理内存只用 1/50, 在 MacBook M3 跑 30 tokens/s。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Three-step pipeline: (1) natural language function spec → (2) Neural compiler (PAW, 4B) 把 spec + 训练数据编译成 compact adapter weights → (3) Frozen interpreter (0.6B Qwen3) loaded with adapter, locally executes function offline. FuzzyBench 10M-example dataset 提供训练语料</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一次把 LLM 从 per-input solver 重新定位为 tool-builder, 一次编译多次复用; 限制: PAW 编译需要 4B model + fine-tune, 编译成本只有「一次」但首次 setup 仍需 GPU; FuzzyBench benchmark 任务覆盖有限 (主要是文本 pattern matching), 视觉/多模态模糊函数还没验证; interpreter 必须冻结, 升级 interpreter 行为可能变</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Performance 匹配 32B Qwen3 direct prompting (在 FuzzyBench 基准), 但 inference memory 只用 1/50; 在 MacBook M3 上跑到 30 tokens/s (CPU 也能本地推理); parameter-efficient adapter reuse across multiple function definitions</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhang, Wentao, Hotsko, Liliana, Kim, Woojeong, Nie, Pengyu, Shieber, Stuart, Deng, Yuntian → University of Waterloo (滑铁卢大学) + Cornell University (康奈尔大学) + Harvard University (哈佛大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/paper_summaries_v2_2026-07-04_03.jpg" alt="OrbitQuant: 不用重新训练就让 diffusion transformer 把比特压到 4-bit" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02461 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02461" target="_blank">OrbitQuant: 不用重新训练就让 diffusion transformer 把比特压到 4-bit</a></h3>
+    <p style="color:#ccc;">想象 Sora 这种视频生成模型本来跑一次要 80GB 显存, 你只有 16GB 显卡, 玩不起。本文给了一个「不用重新训练」的瘦身方法 OrbitQuant — 把模型权重压到 4-bit 但不让画质掉。具体做法是「基于 orbit」地旋转权重让它们的分布更适合量化, 对 image 和 video diffusion 都行, 还不用 calibration data。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">OrbitQuant 由 Cantina Labs + USC + UIUC 联合提出, 解决 diffusion transformer (DiT) post-training quantization 难题: 现有 PTQ 方法在低 bit (4-bit) 下质量掉太多, 需要 calibration data 又耗时。OrbitQuant 提出 Orbit, 一种 rotation-based data-free quantization scheme, 对 weight 在 orbit 子空间上做 rotation + 量化, 同时支持 image (Stable Diffusion 3) 和 video (CogVideoX / Wan) diffusion transformer。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Orbit-based rotation + quant: (1) 对 weight matrix 在 orbit 子空间做 rotation, 重新对齐 weight distribution 适配 quantization grid; (2) data-free optimization, 不需要 calibration dataset; (3) joint image + video DiT compatibility, 通过 weight-only rotation 保持 attention pattern</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: data-free quantization, 不需要校准数据集, 直接适配 production diffusion models; 限制: activation 仍 4-bit 极限, 进一步压缩 (2-bit) 质量掉; orbit rotation 增加推理时 complexity 一点点, 但内存省 4×; 对 model architecture 变化 (新 attention) 适配需要重新设计 orbit basis</div>
+      <div class="row"><span class="highlight">📊 效果：</span>W4A4 quantization (weight 4-bit, activation 4-bit) 下, 图像 FID / 视频 FVD 都接近 full precision baseline; 同时支持 image (SD3) 和 video (CogVideoX) DiT; 无 calibration data, quantization 几分钟完成</div>
+      <div class="row"><span class="author">🏢 团队：</span>Lee, Donghyun, Chavan, Jitesh, Nguyen, Duy, Huang, Sam, Jiang, Liming, Panda, Priyadarshini, Mertens, Timo, Shukla, Saurabh → Cantina Labs + University of Southern California (南加州大学) + University of Illinois Urbana-Champaign (UIUC)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/paper_summaries_v2_2026-07-04_04.jpg" alt="EvoPolicyGym: 测 AI agent 是否真能「多次尝试让代码变好」" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02440 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02440" target="_blank">EvoPolicyGym: 测 AI agent 是否真能「多次尝试让代码变好」</a></h3>
+    <p style="color:#ccc;">想象让 AI 帮你修一段代码, 它改了一版, 你给反馈「这里不对」, 它再改一版, 再改一版。最终版本好不好, 不是关键 — 关键是它有没有真的「改得越来越对」, 而不是「瞎试」。以前的评测只看最后一次跑分, EvoPolicyGym 第一次专门看「AI 是否真的从反馈中学到了东西」, 而不是堆 retries。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">EvoPolicyGym (Autonomous Policy Evolution Gym) 由 USTC + CUHK + 澳门大学 + 清华 + 浙大 + 苏大 + Brown + 上海交大 8 校联合提出, 系统性评测 agent 通过 feedback 迭代改 policy 的能力。之前 benchmark 只看最终分, 忽略过程改进。EvoPolicyGym 引入「budget-bounded policy evolution」setting, harness-model agent 在固定 interaction budget 下反复编辑 executable policy, 提供 trajectory-level 诊断区分 budget allocation + feedback conversion 两种失败模式。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Benchmark 设计: (1) 16 个 compact interactive RL environments 测 policy evolution; (2) trajectory-level diagnostics 区分「预算分配 vs 反馈转化」失败; (3) leaderboard + diagnostics 双重评估; (4) GPT-5.5 等 model 验证, 看 agent 是否真能 iterative improve</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个 explicit policy evolution 评测, trajectory diagnostics 区别于 final score; 16 个 env 跨多任务, 评测鲁棒; 限制: 评测依赖 harness-model, harness 选择影响结果; 16 env 仍是 academic, 真实 production codebase 演化复杂度更高; leaderboard 排名 ≠ 实际部署可用性</div>
+      <div class="row"><span class="highlight">📊 效果：</span>GPT-5.5 在 EvoPolicyGym 拿到 strongest aggregate rank score + top-2 in all 16 envs; trajectory diagnostics 揭示 strong autonomous policy evolution 依赖 task-appropriate 机制发现, 不是单次 win; 8 校合作, 数据公开</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wang, Zhilin, Song, Han, Zhan, Runzhe, Du, Jusen, Chen, Jiacheng, Li, Tianle, Yin, Qingyu, Wu, Yulun, Shen, Zhennan, Zhu, Tong, Li, Yanshu, Chen, Guanjie, Wong, Derek F., Li, Yafu, Cheng, Yu, Yang, Yang → USTC (中国科学技术大学) + CUHK (香港中文大学) + University of Macau (澳门大学) + Tsinghua University (清华大学) + Zhejiang University (浙江大学) + Soochow University (苏州大学) + Brown University (布朗大学) + Shanghai Jiao Tong University (上海交通大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/paper_summaries_v2_2026-07-04_05.jpg" alt="AgenticSTS: 测 LLM agent 在「内存受限」下能做多长的任务" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02255 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02255" target="_blank">AgenticSTS: 测 LLM agent 在「内存受限」下能做多长的任务</a></h3>
+    <p style="color:#ccc;">想象让 AI 打 100 个电话给你订披萨, 但它的「脑子」最多只能记 10 个人的对话记录 — 它必须把前 9 个人的信息「压缩」进下一个电话的开场白。AgenticSTS 测的就是 LLM agent 在「有限脑子」(bounded memory) 下能完成多长的多步骤任务, 系统性测「上下文压缩 + 任务持久化」能力。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">AgenticSTS (Bounded-Memory Testbed for Long-Horizon LLM Agents) 由 Alaya Lab + SJTU + Shanghai Innovation Institute + 南开 + USTC 联合提出, 系统性测 agent 在 bounded context window 下的 long-horizon task 能力。Context window 是 LLM agent 的「脑子」, 长任务 agent 必须学会「summary-old-information + retain-task-relevant-fact」策略, 但当前 benchmark 都是 short-horizon 或 full-memory 设置, 不能直接测这种 bounded-memory 长任务能力。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Testbed 设计: (1) 多个 long-horizon task scenarios (外卖下单 / 项目管理 / 代码 review 长链路); (2) context window 显式 bounded (e.g. 4K tokens); (3) 评估指标分 sub-task completion + full-trajectory consistency; (4) 配套 agent memory compression 策略 benchmark</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个系统性 bounded-memory long-horizon testbed, 暴露真生产痛点; 限制: testbed scenarios 偏 academic (外卖 / 项目管理), 真实 production codebase 演化更复杂; memory compression 策略的「评测 ↔ 训练」gap 没说清; benchmark 在小模型上验证, frontier model 行为差异未明</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 multi-turn long-horizon 任务上, bounded-memory setup 下 agent success rate 显著下降; 揭示当前 agent 对 context compression 策略依赖 prompt engineering; 5 单位合作验证, 数据公开</div>
+      <div class="row"><span class="author">🏢 团队：</span>Cheng, Xiangchen, Jiang, Yunwei, Sun, Jianwen, Li, Zizhen, Li, Chuanhao, Cao, Xiangcheng, Liu, Yihao, Zhang, Fanrui, Jin, Li, Zhang, Kaipeng → Alaya Lab + Shanghai Jiao Tong University (上海交通大学) + Shanghai Innovation Institute (上海创智学院) + Nankai University (南开大学) + USTC (中国科学技术大学)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_01.jpg" alt="PatterAI/Patter" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/PatterAI/Patter" target="_blank">PatterAI/Patter</a></h3>
+    <p>想象你想给 app 加一个「会说话的语音助手」, 现在的方案是接 Vapi 或 Retell 这些 SaaS, 每通电话按分钟付钱。Patter 想做一个开源替代 — 你下载一个 SDK 自己部署, 跟 Vapi / Retell 一样支持语音对话 + 电话拨打 + ASR + TTS, 但代码你自己掌控 + 不锁定 vendor。</p>
+    <div class="source">⭐ 920 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_02.jpg" alt="superloglabs/superlog" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/superloglabs/superlog" target="_blank">superloglabs/superlog</a></h3>
+    <p>想象你的生产系统崩了, log 一堆看不懂。你打开 Superlog, 让 AI agent 帮你「从这 1 万行 log 里找 root cause」, 它会自动 trace 异常链路 + 给你一个 fix 建议。这是给 SRE 团队 / 后端工程师用的 AI-native observability 工具 — Datadog 的开源 lightweight 替代 + 内置 agent。</p>
+    <div class="source">⭐ 981 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_03.jpg" alt="agentic-in/inferoa" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/agentic-in/inferoa" target="_blank">agentic-in/inferoa</a></h3>
+    <p>想象你跑一个 LLM agent 一天下来烧了 $500 token 费, 但你查看发现 80% 都是 noise — 重复读文件 / 重复 system prompt / 重复 context。Inferoa 是一个专为 inference 优化的 agent harness, 「token-maxxing」思路: 同样的 agent 任务, 把 context 压缩到极致, 让 LLM 调用次数和 token 数都尽量少, 推断成本直降 50%+。</p>
+    <div class="source">⭐ 363 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_04.jpg" alt="NVlabs/SpatialClaw" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NVlabs/SpatialClaw" target="_blank">NVlabs/SpatialClaw</a></h3>
+    <p>想象 AI 不只在屏幕里点鼠标, 而是要拿机器人手臂去抓桌上那个橙子。「抓橙子」这个动作不是「点屏幕坐标」那么直接, 它涉及空间定位、姿态估计、动作序列规划。SpatialClaw 是 NVIDIA Labs 提出的「空间动作接口」方案, 把 embodied agent 的 action interface 重新设计, 让通用 LLM 也能驱动机器人。</p>
+    <div class="source">⭐ 321 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_05.jpg" alt="Nigh/show-me-the-story" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Nigh/show-me-the-story" target="_blank">Nigh/show-me-the-story</a></h3>
+    <p>想象你想自己跑一个「AI 写小说」应用, 但不用接 SaaS、不用装一大堆 Python 包。show-me-the-story 把整个小说生成 pipeline 打包成一个 Go binary — 下载下来双击就跑, 小说大纲 + 章节内容 + 人物关系图全 self-contained, 自部署自托管。</p>
+    <div class="source">⭐ 292 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-04/oss_summaries_v2_2026-07-04_06.jpg" alt="gunawan1996/world-forge-ai" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/gunawan1996/world-forge-ai" target="_blank">gunawan1996/world-forge-ai</a></h3>
+    <p>想象你想给小说、游戏或桌游生成一个「会自己演进」的世界: 第一天是这个样子, 100 天后因为某些事件变成了另一个样子。World Forge AI 做的是世界生成 + 时间线演化 — LLM 当「世界引擎」, 给你一张地图 + 时间线 + 关键事件, 世界不是静态, 而是会演化的。</p>
+    <div class="source">⭐ 151 · HTML</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-04 08:10</p>
+</footer>
+</div>
+</body>
+</html>
