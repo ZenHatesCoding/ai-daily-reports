@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月5日 · 周日</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月5日 · 周日 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_01.jpg" alt="More details on Fable 5's cyber safeguards and our industry-wide jailbreak severity framework" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank">More details on Fable 5's cyber safeguards and our industry-wide jailbreak severity framework</a></h3>
+    <p style="color:#ccc;">Anthropic 公布 Fable 5 / Mythos 5 7/1 全球下线的细节：政府指令源于一种新的 jailbreak 技术能绕过 Fable 5 / Mythos 5 内部安全防御；Anthropic 驳斥「窄 jb 即可召回商业模型」的标准不合理（同样手法对所有公开模型都有效），宣布与 Amazon / Microsoft / Google 等 Glasswing 合作成员共建「AI jailbreak 严重程度评分框架」。Fable 5 同步在 7/1 全球重上线。Sonnet 5 仍维持 coding / agent / 专业工作领域 frontier 性能。</p><p style="color:#8b949e;font-size:13px;">💡 Fable 5 jailbreak 事件把「商业模型召回 vs 漏洞利用」的标准拉到 industry 讨论 — Anthropic 拒绝独自承担召回成本、改用跨厂商联评框架来定义「值得召回的 jailbreak」。这是 2026 年首例「AI 安全标准由卖方联合主导」而不是「政府单边定」的模式，意味着 model 公司开始把 safety standard 从 compliance 拉到 competitive moat</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_02.jpg" alt="Start building with Nano Banana 2 Lite and Gemini Omni Flash" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/" target="_blank">Start building with Nano Banana 2 Lite and Gemini Omni Flash</a></h3>
+    <p style="color:#ccc;">DeepMind 同日发布两款生成模型：Nano Banana 2 Lite（gemini-3.1-flash-lite-image）是迄今最快、最便宜的 Gemini image 模型，定位「大规模快速出图」+「替代第一代 Nano Banana (gemini-2.5-flash-image)」；Gemini Omni Flash 偏视频生成 + 对话式编辑，可端到端把图像/视频/对话串成一个 workflow。所有 Google 消费入口（Search AI Mode、Gemini App、NotebookLM、Photos、Stitch、Google Flow、Ads）同步接入。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 同日推「最快 image + 视频/对话式编辑」组合 — 把「图像一次性出图」变成「多媒体端到端 workflow」是 2026 年 GenAI 商业化的拐点。Nano Banana 2 Lite 用「取代第一代」角度切开发者，Omni Flash 用「视频 + 对话可编辑」切营销/创作团队 — 一套同时打 agent 框架和创作工具两个市场</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_03.jpg" alt="Introducing GeneBench-Pro" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/introducing-genebench-pro" target="_blank">Introducing GeneBench-Pro</a></h3>
+    <p style="color:#ccc;">OpenAI 发布 GeneBench-Pro — 针对基因组学、生物学、科学研究的 AI benchmark，使用复杂真实数据集测试 model 在真实生物学/科研场景的表现。OpenAI 同步发布 Inside GeneBench-Pro 案例研究。基准重点考察模型对多组学数据 (multi-omics)、湿实验 (wet-lab) 流程、跨模态生物数据的理解与推理，不再只是文本 QA 的传统评测。</p><p style="color:#8b949e;font-size:13px;">💡 GeneBench-Pro 把 AI benchmark 从「文本 QA / 代码」推到「生命科学真实数据」 — 这是 OpenAI 第一次发布专门面向 bio 领域的评测，呼应「AI for Science」从 MLPerf / MMLU 这种通用维度走到「垂直领域」基准的成熟。评测越垂直、领域越能识别真能干的 model，会反过来推动 model 公司给 bio 团队配 dedicated training budget</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_04.jpg" alt="Core dump epidemiology: fixing an 18-year-old bug" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug" target="_blank">Core dump epidemiology: fixing an 18-year-old bug</a></h3>
+    <p style="color:#ccc;">OpenAI 工程师用大规模 core dump 分析（流行病学式统计罕见 crash 模式）追溯数据基础设施里一个 18 年之久的 bug，最终同时定位到一个硬件故障和一个长期遗留的软件 bug。这是 OpenAI data infrastructure team 第一次公开发表「软硬协同 retro」风格的技术 post mortem。</p><p style="color:#8b949e;font-size:13px;">💡 「18 年的 bug」配合「core dump 流行病学」措辞 — 这是 OpenAI 把 AI 工程能力用来 debug 基础设施的范例故事。core dump 历来是「crasher → 工程师逐个 trace」，规模大了之后变成统计学问题；OpenAI 用 LLM + 大规模日志分析能力把它做成流行病学分析，意味着以后 infra 故障 retro 也是 GenAI 杀手锏领域之一</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_05.jpg" alt="Claude Science is Anthropic's newest flagship product" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/" target="_blank">Claude Science is Anthropic's newest flagship product</a></h3>
+    <p style="color:#ccc;">MIT TR 报道 Anthropic 在一场制药高管/生物科技创始人/研究员的发布会上正式推出 Claude Science — 全新 standalone 产品，专攻科研场景，对标 Claude Code 在软件工程中的位置。Claude Science 内置科研专用 tool，可自主调用「计算生物学 + 药物开发」工具栈，交付可审计 artifact；同步为科研人员提供算力。Anthropic 同时宣布将用 Claude Science 自研罕见、被忽视疾病药物。</p><p style="color:#8b949e;font-size:13px;">💡 Claude Science 升级到「与 Claude Code / Cowork 同级 flagship」 — 这是 Anthropic 把 AI for Life Sciences 从 plug-in 推到「独立产品」的转折。Anthropic CEO Amodei 是 PhD scientist，前 DeepMind 主管 Jumper 也加入 — 整条「AI x pharma」线 Anthropic 在做 DeepMind 那样「科学合作伙伴」的角色。Anthropic + Claude Science 同时回答了两个问题：商业化靠 enterprise 订阅，computational biology 是 model 公司下一个 big wedge</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/news_items_v2_2026-07-05_06.jpg" alt="AReaL 2.0 开源：让 Agent 在真实任务中「越用越强」" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/442134.html" target="_blank">AReaL 2.0 开源：让 Agent 在真实任务中「越用越强」</a></h3>
+    <p style="color:#ccc;">由蚂蚁集团 + 清华大学 + 香港科技大学发起的开源强化学习基础设施项目 AReaL 正式发布 2.0 版本；目标是让 Agent 在真实业务场景中持续学习：AReaL 2.0 在 Agent 调用大模型的请求入口加一层「统一推理入口 + 轨迹记录 + 反馈信号 → 后续训练」循环，开发者不必重做 Agent，把请求过 AReaL 2.0 就能接入在线 RL。2026 年 5 月已从蚂蚁 InclusionAI 独立为开放社区，加入 PyTorch Foundation Ecosystem。</p><p style="color:#8b949e;font-size:13px;">💡 AReaL 2.0 把「Agent 在线强化学习」从「需要重训 model」推到「中间层」 — 跟 OpenAI/Anthropic 的「Agent Memory」路径相比，AReaL 2.0 的差异在于「公开且中立」，开发者不绑定 model 厂商。PyTorch Foundation Ecosystem 身份给「Agent 在线 RL」下一个中立开放标准；蚂蚁 + 清华 + HKUST 三家联合身份的国内开源项目，符合「AI Infra 不全靠云厂」的多源供给方向</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/paper_summaries_v2_2026-07-05_01.jpg" alt="MrFlow: Multi-Resolution Flow Matching for Training-Free Diffusion Acceleration via Staged Sampling" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01642 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01642" target="_blank">MrFlow: Multi-Resolution Flow Matching for Training-Free Diffusion Acceleration via Staged Sampling</a></h3>
+    <p style="color:#ccc;">想象你让 AI 生成一张海报, 它原本要 80 秒, 现在用 MrFlow 只要 8 秒 — 而且不需要重新训练。它先快速出一张模糊版的「整体结构」(低分辨率), 然后用一个轻量级的 GAN 模型把模糊图放大成清晰图, 再稍微加点噪让细节重新生成, 最后再修一遍细节。这样四步流水线既能跑得快, 又不让画糊掉。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">MrFlow 由 Beihang University (北航) + NTU + CAS ICT + ETH Zürich 联合提出, 是 pretrained flow-matching model 的 training-free acceleration 策略。利用 low-resolution sampling 的 quadratic token reduction + reduced step requirement, 通过 staged low-to-high-resolution pipeline 实现训练免费的 diffusion 加速。在 FLUX.1-dev 和 Qwen-Image 上 end-to-end 实现 10× 加速, OneIG 质量指标跟加速前仅差 1%, 显著超越其他 training-free 加速策略, 可与 timestep distillation 方案正交叠加达到 25× 加速度。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Staged low-to-high-resolution pipeline: (1) 在 low resolution 快速生成 main structure; (2) 用 light pretrained GAN-based model 在 pixel space 做 super-resolution; (3) inject low-strength noise 启用 high-frequency resampling; (4) refine 细节在 high resolution。全程不需要 training, 利用 quadratic token reduction 和 reduced step requirement</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 训练免费 — 不需要 fine-tune, 几分钟部署; 利用 pretrained GAN super-resolution 模块不增加训练负担; 正交叠加蒸馏方法能翻倍加速; 限制: 多阶段 pipeline 增加 integration complexity; low-to-high 超分依赖现成 GAN 模型 (FLUX.1-dev / Qwen-Image), 新模型可能需要新 GAN; 多次 inference steps 让 pipeline latency 仍有下限</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 FLUX.1-dev 和 Qwen-Image 上 end-to-end 实现 10× 加速, OneIG 质量指标跟加速前仅差 1%; 跟 timestep distillation 正交叠加能再翻倍到 25×; 跟 ToMA (1.01×) / DB-Taylor (4.13×) / SPEED (8.61×) / RALU (8.79×) / Pi-Flow (19.6×) 比, 25.1× 是当前 training-free SOTA</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zheng, Xingyu, Liu, Xianglong, Ding, Yifu, Feng, Weilun, Lin, Junqing, Guo, Jinyang, Qin, Haotong → Beihang University (北京航空航天大学) + Nanyang Technological University (南洋理工大学, 新加坡) + Institute of Computing Technology, Chinese Academy of Sciences (中科院计算所) + ETH Zürich (苏黎世联邦理工学院)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/paper_summaries_v2_2026-07-05_02.jpg" alt="AgenticDataBench: A Comprehensive Benchmark for Data Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01647 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01647" target="_blank">AgenticDataBench: A Comprehensive Benchmark for Data Agents</a></h3>
+    <p style="color:#ccc;">想象你雇了一个 AI 数据分析师, 怎么知道它到底是真懂还是瞎编? 现在的测试都太简单 — 只看它会不会写 SQL 改数字。但真实数据工作有 15 个行业、几十种「处理缺失值、画趋势图、找异常点」这类操作, 中间还要懂业务才行。本文搞了一个新基准, 把这些真实行业任务都收进来, 让 AI 数据分析师考一遍。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">AgenticDataBench 由 Tsinghua University (清华大学) + Ant Digital Technologies (蚂蚁集团) 联合提出, 是首个针对 LLM-based data agents 的跨领域细粒度基准。Benchmark 从 15 个垂直行业 (含 5 个 B2B fintech 真实用例) 收集真实数据集与任务, 引入 data science skills (recurring data-centric operational patterns, 如 &#x27;Handling Missing Data&#x27;) 作为评估单元, 用 Stack Overflow 大规模 task solution 做 hierarchical clustering 抽取代表性 skills, 同时对没有真实数据的领域用 LLM-based task generation 系统化合成任务。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>三阶段评测: (1) 跨 15 行业收集真实任务 (含 5 个 fintech B2B 用例); (2) 用 LLM 从 Stack Overflow 大规模 task solution 做 skill-aligned hierarchical clustering 抽取 skills; (3) 没有真实数据的领域用 LLM-based task generation 系统合成; 同时 open-source testbed 提供细粒度 skill-level 评测</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个跨 15 行业 + 含真实 fintech B2B 的 data agent benchmark; skill-aligned 评估粒度比 outcome-only 强很多; 限制: 真实任务从头部 5 个 B2B 收, 可能有 selection bias; LLM-based task generation 合成的任务可能跟真实任务复杂度有 gap; benchmark 偏数据领域, 对 multi-modal (image/audio) 数据任务还没覆盖</div>
+      <div class="row"><span class="highlight">📊 效果：</span>包含 15 个垂直行业的真实数据任务 (含 5 个 fintech B2B 用例); skill-level granularity 评估单位, 不只评最终答案是否对, 还看 AI 中间调用了哪些 skills; 提供开源 testbed 和 fine-grained skill-level insights, 让评测能区分「运气对」和「流程对」</div>
+      <div class="row"><span class="author">🏢 团队：</span>Sun, Zhaoyan, Zhong, Shan, Wen, Daizhou, Han, Jiaxing, Li, Guoliang, Yan, Ying, Zhang, Peng, Su, Yu, Qi, Xiang, Sun, Baolin, Yang, Chengyuan, Fang, Tao, Ruan, Huaiyu → Tsinghua University (清华大学) + Ant Digital Technologies (蚂蚁数字科技), Ant Group (蚂蚁集团)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/paper_summaries_v2_2026-07-05_03.jpg" alt="SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01874 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01874" target="_blank">SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use</a></h3>
+    <p style="color:#ccc;">想象公司让 AI agent 处理大量 SOP (标准操作流程) — 哪个工单走哪条流程、哪个步骤漏一步都对不上号, 现在用「最后做对没」一个分数根本不够。本文搞了一个「自我进化的评分表」 — 让 AI 从真实操作轨迹里反推出「完整的检查项」, 再用这些检查项当评分标准, 把「流程对不对」和「答对答错」分开评估。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">SkillCoach 由 HKUST(GZ) (香港科技大学广州) + JD.COM (京东) 联合提出, 解决 agent 工业场景里「skills (SOP/domain rule/tool workflow) 大到一定规模就 reliable use 困难」的核心痛点。提出 self-evolving rubric framework: 从真实 rollout 抽取 skill-grounded process rubrics, 沿四个维度 (skill selection / skill following / skill composition / skill-grounded reflection) 评估轨迹, 把外部 verifier 当 outcome-only signal 单独保留, 让 process quality 跟 accidental success 区分开。Evolved rubrics 同时作为 process supervision 选高质量训练 trajectory。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Self-evolving rubric framework: (1) 从真实 rollout 推导 skill-grounded process rubrics; (2) 沿 4 个维度 (selection / following / composition / reflection) 评估轨迹; (3) 保留外部 verifier 当 outcome-only signal, 让 process quality 跟 accidental success 分开; (4) evolved rubrics 当 process supervision, 过滤出高质量训练 trajectory 进一步提升 agent 行为</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个显式区分 process quality 和 outcome success 的 agentic skill 评测框架; 实验显示 rubric-based supervision 比 result-only 强不少; 限制: 4 个维度可能不够细分 enterprise 复杂流程 (缺合规/审计维度); rubric auto-evolution 仍需要 ground truth rollout 起点, 获取成本高; 主要针对 JD.com 内部 SOP 验证, 跨 enterprise 泛化待验证</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在企业场景 (含 SOP-heavy 工作流) 上: evolved rubrics 显著提升 evaluation quality; 暴露 final-accuracy 看不住的 hidden failures (选了 distractor skill、缺关键步骤、workflow 顺序错、忘 final checks); evolved rubric supervision 比 outcome-only filtering 更强地提升 agentic skill-use</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhu, Jiayin, Mao, Kelong, Guo, Yudong, He, Dengbo, Xu, Sulong, Gu, Simiu, Yue, Yutao → HKUST(GZ) — Hong Kong University of Science and Technology (Guangzhou), 香港科技大学 (广州) + JD.COM (京东) + Institute of Deep Perception Technology, JITRI (江苏省产业技术研究院深度感知技术研究所)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/paper_summaries_v2_2026-07-05_04.jpg" alt="AutoMem: Automated Learning of Memory as a Cognitive Skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01224 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01224" target="_blank">AutoMem: Automated Learning of Memory as a Cognitive Skill</a></h3>
+    <p style="color:#ccc;">想象你让 AI 在《NetHack》这种地下城里玩几千步, 中间要记「这把钥匙在第几层第几格」、「这个 NPC 是不是骗子」、「上次踩的陷阱叫什么」 — 但 AI 不像人一样懂得「该记什么、什么时候回头看」。本文让 AI 的「记忆」本身变成一种可训练技能 — 通过一个 LLM 反复改进「记忆的笔记怎么写」和「用记忆的方式怎么变聪明」两个轴, 让它玩得比 Claude Opus 4.5 还好, 而模型本身没动。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">AutoMem 由 Stanford University 提出, 借鉴认知科学的 metamemory (元记忆) 概念, 把 agent 的 memory management 重新定位为 trainable skill: 把 file-system operations 提升为 first-class memory actions, 跟 task actions 同级, 让 model 决定怎么管理自己的记忆。两个 loop: (1) strong LLM 反复修订 memory structure (prompts / file schemas / action vocab); (2) 从大量 episode 中找到 model 自己好的 memory decisions 当训练信号, 直接提升 memory proficiency。在三个 procedurally generated long-horizon games (Crafter / MiniHack / NetHack) 上验证, 32B open-weight model 仅优化 memory 就可跟 Claude Opus 4.5 / Gemini 3.1 Pro Thinking 对标。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-loop framework: Loop 1 — strong LLM 审查完整 agent trajectory, 反复修订 memory structure (prompts / file schemas / action vocab), 优化如何跟 memory files 交互; Loop 2 — 从众多 episode 识别 model 自己好的 memory decisions 当训练信号, 直接训练 model memory proficiency; file-system operations 提升为 first-class memory actions 跟 task actions 平级</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个把 agent memory 重新定位为 trainable skill 的工作, 借鉴认知科学 metamemory 概念; 不改 base model weights 就能追平 frontier 闭源系统; 限制: 仅在 procedurally generated 3 个 long-horizon games 验证, 开放环境 (真实 web / multi-app) 还没测; Loop 1 强 LLM (e.g. Claude Opus) 反复审查 trajectory 成本高; memory structure 搜索空间大, 优化耗时</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Crafter / MiniHack / NetHack 三个 long-horizon games 上: 仅优化 memory (不改 model 的 task-action 行为), 32B Qwen2.5 base agent 性能提升 2-4×; 32B open-weight model 在 memory skill 优化后达到 Claude Opus 4.5 / Gemini 3.1 Pro Thinking frontier 系统水平; 证明 memory management 是可独立学习的 leverage 高的目标</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wu, Shengguang, Zhu, Hao, Zhang, Yuhui, Wang, Xiaohan, Yeung-Levy, Serena → Stanford University (斯坦福大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/paper_summaries_v2_2026-07-05_05.jpg" alt="The State-Prediction Separation Hypothesis" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01218 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01218" target="_blank">The State-Prediction Separation Hypothesis</a></h3>
+    <p style="color:#ccc;">Transformer 用同一条「管线」干两件事: 一是预测下一个字 (哪个 token 该出现), 二是把当前状态「暂存」起来给后面的字做参考。本文问: 如果用两条独立的计算管线分开干这两件事, 模型会不会变得更好? 实验发现: 会的 — 分离之后, 训练过程更稳 (loss 衰减更平滑), 困惑度 (跟语言建模质量挂钩的指标) 也更低。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">State-Prediction Separation Hypothesis 由 Cornell University + Harvard University 联合提出, 提出 disentangle Transformer 内 next-token prediction 跟 state-storage 两个 role 的架构视角。论文的 state-prediction separation hypothesis 主张: 把 prediction-only path 跟 state-bearing path 解耦, 用 two-stream Transformer variant 分别承担, 能同时稳定预训练动力学 (loss decay 平滑) 和提升语言建模 (lower perplexity)。实验通过 controlled pretraining runs 验证 hypothesis, 显示预测流和状态流的分离是「LM 设计的 free lunch」而不是性能 trade-off。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-stream Transformer variant: (1) prediction-only stream 专做 next-token 预测; (2) state-bearing stream 专做 past context 状态暂存; 两条 stream 在 forward 计算里解耦, 通过 controlled pretraining runs 验证 hypothesis; 实验比较同参数预算下两种架构 (standard single-stream vs separated two-stream) 的 loss curve 跟 perplexity</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个提出 explicit disentangle prediction / state role 的 Transformer 架构 hypothesis; 训练稳定性 + 语言建模质量双赢; 限制: 仍是 hypothesis 性质工作, 大规模 (e.g. 70B+) 训练成本限制下未验证; 两 stream 之间的信息传递机制是 ad-hoc 的, 缺统一理论框架; 局限在 language modeling, 是否能推广到 multimodal / reasoning 任务待验证</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Two-stream variant 在 controlled pretraining runs 上: loss decay curve 比 single-stream 更平滑 (训练稳定性); 同样计算预算下 lower perplexity (语言建模质量更好); 验证 state-prediction separation 是 free lunch, 不需要在别的能力上让位</div>
+      <div class="row"><span class="author">🏢 团队：</span>Monea, Giovanni, Godey, Nathan, Brantley, Kianté, Artzi, Yoav → Cornell University (康奈尔大学) + Harvard University (哈佛大学)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_01.jpg" alt="sums001/Windows-Copilot-API" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/sums001/Windows-Copilot-API" target="_blank">sums001/Windows-Copilot-API</a></h3>
+    <p>想象你机器里的 Windows Copilot 是微软帮你跑着的 GPT 模型, 但它只接 Surface 键盘那种内部通道, 外部调不到。这个项目用逆向工程把它包成一个本地 OpenAI 兼容的 API endpoint — 让任何 LLM 客户端 (Cursor/Cherry Studio/Aider) 都能直接调 Windows Copilot 当 backend, 不用付 API 钱。</p>
+    <div class="source">⭐ 1,036 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_02.jpg" alt="benchflow-ai/awesome-evals" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/benchflow-ai/awesome-evals" target="_blank">benchflow-ai/awesome-evals</a></h3>
+    <p>现在搞 LLM eval 一打开就是一堆「Taylor Swift 调味料菜谱」、「ASL 手语翻译评测」之类的五花八门 GitHub repo, 但真正能复用 + 还在维护 + 配 ground truth 的不到 20%。Awesome-evals 是一份 curated non-BS 资源库, 评测开发者能直接挑去用, 不踩坑。</p>
+    <div class="source">⭐ 664 · ?</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_03.jpg" alt="jmerelnyc/Talos" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/jmerelnyc/Talos" target="_blank">jmerelnyc/Talos</a></h3>
+    <p>想象一个「去中心化的 AWS」 — 任何人有多余 GPU 都能挂上 Talos network 出租算力, 客户用 Talos token 付费。Talos 是这套系统的 Python worker client 端, 让有闲置显卡 (家用 / 公司闲时) 的人一键加入, 自动调度推理任务 + 结算 token。</p>
+    <div class="source">⭐ 583 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_04.jpg" alt="modiqo/skillspec" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/modiqo/skillspec" target="_blank">modiqo/skillspec</a></h3>
+    <p>现在企业级 agent 都把 SOP (标准操作流程) 存在 skills 库里, 但今天一个 skill 怎么用、对不对、跟隔壁 skill 怎么搭配, 全凭 LLM 自由发挥, 错了都不知道错哪。SkillSpec 给 skills 加了一个声明式 schema — 每个 skill 写「输入是什么, 输出是什么, 包含哪几个步骤, 错怎么办」, 然后用 Rust 实现可执行 runtime, 让 agent 像跑函数一样跑 skill。</p>
+    <div class="source">⭐ 826 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_05.jpg" alt="mindmuxai/brain.md" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mindmuxai/brain.md" target="_blank">mindmuxai/brain.md</a></h3>
+    <p>想象你今天用 Cursor / Claude Code / Aider 写一个项目, 关掉 IDE 明天再开, agent 已经完全忘了昨天跟你聊过什么 — 上下文每次都从零开始重建。brain.md 是给 coding agent 加的一层「项目级长期记忆」, agent 每次回到项目, 自动读 brain.md 文件, 把之前的决策、踩坑、约定重新加载进上下文, 不再重复让你解释。</p>
+    <div class="source">⭐ 182 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-05/oss_summaries_v2_2026-07-05_06.jpg" alt="uzairansaruzi/hermex" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/uzairansaruzi/hermex" target="_blank">uzairansaruzi/hermex</a></h3>
+    <p>Hermes Agent (就是你这个对话跑的 agent 平台) 通常用 PC 桌面 / 命令行控制 — 出去玩没有电脑就没法跟它说话。Hermex 是 Hermes 的官方 iPhone 客户端 (Swift 原生), 让用户在 iPhone 上 push 任务 + 看输出 + 接推送, 哪怕在路上也能跟 agent 互动。</p>
+    <div class="source">⭐ 548 · Swift</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-05 08:53</p>
+</footer>
+</div>
+</body>
+</html>
