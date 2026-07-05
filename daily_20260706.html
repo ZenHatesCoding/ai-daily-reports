@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月6日 · 周一</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月6日 · 周一 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_00.jpg" alt="Alibaba reportedly bans employees from using Claude Code" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/" target="_blank">Alibaba reportedly bans employees from using Claude Code</a></h3>
+    <p style="color:#ccc;">据 The Information 报道, 阿里巴巴集团近期内部通知禁止员工在工作场景使用 Anthropic Claude Code (含企业版和个人订阅)。禁令同时要求技术团队对已有 Claude Code 集成做"自查与下线", 涉及内部代码助手、知识库问答、Agent 工具链等场景。背景是阿里近期在推进自研 Qwen3-Coder 模型 + 阿里云内部 AI 工具栈的"全栈替代", 把 Anthropic / OpenAI 类海外工具纳入"出域合规"管理。这一举措是国内大厂首次明确把 Claude Code 列入"禁用工具清单"。</p><p style="color:#8b949e;font-size:13px;">💡 阿里禁 Claude Code 的真实信号是"国产模型自给率"从口号进入 KPI 阶段 — Qwen3-Coder 上线 3 个月后, 头部大厂开始用行政命令做内部 model gateway 切换。这跟前几个月 Cloudflare / Zoom / 华为相继限制海外模型服务的逻辑是同一件事的不同面: 当自研模型性能接近 frontier, 大企业就开始用 compliance 框架推动内部"国产替代", model 选型从"谁好用"变成"合规能用"。对 Anthropic 等海外厂商是直接 enterprise revenue 流失, 对 Qwen / DeepSeek / 文心一言是用户基数 + 内部训练数据飞轮的双重加速。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_01.jpg" alt="Google DeepMind and A24 announce first-of-its-kind research partnership" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/" target="_blank">Google DeepMind and A24 announce first-of-its-kind research partnership</a></h3>
+    <p style="color:#ccc;">Google DeepMind 与独立电影制片厂 A24 宣布建立"首个 AI × 影视创作"研究合作, 核心方向是把 Gemini 系列模型嵌入 A24 的前期创意流程 (剧本拆解 / 分镜预演 / 视觉风格探索), 而非后期 CG 替代。合作由 DeepMind GenAI 团队牵头, A24 提供创作团队 + 内部剧本素材作为研究 corpus。Gemini 3.5 系列的多模态长上下文能力是关键基础设施。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind × A24 跟 Sora / Runway 走"AI 生成视频"路径完全不同 — 它瞄准的是"创作上游"而非"后期制作", 等于把 AI 当 co-writer 而不是 VFX 工具。这背后的赌注是: 当模型足够强, 真正的商业价值不在"取代摄影师", 而在"让编剧 / 导演可以无成本探索 100 种叙事可能性"。对 OpenAI Sora / Pika / Runway 等走"视频生成"路线的厂商意味着 frontier 重新定义 — "你能生成多好的视频"不再重要, "你能多深参与创作者的工作流"才是护城河。A24 的合作开放的是 script-stage 数据, 比传统"AI 训练数据集"价值高一个数量级。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_02.jpg" alt="OpenAI proposed donating 5% of its equity to a US sovereign wealth fund" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/" target="_blank">OpenAI proposed donating 5% of its equity to a US sovereign wealth fund</a></h3>
+    <p style="color:#ccc;">据多家媒体报道, OpenAI 在与白宫的 AI 政策对话中提议捐出公司 5% 股权给美国"主权财富基金"(类似挪威模式), 作为对"国家级 AI 安全 + 算力基础设施"承诺的回报。这一提案出现在 OpenAI 推进 IPO 的关键节点 (S-1 已递交), 引发资本市场对其股权结构稀释的担忧。提案同时与 OpenAI 推动的"AI for Good"公共产品议程绑定。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 5% 股权捐赠提案 = AI 公司开始用股权换"国家级算力 / 政策保护伞"。这一模式如果落地, 等于把"民营 AI 公司"重塑成"准国家战略资产" — 类似沙特 PIF / 阿联酋 MGX 持股 AI 公司的反向版 (国家出钱 → 公司分股权, 改成公司分股权 → 国家出政策保护伞)。对 OpenAI 是用 5% 换 IPO 加速 + 出口管制豁免优先级, 对其他美国 AI 公司 (Anthropic / xAI) 意味着他们也可能被要求做类似承诺, 否则就在政府层面"不齐心"。这把"非国有 AI 公司"的护城河从"技术 + 数据"延伸到"国家政策绑定", 长期看是中国 AI 公司出海的最大变量。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_03.jpg" alt="Anthropic is discussing a new custom chip with Samsung" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/" target="_blank">Anthropic is discussing a new custom chip with Samsung</a></h3>
+    <p style="color:#ccc;">Anthropic 正与 Samsung Foundry 谈判一款定制 AI 推理芯片, 工艺瞄准 3nm / 2nm, 重点优化 LLM 推理阶段的 memory bandwidth + KV-cache 访问模式。这与 OpenAI + Broadcom 6/24 公布的 Jalapeño 芯片路径类似, 都是头部 model lab 用自研芯片降低对 NVIDIA 的依赖。Anthropic 此前已与 Google TPU / AWS Trainium 深度合作, Samsung 谈判意味着其"推理侧"供应链开始多元化。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic + Samsung 是头部 AI 实验室"垂直整合"第二阶段的标志 — 第一阶段是 OpenAI + Broadcom (6/24), 第二阶段是 Anthropic 跟 Samsung 谈 2nm。如果 NVIDIA H100/B200 的 ASP 持续高位, model lab 的"自研推理芯片"逻辑就成立: 自研芯片单推理成本可压到 NVIDIA 同性能产品的 30-50%。对 NVIDIA 是 enterprise inference revenue 的潜在替代威胁 (虽然 NVIDIA 仍是训练侧不可替代); 对 Samsung Foundry 是从"为 NVIDIA 备货"转型为"自研 AI ASIC 二供"的关键订单; 对 AWS / Google 是"客户开始绕开我的 TPU / Trainium, 直接去 Samsung 定制"的警讯。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_04.jpg" alt="LLMs are stuck in a groupthink groove. This startup is trying to get them out." style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/" target="_blank">LLMs are stuck in a groupthink groove. This startup is trying to get them out.</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 报道初创公司 Arctic 对主流 LLM 的"群体思维"问题 (多家厂商答案趋同、缺乏差异化判断) 提出解决方案: 通过 inference-time 多模型辩论 + 反事实采样, 让模型对同一问题输出真正不同的推理路径, 再加权聚合。文章指出当前主流 LLM 在 RLHF 后阶段训练数据 / 评测基准趋同, 导致同 prompt 输出方差显著下降, 实际可用"创意多样性"低于 2023 年同期模型。</p><p style="color:#8b949e;font-size:13px;">💡 LLM 群体思维问题之所以关键, 是因为它直接威胁"AI 辅助决策"的核心承诺 — 如果 5 个不同厂商的 LLM 在 80% 问题上给出几乎一样的答案, 用户其实没有真正的"模型选择权", 整个 API 市场就被收编为单一上游。这跟 open-weight 模型 (Llama / Qwen) 声称"多样化"形成讽刺对比: 真正的多样性不在模型权重, 在训练数据 + RLHF 偏好 + inference 策略。Arctic 的 inference-time 多模型辩论方案等于把"多样性"从训练侧搬到推理侧, 对 OpenAI / Anthropic 等公司是"我们的模型已经够多样"反驳的实证挑战, 也是 AI 评测标准的新变量 (不仅考 accuracy, 还考 output entropy)。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/news_items_v2_2026-07-06_05.jpg" alt="李飞飞署名具身新论文：Sim2Real 烧不起，Real2Sim 量大管饱" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/443066.html" target="_blank">李飞飞署名具身新论文：Sim2Real 烧不起，Real2Sim 量大管饱</a></h3>
+    <p style="color:#ccc;">李飞飞团队 7/3 发布具身智能新论文, 核心主张是当前主流 Sim2Real (仿真训练 → 真机部署) 路线在 2026 年遭遇边际收益递减, 因为仿真器与真实物理世界的差距在复杂操作任务上无法用更高保真度弥补。论文提出 Real2Sim 路线: 用大规模真实世界机器人轨迹数据反哺仿真器, 让仿真器更"贴近真实"后再训练, 实质是用数据飞轮突破 Sim2Real 的天花板。论文在 5 个真实操作任务上达到 SOTA。</p><p style="color:#8b949e;font-size:13px;">💡 李飞飞这篇具身论文的核心信号不是"Real2Sim 比 Sim2Real 好", 而是"具身智能的 scaling 拐点不在仿真器保真度, 在真实数据规模"。这与 NVIDIA Cosmos / Genesis 等"造更好的仿真器"路线形成明确对立: 后者赌 GPU 渲染 + 物理引擎能 scale 到覆盖所有真实场景, 李飞飞赌现实数据多样性才是不可压缩的资产。如果这条路线成立, 真正决定具身智能护城河的不是 GPU / 仿真器, 而是"有多少台机器人在真实世界持续运行并上传轨迹" — 这跟自动驾驶早期"谁的车队最大"逻辑完全一样, 把具身赛道从"算法 / 仿真"重新拉回"硬件部署量"。对国内宇树 / 智元 / 银河通用等有量产硬件的厂商是利好。</p>
+    <div class="source">来源：</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/paper_summaries_v2_2026-07-06_00.jpg" alt="Optimizing Visual Generative Models via Distribution-wise Rewards" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02291 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02291" target="_blank">Optimizing Visual Generative Models via Distribution-wise Rewards</a></h3>
+    <p style="color:#ccc;">现在训练文生图 / 文生视频模型用「给每张图单独打分」的强化学习方法, 但这种 sample-wise reward 容易导致模型作弊 — 它会反复生成奖励高的那几种图, 结果"多样性崩了"。这篇论文换思路: 一次给一整批图打分 (distribution-wise reward), 看整批图的分布是不是贴近真实世界的数据分布, 同时引入"subset-replace"策略让打分便宜可行。结果在 SiT / EDM2 上 FID-50K 大幅改善。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 distribution-wise reward 用于视觉生成模型的强化学习后训练, 解决传统 sample-wise reward 导致的 reward hacking 与 mode collapse 问题。方法通过 KL / MMD / Wasserstein 等分布级度量评估一批样本的整体分布贴合度, 并设计 subset-replace 策略以可承受的计算成本估计这些奖励信号。同时将 RL 应用于 post-hoc model merging 系数优化, 缓解 SD-based RL 引入随机微分方程导致的 train-inference inconsistency。在 SiT 和 EDM2 上 FID-50K 显著改善: SiT 从 8.30 → 5.77, EDM2 从 3.74 → 3.52, 兼顾视觉保真度与多样性。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>(1) Distribution-wise reward 框架: 用 Wasserstein / MMD 度量整批 sample 与真实分布的距离, 取代 sample-wise score; (2) Subset-replace 策略: 仅替换 batch 中一小部分样本, 大幅降低估计分布奖励的计算成本; (3) Post-hoc merging: 把 RL 用于优化多个预训练模型的融合权重, 缓解 SD 引入导致的 train-inference gap</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 直接针对 reward hacking 与 mode collapse 的根因 (sample-wise evaluation), 而非打补丁; subset-replace 让 distribution 估计 cost 接近 sample-wise; 同时解决 train-inference gap。限制: 仍需要 pretrained reference model 做分布估计, 引入额外 memory overhead; 对超大规模模型 (参数量 10B+) 的扩展性未验证; batch size 对分布估计稳定性影响大</div>
+      <div class="row"><span class="highlight">📊 效果：</span>SiT 模型 FID-50K 从 8.30 → 5.77 (-30.5%); EDM2 从 3.74 → 3.52 (-5.9%); 多样性指标 (Precision/Recall) 同步改善; 视觉质量定性评估确认 perception quality 显著提升, 同时保持 sample diversity 不退化</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li, Ruihang, Xu, Mengde, Gu, Shuyang, Qu, Leigang, Feng, Fuli, Hu, Han, Wang, Wenjie → University of Science and Technology of China (中国科学技术大学) + Shanghai Innovation Institute (上海人工智能创新院) + Hunyuan Frontier Lab, Tencent (腾讯混元前沿实验室) + National University of Singapore (新加坡国立大学)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/paper_summaries_v2_2026-07-06_01.jpg" alt="From SRA to Self-Flow: Data Augmentation or Self-Supervision?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02508 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02508" target="_blank">From SRA to Self-Flow: Data Augmentation or Self-Supervision?</a></h3>
+    <p style="color:#ccc;">Diffusion transformer 训练最近有个"自表示对齐"流派, SRA / Self-Flow 是代表。它们自称效果好是因为模型能从不同噪声水平的 token 之间互相学习, 但这篇论文做了一组"对照组"实验: 让模型在两个噪声水平下的 token 之间"看不到彼此", 结果训练效果不仅没掉, 反而变好! 这说明 Self-Flow 比 SRA 强, 真正原因是数据增强 (把同一张图分成多份有效训练样本), 不是自我监督机制。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文针对 Self-Flow 声称的&quot;双时间步 token 交互带来性能提升&quot;提出质疑, 设计 Attention Separation 对照实验: 在保留 Self-Flow 的 dual-timestep 输入的同时, 阻断不同噪声水平 token 之间的注意力。实验显示去除 token 交互后性能不降反升, 证明 Self-Flow 优于 SRA 的核心收益来自 noise-dimension 的数据增强, 而非作者所声称的 self-supervision 机制。进一步, Attention Separation 自身即提供 augmentation effect, 通过将单张图像分割为多个有效训练部分扩展训练数据。结合自表示对齐 + dual-timestep + attention-separation 三种设计, 在 ImageNet 上显著提升 DiT 训练效果。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>(1) Attention Separation 对照: 设计 attention mask 阻止不同噪声水平 token 之间的 attention; (2) 双时间步输入: 同一图像中 tokens 被两种不同噪声水平 corrupt, 强制模型处理混合噪声; (3) 三组件组合: self-representation alignment + dual-timestep + attention-separation; (4) ImageNet 标准训练 pipeline 验证</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 揭穿 Self-Flow 机制宣传的"自监督"叙事, 把 gain 正确归因到 data augmentation; Attention Separation 设计简单即插即用; 开源代码便于复现。限制: 论文主要在 ImageNet 上验证, 对大规模 text-to-image / video 的扩展性待考; Attention Separation 增加 compute overhead; 阻断跨噪声 token 交互可能损失部分 long-range modeling 能力</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Attention Separation 单独使用即超越 SRA baseline; 完整三组件组合在 ImageNet 256×256 上 FID 显著改善 (具体数字见论文); 消融实验确认 dual-timestep 的 augmentation 贡献远超 self-supervision 贡献; 代码已开源 (github.com/vvvvvjdy/SRA/tree/main/SiTSRA_DTS_AS)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jiang, Dengyang, Wang, Mengmeng, Yang, Harry, Wang, Jingdong → The Hong Kong University of Science and Technology (香港科技大学) + Zhejiang University of Technology (浙江工业大学) + Baidu Inc. (百度)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/paper_summaries_v2_2026-07-06_02.jpg" alt="AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02271 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02271" target="_blank">AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition</a></h3>
+    <p style="color:#ccc;">现在大家做人脸 / 指纹识别时, 都从 ImageNet 那套数据增强 (旋转 / 翻转 / Mixup) 直接搬过来用, 但血管识别 (掌纹 / 指静脉) 是一种完全不同的图像 — 它纹理非常细, 几何变换一搞就破坏关键特征。这篇论文建了一个新 benchmark, 评测 30 种数据增强策略 × 5 个公开数据集 × 7 种 backbone, 发现: Mixup / PuzzleMix 类的多图混合效果最好, 但对抗攻击下表现糟糕, 严重几何变换普遍掉点。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 AGVBench, 首个针对血管识别 (掌纹 + 指静脉) 的数据增强专项 benchmark。在 5 个公开血管数据集上评测 30 种代表增强策略 × 7 种 backbone 架构 (含经典 CNN / Vision Transformer / 血管专用模型), 系统评估 clean accuracy 与 adversarial robustness 双维度表现。核心发现: (1) 多图混合类增强 (MixUp / PuzzleMix / StarMixup) 干净准确率最强, 但 calibration 差且对抗脆弱; (2) 严重几何变换普遍损害识别性能, 归因于特征错位与空间裁剪; (3) 掌纹与指静脉数据集对增强的偏好显著不同。研究同时开源统一 codebase 推进复现。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>(1) Benchmark 框架: 30 种 DA 策略 × 5 数据集 × 7 backbone, 共 1050 种组合的标准化评测; (2) 双维度评估: clean accuracy (top-1) + adversarial robustness (FGSM / PGD attack); (3) 校准度评估: Expected Calibration Error (ECE); (4) 子组分析: 掌纹 vs 指静脉 vs CNN vs ViT</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 首个血管识别 DA 专项 benchmark, 填补 biometric 评测空白; 1050 种组合的全谱评测结论可靠; 同时给出开源 codebase, 降低后续研究复现成本。限制: 仅评测 5 个公开数据集, 涵盖深度有限; 30 种 DA 策略选取偏向已有方法, 可能遗漏最新 RL-based 增强; 评测仅限图像分类任务, 未涉及血管分割 / 配准等任务</div>
+      <div class="row"><span class="highlight">📊 效果：</span>30 种 DA 策略中, 多图混合类 (MixUp / PuzzleMix / StarMixup) clean accuracy 最佳, 但 ECE 高且对抗精度掉 30%+; 严重几何变换 (RandomRotation > 30°) 普遍掉 5-15% accuracy; 不同 backbone 排序在 clean vs adversarial 下显著反转; 掌纹与指静脉的 DA 偏好存在显著分歧, 不存在单一最优策略</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li, Haiyang, Fu, Yuming, Song, Qun, Liao, Hongchao, Chen, Jing, EI-Yacoubi, Mounim A., Jin, Xin → Chongqing Technology and Business University (重庆工商大学) + Westlake University (西湖大学) + SAMOVAR, Telecom SudParis, Institut Polytechnique de Paris (法国巴黎综合理工 / 电信学院)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/paper_summaries_v2_2026-07-06_03.jpg" alt="PACE: A Proxy for Agentic Capability Evaluation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02032 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02032" target="_blank">PACE: A Proxy for Agentic Capability Evaluation</a></h3>
+    <p style="color:#ccc;">现在评估一个 LLM agent 的真实能力 (如 SWE-Bench / GAIA), 跑一次要几千美元 + 几天时间。CMU + Salesforce 这篇论文反其道而行: 不直接跑昂贵的 agent benchmark, 而是先用便宜的非 agentic benchmark (考"指令跟随""规划""工具调用"等原子能力) 的小子集, 训练一个回归模型去预测 agentic benchmark 的分数。结果用 小于 1% 的成本, 把 agent 分数预测到 MAE 小于 4% 的精度。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 PACE (Proxy for Agentic Capability Evaluation), 解决 LLM agent benchmark 评测成本高昂的痛点。方法核心是从非 agentic benchmarks (考 instruction following / planning / tool calling 等原子能力) 中挑选一个小子集, 用 LOOCV 回归模型拟合其分数到 agentic benchmark (SWE-Bench / GAIA 等) 分数的映射。subset 选择策略结合 target-relevance local selection 与 globally informative global selection。在 14 个模型 × 4 个 agentic benchmark × 19 个非 agentic benchmark 上验证, PACE-BENCH (生成的 proxy benchmark) 达到 LOOCV MAE 小于 4%, Spearman &gt; 0.80, pair prediction accuracy ~85%, 成本 小于 1%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>(1) 候选池: 19 个非 agentic benchmark 覆盖 instruction following / planning / tool calling / reasoning / code generation 等原子能力; (2) 双策略 instance selection: target-relevance local + globally informative global, 选出紧凑子集; (3) 回归模型: 把子集分数拟合到 target agentic benchmark 分数; (4) LOOCV 验证泛化性</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 把 agent 评测成本降低 100×, 让中小团队也能日常评估; 同时揭示各 agent benchmark 真实测的"原子能力", 帮助开发者针对性优化; 方法学严谨, LOOCV 验证泛化。限制: Proxy 精度仍 小于 真实 benchmark, 用于 final release 评测不够; 对新型 agent benchmark (引入新原子能力组合) 需要重新训练回归; 14 个模型覆盖仍偏少, frontier 模型可能未涵盖</div>
+      <div class="row"><span class="highlight">📊 效果：</span>14 个 LLM × 4 个 agentic benchmark × 19 个非 agentic benchmark 全谱评测: LOOCV MAE 小于 4%, Spearman correlation > 0.80, pair prediction accuracy ~85%; 评测成本降至原始 小于 1%; 进一步分析揭示每个 agentic benchmark 真正依赖的原子能力 (e.g. SWE-Bench 强依赖 code generation, GAIA 强依赖 multi-step reasoning)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Song, Yueqi, Sutawika, Lintang, Liu, Jiarui, Tjuatja, Lindia, Geng, Jiayi, Xiao, Yunze, Lee, Daniel, Soni, Aditya Bharat, Lo, Vincent, Yue, Xiang, Neubig, Graham → Carnegie Mellon University (卡内基梅隆大学) + Salesforce AI Research (Salesforce AI 研究院)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/paper_summaries_v2_2026-07-06_04.jpg" alt="AnyGroundBench: A Specialized-Domain Benchmark for Video Grounding in Vision-Language Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02269 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02269" target="_blank">AnyGroundBench: A Specialized-Domain Benchmark for Video Grounding in Vision-Language Models</a></h3>
+    <p style="color:#ccc;">现在评估"看视频找片段"的 VLM 模型 (VLM-STVG), 大家都在通用生活类视频上跑, 但真实工业场景是动物 / 工业 / 体育 / 外科手术 / 公共安全等"专业领域"。这些领域的视觉概念稀缺 + 时空动态复杂, 模型零样本或 in-context learning 都搞不定。Keio + NVIDIA 这篇论文建了新 benchmark: 5 个专业领域 + 新采集视频 + 专家标注, 测了 15 个 SOTA VLM 全军覆没。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 AnyGroundBench, 首个针对 VLM Spatio-Temporal Video Grounding (STVG) 任务的领域自适应 benchmark。聚焦 5 个真实专业领域 (动物 / 工业 / 体育 / 外科手术 / 公共安全), 新采集 expert-annotated 视频并与公开数据集统一为高保真时空标注。设计 domain adaptation 评测协议, 提供专用训练子集, 严格衡量 zero-shot generalization 与 In-Context Learning (ICL) 适配能力。评测 15 个 SOTA VLMs (含 GPT-4V / Gemini / Qwen-VL 等), 在 practical computational constraints 下, 暴露出现有模型在 zero-shot 与 ICL-based adaptation 面对专业领域时的显著缺陷, 揭示时空推理的关键不足。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>(1) 数据采集: 5 个专业领域真实场景视频, expert 标注时空片段; (2) 协议设计: zero-shot generalization + ICL-based domain adaptation 两套评测; (3) 评测对象: 15 个 SOTA VLM (含闭源 GPT-4V / Gemini 与开源 Qwen-VL); (4) 评估维度: 时空定位准确率 + 推理复杂度上限</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 首次系统评估 VLM 在专业领域 STVG 的真实表现, 揭示通用 benchmark 的"过拟合"问题; 数据集 + 标注 + 评测协议全栈开源, 推动领域自适应研究; 15 模型全谱测试, 结论稳健。限制: 5 个领域虽真实但代表性有限, 公共安全等领域涉及伦理风险标注需更严谨; expert 标注成本高, 数据规模 小于 100 小时; 仅评测 STVG 一类任务, 未覆盖 VLM 其他时空推理任务 (如 video QA)</div>
+      <div class="row"><span class="highlight">📊 效果：</span>15 个 SOTA VLM 在 zero-shot 设置下专业领域全部显著掉点 (相比通用 benchmark); ICL-based domain adaptation 仅带来有限改善, 远未达到实际可用水平; 不同模型在 5 个子领域的失败模式差异显著, 反映各模型架构与训练数据的领域偏差; 论文同时开源 Project Page / GitHub / Hugging Face 完整资源</div>
+      <div class="row"><span class="author">🏢 团队：</span>Otsubo, Rintaro, Fujii, Ryo, Ishikawa, Reina, Kanaya, Taiki, Sawafuji, Kanta, Kajita, Hiroki, Sakai, Shigeki, Saito, Hideo, Hachiuma, Ryo → Keio University (庆应义塾大学) + Keio AI Research Center (庆应 AI 研究中心) + Keio University School of Medicine (庆应义塾大学医学部) + NVIDIA</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_00.jpg" alt="ai4s-research/open-science" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ai4s-research/open-science" target="_blank">ai4s-research/open-science</a></h3>
+    <p>想象 Claude Science 是 Anthropic 给科学家做的「AI 桌面应用」(集成本地 notebook + 实验追踪 + 论文写作), 但它是付费 + 闭源 + 锁在 macOS / Windows 客户端里。ai4s-research 团队做了一个开源复刻版: 基于 Tauri (Rust) + MCP + agent skills, 跨 macOS / Windows / Linux, 模型无关 (OpenAI / Anthropic / Gemini / Qwen / DeepSeek 都能接), 强调 local-first 与可复现性。这等于把「科学家用的 AI 桌面」从订阅模式拉回开源生态。</p>
+    <div class="source">⭐ 140 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_01.jpg" alt="simonlin1212/investment-news" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/simonlin1212/investment-news" target="_blank">simonlin1212/investment-news</a></h3>
+    <p>想象你每天要看 100+ 财经源 (Bloomberg / Reuters / 36kr / 第一财经 / 财联社) 才能跟住 A 股 12 大赛道 (半导体 / AI / 机器人 / 新能源车) 的产业链动态。这个工具用本地大模型每天把 100+ 源精炼成中文「今日要点」, 12 个赛道板块各一份摘要, 完全本地运行 (零 API key), 还支持英文原文+中文翻译。对个人投资者是把「投研分析师助理」开源出来。</p>
+    <div class="source">⭐ 96 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_02.jpg" alt="antgroup/napaxi" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/antgroup/napaxi" target="_blank">antgroup/napaxi</a></h3>
+    <p>现在 AI Agent 主要跑在云端 (服务器或桌面), 但手机 / IoT 设备上的「端侧 Agent」是一块空白。蚂蚁用 Rust 写了一个 mobile-native Agent SDK, 核心能力: 沙箱执行 (不污染主系统) + 可扩展工具系统 + 跨应用 (x-app) / 跨 Agent (x-agent) / 跨通道 (x-channel) 互联。等于把 Android / iOS 上的 Agent runtime 标准化, 让手机也能跑「本地多步骤推理 + 操作」。</p>
+    <div class="source">⭐ 25 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_03.jpg" alt="fishonbike/vault-engine" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/fishonbike/vault-engine" target="_blank">fishonbike/vault-engine</a></h3>
+    <p>你日常会把合同 / 病历 / 简历粘贴进 ChatGPT 让它帮改, 但这些文件里有身份证号 / 手机号 / 病名等隐私信息, 直接给云端模型等于泄露。Vault Engine 是一个 zero-dependency 的 Python 库: 你粘贴文本 → 它在本地检测 + tokenize PII → 把 token 化的「安全版」发给云端模型 → 模型回复后 → 还原回原文。过程完全可逆, 对中文 PII 识别特别强。</p>
+    <div class="source">⭐ 25 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_04.jpg" alt="shidesheng0218/repo-ready" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/shidesheng0218/repo-ready" target="_blank">shidesheng0218/repo-ready</a></h3>
+    <p>现在 AI 编程助手 (Codex / Claude Code / Cursor) 要写好代码, 需要仓库里有一堆「前置文件」: AGENTS.md / .cursorrules / .github/copilot-instructions.md / README 模板 / 测试脚本。这个工具一键扫描仓库, 自动生成这些文件, 让 AI 助手「上手即用」。等于把「AI-friendly 仓库配置」从手动体力活变成一行命令。</p>
+    <div class="source">⭐ 25 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-06/oss_summaries_v2_2026-07-06_05.jpg" alt="cesarjoquin/marketing-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/cesarjoquin/marketing-skills" target="_blank">cesarjoquin/marketing-skills</a></h3>
+    <p>Claude Code 是 Anthropic 的 AI coding CLI, 它的「skill」机制允许把领域知识打包成可调用的指令集。这个仓库专门做「营销领域 skill 集」: 含 CRO (转化率优化) / 文案 / SEO / 分析 / 增长工程 等子 skill, 让营销 / 增长工程师能用 Claude Code 直接完成「写 landing page → A/B test → 分析转化漏斗」的端到端工作流。等于把 marketing 团队的工具栈 AI-native 化。</p>
+    <div class="source">⭐ 51 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-06 07:13</p>
+</footer>
+</div>
+</body>
+</html>
