@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月7日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月7日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_00.jpg" alt="Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/alberta-government-claude-cybersecurity" target="_blank">Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities</a></h3>
+    <p style="color:#ccc;">加拿大艾伯塔省政府用 Claude Code (Opus + Sonnet) 全面审查系统, 主动发现并修复网络安全漏洞。这是大型政府机构首次在生产环境中把 Claude Code 当作「合规审计 + 漏洞修复」的双重工具, 把原本需要数周的代码审查压缩到几天。Anthropic 也在持续把它推给政府客户 — 加拿大艾伯塔不是第一个, 韩国、欧洲多国都在接洽。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 的策略很清晰: 政府客户对「合规 + 安全」的高门槛正好匹配 Claude Code 的 agentic capability, 而私有部署 (AWS GovCloud / GCP Sovereign) 又能解决数据出境顾虑。下一步是看美国本土 (联邦 / 州级) 是否跟进, 这是 Anthropic 在企业市场的护城河。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_01.jpg" alt="Redeploying Claude Fable 5" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank">Redeploying Claude Fable 5</a></h3>
+    <p style="color:#ccc;">美国出口管制解除后, Anthropic 重新上线 Claude Fable 5, 同时新增「网络安全分类器」和「行业 jailbreak 框架」。Fable 5 是 Anthropic 面向军用 / 政府敏感场景的特定版本, 出口管制期间一直被冻结, 现在恢复部署意味着新一代 frontier model 在合规层面拿到了「通行证」。</p><p style="color:#8b949e;font-size:13px;">💡 出口管制解除 + 同步上线 jailbreak 框架 = Anthropic 在监管层面做了「双保险」。一方面打开政府 / 国防市场, 另一方面对 jailbreak 攻击做行业级 severity 标准。这两件事同时发生, 说明 Anthropic 已经把「安全合规」当成商业策略而不是成本中心。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_02.jpg" alt="Google DeepMind and A24 announce first-of-its-kind research partnership" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/" target="_blank">Google DeepMind and A24 announce first-of-its-kind research partnership</a></h3>
+    <p style="color:#ccc;">DeepMind 跟独立电影公司 A24 (《瞬息全宇宙》《妈的多重宇宙》出品方) 合作, 把 Veo 等生成式视频模型整合进 A24 的电影制作流程。这是大模型公司与一线创意工作室的首次深度合作, 不只是「用 AI 生成素材」, 而是「把 AI 嵌入剧本 → 拍摄 → 后期」全链路。</p><p style="color:#8b949e;font-size:13px;">💡 DeepMind 在 Veo 上的定位很聪明: 不跟 Sora / Runway 抢大众创作者市场, 而是跟 A24 这种「对艺术质量有极致要求的厂牌」绑定。一旦 A24 用 Veo 拍出获奖作品, 整个好莱坞的顶级工作室都会想要同样的能力 — 这是「质量 anchor + 高端市场」的经典打法。</p>
+    <div class="source">来源：DeepMind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_03.jpg" alt="Introducing GeneBench-Pro" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/introducing-genebench-pro/" target="_blank">Introducing GeneBench-Pro</a></h3>
+    <p style="color:#ccc;">OpenAI 发布基因组学 benchmark GeneBench-Pro, 用真实世界复杂数据集测试 AI 在基因组学、生物学、科研任务上的表现。GeneBench-Pro 不是简单 QA, 而是把整个基因研究流程 (变异检测 → 解读 → 文献关联 → 临床建议) 拆成可评测的子任务。这是 OpenAI 在「AI for Science」战略上的第一个公开 benchmark, 跟 DeepMind 的 AlphaFold / GNoME 路径形成对比。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 走 benchmark + 工具 (GeneGPT / AlphaFold 类似的) 路线而不是「端到端科研模型」。意义是建立一个全行业可比的评测标准, 让 AI 在基因学上的进展可衡量 — 这跟当年 ImageNet 在视觉里的角色类似。同时也给 OpenAI 自己的 GPT 模型一个清晰的「超越目标」。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_04.jpg" alt="OpenAI and Broadcom unveil LLM-optimized inference chip Jalapeño" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" target="_blank">OpenAI and Broadcom unveil LLM-optimized inference chip Jalapeño</a></h3>
+    <p style="color:#ccc;">OpenAI 跟 Broadcom 联合发布 LLM 推理专用芯片 Jalapeño — 专为 OpenAI 推理工作负载设计, 在性能、效率、规模化上都针对 LLM inference 优化。这是 OpenAI 自研芯片战略的第一次公开亮相, 跟 NVIDIA 在 GPU 上的护城河形成正面竞争。Broadcom 负责 ASIC 制造, OpenAI 负责 workload 设计与软件栈。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 不再只是 NVIDIA 的最大客户, 现在开始做「workload-specific ASIC」。Jalapeño 不是通用 GPU 替代品, 而是「OpenAI 推理场景专属」 — 这意味着 NVIDIA 在前沿模型客户的「性能 + 成本」护城河被绕过。下一步要看 Amazon Trainium / Google TPU 怎么接招, 整个 hyperscaler 自研芯片生态会重新洗牌。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/news_items_v2_2026-07-07_05.jpg" alt="Your family's $300 stake in OpenAI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/" target="_blank">Your family's $300 stake in OpenAI</a></h3>
+    <p style="color:#ccc;">MIT Tech Review 深度报道: 普通美国家庭通过 ETF / 退休金账户间接持有的 OpenAI 股权大约 $300, 但 OpenAI 上市 (IPO) 后这部分隐形资产可能放大 5-10 倍。文章深入分析 OpenAI 的资本结构、员工持股流动性、二级市场定价, 以及「为什么 ChatGPT 用户大多不知道自己是 OpenAI 的隐性股东」。</p><p style="color:#8b949e;font-size:13px;">💡 OpenAI 上市的话题已经发酵了 18 个月, 但这篇文章第一次量化了「普通美国家庭的隐性 OpenAI 敞口」。$300 平均数 × 1.3 亿家庭 ≈ $400 亿 间接权益, 这是 OpenAI IPO 估值不低于 $5000 亿的「民意基础」。下一步看点是: OpenAI 什么时候正式提交 S-1, 散户参与路径 (直接 / 间接) 如何设计。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/paper_summaries_v2_2026-07-07_00.jpg" alt="VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01804 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01804" target="_blank">VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon</a></h3>
+    <p style="color:#ccc;">想象一下机器人要拧螺丝: VLA 模型会一次性预测未来 8 步动作然后「盲目执行」(predict-then-blindly-execute)。如果中间打滑了一下, 它不会发现, 因为它没在看。后果: 错误一步步累积, 最后把螺丝拧飞了。这篇论文的核心想法是加一个轻量「视觉监视器」(LVM), 不断对比「预测的视觉变化」和「实际看到的视觉变化」, 如果差异持续扩大就触发一个「紧急刹车 + 重新规划」(OGG) — 抛弃陈旧动作, 重新计算后续步骤。这样既保留了 VLA 一次算多步的高效, 又能在出错苗头出现时立刻纠正, 像一个有经验的工人一边操作一边盯结果。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">VLA-Corrector 在不修改 backbone 权重的前提下, 引入 Latent-space Vision Monitor (LVM) 持续比对 predicted vs actual 视觉特征演化, 通过 Online Gradient Guidance (OGG) 在检测到 persistent deviation 时触发 truncation event + corrective replanning, 实现 event-triggered adaptive action horizon。本质是用一个轻量视觉 drift detector 把静态 open-loop chunking 升级成 event-driven closed-loop, 同时保留长 horizon chunking 的 inference efficiency。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>LVM (Latent-space Vision Monitor) 持续对比 predicted 和 actual visual feature evolution, 用 Online Gradient Guidance (OGG) 在 persistent drift 时触发 corrective replanning. 整体是 plug-in 框架, 不改 backbone VLA 权重.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>引入额外视觉比较开销 + 需要在线触发逻辑. 在完全静态场景下 overhead 没有收益.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 long-horizon contact-rich 机器人操作任务上显著提升鲁棒性. 兼容多个 VLA backbone, 集成时无需重训.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yi Pan, Miao Pan, Qi Lu, Jiaming Huang, Man Zhang, Siteng Huang, Xin Li, Jie Zhang, Yongliang Shen, Xuhong Zhang, Wenqi Zhang → Zhejiang University (OmniAI Group, ZJU ACES Lab); Alibaba DAMO Academy</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/paper_summaries_v2_2026-07-07_01.jpg" alt="Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02501 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02501" target="_blank">Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots</a></h3>
+    <p style="color:#ccc;">现在 VLA 模型动不动就要装个几 GB 的 Python 推理栈, 在机械臂、无人机、四足狗这些「机器人端」硬件上跑起来又慢又重, 不同机器人平台还各搞一套胶水代码。论文做的事相当于给机器人 AI 做了一个「统一操作系统」 — 用 C++ 写, 分五层 (输入适配 → 序列组装 → 主干执行 → 头插件 → 部署适配), 把多速率闭环控制、batch-1 延迟优先推理、可扩展算子这些 embodied AI 的「硬要求」一次性打包。一个 runtime 跨所有异构硬件 (Jetson / GPU / 机器人专用 NPU) 和不同机器人形态, 不再每个项目重写一遍栈。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Embodied.cpp 是一个面向 embodied AI (VLA + WAM) 的 portable C++ inference runtime, 通过 architectural analysis 提炼出共享执行路径并组织为 5 层抽象 (input adapters / sequence builders / backbone execution / head plugins / deployment adapters). 重点解决 multi-rate closed-loop execution + batch-1 latency-first fused inference + extensible operator 与 I/O, 用一个 backend abstraction 覆盖异构硬件 + 异构机器人平台.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>C++ portable runtime, 5 层架构 (input adapters → sequence builders → backbone execution → head plugins → deployment adapters), 多速率 fused inference, 延迟优先调度, 可扩展 operator 与 I/O.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>C++ 性能优于 Python 但开发迭代慢. 5 层抽象带来灵活性的同时也增加学习成本.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在异构硬件 (Jetson / GPU / NPU) 和异构机器人平台统一部署 VLA + WAM 模型, 一个 backend abstraction 跨平台.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Ling Xu, Chuyu Han, Borui Li, Hao Wu, Shiqi Jiang, Ting Cao, Chuanyou Li, Sheng Zhong, Shuai Wang → Southeast University; Nanjing University; Microsoft Research; Institute for AI Industry Research (AIR), Tsinghua University</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/paper_summaries_v2_2026-07-07_02.jpg" alt="Learning to Move Before Learning to Do: Task-Agnostic pretraining for VLAs" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.02466 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.02466" target="_blank">Learning to Move Before Learning to Do: Task-Agnostic pretraining for VLAs</a></h3>
+    <p style="color:#ccc;">VLA 模型现在最大的瓶颈是「专家演示数据太贵」 — 给机器人录一条完整的「看到杯子 → 走到杯子前 → 抓起来」三段视频, 比请一个真人手把手教它还贵。论文提出了一个反直觉的拆解: 「学会动」 (物理动作的物理感) 和「听懂指令」其实是两件事, 不必绑在一起学。所以他们先让机器人看一大堆「乱跑乱摸」的廉价自监督视频, 用反向动力学 (Inverse Dynamics) 让它先掌握「我的手能这样动」, 然后只花一点点专家数据去对齐「听到拿杯子就去拿杯子」。SIMPLER benchmark 上只用极少标注就达到 1M 专家演示的水平, 而且在摄像头抖动时还能保持 25% 成功率 (其他 baseline 直接归零)。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">TAP (Task-Agnostic Pretraining) 提出 Decomposition Hypothesis: 物理能力 (motor priors) 和语义对齐 (language grounding) 是两个独立目标, 只有后者需要 language supervision. 方法分两阶段: stage 1 在 discarded off-task trajectories + autonomous robot play 上用 self-supervised Inverse Dynamics 学习 transferable motor priors; stage 2 用 minimal expert data 通过轻量 head 把 priors 接地到 language. 核心是用 task-agnostic 数据突破 expert demonstration scarcity.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>两阶段: (1) Inverse Dynamics 自监督学 motor priors (off-task + robot play 廉价数据); (2) 轻量语言对齐 head 用 minimal expert 数据把 priors 接地.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>两阶段 pipeline 增加训练复杂度. Inverse Dynamics 学到的 motor priors 对新任务可能仍需微调.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>SIMPLER benchmark 上匹配 1M expert trajectories 训练水平, 比 standard BC 高 10%. 摄像头扰动下保留 25% 成功率 (baseline 归零).</div>
+      <div class="row"><span class="author">🏢 团队：</span>Junhao Shi, Siyin Wang, Xiaopeng Yu, Li Ji, Jingjing Gong, Xipeng Qiu → Fudan University; Shanghai Innovation Institute</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/paper_summaries_v2_2026-07-07_03.jpg" alt="Discrete Diffusion Language Models for Interactive Radiology Report Drafting" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01436 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01436" target="_blank">Discrete Diffusion Language Models for Interactive Radiology Report Drafting</a></h3>
+    <p style="color:#ccc;">放射科医生写报告通常是「一边看片子一边打字」 — 先写「左肺下叶有阴影」, 然后回去再补「考虑炎症可能」。传统的自回归 (AR) 模型是「从左往右」一个字一个字写, 你想回头补一句话就很难。离散扩散语言模型 (Discrete Diffusion LM, 比如 DiffusionGemma-26B) 则是「从一堆乱码反复擦改」 — 整张报告一次同时改好, 哪里要补都能补。这是第一个真正用 diffusion LM 做医学影像 + 报告草稿交互生成的研究。结果是: 在医学 VQA 上跟 AR 打平甚至超一点, 解码速度快 3.5-4 倍, 而且支持「医生写一段 → AI 在中间填充」的交互草稿工作流 (AR 根本做不到这一点)。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">用 mixture-of-experts discrete diffusion language model (DiffusionGemma-26B LoRA) 对比同尺寸 AR baseline (Gemma-4-26B) 在 medical visual question answering 上的表现. 通过 verbosity-robust LLM judge 评测, diffusion 在所有测试上 match 或 exceed AR. 解码速度快 3.5-4×, 核心亮点是 bidirectional denoising 带来的 drafting capability (在已有片段间填充), 这是 AR 不具备的能力.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Mixture-of-experts discrete diffusion LM (DiffusionGemma-26B) + LoRA 微调. Bidirectional denoising canvas, 对比同尺寸 AR baseline (Gemma-4-26B).</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Diffusion LM 训练成本高于 AR. Drafting capability 在长报告上比短文本更有价值.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Medical VQA 上 match 或 exceed AR, 解码快 3.5-4×. 支持 drafting (在已有片段间填充) 是 AR 做不到的能力.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Max Van Puyvelde, H. Ibrahim Gulluk, Wim Van Criekinge, Olivier Gevaert → Stanford University School of Medicine (Biomedical Data Science); Ghent University (Mathematical Modelling, Statistics & Bioinformatics); Stanford University (Electrical Engineering)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/paper_summaries_v2_2026-07-07_04.jpg" alt="WARP: Weight-Space Analysis for Recovering Training Data Portfolios" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.01686 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.01686" target="_blank">WARP: Weight-Space Analysis for Recovering Training Data Portfolios</a></h3>
+    <p style="color:#ccc;">Foundation model 现在是「模型公开, 数据配方保密」 — 你能下载 Llama 的权重, 但不知道它训练时 web / code / 论文各占多少比例。这个 access asymmetry 很麻烦: 微调别人模型的人不知道原始分布, 容易「灾难性漂移」。WARP 想做的事: 只用公开的模型权重, 反推出训练数据的「比例指纹」。做法是把 base 模型和 fine-tuned 模型的权重差当成「影子」, 用 model merging 生成 pseudo-checkpoint 模拟「如果当时训练数据配比是这样的会留下什么足迹」, 然后从 weight space 的几何特征反推真实比例。在 BERT 和 GPT-2 上, 还原比例的平均误差只有 0.046-0.104, 比「成员推断」和「已知训练轨迹」两种方法都准。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">WARP 是一个只用 fine-tuned model weights (无需原始训练数据 / 训练轨迹) 反推训练数据 domain mixture 的框架. 核心思路是用 model merging 在 base + fine-tuned 之间生成 pseudo-checkpoints, 模拟不同 mixture 下的 weight-space 几何 footprint, 然后通过 parameter-free softmax readout 或 MLP projector 训练 geometric features → domain proportions. 在 BERT + GPT-2 controlled experiments 上, 平均 MAE 0.046-0.104, 优于 membership inference 和已知训练轨迹变体.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Model merging 生成 pseudo-checkpoints → 提取 weight-space geometric features → parameter-free softmax readout 或 MLP projector 映射到 domain proportions.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>依赖 model merging 的假设 (footprint 可线性近似). 仅在受控 mixture 比例下验证, 极端不平衡 (99%/1%) 可能失效.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>BERT 上平均 MAE 0.046, GPT-2 上 0.104. 优于 membership inference attack 和已知训练轨迹的 baseline.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tzu-Heng Huang, Aditya Goyal, John Cooper, Frederic Sala → University of Wisconsin-Madison (ICML 2026 Workshop on Weight-Space Symmetries: from Foundations to Practical Applications)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_00.jpg" alt="synthetic-sciences/openscience" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/synthetic-sciences/openscience" target="_blank">synthetic-sciences/openscience</a></h3>
+    <p>科学家用的开源 AI 工作台 — 把数据探索、实验设计、文献综述、论文草稿整合到一个 web 界面。目标用户是实验室的研究者, 替代 Jupyter + Notion + Zotero 的拼凑工作流。</p>
+    <div class="source">⭐ 752 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_01.jpg" alt="simonlin1212/Vibe-Research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/simonlin1212/Vibe-Research" target="_blank">simonlin1212/Vibe-Research</a></h3>
+    <p>个人投研 Agent — 自动跟踪 A股 / 美股 / 港股公告 + 新闻, 每日复盘 + 异动告警, 适合散户做研究时少刷几个 app。核心特点是「带个人风格的研报生成」(vibe = vibe coding 风格).</p>
+    <div class="source">⭐ 161 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_02.jpg" alt="liu-ethan/golem" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/liu-ethan/golem" target="_blank">liu-ethan/golem</a></h3>
+    <p>Go 原生 AI 编程 Agent CLI — 单二进制, 三层记忆 (会话/项目/全局), YAML 权限规则, TUI 风格对齐 Claude Code。目标用户是 Go 后端工程师, 嫌 Python Agent 栈太重。</p>
+    <div class="source">⭐ 22 · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_03.jpg" alt="Reina-Agent/Reina" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Reina-Agent/Reina" target="_blank">Reina-Agent/Reina</a></h3>
+    <p>开源桌面 AI Agent — 多智能体协作 + MCP 协议 + Skills 市场 + 自带模型. 桌面端 agent (类似 Anthropic Computer Use 思路), 但完全开源 + 本地优先.</p>
+    <div class="source">⭐ 16 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_04.jpg" alt="AlexsJones/repo-steward" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/AlexsJones/repo-steward" target="_blank">AlexsJones/repo-steward</a></h3>
+    <p>开源仓库的「管家 Agent」 — 自动 triage issue, 审查 PR, 给贡献者贴标签, 给维护者出 daily digest. 适合「一个人维护 / 团队小 / issue 几百」的中小型开源项目。</p>
+    <div class="source">⭐ 9 · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-07/oss_summaries_v2_2026-07-07_05.jpg" alt="kaka86mm/TitanVault" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/kaka86mm/TitanVault" target="_blank">kaka86mm/TitanVault</a></h3>
+    <p>本地 AI 工作站开箱即用方案 — 专为 AMD Ryzen AI Max+ 395 硬件优化, 装好就能跑大模型 (Llama / Qwen / DeepSeek). 比通用 Ollama 多了一层 AMD NPU 调度.</p>
+    <div class="source">⭐ 5 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-07 07:17</p>
+</footer>
+</div>
+</body>
+</html>
