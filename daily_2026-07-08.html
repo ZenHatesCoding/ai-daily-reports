@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月8日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月8日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_00.jpg" alt="Claude Cowork expands to mobile and web" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/" target="_blank">Claude Cowork expands to mobile and web</a></h3>
+    <p style="color:#ccc;">Anthropic 7/7 宣布 Claude Cowork 从桌面 IDE 扩展到 web + 移动端 (Max 订阅可用)。用户在桌面发起任务, 手机上看状态, 笔记本关机也能继续后台跑。明确把 Cowork 定位从「写代码」推到「行政管理同事」, 跟 OpenAI Codex 进入非开发者 (PPT/Excel/报表) 用法对标 — 编码 Agent 战场正在溢出到整间办公室。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 把 Cowork 多端化的同时 7/3 推出的 Claude Tag (Slack 永远在线 AI 队友) 一起看, 是同一步棋: 从「一个工具」切到「工作流的嵌入位」。Anthropic 不再和你比谁 chat 最好, 而是占住「日常办公的接触面」 — 长期看, 工作流生态主导权就是后端模型锁单能力。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_01.jpg" alt="Microsoft joins AI cost-cutting trend by relying more on its own models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" target="_blank">Microsoft joins AI cost-cutting trend by relying more on its own models</a></h3>
+    <p style="color:#ccc;">Bloomberg 7/7 报道: Microsoft 在 Excel/Word 中已让自家 MAI 系列模型 (含 6 月 Build 发布的 7 个新模型) 来回答一部分用户 prompt, 同时减少对 OpenAI/Anthropic 模型的调用。早几个月 Microsoft 还把 Office 365 部分用 OpenAI/Anthropic 联合支撑做卖点, 现在悄悄回切自家栈。这是 tokenmaxxing 退潮后的最新切片 — Amazon/Uber/Meta/Accenture 都在砍 AI 支出。</p><p style="color:#8b949e;font-size:13px;">💡 这是一记「推理经济学的转折点」: 闭源模型 API 的单价已高到让大客户反向自研。Microsoft 之所以敢转, 是因为 MAI 1.0 在 narrow enterprise task 上已够用 (Excel 公式 / Word 编辑), 不必跟 GPT-5.6 在 broad AGI benchmark 上拼。半年之内, 「API + 自研」双轨会变成行业常态, 但 OpenAI/Anthropic 在最难的推理 / 多模态 / Agent 任务上仍是稀缺供给 — 客户分层而非流失。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_02.jpg" alt="Meta rolls out Muse, a new AI image generator" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/" target="_blank">Meta rolls out Muse, a new AI image generator</a></h3>
+    <p style="color:#ccc;">Meta 7/7 上线内部代号 Mango 的图像生成模型 Muse, 在 Meta AI app, Instagram Stories, WhatsApp, Facebook Marketplace 全部可免费使用。功能包括预设 prompt 模板、广告创意生成、室内装饰预览 (与 Marketplace 二手货场景联动)、背景路人移除、自定义 QR code 等。本质是把过去 ChatGPT/DALL-E/Midjourney 那一代已经在做的事, 全部无缝集成到自家社交矩阵入口。</p><p style="color:#8b949e;font-size:13px;">💡 Meta 真正在打的不是「图像生成能力」, 而是「图像生成的渠道锁」。当 Muse 成为 Marketplace 卖二手家具的标配 (拍一下客厅, AI 摆一张新沙发看看合不合适), 它就从技术演示变成交易漏斗工具 — 这是 ByteDance 抖音电商概念在 Meta 矩阵里的镜像版。跟 Microsoft 转自家模型同步: 大厂都在从 API 消费方变成端到端 AI 集成方, 留 OpenAI/Anthropic 的是「没有自家平台」的纯 LLM 层。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_03.jpg" alt="Australian Payments Plus moves faster with ChatGPT and Codex" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/australian-payments-plus/" target="_blank">Australian Payments Plus moves faster with ChatGPT and Codex</a></h3>
+    <p style="color:#ccc;">OpenAI 7/7 发布: 澳大利亚支付基础设施公司 Australian Payments Plus (AP+) 全面部署 ChatGPT Enterprise, 并把 Codex 引入产品工程和技术工作流。AP+ 支撑澳大利亚数百万用户日常支付的合规、网络安全、监管要求, 知识密度极高的「重型知识工作」。员工用 ChatGPT 加速复杂信息整合, 用 Codex 加速工程决策, 把原本需要数周的合规审查压缩到几天。</p><p style="color:#8b949e;font-size:13px;">💡 AP+ 这类国家关键基础设施企业选 Codex 是双重信号: 一方面, 这是 OpenAI 推「垂直行业大客户」的样板 — 金融支付 / 政府 / 监管层是高门槛高客单价市场, 一旦拿下就是 5-10 年锁定; 另一方面, Codex 从 coding 工具被推回「业务工程化」位置, 跟 Claude Cowork 同步扩出 coding 边界。下一步看: AP+ 这种区域支付巨头会成为 OpenAI 在金融行业的渠道伙伴, 类似 Lockstep + Microsoft Dynamics 的角色, 但 anchor 在 OpenAI model/API 之上。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_04.jpg" alt="机器人视觉迎来新突破！蚂蚁灵波空间感知模型 LingBot-Depth 2.0 正式发布" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/445184.html" target="_blank">机器人视觉迎来新突破！蚂蚁灵波空间感知模型 LingBot-Depth 2.0 正式发布</a></h3>
+    <p style="color:#ccc;">蚂蚁集团旗下具身智能公司灵波科技 7/7 发布空间感知模型 LingBot-Depth 2.0, 训练数据从 300 万扩充到 1.5 亿。在深度补全基准 16 项测评中拿 12 项第一, 室内大面积深度缺失场景误差从 0.132 降至 0.062 (减半)。同步推出通用视觉基座 LingBot-Vision, 把「边界结构」当作预训练目标, 1.6 亿图像预训练量比 DINOv3 小一个数量级但深度估计精度更优。已通过奥比中光深度视觉实验室专业认证, 适配 Gemini 330 系列双目 3D 相机。</p><p style="color:#8b949e;font-size:13px;">💡 这是国内首个把「空间感知作为视觉预训练核心目标」的工作 — 之前 DINO 系列在 ImageNet 1.0 通识分类范式上做, 蚂蚁灵波直接对 3D 几何边界建模, 走了一条「机器人原生视觉」的差异化路线。深度感知一旦稳定, 1.5 亿训练规模 + 减半 RMSE 给到的不是 demo 玩具, 是工厂级别的视觉基础设施。同步开源 4 个 ViT-G/L/B/S 版本, 学术 + 工业社区都能用, 是「中国 AI infra 出海」的另一种姿态。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/news_items_v2_2026-07-08_05.jpg" alt="让 Skill「有图可依」:openJiuwen 首发多模态 Skill 范式 Skill-Omni" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/445229.html" target="_blank">让 Skill「有图可依」:openJiuwen 首发多模态 Skill 范式 Skill-Omni</a></h3>
+    <p style="color:#ccc;">openJiuwen 社区 7/7 发布 Skill-Omni, 业界最早工程化落地的多模态 Skill 范式。用户给个网页链接或 B 站视频, JiuwenSwarm 内置的 skill-omni-creation 自动提取关键截图、界面状态和操作脉络, 生成 Agent 可直接读取复用的多模态 Skill。修图要修到什么程度, GUI 自动化要按哪个按钮 — 这些「看到才懂」的纯文本塞不下的知识, 第一次能被多模态 Skill 沉淀。</p><p style="color:#8b949e;font-size:13px;">💡 把 Agent Skill 从纯文本扩到多模态, 解决的是「视觉任务不能用文字描述」的最后一公里: 图片编辑的「色调调整参考图」、GUI 自动化的「按钮位置截图」、视频教程的「操作前后界面状态」 — 全部可被压缩成可复用资产。Skill-Omni 跟 MMSkills/VisualSkill 等学术工作的方向一致, 但 openJiuwen 比学术界更激进地直接做成生产级 IDE / Swarm 平台能力, 这是国内 Agent 框架在「实用工程化」层的领先位。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/paper_summaries_v2_2026-07-08_00.jpg" alt="CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05378 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05378" target="_blank">CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents</a></h3>
+    <p style="color:#ccc;">想象一个 agent 写代码写到一半, 上下文塞爆了。最原始的修法是「看到第 N 段就扔掉前面的」 — 但扔多了 agent 就忘了当初接到的要求。CompactionRL 的想法是「压缩与执行一起学」: 让模型同时学会「怎么把过去的轨迹写成简短摘要」+「怎么在压缩后的新上下文里继续干活」, 端到端 RL 训练。这套管线把上下文塞爆的硬约束变成可学习的策略, 不再硬塞硬剪。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">CompactionRL 是首个把 context compaction 整合进 RL training pipeline 的工作, 提出 token-level loss normalization + cross-trajectory generalized advantage estimation (GAE) 联合优化 task execution 与 summary generation 两个目标。在 GLM-4.5-Air (106B-A30B) 上 SWE-bench Verified Pass@1 66.8% (绝对涨 +7.0), Terminal-Bench 2.0 涨 +3.1; GLM-4.7-Flash (30B-A3B) 上 SWE-bench Verified Pass@1 56.0% (+5.5), Terminal-Bench 2.0 20.2% (+6.8); 已部署在 GLM-5.2 (750B-A40B) RL 训练中。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Token-level loss normalization 让 task token 与 summary token 在梯度上不互相覆盖, cross-trajectory GAE 用多条压缩后的轨迹做共同优势估计, 把「压缩质量」与「压缩后继续执行的质量」当作同一目标的两个组件联合优化。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Summary 与 execution 联合训练让 loss landscape 更不平, 训练稳定性更敏感; cross-trajectory GAE 显著增加 batch memory 与样本方差 — 工程上需要专门的数据 packing 和 stability tricks 来收敛。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>SWE-bench Verified 66.8% Pass@1 (GLM-4.5-Air) / 56.0% (GLM-4.7-Flash), Terminal-Bench 2.0 24.5% / 20.2%, 已在 GLM-5.2 训练管线中采用。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yujiang Li, Zhenyu Hou, Yi Jing, Jie Tang, Yuxiao Dong → Tsinghua University (Department of Computer Science, Knowledge Engineering Group (KEG))</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/paper_summaries_v2_2026-07-08_01.jpg" alt="LLM-as-a-Verifier: A General-Purpose Verification Framework" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05391 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></h3>
+    <p style="color:#ccc;">「模型答得对不对」长期被当成一个非黑即白的判断, 但实际上一道题的解有好有坏、有粗有细。LLM-as-a-Verifier 的核心想法是: 让 verifier 不再输出 0/1 分数, 而是对评分 token 的 logit 分布取期望, 得到连续分数。这样 verifier 能从「分数粒度」「重复评测」「多标准拆分」三个维度扩展, 大幅拉开正负样本的区分度, 给出一份真正可用的答案排序。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">LLM-as-a-Verifier 提出 verification as a new scaling axis, 用 scoring token logits 的期望构造 continuous verifier, 支持 triple-direction 扩展: (1) score granularity scaling, (2) repeated evaluation scaling, (3) criteria decomposition scaling。在 Terminal-Bench V2 上 86.5%, SWE-Bench Verified 78.2%, RoboRewardBench 87.4%, MedAgent Reward Bench 上 best-to-worst rank accuracy 显著优于 LM-judge baseline; 并提出 verifier-aware best-of-N ranking algorithm。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>用 scoring token 的 logit distribution 求 expectation 得到连续分数 (而非 argmax), 配合 criteria-aware scoring 多标准分项打分, 再用 verifier 的连续分数做 best-of-N cost-efficient ranking。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Verifier 的连续分数依赖 scoring token 分布有足够熵; 当模型对评分项「没意见」(分布极度尖锐) 时 verifier 退化为 LM-judge。Ranking 算法对 candidate pool size 仍敏感, 大规模 best-of-N 仍需要分布式 verifier。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>Terminal-Bench V2 86.5% / SWE-Bench Verified 78.2% / RoboRewardBench 87.4% / MedAgentReward 当前 SOTA, 分数粒度越细正负样本分离度越好。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jacky Kwok, Shulu Li, Pranav Atreya, Yuejiang Liu, Yixing Jiang, Chelsea Finn, Marco Pavone, Ion Stoica, Azalia Mirhoseini → Stanford University (Stanford AI Lab (SAIL)); UC Berkeley; Carnegie Mellon University; NVIDIA Research</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/paper_summaries_v2_2026-07-08_02.jpg" alt="MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05297 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05297" target="_blank">MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution</a></h3>
+    <p style="color:#ccc;">Self-improving Agent 是说「Agent 看自己运行轨迹 → 重写自己的 skill 文件 → 下次就聪明一点」。问题是过去只会改「做什么」的那个 skill, 「怎么改 skill 的流程」一直被人写死。MetaSkill-Evolve 的核心想法: 给每个 Agent 配 5 个子智能体 (Analyzer / Retriever / Allocator / Proposer / Evolver) 一起用一个 meta-skill 来调度, meta-skill 自己也在「慢时间尺度」上一起演进。这样「提升流程」本身也会自我提升, 递归。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">MetaSkill-Evolve 提出 two-timescale recursive self-improvement 框架: 每条分支同时携带 task skill s 与 branch-local meta-skill m = (ψ, σ, α, π, ε), 分别参数化 Analyzer / Retriever / Allocator / Proposer / Evolver 五个 pipeline agent。Task skill 在 fast loop 演进, meta-skill 在 slow loop 用同一套 pipeline 对自己演进, 不引入额外模型或目标。MetaSkill-Evolve 在 OfficeQA / SealQA / ALFWorld 上对 frozen backbone 的提升分别为 +23.54 / +16.09 / +1.92。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Two-timescale 嵌套优化: 内层 fast loop 调 task skill, 外层 slow loop 调 meta-skill 的 5 维参数 (ψ, σ, α, π, ε), 五 pipeline agent 共享一个冻结 backbone。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Recursive 自我改进对监控要求高 — meta-skill 如果漂移到奇葩策略难以及时发现; 五 pipeline agent 共享 frozen backbone 也意味着 meta-skill 的天花板由 backbone 自身决定, 不会突破 frozen 模型的能力上限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>OfficeQA +23.54 / SealQA +16.09 / ALFWorld +1.92 (相对 frozen backbone), 比 no-skill / static-skill / single-level evolution baseline 都更好。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zefeng Wang, Minxi Yan, Jinhe Bi, Sikuan Yan, Volker Tresp, Yunpu Ma → Ludwig Maximilian University of Munich (LMU Munich, Chair of Database Systems and Data Mining); German Centre for Artificial Intelligence (DFKI)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/paper_summaries_v2_2026-07-08_03.jpg" alt="SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05392 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05392" target="_blank">SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion</a></h3>
+    <p style="color:#ccc;">过去图像 3D 化, 一次只能生成单个物体。但你想要「一栋楼」「一整个街区」怎么办? SynCity 3000 的核心修法: 把图像 3D 生成器当作卷积算子一样用, 「贴地平铺」扩展到场景级别。同时自造一个合成数据引擎填补 3D 场景训练数据的稀缺。最终输入一张 dimetric 全景图, 输出任意大小、任意复杂度的全局连贯 3D 场景。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">SynCity 3000 把 image-to-3D generator fine-tune 成 convolutional operator 并搭建 scene-level synthetic data engine, 用 single-image to scene-scale 扩展生成能力。最终实现: 输入 prompt 生成的 dimetric image, 输出 arbitrary-size 整体连贯 3D 场景, 在 layout 控制与全局一致性上同时显著优于 prior 3D scene generation 方法。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Convolutional operator 视角的 image-to-3D generator + 自建的 scene-scale synthetic data engine + dimetric image as scene-wide input prompting</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>整体连贯是「统计意义上的」 — 局部细节纹理可能出现 hallucination 一致性问题; synthetic data engine 决定了 output 的 domain bias, 真实场景与合成场景分布偏移会导致推理时局部不可信。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多类别 prompt 与 layout 下都生成 large + coherent + detailed 的 3D scene, 显著优于 prior single-object 3D 生成器扩展到 scene 时的全局不一致问题。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Paul Engstler, Iro Laina, Christian Rupprecht, Andrea Vedaldi → University of Oxford (Visual Geometry Group (VGG), Department of Engineering Science)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/paper_summaries_v2_2026-07-08_04.jpg" alt="Geometric Reciprocity: Unlocking Self-Supervision for Stereoscopic Video Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05354 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05354" target="_blank">Geometric Reciprocity: Unlocking Self-Supervision for Stereoscopic Video Generation</a></h3>
+    <p style="color:#ccc;">把 2D 视频转成可戴眼镜看的 3D 立体视频, 最难的部分是「遮挡区域」(disocclusion) — 视角换一下, 原来被前景挡住的背景要补出来。传统 supervised 模型需要稀缺的真 3D 双目对做训练, 难拿。Geometric Reciprocity 给出一个「几何对偶定理」: 在最近邻 DIBR 公式下, 从右视角合成左视角的遮挡 mask = 把左视角 warping 回右视角时的丢失 mask。这样就能用「无限多的单目视频」自监督学, 不用人工标双目对。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Geometric Reciprocity Theorem (GRT): 在 nearest-neighbor Depth-Image-Based Rendering (DIBR) 公式下, disocclusion mask 从 source→target 合成时等于 target→source warping 时的丢失 mask, 因此可 analytical 计算 test-time disocclusion mask, 实现 train-test 一致性。基于 GRT 的 self-supervised stereo inpainting 框架, 用 unlimited monocular videos 训练, 显著优于 training-free 与 supervised SOTA, 是 monocular-to-stereo conversion 领域首个 self-supervised 框架。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>GRT 推导 disocclusion mask 的解析形式, 用 cycle consistency 在 monocular video 上自监督训练 DIBR disocclusion inpainting 网络。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>GRT 的成立基于 nearest-neighbor DIBR 假设 — 实际 production system 多用 learned warping, 假设不满足时 mask 会偏差; monocular video 来源多样性也直接决定 inpainting 边界表现, 内容分布偏移会造成 generalization 问题。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>显著优于 training-free 与 supervised SOTA, 跨 DIBR 公式均保持 train-test consistency。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Jingyi Lu, Kai Han → The Chinese University of Hong Kong (CUHK) (Department of Computer Science and Engineering); SmartMore</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_00.jpg" alt="Robbyant/lingbot-vision" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Robbyant/lingbot-vision" target="_blank">Robbyant/lingbot-vision</a></h3>
+    <p>蚂蚁灵波科技旗下、开源的空间感知视觉基础模型, 把「边界结构」作为预训练核心目标 — 这是首个明确把 3D 几何边界当作预训练信号的视觉基础模型。在仅 1.6 亿张图像的预训练量下 (比 DINOv3 小一个数量级) 仍能学到亚像素级边界定位与稳定物体追踪, 同时支持深度补全、物体识别、视频帧间一致性等多任务, 是空间感知训练范式的突破。</p>
+    <div class="source">⭐ 315 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_01.jpg" alt="avifenesh/bw24" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/avifenesh/bw24" target="_blank">avifenesh/bw24</a></h3>
+    <p>从零手写的 Rust + CUDA 大模型推理引擎, 针对 NVIDIA RTX 5090 (sm_120a) 优化。支持 NVFP4 量化、MoE 架构、Multi-Token Prediction (MTP) 推测解码。是少数能让 5090 单卡在没装 Linux + 完整推理框架下也能跑 reasoning model 的方案。</p>
+    <div class="source">⭐ 255 · Rust + CUDA</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_02.jpg" alt="kyutai-labs/pocket-tts" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/kyutai-labs/pocket-tts" target="_blank">kyutai-labs/pocket-tts</a></h3>
+    <p>kyutai-labs 出品的 CPU 上就能跑的轻量 TTS 模型, 模型权重与 runtime 压缩到「能装进口袋」 — 直接在笔记本 CPU 上跑出接近实时的语音合成, 不必调用云端 API 也不需要 GPU。目标是让 TTS 在隐私敏感 (本地医疗记录 / 个人日记) 和离线场景 (无网 / 飞机模式) 也能用。</p>
+    <div class="source"> · Python + Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_03.jpg" alt="TencentCloud/CubeSandbox" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/TencentCloud/CubeSandbox" target="_blank">TencentCloud/CubeSandbox</a></h3>
+    <p>腾讯云出品的轻量 AI Agent 沙箱: 同时支持多实例并发、安全隔离、易启动。是面向「Coding Agent / 自动化脚本 / 多租户 AI 场景」的基础设施层 — 解决了「Agent 需要执行任意代码但不能污染宿主机」的经典矛盾。</p>
+    <div class="source"> · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_04.jpg" alt="nagisanzenin/engram" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/nagisanzenin/engram" target="_blank">nagisanzenin/engram</a></h3>
+    <p>面向 Claude Code 的「循证学习引擎」: 用户填入第一性原理课程, Engram 用 spaced repetition + active recall + 自测题巩固记忆。是把学习科学 (cognitive science) 整套方法论工程化进 AI Coding Agent 的一种尝试 — 在跟 Claude 一起写代码时, 同时建立你对代码背后原理的长期记忆。</p>
+    <div class="source">⭐ 371 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-08/oss_summaries_v2_2026-07-08_05.jpg" alt="iOfficeAI/OfficeCLI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank">iOfficeAI/OfficeCLI</a></h3>
+    <p>首个专门为 AI Agent 重新设计的 Office 套件命令行 — Agent 能直接读取、编辑、生成 Word / Excel / PPT 文件。它把 Office 文档的二进制格式 / 模板 / 样式抽象成对 Agent 友好的 Markdown-like 操作集, 让 Agent 在 Office 文档上的能力不再受拖拽 UI 局限。</p>
+    <div class="source"> · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-08 07:07</p>
+</footer>
+</div>
+</body>
+</html>
