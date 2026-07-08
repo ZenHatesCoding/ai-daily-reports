@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月9日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月9日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_00.jpg" alt="OpenAI 阐述政府与国家安全合作伙伴关系的原则框架" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/news/our-approach-to-government-and-national-security-partnerships" target="_blank">OpenAI 阐述政府与国家安全合作伙伴关系的原则框架</a></h3>
+    <p style="color:#ccc;">OpenAI 发布对政府/国家安全伙伴关系的指导原则: 模型部署需对齐民主价值观、保留人类否决权、不在不允许审计的法域部署关键系统。这是继 7/07 Broadcom 自研芯片 Jalapeño 之后, OpenAI 在主权 AI 市场的第二道「护城河」宣言 — 模型层 + 硬件层双线锁死政府客户。</p><p style="color:#8b949e;font-size:13px;">💡 把「主权 AI」从口号落到可审计条款, 是头部厂商把政府市场从「比模型能力」拉到「比合规栈」的关键一步。后入局的 Llama/Mistral 想复制, 必须重新建整个合规团队 — 模型权重开源救不了这一步。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_01.jpg" alt="Anthropic 上线 Claude Science 科学家 AI 工作台" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank">Anthropic 上线 Claude Science 科学家 AI 工作台</a></h3>
+    <p style="color:#ccc;">Anthropic 把 Claude 包装成「科学家的 AI 实验室搭档」: 内置文献综述、假设生成、实验设计、论文草稿四件套, 全部跑在 Anthropic 自家算力上 (不进客户 VPC)。这是继 Claude Cowork (办公) 之后, 第二个「按角色打包」的产品线 — Anthropic 放弃让 Claude 做通用助手, 改为按垂直职业切 SKU。</p><p style="color:#8b949e;font-size:13px;">💡 按职业切 SKU 卖企业, 客单价能从 $20/座/月 (ChatGPT Team) 拉到 $200-500/座/月 (Claude for Scientists)。Anthropic 在 ARR 上追 OpenAI 的方法不是「模型更强」, 是「卖给更舍得花钱的职业」。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_02.jpg" alt="xAI 发布 Grok 4.5, 马斯克称对标 Claude Opus" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank">xAI 发布 Grok 4.5, 马斯克称对标 Claude Opus</a></h3>
+    <p style="color:#ccc;">xAI 在 Memphis Colossus 超算上跑出新模型 Grok 4.5, 马斯克亲自站台称「Opus 级别」。同期 xAI 完成 G 轮估值冲 $200B, 跟 SpaceX 共享现金流。从「聊天机器人 + 实时 X 数据」路线正式切到「GPT-5/Anthropic Opus 直接对标」的旗舰路线。</p><p style="color:#8b949e;font-size:13px;">💡 xAI 第一次放弃「差异化 (实时 X 数据 + 调侃口吻)」当主卖点, 改打正面战。这意味 Musk 内部判断: 单纯靠产品差异化打不过 OpenAI, 必须堆参数 + 堆算力。2000 亿估值故事讲不通就别讲, 直接换赛道。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_03.jpg" alt="前 DeepMind 高管警告 AI 军备竞赛或以灾难收场" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Wired] 3级信源 · cn</div>
+    <h3><a href="https://www.wired.com/story/former-deepmind-exec-thinks-ai-arms-race-could-end-disaster/" target="_blank">前 DeepMind 高管警告 AI 军备竞赛或以灾难收场</a></h3>
+    <p style="color:#ccc;">前 DeepMind 安全研究负责人迫于公开发文: 当前美中 AI 军备竞赛的节奏, 让任何一方的安全护栏都没时间落地, 「先做安全再发布」已经被市场机制淘汰。他提议 G7 强制「发布前 90 天安全审查」, 但承认几乎不可能落地。</p><p style="color:#8b949e;font-size:13px;">💡 从 DeepMind 内部出来的人说「机制已失败」, 比 Hinton/苏茨克维等外部学者说更可信 — 因为他们见过内部决策流程。这是 Anthropic/DeepMind 给监管层「递刀子」: 如果政府不动, 我们也不动。</p>
+    <div class="source">来源：Wired</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_04.jpg" alt="DeepSeek 翁荔: AI 自进化要先改 Harness 工具链" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/447460.html" target="_blank">DeepSeek 翁荔: AI 自进化要先改 Harness 工具链</a></h3>
+    <p style="color:#ccc;">DeepSeek 翁荔新博客主张: 所谓「模型自进化」第一步不是改权重, 是改 Harness (即调用代码/工具/环境的脚手架)。模型本身已经够强, 卡点在「环境接口」: 同样的 R1 接上 OpenAI/Claude 风格 harness 跟 DeepSeek 风格 harness, 实测效果能差 30%。崔添翼 (DeepSeek 推理负责人) 转发附议。</p><p style="color:#8b949e;font-size:13px;">💡 把战场从「比模型」拉到「比 Harness 工程」, 对中国团队是相对优势 — Anthropic/OpenAI 在 harness 上重资本投入, 国内团队可以反向借鉴快速复刻。这是 DeepSeek 给国内开源圈指路: 别再死磕预训练, 去啃 harness。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/news_items_v2_2026-07-09_05.jpg" alt="阿里获 AI 顶会最佳资源论文, 提出 Agent 评测新范式" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/447440.html" target="_blank">阿里获 AI 顶会最佳资源论文, 提出 Agent 评测新范式</a></h3>
+    <p style="color:#ccc;">阿里通义实验室在 ACL 2026 (主会) 拿下 Best Resource Paper, 论文提出 AgentBench-Pro: 不再让 Agent 跑固定 benchmark, 而是「动态生成任务 + 真人 expert 复核」, 专门解决现有 Agent 评测「刷榜 + 数据污染」两大顽疾。代码 + 数据集全开源。</p><p style="color:#8b949e;font-size:13px;">💡 Agent 评测已经被「静态 benchmark + 数据污染」玩坏, 阿里这套「动态生成 + 专家复核」直接把 eval 门槛拉到专家小时级 — 中小公司跟不起。这是头部实验室把「评测标准」当护城河的开端, 类似当年 GLUE 把 NLP 标准化。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/paper_summaries_v2_2026-07-09_00.jpg" alt="RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.06559 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.06559" target="_blank">RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation</a></h3>
+    <p style="color:#ccc;">一句话: 把机器人操作任务放到一个「4D 时空世界模型」里先做规划再执行, 而不是传统意义上一帧一帧模仿。模型同时预测未来 16 秒的「视频 + 深度 + 物体位姿」, 让机器人在脑内先「演练」几遍抓取路径, 再真的动手。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 RynnWorld-4D, 一个面向机器人操作的 4D (3D 空间 + 时间) 隐式世界模型, 在 RynnWorld-Teleop 数据集 (200 小时遥操作) 上训练。模型同时输出未来 16 秒的 RGB、深度、相机位姿和物体 6D pose, 通过「想象-执行」回路把动作规划从单步模仿提升到长程 rollout。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在 5 个真实操作任务上成功率比 RT-2 高 23%</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>模型参数量大 (单卡跑不动), 必须 8×H100 起; 同时「想象」16 秒的算力开销让推理延迟增加 200ms, 对实时抓取场景不友好 — 想用这套方案, 硬件预算先翻 3 倍。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>世界模型 rollout 16 秒, 比现有 video world model (8 秒) 翻倍 · sim-to-real gap 缩小 35%, 关键贡献来自 depth + pose 多模态联合训练</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Rynn Team']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/paper_summaries_v2_2026-07-09_01.jpg" alt="Vision as Unified Multimodal Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.06560 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.06560" target="_blank">Vision as Unified Multimodal Generation</a></h3>
+    <p style="color:#ccc;">一句话: 把「图像生成」和「图像理解」合并成一个模型一个目标 — 训练时让模型既能从文字出图, 也能从图出文字描述, 同一个 transformer 同时干两件事, 互相促进。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出「统一多模态生成」框架, 用单一 transformer 同时建模文→图扩散和图→文自回归, 通过双向 attention mask 共享表征。训练 loss = 扩散 loss + 文本 CE 的加权和。在 12 个 benchmark 上, 文→图 FID 比 SD3 降 18%, 图→文 CIDEr 比 LLaVA-1.6 升 7%, 且零样本视频生成可用。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>一个模型同时刷图文双向 SOTA, 不再需要「理解模型 + 生成模型」两个 stack</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>训练成本是单任务模型的 2.5 倍 (联合 loss 难调), 推理显存占用也是「单任务」方案的 1.8 倍 — 想部署必须把 batch size 砍到原来一半。换来的是少一个 model stack, 工程维护成本下降。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>零样本视频生成 — 没训过视频, 但能直接生成 4 帧连续片段 · 图文联合训练让 image captioning 数据利用率提升 3 倍</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Anonymous', 'Anonymous']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/paper_summaries_v2_2026-07-09_02.jpg" alt="WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.06461 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.06461" target="_blank">WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS</a></h3>
+    <p style="color:#ccc;">一句话: 给 LLM 语音合成 (TTS) 加「单词级精细控制」 — 你想让 AI 念某段话「这句重音 + 慢一点 + 升调」, 现在可以「在哪个字上」精确指定, 而不是过去一整段统一调。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 WordVoice, 解决 LLM-TTS 中「细粒度韵律控制难」的痛点。引入「word-level prosody tag」序列 (重音、停顿、调值), 在 LLM 解码阶段作为独立 token 插入, 与文本 token 解耦训练。在 LibriSpeech 和情感 TTS 评测上, MOS 比 VALL-E 2 升 0.4, 控制精度 (「在哪个字加停顿」准确率) 从 38% 升到 81%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>单词级控制准确率从 38% 提到 81% — 实用化关键突破</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>韵律标签数据集必须人工标注 (10 万条级别), 制作成本是单纯文本数据集的 5 倍; 同时 LLM 解码阶段引入额外 tag token 序列, 推理 RTF (实时率) 增加 25%, 对低延迟场景 (实时对话) 不友好。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>MOS (主观听感) 比 VALL-E 2 高 0.4 · 零样本克隆声线 + 单词级控制可同时启用, 之前互斥</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Anonymous', 'Anonymous']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/paper_summaries_v2_2026-07-09_03.jpg" alt="AlayaWorld: Long-Horizon and Playable Video World Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.06291 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.06291" target="_blank">AlayaWorld: Long-Horizon and Playable Video World Generation</a></h3>
+    <p style="color:#ccc;">一句话: 能「玩」的视频世界模型 — 不只是生成一段视频, 而是给你一个可交互的场景: 你在生成的视频里点击鼠标「推一下桌子」, 模型继续生成后续画面。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">AlayaWorld 提出「可玩视频世界生成」, 把交互信号 (鼠标/键盘事件) 显式注入视频扩散模型, 训练数据来自 200 小时游戏 + 仿真器交互视频。模型接收「当前帧 + 用户动作」, 自回归生成下一帧, 在 30 秒交互后保持时间一致性。基准 ALBench 上, 人类评分比 GameNGen 高 41%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>30 秒交互后场景仍连贯 — 之前模型 5-10 秒就崩</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>训练数据只能从游戏/仿真器来 (真实视频没人交互), 场景多样性受限 — 想生成「真实厨房里你切菜」目前做不到。同时自回归生成 30 秒需要 80GB 显存, 端侧部署无望。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>人类「真实感」评分比 GameNGen 高 41% · 支持鼠标 + 键盘 + 摇杆 3 种交互模态</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Anonymous', 'Anonymous']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/paper_summaries_v2_2026-07-09_04.jpg" alt="SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.06065 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.06065" target="_blank">SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review</a></h3>
+    <p style="color:#ccc;">一句话: AI 写完代码后, 让另一个 AI agent 模拟「人类 code review」流程自动审 PR — 找到 bug + 提修改意见 + 直接给 patch, 形成「写代码 → 审代码」自循环。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">SWE-Review 把 code review 任务形式化为 agentic loop: 一个 swe-agent 写 patch, 另一个 reviewer-agent 跑静态分析 + 跑测试 + 看 diff, 输出 review comments 并可触发 re-write。3-agent 协作框架在 SWE-bench Verified 上把 pass@1 从 65% 提到 78%, 关键是 reviewer-agent 能捕获 12% 的「写完后立即测试也发现不了」的回归 bug。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>SWE-bench Verified pass@1 从 65% → 78% (绝对 +13%)</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>端到端跑一次 PR review 耗时 25 分钟 (人类 reviewer 通常 15 分钟), tokens 消耗是「单 agent 写代码」的 4 倍 — 想批量用必须砍 reviewer 频率, 只 review 高风险 PR。换来的是人工 review 漏检率从 18% 降到 5%。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>捕获 12% 的「测试通过但实际有 bug」回归 — 真实工程痛点 · reviewer-agent 跟 swe-agent 用不同 LLM (GPT-5 + Claude Opus), 多样性是关键</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Anonymous', 'Anonymous']</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_00.jpg" alt="deepseek-ai/DeepSpec" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSpec" target="_blank">deepseek-ai/DeepSpec</a></h3>
+    <p>DeepSeek 官方开源「投机解码」全栈代码库: 从训练 draft model、到推理时 KV-cache 复用、到 speculative decoding 评测 bench 全套。开发者可以一键复现 DeepSeek-V3 那套「用小模型先猜 token, 大模型批量验证」让推理吞吐量翻 2-3 倍的 trick。配套论文同步 arXiv 发布。</p>
+    <div class="source">⭐ 6,463 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_01.jpg" alt="ruvnet/RuView" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ruvnet/RuView" target="_blank">ruvnet/RuView</a></h3>
+    <p>用 WiFi 信号做人体姿态估计 + 房间感知 — 不需要摄像头, 只需要家里现有的 WiFi 路由器 (ESP32 + 一台主机)。在隐私敏感场景 (养老监护、独居老人、监狱) 用「看不见的信号」做 24/7 行为监控, 准确率跟 mmWave 雷达接近但成本低一个数量级。</p>
+    <div class="source"> · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_02.jpg" alt="TencentCloud/TencentDB-Agent-Memory" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">TencentCloud/TencentDB-Agent-Memory</a></h3>
+    <p>腾讯云把自家给客服 Agent 用的「分布式记忆层」抽象成开源: 不是传统的 RAG 检索, 而是把 agent 跟用户的历史交互 (对话 + 操作 + 偏好) 当作「动态记忆图」, 支持时间衰减 + 重要性加权 + 跨会话复用。生产环境跑过日均 1 亿次 query。</p>
+    <div class="source"> · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_03.jpg" alt="elder-plinius/T3MP3ST" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/elder-plinius/T3MP3ST" target="_blank">elder-plinius/T3MP3ST</a></h3>
+    <p>多 Agent 协同「AI 红队测试」平台 — 让多个 LLM agent 扮演攻击者, 互相配合对目标系统 (web app/API) 做端到端渗透测试, 自动发现漏洞 + 写 PoC + 出报告。meta-harness 思路: 不是单 agent 跑任务, 而是「攻击者 agent + 防御者 agent + 监控 agent」三方博弈。</p>
+    <div class="source">⭐ 3,853 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_04.jpg" alt="alibaba/zvec" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/alibaba/zvec" target="_blank">alibaba/zvec</a></h3>
+    <p>阿里通义实验室开源「超低延迟向量搜索引擎」: 1 亿向量检索 P99 < 5ms (比 Milvus 快 3 倍), 内存占用是 HNSW 的 1/5。底层用了自研的「product quantization + SIMD 优化 + GPU 卸载」三件套, 已经在阿里内部电商/推荐场景跑了 2 年。</p>
+    <div class="source"> · C++</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-09/oss_summaries_v2_2026-07-09_05.jpg" alt="HUANGCHIHHUNGLeo/claude-real-video" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HUANGCHIHHUNGLeo/claude-real-video" target="_blank">HUANGCHIHHUNGLeo/claude-real-video</a></h3>
+    <p>让 Claude (或其他 LLM) 真正「看懂」视频 — 不再是「抽几帧扔进去」, 而是「场景感知 + 去重 + 时序理解」三阶段处理: 先把视频切成场景, 再去重相似帧, 最后按时间顺序喂给 LLM。在 10 分钟长视频上 Claude 的回答准确率从 38% 提到 71%。</p>
+    <div class="source">⭐ 1,409 · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-09 07:09</p>
+</footer>
+</div>
+</body>
+</html>
