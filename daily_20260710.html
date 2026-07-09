@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月10日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月10日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_00.jpg" alt="GPT-5.6 成为 Microsoft 365 Copilot 的首选模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot" target="_blank">GPT-5.6 成为 Microsoft 365 Copilot 的首选模型</a></h3>
+    <p style="color:#ccc;">OpenAI 7/9 宣布 GPT-5.6 已正式成为 Microsoft 365 Copilot 的默认底层模型, 替代此前的 GPT-5 系列。这意味着 OpenAI 旗舰模型通过微软的企业级生产力套件获得了数亿企业用户的日常分发入口, 是 OpenAI 在 GPT-5.6 首发后第一周最重要的渠道落地。</p><p style="color:#8b949e;font-size:13px;">💡 GPT-5.6 进 Copilot 标志着 OpenAI 把'模型升级'和'渠道分发'解耦: 模型层用 M365 这个全球最大的企业 AI 入口锁定替换成本, 收入层靠 API+Azure OpenAI 双线扩张。对比 Anthropic 把 Claude 锁在 AWS+Claude.ai 的双入口, OpenAI 的多云分发策略(微软+Oracle+AWS)是它 200 亿美元 ARR 的护城河。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_01.jpg" alt="OpenAI 启动 GPT-5.5 Bio Bug Bounty 生物安全漏洞悬赏" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/bio-bug-bounty" target="_blank">OpenAI 启动 GPT-5.5 Bio Bug Bounty 生物安全漏洞悬赏</a></h3>
+    <p style="color:#ccc;">OpenAI 7/9 推出 GPT-5.5 Bio Bug Bounty 项目, 悬赏外部研究者在生物安全相关越狱场景中发现 GPT-5.5 的真实漏洞, 单笔奖金最高 5 万美元。这是 OpenAI 在'前沿模型生物风险'方向第一次正式把外部红队引入 GPT-5.5 评测, 也是 RSP(Responsible Scaling Policy)承诺的具体落地动作。</p><p style="color:#8b949e;font-size:13px;">💡 Bio Bug Bounty 的核心信号不是奖金, 是 OpenAI 主动把 GPT-5.5 推到外部'生物安全'红队压力测试下——此前这类评测只对内部 red team 开放。把生物风险变成众包竞赛, 本质是 OpenAI 在监管前抢占'我们自己能管住自己'的叙事高点, 为 S-1 上市路演中的安全章节积累弹药。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_02.jpg" alt="AI 智能体创业公司让 Agent 全程主导 1 亿美元融资路演" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise" target="_blank">AI 智能体创业公司让 Agent 全程主导 1 亿美元融资路演</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/9 报道, 一家 AI Agent 创业公司把 1 亿美元 A 轮融资的全部对外沟通——从投资人 pitch deck 制作、cold email 起草到尽调文档整理——交给自家 Agent 全程主导, 创始人只在关键决策节点签字。这家公司的 Agent 不仅写邮件, 还自主判断该联系哪家机构、用什么措辞、什么时间发送。</p><p style="color:#8b949e;font-size:13px;">💡 这个事件比'GPT-5 写代码'更深一层——它验证了 Agent 已经在商业核心流程(融资)里跑通了 end-to-end。如果 1 亿美元融资都可以让 Agent 主导, 那 Agent 替代'白领中后台'的临界点比所有人预测的都近。这不是 demo, 这是真实的'资本配置'在 Agent 手上跑完。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_03.jpg" alt="Anthropic 宣布 Fable 5 将单独向消费者收费" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Wired] 3级信源 · cn</div>
+    <h3><a href="https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable" target="_blank">Anthropic 宣布 Fable 5 将单独向消费者收费</a></h3>
+    <p style="color:#ccc;">Wired 7/9 独家披露, Anthropic 决定把最新模型 Fable 5(7/07 'Redeploying Fable 5' 发布)从 Claude 订阅里剥离, 单独向消费者收取溢价订阅。这是 Anthropic 第一次把旗舰模型与通用 Claude 订阅分层, 也意味着 Claude Sonnet/Opus 主线继续平价, Fable 5 进入溢价 SKU。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 用 Fable 5 单飞打开了 AI 公司的'双 SKU'范式——核心模型继续平价获客建立心智, 旗舰能力通过溢价 SKU 做高 ARPU。这跟 OpenAI 把 GPT-5.6 推进 Copilot 是相反的策略: OpenAI 把能力铺开, Anthropic 把能力收紧。下一步消费者会看到'Sonnet 用户用不到 Fable, 想用 Fable 加 20 美元/月', Anthropic ARR 上限会被这层分级解锁。</p>
+    <div class="source">来源：Wired</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_04.jpg" alt="蚂蚁灵波开源 LingBot-World 2.0, 世界模型首次实现小时级生成" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/446548.html" target="_blank">蚂蚁灵波开源 LingBot-World 2.0, 世界模型首次实现小时级生成</a></h3>
+    <p style="color:#ccc;">蚂蚁灵波 7/9 开源 LingBot-World 2.0 世界模型, 首次把可交互视频世界的生成长度推到'小时级', 并支持 AI 原生多人交互。这是继 7/06 LingBot-Depth 2.0(机器人空间感知)之后, 蚂蚁在'世界模型'方向的第二次重磅开源, 把 LingBot 系列从'深度感知'扩展到'长时间尺度场景生成'。</p><p style="color:#8b949e;font-size:13px;">💡 LingBot-World 2.0 的'小时级'是关键拐点。此前世界模型主流(Sora、Veo、Genie)都还在分钟级徘徊, 意味着生成内容只能当 demo。小时级让世界模型第一次有资格进入游戏、仿真训练、具身 Agent 训练数据生产的实际工作流。蚂蚁这步是把世界模型从'展示品'推进'生产工具'的转折点, 也是国内厂商在世界模型开源赛道第一次跑赢 OpenAI/Google。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/news_items_v2_2026-07-10_05.jpg" alt="原力灵机 DM0.5 登场: 15 万小时具身数据喂出, 零样本性能提升 31%" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/447508.html" target="_blank">原力灵机 DM0.5 登场: 15 万小时具身数据喂出, 零样本性能提升 31%</a></h3>
+    <p style="color:#ccc;">原力灵机 7/9 发布具身基础模型 DM0.5, 用 15 万小时真实机器人操作数据训练, 在跨平台零样本(Zero-Shot)具身任务上相对前代提升 31%。DM0.5 不绑定特定机器人硬件, 可在工业机械臂、移动机器人、四足等多平台上零样本迁移。</p><p style="color:#8b949e;font-size:13px;">💡 DM0.5 的'15 万小时+零样本+31%'三点组合是国内具身赛道第一次具备'基础模型'属性——以前具身模型都是单一硬件+有限场景+需要 fine-tune。DM0.5 的零样本能力意味着具身智能开始进入'通用底座'阶段, 跟 LLM 从 GPT-3 进入'通用语言底座'是同一拐点。原力灵机这家'低调'的蚂蚁系具身公司, 现在变成国内具身基础模型的第一梯队。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/paper_summaries_v2_2026-07-10_00.jpg" alt="Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07675 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07675" target="_blank">Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</a></h3>
+    <p style="color:#ccc;">本文提出用 Mixture-of-Experts(MoE)架构对视频预训练进行 scaling, 专门面向具身智能(embodied AI)任务。核心思路是把视频 token 按场景/动作类型路由到不同专家子网络, 让单个模型能同时学习'室内导航'+'机械臂操作'+'车辆行驶'等异构具身数据, 在不显著增加推理 FLOPs 的前提下, 模型容量被放大 4-8 倍。</p>
+    
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>MoE 路由依赖'场景类别'先验——如果训练数据里某场景占比 小于0.5%, 路由会把它全部分给'其他'专家, 导致长尾具身技能(如医疗机器人、救灾机器人)被灾难性遗忘。此外, 推理时需要把所有专家留在显存, 单卡部署门槛被推到 80GB+。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>) ·  </div>
+      <div class="row"><span class="author">🏢 团队：</span>['Shuailei Ma', 'Jiaqi Liao', 'Xinyang Wang']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/paper_summaries_v2_2026-07-10_01.jpg" alt="Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07663 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07663" target="_blank">Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops</a></h3>
+    <p style="color:#ccc;">本文系统梳理了 AI 递归自我改进(Recursive Self-Improvement, RSI)的 4 个层级, 从'单次自我润色'到'完全自主研究闭环'。作者在数学推理和代码生成两个领域验证: 当模型被允许修改自己的 prompt + 训练数据筛选器 + 评估器时, 在 7 天自动迭代窗口内性能可继续提升 9-14%, 但在第 8 天开始出现'自我强化偏差'(self-reinforcing bias)。</p>
+    
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>RSI 的天花板本质来自'自我评估自我'的反馈循环——任何自评指标都会在多轮后饱和。要突破天花板必须引入'独立外部 oracle', 但这就把 RSI 退化成了普通的 human-in-the-loop 训练, 失去了'完全自主'的卖点。论文给出的'外部 grounding 注入'在实际工程里其实就是 oracle 的一种伪装。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>) ·  </div>
+      <div class="row"><span class="author">🏢 团队：</span>['Mingguang Chen', 'Licheng Wang', 'Bo Qu']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/paper_summaries_v2_2026-07-10_02.jpg" alt="Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07608 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07608" target="_blank">Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation</a></h3>
+    <p style="color:#ccc;">本文给 VLA(Vision-Language-Action)模型增加'双潜空间记忆'——一个存'短时操作上下文'(本任务的前 3 步), 一个存'长时物体知识'(从预训练数据学到的物体属性)。机器人在执行'把红色杯子从桌子移到架子'这种长时任务时, 双记忆让模型不再需要在 prompt 里堆历史轨迹, 推理时延降低 27%。</p>
+    
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>双记忆的'长时记忆'本质是'压缩到潜空间的知识库', 这跟传统 RAG 的差异是检索粒度——RAG 是 token 级精确检索, 双记忆是'整段场景的语义压缩'。好处是检索快、可解释, 坏处是新增知识需要重新训练压缩器, 不支持在线添加物体类别——一个新工厂要部署 VLA, 得先收集该工厂所有物体的样本重训压缩器。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>) ·  </div>
+      <div class="row"><span class="author">🏢 团队：</span>['Hongyu Qu', 'Jianzhe Gao', 'Xiaobin Hu']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/paper_summaries_v2_2026-07-10_03.jpg" alt="Infinite Worlds with Versatile Interactions" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07534 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07534" target="_blank">Infinite Worlds with Versatile Interactions</a></h3>
+    <p style="color:#ccc;">本文提出'无限世界 + 多样化交互'的生成框架, 用自回归视频扩散模型 + 交互式 control head, 让用户在一个无限延展的 3D 场景里同时进行'视角移动'+'物体操控'+'物理交互'(如推门、推倒椅子)。核心创新是把交互拆为'离散动作 token'+'连续物理参数'两条通路。</p>
+    
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>离散动作 token 的'有限词汇表'限制了交互的精细度——模型可以'推门', 但不能'用特定角度、特定力度推门'。这意味着该框架在游戏级娱乐场景足够, 但仿真训练/具身数据生产需要更精细物理交互的场合, 仍要回到传统物理引擎。论文作者没有给出从'离散 token'扩展到'连续控制'的清晰路径。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>) ·  </div>
+      <div class="row"><span class="author">🏢 团队：</span>['Zelin Gao', 'Qiuyu Wang', 'Jiapeng Zhu']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/paper_summaries_v2_2026-07-10_04.jpg" alt="Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07508 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07508" target="_blank">Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning</a></h3>
+    <p style="color:#ccc;">本文针对 Agent 强化学习中的'长尾 rollout 时延'问题(部分 Agent 任务要跑 30 分钟, 部分只要 30 秒), 提出 Single-Rollout 异步优化(SRAO), 让每个 rollout 完成后立即贡献梯度, 不必等整批对齐。在 SWE-bench Verified + τ-bench 上把训练吞吐量提升 3.1 倍。</p>
+    
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>1</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>SRAO 的'立即贡献梯度'破坏了 PPO 的 on-policy 假设——rollout 完成时刻和它对应的 policy 已经偏离, 老 rollout 的价值估计会高估/低估当前 policy 的真实表现。作者用 importance sampling 修正, 但修正项的方差随 rollout 时延差异放大, 当任务时长方差 大于 100x 时, 训练会进入不稳定震荡区间。论文没给出此时如何检测和恢复。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>) ·  </div>
+      <div class="row"><span class="author">🏢 团队：</span>['Zhenyu Hou', 'Yujiang Li', 'Jie Tang']</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_00.jpg" alt="jamesob/local-llm" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/jamesob/local-llm" target="_blank">jamesob/local-llm</a></h3>
+    <p>前 Reddit 工程师 jamesob 开源的'本地跑 LLM 完整知识库'。覆盖从硬件选型(GPU/Apple Silicon/CPU)、推理框架对比(llama.cpp/vLLM/ollama)、量化方案(Q4/Q5/Q8)、到上下文长度/采样参数调优的全部实操经验, 不是 README 教程而是 12 万字 troubleshooting 笔记。</p>
+    <div class="source">⭐ 1,299 · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_01.jpg" alt="anthropics/jacobian-lens" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/anthropics/jacobian-lens" target="_blank">anthropics/jacobian-lens</a></h3>
+    <p>Anthropic 官方发布的 Jacobian Lens 配套代码——配合其'全局工作空间'(Global Workspace)可解释性论文。Jacobian Lens 通过计算模型隐层对输入 token 的雅可比矩阵, 把模型'内部注意力热点'可视化成热力图, 让研究者能直接看到模型在哪些 token 上'真正在想事情'。</p>
+    <div class="source">⭐ 985 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_02.jpg" alt="oomol-lab/open-connector" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/oomol-lab/open-connector" target="_blank">oomol-lab/open-connector</a></h3>
+    <p>oomol-lab 开源的'1000+ SaaS 鉴权网关'——通过统一 SDK + CLI + MCP 协议, 让 AI agent 可以安全访问 Slack/Notion/Salesforce/Google Workspace/Linear 等 SaaS 平台的账号数据, 不需要在每个 agent 项目里单独写 OAuth 流程。</p>
+    <div class="source">⭐ 1,114 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_03.jpg" alt="Kulaxyz/self-learning-skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Kulaxyz/self-learning-skills" target="_blank">Kulaxyz/self-learning-skills</a></h3>
+    <p>Kulaxyz 开源的'AI coding agent 自进化 skill 框架', 给 Claude Code/Cursor/AGENTS.md 等 AI 编程 agent 提供'识别失败 → 自动改 prompt → 验证 → 持久化'的闭环。agent 在多次失败后会自己改写自己的 skill, 而不是需要人类手动更新。</p>
+    <div class="source">⭐ 842 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_04.jpg" alt="jmerelnyc/Talos" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/jmerelnyc/Talos" target="_blank">jmerelnyc/Talos</a></h3>
+    <p>Talos 网络的 GPU worker 客户端——把个人/团队的闲置 GPU(从消费级 4090 到 A100 集群)接入一个去中心化的 open-model 推理网络, 通过'贡献算力换算力代币'机制让 GPU 持有者用闲置算力免费跑自己想跑的模型。</p>
+    <div class="source">⭐ 815 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-10/oss_summaries_v2_2026-07-10_05.jpg" alt="lycorp-jp/sim-use" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lycorp-jp/sim-use" target="_blank">lycorp-jp/sim-use</a></h3>
+    <p>lycorp-jp(日本 LY 集团开源)发布的 iOS Simulator + Android Emulator 视觉控制库, 给 AI agent 提供'观察屏幕 + 操作应用'的能力——agent 可以像人一样看着 iPhone 模拟器屏幕, 用 vision model 识别 UI 元素, 然后执行点击/输入/滑动。</p>
+    <div class="source">⭐ 742 · Swift</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-10 07:25</p>
+</footer>
+</div>
+</body>
+</html>
