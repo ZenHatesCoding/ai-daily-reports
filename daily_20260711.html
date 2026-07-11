@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月11日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: 14px; }
+.stats { display: flex; gap: 24px; font-size: 14px; color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: 20px; margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: 16px; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: 14px; color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: 12px; margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月11日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_00.jpg" alt="OpenAI 与 Deutsche Telekom 合作, 用 AI 重塑德国电信 2.4 亿用户基础设施" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/deutsche-telekom" target="_blank">OpenAI 与 Deutsche Telekom 合作, 用 AI 重塑德国电信 2.4 亿用户基础设施</a></h3>
+    <p style="color:#ccc;">OpenAI 7/10 发布与德国电信 Deutsche Telekom 的深度合作, 把 GPT-5.6 + Codex 接入 DT 在欧洲的 2.4 亿移动用户客服与企业 IT 系统。这是 OpenAI 第一次把旗舰模型直接嵌入一家 Tier-1 电信运营商的核心业务流, 而不只是 SaaS 接入。</p><p style="color:#8b949e;font-size:13px;">💡 DT 是欧洲第一大电信运营商, 用户数 2.4 亿覆盖德国/东欧/美国 T-Mobile。这次合作把 OpenAI 从「SaaS 模型」推进「基础设施级」——客户数据不出 DT 自有环境, 但推理走 OpenAI 模型。对比 Anthropic 锁 AWS、xAI 自建 Memphis 数据中心, OpenAI 的「多云分发 + 本地部署」双轨策略正在欧洲大规模落地, 这是它挑战 EU AI Act 监管壁垒的关键护城河。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_01.jpg" alt="Apple 起诉 OpenAI 窃取硬件机密, 指控前首席硬件官 Tang Tan 主导" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/" target="_blank">Apple 起诉 OpenAI 窃取硬件机密, 指控前首席硬件官 Tang Tan 主导</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/10 独家披露, Apple 周五正式向加州北区联邦法院起诉 OpenAI, 指控 OpenAI 及其前首席硬件官 Tang Tan 系统性窃取 Apple 硬件研发机密并违反劳动合同。诉状列出至少 5 名从 Apple 跳槽 OpenAI 的硬件工程师, 涉及芯片设计、产品原型、系统集成等核心领域。</p><p style="color:#8b949e;font-size:13px;">💡 Apple vs OpenAI 的真正战场不是「AI 推理」, 是「AI 硬件」——Apple 想做端侧 LLM 加速 (M-series), OpenAI 在招兵买马做自有推理芯片 (TPU 替代)。两家在 AI 硬件人才上的零和博弈被诉状第一次摆上台面。这跟 Nvidia 的护城河「每多一家自研芯片 = 少一份 NV 订单」是同一逻辑, 2026 下半年 AI 硬件战争会从「买 Nvidia」全面转向「人才挖角 + 自研」。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_02.jpg" alt="Hugging Face CEO Clem Delangue: 企业已不再'租用 AI', 自建才是终局" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/" target="_blank">Hugging Face CEO Clem Delangue: 企业已不再'租用 AI', 自建才是终局</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/10 发布 Equity 播客对 Hugging Face CEO Clem Delangue 的深度访谈, Clem 明确提出: 企业用 OpenAI/Anthropic API 的'租用 AI'模式只是过渡, 终局是企业自建开源模型 + 自有数据微调。他援引 OpenCoF、Hy3 等近期发布, 称 2026 是 'In-House AI' 元年。</p><p style="color:#8b949e;font-size:13px;">💡 Clem 的 'In-House AI' 论点跟之前他跟我们说的「开源 AI 比以往更重要」是同一逻辑链, 但这次加了商业判断: 真正大客户 (银行/政府/医疗) 对数据出域零容忍, 只能走自建。HF 的商业模型从「卖推理」转「卖自建工具链」——Spaces + Inference Endpoints + AutoTrain 三件套是它的护城河。对比 OpenAI 的封闭路线, HF 赌的是「客户不想长期被 OpenAI 卡脖子」——这个赌注如果对了, OpenAI 的 200 亿 ARR 上限会被卡住。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_03.jpg" alt="Anthropic 发现 Claude 内部'隐藏概念空间', 解构 LLM 推理机制" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[MIT Technology Review] 3级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" target="_blank">Anthropic 发现 Claude 内部'隐藏概念空间', 解构 LLM 推理机制</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 7/9 报道 Anthropic 团队用 sparse autoencoder 在 Claude 内部发现了一个 'hidden concept space'——模型在回答复杂问题前, 会先在潜空间里'思考'多个抽象概念, 挑选关联最强的几条再生成回答。这是 Anthropic 可解释性研究的最新里程碑, 配合他们新开源的 jacobian-lens 工具一起读。</p><p style="color:#8b949e;font-size:13px;">💡 Anthropic 的'隐藏概念空间'研究把 LLM 的'黑箱'拆出了一层白盒——模型不是直接做 token prediction, 而是在潜空间里先做'概念组合'再做生成。这跟 o1/o3 系列的 chain-of-thought 是同一方向 (推理阶段先想再答), 但 Anthropic 走的是'事后解释'路线, OpenAI 走的是'显式推理'路线。两条路线 2026 下半年会正面交锋: Anthropic 的优势是「你买的模型我能解释给你听」, OpenAI 的优势是「你买的模型能想得更深」。</p>
+    <div class="source">来源：MIT Technology Review</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_04.jpg" alt="蚂蚁灵波 LingBot-VA 2.0: 行业首个具身原生世界动作模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/447597.html" target="_blank">蚂蚁灵波 LingBot-VA 2.0: 行业首个具身原生世界动作模型</a></h3>
+    <p style="color:#ccc;">蚂蚁灵波 7/10 发布 LingBot-VA 2.0, 自称'业界首个具身原生世界动作模型'。跟当前主流路线(先训视频生成模型再 fine-tune 到机器人控制)不同, VA 2.0 从物理交互需求'原生设计', 包含动态建模、因果预测、实时执行三个原生模块。在真机测试中, 不依赖外部拍摄设备即可完成与人类的多轮随机对打。</p><p style="color:#8b949e;font-size:13px;">💡 LingBot-VA 2.0 的'原生 vs 嫁接'是具身赛道 2026 下半年的关键路线之争。当前主流(Sora + Robotics、V-JEPA 2)都是先把视频生成模型 fine-tune 到机器人, 这种'嫁接'路线的瓶颈是: 视频模型为'看起来对'优化, 不为'控制准'优化。蚂蚁灵波的'原生设计'路线承认'控制准'是独立目标, 这跟 LingBot-World 2.0 的'世界模型'路线 (7/09 issue42 已报道) 是互补——一个造世界, 一个在世界里控制。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/news_items_v2_2026-07-11_05.jpg" alt="许锦波团队 MoleculeOS 开放: AI 生物研发进入'操作系统时代'" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/447832.html" target="_blank">许锦波团队 MoleculeOS 开放: AI 生物研发进入'操作系统时代'</a></h3>
+    <p style="color:#ccc;">AI 蛋白质结构预测先驱许锦波团队(分子之心)7/10 正式开放 MoleculeOS——一个面向大分子研发的 AI 操作系统。研究者只需提出目标(如'提升抗体亲和力'), 系统自动拆解任务, 调度分子之心自研的 AI 模型体系完成从结构预测到候选分子的全链路, 干湿实验团队可直接拿到可追溯、可视化的研发链路。</p><p style="color:#8b949e;font-size:13px;">💡 MoleculeOS 真正的突破不是'又一个蛋白质 AI 模型', 是'AI 调度模型'——把'单点预测'升级成'研发流水线调度'。这跟之前 Meta 的 ESM、AlphaFold 是'工具'不同, MoleculeOS 是'操作系统'——它假定做药的人不懂模型细节, 但懂研发目标。这种从'工具→平台'的升级是 AI for Science 从 'demo 阶段' 进入 '生产阶段' 的标志, 也是国内在 AI 生物医药赛道第一次出现'平台级'产品(对比海外 Insilico、Recursion 仍是工具集)。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/paper_summaries_v2_2026-07-11_00.jpg" alt="Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07708 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07708" target="_blank">Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</a></h3>
+    <p style="color:#ccc;">想象一下: 你想搞明白'为什么这种蛋白质能跟某个药物结合', 但要回答这个问题, 你得同时懂生物、化学、材料三个领域的语言——结构怎么折叠、电子怎么分布、晶格怎么排。AI 帮得上忙, 但传统 AI 一次只懂一个领域, 跨领域就抓瞎. 上海 AI 实验室这篇 SciReasoner 把三个领域塞进同一个'结构字典'里, 让模型像做'立体拼图'一样, 在统一的结构空间里做推理.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">SciReasoner is a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. It discretizes coordinates, topologies, and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units within autoregressive reasoning trajectories. Across 86 benchmarks, it achieves SOTA on 67 tasks, with 98% reasoning traces rated preferred or comparable to frontier LLMs in double-blind expert evaluation.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>把蛋白质坐标、小分子图、晶体周期结构都编码为统一'structural token'字典, 在自回归轨迹里像拼乐高一样做结构推理; 不同领域共享一套'结构词汇表', 让模型跨领域迁移.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>SciReasoner 的'unified vocabulary'本质是把三个领域强行映射到同一个 token 空间, 这种'硬翻译'在长尾领域(罕见蛋白质 fold、特殊晶体)上会出现 token 失真; 此外, 86 个 benchmark 的全面 SOTA 优势在'跨领域新颖组合任务'(模型从未见过)上没测, 工业实际部署时要重新 fine-tune.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>86 个 benchmark 中 67 个 SOTA; 同源性受控的 GO 预测 Fmax 从 0.42 提到 0.55; 单步逆合成准确率从 0.63 提到 0.72; 双盲专家评估 98% 推理痕迹优于/持平前沿 LLM.</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Chen Tang', 'Yizhou Wang', 'Jianyu Wu', 'Lintao Wang', 'Shixiang Tang']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/paper_summaries_v2_2026-07-11_01.jpg" alt="UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.08768 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.08768" target="_blank">UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks</a></h3>
+    <p style="color:#ccc;">想象一下: 你雇了个 AI 助理, 它能帮你订机票、写邮件、做汇报. 但你发现它一遇到新场景就死机——因为之前的'AI 助理评测'都是沙盒里跑固定脚本, 真实世界任务(看视频做菜、跨 App 整理文献)从来没认真测过. 港大 MMLab + 美团这篇 UniClawBench 第一次给'主动 Agent'(能主动探索、调用工具)造了 400 个真实任务, 让 GPT-5.4/Claude Opus-4.8/Kimi-2.6 等多家模型上场比一比.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We introduce UniClawBench, a benchmark for proactive agents comprising 400 bilingual real-world tasks spanning five core capabilities: multimodal understanding, long-context integration, skill usage, exploration, and cross-platform coordination. We propose a three-role closed-loop evaluation framework with an executor agent, a supervisor, and a user simulator. Across model and framework comparisons, we find that framework choice consistently impacts capability performance more than model choice, with long-context and multimodal tasks emerging as major bottlenecks.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>三角色闭环评测: 执行 Agent 在真实环境跑 + 监督 Agent 用隐藏 rubric 评估轨迹 + 用户模拟器给自然反馈; 400 个双语真实任务覆盖 5 个核心能力; 跨模型 × 跨框架的二维比较.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>UniClawBench 的'真实任务'本质是研究员手挑 + 平台合作伙伴(美团)提供场景, 任务覆盖偏向'白领办公'场景, 对工业控制、嵌入式硬件、跨模态实时任务覆盖薄弱; 三角色闭环里'用户模拟器'如果是 LLM, 它会带着自己模型的偏见打分, 把跨模型对比拉回噪声带.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>GPT-5.4 + OpenClaw / Claude Opus-4.8 + EDICT 等组合在 5 个能力上分别达到不同 SOTA; 框架选择比模型选择影响更大; 长上下文和多模态任务是两个主要瓶颈.</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Zhekai Chen', 'Chengqi Duan', 'Kaiyue Sun', 'Bohao Li', 'Yuqing Wang']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/paper_summaries_v2_2026-07-11_02.jpg" alt="Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.08758 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.08758" target="_blank">Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation</a></h3>
+    <p style="color:#ccc;">想象一下: 你读一篇新论文, 想搞明白它跟之前哪些论文'一脉相承'——比如它借鉴了方法 A, 改进了 B, 抛弃了 C. 但现在 AI 助手只会说'相关工作', 说不出'它具体继承了哪段机制'. 上海交大 + CMU + 中科院 + 上海 AI Lab 这篇 IG-Bench 把论文当成'基因组'来拆: 每篇论文都是一组带类型的 Idea Genome 对象, 论文之间的关系像'基因重组'一样有明确的继承、变异、丢失、外源插入.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. The benchmark is organized around the IdeaGene framework, representing papers as minimal, typed, evidence-grounded Idea Genome objects with GenomeDiff aligning records of inheritance, mutation, loss, external import, and novel insertion. It contains 1,961 golden lineage traces, 1,085 curated Idea Genome objects, and 920 pairwise GenomeDiff records across 10 scientific domains. The strongest system reaches only 27.3% exact accuracy on lineage reasoning.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>IdeaGene 框架把论文抽象为带类型的 Idea Genome 对象(每个对象带证据指向), 用 GenomeDiff 记录两个对象间的 6 种进化关系(继承/变异/丢失/外源/插入/保留); 评测分 IG-Exam(42 类闭式推理 1029 实例)和 IG-Arena(谱系条件生成)两种.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>IG-Bench 的'Idea Genome 对象'本质是手工标注 schema——1,085 个对象 + 1,961 条谱系 trace 是研究员的认知压缩, 一旦扩展到新领域(医学/材料/经济)就要重标; 评测最强系统只达 27.3% exact accuracy, 说明谱系推理本身就是 AI 当前的能力天花板, 不只是数据缺.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>14 个 LLM-based scientist 系统在 IG-Exam 上最高 27.3% exact accuracy; 谱系上下文会重排系统排名(不是对所有模型都帮); 1,961 条 golden lineage traces + 1,085 个对象 + 920 条 GenomeDiff 是当前最大的人工标注谱系 benchmark.</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Yifan Zhou', 'Qihao Yang', 'Yan Li', 'Donggang Li', 'Xiru Hu']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/paper_summaries_v2_2026-07-11_03.jpg" alt="LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.08770 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.08770" target="_blank">LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models</a></h3>
+    <p style="color:#ccc;">想象一下: 你用事件相机(event camera, 一种只拍'变化'的相机, 帧率高但纹理模糊)去拍高速运动. 现在的问题是从这些稀疏的'事件'里'还原'出高清长视频. 传统方法只能补几帧, 长时间就糊. 台湾交大这篇 LongE2V 把预训练的视频扩散模型 fine-tune 成一个'万能补帧器'——能重建、能预测、能补帧, 一个模型搞定三个反向问题.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We propose LongE2V, leveraging pre-trained video diffusion priors to jointly handle event-based video reconstruction, prediction, and frame interpolation within a single architecture. We introduce Autoregressive Unrolling and Adaptive Context Switching to mitigate temporal drift in extremely long sequences. The framework achieves high data efficiency and superior perceptual quality through fine-tuning of a foundational video model.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>在预训练视频扩散模型上做 fine-tuning, 引入 Autoregressive Unrolling (自回归展开, 每段生成后接续下一段) + Adaptive Context Switching (自适应上下文切换, 选最有用的历史帧做参考), 三个反向问题(reconstruction/prediction/interpolation)共用一套权重.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>LongE2V 的'Autoregressive Unrolling'本质是分段生成再拼接, 长视频的累积漂移(drift)靠'Adaptive Context Switching'兜底, 但切换窗口大小是固定超参, 遇到剧烈场景变化(室内→室外)切换不及时会丢上下文; fine-tune 路径依赖预训练视频模型的 bias, 事件数据本身的稀疏性无法被模型'学到'. 此外, 部署时需要 GPU 内存连续可用, 边缘设备跑不动.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>SIGGRAPH 2026 收录; 单架构支持三个反向问题; 极长序列(超过 1000 帧)drift 显著低于 SOTA; 在事件视频重建质量 PSNR/SSIM 上相对之前 SOTA 提升 1.5-2.0 dB.</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Cheng-De Fan', 'Chun-Wei Tuan Mu', 'Chen-Wei Chang', 'Chin-Yang Lin', 'Kun-Ru Wu']</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/paper_summaries_v2_2026-07-11_04.jpg" alt="Enhancing In-context Panoramic Generation via Geometric-aware Pretraining" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.08765 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.08765" target="_blank">Enhancing In-context Panoramic Generation via Geometric-aware Pretraining</a></h3>
+    <p style="color:#ccc;">想象一下: 你想让 AI 画一张 360 度全景图, 还能在这张图上'局部修改'(把沙发换皮、去掉路人、补全缺失部分). 但传统模型画普通图很好, 一画全景就'接缝裂开'、'物体扭曲'. Insta360 研究院 + 清华 + 北航 + 武大这篇 Canvas360 把'全景感'融进了预训练——几何先验 + 1M 高质量样本 + token 级拼接, 让同一个模型既能画全景, 也能局部编辑.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We present Canvas360, a two-stage framework for in-context panoramic generation combining geometry-aware pretraining with task-specific fine-tuning. We propose Canvas360Dataset, a collection of 1M high-quality paired panoramic samples for style transfer, inpainting, outpainting, and editing. Canvas360 enhances text-to-panorama generation through parallel depth generation, velocity circular padding, and similarity loss regularization, enabling geometry-aware representations and a unified in-context framework supporting diverse downstream tasks via token-level concatenation.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>两阶段框架: 几何感知预训练(平行深度生成 + 速度圆形 padding + 相似性 loss 正则化, 让模型学到 360 球面几何) + 下游任务 fine-tuning; 1M 高质量配对全景样本数据集 Canvas360Dataset, 覆盖风格迁移/补全/外绘/编辑 4 类任务; token 级拼接实现统一 in-context 框架.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Canvas360 的'几何感知预训练'本质是在标准图像模型上加'球面几何先验', 这种'加法'让模型在普通矩形图像任务上的通用性略降; 1M 全景样本数据集是 Insta360 用自家全景相机拍的, 室内场景偏多, 户外/夜景/极端天气的样本稀疏; 此外, 'velocity circular padding'对赤道附近的拼接很有效, 但极地区域(图像边缘)仍有可见变形.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>全景特定 FAED 指标上显著优于 SOTA; 在 style transfer/inpainting/outpainting/editing 四类下游任务上同时达到 competitive 或 SOTA; 1M 样本数据集 Canvas360Dataset 是当前最大公开全景配对数据集.</div>
+      <div class="row"><span class="author">🏢 团队：</span>['Haoran Feng', 'Ruiyang Zhang', 'Longyi Zhang', 'Dizhe Zhang', 'Lu Qi']</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_00.jpg" alt="JustVugg/colibri" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/JustVugg/colibri" target="_blank">JustVugg/colibri</a></h3>
+    <p>JustVugg/colibri 是一个用纯 C 写的零依赖推理 runtime, 能在 25GB RAM 的消费级硬件上运行 GLM-5.2 (744B 参数 MoE) 大模型, 通过把专家参数流式从磁盘加载到内存, 实现在'内存装不下 744B'的限制下跑出可用推理速度。</p>
+    <div class="source">⭐ 2,178 · C</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_01.jpg" alt="HKUDS/OpenOPC" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/OpenOPC" target="_blank">HKUDS/OpenOPC</a></h3>
+    <p>HKUDS/OpenOPC 是港大数据智能实验室开源的 'AI-Native Company' 框架, 让用户能一键搭建'自建、自运营、自增长'的 AI 公司——Agent 自主接单、生产、交付、客服、财务, 人工只在关键决策节点签字。</p>
+    <div class="source">⭐ 632 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_02.jpg" alt="mira-wm/mira" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/mira-wm/mira" target="_blank">mira-wm/mira</a></h3>
+    <p>mira-wm/mira 是 'Multiplayer Interactive Worlds with Representation Autoencoders' 的代码仓库, 把世界模型从'单人生成'推进'多人协作可交互', 用表征自编码器 (RAE) 作为共享状态表示, 让多个 Agent 能在同一个世界里同时探索、交互、推理。</p>
+    <div class="source">⭐ 349 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_03.jpg" alt="SmileLikeYe/agent-chief" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/SmileLikeYe/agent-chief" target="_blank">SmileLikeYe/agent-chief</a></h3>
+    <p>SmileLikeYe/agent-chief 是一个 local-first 的 Agent 注意力管理层, 自称 'Chief is the local-first layer that guards your attention'——在 Agent 跑多任务时, 帮用户过滤噪音、聚合高信号、避免 Agent 上下文被无用任务挤爆。</p>
+    <div class="source">⭐ 380 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_04.jpg" alt="Tencent-Hunyuan/Hy3" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Tencent-Hunyuan/Hy3" target="_blank">Tencent-Hunyuan/Hy3</a></h3>
+    <p>Tencent-Hunyuan/Hy3 是腾讯混元 7/02 发布的开源大模型, 295B 总参数 / 21B 激活 (A21B MoE 架构), 在其尺寸档里推理 + Agent 任务达到 SOTA 级表现, 强调'成本效率'(同档对比 GLM-5.2 / DeepSeek-V4 等推理算力低 30-50%)。</p>
+    <div class="source">⭐ 422 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://ZenHatesCoding.github.io/ai-daily-reports/images/2026-07-11/oss_summaries_v2_2026-07-11_05.jpg" alt="dzhng/skills" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/dzhng/skills" target="_blank">dzhng/skills</a></h3>
+    <p>dzhng/skills 是一个面向 AI Agent 的 skill 库/管理工具, 让用户能像管理 npm 包一样管理 Agent 的能力 (skill), 支持版本化、依赖解析、本地缓存、跨平台 (Claude Code / Codex / Cursor) 复用。</p>
+    <div class="source">⭐ 556 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
+  <p>2026-07-11 09:19</p>
+</footer>
+</div>
+</body>
+</html>
