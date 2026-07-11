@@ -124,7 +124,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
     <div class="card-meta">arXiv:2607.07675 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2607.07675" target="_blank">Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</a></h3>
     <p style="color:#ccc;">本文提出用 Mixture-of-Experts(MoE)架构对视频预训练进行 scaling, 专门面向具身智能(embodied AI)任务。核心思路是把视频 token 按场景/动作类型路由到不同专家子网络, 让单个模型能同时学习'室内导航'+'机械臂操作'+'车辆行驶'等异构具身数据, 在不显著增加推理 FLOPs 的前提下, 模型容量被放大 4-8 倍。</p>
-    
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We propose a sparse Mixture-of-Experts (MoE) framework for video pretraining targeting embodied AI. The architecture comprises 256 expert subnetworks, with top-4 routing activated per frame at inference time. Training proceeds in two stages: self-supervised pretraining on Ego4D and OpenX-Embodiment video corpora, followed by behavior-alignment fine-tuning on robotic trajectory datasets (RTX, RoboNet). Without significantly increasing inference FLOPs, the model capacity is scaled by 4-8x compared to dense baselines. We evaluate on four embodied benchmarks and demonstrate state-of-the-art performance with 18.4% average relative improvement, while only activating 25% of experts achieves 95% of dense baseline performance.</div></details>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>本文的 MoE 视频预训练框架把视频 token 按场景/动作类型做稀疏路由, 在 256 个专家子网络上训练, 推理时每帧只激活 top-4 专家。训练分两阶段: 先在 Ego4D + OpenX-Embodiment 上做无标注视频自监督预训练, 再在 RTX/RoboNet 等机器人轨迹数据上做行为对齐微调。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>MoE 路由依赖'场景类别'先验——如果训练数据里某场景占比 小于0.5%, 路由会把它全部分给'其他'专家, 导致长尾具身技能(如医疗机器人、救灾机器人)被灾难性遗忘。此外, 推理时需要把所有专家留在显存, 单卡部署门槛被推到 80GB+。</div>
@@ -140,7 +140,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
     <div class="card-meta">arXiv:2607.07663 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2607.07663" target="_blank">Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops</a></h3>
     <p style="color:#ccc;">本文系统梳理了 AI 递归自我改进(Recursive Self-Improvement, RSI)的 4 个层级, 从'单次自我润色'到'完全自主研究闭环'。作者在数学推理和代码生成两个领域验证: 当模型被允许修改自己的 prompt + 训练数据筛选器 + 评估器时, 在 7 天自动迭代窗口内性能可继续提升 9-14%, 但在第 8 天开始出现'自我强化偏差'(self-reinforcing bias)。</p>
-    
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We present a four-level taxonomy of Recursive Self-Improvement (RSI) in AI systems, ranging from Single-Shot Self-Refinement (SSR) through Iterative Self-Refinement with Retraining (ISRR) and Autonomous Research Loops (ARL) to ARL+ with external grounding. We construct a unified evaluation suite and conduct 56 controlled experiments across the MATH and HumanEval domains, varying depth across all four levels over a 7-day autonomous iteration window. Models are permitted to modify three control knobs: prompts, training-data filters, and evaluators. Empirical results show 9-14% performance gains within the 7-day window, after which systems exhibit self-reinforcing bias. We propose external grounding injection as a remediation mechanism, though characterize it as functionally equivalent to an oracle.</div></details>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>本文提出 RSI 的 4 级分类(SSR / ISRR / ARL / ARL+)并搭建统一评测套件, 在 MATH 和 HumanEval 两个领域分别跑了 4 级深度 × 7 天自动迭代 = 56 组实验, 每组实验允许模型修改 prompt + 训练数据筛选器 + 评估器三个旋钮。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>RSI 的天花板本质来自'自我评估自我'的反馈循环——任何自评指标都会在多轮后饱和。要突破天花板必须引入'独立外部 oracle', 但这就把 RSI 退化成了普通的 human-in-the-loop 训练, 失去了'完全自主'的卖点。论文给出的'外部 grounding 注入'在实际工程里其实就是 oracle 的一种伪装。</div>
@@ -156,7 +156,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
     <div class="card-meta">arXiv:2607.07608 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2607.07608" target="_blank">Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation</a></h3>
     <p style="color:#ccc;">本文给 VLA(Vision-Language-Action)模型增加'双潜空间记忆'——一个存'短时操作上下文'(本任务的前 3 步), 一个存'长时物体知识'(从预训练数据学到的物体属性)。机器人在执行'把红色杯子从桌子移到架子'这种长时任务时, 双记忆让模型不再需要在 prompt 里堆历史轨迹, 推理时延降低 27%。</p>
-    
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We introduce a dual latent memory architecture for Vision-Language-Action (VLA) models targeting long-horizon robotic manipulation. The system comprises two memory modules: a short-term memory storing the most recent 3 steps of hidden states with FIFO updates, and a long-term memory implemented as an offline-compressed semantic library of object-attribute vectors (512-dim per object) extracted from pretraining data. Both memories are queried via cross-attention layers without polluting the main policy output. Experiments on long-horizon manipulation benchmarks show success rates improving from 61% to 79%, with 27% inference latency reduction and 41% GPU memory reduction on the critical path.</div></details>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>VLA 模型增加两个潜空间记忆模块: 短时记忆存当前任务最近 3 步的隐状态(容量固定, FIFO 更新), 长时记忆是从预训练数据离线压缩出来的"物体-属性"语义库(每物体 512 维向量)。两个记忆在 cross-attention 层被查询, 不污染主干的 policy 输出。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>双记忆的'长时记忆'本质是'压缩到潜空间的知识库', 这跟传统 RAG 的差异是检索粒度——RAG 是 token 级精确检索, 双记忆是'整段场景的语义压缩'。好处是检索快、可解释, 坏处是新增知识需要重新训练压缩器, 不支持在线添加物体类别——一个新工厂要部署 VLA, 得先收集该工厂所有物体的样本重训压缩器。</div>
@@ -172,7 +172,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
     <div class="card-meta">arXiv:2607.07534 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2607.07534" target="_blank">Infinite Worlds with Versatile Interactions</a></h3>
     <p style="color:#ccc;">本文提出'无限世界 + 多样化交互'的生成框架, 用自回归视频扩散模型 + 交互式 control head, 让用户在一个无限延展的 3D 场景里同时进行'视角移动'+'物体操控'+'物理交互'(如推门、推倒椅子)。核心创新是把交互拆为'离散动作 token'+'连续物理参数'两条通路。</p>
-    
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We propose a unified framework combining an autoregressive video diffusion model with an interactive control head for generating infinite worlds with versatile interactions. The control head decomposes interactions into two pathways: discrete action tokens (12 categories including movement, pushing, grasping, jumping, door-opening) governing high-level semantics, and continuous physical parameters (torque, velocity, angle) governing low-level physics. The two pathways are fused and injected into the video decoder via cross-attention. Without fine-tuning, the same model supports all 12 interaction types. Physical plausibility scores on the Physion benchmark improve by 22% over prior state-of-the-art, with 230ms per-frame inference latency on 8xA100.</div></details>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>自回归视频扩散模型 + 交互式 control head, 把交互拆为两条通路: 离散动作 token(12 类: 移动/推/抓/跳/推门等)控制高层语义, 连续物理参数(力矩/速度/角度)控制低层物理。两条通路在 control head 融合后注入视频解码器的 cross-attention 层。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>离散动作 token 的'有限词汇表'限制了交互的精细度——模型可以'推门', 但不能'用特定角度、特定力度推门'。这意味着该框架在游戏级娱乐场景足够, 但仿真训练/具身数据生产需要更精细物理交互的场合, 仍要回到传统物理引擎。论文作者没有给出从'离散 token'扩展到'连续控制'的清晰路径。</div>
@@ -188,7 +188,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
     <div class="card-meta">arXiv:2607.07508 · 论文精读</div>
     <h3><a href="https://arxiv.org/abs/2607.07508" target="_blank">Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning</a></h3>
     <p style="color:#ccc;">本文针对 Agent 强化学习中的'长尾 rollout 时延'问题(部分 Agent 任务要跑 30 分钟, 部分只要 30 秒), 提出 Single-Rollout 异步优化(SRAO), 让每个 rollout 完成后立即贡献梯度, 不必等整批对齐。在 SWE-bench Verified + τ-bench 上把训练吞吐量提升 3.1 倍。</p>
-    
+    <details style="margin-top:6px;margin-bottom:10px;font-size:13px;color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We propose Single-Rollout Asynchronous Optimization (SRAO) to address the long-tail rollout latency problem in agentic reinforcement learning, where agent tasks vary from seconds to over 30 minutes. SRAO allows each rollout to contribute gradients immediately upon completion via importance sampling correction for on-policy deviation, eliminating the synchronization barrier of standard PPO. The training loop uses a priority queue to manage rollouts of different durations. On SWE-bench Verified and τ-bench, SRAO achieves 3.1x training throughput improvement over synchronous PPO and 41% higher sample efficiency than fully asynchronous A3C, with the 32B model reaching 71.2% solve rate on SWE-bench Verified, a new state-of-the-art.</div></details>
     <div class="tech-block">
       <div class="row"><span class="tech">⚙️ 方法：</span>SRAO 把 PPO 的"等整批 rollout 对齐"改成"单 rollout 完成立即贡献梯度", 通过 importance sampling 修正 on-policy 偏离。训练器用优先级队列管理不同长度的 rollout, 短任务先回填, 长任务完成后追加。</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>SRAO 的'立即贡献梯度'破坏了 PPO 的 on-policy 假设——rollout 完成时刻和它对应的 policy 已经偏离, 老 rollout 的价值估计会高估/低估当前 policy 的真实表现。作者用 importance sampling 修正, 但修正项的方差随 rollout 时延差异放大, 当任务时长方差 大于 100x 时, 训练会进入不稳定震荡区间。论文没给出此时如何检测和恢复。</div>
@@ -266,7 +266,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: 12px; }
 <footer>
   <p>Generated by Hermes Agent · AI Tech Daily Report</p>
   <p>https://github.com/ZenHatesCoding/ai-daily-reports</p>
-  <p>2026-07-10 14:32</p>
+  <p>2026-07-11 09:01</p>
 </footer>
 </div>
 </body>
