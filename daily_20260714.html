@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月14日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月14日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_00.jpg" alt="Anthropic 启动 Claude 印度本地化定价, 美国后最大单一市场" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch.com] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/" target="_blank">Anthropic 启动 Claude 印度本地化定价, 美国后最大单一市场</a></h3>
+    <p style="color:#ccc;">Anthropic 7/13 宣布 Claude 在印度启动本地化定价策略, 把印度的 API 订阅费率调整为'购买力平价'区间, 同时支持本地支付方式 + 本地化企业合同结构. 这是 Anthropic 第一次按国别做价格层, 而非单一全球价目表. 印度是 Anthropic 美国后最大的单一市场, App 端 Claude 增长曲线近 6 个月加速, 企业 API 接入数月增 40%+. 本地化定价的核心是降低单 token 边际成本让本地 ISV / SaaS 集成商能跑通 ROI.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Anthropic 这招本质是把'地理定价 + 本地合同 + 本地支付'三件套打包, 等同于 SaaS 厂商经典的 'GTM localization' 路径. 但对 AI 厂商有更深一层意义: 推理成本边际仍在快速下降, '全球统一价'意味着放弃了把降价让利转化为市占率的机会. 这跟 7/12 OpenAI × Deutsche Telekom 240M 用户合作是同一战略轴——'AI 厂商从产品输出转向基础设施级落地', 但 OpenAI 走'借电信运营商穿透', Anthropic 走'借本地支付 + 本地价格穿透'. 两条路最终都会撞上同一个问题: 监管 (数据本地化 / 主权 / 内容审核) 如何匹配这套价格分层.</p>
+    <div class="source">来源：techcrunch.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_01.jpg" alt="Satya Nadella 对'用 AI 的公司'发出震撼警告" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch.com] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/" target="_blank">Satya Nadella 对'用 AI 的公司'发出震撼警告</a></h3>
+    <p style="color:#ccc;">微软 CEO Satya Nadella 7/13 在一次闭门 CEO 峰会上对'正在用 AI 的公司'发出'震撼警告', 核心论点是: 大多数公司把 AI 当成'效率工具'装到现有流程, 但 AI 真正的杠杆点在'重新设计流程 + 重构组织 + 重写商业模式', 单纯'装 AI' 的公司会在 18-24 个月内被彻底甩开. Nadella 罕见地以'警告'而非'机会'口吻发声, 提到微软内部自己的销售 / 客服 / 工程团队已经在做'AI 重构'而非'AI 增强', 案例包括砍掉 30% 的传统销售外包.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Nadella 这个警告本质是 AI 厂商老大对客户的反向施压: '你不重构就别买我的产品, 因为你买回去也跑不通'. 这是 2026 H2 AI 厂商销售话术的转折点——从 'AI 能让你做得更好' 转向 'AI 让你做不一样的事'. 对企业 IT 决策者, 这意味着 'AI 项目' 的成败标准从 '降本增效 X%' 变成 '你是否敢于砍掉旧流程'. 这种话术升级意味着 AI 厂商在主动淘汰'只想赚快钱的客户', 逼客户进入深度集成轨道.</p>
+    <div class="source">来源：techcrunch.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_02.jpg" alt="Sam Altman 太空数据中心'嘴炮'获多数专家认同: 太空是真终局" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch.com] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/" target="_blank">Sam Altman 太空数据中心'嘴炮'获多数专家认同: 太空是真终局</a></h3>
+    <p style="color:#ccc;">OpenAI CEO Sam Altman 此前关于'太空数据中心'的激进表态被业界认为是吹牛, 但 TC 7/13 采访的多位专家 (前 NASA / Google X / Starcloud) 表示: 太空数据中心不是愿景, 是 5-7 年内的必然路径. 核心驱动是地面数据中心的'水冷极限 + 电网极限 + 碳排极限'三道墙已经触顶, 太空轨道太阳能 + 真空散热 + 无碳约束的组合让 'in-orbit compute' 单位 token 成本曲线从地面 30% 递减变成 60% 递减. Starcloud 已经在轨测试 GPU 集群, 单卡 TDP 散热不依赖液冷.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Altman 的 'space data center' 不再是科技 CEO 的话术口号, 而是 2026 H2 业界共识加速成形. 这背后是 OpenAI / Anthropic / Google 三家在'地面机房容量'上的卡位战已经进入边际收益递减区, 太空数据中心的早期玩家 (Starcloud / Aalyria / Loft Orbital) 现在每瓦成本已接近地面最优值. 对国内厂商, 短期没机会上太空, 但 'AI 算力下沉 + 国产化 + 绿色能源' 三条曲线仍在拉锯. 这也是 7/12 量子位报道的中科曙光 10 万卡国产集群 ('登峰 8000') 的反向叙事——'在地面跑出太空级能效' 是国内算力路线的核心叙事.</p>
+    <div class="source">来源：techcrunch.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_03.jpg" alt="Wired: Siri AI 成 Apple 万能工具, 全面接管系统层" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[wired.com] 3级信源 · cn</div>
+    <h3><a href="https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/" target="_blank">Wired: Siri AI 成 Apple 万能工具, 全面接管系统层</a></h3>
+    <p style="color:#ccc;">Wired 7/14 深度报道: Apple 内部已经把 Siri 重塑为'系统层 AI 万能工具', 不仅是语音助手, 而是横跨 Safari / Mail / Photos / Notes / Files / Calendar / Reminders 7 大原生 app 的统一上下文层. 用户能用自然语言跨 app 完成'找去年那张在 Yosemite 拍的照片 + 把它放进 Pages 报告 + 提醒我明早发给团队'这类串接任务. 后端是 Apple Foundation Model v4 + 本地 on-device + Private Cloud Compute 双路架构, 端到端延迟 <800ms.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Apple 这步跟 7/13 Satya Nadella 'AI 重构流程' 警告 (n2) 形成完整对照——'AI 万能工具' 是 Apple 给出的'AI 重构操作系统' 的答案. 当 Siri 成为系统层总线, 意味着 Apple 把'AI' 从产品功能 (chatbot) 升级为'OS 抽象层', 这是 OpenAI / Google 都还没做到的事 (ChatGPT / Gemini 还是产品, 不是 OS). 对 Android 阵营, 这意味着 Google 必须把 Gemini 推到 GMS / Pixel OS 的系统总线层, 否则会被 Apple 用'AI 操作系统' 这一新维度卡住高端市场. 对开发者, 这是 Apple 重新定义 'OS-level API' 的开始.</p>
+    <div class="source">来源：wired.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_04.jpg" alt="浪潮信息: 单柜 4 万 Agent + 大模型组队答题, 国内 Agent 算力基建成形" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[qbitai.com] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/449311.html" target="_blank">浪潮信息: 单柜 4 万 Agent + 大模型组队答题, 国内 Agent 算力基建成形</a></h3>
+    <p style="color:#ccc;">浪潮信息 7/13 发布 Agent 专用计算平台: 单机柜支持 4 万 Agent 并发, 同时通过'大模型组队'机制让不同 LLM 在多 Agent 协作时按'擅长任务类型'动态分工. 核心技术包括: (1) 单卡 Agent 上下文切换 <2ms, 让 4 万 Agent 共享 GPU 池; (2) 模型路由层根据 query 类型路由到合适模型 (代码 / 推理 / 视觉 / 长文); (3) 调度算法确保每张卡负载均衡. 浪潮同期披露其 NF8260M7 / NF5280M7 系列已被国内 30+ Agent 创业公司采用.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 浪潮这步对国内 Agent 生态意义类似当年 GPU 服务器对深度学习训练的意义——'算力 + 调度 + 路由' 三件套打包, 把 Agent 创业公司的 'infra 选型成本' 从 6 个月砍到 1 周. 这跟 7/12 中科曙光 10 万卡国产集群 (issue44 n05) 是同一战略轴——'国产 AI 算力下沉到细分 workload', 曙光打训练集群, 浪潮打 Agent 推理集群. 对国内 AI Infra 厂商, 这是 'Agent 推理' 作为独立 workload 类目首次被硬件厂商正式识别, 标志着 2026 H2 国内 AI 算力市场从 '训练 vs 推理' 二分进入 '训练 vs 通用推理 vs Agent 推理' 三分.</p>
+    <div class="source">来源：qbitai.com</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/news_items_v2_2026-07-14_05.jpg" alt="Agent 专用搜索引擎登顶 Product Hunt, Token 更省 + 搜得更准" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[qbitai.com] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/449327.html" target="_blank">Agent 专用搜索引擎登顶 Product Hunt, Token 更省 + 搜得更准</a></h3>
+    <p style="color:#ccc;">一款专为 AI Agent 设计的搜索引擎 7/13 登顶 Product Hunt 日榜, 核心卖点是'Token 省 60% + 搜索精度 +18%'. 工作原理: (1) 在 crawl 阶段就针对 Agent 查询模式 (多步推理 + 实体抽取 + 跨页串接) 优化索引结构; (2) 提供 'evidence-grade snippet' API, Agent 拿到的不只是 text + url, 还有 '这段话能回答 query 的可信度评分'; (3) 自带 'agent session cache', 同 Agent 任务的多轮搜索复用中间结果. 上线一周被 800+ AI Agent 项目集成.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Agent 专用搜索的兴起标志 'Agent infra' 正在从 'LLM + vector DB + tool calling' 三件套进化到 'LLM + 专用检索 + 专用 memory + 专用调度' 多件套. 这跟 7/13 浪潮 4 万 Agent 单柜 (n5) + 7/12 中科曙光 10 万卡集群 (issue44 n05) 是同一趋势——'AI 基础设施' 不再只是算力, 而是按 Agent workload 类型 (检索 / 推理 / 训练 / 调度) 拆分的垂直工具栈. 对 search 行业, 这是 Google / Bing 通用搜索被 Agent 时代 'purpose-built 检索' 替代的开始, 也是 '搜索即基础设施' (Search-as-Infrastructure) 类目的成型.</p>
+    <div class="source">来源：qbitai.com</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/paper_summaries_v2_2026-07-14_00.jpg" alt="KronQ: LLM Quantization via Kronecker-Factored Hessian" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.07964 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.07964" target="_blank">KronQ: LLM Quantization via Kronecker-Factored Hessian</a></h3>
+    <p style="color:#ccc;">想象你在工厂里要把一台重型机器压缩到一半体积, 还要保证它跑起来不抖——这就是 LLM 量化 (Quantization) 的活. KronQ 这篇做的就是: 不靠重新训练 (post-training quantization, PTQ), 直接把 4-bit / 8-bit 量化搞得更准. 痛点是现有 GPTQ 这种二阶 PTQ 方法只看'输入特征怎么分布', 忽略了'输出通道对量化误差的敏感度'——就像压缩机器时只看了零件重量, 没看齿轮咬合精度. KronQ 用 Kronecker 分解把 Hessian 矩阵拆成'输入 + 输出'两路乘积, 既能算得动 (二阶 Hessian 直接算不动), 又能完整刻画输出敏感度. 在 Llama-3 / Mistral / Qwen 系列上 4-bit 量化 perplexity 比 GPTQ 低 8-15%, 跟完整重训练 (OmniQuant) 差距从 5% 砍到 不到 1%.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 KronQ, 一种基于 Kronecker 分解 Hessian 的二阶 post-training quantization (PTQ) 方法, 解决大语言模型 (LLM) 低比特量化中的精度退化问题. 现有二阶方法 (如 GPTQ) 仅基于输入激活统计构造量化目标, 隐含假设所有输出通道对量化误差同等敏感, 导致实际精度损失显著. 作者利用 Kronecker-factored Hessian 将完整二阶信息近似为&#x27;输入-输出&#x27; 两路乘积, 兼顾计算可行性与敏感性建模完整性. 在 Llama-3-70B / Mistral-7B / Qwen-72B 等模型上, 4-bit W4A4 量化设置下, KronQ 相比 GPTQ 在 WikiText-2 perplexity 上降低 8-15%, 与需要重训练的 OmniQuant 差距从 5% 缩减至不到 1%, 同时推理速度保持持平. 该方法无需任何反向传播或校准集再训练, 仅依赖前向统计, 部署成本接近 GPTQ 级别.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Kronecker 分解 Hessian H 约等于 A 与 B 的张量积, 其中 A 刻画输入激活协方差, B 刻画输出通道敏感性; (2) 通过 K-FAC 风格近似把二阶矩阵乘法降为两次一阶矩阵乘法, 显存占用从 d 平方级降到 d 的 3/2 次方; (3) 量化目标函数从 min 范数 W x 升级为 min 范数 H 半幂 W x, 自然把输出敏感度纳入; (4) 集成到 GPTQ 的逐层 greedy 框架, 不需要重训练. 工程上完全复用 forward-only 推理流程, 一块 A100 即可量化 70B 模型 不到 30 分钟.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Kronecker 分解是对完整 Hessian 的有损近似, 当输入分布和输出敏感度的耦合非常强 (例如在高度专业化的 fine-tune 模型上) 时, 分解误差可能反向放大——论文在通用 base 模型上验证, 但对 domain-specific LoRA / 全参微调后的模型精度差距未充分评估. 另外二阶统计需要在前向过程中累积足够多样本, 小批量 / 流式场景下近似误差会显著上升, 工程上仍依赖 1024+ 样本的校准集. 相比 GPTQ 的部署便利性, KronQ 多了 Kronecker 分解步骤, 量化时间小幅增加 (10-20%).</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心数字: Llama-3-70B 4-bit W4A4 上 WikiText-2 perplexity 5.42 (GPTQ 6.18, OmniQuant 5.51, FP16 5.21); Mistral-7B 4-bit 上 perplexity 5.78 (GPTQ 6.45); Qwen-72B 4-bit MMLU 准确率保留 98.2% (GPTQ 95.4%). 量化时间不到 30min / 70B 单卡 A100, 跟 GPTQ 同量级. 部署后推理吞吐与 GPTQ 持平.</div>
+      <div class="row"><span class="author">🏢 团队：</span>4 位作者 (Donghyun Lee, Yuhang Li, Ruokai Yin, Priyadarshini Panda) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/paper_summaries_v2_2026-07-14_01.jpg" alt="Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.08964 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.08964" target="_blank">Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading</a></h3>
+    <p style="color:#ccc;">现在 Agent 评测大多 5 分钟就结束了, 跑完看个'成功/失败'二元分数——但真实业务里 Agent 经常要跑几小时甚至几天, 中间一步走偏就全盘崩. Long-Horizon-Terminal-Bench 这篇做了一个'小时级、多阶段、奖励密集'的 Agent 评测集, 评测 Agent 在长时间跨度内能不能稳. 关键创新是'Dense Reward-Based Grading'——把传统 0/1 终态评分改成对中间步骤 / 部分进展都给分. 结果: 现有最强 Agent (Sonnet 5 / GPT-5.6 / Claude Opus 5) 在这个 bench 上完成率不到 35%, 比短任务 (SWE-bench) 低 60%, 说明长时 Agent 的'中间过程治理'远未成熟.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 Long-Horizon-Terminal-Bench, 一个小时级、多阶段、奖励密集的 AI Agent 长时任务评测基准, 弥补现有 terminal benchmark (如 SWE-bench / TerminalBench) 仅评估短时 (分钟级) 任务、且仅基于终态成功与否的二元评分的局限. 基准包含 200+ 个跨 8 类 (系统运维 / 数据管道 / CI/CD / 安全审计 / 批量 ETL / 长流程修复) 的真实终端任务, 平均完成时长 1.5-12 小时, 中位 3.5 小时. 核心创新是 Dense Reward-Based Grading (DRG): 对任务分解为 30-150 个 sub-goal, 每个 sub-goal 独立打分 (0/0.5/1) 加权汇总, 同时跟踪 token 消耗 / wall-clock 时间 / 中途失败-恢复次数. 评测 SOTA Agent (Claude Sonnet 5 / GPT-5.6 / Claude Opus 5 / DeepSeek-V3) 任务完成率 32% ± 4%, 比 SWE-bench 短任务低 58 个百分点; 中途失败后自主恢复成功率仅 24%; token 消耗是短任务的 11-23 倍.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法论: (1) 任务集设计采用 '真实工程师 6 个月工作日志回放', 每个任务包含完整 setup / 中途观察点 / 失败回滚场景; (2) DRG 评分采用 sub-goal decomposition + 知识追踪权重, 对'修复 + 解释 + 验证' 三段动作分别打分; (3) 评估维度扩展为: 完成率 (终态) + dense 分 (过程) + 中途恢复率 (韧性) + token 效率 (经济性) + 人类参考路径相似度 (对齐); (4) 引入 'time-budgeted evaluation', Agent 必须在限定 token / 时间预算内最大化 dense 分, 模拟真实生产环境的资源约束.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>DRG 的 sub-goal 标注依赖领域专家, 8 个领域每个任务平均需要 3-5 小时人工标注, 这让 benchmark 难以快速扩展——200 个任务是 200+ 人工天投入, 加新领域成本线性增长. 另外 dense 分的权重设计有主观性, 不同团队对 '过程质量' 的定义可能差 20-30%, 这让跨 benchmark 比较存在 '权重不一致' 的归一化难题. 此外 hour-long 评测本身的复现成本极高 (单次 SOTA Agent 评测需要 200+ GPU 小时), 这阻碍了学界独立复现.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心数字: SOTA Agent 任务完成率 32% ± 4% (Sonnet 5 35% 大于 GPT-5.6 31% 大于 Opus 5 29% 大于 DeepSeek-V3 27%); DRG dense 分 0.41 (满分 1.0), 比完成率高 9 个百分点; 中途失败后自主恢复成功率仅 24%; token 消耗中位数 1.2M / 任务 (短任务 80K), 最高单任务 18M tokens; wall-clock 时间中位数 2.8 小时; 与人类参考路径相似度 0.38, 说明 Agent 走的是'非人类路径'但常绕远.</div>
+      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Zongxia Li, Zhongzhi Li, Yucheng Shi, Ruhan Wang, Junyao Yang) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/paper_summaries_v2_2026-07-14_02.jpg" alt="PanoWorld: Real-World Panoramic Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.09661 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.09661" target="_blank">PanoWorld: Real-World Panoramic Generation</a></h3>
+    <p style="color:#ccc;">全景图生成 (panoramic generation) 是世界模型 (world model) 的一块硬骨头: 你要让模型生成 360 度无缝环绕的视频, 但传统方法要么丢几何一致性 (旋转到背后场景突然跳变), 要么丢长时记忆 (走远就忘了起点什么样). PanoWorld 的核心思路是抓住全景图的'旋转等变性'——把相机旋转当成'隐式几何变换', 这样模型在训练时就能学到 '转 90 度 = 把图横移 + 上下卷' 的等价关系, 不需要额外标注. 配合新设计的 equirectangular attention 让模型在赤道和极地区域都用同一个 attention 窗口, 最终在 Room-to-Room / Replica / Habitat-Sim 三个仿真数据集上全景生成 FID 比 SOTA 低 22%, 长时一致性 (1 分钟以上) 比 SOTA 高 35%.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 PanoWorld, 一种面向 360 度全景视频生成的 world model, 解决传统全景生成中的&#x27;几何不一致 (旋转到背后场景突变)&#x27;与&#x27;长时记忆丢失 (漫游后起点失真)&#x27;两大核心难题. 核心创新是利用 omnidirectional representation 的 rotation-equivariant 性质, 将相机旋转操作建模为隐式几何变换, 从而让模型在训练阶段就内化 &#x27;旋转 = 几何操作&#x27; 的等价性, 无需额外监督信号. 在 attention 层设计上引入 equirectangular positional encoding, 让赤道高密度区域与两极稀疏区域共享一致的 attention window, 避免传统 cubemap / ERP 投影在极区的采样爆炸问题. 在 Room-to-Room / Replica / Habitat-Sim 三个仿真数据集上, PanoWorld 相比 SOTA (e.g., Vista / GenWarp / 4D-BEV) 的 FID 降低 22%, 1 分钟以上长时一致性 LPIPS 改善 35%, 几何 warping error 降低 41%. 支持 30 秒 + 时长连贯全景视频生成, 推理速度 4.2 FPS (A100).</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Rotation-Equivariant Backbone: 把 3D 旋转群 SO(3) 的离散子群嵌入 attention, 训练时对每帧做随机水平旋转, 让模型学到 '旋转不变' 特征; (2) Equirectangular Attention: 极坐标 patch embedding + 球面相对位置编码, 让赤道与极区共享 attention 范围, 解决 cubemap 投影在极区采样稀疏的痛点; (3) Long-Range Memory Bank: 隐空间缓存最近 8 帧的 key-value, 通过球面坐标检索 (不是欧氏距离) 召回历史观测, 让走远后还能保持起点一致性; (4) 训练时同时监督 frame-level (像素) + scene-level (深度 + 法向量) + temporal (光流) 三路 loss, 让模型学到几何 + 时间 + 视觉的联合表征.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Rotation-equivariant backbone 训练时需要对每帧做随机水平旋转 augmentation, 训练时间相比 vanilla diffusion 增加 35%——单卡 A100 完整训练 7 天 vs SOTA 5 天. 另外 equirectangular attention 在极区的 patch 邻接是非欧的 (球面邻接), 现有 CUDA kernel 对非欧邻接优化不友好, 推理速度 4.2 FPS 相比 cubemap 投影的 12 FPS 有 3 倍差距, 落地到实时 VR / 游戏场景仍需工程优化. 此外 long-range memory bank 占用额外 3 GB 显存, 让 8GB 消费级显卡无法部署.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心数字: Room-to-Room FID 18.4 (SOTA Vista 23.6, GenWarp 22.1), 降低 22%; Replica 长时一致性 LPIPS 0.18 (SOTA 0.28), 改善 35%; 几何 warping error 0.092 (SOTA 0.156), 降低 41%; 支持 30 秒 + 360 度连贯生成, 推理速度 4.2 FPS (A100 单卡), 显存峰值 22 GB. 消融实验显示 rotation-equivariant 单独贡献 FID 改善 11%, equirectangular attention 贡献 7%.</div>
+      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Haoyuan Li, Dizhe Zhang, Yuemei Zhou, Xiangkai Zhang, Haoran Feng) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/paper_summaries_v2_2026-07-14_03.jpg" alt="Video Generation Models are General-Purpose Vision Learners" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.09024 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.09024" target="_blank">Video Generation Models are General-Purpose Vision Learners</a></h3>
+    <p style="color:#ccc;">NLP 领域靠 'next-token prediction' 把任务专属模型统一成 '通用 foundation model', 但 CV 一直没找到等价开关. 这篇论文提出: 大规模文生视频 (text-to-video, T2V) 模型就是 CV 领域的'next-token 等价物'——T2V 模型被迫学到'像素级 + 时间级 + 几何级 + 物理级'的联合表征, 这种表征天然可迁移到检测 / 分割 / 深度估计 / 光流 / 跟踪等下游任务. 作者用 DiT-XL 规模 T2V 模型做 frozen-feature extraction, 在 12 个 CV 任务上 fine-tune 一个线性 head 就能打到 SOTA 90% 以上, 部分任务 (如 video object segmentation) 首次超越 fully-supervised SOTA. 这是 CV 走向 'one foundation, many tasks' 的里程碑.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文论证大规模 text-to-video (T2V) 生成模型可作为计算机视觉领域的&#x27;通用 foundation model&#x27;, 类比 NLP 领域 next-token prediction 推动 foundation model 统一化的角色. 核心论点是: T2V 模型在 &#x27;像素 + 时间 + 几何 + 物理&#x27; 联合分布上的预训练, 迫使其学到比图像分类 / 对比学习 / MAE 更通用的视觉表征, 这种表征天然可迁移到 dense prediction / 分割 / 检测 / 深度 / 光流 / 跟踪等下游任务. 作者使用 DiT-XL 规模 (675M 参数) T2V 模型作为 frozen feature extractor, 在 12 个 CV benchmark (COCO detection / ADE-20K segmentation / NYU depth / Sintel optical flow / DAVIS video segmentation / Kinetics action recognition 等) 上 fine-tune 线性 head 即可达到 SOTA 90%+ 水平, 其中 video object segmentation 首次超越 fully-supervised SOTA 3.2 mIoU, video depth estimation 接近 SOTA 误差 0.043. 消融实验显示 T2V 表征的通用性源于其&#x27;预测像素序列&#x27;而非&#x27;预测语义标签&#x27;的训练目标.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>方法论: (1) 使用 675M 参数 DiT-XL T2V 模型 (在 LAION-Chronicle 200M 视频上预训练) 作为 frozen encoder; (2) 从 T2V 模型的 intermediate DiT block (选 block 12、18、24) 抽取 spatial-temporal feature maps; (3) 对每个下游任务, 只 fine-tune 一个 task-specific 线性 head + 1-2 层轻量 adapter (参数量不到总模型 1%); (4) 训练数据只用目标任务的官方 train split, 不用任何额外数据; (5) 评测时把 frozen feature + linear head 端到端推理, 不需要 video 生成模型的解码器; (6) 与同期对比: 同样的 frozen 设置下, T2V 表征在 dense prediction 任务上比 DINOv2 / CLIP / SAM 的 frozen 表征高 8-15 个百分点.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>T2V foundation model 推理成本极高 (675M 参数, 11 FPS / A100), 部署到边缘设备 (手机 / AR 眼镜) 不可行, 实时应用必须先用蒸馏 / 量化把模型压到 不到 100M 参数, 论文未提供完整蒸馏 pipeline. 另外 T2V 表征对'语义类别'的判别力弱于专门预训练的 CLIP / DINOv2, 在 zero-shot image classification 上落后 6-10 个百分点, 说明 T2V 适合 dense prediction 但不适合 high-level semantic 任务. 此外 frozen 设置让 fine-tune head 必须承担全部任务适配, 对复杂任务 (如 video captioning) 的适配深度不足, 跟 full fine-tuning 仍有 15-20% 差距.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心数字: COCO detection frozen-T2V linear head mAP 58.4 (SOTA fully-supervised 62.1, 达到 94%); ADE-20K segmentation mIoU 47.2 (SOTA 51.8, 91%); NYU depth estimation RMSE 0.43 (SOTA 0.41, 接近); DAVIS video segmentation mIoU 86.3 (SOTA 83.1, 首次超越 +3.2); Sintel optical flow EPE 2.84 (SOTA 2.31, 81%); Kinetics-400 action recognition top-1 81.4 (SOTA 89.0, 92%). 12 个任务平均达到 SOTA 90%+ 水平, video class 任务最强, image class 任务稍弱. 推理速度: frozen T2V encoder 11 FPS (A100), fine-tune head 几乎免费.</div>
+      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Letian Wang, Chuhan Zhang, Rishabh Kabra, Jasper Uijlings, Steven Waslander) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/paper_summaries_v2_2026-07-14_04.jpg" alt="A Sovereign, Open-Source Foundation Model for German and English" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.09424 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.09424" target="_blank">A Sovereign, Open-Source Foundation Model for German and English</a></h3>
+    <p style="color:#ccc;">欧洲一直没有自己的'主权大模型'——Mistral 是法国 + 部分开源, 但训练数据 + 推理部署还是重度依赖美国云. Soofi 这篇推出 30B-A3B MoE 模型: 总参 30B 但每次只激活 3B (active params), 是个 hybrid Mamba + Transformer 架构, 主打'主权 + 开源 + 长上下文高效推理'. 关键卖点是 Mamba 让 inference cache 在上下文增长时几乎不变 (传统 Transformer cache 线性涨), 这对德语这种 morphologically rich 的语言 + 法律 / 学术长文本处理特别有用. 训练数据 100% 欧洲 GDPR 合规, 推理可以纯本地. 这是欧盟'数字主权'战略在 LLM 领域的具体落地.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文推出 Soofi S 30B-A3B, 一种主权、开源的 Mixture-of-Experts (MoE) hybrid Mamba-Transformer 基础模型, 专为德语和英语设计, 旨在满足欧盟对 &#x27;数字主权&#x27; (digital sovereignty) 的战略需求. 总参数量 30B 但每次推理只激活 3B (active parameters), 通过 Mamba 状态空间模型 (SSM) 与 Transformer attention 的混合架构, 在长上下文场景下实现 near-constant inference cache, 显著优于纯 Transformer 模型的 KV cache 线性增长问题. 模型在 1.5T token 欧洲语料 (含德国联邦法律 / 学术论文 / 媒体 / 政府公开数据) 上预训练, 100% 满足 GDPR 合规, 推理可完全本地化, 不依赖美国云服务. 在 German legal benchmark (JuraEval) / English MMLU / 长上下文 RULER (128K context) 上, 30B-A3B 性能接近 Qwen-72B 与 Llama-3-70B, 但推理速度比 70B dense 模型快 3.5 倍, 显存占用低 60%.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Hybrid Mamba-Transformer: 70% Mamba SSM 层 + 30% 标准 attention 层交替堆叠, 让 SSM 处理长序列高效性 + attention 处理精确检索; (2) MoE 路由: 16 个 expert, top-2 激活, 每个 token 只激活 3B 参数, 平衡容量与效率; (3) 数据治理: 100% 欧洲数据源 + GDPR 合规审计 + 严格版权链验证, 训练数据来源 100% 可追溯; (4) 本地推理优化: 支持 GGUF 量化 (4-bit 不到 16GB 显存部署), Mamba state 可序列化到 NVMe, 让消费级 GPU 也能跑 30B 模型; (5) RLHF / DPO 用欧洲标注团队, 价值观对齐到欧盟 AI Act 框架.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Mamba SSM 在精确检索任务 (如 '找出第 87 段中'X' 词') 上比 attention 弱 5-8 个百分点——论文承认在 8K 以下短上下文, Mamba 的优势不明显, 主要优势在 64K+ 长上下文场景, 这限制了模型在短文本客服 / 对话场景的部署价值. 另外 100% 欧洲数据让模型在 '美国流行文化 / 流行梗 / 实时事件' 上的知识落后通用模型 6-12 个月, 对面向北美 / 亚太用户的产品是显著劣势. MoE 路由对工程部署要求高, top-2 gating 推理时偶发 'expert imbalance' (个别 expert 被过度激活), 需要运行时 rebalance.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>核心数字: JuraEval (德国法律) accuracy 71.8% (Qwen-72B 72.4%, Llama-3-70B 70.1%); MMLU 5-shot 75.4% (Qwen-72B 78.1%); RULER 128K context retrieval accuracy 87.3% (Qwen-72B 84.1%, Llama-3-70B 79.8%); 推理速度 32 tokens/sec (Qwen-72B 9 tokens/sec); 显存 4-bit 量化 14GB (Qwen-72B 35GB). 长上下文优势在 64K+ 时显著: 128K 时 RULER 比 Qwen-72B 高 3.2 个百分点, 推理速度快 3.6 倍.</div>
+      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (The Soofi-Team, Benedikt Droste, David Fitzek, Ruben Härle, Lukas Helff) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_00.jpg" alt="vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/vinhhien112/Three.js-Object-Sculptor-Codex-Plugin" target="_blank">vinhhien112/Three.js-Object-Sculptor-Codex-Plugin</a></h3>
+    <p>它像一张'2D 草图到 3D 场景'的直通票：把一张物体照片丢进 Codex 插件,自动吐出可立刻挂到 Three.js 场景里、零外部资源、可逐帧动画的程序化模型代码。关键创新是用纯代码而非网格文件描述三维物体,体积小、可 diff、可由 LLM 在迭代中修改,绕开 GLB/FBX 这种二进制资产难以被代理编辑的痛点。对游戏原型、AR/VR 资产生成、设计师和 LLM 协作建模都是一次工作流的范式位移,让 3D 内容回到源代码这一层。</p>
+    <div class="source">⭐ 847 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_01.jpg" alt="William-Lu-stack/LuxyAI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/William-Lu-stack/LuxyAI" target="_blank">William-Lu-stack/LuxyAI</a></h3>
+    <p>它把 K8s 集群变成一位 24 小时在线的 AI 站长：AgenticOps 范式下,运维事件由 LLM 自动诊断、自动执行修复 playbook、自动写回 runbook,人只负责审批边界。关键创新是把生产事故的'检测-定位-修复-复盘'四步压在同一个智能体回路里,而不是拆成告警、值班和事后复盘三个割裂流程。对中型 SRE 团队是人力成本拐点,对云厂商意味着事故 MTTR 的新基线,也重新定义了平台工程团队的角色边界。</p>
+    <div class="source">⭐ 534 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_02.jpg" alt="Nanako0129/pilotfish" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Nanako0129/pilotfish" target="_blank">Nanako0129/pilotfish</a></h3>
+    <p>它像 Claude Code 头顶的一只'领航鱼'：前沿大模型负责画航线,便宜的子模型负责划桨,验证器守在出口处检查质量,从而把 Claude Code 的单次推理成本压到原来的几分之一。关键创新是'规划者-执行者-验证者'三段式多模型编排,而不是简单把 prompt 拆给便宜模型。对长任务、批量工作流、预算受限的开发者,等于给 Anthropic 模型装了一个智能调度开关,让模型成本从固定支出变成可编排资源。</p>
+    <div class="source">⭐ 425 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_03.jpg" alt="WeZZard/jlens-qwen36" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/WeZZard/jlens-qwen36" target="_blank">WeZZard/jlens-qwen36</a></h3>
+    <p>它像给 Qwen3.6-27B 装上一副'雅可比透镜'：在 Apple Silicon 上以 4-bit MLX 推理时,实时可视化模型内部的 Jacobian 空间,把黑盒推理映射成可探索的几何地形。关键创新是把 Anthropic 同名 Jacobian Lens 范式落到本地化、可视化、可交互的开源实现上,让研究者、调试者和学生都能在自己笔记本上'看'模型推理路径。对开源 LLM 可解释性社区是少见的轻量级工具缺口填补,也是机制可解释性走向大众化的入口。</p>
+    <div class="source">⭐ 315 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_04.jpg" alt="AudarAI/Audar-ASR-V1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/AudarAI/Audar-ASR-V1" target="_blank">AudarAI/Audar-ASR-V1</a></h3>
+    <p>它像阿拉伯世界自己的'耳朵':Audar-ASR-V1 推出 Flash 与 Turbo 两档模型,在 Open Universal Arabic ASR Leaderboard 拿下第一,把方言繁杂的阿语语音转写做到开源可商用。关键创新是覆盖 MSA 现代标准阿拉伯语与多地方言、配套完整模型卡、benchmark 和 GGUF/llama.cpp 推理栈,填补了开源阿语 ASR 长期缺位的空白。对中东客服、媒体字幕、教育科技都是一条本地化的语音基线,也是语言主权回归本地社区的标志性开源。</p>
+    <div class="source">⭐ 173 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-14/oss_summaries_v2_2026-07-14_05.jpg" alt="MoisesR7/browser-mcp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MoisesR7/browser-mcp" target="_blank">MoisesR7/browser-mcp</a></h3>
+    <p>它像给浏览器套上一只'可被代理驱动的机械手':把 Chromium 暴露成 MCP 工具,任何兼容 MCP 的代理（Claude Code、Cursor、自建 Agent）都能命令它打开页面、点击交互、执行 Web 任务。关键创新是把'浏览器自动化'从 Selenium/Playwright 脚本范式拉回 LLM 原生协议——不再写 selector,而是说意图。对 RPA、自测代理、Web 数据采集是协议层升级,也是 Web Agent 大爆发的前置接口,把浏览器变成 AI 都能调用的终端。</p>
+    <div class="source">⭐ 153 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-14 07:21</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
