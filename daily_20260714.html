@@ -140,7 +140,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
       <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Kronecker 分解 Hessian H 约等于 A 与 B 的张量积, 其中 A 刻画输入激活协方差, B 刻画输出通道敏感性; (2) 通过 K-FAC 风格近似把二阶矩阵乘法降为两次一阶矩阵乘法, 显存占用从 d 平方级降到 d 的 3/2 次方; (3) 量化目标函数从 min 范数 W x 升级为 min 范数 H 半幂 W x, 自然把输出敏感度纳入; (4) 集成到 GPTQ 的逐层 greedy 框架, 不需要重训练. 工程上完全复用 forward-only 推理流程, 一块 A100 即可量化 70B 模型 不到 30 分钟.</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Kronecker 分解是对完整 Hessian 的有损近似, 当输入分布和输出敏感度的耦合非常强 (例如在高度专业化的 fine-tune 模型上) 时, 分解误差可能反向放大——论文在通用 base 模型上验证, 但对 domain-specific LoRA / 全参微调后的模型精度差距未充分评估. 另外二阶统计需要在前向过程中累积足够多样本, 小批量 / 流式场景下近似误差会显著上升, 工程上仍依赖 1024+ 样本的校准集. 相比 GPTQ 的部署便利性, KronQ 多了 Kronecker 分解步骤, 量化时间小幅增加 (10-20%).</div>
       <div class="row"><span class="highlight">📊 效果：</span>核心数字: Llama-3-70B 4-bit W4A4 上 WikiText-2 perplexity 5.42 (GPTQ 6.18, OmniQuant 5.51, FP16 5.21); Mistral-7B 4-bit 上 perplexity 5.78 (GPTQ 6.45); Qwen-72B 4-bit MMLU 准确率保留 98.2% (GPTQ 95.4%). 量化时间不到 30min / 70B 单卡 A100, 跟 GPTQ 同量级. 部署后推理吞吐与 GPTQ 持平.</div>
-      <div class="row"><span class="author">🏢 团队：</span>4 位作者 (Donghyun Lee, Yuhang Li, Ruokai Yin, Priyadarshini Panda) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Donghyun Lee + Priyadarshini Panda (University of Southern California); Yuhang Li + Ruokai Yin (Yale University) — 来自 arXiv PDF 7/14 主对话 pdftotext 解析</div>
     </div>
   </div>
 </div>
@@ -156,7 +156,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
       <div class="row"><span class="tech">⚙️ 方法：</span>方法论: (1) 任务集设计采用 '真实工程师 6 个月工作日志回放', 每个任务包含完整 setup / 中途观察点 / 失败回滚场景; (2) DRG 评分采用 sub-goal decomposition + 知识追踪权重, 对'修复 + 解释 + 验证' 三段动作分别打分; (3) 评估维度扩展为: 完成率 (终态) + dense 分 (过程) + 中途恢复率 (韧性) + token 效率 (经济性) + 人类参考路径相似度 (对齐); (4) 引入 'time-budgeted evaluation', Agent 必须在限定 token / 时间预算内最大化 dense 分, 模拟真实生产环境的资源约束.</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>DRG 的 sub-goal 标注依赖领域专家, 8 个领域每个任务平均需要 3-5 小时人工标注, 这让 benchmark 难以快速扩展——200 个任务是 200+ 人工天投入, 加新领域成本线性增长. 另外 dense 分的权重设计有主观性, 不同团队对 '过程质量' 的定义可能差 20-30%, 这让跨 benchmark 比较存在 '权重不一致' 的归一化难题. 此外 hour-long 评测本身的复现成本极高 (单次 SOTA Agent 评测需要 200+ GPU 小时), 这阻碍了学界独立复现.</div>
       <div class="row"><span class="highlight">📊 效果：</span>核心数字: SOTA Agent 任务完成率 32% ± 4% (Sonnet 5 35% 大于 GPT-5.6 31% 大于 Opus 5 29% 大于 DeepSeek-V3 27%); DRG dense 分 0.41 (满分 1.0), 比完成率高 9 个百分点; 中途失败后自主恢复成功率仅 24%; token 消耗中位数 1.2M / 任务 (短任务 80K), 最高单任务 18M tokens; wall-clock 时间中位数 2.8 小时; 与人类参考路径相似度 0.38, 说明 Agent 走的是'非人类路径'但常绕远.</div>
-      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Zongxia Li, Zhongzhi Li, Yucheng Shi, Ruhan Wang, Junyao Yang) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zongxia Li (University of Maryland / Tencent); Zhongzhi Li + Yucheng Shi + Ruhan Wang + Junyao Yang (Tencent) — 来自 arXiv html 实验版 7/14 主对话解析 (zli12321@umd.edu, zongxiali@global.tencent.com)</div>
     </div>
   </div>
 </div>
@@ -172,7 +172,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
       <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Rotation-Equivariant Backbone: 把 3D 旋转群 SO(3) 的离散子群嵌入 attention, 训练时对每帧做随机水平旋转, 让模型学到 '旋转不变' 特征; (2) Equirectangular Attention: 极坐标 patch embedding + 球面相对位置编码, 让赤道与极区共享 attention 范围, 解决 cubemap 投影在极区采样稀疏的痛点; (3) Long-Range Memory Bank: 隐空间缓存最近 8 帧的 key-value, 通过球面坐标检索 (不是欧氏距离) 召回历史观测, 让走远后还能保持起点一致性; (4) 训练时同时监督 frame-level (像素) + scene-level (深度 + 法向量) + temporal (光流) 三路 loss, 让模型学到几何 + 时间 + 视觉的联合表征.</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Rotation-equivariant backbone 训练时需要对每帧做随机水平旋转 augmentation, 训练时间相比 vanilla diffusion 增加 35%——单卡 A100 完整训练 7 天 vs SOTA 5 天. 另外 equirectangular attention 在极区的 patch 邻接是非欧的 (球面邻接), 现有 CUDA kernel 对非欧邻接优化不友好, 推理速度 4.2 FPS 相比 cubemap 投影的 12 FPS 有 3 倍差距, 落地到实时 VR / 游戏场景仍需工程优化. 此外 long-range memory bank 占用额外 3 GB 显存, 让 8GB 消费级显卡无法部署.</div>
       <div class="row"><span class="highlight">📊 效果：</span>核心数字: Room-to-Room FID 18.4 (SOTA Vista 23.6, GenWarp 22.1), 降低 22%; Replica 长时一致性 LPIPS 0.18 (SOTA 0.28), 改善 35%; 几何 warping error 0.092 (SOTA 0.156), 降低 41%; 支持 30 秒 + 360 度连贯生成, 推理速度 4.2 FPS (A100 单卡), 显存峰值 22 GB. 消融实验显示 rotation-equivariant 单独贡献 FID 改善 11%, equirectangular attention 贡献 7%.</div>
-      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Haoyuan Li, Dizhe Zhang, Yuemei Zhou, Xiangkai Zhang, Haoran Feng) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Haoyuan Li + Dizhe Zhang + Yuemei Zhou + Xiangkai Zhang + Haoran Feng + Xiaofan Lin + Wenjie Jiang + Lu Qi (Insta360 Research); Lu Qi (中科院自动化所); Xiangkai Zhang + Haoran Feng (清华大学); Bo Du (武汉大学); Ming-Hsuan Yang (UC Merced); Lu Qi (武大) — 来自 arXiv html 实验版 7/14 主对话解析</div>
     </div>
   </div>
 </div>
@@ -188,7 +188,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
       <div class="row"><span class="tech">⚙️ 方法：</span>方法论: (1) 使用 675M 参数 DiT-XL T2V 模型 (在 LAION-Chronicle 200M 视频上预训练) 作为 frozen encoder; (2) 从 T2V 模型的 intermediate DiT block (选 block 12、18、24) 抽取 spatial-temporal feature maps; (3) 对每个下游任务, 只 fine-tune 一个 task-specific 线性 head + 1-2 层轻量 adapter (参数量不到总模型 1%); (4) 训练数据只用目标任务的官方 train split, 不用任何额外数据; (5) 评测时把 frozen feature + linear head 端到端推理, 不需要 video 生成模型的解码器; (6) 与同期对比: 同样的 frozen 设置下, T2V 表征在 dense prediction 任务上比 DINOv2 / CLIP / SAM 的 frozen 表征高 8-15 个百分点.</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>T2V foundation model 推理成本极高 (675M 参数, 11 FPS / A100), 部署到边缘设备 (手机 / AR 眼镜) 不可行, 实时应用必须先用蒸馏 / 量化把模型压到 不到 100M 参数, 论文未提供完整蒸馏 pipeline. 另外 T2V 表征对'语义类别'的判别力弱于专门预训练的 CLIP / DINOv2, 在 zero-shot image classification 上落后 6-10 个百分点, 说明 T2V 适合 dense prediction 但不适合 high-level semantic 任务. 此外 frozen 设置让 fine-tune head 必须承担全部任务适配, 对复杂任务 (如 video captioning) 的适配深度不足, 跟 full fine-tuning 仍有 15-20% 差距.</div>
       <div class="row"><span class="highlight">📊 效果：</span>核心数字: COCO detection frozen-T2V linear head mAP 58.4 (SOTA fully-supervised 62.1, 达到 94%); ADE-20K segmentation mIoU 47.2 (SOTA 51.8, 91%); NYU depth estimation RMSE 0.43 (SOTA 0.41, 接近); DAVIS video segmentation mIoU 86.3 (SOTA 83.1, 首次超越 +3.2); Sintel optical flow EPE 2.84 (SOTA 2.31, 81%); Kinetics-400 action recognition top-1 81.4 (SOTA 89.0, 92%). 12 个任务平均达到 SOTA 90%+ 水平, video class 任务最强, image class 任务稍弱. 推理速度: frozen T2V encoder 11 FPS (A100), fine-tune head 几乎免费.</div>
-      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (Letian Wang, Chuhan Zhang, Rishabh Kabra, Jasper Uijlings, Steven Waslander) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+      <div class="row"><span class="author">🏢 团队：</span>Letian Wang + Chuhan Zhang + Rishabh Kabra + Jasper Uijlings + Steven Waslander + Andrew Zisserman + Joao Carreira + Kaiming He + Misha Andriluka + Eduard Gabriel Bazavan + Andrei Zanfir + Cristian Sminchisescu (Google DeepMind); 部分作者含第二单位 (University of Toronto / Oxford) — 来自 arXiv html 实验版 7/14 主对话解析</div>
     </div>
   </div>
 </div>
@@ -204,7 +204,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
       <div class="row"><span class="tech">⚙️ 方法：</span>核心方法: (1) Hybrid Mamba-Transformer: 70% Mamba SSM 层 + 30% 标准 attention 层交替堆叠, 让 SSM 处理长序列高效性 + attention 处理精确检索; (2) MoE 路由: 16 个 expert, top-2 激活, 每个 token 只激活 3B 参数, 平衡容量与效率; (3) 数据治理: 100% 欧洲数据源 + GDPR 合规审计 + 严格版权链验证, 训练数据来源 100% 可追溯; (4) 本地推理优化: 支持 GGUF 量化 (4-bit 不到 16GB 显存部署), Mamba state 可序列化到 NVMe, 让消费级 GPU 也能跑 30B 模型; (5) RLHF / DPO 用欧洲标注团队, 价值观对齐到欧盟 AI Act 框架.</div>
       <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Mamba SSM 在精确检索任务 (如 '找出第 87 段中'X' 词') 上比 attention 弱 5-8 个百分点——论文承认在 8K 以下短上下文, Mamba 的优势不明显, 主要优势在 64K+ 长上下文场景, 这限制了模型在短文本客服 / 对话场景的部署价值. 另外 100% 欧洲数据让模型在 '美国流行文化 / 流行梗 / 实时事件' 上的知识落后通用模型 6-12 个月, 对面向北美 / 亚太用户的产品是显著劣势. MoE 路由对工程部署要求高, top-2 gating 推理时偶发 'expert imbalance' (个别 expert 被过度激活), 需要运行时 rebalance.</div>
       <div class="row"><span class="highlight">📊 效果：</span>核心数字: JuraEval (德国法律) accuracy 71.8% (Qwen-72B 72.4%, Llama-3-70B 70.1%); MMLU 5-shot 75.4% (Qwen-72B 78.1%); RULER 128K context retrieval accuracy 87.3% (Qwen-72B 84.1%, Llama-3-70B 79.8%); 推理速度 32 tokens/sec (Qwen-72B 9 tokens/sec); 显存 4-bit 量化 14GB (Qwen-72B 35GB). 长上下文优势在 64K+ 时显著: 128K 时 RULER 比 Qwen-72B 高 3.2 个百分点, 推理速度快 3.6 倍.</div>
-      <div class="row"><span class="author">🏢 团队：</span>5 位作者 (The Soofi-Team, Benedikt Droste, David Fitzek, Ruben Härle, Lukas Helff) — 单位待核 (arXiv 详情页未挂 affiliation, 主对话 PDF 解析失败)</div>
+      <div class="row"><span class="author">🏢 团队：</span>The Soofi-Team — 12 家德国机构联合: KI Bundesverband + DFKI + Fraunhofer IAIS + Fraunhofer IIS + Technische Universität Darmstadt + Universität Würzburg + Berliner Hochschule für Technik + L3S Research Center + Lamarr + ellamind + hessian.AI + Merantix Momentum — 来自 arXiv html 实验版 7/14 主对话解析 (作者名单带数字编号, 对应 12 affiliation)</div>
     </div>
   </div>
 </div>
@@ -277,7 +277,7 @@ footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(va
 <footer>
   <p>Generated by Hermes Agent · AI Tech Daily Report</p>
   <p>https://github.com/zenhatescoding/ai-daily-reports</p>
-  <p>2026-07-14 07:21</p>
+  <p>2026-07-14 08:32</p>
 </footer>
 </div>
 
