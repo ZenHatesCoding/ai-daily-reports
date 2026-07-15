@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月15日 · 周三</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月15日 · 周三 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_00.jpg" alt="OpenAI: How to manage AI investments in the agentic era" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/managing-ai-investments-in-agentic-era" target="_blank">OpenAI: How to manage AI investments in the agentic era</a></h3>
+    <p style="color:#ccc;">OpenAI 在 7/14 发布企业 AI 投资框架白皮书, 针对 agentic era 给 CEO/CFO 一份「怎么管 AI 钱」的指南。核心论点: AI 投资不该按软件 ROI 算 (年化回报/总投入), 应该按「token 单价下降斜率 × 业务调用量增长」二维坐标评估, 否则永远算不清 GenAI 项目到底是省钱还是亏钱。文中给出一份「agentic capex」分级表 — Tier 1 是 infra (GPU/电力), Tier 2 是 model (微调/RLHF), Tier 3 是 workflow (agent runtime + tool use), 每层建议预算比例 50/20/30。配套三个 OpenAI 客户 case (Klarna / BBVA / Mercado Libre), 全部是 18 个月内 Tier 3 投入回本的故事。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Agent 时代的企业 IT 预算范式正在重构: 旧范式「软件 ROI = 节省人力成本 / 部署成本」在 LLM token 单价每年跌 10x 的现实下完全失效, 因为人力成本不变但 AI 调用成本剧烈波动。新范式必须把「单位 token 成本 × 调用频次」作为核心指标, 同时把 Tier 3 (workflow agent) 视为真正的护城河 — 因为 Tier 1 infra 同质化、Tier 2 model 商品化, 唯一差异化是企业自己业务流里的 agent 编排。这是 2026 H2 企业 IT 决策层必须换的脑子, 否则会在「AI 投入很多但不知道赚哪了」的泥潭里越陷越深。</p>
+    <div class="source">来源：OpenAI</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_01.jpg" alt="Anthropic: Claude for Teachers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Anthropic] 3级信源 · cn</div>
+    <h3><a href="https://www.anthropic.com/news/claude-for-teachers" target="_blank">Anthropic: Claude for Teachers</a></h3>
+    <p style="color:#ccc;">Anthropic 7/14 上线 Claude for Teachers, 面向 K-12 公立学校教师免费开放 Claude.ai Pro 账号, 配套「教学场景安全护栏」 (FERPA/COPPA 合规, 不训练学生数据)。功能分层: 备课 (教案生成 + 差异化练习)、批改 (rubric 对齐的开放式作业评分 + 反馈信)、家校沟通 (敏感词替换 + 多语翻译)。首批接入 12 个州 (含加州、纽约、麻省、德州), 通过州教育部门认证流程。Anthropic 同时发布一份「AI in K-12」白皮书, 立场是「教师是 AI 工具的最终决策者, 不替代教师判断」, 跟 OpenAI/Google 的「AI 辅导老师」叙事形成明显对比。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 AI 公司在 K-12 教育市场的卡位战从「学生端 AI tutor」转向「教师端工作流」 — 这是更聪明的入口: 教师是采购决策者 + 平台黏性中心, 拿下 6 百万美国公立教师等于拿下 5 千万学生家庭的间接通道。Anthropic 跟 OpenAI 的差异化: OpenAI 押注 ChatGPT for Teachers 走的是「学生自主学习 + 教师辅助」路径, Anthropic 反过来走「教师提效 + 学生间接受益」路径, 跟 Apple 在 90 年代「教师先于学生」占领课堂的策略同构。K-12 公共部门采购周期 18-24 个月, 这一波卡位决定 2027-2028 美国教育 AI 的市场份额。</p>
+    <div class="source">来源：Anthropic</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_02.jpg" alt="TC: Apple opens its new Siri AI to everyone with iOS 27 public beta" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/" target="_blank">TC: Apple opens its new Siri AI to everyone with iOS 27 public beta</a></h3>
+    <p style="color:#ccc;">Apple 7/14 发布 iOS 27 public beta, Siri AI (即升级版 Apple Intelligence Core) 正式对所有兼容设备开放, 不再需要开发者账号或 waitlist。核心升级: Siri 从「命令-响应」升级到「agent 模式」, 能跨 App 执行多步任务 (如「订我常去的咖啡店的美式, 然后提醒我 5 分钟后出门」), 底层走 Apple Foundation Model 3 (30B MoE) + 端云混合推理 (敏感操作端侧, 大任务云端 Private Cloud Compute)。同步开放 SiriKit 3 SDK, 第三方 App 可注册「capability」让 Siri agent 调度。Wired 7/13 评「Apple 终于把 Siri 变成万能工具, 但落后 OpenAI 18 个月」, 业内普遍认为这是 Apple 在 AI agent 时代的「亡羊补牢」之作。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Apple Siri AI 全栈开放标志 AI agent 从「云端 demo」进入「OS 级基础设施」阶段 — 当 OS 厂商把 agent runtime 深度集成进系统 API, 第三方 App 必须按 agent 协议注册 capability 才能被调用, 这是 1990 年代 Mac Toolbox / 2008 年 App Store 之后的第三次 OS 控制权重构。Apple 落后 OpenAI 18 个月是真, 但 Apple 的胜负手不在「AI 能力」而在「10 亿 iPhone 用户 + 默认开启」 — 当 Siri agent 是「拿起手机默认就能用」的能力, OpenAI 的 ChatGPT agent 必须走应用商店下载这一关, 转化率天花板立刻被锁死。AI 操作系统化是 2026 H2 的硬主线, Apple 这步棋把 Microsoft / Google 推到了「OS + AI 协同」的紧迫改造位置。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_03.jpg" alt="TC: DeepMind CEO calls for an independent standards body to regulate frontier AI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/" target="_blank">TC: DeepMind CEO calls for an independent standards body to regulate frontier AI</a></h3>
+    <p style="color:#ccc;">DeepMind CEO Demis Hassabis 7/14 在伦敦 Chatham House 发表演讲, 正式提议建立「AI Standards Body」, 模式参照美国金融业自律组织 FINRA — 不隶属任何政府, 但有强制测试权: 任何 frontier model (定义: 训练算力 > 10^26 FLOPs) 发布前必须通过 red-team 测试 + capability benchmark + safety case 评估, 通过后发放「deployment license」才能商业化。Hassabis 同步承诺 Google DeepMind 愿意第一个提交 Gemini 4 给该机构评测。演讲全文 30 分钟, 核心论点是「各国政府监管速度跟不上 AI 迭代速度 (18 个月 vs 24-36 个月立法周期), 必须由产业 + 学界 + 民间三方共建自律机构, 否则下一次 frontier model 事故 (生物 / 网络安全 / 自主武器) 会让整个行业被一刀切监管」。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Hassabis 这步棋是 AI 行业「主动求监管」叙事的最高级版本 — 不是被动回应欧盟 AI Act, 而是用 FINRA 模式 (金融业 1939 年后用自律换政府放权的历史先例) 给自己套一个「可被信任」的光环。Google DeepMind 是当前 frontier model 三巨头 (OpenAI/Anthropic/Google) 里唯一同时手握「最强模型 + 最大云平台 + 政府关系」的公司, 自律机构一旦落地, Gemini 评测标准就是事实标准, OpenAI 和 Anthropic 必须按 Google 的规则玩。这是 Google 用「治理话语权」换「市场护城河」的经典动作, 跟 1990 年代 Microsoft 主导「PC 行业标准」的策略如出一辙。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_04.jpg" alt="量子位: 马斯克刚说机器人进不了厂, 小米机器人上岗汽车产线" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/449906.html" target="_blank">量子位: 马斯克刚说机器人进不了厂, 小米机器人上岗汽车产线</a></h3>
+    <p style="color:#ccc;">7/14 量子位报道, 小米机器人 (CyberOne 二代) 已在小米汽车亦庄工厂正式上岗, 承担车身焊接件上下料 + 总装线拧紧工位, 单班连续运行 8 小时故障率 < 0.3%。报道对比 7/12 马斯克在 Tesla Q2 财报会上的「Optimus 2026 年底进工厂是『营销话术』, 真实工厂环境比 demo 难 100 倍」言论, 凸显国内具身智能「先在自家工厂落地」的工程化优势。小米同步开放 CyberOne SDK 2.0 给车企供应链 (含 BYD/Geely 接洽), 商业化模式从「卖整机」转向「机器人 + 工艺包」打包授权 (单工位年费 ¥180 万)。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 中国具身智能的「工厂优先」路径跟美国「家庭优先」路径已经分道扬镳: Tesla/Figure 押注 C 端家庭服务机器人 (单台 $20-30K), 国内押注 B 端工业产线 (单工位 ¥180 万/年 = 约 $25 万, ROI 18 个月)。两条路的天花板完全不同: 家庭机器人要解决「千万级家庭的多样化场景 + 安全 + 价格」三难, 工业机器人只需解决「单一工位的精度 + 节拍 + 良率」, 商业化速度差一个数量级。当小米 / 宇树 / 智元都在工厂跑通, 中国具身智能公司在 2027 年可能比美国同行早 12-18 个月进入规模盈利期, 这是 2026 H2 AI 投资逻辑里必须重视的非对称窗口。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/news_items_v2_2026-07-15_05.jpg" alt="量子位: 高德发布通用世界模型工坊 ABot-World Studio" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/449568.html" target="_blank">量子位: 高德发布通用世界模型工坊 ABot-World Studio</a></h3>
+    <p style="color:#ccc;">高德 (阿里旗下) 7/14 发布 ABot-World Studio, 国内首个「消费级显卡可跑的世界模型工坊」: 单张 RTX 5090 (32GB) 可生成小时级实时交互式视频 + 3D 场景, 支持文本/图像/草图三模态输入, 输出 1080p@30fps 持续推流。核心创新是 TurboDiffusion 推理框架 (4 步采样 + 蒸馏), 把单帧生成延迟压到 33ms 以内, 同时保持时间一致性 (>10 分钟不漂移)。高德同步开放 ABot-World API 给 B 端 (自动驾驶仿真 / 机器人训练 / 文旅数字孪生), 定价 0.08 元/帧 (对比 Sora 1.5 元/帧), 首批客户含小鹏汽车 (自动驾驶 corner case 生成) 和深圳文旅局 (城市数字孪生)。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 ABot-World 把世界模型从「云端 100 卡集群专用」降到「单卡 32GB 可跑」是 2026 H2 视频生成赛道最关键的范式转折点 — 之前 Sora / Veo 走的是「超大规模 + 长视频 + 闭源」路线, 高德走的是「单卡实时 + 短交互 + 开发生态」路线, 这正是开源视频模型 (Wan2.1 / CogVideoX) 走过的从「demo 到生产」的同一条路。当消费级显卡能跑小时级世界模型, 自动驾驶仿真 / 机器人训练 / 数字孪生三个赛道会同时爆发出货量级应用, 阿里通过高德卡位的「世界模型 OS」野心远比一个地图 App 大得多。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/paper_summaries_v2_2026-07-15_00.jpg" alt="ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.10350 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.10350" target="_blank">ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</a></h3>
+    <p style="color:#ccc;">想象你的家用机器人不仅能「扫地拖地」, 还能像人一样「记得去年生日你说过不喜欢奶油, 今年主动买无奶油的蛋糕」— 这就是 Alibaba ABot 团队做的 ABot-AgentOS。它把机器人操作系统重新设计成一个「终身记忆 + 反思 + 行动」的三层架构: 最底层是 VLM (视觉语言模型) 当「眼睛+大脑」, 中间层是终身多模态记忆 (把见过的视频/对话/操作都索引到向量数据库), 最高层是反思模块 (每天自动回看今天做了啥, 形成「我喜欢什么 / 我主人习惯什么」的稳定人格)。在 8 个真实家庭 + 5 个工业产线的 30 天长程任务评测里, 任务完成率比基线 RT-2 / OpenVLA 提升 38%, 而且不会「忘了」第三天学到的技能。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 ABot-AgentOS, 一种面向家庭服务机器人的通用操作系统级架构, 通过三层抽象 (VLM 推理层 / 终身多模态记忆层 / 反思压缩层) 实现长程任务执行与持续学习。核心贡献: (1) 提出 lifelong memory schema, 将历史视频片段、对话、动作轨迹统一编码为可检索的 embedding, 支持跨天/跨周检索; (2) 设计 reflection module, 通过周期性 offline distillation 把短时记忆压缩为 persistent persona, 避免「灾难性遗忘」; (3) 在 30 天真实家庭 + 工业产线长程评测中, 任务成功率较 RT-2/OpenVLA 提升 38%。实验还展示 ABot-AgentOS 支持 zero-shot tool use 与跨 embodiment 迁移 (机械臂 → 移动底盘)。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>ABot-AgentOS 采用三层解耦架构: (1) VLM Policy Layer 基于 Qwen-VL-Max, 输入 RGB-D + 自然语言指令, 输出 7-DoF 关节动作; (2) Memory Layer 用 FAISS 索引所有 (timestamp, video_clip, action_log) 三元组, retrieval 用 CLIP-Large embedding + 时序衰减权重 (越近的记忆权重越高); (3) Reflection Layer 每 24h 跑一次 offline RLHF-style distillation, 把过去 24h 的「成功/失败」轨迹压缩成 512 维 persona vector, 注入 VLM 的 system prompt。三个 layer 通过共享 embedding space 联动, 支持 zero-shot 工具调用 (e.g. 机器人主动调用天气 API 决定出门带不带伞)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价是计算开销 — reflection layer 每 24h 需 4 小时 offline distillation (单 A100), 普通家庭用户难以本地部署; 同时终身记忆存储每月增长约 50GB (8 个家庭场景), 长期成本不容忽视。安全层面, persona vector 注入 system prompt 存在 prompt injection 风险, 论文未深入讨论防御机制, 这是产业落地前必须解决的硬问题。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 8 个真实家庭 + 5 个工业产线的 30 天长程评测中, ABot-AgentOS 任务完成率 78% (vs RT-2 41% / OpenVLA 53%), 跨天技能保持率 92% (vs 基线 35%), 单步推理延迟 340ms (RTX 4090), persona drift 指标 (KL 散度) 小于 0.03 每天。, ablations: 去掉 reflection layer 完成率掉 21%, 去掉 lifelong memory 跨天保持率掉 57%。已开源代码 + 8 个家庭场景数据集。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Alibaba Group / DAMO Academy (邮箱 alibaba-inc.com 反查, 27 位作者, 中国团队)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/paper_summaries_v2_2026-07-15_01.jpg" alt="ABot-N1: Toward a General Visual Language Navigation Foundation Model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.10383 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.10383" target="_blank">ABot-N1: Toward a General Visual Language Navigation Foundation Model</a></h3>
+    <p style="color:#ccc;">想象给机器人一张「自然语言地图」 — 你说「带我去阳台那盆开黄花的植物旁边」, 它能在从未见过的房子里自己导航过去。Alibaba ABot 团队的 ABot-N1 把这件事做到了新高度: 它是首个在「真实室内 + 室外 + 半室外」三种环境、10 种导航指令类型 (「找 / 带 / 跟 / 避 / 探」) 上同时达到 80%+ 成功率的通用基础模型, 71 个 upvotes (HF 7/13 daily 最高分)。背后技术是 120 亿参数的 VLM (基于 Qwen-VL), 在 580 万条跨环境导航轨迹上预训练, 然后在 12 个下游任务 (含工业巡检 / 家庭服务 / 残障辅助) 上 zero-shot 评测全 SOTA。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 ABot-N1, 一个面向视觉语言导航 (VLN) 任务的通用基础模型, 参数规模 12B, 基于 Qwen-VL 架构, 在 580 万跨环境导航轨迹数据集 (含室内 R2R / 室外 Touchdown / 半室外 RxR-Habitat) 上预训练。模型在 12 个下游 VLN 任务上 zero-shot 评测, 全部达到 SOTA 或 competitive SOTA, 涵盖工业巡检、家庭服务机器人、残障辅助导航等场景。核心创新是 dual-stream spatial-temporal encoder: 一路处理 RGB 帧 (CLIP-Large), 一路处理 LiDAR 点云 (PointNet++), 通过 cross-attention 融合, 使模型能同时理解「视觉布局 + 几何结构」, 解决了传统 VLN 模型在「半室外」环境 (含玻璃反射 / 强光 / 阴影) 的性能塌陷问题。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>ABot-N1 采用 dual-stream encoder: Visual stream 输入 RGB 帧 + 深度图, 用 CLIP-Large + DINOv2 双编码器融合 (concat 后过 MLP); Geom stream 输入 LiDAR 点云 + 占据栅格, 用 PointNet++ + Sparse Conv 编码; 两路通过 8 层 cross-attention 融合, 输出统一 768 维 scene embedding。导航决策头是 4 层 Transformer decoder, 输出 (direction, step_length, stop_signal) 三元组, 训练用 imitation learning + RLHF (基于人类远程操控轨迹)。模型在 580 万条混合环境轨迹上预训练, 然后在 12 个下游任务上分别 fine-tune 2 epoch。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价是 dual-stream encoder 让模型推理速度比单流慢 35% (230ms vs 单流 170ms), 边缘部署需要 NVIDIA Orin 等级硬件; 同时 12B 参数对显存要求超过 24GB, 普通机器人平台 (Jetson Orin Nano 8GB) 跑不动, 必须依赖云端或本地工作站。半室外环境的训练数据 80% 来自欧美城市街景, 中国式小区/胡同场景的泛化能力未充分验证。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>12 个下游任务 zero-shot SOTA: R2R 成功率 78% (相对 2025 SOTA 提升 5), REVERIE 65% (提升 8), RxR-Habitat 71% (提升 12), 工业巡检导航任务 (新增) 84% (相对之前 best 67), 残障辅助导航 76% (提升 15)。推理延迟 230ms/步 (RTX 4090), 支持 5cm 路径精度。模型已开源, 包含 580 万条预训练数据集 (Alibaba 内部 + ETHZ-CVL + Habitat 公开数据)。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Alibaba Group / DAMO Academy (邮箱 alibaba-inc.com 反查, 40 位作者, 中欧联合团队)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/paper_summaries_v2_2026-07-15_02.jpg" alt="Vidu S1: A Real-Time Interactive Video Generation Model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.03118 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.03118" target="_blank">Vidu S1: A Real-Time Interactive Video Generation Model</a></h3>
+    <p style="color:#ccc;">想象你对着摄像头说「挥挥手、比心、举左手」, 屏幕里的数字人 0.5 秒后立刻做出对应动作, 而且能持续生成几小时不模糊不漂移 — 这是清华 + 生数科技 Vidu 团队 7/3 发布的 Vidu S1 实时交互视频模型。技术上把「语音驱动 + 实时控制 + 无限长度」三件难事首次同时解决: 语音指令端到端映射到动作 token (SpeechGesture tokenizer), 用 TurboDiffusion 推理框架做到 42 FPS 单帧 540p 生成, 通过 TurboServe 流式服务做到无限长度无漂移。HF 上 132 个 upvotes, 是 7 月视频生成方向最高分论文。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 Vidu S1, 首个支持语音驱动 + 实时交互 + 无限长度生成的视频扩散模型。核心贡献: (1) SpeechGesture Tokenizer — 把语音流端到端编码为离散动作 token, 无需显式 pose 中间表示; (2) TurboDiffusion 推理框架 — 通过 consistency model 蒸馏 + 4 步采样, 将单帧生成延迟压至 24ms (vs 传统 DiT 250ms); (3) TurboServe 流式服务架构 — 用 keyframe caching + sliding window attention 实现无限长度生成且无时间漂移。模型在 540p@42FPS 上达到 SOTA, 单 GPU 可跑, 已开源。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Vidu S1 采用三阶段训练: (1) 预训练 Video DiT (3B 参数) 在 8000 万视频片段上学习通用运动先验; (2) SpeechGesture Tokenizer 用 contrastive predictive coding (CPC) 把语音流编码为 1024 维离散 token, 用 vector-quantized VAE 训练; (3) 端到端微调, 输入 = (语音流 + 初始帧), 输出 = 视频帧序列。推理时用 TurboDiffusion (consistency distillation + 4 步 Euler 采样) + TurboServe (keyframe cache + sliding window attention 16 帧), 实现 540p@42FPS 实时生成, 单张 RTX 4090 可跑。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价是分辨率限制 — 540p 对消费级直播/短视频够用, 但电影/广告级 4K 输出仍需 multi-GPU 集群; 同时语音驱动虽然在中文/英文表现好, 小语种 (如印尼语/阿拉伯语) 的口音适应能力未充分验证; 开源策略虽然引爆社区, 但也意味着生数科技的核心商业护城河 (Web 端 SaaS) 将面临开源模型的快速追赶。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>540p@42FPS 实时生成 (单帧延迟 24ms, vs Sora 250ms), 无限长度生成 (持续超过 1 小时无漂移, vs Sora 1 分钟极限), FVD 指标 78 (vs Sora 92, 越低越好), 用户主观评分 4.6/5 (vs Runway Gen-4 4.1)。已开源模型权重 + 推理代码 + TurboServe 部署框架, GitHub 4.2K stars (24h 内)。生数科技同步上线 vidu.com/vidu-stream 在线 demo。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tsinghua University + Shengshu Technology (生数科技) 联合团队 (PDF 首页 author block 解析)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/paper_summaries_v2_2026-07-15_03.jpg" alt="AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.11849 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.11849" target="_blank">AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification</a></h3>
+    <p style="color:#ccc;">你让 GPT-5.5 证明「任何连续函数在闭区间上必有最大值」这种本科数学定理, 它能给出看似合理但其实跳步漏关键的伪证明 — 这是 LLM 在「高级数学」上的真实能力现状。上海 AI Lab + 上海交大 + 港中文 MMLab 联合团队 7/13 发布 AdvancedMathBench, 把这个问题量化了: 包含 245 道本科 + 博士资格考试级数学证明题 (覆盖代数/分析/拓扑/概率 4 大领域), 配套 888 条 LLM 生成证明 + 专家标注真伪的「VerifierBench」子集。结果触目惊心 — 当前最强 GPT-5.5-xhigh 在本科级证明生成上正确率仅 64.5%, 博士级 48.9%; 证明验证 Balanced F1 仅 65.1, 关键错误检测仍是 major bottleneck。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文构建 AdvancedMathBench, 首个面向「高级数学」 (本科高年级 + 博士资格考试) 的证明生成与验证基准套件。包含两个子集: ProverBench (245 题, 覆盖代数/分析/拓扑/概率) 与 VerifierBench (888 条模型生成证明 + 专家标注)。同时提出基于专家标注训练的自动验证 pipeline, 输出 correctness verdict + 细粒度错误分类。实验评测 18 个当前 SOTA LLM, 最佳模型 GPT-5.5-xhigh 在本科/博士证明生成上分别仅达 64.5/48.9 正确率, 验证任务 Balanced F1 仅 65.1。论文同步开源 benchmark 数据集 + 验证 pipeline 代码。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>ProverBench 245 题来自上海交大/复旦本科高年级试卷 + 国内 5 所高校博士资格考试真题, 覆盖 4 大领域各 60 题左右, 每题由 3 位数学 PhD 独立标注难度 + 关键步骤; VerifierBench 由 18 个 LLM (含 GPT-5.5/Claude-Opus-4/Gemini-2.5-pro) 生成证明, 经 5 位数学 PhD 独立标注 (correct / minor_error / major_error / off_topic), 取多数票作为 ground truth。自动验证 pipeline 用 Llama-3-70B 在 8000 条专家标注数据上 fine-tune, 学习「细粒度错误分类」(logical gap / wrong step / wrong assumption / missing case)。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价是 benchmark 仅覆盖中文数学教学体系 (中国本科 + 博士), 欧美本科 (Putnam / GRE Math) 的题型和难度未涵盖, 跨语言泛化性待验证; 同时 245 题规模相对较小, LLM 可能通过 overfitting 短期提升分数但不具备真实能力提升; 验证 pipeline 对「形式化证明」(Lean/Coq) 不友好, 这部分能力评测缺失。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>18 个 SOTA LLM 评测: GPT-5.5-xhigh 最佳, ProverBench 本科级 64.5 / 博士级 48.9 (随机基线 8%), VerifierBench Balanced F1 65.1 (人类专家 92)。错误类型分布: 逻辑跳跃 38% 大于 错误步骤 27% 大于 缺情形 21% 大于 跑题 14%。Verifier pipeline 与人类专家的一致率 Cohen's Kappa 0.81 (substantial agreement), 已开源供社区复现。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Shanghai AI Laboratory + Shanghai Jiao Tong University + CUHK MMLab + Great Bay University (PDF 首页 author block 4 affiliation 解析, 13 位作者)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/paper_summaries_v2_2026-07-15_04.jpg" alt="LightMem-Ego: Your AI Memory for Everyday Life" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.11487 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.11487" target="_blank">LightMem-Ego: Your AI Memory for Everyday Life</a></h3>
+    <p style="color:#ccc;">想象你的 AI 助手不会像金鱼一样「7 秒就忘」 — 你今天说「我不喜欢香菜」, 下周推荐餐厅时它主动避开香菜, 三个月后还会主动问「最近还是不吃香菜吗?」 — 这是浙江大学学生团队 7/13 发布的 LightMem-Ego: 首个面向「日常生活场景」的轻量级 AI 记忆系统。技术上把记忆分成 5 层 (原始事件 / 实体链接 / 偏好抽象 / 时序衰减 / 反思摘要), 通过 LightMemTokenizer 把 24h 对话压缩到 1.5KB 存储, 比传统 RAG 方案节省 90% 存储空间。在 100 人 30 天真实生活场景评测中, 偏好召回准确率 89%, 用户满意度 4.7/5。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">本文提出 LightMem-Ego, 面向日常生活 AI 助手场景的轻量级记忆系统。核心贡献: (1) 5 层记忆架构 — 原始事件层 / 实体链接层 / 偏好抽象层 / 时序衰减层 / 反思摘要层, 通过分层压缩实现「永久记忆 + 短期关注」平衡; (2) LightMemTokenizer — 把 24h 对话压缩至 1.5KB, 比传统 RAG 节省 90% 存储; (3) 时序衰减权重机制 — 自动识别「过期偏好」(如「上个月感冒时说不吃辣, 现在好了重新吃辣」)。在 100 人 30 天真实生活场景评测中, 偏好召回 89%, 用户满意度 4.7/5。系统已开源, 支持与 LangChain/LlamaIndex 集成。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>LightMem-Ego 5 层架构: (1) Raw Event Layer 保留所有原始 (timestamp, speaker, content) 三元组; (2) Entity Linking Layer 用 NER + coreference resolution 把实体 (人/物/地点) 链接到 knowledge graph; (3) Preference Abstraction Layer 用 LLM 把对话提炼为 (subject, predicate, object, confidence, valid_from, valid_until) 偏好三元组; (4) Temporal Decay Layer 按 valid_until 自动衰减旧偏好; (5) Reflection Layer 每周跑一次 offline summary 生成「persona paragraph」。LightMemTokenizer 用 Product Quantization (PQ) 把每条偏好三元组压到 256 bit, 24h 对话全压到 1.5KB。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>代价是依赖 LLM 做偏好抽象, 每条对话需调用 LLM 1-2 次 (实体链接 + 偏好提取), 单用户每月 API 成本约 $0.8 (不可忽略); 5 层架构虽然清晰, 但 reflection layer 每周跑一次 LLM 摘要生成, 对端侧部署 (手机/平板) 算力要求仍偏高; 隐私层面, 永久记忆意味着用户数据长期存储, GDPR/CCPA 合规与「被遗忘权」的实施细节未在论文深入讨论。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>100 人 30 天真实生活评测: 偏好召回准确率 89% (vs 传统 RAG 47%), 过期偏好识别率 82%, 用户满意度 4.7/5 (vs 基线 ChatGPT Memory 3.9)。存储效率: 24h 对话压缩到 1.5KB (vs RAG 15KB), 30 天压缩到 38KB (vs RAG 450KB)。推理延迟: 召回单偏好 18ms, 反思摘要生成 1.2s 每周。已开源代码 + 100 人真实场景数据集 + LangChain/LlamaIndex 集成插件。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhejiang University (邮箱 zju.edu.cn 反查, 13 位作者, 中国学生团队, 含本科 + 硕士)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_00.jpg" alt="Robbyant/lingbot-video" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Robbyant/lingbot-video" target="_blank">Robbyant/lingbot-video</a></h3>
+    <p>Robbyant 7/08 开源的 lingbot-video 是首个面向「具身智能视频预训练」的大规模 MoE 视频模型: 70B 总参数 (激活 4B), 在 800 万条「机器人第一人称 + 人类教学」视频片段上预训练, 目标不是生成漂亮视频, 而是让模型学到「物理世界的因果常识」(重力 / 摩擦 / 物体持久性)。在 5 个具身任务 (机器人抓取 / 导航 / 操控) 上 zero-shot 评测全部 SOTA, 平均超越 OpenVLA 23%。同步发布机器人微调工具链, 支持 1 张 A100 就能 fine-tune 到自家机器人平台。</p>
+    <div class="source">⭐ 784 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_01.jpg" alt="nv-tlabs/ardy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/nv-tlabs/ardy" target="_blank">nv-tlabs/ardy</a></h3>
+    <p>NVIDIA Toronto AI Lab 7/08 开源 ARDY (Autoregressive Diffusion with Hybrid Representation), SIGGRAPH 2026 接收论文的官方实现。核心创新是把「自回归 + 扩散」两种生成范式 hybrid: 用自回归建模长序列依赖 (跨 30 秒动作连续性), 用扩散保证每步细节质量 (关节级精度)。在 HumanML3D / Motion-X 两个 benchmark 上 FID 指标超 SOTA 18%, 推理速度 3x 快于之前的 SOTA (MotionDiffuse)。配套 NVIDIA TensorRT 加速版本, 在 RTX 4090 上可达 120 FPS。</p>
+    <div class="source">⭐ 197 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_02.jpg" alt="William-Lu-stack/Flawless" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/William-Lu-stack/Flawless" target="_blank">William-Lu-stack/Flawless</a></h3>
+    <p>William-Lu-stack 7/10 开源的 Flawless 是首个「AI SRE AgenticOps」平台: 用 Claude Code 作为 agent runtime, 自动接管 Kubernetes 集群 + AWS/GCP 云的告警响应 / 故障定位 / 修复执行。核心能力: (1) 7x24 自动 oncall — 收到 PagerDuty 告警后自动调 kubectl/AWS CLI 排查, 80% 常见告警 (OOM / disk full / cert expired) 无人介入自愈; (2) Post-mortem 自动生成 — 故障结束后 5 分钟内输出 root cause + timeline + action items; (3) Runbook 知识库 — 从历史修复经验自动抽取 SOP, 新告警先查 SOP 再决策。已在 12 家 SaaS 公司生产环境运行, 平均 MTTR 降低 65%。</p>
+    <div class="source">⭐ 616 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_03.jpg" alt="Kappaemme-git/codex-first-customer-finder-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Kappaemme-git/codex-first-customer-finder-skill" target="_blank">Kappaemme-git/codex-first-customer-finder-skill</a></h3>
+    <p>Kappaemme-git 7/12 开源的「Codex Skill: First Customer Finder」是 OpenAI Codex / Claude Code 生态里首个「自动化找种子客户」插件: 输入产品定位 + ICP (理想客户画像), agent 自动扫描近 30 天的 HackerNews / Reddit / X / LinkedIn / GitHub Issues 信号, 用 LLM 判断匹配度 + 生成 outreach 话术 + 自动发送个性化 DM。核心创新: (1) 信号权重模型 — 给不同平台信号赋不同权重 (HN Show HN > Reddit 自荐 > X 抱怨), 排序后召回 top 50 候选; (2) 证据链追溯 — 每条推荐都附「为什么这个客户值得联系」的具体证据; (3) 多平台统一去重 — 同一创始人多个平台账号合并。</p>
+    <div class="source">⭐ 598 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_04.jpg" alt="ohad6k/ditto" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ohad6k/ditto" target="_blank">ohad6k/ditto</a></h3>
+    <p>ohad6k 7/08 开源的 Ditto 是首个「agent 日志 → 个人 you.md」工具: 自动扫描本机 Claude Code / Codex 历史日志, 用 LLM 提取「你的编码风格 + 你的常用库 + 你的偏好设置」, 输出一个 you.md 配置文件, 下次开新项目时直接喂给 agent 就能 100% 复用你的工作流。核心创新: (1) 隐私本地化 — 全部处理在本地, 日志不上传; (2) 增量更新 — 每次 agent 跑完自动 append 新偏好, you.md 越来越准; (3) 跨 IDE 兼容 — 不只 Claude Code / Codex, 还支持 Cursor / Continue / Aider 等。</p>
+    <div class="source">⭐ 179 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-15/oss_summaries_v2_2026-07-15_05.jpg" alt="barretlee/agent-pulse" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/barretlee/agent-pulse" target="_blank">barretlee/agent-pulse</a></h3>
+    <p>barretlee 7/11 开源的 agent-pulse 是「AI 行业情报 agent」: 自动从 50+ 英文/中文媒体 (The Information / TechCrunch / 量子位 / 36Kr 等) + 100+ AI 公司 RSS + 5 个核心 Discord/Slack 频道, 每天定时聚合「证据可追溯」的行业动态, 输出结构化日报 (含 trend / source / data point / weekly brief 四层)。核心创新: (1) 证据链 — 每条情报都附原文出处 + 时间戳 + LLM 提取的置信度; (2) 去重与归并 — 同主题多源报道自动合并为单条; (3) 周报模式 — 每周自动跑一次聚类, 输出本周 5 大趋势。</p>
+    <div class="source">⭐ 138 · TypeScript</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-15 08:43</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
