@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月17日 · 周五</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月17日 · 周五 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_00.jpg" alt="Google DeepMind 联手 Isomorphic Labs 发布"生物韧性"框架:15+ 机构合作防 AI 生物滥用" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[DeepMind 官方] 3级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/our-approach-to-bioresilience/" target="_blank">Google DeepMind 联手 Isomorphic Labs 发布"生物韧性"框架:15+ 机构合作防 AI 生物滥用</a></h3>
+    <p style="color:#ccc;">DeepMind + Isomorphic Labs 7/16 联合发布 bioresilience 框架,核心两条线:一是防止威胁行为者滥用自家模型做生物武器设计,二是把 AI 模型本身用于 outbreak 检测与响应。过去 12 个月已与 15+ 政府/生物安全机构合作,把 frontier model 用在核酸疫苗设计、流行病早期信号挖掘、生物序列风险评分三个具体场景。这是 Google 把'生物安全'从 research narrative 升级为 cross-company product line 的标志。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Bioresilience 是 frontier lab 把'AI for science' 战略化的典型样本——OpenAI/Anthropic 走安全+治理路线,DeepMind 选 bio+health 路线切入,等于是用社会价值叙事绕开'AGI 终点'口水。隐含信号:DeepMind 跟母公司 Google Cloud / TPU 算力绑定更深,后训练与 RLHF 之外,垂直领域 fine-tune 可能成为 DeepMind 下一阶段 KPI;而 Isomorphic Labs 商业化(2024 启动)也开始有 public narrative 抓手,IPO 估值叙事可以打。</p>
+    <div class="source">来源：DeepMind 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_01.jpg" alt="OpenAI 7/16 发文"为何青少年值得获得安全 AI":9/10 美国青少年用 ChatGPT 学习" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/why-teens-deserve-access-safe-ai" target="_blank">OpenAI 7/16 发文"为何青少年值得获得安全 AI":9/10 美国青少年用 ChatGPT 学习</a></h3>
+    <p style="color:#ccc;">OpenAI 7/16 发布青少年 AI 安全白皮书,核心数据:近 9/10 美国青少年每周至少一次用 ChatGPT 用于学习/信息/技能/生产力。OpenAI 主张青少年不能等 18 岁才接触 AI(否则将被同龄人甩开),但访问必须配套保护:内置 safeguards + 外部专家组织合作 + 监管对话。文章同步点名 ChatGPT Academy 案例——高中 Oriana McKenzie 用 ChatGPT 提升到年级第一,腾出时间做体育与社团。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 这是 OpenAI 把'AI 教育普惠'作为舆论支点的最新动作——7/15 GPT-Red 是技术输出,7/15 州-联邦 AI 安全协同是政策输出,7/16 teens safe AI 是社会价值输出,三连发形成完整的'OpenAI 是负责任的 AI 领袖'叙事链。隐含信号:OpenAI 已把'青少年用户'视为下一代 GPT-6/7 的核心增量市场(类比 TikTok 的 Gen Z 策略),safeguards 既是合规也是锁定;未来 6 个月可能看到 ChatGPT for Schools / Teens 单独 SKU 与免费层。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_02.jpg" alt="SCMP 7/16:DeepSeek 创始人 LP 基金抢筹 CXMT mega IPO,中国 AI 芯片-模型协同 IPO 集群成型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[South China Morning Post] 3级信源 · cn</div>
+    <h3><a href="https://www.scmp.com/tech/tech-trends/article/3285625/cxmt-mega-ipo-draws-frenzy-from-retail-investors-to-deepseek-founders-fund" target="_blank">SCMP 7/16:DeepSeek 创始人 LP 基金抢筹 CXMT mega IPO,中国 AI 芯片-模型协同 IPO 集群成型</a></h3>
+    <p style="color:#ccc;">South China Morning Post 7/16 独家:中国 DRAM 长鑫存储 CXMT mega IPO 散户认购狂热,DeepSeek 创始人 LP 基金参与锚定。CXMT 是中国唯一能量产 DDR5 的本土 DRAM 厂商,被市场视为'中国版 SK Hynix'。DeepSeek 创始人参与认购标志中国 AI 模型-芯片资本协同进入 IPO 阶段——继 DeepSeek 自己拟 2027 上海 IPO ($74B 估值,Reuters 7/15 爆料)后,CXMT 把'AI 算力本土化'的资本叙事也推到台面。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 中国 AI 产业链 IPO 集群化——模型层(DeepSeek) + 芯片层(CXMT) + 应用层(智谱/零一万物/Moonshot 排队)在 2026 H2-2027 H1 同步上市,形成对冲美国出口管制(7/13 升级)的本土资本闭环。DeepSeek 创始人同时押 CXMT 是产业逻辑:DeepSeek V4 用 CXMT HBM3 做推理,如果 CXMT 上市,DeepSeek 自己 IPO 时估值可以套'国产 DRAM 锁定'的故事。隐含信号:中国 AI 资本正式从'美元 VC → A 股 IPO'切换,海外投资人参与窗口收窄。</p>
+    <div class="source">来源：South China Morning Post</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_03.jpg" alt="银河通用发布全球首个具身智能"测试时训练"框架 WAM-TTT:机器人可以"现学现上岗"" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/451403.html" target="_blank">银河通用发布全球首个具身智能"测试时训练"框架 WAM-TTT:机器人可以"现学现上岗"</a></h3>
+    <p style="color:#ccc;">银河通用 7/16 发布 WAM-TTT(World-Action Model Test-Time Training),全球首个把 Test-Time Training(TTT)范式从 NLP/LLM 迁移到具身机器人控制的框架。核心突破:机器人不用重训整套模型,只看一段人类实拍视频理解场景,把信息写入临时记忆,再结合原有动作能力完成新任务——解决具身智能最大的痛点'训练时精通,部署时失灵'(跨场景泛化性衰减)。不需要重新预训练、不需要机器人轨迹数据标注、不需要人类动作标注。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 TTT 从 LLM(O1/R1)迁移到具身是 2026 H2 最重要的范式转移信号——把'训练→部署'两段式切成'训练→部署→持续后训练'三段式。银河通用这一手直接把特斯拉 Optimus / Figure / 1X 的路线比下去:别人还在堆数据,银河用 paradigm shift。隐含信号:具身智能的'数据瓶颈'问题被技术绕过,下一阶段比拼的是'客户部署场景数量'而非'训练数据规模';7/15 量子位还报了 Figure 03 demo 应激反应——美国具身公司可能跟进 TTT, 1-2 个月内会看到 PI / Tesla / Physical Intelligence 复刻方案。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_04.jpg" alt="TC 7/16 独家:Yann LeCun 的世界模型公司 AMI Labs 拒绝使用'AGI'或'超智能'标签" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/16/why-ami-labs-alexandre-lebrun-wont-call-his-ai-agi-or-superintelligence" target="_blank">TC 7/16 独家:Yann LeCun 的世界模型公司 AMI Labs 拒绝使用'AGI'或'超智能'标签</a></h3>
+    <p style="color:#ccc;">TechCrunch 7/16 独家:AMI Labs CEO Alexandre LeBrun(原 Facebook AI Research 团队成员,Yann LeCun 世界模型路线)在首尔 ICML 期间表态:'我们从不用 AGI 这个词。我刚注意到大家都不用了,改成超智能了。下次我们再换别的。'他对'超智能'也不买账:'没有好定义。什么是超智能?不知道,这不是个有用的词。'AMI Labs 走 world model + JEPA 路线,定位跟 OpenAI/Anthropic 不一样。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 这是对 OpenAI/Anthropic 'AGI/超智能'营销叙事的正面反击——Yann LeCun 阵营一直主张'人类级 AI 不存在科学共识',AMI Labs 公开拒用这俩词是在抢'严肃研究 vs 营销炒作'的话语权。隐含信号:AMI Labs 走 world model 路线本质是 Meta 的'开源盟友'——如果 AMI 估值能在 2027 推到 $20B+,Meta 重新杀回 frontier 模型的叙事就有支点;同时'世界模型'这个词比'AGI'更适合企业级采购讲故事(B2B 客户对'AGI'反胃)。LeCun 2026 从 Meta FAIR 跳到 AMI 是这一波反弹的核心。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/news_items_v2_2026-07-17_05.jpg" alt="Anthropic IPO 10月目标 $965B 估值:Claude 母公司开始接触投资人,Bloomberg 独家" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[Bloomberg / TipRanks] 3级信源 · cn</div>
+    <h3><a href="https://www.tipranks.com/news/private-markets-anthropic-to-meet-with-investors-as-ipo-nears" target="_blank">Anthropic IPO 10月目标 $965B 估值:Claude 母公司开始接触投资人,Bloomberg 独家</a></h3>
+    <p style="color:#ccc;">Bloomberg 7/15 独家 + TipRanks/Crypto Briefing 7/16 跟进:Anthropic 目标 2026 年 10 月 IPO,估值 $965B(近 $1T),正在接触 anchor investors。这是继 OpenAI 推迟 IPO 到 2027 / DeepSeek 2027 上海 IPO 之后,Anthropic 抢先把 IPO 时点推到 Q4 2026。Bloomberg/TipRanks 7/16 同步披露 Anthropic 走'SpaceX 模板'(Bloomberg 原话)——用 anchor 锁定长期投资人,避开 IPO 后股价波动。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 三家 frontier 厂商 IPO 时点全部前移:Anthropic 2026 Q4、OpenAI 2027、DeepSeek 2027——形成 18 个月内连续 IPO 集群,总市值预计 $3T+,把'AI 算力军备' 切到 'AI 资本军备'新阶段。Anthropic $965B 估值是 SpaceX($400B 上市预期)的 2.4 倍,意味着市场预期 Claude 5/6 商业化能撑起 4-5 倍 SpaceX 体量的收入。隐含信号:Anthropic 抢在 OpenAI 之前 IPO 是为了'后发不落后',即使 Claude Sonnet 5 在企业市场落后 GPT-5.6,但先 IPO 就能用现金储备(估值兑现)买算力+挖人。下一阶段 frontier 厂商不是拼 model,是拼'上市时间窗口'。</p>
+    <div class="source">来源：Bloomberg / TipRanks</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/paper_summaries_v2_2026-07-17_00.jpg" alt="Generative Compilation: On-the-Fly Compiler Feedback as AI Generates Code" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.13921 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.13921" target="_blank">Generative Compilation: On-the-Fly Compiler Feedback as AI Generates Code</a></h3>
+    <p style="color:#ccc;">想象一下:你让 LLM 写 Rust 代码,每生成一个 token 编译器都能即时告诉你'下一步别这么写,会出错'。这就是 generative compilation 的核心想法——把'生成完整文件后再编译报错'的旧流程,改成'边生成边编译反馈'。论文引入 sealor 这个关键装置:它能把 LLM 当前还没写完的 partial program 临时补全成能编译的完整程序,然后让标准编译器诊断错误,反馈回 LLM。在 Rust 这种强类型语言上,这一招比传统的'生成完再编译'更早抓到错误,减少错误级联。在仓库级 Rust 任务上能减少不编译输出并提升功能正确率。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We introduce generative compilation, the first approach to obtaining compiler feedback on partial programs during LLM code generation. The core technical device is a sealor: a lightweight, mostly syntax-guided transformation that converts partial programs into complete ones that standard compilers can diagnose. The sealor is designed to never reject possible-to-complete partial programs while preserving enough code context to catch genuine dead ends early. We construct such a sealor on a core Rust-like calculus and prove the relevant properties mechanized in Lean. We then extend it to the first partial-program checker for real Rust. Evaluation on repository-level Rust tasks across frontier black-box and open-weight models shows that generative compilation reduces non-compiling outputs and improves functional correctness relative to standard post-generation feedback, by detecting a broad range of errors close to their source during generation.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>设计 sealor (syntax-guided transformation) 把 partial program 转换为编译器可诊断的完整程序。核心约束:任何 '可能补全到合法程序' 的 partial program 不能被 sealor 拒绝,从而保留 LLM 探索空间。在 core Rust-like calculus 上形式化定义,关键性质在 Lean 中机械化证明 (partial program 永远不会过早拒绝)。扩展到真实 Rust 的 partial-program checker。生成时每一步 partial program → sealor → 编译器诊断 → 反馈 LLM。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Generative compilation 对 Rust 这类强类型语言的显著增益,代价是 partial program 维护成本——每生成一个 token 都要跑 sealor + compiler,对 latency 和 compute 是额外负担,可能不适合实时交互场景;另外 sealor 是 syntax-guided 而不是 semantics-guided,会保留'看着能编译但语义错'的 false negative,LLM 还是要靠 functional tests 兜底;最后 partial-program checker 当前只覆盖真实 Rust,推广到 Rust 之外需要重新写一遍 language-specific sealor,跨语言迁移成本高。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在仓库级 Rust 任务上(frontier black-box + open-weight 模型):(1) 显著降低 non-compiling 输出率;(2) 提升 functional correctness(在多个 benchmark 上击败 standard post-generation feedback baseline);(3) 错误在源头附近就被捕获,减少错误级联。</div>
+      <div class="row"><span class="author">🏢 团队：</span>ETH Zurich (Niels Mündler-Sasahara, Martin Vechev) + INSAIT + Sofia University (Hristo Venev) + UC Berkeley (Dawn Song, Jingxuan He)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/paper_summaries_v2_2026-07-17_01.jpg" alt="AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.13705 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.13705" target="_blank">AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities</a></h3>
+    <p style="color:#ccc;">今天评估一个 LLM agent 能力有多难?你需要对接 20 多个 benchmark,每个 benchmark 的 harness(评估脚手架)、environment(运行环境)都不一样,改一个就要重写一套。AgentCompass 把这件事标准化了:把整个评估流程拆成 Benchmark、Harness、Environment 三个独立组件,可以灵活组合不用重写执行逻辑。还内置 fault-tolerant 异步运行 + 轨迹分析工具,能精确定位 reward-hacking 这类隐蔽失败模式。原生支持 20+ benchmark,横跨 5 个能力维度(工具调用、Agentic 编程、Web 科研、生产力、科学推理)。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">As LLMs evolve into autonomous agents, unified evaluation infrastructure becomes critical, yet current pipelines remain highly fragmented and tightly coupled. We introduce AgentCompass, an open-source, lightweight, and extensible infrastructure for evaluating LLM-based agents. AgentCompass organizes the evaluation process around three independent components, namely Benchmark, Harness, and Environment, enabling flexible configurations without requiring reimplementation of complex execution logic. The system features a fault-tolerant asynchronous runtime and comprehensive trajectory analysis tools to transparently diagnose nuanced failure modes like reward-hacking. Natively supporting over 20 benchmarks across five capability dimensions, AgentCompass provides a scalable and reproducible foundation for advancing agent research.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>解耦三件套架构: (1) Benchmark(任务定义层) —— 通过统一 schema 描述任务输入/输出/评分规则; (2) Harness(执行驱动层) —— 负责 agent loop + 工具调用编排,与具体 benchmark 解耦; (3) Environment(运行时沙箱) —— 提供标准化的 code execution / web browsing / file system 接入。三层通过 interface contract 互联,可以灵活组合而无需修改其他两层。配套异步 runtime 容错执行 + 轨迹分析工具做 failure mode 归因。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>AgentCompass 把 agent 评估工程化推到新高度,但 20+ benchmark 接入的标准 schema 设计注定要妥协——每个 benchmark 都有独特的评分细节(代码风格的 lint 规则 / web 任务的页面版本差异 / 科学推理的 domain knowledge),硬塞进统一 schema 会丢失部分信号;另外异步 runtime + 轨迹分析对单机开发者不友好,需要一定的分布式调试经验,跟'lightweight' 的初衷有张力;最后 AgentCompass 本身不生产新 benchmark,只是把现有 benchmark 串起来,真正评估能力的'前沿性'仍受限于上游 benchmark 社区。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>原生集成 20+ benchmark,横跨 5 个能力维度: Tool Use, Agentic Coding, Web & Research, Productivity, Scientific Reasoning。在 Qwen3.5-397B-A17B、Kimi-K2.6、DeepSeek-V4-pro(FP4)、GLM-5.2(FP8)、Gemini-3.1-Pro-Preview、GPT-5.5、Claude-Opus-4.8 等主流 frontier 模型上做能力画像对比。开源代码可直接部署,降低 agent 评估的工程门槛。</div>
+      <div class="row"><span class="author">🏢 团队：</span>AgentCompass Team @ Shanghai AI Laboratory</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/paper_summaries_v2_2026-07-17_02.jpg" alt="GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.13960 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.13960" target="_blank">GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch</a></h3>
+    <p style="color:#ccc;">机器人学动作最大的瓶颈是'实时性'——传统 World Action Model (WAM) 在推理时还要生成未来视频,慢到无法闭环部署。GigaWorld-Policy-0.5 改用 action-centered 思路:训练时联合建模动作+未来视觉,但推理时只解码动作。在 RTX 4090 上把推理延迟压到 85ms,可以实时部署。架构上用 Mixture-of-Transformers 把视觉动力学建模和动作生成拆成两组 expert,推理时只激活动作 expert。还引入 agent-based AutoResearch pipeline 自动搜训练配置,代替人工调参。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However, existing WAMs explicitly generate future videos at inference time, incurring substantial computational overhead and hindering real-time closed-loop deployment. GigaWorld-Policy addresses this with an action-centered formulation: future visual dynamics are used during training while action-only decoding is used at inference time. Building on this, we present GigaWorld-Policy-0.5, an enhanced action-centered WAM with a Mixture-of-Transformers architecture that separates visual dynamics modeling and action generation into specialized experts, achieving 85 ms inference latency on a local RTX 4090. We additionally employ an agent-based AutoResearch pipeline that systematically searches training configurations to identify optimal experimental setups with reduced manual intervention.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Action-centered 训练-推理解耦:训练阶段联合建模 action + future video(用未来场景作为 dense supervision),推理阶段只解码 action。架构用 Mixture-of-Transformers: 一组 expert 负责 visual dynamics modeling(只在训练时用), 一组 expert 负责 action generation(推理时激活),通过 gating 切换。配合 agent-based AutoResearch pipeline:让 LLM agent 自动枚举训练配置(数据混合 / loss 权重 / expert ratio 等),跑评测,反馈迭代找最优。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Action-only 推理虽然把延迟压到 85ms,但代价是失去推理时的'想象未来'能力——遇到训练分布外的环境,模型没有视频预测做 safety check,可能会做出物理上不可行的动作(撞桌子、卡关节),这是把实时性凌驾于 safety 之上的取舍;MoE 架构虽然推理只激活动作 expert,但训练时所有 expert 都要 update,显存占用跟 dense 模型差不多,实际部署成本不一定低;AutoResearch pipeline 找最优配置的过程中跑了数百次实验,前期 compute 成本可能远超最终节省的人工调参时间,对小团队不友好。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 RTX 4090 本地部署:推理延迟 85ms,达到实时控制频率(典型机器人控制环要求 50-100ms)。Action-only 推理保留训练阶段未来视觉动力学的全部增益(论文报告在多组 policy learning benchmark 上维持或优于前代 GigaWorld-Policy)。AutoResearch pipeline 比人工调参找到更优配置,且减少人力时间。</div>
+      <div class="row"><span class="author">🏢 团队：</span>GigaAI (GigaWorld Team) + Tsinghua University — 28 作者联合,主创 Angen Ye/Angyuan Ma/Boyuan Wang/Chaojun Ni 等</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/paper_summaries_v2_2026-07-17_03.jpg" alt="Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.12477 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.12477" target="_blank">Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence</a></h3>
+    <p style="color:#ccc;">无人机自主飞行需要的不只是'理解周围环境',还要'理解自己在哪、做了什么动作'。现有 UAV 评测都是 environment-centric,只看空间理解,把 self-awareness 隐式处理。SIS-Bench 把评测拆成两个维度(space vs self)三层(perception/memory/reasoning),共 13 个任务,基于 1646 段真实 UAV 视频构建 4856 个 QA 对。核心发现:当前 MLLM 在空间认知和 self-awareness 之间严重不均衡,且在认知层级上有递进性能退化。论文还探索了 motion-aware 表示,通过光流 + 视觉特征融合把自身动作信息嵌入感知,显著提升 self-awareness 并迁移到下游 UAV 决策任务。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Autonomous UAV systems increasingly rely on multimodal large language models (MLLMs) to operate in complex real-world environments, requiring not only spatial understanding but also a coherent representation of the agent itself. Existing UAV benchmarks remain largely environment-centric, focusing on spatial understanding tasks while treating self-awareness implicitly. To address this gap, we introduce SIS-Bench, a benchmark evaluating embodied spatial intelligence in UAV scenarios under a unified self-in-space formulation. SIS-Bench organizes evaluation along two complementary dimensions (space and self) and a three-level hierarchy (perception, memory, reasoning), comprising 4,856 question-answer pairs across 13 tasks derived from 1,646 real-world UAV videos via task-conditioned construction with expert verification. Evaluations reveal clear imbalance between spatial cognition and self-awareness in current MLLMs, with progressive performance degradation across cognitive levels. Motivated by these findings, we explore a motion-aware representation that incorporates self-related dynamics through optical flow and visual feature fusion, showing consistent improvements in perception and memory performance that also generalize to downstream UAV decision-making tasks.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>双维度三层级评测体系: (1) Space vs Self 两条平行轴;(2) Perception / Memory / Reasoning 三层认知层级。13 个任务,4856 QA 对。构建流程 task-conditioned:从 1646 段真实 UAV 视频抽取,expert verification 保证质量。Motion-aware 表示:把无人机自身的光流(optical flow)作为额外输入,与视觉特征融合,显式建模 self-related dynamics。通过消融验证 motion 信息对 self-awareness 的必要性。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>SIS-Bench 选了 1646 段真实 UAV 视频 + 4856 QA 对,规模在 embodied benchmark 里不算大(GAIA-Embodied 都有上万 QA),统计显著性可能受影响;另外 space vs self 双维度 + 三层级认知的设计虽然优雅,但评估时一次跑全套 13 任务对开发者是较大 compute 成本,可能影响社区采用率;最后 motion-aware 表示虽然在论文内验证有效,但加入了光流模块意味着推理时需要额外的光流估计网络,latency 和显存占用都会上升,在小型无人机平台(嵌入式板)上部署受限。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在多个 MLLM(GPT 系/Claude 系/Gemini 系/开源 VLM)上评测: 所有模型在 self-awareness 任务上的分数显著低于 space cognition(典型 gap 15-30%);三层认知层级有递进性能退化(perception 高于 memory 高于 reasoning);加入 motion-aware 表示后,perception 和 memory 性能均提升,且 self-awareness 增益迁移到下游 UAV 决策任务。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Beijing University of Posts and Telecommunications (Zhishan Zou, Guoyan Sun, Yujie Li, Mugen Peng, Wenjia Xu) + Hunan Normal University (Zhiwei Wei) + Tsinghua University (Jiancheng Pan)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/paper_summaries_v2_2026-07-17_04.jpg" alt="PalmClaw: A Native On-Device Agent Framework for Mobile Phones" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.13027 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.13027" target="_blank">PalmClaw: A Native On-Device Agent Framework for Mobile Phones</a></h3>
+    <p style="color:#ccc;">现有 mobile agent 都靠 GUI 操作(tap/swipe/type),本质是'模拟手指',执行边界模糊、无法直接调用设备能力。PalmClaw 是首个原生在手机上跑的 agent 框架:agent loop、memory、skills、tools、session 全部 on-device。把手机硬件能力(相机/麦克风/位置/通讯录/文件系统)封装成有显式参数、结构化结果、明确定义执行边界的 device tools。实验显示任务成功率比最强 baseline 提升 11.5%,完成时间缩短 94.9%,setup burden 更低。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">LLM agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing results, and iteratively deciding the next action. Most agent systems run on desktops or servers; mobile devices are also important agent environments because they are widely accessible and contain user data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through GUI actions such as tapping, swiping, and typing, which form long interface-dependent sequences, cannot directly access device capabilities, and have unclear execution boundaries. We present PalmClaw, an open-source agent framework that runs natively on mobile phones and manages sessions, memory, skills, tools, and agent loop directly on the device. PalmClaw exposes device capabilities as device tools with explicit arguments, structured results, and clearly defined execution boundaries. Experiments show an 11.5% relative improvement in task success and a 94.9% reduction in completion time over the strongest baseline, with lower setup burden.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Native on-device agent loop:把 agent loop / memory / skills / tools / session state 全部跑在手机上,不再依赖云端。Device tools 抽象层:把相机/麦克风/GPS/通讯录/文件 IO 封装成有显式参数 schema + 结构化返回 + 明确执行边界的 tool,而不是 GUI 模拟。每次 tool call 有清晰的 input/output contract 和 timeout 边界。配套 skills 库做任务模板复用,memory 模块做跨 session 状态持久化。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>On-device agent 的最大代价是模型能力受限——手机 SoC 跑不动 frontier LLM,PalmClaw 只能用 3-7B 级别的小模型,在复杂推理/规划任务上效果远不如云端 GPT-5.6 / Claude Opus 4.8;device tools 抽象层虽然清晰,但只覆盖系统 API,跨应用操作(打开微信发消息给特定联系人)还是要靠 GUI 模拟,PalmClaw 没解决通用 mobile agent 的最后一公里;另外 on-device 部署意味着每次 app 更新可能破坏 device tools 兼容性,长期维护成本高,适合系统厂商(Apple/Samsung/Xiaomi)做而不适合独立开发者。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>任务成功率:相对最强 baseline 提升 11.5%。完成时间:相对最强 baseline 缩短 94.9%(主要因为直接调 device tools 避免了 GUI 模拟的多次 round-trip)。Setup burden:开发者接入成本降低,不用再 hook 系统 UI 事件。GitHub 开源: github.com/ModalityDance/PalmClaw。</div>
+      <div class="row"><span class="author">🏢 团队：</span>The Hong Kong Polytechnic University (Hongru Cai, Yongqi Li, Wenjie Li) + Hangzhou Diagens Biotechnology Co., Ltd. (Ran Wei)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_00.jpg" alt="aval" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/pixel-point/aval" target="_blank">aval</a></h3>
+    <p>Aval 是 pixel-point 团队 7/13 发布的开源交互式视频格式标准,核心创新:把视频文件里嵌入一个内置状态机(state machine),让视频本身可以响应用户交互(分支选择 / 状态切换 / 动态加载子剧情)。跟传统交互视频(Netflix 黑镜 Bandersnatch / YouTube 互动视频)相比,Aval 把交互逻辑从云端服务搬到文件本身,任何播放器都能跑,无需专属 SDK。当前 1036★ 是 GitHub 新项目里 7 月以来排第一的非 agent 类。</p>
+    <div class="source">⭐ 1,036 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_01.jpg" alt="MonkeyOCRv2" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Yuliang-Liu/MonkeyOCRv2" target="_blank">MonkeyOCRv2</a></h3>
+    <p>MonkeyOCRv2 是华中科技大学 Yuliang-Liu 团队 7/10 发布的文档 OCR 视觉编码器,核心定位'document-native visual backbone':不靠外部文本检测+识别 pipeline,直接把整页文档作为视觉 token 输入,在 encoder 里同时做 layout / 文字 / 表格理解。源自 MonkeyOCR 系列(2024 年起),v2 版本重点优化多语言 + 多页 + 表格结构识别。201★ 在 7 月新 repo 里不算最高,但技术差异化强——其他 OCR 项目(Marker / Surya / Docling)仍走两阶段 pipeline。</p>
+    <div class="source">⭐ 201 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_02.jpg" alt="circuit-framework" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/PengZhang64/circuit-framework" target="_blank">circuit-framework</a></h3>
+    <p>Circuit Framework 是 PengZhang64 7/16 刚发的多 agent LLM 量化交易研究系统,核心思路:用多 agent 协作(market analyst / strategy researcher / risk manager / executor)跑端到端的 quant 研究 pipeline,从因子发现→回测→风控→下单全链路。比传统 quant 平台(WorldQuant / QuantConnect)更轻量,目标是个人 quant 爱好者和小团队。当前 277★ 一周不到爬到这个量级,说明社区关注度不低。</p>
+    <div class="source">⭐ 277 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_03.jpg" alt="waku-agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ShenSeanChen/waku-agent" target="_blank">waku-agent</a></h3>
+    <p>Waku Agent 是 ShenSeanChen 7/10 发布的个人 AI agent 框架,定位'在你自己的笔记本上、用你能读懂的代码,跑你的个人 AI agent'。跟 OpenAI Codex / Anthropic Claude Code 这种云端 agent 不同,Waku Agent 完全本地化部署,支持接入本地 LLM(Ollama / LM Studio)和小模型(7B-13B),主打'隐私 + 可读 + 离线'。223★ 一周爬到,说明个人开发者社区对'逃离云端 agent'有真实需求。</p>
+    <div class="source">⭐ 223 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_04.jpg" alt="managed-agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/sandbaseai/managed-agents" target="_blank">managed-agents</a></h3>
+    <p>SandboxAI 7/11 发布的开源 multi-agent 运行时,定位'OpenAgents 兼容的 multi-agent 本地执行框架'。核心能力:支持任何 LLM provider(OpenAI/Anthropic/Google/本地 Ollama),本地运行多 agent 协作,内置任务队列 / memory 持久化 / tool 调度。CMA(Common Agent Manifest)兼容意味着开发者写一次 agent 描述,可在多个 runtime 之间迁移。162★ 但 sandboxai 团队背景不错(原 e2b 团队),社区认可度上升中。</p>
+    <div class="source">⭐ 162 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-17/oss_summaries_v2_2026-07-17_05.jpg" alt="sample-specship" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/aws-samples/sample-specship" target="_blank">sample-specship</a></h3>
+    <p>AWS Samples 7/10 发布的 spec-driven autonomous engineering workflow,核心是给 AI coding agent(Codex/Claude Code/Kiro)加一层'spec 优先'的工程化约束:先 reconnaissance → plan → build → verify 四阶段,每阶段都有明确的 spec 验收门槛,不允许 agent 跳步骤直接写代码。定位'kiro-spec-ship' 是 AWS 内部 Amazon Q Developer 团队对外公开的工程化最佳实践。170★ 来自 aws-samples 官方账号,AWS 站台意味代码质量有保障。</p>
+    <div class="source">⭐ 170 · Shell</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-17 07:30</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
