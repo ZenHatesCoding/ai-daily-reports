@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月18日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月18日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_00.jpg" alt="OpenAI CFO 发布 AI 时代计分卡：企业该看“每美元有效智能”，不是 Token 单价" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[OpenAI 官方] 3级信源 · cn</div>
+    <h3><a href="https://openai.com/index/a-scorecard-for-the-ai-age" target="_blank">OpenAI CFO 发布 AI 时代计分卡：企业该看“每美元有效智能”，不是 Token 单价</a></h3>
+    <p style="color:#ccc;">OpenAI CFO Sarah Friar 7 月 17 日提出企业 AI 投资的新计分卡：不再只看席位数、活跃用户或单 Token 价格，而要衡量每美元产生多少可用工作。她把指标拆成四问：AI 完成了多少真正有价值的任务、每个成功任务的全成本是多少、结果是否足够可靠、规模扩大后单位投入能否买到更多工作。文章特别强调，便宜模型若需要多轮重试和大量人工复核，最终可能比昂贵但一次做对的模型更贵。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 这不是普通的财务科普，而是 OpenAI 在替企业采购重新定义 ROI 口径：竞争单位从“模型和 Token”转向“成功任务”。一旦 CFO 接受该框架，模型厂商会被迫同时交代完成率、重试次数、人工复核和失败成本，单纯降价不再等于更具性价比。更深一层，OpenAI 正把定价权锚到业务结果而非算力成本，为后续按任务、按 Agent 产出或按节省工时收费铺路；企业 AI 预算也会从创新试验逐步转为可审计的生产投入。</p>
+    <div class="source">来源：OpenAI 官方</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_01.jpg" alt="TechCrunch 实测 Vertu 6880 美元 Hermes Agent 手机：更敢自动执行，但不如 Gemini 准" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/" target="_blank">TechCrunch 实测 Vertu 6880 美元 Hermes Agent 手机：更敢自动执行，但不如 Gemini 准</a></h3>
+    <p style="color:#ccc;">TechCrunch 连续数日实测 Vertu Alphafold：这款 6880 美元折叠机预装基于开源 Hermes 项目的 Agent，可分析本地文件、跨 App 自动化并转交真人礼宾。它完成了发消息、开勿扰和调地图等多步操作，也能正确总结上传表格；但把“15 分钟后提醒”设成错误时间、把 7 月 18 至 19 日行程建到 7 月 7 日，且数日后忘记已分析过的文件。对照组 Gemini 更爱先澄清，动作少一些但最终更准确。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 这次公开评测把移动 Agent 的核心矛盾测得很清楚：自主性越高，错误动作的现实成本越大。Hermes 的优势不是更会聊天，而是更愿意跨 App 干活；短板也正来自同一处——缺少在日期、目的地和不可逆动作前主动停下来澄清的策略。它说明下一代 Agent 竞争不只是工具数量，而是“何时行动、何时追问”的策略质量，以及长期记忆能否稳定保留。对高管场景而言，真人礼宾并非装饰，而是当前 Agent 可靠性不足时的人工兜底层。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_02.jpg" alt="Databricks 估值五个月从 1340 亿升至 1880 亿美元：企业数据平台吃到 AI 二次增长" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/" target="_blank">Databricks 估值五个月从 1340 亿升至 1880 亿美元：企业数据平台吃到 AI 二次增长</a></h3>
+    <p style="color:#ccc;">Databricks 7 月 17 日宣布由 Coatue 领投的新一轮融资，估值达到 1880 亿美元；公司未披露金额，其他媒体称约 30 亿美元，资金预计夏末到账。其估值在五个月内由 1340 亿美元上升约 40%，而 2025 年 9 月还只有 1000 亿美元。过去以 Spark 和湖仓闻名的公司，借企业数据资产、MosaicML 与开放权重模型服务完成 AI 化转身，融资节奏也从 2024 年底的 620 亿美元估值连续跃升。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Databricks 的二次增长说明企业 AI 最值钱的位置未必是基础模型，而是“数据已在我这里”的控制面。模型可以替换，企业权限、治理、血缘和历史数据迁移却很难重做，因此数据平台能够同时卖训练、推理、Agent 和合规。1880 亿美元估值也在提前重估 Snowflake、微软 Fabric 等同类资产：未来竞争会从谁有更强模型转到谁能把模型安全接入企业真实数据。风险在于融资估值跑得快于公开收入质量，IPO 时市场会要求它证明 AI 收入不是旧湖仓合同换包装。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_03.jpg" alt="中国发布国产 Token 优化工厂：统一调度 10 余种芯片，日吞吐千亿 Token" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[量子位] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/07/453617.html" target="_blank">中国发布国产 Token 优化工厂：统一调度 10 余种芯片，日吞吐千亿 Token</a></h3>
+    <p style="color:#ccc;">清华系是石科技在 WAIC 2026 发布拓元 Vectron，定位国产 Token 优化工厂。系统兼容昇腾、昆仑芯、摩尔线程、沐曦、燧原等 10 余种国产芯片和 20 余个主流模型，通过任务自适应路由、专属算子融合编译、异构集群统一调度、KV Cache 压缩和多模态 Token 压缩提升利用率，官方称日吞吐达到千亿 Token。文章同时指出，中国已有 50 多个智算中心、总规模超过 1000 EFLOPS，但平均利用效率仍有明显提升空间。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 国产算力的竞争重心正在从“能不能点亮模型”转向“每张卡能产多少有效 Token”。这一步比发布单颗芯片更关键，因为国产芯片型号分散、软件栈割裂，客户真正承担的是迁移和调优成本。Vectron 若能把十余种芯片统一成可调度的生产池，就在硬件厂商之上形成一层新的控制面，价值类似 CUDA 加推理云调度的组合。需要警惕的是，千亿 Token 是吞吐口径而非成本和质量口径，下一步必须看单位 Token 成本、长上下文效果损失和跨芯片稳定性。</p>
+    <div class="source">来源：量子位</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_04.jpg" alt="Agility Robotics 在特斯拉后院建 6 万平方英尺训练中心：Digit 已拿 3 亿美元订单" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/" target="_blank">Agility Robotics 在特斯拉后院建 6 万平方英尺训练中心：Digit 已拿 3 亿美元订单</a></h3>
+    <p style="color:#ccc;">Agility Robotics 将在加州 Fremont 开设 6 万平方英尺设施，专门训练其 Digit 人形机器人，地点就在特斯拉预计生产 Optimus 的工厂附近。与仍强调未来规模的 Optimus 不同，Digit 已在 Amazon、GXO、Schaeffler 和 Toyota 加拿大工厂执行搬运料箱等任务，公司称已获得 3 亿美元合同订单；在 GXO 一处物流中心，Digit 已搬运 10 万个料箱。Agility 还正推进反向并购，目标成为首家上市的纯人形机器人公司。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 人形机器人赛道开始从 Demo 竞争进入“部署学习曲线”竞争。Agility 的壁垒不是模型参数，而是已经经历安全审查、仓储系统接入、现场维护和真实订单交付；这些脏活会形成特斯拉短期难复制的部署数据。Fremont 选址也带有抢人才和供应链的意味：它主动把战场放到 Optimus 门口。更关键的信号是反向并购——机器人公司正在用公开市场资本扩大生产，但若订单无法转化为稳定毛利，上市也会放大硬件烧钱与售后成本。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/news_items_v2_2026-07-18_05.jpg" alt="AI 抢走 HBM 产能冲击印度手机：二季度出货降 10%，六年来最差" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[TechCrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/" target="_blank">AI 抢走 HBM 产能冲击印度手机：二季度出货降 10%，六年来最差</a></h3>
+    <p style="color:#ccc;">AI 数据中心对高带宽内存的需求正在外溢到消费电子。三星、SK 海力士和美光把更多晶圆产能转向利润更高的 HBM，挤压手机所需 RAM 和存储芯片供给，推高终端价格。Counterpoint 数据显示，印度 2026 年二季度智能手机出货同比下降 10%，是六年来最差的六月季度；同期中国只下降 2%。印度约 60% 市场集中在 2 万卢比、约 210 美元以下价位，因此对内存涨价尤为敏感。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 AI 基建繁荣正在通过同一条内存供应链向大众消费征税：云端每增加一批加速器，就可能挤压低端手机、PC 和汽车电子的 DRAM 配额。印度率先出现两位数下滑，是因为低价机利润薄、几美元 BOM 涨幅就必须转嫁给消费者。这个反馈会改变产业判断——HBM 不再只是英伟达供货问题，而是全球消费电子需求变量；若厂商继续追逐 HBM 高毛利，手机换机周期可能进一步延长，Micron、三星与 SK 海力士受益，但 Android 生态的新增用户速度会放缓。</p>
+    <div class="source">来源：TechCrunch</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/paper_summaries_v2_2026-07-18_00.jpg" alt="Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.13125 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.13125" target="_blank">Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation</a></h3>
+    <p style="color:#ccc;">Boogu-Image-0.1 是开源统一多模态理解与生成模型家族，包含 Base / Turbo / Edit / Edit-Turbo 四个变体，覆盖高质量文生图、快速推理、指令编辑和中英双语文字渲染。论文证明针对性改进理解模块、数据质量和训练管线，配合 agentic inference-time scaling，能在极受限算力预算下逼近闭源 Nano-Banana-Pro 和 GPT-Image-2 的表现。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">We introduce Boogu-Image-0.1, an open-source unified multimodal understanding and generation model family comprising Base, Turbo, Edit, and Edit-Turbo variants. Closed-source multimodal systems like Nano-Banana-Pro and GPT-Image-2 achieve strong performance through system-level integration rather than a single model. We show that targeted improvements in model understanding, data quality, and training pipelines, coupled with agentic inference-time scaling, can substantially enhance generation and editing performance even under highly constrained compute budgets. Notably, this is accomplished with only 208.62 million unique images, and the base model&#x27;s theoretical training cost is approximately $400K. We release weights, code, and recipes under Apache 2.0.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Decoupled compute-efficient 范式：32B VLM 作为 Instruction Reasoner 负责复杂逻辑理解，8B 轻量 VLM 作为 Instruction Encoder 抽取 hidden state 作 DiT 条件信号；Boogu Arena 评测体系 + Qwen-Image benchmark + LongText benchmark 三个独立 benchmark 验证；Boosted Orthogonal Guidance 控制生成与理解的解耦；inference-time agentic scaling 通过 task-aware router 在 Base / Turbo / Pro / Turbo-Thinking 四个变体之间动态调度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>208.62M 图数据集规模限制了模型对长尾风格和细节场景的覆盖；agentic inference-time scaling 提升质量但显著增加单次推理时延，对实时应用是负担；8B VLM Encoder 可能丢失部分复杂 prompt 的语义细节，需要 router 在 Turbo-Thinking 模式下补偿。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Boogu Arena 上 ELO 分数：Boogu-Image-0.1-Turbo-Thinking 达到 1048，超过 Qwen-Image-2.0 (988) 和 Z-Image-Turbo (960)，逼近 GPT-Image-2 (1196) 和 Nano-Banana-Pro (1087)；训练仅用 208.62M 张图，base 模型理论训练成本约 $400K，明显低于同档闭源模型；全套开源（Apache 2.0），社区可复现。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Huawei Technologies (Celia Large Model Application Laboratory, Leibniz; Hong Kong) (Chenyang Lei, Guoxuan Chen, Chufeng Xiao, Rui Liu) + The University of Hong Kong (Chao Huang, Xihui Liu) + Hong Kong University of Science and Technology (Qifeng Chen) + Hong Kong Polytechnic University (Bowen Dong) + Nanjing University (Bowen Zheng) — 33 作者联合</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/paper_summaries_v2_2026-07-18_01.jpg" alt="VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.14935 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.14935" target="_blank">VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</a></h3>
+    <p style="color:#ccc;">VideoChat3 是 4B 参数的全开源视频 MLLM，单一模型同时在通用、长视频、流式感知三类 benchmark 上超越同规模或更大规模开源模型。配套发布三个自建数据集：VideoChat3-Academic2M（通用）、VideoChat3-LV116K（长视频）、VideoChat3-OL617K（流式），覆盖从学术剪辑到真实长视频与在线交互的全谱系。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications. Current open-source models remain limited to specific domains and incur high computational demands. We present VideoChat3, a fully open video MLLM that achieves strong performance with only 4B parameters, surpassing prior open-source models with equal or larger parameter counts across general, long-form, and streaming video benchmarks. We release three constructed datasets: VideoChat3-Academic2M, VideoChat3-LV116K, and VideoChat3-OL617K, together with the I3D-ViT backbone and an adaptive frame resolution module for streaming perception.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>I3D-ViT 时空表征：把 3D 卷积的 inductive bias 与 ViT 的长程注意力结合；Adaptive Frame Resolution for Streaming Video Perception：在 streaming 场景下动态调整帧分辨率以降低 token 开销；Academic2M 覆盖通用 video QA、LV116K 覆盖长视频、OL617K 覆盖在线流式；4B 参数在统一模型中同时通过三类 benchmark 评估。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>4B 模型容量上限受限，复杂推理和细粒度动作识别仍落后闭源专用模型；三个数据集虽然覆盖范围广，但仍以学术语料主导的真实视频分布为主，长尾场景（如工业巡检/医疗内镜）泛化未验证；I3D-ViT 在极端长视频下是否能保持训练和推理效率，论文未给极限数据。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>仅 4B 参数 VideoChat3 在通用 video QA、长视频、流式感知三类任务上均超过同/更大规模开源模型；三个数据集 Academic2M / LV116K / OL617K 形成连续覆盖；I3D-ViT 在保持精度同时显著降低 inference FLOPs；不依赖闭源数据，完全开源。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Shanghai AI Laboratory + Nanjing University + The Chinese University of Hong Kong (Xinhao Li, Yuhan Zhu, Xiangyu Zeng, Yuhao Dong, Haoning Wu, Zhiqiu Zhang, Yuandong Yang, Changlian Ma, Qingyu Zhang, Yansong Shi, Xinyu Chen, Haoran Chen, Zizheng Huang, Jun Zhang, Kun Ouyang, Lin Sui, Ziang Yan, Yicheng Xu, Chenting Wang, Yinan He, Hongjie Zhang, Yi Wang, Yu Qiao, Yali Wang, Ziwei Liu, Kai Chen, Limin Wang) — 27 作者联合</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/paper_summaries_v2_2026-07-18_02.jpg" alt="LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.14952 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.14952" target="_blank">LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</a></h3>
+    <p style="color:#ccc;">LongStraw 通过 Architecture-aware execution 把 grouped RL 后训练推到 2.1M tokens 位置，固定 GPU 预算不增长。核心思路：shared prompt 不走 autograd，只保留后续 token 所需的 model-specific state；短 response branch 逐一 replay；用 GRPO 实例化。在 8 张 H20 上跑通 Qwen3.6-27B 至 2.1M positions，group size 8 比 group size 2 仅多 0.21 GB 显存。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">A growing gap separates inference context lengths from RL post-training: inference systems approach million-token contexts while post-training workloads remain at 256K tokens or below. We introduce LongStraw, an architecture-aware execution stack that fixes this gap without growing the GPU budget. Shared prompts bypass autograd, only model-specific state needed for subsequent tokens is materialized, and short response branches are replayed one at a time. The stack is instantiated with GRPO and run on Qwen3.6-27B and compressed-attention MoE GLM-5.2. On eight H20 GPUs, the implementation reaches 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory. A separate stress test reaches 4.46M positions. On 32 H20 GPUs, the implementation carries a 2.1M-token prompt across all 78 layers of GLM-5.2 end-to-end.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Architecture-aware execution stack：(1) shared prompt 不经过 autograd，节省显存；(2) 仅物化后续 token 必需的 model-specific state（如 KV cache 复用）；(3) 短 response branch 逐一 replay，避免整段 response 同时驻留显存。用 GRPO 实例化，同时支持 dense Qwen3.6-27B 和 MoE GLM-5.2，在 H20 集群上验证。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>Replay 策略用时间换显存，总训练时长显著拉长；captured prompt state 是 detached 的，加上部分分布式 forward + gradient composition 路径未完成，论文明确指出'建立执行能力而非完整训练正确性'；不适合需要严格可微的全链路训练场景。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>8 张 H20 上 Qwen3.6-27B 完成 grouped 评分和 response backward 至 2.1M positions（group size 2 和 8）；group size 增加仅多耗 0.21 GB peak allocated memory；压力测试至 4.46M positions；32 张 H20 上 GLM-5.2 全部 78 层端到端 2.1M-token 路径走通；建立 million-token RL 的 execution capacity。</div>
+      <div class="row"><span class="author">🏢 团队：</span>MindLab (Shanghai; Changhai Zhou, Kieran Liu, Yuhua Zhou, Qian Qiao, Jun Gao, Harry Zhang, Irvine Lu, Nolan Ho, Lucian Li, Andrew Lei, Cleon Cheng, Steven Chiang, Yihang Zeng, Di Zhang, Rio Yang, Kaijie Chen, Andrew Chen, Pony Ma) + Fudan University (Weizhong Zhang, Cheng Jin)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/paper_summaries_v2_2026-07-18_03.jpg" alt="Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.12395 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.12395" target="_blank">Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</a></h3>
+    <p style="color:#ccc;">Ring-Zero 把 zero RL 推到 1T 参数规模（Ring-2.5-1T-Zero），首次系统报告'苦涩教训'在 RL 上的复现：更大模型带来更高 sample efficiency 和表现上限。训练管线包括 clipped importance sampling + training-inference ratio correction + mixed-precision control 三大稳定化手段。模型自发涌现 anthropomorphism / self-verification / parallel reasoning / context anxiety 等高级认知行为。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Zero RL has emerged as a powerful paradigm for eliciting chain-of-thought reasoning, but existing studies are largely restricted to small models. We present Ring-Zero, the first zero RL scaling to 1T parameters (Ring-2.5-1T-Zero). We show that scaling to 1T parameters significantly enhances sample efficiency and performance ceilings. The training process progresses sequentially through an initial discovery phase followed by a sharpening phase. The model spontaneously develops advanced cognitive behaviors, including anthropomorphism, structured formatting, self-verification, parallel reasoning, and context anxiety. We propose a three-dimensional evaluation framework for CoT quality (comprehensibility, reproducibility, efficiency).</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Ring-2.5-1T-Zero 是 1T 参数 MoE（63B 激活）+ Ring-2.5-flash-Zero 是 104B MoE（7.4B 激活）。训练管线三阶段 RL：First Stage RL（token-level loss + KL 约束）→ Self-Distillation → Second Stage RL（sample-level loss）→ Third Stage RL（按难度 Low/Medium/High 自适应推理深度）。关键 trick：clipped importance sampling ϵhigh=5.0 + training-inference ratio correction + mixed-precision control。Reward 由 accuracy component 和 format component 组成，later stages 用 LLM-as-a-Judge (Qwen3-Next-80B-A3B-Instruct) 替代 rule-based 验证。训练在 320×H200 上跑，Megatron 训练引擎 + SGLang rollout 引擎 + Areal RL 框架调度。评估在 7 个数学 benchmark（AIME 2024-2026 + HMMT Feb/Nov 2025-2026 + IMOAnswerBench）做 pass@1。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>1T zero RL 训练基础设施与算力门槛极高，小团队或独立实验室几乎无法复现；naive scaling 暴露 poor readability / token redundancy / 缺自适应推理深度，作者靠 clipped IS + ratio correction + mixed-precision 三大工程 trick 压住，但每多一个组件都增加调参面；emergent cognitive behaviors 虽是亮点也意味着能力不可精细控制，生产部署的 safety 风险显著上升。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>First Stage RL 已在 AIME 2026 达 84.2%（无任何人类标注）；Second Stage RL + Yarn=2 让 Ring-2.5-1T-Zero 在 7 个 benchmark 全部逼近 GPT-5.5 / Claude Opus 4.8 / Gemini 3.1 Pro；第三阶段 RL 的 High 模式（128k 预算）平均 IT 20817 tokens，Low 模式（4k 预算）平均 IT 2353 tokens；emergent cognitive behaviors 在 1T 模型上明显但在小模型上不出现。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Ant Ling (Xinyu Tang, Gangqiang Cao, Yurou Liu, Yuliang Zhan, Xiaochong Lan, Yifan Li, Yuchen Yan, Han Peng, Zican Dong, Zhenduo Zhang, Tianshu Wang) + Communication University of China (Xinyu Kong, Zujie Wen) + RUC Business School (Wayne Xin Zhao) — 16 作者联合，框架基于 Areal，训练在 320×H200</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/paper_summaries_v2_2026-07-18_04.jpg" alt="SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.14777 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.14777" target="_blank">SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning</a></h3>
+    <p style="color:#ccc;">SEED 通过 policy-as-analyzer 把已完成的 on-policy 轨迹转成 hindsight skill，再以 skill-induced probability shift 作 dense token-level on-policy distillation signal，与 outcome-based RL 联合优化。两个阶段：Stage 1 Hindsight Skill SFT 让 policy 学会从轨迹抽取自然语言 skills；Stage 2 Self-Evolving On-Policy Distillation 用同一 policy 同时做 actor 和 analyzer，组成自演化环。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Outcome-based RL provides sparse, trajectory-level rewards that offer limited guidance on intermediate decisions, leaving a supervision gap between episode-level outcomes and token-level policy learning. We propose SEED (SElf-Evolving On-Policy Distillation), which converts completed on-policy trajectories into hindsight skills and distills their behavioral effect back into the policy model through a self-evolving training loop. The same policy model serves both as rollout actor and trajectory analyzer, extracting natural-language skills describing reusable workflows, decisive observations, or failure-avoidance rules. The resulting skill-induced log-probability shift over sampled actions forms a dense token-level distillation signal, jointly optimized with outcome-based RL.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>Stage 1 Hindsight Skill SFT：在离线轨迹上训练 policy 抽取可复用 workflows / 失败避免规则的 natural-language skills；Stage 2 Self-Evolving On-Policy Distillation：policy 同时做 actor（采集轨迹）和 analyzer（抽取 hindsight skills），训练时对 sampled actions 在 ordinary context 和 skill-augmented context 下 re-score，把 probability shift 作为 dense token-level OPD signal。Self-evolving loop 让 supervision 始终与 policy 的当前能力对齐。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>用'分析自己轨迹'换密集监督信号，对策略容量与上下文长度提出额外要求，policy 必须兼具执行 + 复盘能力；hindsight skills 质量受 policy 当前能力上限约束（鸡生蛋问题），冷启动期效果可能有限；额外 re-score 步骤拉长训练时间，对大规模 agentic rollout 的吞吐是负担。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 embodied interaction / web navigation / search-based QA / visual perception and planning 四类 agentic benchmark 上验证：SEED 持续优于 GRPO、Skill-GRPO、OPSD、Skill-SD、RLSD、SDAR 等 baseline；ALFWorld 平均 91.8 vs GRPO 75.0；Search-based QA 平均 45.7 vs GRPO 36.1；WebShop 成功率 78.9 vs GRPO 44.6；sample efficiency 改善明显。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Institute of Automation, Chinese Academy of Sciences (Jinyang Wu, Shuo Yang, Zhengxi Lu, Fan Zhang, Yuhao Shen, Lang Feng, Haoran Luo, Zheng Lian, Shuai Zhang, Zhengqi Wen) + The University of Chinese Academy of Sciences (Jianhua Tao, Project Leader)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_00.jpg" alt="William-Lu-stack/Flawless" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/William-Lu-stack/Flawless" target="_blank">William-Lu-stack/Flawless</a></h3>
+    <p>Flawless 把 AI 引入 SRE 现场，专门负责 Kubernetes 和云基础设施的 AgenticOps：自动诊断 pod 抖动、节点资源争用、CNI/CSI 异常、Ingress 抖动等工程问题，配套给出 remediation steps（重启 / rollout / drain）和变更影响范围评估。仓库既给 agent prompt 与工具定义，也提供 sandbox 模拟集群故障供开发者演练，目标是把 runbook 从文档变成可执行 agent。</p>
+    <div class="source">⭐ 714 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_01.jpg" alt="Codesteward/codesteward" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Codesteward/codesteward" target="_blank">Codesteward/codesteward</a></h3>
+    <p>Codesteward 用 structural graph intelligence 把 PR review 升级为 agent：分析 PR 跨文件 import graph + symbol dependency + data flow，做 PR gate（关键路径强制 review）、branch steward（长期分支 reconcile）、comment tracking。比纯 LLM review 多了一层'仓库级上下文'，能识别调用链深处的破坏性变更并圈出真正需要关注的人。</p>
+    <div class="source">⭐ 59 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_02.jpg" alt="Nexis-AI/NexBench" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Nexis-AI/NexBench" target="_blank">Nexis-AI/NexBench</a></h3>
+    <p>NexBench 测的是 autonomous agent 在区块链上到底能做什么：执行 swap / 桥接 / 治理投票 / 多步交易 / 与合约交互的真实 task，区分'能执行'与'能正确执行'。评估维度包含成功率、gas efficiency、回滚比例、MEV exposure 等，比传统 offline benchmark 更贴近 web3 生产环境。</p>
+    <div class="source">⭐ 163 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_03.jpg" alt="Alisa0808/vox-director" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Alisa0808/vox-director" target="_blank">Alisa0808/vox-director</a></h3>
+    <p>vox-director 把'给定一个 topic，输出一支 Vox-style 解释视频'做成自动化流水线：先 outline + 脚本，再生成 paper-collage 风格的关键帧（含简笔画、信息图表、动画转场），最后合成含 voice-over 和字幕的 MP4。用户通常只需要选个题目，剩下的由 agent 多步调度完成。</p>
+    <div class="source">⭐ 173 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_04.jpg" alt="youxiandechilun/Guido" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/youxiandechilun/Guido" target="_blank">youxiandechilun/Guido</a></h3>
+    <p>Guido 把景区导览做成'AI 数字人 + 本地 RAG'：前端 Vue 3 + UniApp（小程序 / H5），后端 Spring Boot 支持私有部署，结合本地知识库（景点解说、路线、票务规则）做实时问答，比传统语音导览机更能扛多轮多意图需求。架构层提供完整的显存管理 + RAG 检索 pipeline + 数字人形象接口。</p>
+    <div class="source">⭐ 105 · Java</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-18/oss_summaries_v2_2026-07-18_05.jpg" alt="deepanwadhwa/samosa-chat" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/deepanwadhwa/samosa-chat" target="_blank">deepanwadhwa/samosa-chat</a></h3>
+    <p>samosa-chat 把 Qwen3.6-35B-A3B（35B 参数 MoE，激活仅 3B）压到 16GB RAM 的桌面机 / 笔记本上跑：用了 deepanwadhwa 自研的 mixed-precision cache + MoE expert offload + kernel-level 算子融合，在 Apple Silicon 和 Linux x86 上实测 8 tok/s 的交互速度。配套 CLI chat UI，可作离线 Copilot / 编程伙伴。</p>
+    <div class="source">⭐ 41 · C</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-18 16:22</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
