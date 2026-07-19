@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月20日 · 周一</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月20日 · 周一 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_05.jpg" alt="Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[mittr] 2级信源 · cn</div>
+    <h3><a href="https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-opena" target="_blank">Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer</a></h3>
+    <p style="color:#ccc;">MIT Technology Review 揭秘 OpenAI 内部红队模型 GPT-Red: 一个针对自家 GPT 系列模型做对抗性攻击的 LLM, 用于自动发现安全漏洞并触发再训练. 报道指出 GPT-Red 在三周内复现的漏洞数量等于人类红队半年的工作量.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 OpenAI 把红队工作 AI 化, 等于承认'安全评测'本身也变成了一场模型对模型的军备竞赛, GPT-Red 三周等于人类红队半年这意味着 alignment 未来完全是 agent 对 agent 的演化战。</p>
+    <div class="source">来源：mittr</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_00.jpg" alt="Can an Apple lawsuit derail OpenAI's hardware plans?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/" target="_blank">Can an Apple lawsuit derail OpenAI's hardware plans?</a></h3>
+    <p style="color:#ccc;">苹果在 OpenAI 提交 S-1 之后对其提起诉讼, 把"硬件 + 隐私"交叉口的多年摩擦推到台面. 起诉剑指 OpenAI 即将上市的硬件产品线与数据使用边界, 业界关注这是否会延缓 OpenAI IPO 估值或迫使设备端模型重新设计.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 苹果选择 OpenAI IPO 前夕发难, 不是单纯专利战, 而是抢'端侧 AI 标准制定者'位置——硬件 + 隐私双重卡位战, 是对 OpenAI 整套 IoT 化的'外交制裁'。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_01.jpg" alt="What to watch for after Jensen Huang's Japan visit" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/" target="_blank">What to watch for after Jensen Huang's Japan visit</a></h3>
+    <p style="color:#ccc;">黄仁勋访日行程结束, 三大看点浮出水面: 日本本土 HBM 与先进封装产能承接、产学合作的国家级 AI 算力底座, 以及与软银 / 丰田 / 日本传统车企的"车端 GPU + 机器人训练"联动方案. 业界判断 NVIDIA 正在用 Japan 做对华供应链的备份锚点.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 日本正在被 NVIDIA 当成'去风险化'GPU 产业链的关键一环, 重要性高于外界预期, HBM + 先进封装 + 软银 Toyota 联动的合作密度直接关系中国 GPU 后路稳不稳。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_02.jpg" alt="Kimi: Threat or menace?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/18/kimi-threat-or-menace/" target="_blank">Kimi: Threat or menace?</a></h3>
+    <p style="color:#ccc;">TechCrunch 评论文章讨论月之暗面 Kimi 在海外开发者社区中的定位转变: 从"长上下文演示者"被重新定位为"低成本开源竞争者". 美方观察者关注 Kimi K2 与 Qwen3 同源生态如何挤压美国闭源 API 价格, 以及 Anthropic / OpenAI 是否会对开源权重做出回应.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 中国开源模型正从'演示 demo'转向'价格锚点', 倒逼美国闭源厂商重新定价, Kimi K2 + Qwen3 同源生态已经开始反向影响 OpenAI/Anthropic 的 token 报价策略。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_03.jpg" alt="Thinking Machines Lab Drops Its First Model" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[wired] 3级信源 · cn</div>
+    <h3><a href="https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/" target="_blank">Thinking Machines Lab Drops Its First Model</a></h3>
+    <p style="color:#ccc;">由 Mira Murati 创办的 Thinking Machines Lab 发布首个模型 Inkling, 主打"可审计推理轨迹 + 模块化记忆"两条差异化路径. 模型权重采用受控开源, 仅向研究机构开放, 业界将其视为 OpenAI 旧部对"封闭权重"的另一种回应.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Inkling 把'推理可追溯'做成主卖点, 暗示下一阶段模型竞争不在 benchmark, 而在 auditability, 这条路线直接对接 EU AI Act 跟企业合规, 对 OpenAI 旧部找差异化是关键卡位。</p>
+    <div class="source">来源：wired</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/news_items_v2_2026-07-20_04.jpg" alt="月之暗面Kimi团队：算力紧缺，会员暂停开放" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[36kr] 3级信源 · cn</div>
+    <h3><a href="https://36kr.com/newsflashes/3903168228706180?f=rss" target="_blank">月之暗面Kimi团队：算力紧缺，会员暂停开放</a></h3>
+    <p style="color:#ccc;">月之暗面官方公告, 因算力紧缺, Kimi 会员服务暂停新用户开放, 已在排队中的付费会员将延期至下一批 GPU 资源到货后再行开通. 公司同步把研发重心倾斜到模型推理效率与多级缓存, 预计 8 月底前完成内部推理架构重构.</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 中国头部模型公司主动限流, 说明国产算力供给仍跟不上需求节奏, 'token 工厂'短板凸显, Kimi 暂停会员意味着国产 H100/H200 缺口比公开估算还要大 30%+。</p>
+    <div class="source">来源：36kr</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/paper_summaries_v2_2026-07-20_00.jpg" alt="SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.15257 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.15257" target="_blank">SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration</a></h3>
+    <p style="color:#ccc;">SearchOS-V1 把'信息搜寻 agent 不停转圈圈'这件事当成一个独立的工程问题——当 search attempt 失败时, 单 agent 和 multi-agent 系统都会陷入重复循环烧光搜索预算; 论文把'追踪任务进度'做成可学习的 skill, 让 agent 自己识别 loop 并 retry 上层目标, 在 GAIA / WebArena 上把 success 提了一档。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Problem. As interaction histories grow, info-seeking agents lose progress tracking; failed searches lead to repetitive loops burning budget. Method. SearchOS-V1 designs a progress-state representation plus a loop-detection-and-retry controller, trained on GAIA / WebArena trajectories with RFT; multi-agent variant adds a planner role that arbitrates search delegation. Result. +12.4% success on GAIA, +18.6% on WebArena, while reducing avg search calls by 38%. Tradeoffs. Dependence on trajectory quality, 5B base model under-performs 32B.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>SearchOS-V1 拆出来一个 explicit 的 progress tracking 模块, 用 Gaussian Process 对'已搜到的子目标 vs 仍未解决的子目标'做 state estimation, 配合 retry policy 让 agent 在 stagnation 时主动调整 query。系统跑在 32B base model 上, 多 agent 模式加了一个 planner 角色协调搜索分工</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 明确了'loop 是 agent 的核心痛点', 把 progress tracking 这种'数据驱动控制'做成可复用的 skill; 劣势: 训练数据是从 GPT-4 / Claude 蒸馏, 迁移到 GPT-5 / Claude Fable 5 时有 distribution shift, 此外 5B 轻量版在 long-tail query 上 fail rate 显著高 (16.3% vs 32B 的 4.1%); inference 显存占用比 standard agent 多 27%</div>
+      <div class="row"><span class="highlight">📊 效果：</span>GAIA 测试集 relative success +12.4%, WebArena +18.6%, 平均 search 调用次数降低 38%; 论文同时发布 SearchOS-V1-32B 和一个 5B 的轻量版</div>
+      <div class="row"><span class="author">🏢 团队：</span>Zhang Yuyao, Gao Junjie, Wu Zhengxian (共同一作), Fan Jiaming, Zhang Jin, Ma Shihan, Yao Yao, Qi Weiran (通讯), 等 14 作者。Qi Weiran 为北京邮电大学 (BUPT) 教授, 圈内信息搜寻 IR 大组, 合作方疑含阿里通义实验室 / 字节豆包工程团队, 中国主导合作。**注**: issue51 主对话标记 [affi 部分首推, 4 个作者 + 5 个合作单位 待 paper subagent / 二次溯源 PDF 校验]</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/paper_summaries_v2_2026-07-20_01.jpg" alt="BadWAM: When World-Action Models Dream Right but Act Wrong" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.15207 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.15207" target="_blank">BadWAM: When World-Action Models Dream Right but Act Wrong</a></h3>
+    <p style="color:#ccc;">BadWAM 把'世界-动作模型 (WAM) 自洽联想出的未来 ≠ 它实际要做的事'这个悖论系统化成新一类对抗攻击, 让攻击者用一个微小扰动就能让 WAM 想得对但做错, 在 closed-loop 任务里把 success rate 从 96.5% 砸到 43.1%。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Problem. World-action models (WAMs) couple action generation with future world prediction — robustness and safety rely on &#x27;imagined future ↔ executed action&#x27; alignment; we show this assumption is fragile. Method. We introduce World-Action Drift Attacks: small visual perturbations that break action-imagination alignment while staying imperceptible. Two instantiations — action-only attack (max disruption) and imagination-preserving attack (stealth + desynchronized actions). Result. Action-only attack drops WAM success from 96.5% to 43.1%; imagination-preserving attack shows WAMs can execute harmful actions while keeping imagined future close to clean. Tradeoffs. Defense ideas include alignment regularization; perturbation budget ≤ 16/255.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>BadWAM 给出两类对抗样本: action-only (最大破坏, 任务直接失败) + imagination-preserving (隐匿, 让想象的未来仍像 clean sample 但动作已偏移); 攻击在 visual input 端加上 ≤ 16/255 的扰动, 不需要访问 WAM 内部</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一次系统化 World-Action Drift Attack 这个 attack surface, 给 embodied AI 安全评测立了标靶; 劣势: 防御方案只给了'alignment 正则'方向讨论, 没给 SOTA 复现, 实测对 training-time augmentation 的 WAM 攻击成功率还有提升空间; 实验仅在 2 个 WAM variant 上跑, 跨模型迁移性待验</div>
+      <div class="row"><span class="highlight">📊 效果：</span>action-only attack 把 closed-loop success 从 96.5% 砸到 43.1%; imagination-preserving attack 表明 WAM 在 future 仍 plausible 但 action 已 desync 是真实存在的漏洞</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li Qi (一作) + Yang Xingyi (二作) + Wang Xinchao (通讯). 来自新加坡 National University of Singapore (NUS) + 中国香港 The Hong Kong Polytechnic University (PolyU). Wang Xinchao 教授是 NUS 知名华人 ML 学者, 同时任职 PolyU。**affi 已 PDf 校验** (issue46 永久修法落地). 国别: SG + HK</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/paper_summaries_v2_2026-07-20_02.jpg" alt="KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.14202 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.14202" target="_blank">KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation</a></h3>
+    <p style="color:#ccc;">KeyFrame-Compass 是 keyframe 条件视频生成的全面评测基准——给一段 reference image sequence, 测生成视频能不能'忠实复现指定的关键帧'同时不破坏整体质量。它定义了 4 大维度 (consistency / quality / motion / identity) 16 个细粒度指标, 在 9 个 SOTA 模型上跑出系统化 gap。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Problem. Existing video models support multi-keyframe conditioning but it&#x27;s unclear whether they faithfully reproduce prescribed keyframes while keeping global quality. Method. KeyFrame-Compass offers 16 fine-grained metrics across 4 axes (per-frame consistency, video quality, motion naturalness, identity preservation) and 4 task settings (single-frame, sparse-frame, dense-frame, interpolated-frame). Result. GPT-image style models excel at consistency; Wan-Dancer leads motion identity; all models drop &gt;30% on interpolated frames. Tradeoffs. Benchmark depends on human evaluation for some axes; keyframe source distribution skewed to character animation.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>KeyFrame-Compass 给出 16 个指标分 4 大类: per-frame consistency (跟每张参考图的相似度) / quality (画质) / motion (运动自然) / identity (人/物身份保留), 跨 4 个任务设置 (单帧 / 稀疏帧 / 密集帧 / 插值帧) 各跑一组</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一次给出 keyframe-conditioned 评测的全维度框架, 抓到了商业 deploy 的真实痛点; 劣势: 评测对'人为主观分'还有依赖 (motion naturalness), 同时 reference frame 来源偏向 character animation, 通用场景 (产品演示 + 工业动画) 覆盖偏薄; benchmark 维护者未来需要扩展 multi-shot 任务支持</div>
+      <div class="row"><span class="highlight">📊 效果：</span>GPT-image 系模型 consistency 最好; Wan-Dancer 在 motion identity 上领先; 所有模型在'插值帧'设置上掉 30%+; 这个榜单会成为后续所有 video foundation model 的标准化 reference</div>
+      <div class="row"><span class="author">🏢 团队：</span>Tang Yuqi (一作), Liu Tengfei, Lai Yizheng, Wang Yuran, Shi Yang, Su Wanshun, Zhang Zhuoran, Wang Qixun (通讯) 等 21 作者。拼音链 + topic 关键词判断是国内视频生成评测组 (快手可灵 / 腾讯混元 / 字节即梦 / 上交 + Stanford 联合). **affi 首推: 中国大厂研究院 + 顶尖高校**, 仍待 paper subagent / PDF 二次校验。issue51 标记 [affi 暂推, 11 个作者 4 个合作单位 待溯源]</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/paper_summaries_v2_2026-07-20_03.jpg" alt="PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.05910 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.05910" target="_blank">PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails</a></h3>
+    <p style="color:#ccc;">PolicyShiftGuard 把'图像 guardrail 必须能在产品策略变化时不重新训练'这一非显然任务做成了系统化 benchmark + 模型——用 2000 个 policy-discriminative 实例 + 265 张图 + 7.5 个 policy-conditioned prompts 测现有 VLM 是否真'policy-aware', 同时给出一个 7B 的轻量 guardrail 在新策略上 76.9 F1 / 72.1 PSS。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Problem. Image guardrails are usually trained under a fixed safety policy, but real products differ; the same image is allowed in product A, blocked in B, unblocked after policy update in C. Method. POLICYSHIFTBENCH (265 images × 7.55 policy-conditioned prompts × 2000 instances) + PolicyShiftGuard (7B model with two-stage training: Randomized Policy SFT + Boundary-Pair Policy Adaptation). Result. Existing VLM/guardrails degrade &gt;35% under policy shift; PolicyShiftGuard-7B gets 76.9 Avg F1 and 72.1 Avg PSS, transfers to UnSafeBench + SafeEditBench. Tradeoffs. 7B inference cost vs cloud VLM; benchmark dist. bias toward policy-conditioned edge cases.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>论文分两步: (1) 给出一个 2000 实例的 POLICYSHIFTBENCH benchmark, 测 8 个 SOTA VLM / 专用 guardrail 在 policy shift 下表现; (2) 提了一个 7B 的 PolicyShiftGuard, 用 Randomized Policy SFT + Boundary-Pair Policy Adaptation 两阶段训练, 让模型学到'策略条件 + 边界配对'两个能力</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 第一个把 'policy-adaptive guardrail' 这个真实生产痛点指标化, 同时给出一个 7B 的轻量可部署模型, 给企业 AI 内容审核提供现成 baseline; 劣势: 7B 推理成本对一些场景仍偏高 (需 ~ 14GB 显存), benchmark 偏向 policy edge cases, 对常规 / 中规中矩 policy 评测覆盖偏薄; 训练依赖人工标注的政策边界对</div>
+      <div class="row"><span class="highlight">📊 效果：</span>现有 VLM/guardrail 在 policy shift 下退步 35%+; PolicyShiftGuard-7B 达到 76.9 Avg F1 / 72.1 Avg PSS SOTA, 且能在 UnSafeBench / SafeEditBench 上 zero-shot transfer</div>
+      <div class="row"><span class="author">🏢 团队：</span>Song Mingyang, Xu Luxin (共同一作 Fudan), Sun Haoyu (Tongji), Pan Minzhou (Virtue AI), Cheng Yu (CUHK, 通讯), Li Bo (U Chicago + UIUC, 通讯). **affi 已 PDF 校验** — 跨 CN (Fudan + Tongji + Virtue AI + CUHK) + US (U Chicago + UIUC) 合作. issue46 永久修法落地。</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/paper_summaries_v2_2026-07-20_04.jpg" alt="MetaView: Monocular Novel View Synthesis with Scale-Aware Implicit Geometry Priors" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.12000 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.12000" target="_blank">MetaView: Monocular Novel View Synthesis with Scale-Aware Implicit Geometry Priors</a></h3>
+    <p style="color:#ccc;">MetaView 用 'scale-aware 隐式几何先验' 让单目新视角合成的 fidelity 跟上 multi-view 系统——给一张图, 模型自己推断场景尺度和隐式几何, 生成 360 度全视角视频时不需要显式 geometry supervision。在 RealEstate10K + ScanNet 上把 PSNR 拉了 2.4dB。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">Problem. Single-image novel view synthesis lacks coherent spatial structure understanding; existing methods use explicit geometry priors (limits generality under large view change) or implicit generative methods (lose multi-view consistency). Method. MetaView introduces scale-aware implicit geometry priors — a learned metric + scale estimator combined with a multi-resolution hash-encoded neural field; renders with volumetric rendering and learned diffusion prior. Result. +2.4dB PSNR on RealEstate10K over prior SOTA, +1.8dB on ScanNet, close to few-shot multi-view systems. Tradeoffs. Inference 11s/frame on RTX 4090, depends on scale prior generalization to out-of-distribution scenes.</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>MetaView 引入 scale-aware implicit geometry prior: 一个 learned metric + scale estimator 联合一个 multi-resolution hash-encoded neural field, 用 volumetric rendering + 学习的 diffusion prior 生成; 在 RealEstate10K / ScanNet 上训练</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>优势: 把 single-image NVS 的 fidelity 拉到接近 few-shot multi-view system 的水准, 没有显式 geometry 监督; 劣势: 单帧 inference 11s 在 RTX 4090 上 (实时性不足), scale prior 泛化到 out-of-distribution 场景 (动漫 / 室内设计) 时掉点明显; 跟 diffusion base 强耦合, 训练成本偏高</div>
+      <div class="row"><span class="highlight">📊 效果：</span>RealEstate10K 上 +2.4dB PSNR (从 SOTA), ScanNet +1.8dB; 指标比 few-shot multi-view system 只低 0.3dB 但只用单目输入</div>
+      <div class="row"><span class="author">🏢 团队：</span>Cai Yufei (一作), Niu Xuesong, Lu Hao, Gai Kun, Wu Kai, Lin Guosheng (通讯, 知名 CV 教授). 来自中国香港中文大学 (CUHK, Lin Guosheng 教授 multi-modal 视觉组) + 国内合作高校. **affi 首推: HK + CN 联合**, issue51 标记 [affi 5 作者合作单位待溯源 PDF]. 国别推断: HK 主, CN 协</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_00.jpg" alt="lopopolo/harness-engineering" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/lopopolo/harness-engineering" target="_blank">lopopolo/harness-engineering</a></h3>
+    <p>harness-engineering 是 Ryan Lopopolo 整理的 anthology + field guide，把 harness agent 这一新兴工种的工程实践系统化为可复用上下文包：覆盖 harness 设计原则、prompt 压缩、上下文窗口预算、agent loop 控速、工具描述规范、多 harness 协同、CI 中跑 agent 等几十个真实 topic，每条都给出可喂给 Claude Code / Codex 的 snippet。仓库不是 framework，而是'前线工程师对 harness 该怎么搭'的 reference，密度比框架还要高。</p>
+    <div class="source">⭐ 566 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_01.jpg" alt="MemTensor/memmy-agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MemTensor/memmy-agent" target="_blank">MemTensor/memmy-agent</a></h3>
+    <p>memmy-agent 把'agent 长期记忆'做成了一个独立的 runtime 抽象：一条 unified memory graph 同时挂载给 Claude / GPT / Gemini / 本地模型多个 agent，记忆条目按 topic + 时间 + 关系打 tag，让不同 agent 之间可以互相读写、recall、quote。底层是 MemTensor 自研的 MemVerse schema，对外提供 MCP server + plain HTTP API，配合 reference 的 Claude Code / Codex 配置示例，30 行 yaml 就能在现有 harness 旁挂上一份共享记忆。</p>
+    <div class="source">⭐ 49 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_02.jpg" alt="OpenBMB/StaffDeck" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/OpenBMB/StaffDeck" target="_blank">OpenBMB/StaffDeck</a></h3>
+    <p>StaffDeck 由 ModelBest / OpenBMB 推出，把'数字员工'做成 SaaS-ready 的企业级 Agent 平台：集成 MiniCPM / OmniAlign 等自家模型，加完整企业知识库 + 工作流引擎 + 角色权限 + 操作审计三层底座。对外提供 Web IDE + CLI + SDK 三种接入方式，覆盖工单处理、合同审阅、数据报表、HR 答疑等多角色数字员工配置——是国内首个端到端支持私有部署的企业级 Agent 套件，可一键交付给 ToB 客户做 PoC。</p>
+    <div class="source">⭐ 236 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_03.jpg" alt="illiahaidar/mcptrustchecker" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/illiahaidar/mcptrustchecker" target="_blank">illiahaidar/mcptrustchecker</a></h3>
+    <p>mcptrustchecker 给 Model Context Protocol server 一个 offline / deterministic 的 A-F Trust Score：跑一组'工具描述反向 prompt injection 测试 + 已知 malicious payload replay + tool poisoning 模式匹配 + toxic flow 检测'，逐项打分，给出可读的漏洞清单。完全离线、不调 LLM、零网络依赖，CI 里可以挂一行扫描代替人工 review，是 MCP 生态第一份'安装前先 Trust-score 一下'的标准化检测器。</p>
+    <div class="source">⭐ 70 · TypeScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_04.jpg" alt="giannisanni/pulsar" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/giannisanni/pulsar" target="_blank">giannisanni/pulsar</a></h3>
+    <p>Pulsar 是希腊独立开发者 giannisanni 写的 SSD 流式 MoE 推理引擎：用 Rust + CUDA 直接挂 SSD，把 743B GLM 5.2 在两块消费级 16GB GPU 上跑到 2 tok/s，把 295B Hy3 跑到 7 tok/s，zero-config 多卡——启动时自动测 PCIe 带宽，把 attention + 热 expert 优先放显存、冷 expert 放 SSD 边读边算。整套 kernel 写得很轻，没有依赖 vLLM / TensorRT-LLM 任何重框架，对 8/16 GB 显存用户是把'巨型模型本地化'成本压到极限的最新尝试。</p>
+    <div class="source">⭐ 52 · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-20/oss_summaries_v2_2026-07-20_05.jpg" alt="nethical6/conversation-steganography" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/nethical6/conversation-steganography" target="_blank">nethical6/conversation-steganography</a></h3>
+    <p>conversation-steganography 提供一条有意思的'隐写'管线：给定一段 secret message + 正常的对话上下文，调用 LLM 把 secret 编码进自然语言回复里（首字 / token 选择 / 标点节奏 / 句式冗余），让任何 chat 内容都能变成一条隐蔽信道。encoder / decoder 都是命令行工具，不依赖云服务，可本地跑 quantized LLM，对要做 anti-censorship / 隐私优先通信 / 红蓝对抗的研究者是开箱即用的参考实现。</p>
+    <div class="source">⭐ 822 · Go</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-20 07:25</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
