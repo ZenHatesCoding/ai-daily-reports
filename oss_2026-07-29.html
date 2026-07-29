@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSS 卡 · 2026-07-29 · AI 技术洞察日报</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; background: #0d1117; color: #c9d1d9; padding: 20px; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; }
+header { text-align: center; padding: 24px 0; border-bottom: 1px solid #30363d; margin-bottom: 32px; }
+h1 { font-size: 28px; color: #f0f6fc; margin-bottom: 8px; }
+.sub { color: #8b949e; font-size: 14px; margin-bottom: 16px; }
+.back { display: inline-block; margin-top: 12px; padding: 6px 14px; background: #21262d; color: #58a6ff; text-decoration: none; border-radius: 6px; font-size: 13px; }
+.back:hover { background: #30363d; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; padding: 18px; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 14px; display: block; }
+.card-meta { font-size: 12px; color: #8b949e; margin-bottom: 6px; }
+.platform-tag { padding: 2px 6px; border-radius: 4px; background: #1f6feb; color: #fff; font-size: 11px; }
+.card h3 { font-size: 17px; margin: 8px 0 10px; color: #f0f6fc; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.summary_zh { color: #c9d1d9; font-size: 14px; margin-bottom: 8px; line-height: 1.7; }
+.summary_zh_en { color: #8b949e; font-size: 13px; margin-bottom: 10px; font-style: italic; line-height: 1.6; }
+.insight { color: #d2a8ff; font-size: 13px; background: #1c1f26; padding: 10px 12px; border-left: 3px solid #d2a8ff; border-radius: 4px; margin-bottom: 10px; }
+.tradeoff { color: #f0883e; font-size: 13px; background: #1c1f26; padding: 8px 12px; border-left: 3px solid #f0883e; border-radius: 4px; margin-bottom: 10px; }
+.source { font-size: 12px; color: #8b949e; margin-top: 8px; }
+.country { background: #21262d; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🔥 开源热点 · 2026-07-29</h1>
+  <div class="sub">6 项 GitHub 热门 · 国别分布: CN 2 + US 2 + EU 1 + BR 1 · 维度分散: 嵌入式 AI / Agent 框架 / Claude Code / RL / 资源</div>
+  <a class="back" href="https://zenhatescoding.github.io/ai-daily-reports/daily_2026-07-29.html">← 回到完整日报 (6 news + 5 paper + 6 oss)</a>
+</header>
+
+<div class="grid">
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_00.jpg" alt="ESP32 嵌入式 AI Agent 框架" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">欧盟</span></div>
+  <h3><a href="https://github.com/slvDev/esp32-ai" target="_blank">ESP32 嵌入式 AI Agent 框架</a></h3>
+  <p class="summary_zh">ESP32 是广泛使用的廉价微控制器, 这套开源框架让小模型在 ESP32 上跑出真正的 agent 能力, 包括本地推理, 多轮工具调用和低功耗休眠唤醒, 把 agent 从云端拉回到 5 美元硬件. 这让 IoT 设备第一次具备端侧长程规划能力, 而非依赖云端响应, 大幅降低延迟与隐私风险, 也打开了离线家用机器人, 工业控制与可穿戴 AI 的真正落地路径. 对硬件爱好者与高校嵌入式课程都是值得收藏的开源参考.</p>
+  <p class="insight">💡 对边缘 AI 而言, agent 能力下放到 5 美元微控制器是把推理主权交回设备和家庭的关键, 而不只是云端 API 调用; 量化 + 离线工具总线 + 事件唤醒的组合是端侧 agent 真正可用的工程范式, 不是 demo. 这意味着开发者必须重新设计模型, 工具调用协议与传感器采样策略的三方协同, 不能照搬云端 agent 框架, 否则端侧推理会成为新的瓶颈而非红利.</p>
+  <p class="tradeoff">⚠️ ESP32 内存只有 4MB PSRAM, 量化后模型能力天花板仍在 1B-3B, 复杂长链任务需配合云端 fallback; 多轮 agent 工具调用延迟受串口与传感器采样率限制, 实时性弱于桌面; 端侧模型更新链路缺标准, OTA 升级需自建.</p>
+  <div class="source">⭐ 2,039 · slvDev/esp32-ai · TypeScript</div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_01.jpg" alt="AgentENV 分布式 Agent 环境平台" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">中国</span></div>
+  <h3><a href="https://github.com/kvcache-ai/AgentENV" target="_blank">AgentENV 分布式 Agent 环境平台</a></h3>
+  <p class="summary_zh">Agent 评测需要可控环境, AgentENV 提供分布式沙盒平台, 把浏览器, 代码执行, 数据库等环境打包, 让大规模 agent 训练与评测可以并行跑在万卡集群, 而不是单机手搓脚本. 这把 agent 研究从一次性实验推进到工业化训练闭环, 让 RL 与轨迹采集在同一平台下规模化运行, 同时为研究者提供统一接口, 不必再为每个新环境重复造轮子. 对企业内训与高校 agent 课程配套价值尤为突出.</p>
+  <p class="insight">💡 对 agent 研究而言, 标准化分布式环境是放开 agent 规模化训练的关键瓶颈, 跟 LLM 时代的 dataset 标准化同等重要; 单机手搓脚本的评测已无法支撑 agent 训练闭环, 必须平台化才能让 RL 与轨迹采集真正跑得动. 这要求研究者重新思考 agent 训练的算力预算与数据生成策略, 否则传统单机实验的局限会一直限制 agent 能力上限.</p>
+  <p class="tradeoff">⚠️ 分布式环境编排带来额外资源开销, 单环境启动延迟比本地脚本高 2-4 倍, 小规模实验不划算; 环境与底层模型耦合, 跨厂商模型适配需重写部分适配层; 浏览器沙盒 GPU 占用较高, 万卡规模训练成本敏感.</p>
+  <div class="source">⭐ 1,415 · kvcache-ai/AgentENV · Python</div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_02.jpg" alt="Finn-loop 三步 AI 软件工厂" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">美国</span></div>
+  <h3><a href="https://github.com/finna/Finn-loop" target="_blank">Finn-loop 三步 AI 软件工厂</a></h3>
+  <p class="summary_zh">把 Claude Code 当成软件工厂来用, Finn-loop 用 spec, build, review 三个 skill 把任意需求切成流水线, 强调先写规格再建, 最后让 AI 自己评审, 形成可重复的小团队开发节奏. 这比单纯对话式 prompt 一次性使用更利于工程化交付, 让 AI 不只是完成单点任务, 而是真正承担从需求到评审的完整开发链路, 适合独立开发者与小团队复用. 对独立开发者承接外包与小型 SaaS 项目是高效杠杆.</p>
+  <p class="insight">💡 对个人开发者而言, 把 AI 编程工具从对话模式升级到流水线模式是把生产力放大 5-10 倍的关键, 而 skill 化是流水线落地的前提; review 这一步让 AI 自己评审 AI 是减少回归与安全漏洞的必要环节, 不是可选项. 这意味着开发者必须学会设计 skill 描述, 而不只是写 prompt, 否则流水线模式会退化成更慢的对话模式.</p>
+  <p class="tradeoff">⚠️ 三步流水线对简单任务反而更慢, 一次性 50 行改动用对话 30 秒, 用流水线要 2 分钟; spec 步骤对非工程化需求描述能力要求高, PM 类用户需先学规格化表达; review 步骤依赖 Claude Code 当前模型能力, 模型升级可能改变流水线表现.</p>
+  <div class="source">⭐ 231 · finna/Finn-loop · Python</div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_03.jpg" alt="OpenClaude 改进版通用编码 Agent" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">美国</span></div>
+  <h3><a href="https://github.com/0xwilliamortiz/openclaude-improved" target="_blank">OpenClaude 改进版通用编码 Agent</a></h3>
+  <p class="summary_zh">在 Claude Code 之外, 作者重写了 OpenClaude 的 CLI 编码 agent, 让它能跨云 API, 网关和本地模型跑, 同一套工具与工作流无需切换, 解决 Claude Code 锁定厂商的痛点. 这给开发者提供了在不同模型之间无缝切换的能力, 让本地模型, 自建网关与第三方 API 都能在同一 CLI 下并存, 真正降低单点故障风险并提升数据合规性. 对想摆脱单一 API 锁定的小团队与个人开发者都是关键工具.</p>
+  <p class="insight">💡 对开发者工具而言, 模型无关的 agent 抽象层是把厂商绑定转化为可替换能力的工程关键, 比单纯 prompt 兼容重要得多; provider 抽象让本地模型, 自建网关与第三方 API 在同一 CLI 下并存, 是降低单点故障的实际路径. 这要求工具作者在抽象层投入更多精力, 否则不同模型的 tool 调用格式差异会让统一界面变成表面文章.</p>
+  <p class="tradeoff">⚠️ Provider 抽象层带来适配差异, 部分模型支持的 tool 调用格式需额外转换层, 复杂任务延迟高于直接调用原厂 SDK; 本地模型推理能力参差, 复杂任务表现弱于官方 Claude Code; 安全审计与官方版本不严格同步, 企业使用需自评估.</p>
+  <div class="source">⭐ 580 · 0xwilliamortiz/openclaude-improved · TypeScript</div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_04.jpg" alt="AxisRL Agentic RL 后训练框架" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">中国</span></div>
+  <h3><a href="https://github.com/XYZ-AI-Lab/axrl" target="_blank">AxisRL Agentic RL 后训练框架</a></h3>
+  <p class="summary_zh">Agentic RL 训练链路复杂, AxisRL 在 SGLang rollout 和 Megatron 训练之上搭了一套 agentic 后训练框架, 把多轮工具调用, 长期记忆与环境反馈整合到训练闭环, 减少自研工程量. 这让研究团队不必从零搭建 agentic RL 链路, 直接复用 SGLang 高效 rollout 与 Megatron 大规模训练能力, 把精力集中在算法与策略本身. 对高校实验室与中型企业 agentic RL 项目都是值得收藏的基础设施.</p>
+  <p class="insight">💡 对 agentic RL 研究而言, 统一的 rollout-训练框架是把研究从实验室推到生产的关键, 比单纯算法创新更影响论文可复现性; agentic RL 的核心瓶颈是工程而非算法, 框架化是降低准入门槛的必经之路. 这要求框架作者同时维护 rollout 与训练两侧的兼容性, 否则任何一个版本不匹配都会让整条链路失效.</p>
+  <p class="tradeoff">⚠️ AxisRL 强依赖 SGLang 与 Megatron, 切换到 vLLM 或 DeepSpeed 需重写部分适配层, 框架迁移成本高; 多轮工具调用训练显存压力大, 长链 agent 任务 70B 模型训练需 80GB 以上单卡; agentic RL 数据采集成本高, 小团队难自给.</p>
+  <div class="source">⭐ 445 · XYZ-AI-Lab/axrl · Python</div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-29/oss_summaries_v2_2026-07-29_05.jpg" alt="Awesome 免费正版 AI/ML 书籍清单" />
+  <div class="card-meta">开源 · <span class="platform-tag">GitHub</span> · <span class="country">巴西</span></div>
+  <h3><a href="https://github.com/MarcosSete/awesome-free-ai-books" target="_blank">Awesome 免费正版 AI/ML 书籍清单</a></h3>
+  <p class="summary_zh">学习 AI 最大的成本是买正版书, 这个清单整理了 100 多本完全免费且合法的 AI/ML 书籍 PDF 链接, 涵盖基础数学, 深度学习, NLP, RL 与安全, 是学生和转行者的实用清单. 这大幅降低了全球学习者接触前沿知识的门槛, 让没有付费能力的学生也能系统学习 AI, 也让版权合规的开源教材资源有了集中发现入口. 对自学者与转行者来说, 这份清单值得打印出来当 roadmap 用, 配合开源课程食用效果更佳.</p>
+  <p class="insight">💡 对学习者而言, 整理版权清晰且免费的 AI 书籍清单是降低入门门槛的实际行动, 比单纯推荐付费书更有用; 免费资源清单本身就是开源精神的延伸, 让没钱买书的全球学习者都能接触到前沿知识. 这要求维护者持续核对链接与版权状态, 否则失效链接会让清单本身失去价值, 维护工作量是项目长期生命力的关键.</p>
+  <p class="tradeoff">⚠️ 清单维护需要持续人工校对链接失效与版权变更, 作者精力有限, 部分新增书籍存在 1-2 周延迟; 书籍主题偏基础, 顶会级别最新研究仍需付费访问; 部分书籍 PDF 在不同国家访问速度有差异, 国内读者需自行找镜像.</p>
+  <div class="source">⭐ 334 · MarcosSete/awesome-free-ai-books · Markdown</div>
+</div>
+
+</div>
+
+<footer style="text-align: center; padding: 32px 0; color: #8b949e; font-size: 12px; border-top: 1px solid #30363d; margin-top: 32px;">
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-29 · issue56 临时补丁</p>
+</footer>
+</div>
+</body>
+</html>
