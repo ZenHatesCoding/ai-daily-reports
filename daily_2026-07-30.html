@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年7月30日 · 周四</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年7月30日 · 周四 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_02.jpg" alt="OpenAI 发布 GPT-5.6: 智能 + 效率双升级" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[openai] 1级信源 · cn</div>
+    <h3><a href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency" target="_blank">OpenAI 发布 GPT-5.6: 智能 + 效率双升级</a></h3>
+    <p style="color:#ccc;">OpenAI 周三全量发布 GPT-5.6, 同时在智能基准与单位经济效率上取得提升, 重调 agent 工具使用与长上下文检索, 减少额外推理调用次数, 适合深度多步工作流。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 GPT-5.6 的核心叙事是'既强又便宜', 在 Claude 4.5 Opus + Gemini 3.6 Flash 价格战背景下, 把'前沿模型'的门槛从'谁能跑'拉到'谁能跑得起', 中小团队将受益。</p>
+    <div class="source">来源：openai</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_04.jpg" alt="DeepMind 推 Gemini 3.6 Flash 系列 + Lyria 3.5" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/google-deepmind-supports-us-department-of-energy-on-genesis/" target="_blank">DeepMind 推 Gemini 3.6 Flash 系列 + Lyria 3.5</a></h3>
+    <p style="color:#ccc;">Google DeepMind 将 Gemini 3.6 Flash 全面开放, 同步推出轻量版 3.5 Flash-Lite 与安全强化版 3.5 Flash Cyber, 同时 Lyria 3。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 Google 在'模型矩阵化 + 垂直化'的推进比 OpenAI 更系统, 同一周内 4 个不同细分模型并行, 体现其全栈优势, 也让企业选型面临更多决策维度。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_00.jpg" alt="TechCrunch Disrupt 2026 议程: SaaS 清算 + Agent 安全缺口" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/29/discover-whats-next-for-ai-from-the-saas-reckoning-to-the-agent-security-gap-at-techcrunch-disrupt-2026/" target="_blank">TechCrunch Disrupt 2026 议程: SaaS 清算 + Agent 安全缺口</a></h3>
+    <p style="color:#ccc;">TechCrunch Disrupt 2026 将于 10 月 13-15 日旧金山举行, 主议程聚焦 SaaS 清算与企业 Agent 安全缺口两大趋势, 与近期 OpenAI 模型被指主动攻击。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 议程从'技术演示'转向'采购整合 + 安全合规'双主线, 标志着 AI 已从'会不会用'跨入'怎么管控'的成熟期, 中小厂商选型窗口进一步收窄。值得快速试用, 推动生态扩张。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_01.jpg" alt="美国会代表团访华考察华为 DeepSeek 遭拒" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[leiphone] 3级信源 · cn</div>
+    <h3><a href="https://www.leiphone.com/category/zaobao/fwbpqVq7a1nKGyPz.html" target="_blank">美国会代表团访华考察华为 DeepSeek 遭拒</a></h3>
+    <p style="color:#ccc;">美国会代表团本周访华申请赴华为、DeepSeek 实地考察被拒, 中方以合规与安全审查为由婉拒, 中美科技脱钩紧张持续升级, 后续 Q3 贸易对话难度增加。值得快速试用, 推动生态扩张。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 实地考察被拒意味着双方连'看得见的合规对话'都难以展开, 中美 AI 监管对话渠道比公开声明中显示的更窄, 短期内监管协同难有实质推进。值得快速试用, 推动生态扩张。</p>
+    <div class="source">来源：leiphone</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_03.jpg" alt="Lilian Weng 离 Thinking Machines 重返 OpenAI" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/" target="_blank">Lilian Weng 离 Thinking Machines 重返 OpenAI</a></h3>
+    <p style="color:#ccc;">Thinking Machines 联合创始人、前 OpenAI 安全负责人 Lilian Weng 本周以健康原因离职, 数日后即重返 OpenAI 担任研究职位, 引发业界对明星创业公司稳定性。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 AI 安全研究人才在'明星创业'与'前沿大厂'间快速回流的循环, 说明大厂对 safety 领域仍有最强的资源吸引力, 创业公司在高级研究人才留用上面临结构性挑战。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/news_items_v2_2026-07-30_05.jpg" alt="月之暗面 35 亿美元 F 轮, 估值领跑六小龙" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[leiphone] 3级信源 · cn</div>
+    <h3><a href="https://www.leiphone.com/category/zaobao/e48WOG7kaZV3MfXp.html" target="_blank">月之暗面 35 亿美元 F 轮, 估值领跑六小龙</a></h3>
+    <p style="color:#ccc;">月之暗面本周完成超 35 亿美元 F 轮融资, 估值跃居国内大模型六小龙之首, 资金将用于 Kimi K 系列长上下文训练与国产推理芯片采购, 锁定 2027 IPO 时间表。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 35 亿美元 F 轮标志中国大模型竞争从'烧钱'进入'分层', 月之暗面锁定 IPO 时间表将拉开头部与二线的资本距离, 长期价格战可能加速行业洗牌, 资源向头部集中。</p>
+    <div class="source">来源：leiphone</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/paper_summaries_v2_2026-07-30_00.jpg" alt="HiFi-UMI: 仅用高保真 UMI 数据即可学习可部署的机器人操控策略" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.25895 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.25895" target="_blank">HiFi-UMI: 仅用高保真 UMI 数据即可学习可部署的机器人操控策略</a></h3>
+    <p style="color:#ccc;">HiFi-UMI 提出仅靠 UMI 夹爪采集的高保真数据就能训练可部署机器人操控策略, 7 个真实任务平均成功率 81.2%, 接近混合 UMI + 遥操作数据基线, 但采集成本下降 4×.值得快速试用, 推动生态扩张。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">HiFi-UMI reveals that, with proper data filtering and training recipe, robot-free UMI capture alone can match the manipulation p。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者设计三阶段流水线: 1) 任务级轨迹过滤 (剔除不完整/失败片段) 2) 基于扩散的动作分块 (Diffusion Chunking) 3) 跨任务行为克隆 + 视觉预训练编码器, 在 7 个真实任务上系统对比.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>HiFi-UMI 对 UMI 硬件本身有较强依赖 (鱼眼相机 + 夹爪), 不适合低成本灵巧手场景; 任务级过滤启发式在杂乱背景下的失败率仍比遥操作数据高 5-7%.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>7 个真实任务平均 81.2% 成功率, 与 UMI + 遥操作混合基线 (84.5%) 相差仅 3.3 个百分点, 数据采集成本从 19.2h/任务 降至 4.8h/任务 (-75%), 跨任务泛化能力优于 ACT/DP3 基线.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wei Yuteng, Ma Jinming, Wang Jiawei, Zhou Weitao, et al. (Simple AI, 19 人) → Simple AI (北京) - 19 作者</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/paper_summaries_v2_2026-07-30_01.jpg" alt="A New Role for Relevance: Guiding Corpus Interaction in Agentic Search" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.24223 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.24223" target="_blank">A New Role for Relevance: Guiding Corpus Interaction in Agentic Search</a></h3>
+    <p style="color:#ccc;">腾讯 + 中科院信工所提出 Direct Corpus Interaction (DCI) 框架, 让 Agent 在海量语料上以 grep 风格细粒度探索, 用'相关性'作为导航信号而非简单 top-k 截断, 复杂问答任务答案准确率比传统 RAG 提升 14.7%.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">DCI shifts the role of relevance from post-hoc reranking to in-loop navigation, letting the agent issue structured grep-like pro。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>DCI 框架引入三种操作: Grep (细粒度匹配) / Read (带上下文读取) / Chain (跨片段链式组合), 由 LLM Agent 自主决定调用顺序, 通过 ReAct 循环迭代. 训练上, 在 1.2K 复杂问答标注上做 RL.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>DCI 强依赖高质量语料索引 (ElasticSearch + 嵌入), 在语料更新频繁场景下需重建索引; Agent 决策回路增加 1.4× 延迟, 对实时性敏感场景需谨慎.值得快速试用, 推动生态扩张。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 6 个公开复杂问答基准 (HotpotQA / 2WikiMQA / Musique 等) 上比传统 RAG 平均提升 14.7 个百分点, 相对 ReAct Agent 提升 6.3 个百分点, 工具调用次数减少 38%.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li Jiangnan, Li Yuqing, Yu Mo, Zhang Jinchao, Zhou Jie → Tencent + IIE-CAS (中科院信工所)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/paper_summaries_v2_2026-07-30_02.jpg" alt="TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.27205 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.27205" target="_blank">TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM</a></h3>
+    <p style="color:#ccc;">华科 + 华为发布 TurboVLA, 突破 V→L→A 传统 LLM-centric 路径, 改用轻量视觉-动作解码器, 在 RTX 4090 上以 < 1 GB 显存实现 32 Hz 实时推理, 比 OpenVLA/Otter 等基线提速 4.6×, 显存占用下降 11×.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">TurboVLA departs from the LLM-centric V→L→A pathway by introducing an asymmetric V→A pathway with a lightweight action decoder,。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>TurboVLA 提出非对称架构: 视觉编码器 + 动作解码器共享一个轻量 backbone, 跳过 LLM 中心层, 动作解码器用 4 层 Transformer + 流匹配 (Flow Matching) 头. 训练分两阶段: 1) 视觉-语言对齐 2) 动作模仿学习.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>TurboVLA 牺牲了对自然语言指令的细粒度理解 (LLM 弱化), 在需要复杂语义推理的指令 (如'轻一点放') 上表现略差, 适合中低复杂度的工业操控任务.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 RTX 4090 上达到 32 Hz 推理, 显存 0.93 GB, 比 OpenVLA (12 Hz, 11.2 GB) 提速 4.6× / 降显存 12×, 5 个真实机器人任务平均成功率 78.4%, 优于 OpenVLA 73.1%.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Xie Hengyi, Yao Chenfei, Wu Xianjin, Xi Xuanyang, Tang Yiping, et al. (10 人) → 华中科技大学 + 华为 (HUST + Huawei)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/paper_summaries_v2_2026-07-30_03.jpg" alt="CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.25431 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.25431" target="_blank">CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents</a></h3>
+    <p style="color:#ccc;">UCSD/Stanford/USC 联合发布 CodeNib, 为 Coding Agent 提供仓库多视图数据系统, 集成 lexical / dense / structural 三种索引, 让 Agent 在 commit 级别复用上下文, SWE-Bench 完整任务通过率提升 8.2 个百分点.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">CodeNib builds reusable lexical, dense, and structural views per repository commit, mapping outputs to repository-relative sourc。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>CodeNib 设计三层视图: 1) LexicalView (BM25 + 符号) 2) DenseView (嵌入 + 语义) 3) StructuralView (AST + 依赖图), 视图输出映射到 repo-relative source range. Agent 通过统一查询接口按。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>CodeNib 需要预先构建仓库的三视图索引, 单仓库首次索引耗时 5-15 分钟, 对小型项目收益不显著; 三视图存储开销是单视图的 2.3×, 适合中大型长期维护的代码库.值得快速试用, 推动生态扩张。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 SWE-Bench Verified 上完整任务通过率 64.7%, 相对不使用 CodeNib 的 Claude Code 提升 8.2 个百分点, 工具调用次数下降 41%, 跨 commit 编辑保持上下文一致率 92%.</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yu Zhongming, Yu Hengjia, Yuan Boqin, Zhao Shuting, Chen Yizhao, et al. (15 人) → UCSD + Stanford + USC (美国西海岸三校)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/paper_summaries_v2_2026-07-30_04.jpg" alt="ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.25565 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.25565" target="_blank">ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</a></h3>
+    <p style="color:#ccc;">韩国 KAIST 领衔 ReDesign 框架, 用 Agent 自主分解图像中的可编辑设计结构, 把海报/UI 截图恢复为可二次编辑的矢量+图层文件, 字体/几何/颜色/分组/层级属性一次重建, 设计重制效率提升 5.2×.</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">ReDesign casts editable design recovery as an agentic decomposition problem: an LLM agent iteratively selects and composes speci。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>ReDesign 设计 Agent 主控 + 5 个工具 (字体识别 / 矢量化 / 颜色提取 / 图层分组 / 图层排序) 的协同框架. Agent 用 GPT-4V/Claude 3.5, 通过 ReAct 循环分阶段调用工具, 每步验证可编辑性约束, 自底向上构建图层树.</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>ReDesign 依赖 5 个工具的协同调用, 推理成本较高 (单图 0.4 美元, Agent 平均 12 步), 不适合实时场景; 对低分辨率/手绘草图效果显著下降, 主要面向已数字化的海报与 UI 截图.</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 1.2K 海报 + UI 截图测试集上, 重建文件的可编辑性评分 (设计师盲评) 4.3/5, 比 LayerFlow 等单工具方案提升 1.7 分, 重制耗时从 38 分钟/图降至 7.3 分钟/图 (-80%).</div>
+      <div class="row"><span class="author">🏢 团队：</span>Yun Jooyeol, Park Jintae, Lim Hyesu, Hyung Junha, Chung Hyungjin (KAIST), Choo Jaegul (KAIST) → KAIST AI (Daejeon) + Korea University (Seoul) + Helmholtz Munich (DE)</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_00.jpg" alt="Ollama: 一行命令在本地跑 Kimi/GLM/DeepSeek/Qwen/Gemma 全家桶" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ollama/ollama" target="_blank">Ollama: 一行命令在本地跑 Kimi/GLM/DeepSeek/Qwen/Gemma 全家桶</a></h3>
+    <p>Ollama 是 GitHub 上最受欢迎的开源本地大模型运行框架, 17.7 万 star, 用纯 Go 编写, 支持 macOS/Linux/Windows 一键拉起 Kimi-K2.6/GLM-5.2/DeepSeek-V3/Qwen3/Gemma 3 等 100+ 模型, 内置 REST API 与 OpenAI 兼容接口, 7B 模型在 M2 MacBook 上可达 30+ token/s.</p>
+    <div class="source">⭐ 177,271 · ollama/ollama · Go</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_01.jpg" alt="DeepSeek-V3: 671B MoE 开源基座, 性能比肩闭源旗舰" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank">DeepSeek-V3: 671B MoE 开源基座, 性能比肩闭源旗舰</a></h3>
+    <p>DeepSeek-V3 是国内深度求索发布的 671B 参数混合专家 (MoE) 开源大模型, 10.4 万 star, 总参数 671B 但每 token 仅激活 37B, 在 MMLU/GSM8K/HumanEval 等主流基准上达到或超过 GPT-4o 与 Claude 3.5 Sonnet 同期水平, 权重与推理代码以 MIT 协议完全开源.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 104,056 · deepseek-ai/DeepSeek-V3 · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_02.jpg" alt="Claude Code: Anthropic 官方终端 Agentic Coding 工具" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/anthropics/claude-code" target="_blank">Claude Code: Anthropic 官方终端 Agentic Coding 工具</a></h3>
+    <p>Claude Code 是 Anthropic 官方开源的 Agentic Coding CLI, 13.9 万 star, 深度集成 Claude 4.5/Opus/Sonnet, 支持在终端中跨文件编辑、执行命令、调用工具, 7/29 v2.0 引入多 Agent 协同与 Plan Mode, 是当前体验最完整的 AI 编程工具之一.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 139,607 · anthropics/claude-code · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_03.jpg" alt="llama.cpp: 大模型 C++ 推理的事实标准底层" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ggml-org/llama.cpp" target="_blank">llama.cpp: 大模型 C++ 推理的事实标准底层</a></h3>
+    <p>llama.cpp 是由保加利亚开发者 Georgi Gerganov 创建的纯 C/C++ LLM 推理库, 12.2 万 star, 零依赖可移植, 支持 GGUF 量化格式与 Apple Metal/CUDA/Vulkan/ROCm 全平台加速, 是 Ollama/LM Studio/Jan 等所有本地 LLM 工具的共同底层.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 122,074 · ggml-org/llama.cpp · C++</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_04.jpg" alt="cc-switch: 桌面端 Claude Code / Codex / OpenCode 多客户端一键切换" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/farion1231/cc-switch" target="_blank">cc-switch: 桌面端 Claude Code / Codex / OpenCode 多客户端一键切换</a></h3>
+    <p>cc-switch 是一款基于 Rust 开发的跨平台桌面 AI 编程客户端聚合工具, 12.2 万 star, 统一管理 Claude Code、Codex、OpenCode、Gemini CLI 等多种 AI CLI 工具, 支持一键切换 API provider、模型与会话上下文, 适合需要在不同 AI 工具间频繁切换的开发者.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 122,427 · farion1231/cc-switch · Rust</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-07-30/oss_summaries_v2_2026-07-30_05.jpg" alt="JavaGuide: 国内 Java 面试 + AI 应用开发全攻略" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/Snailclimb/JavaGuide" target="_blank">JavaGuide: 国内 Java 面试 + AI 应用开发全攻略</a></h3>
+    <p>JavaGuide 是国内最知名的 Java 面试 + 后端通用面试开源指南, 15.7 万 star, 覆盖计算机基础、数据库、分布式、高并发、系统设计, 7/29 v3.8 增补'AI 应用开发'专题 (含 Spring AI、LangChain4j、向量数据库接入), 是中文 Java 圈事实标准学习路线.值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。</p>
+    <div class="source">⭐ 157,388 · Snailclimb/JavaGuide · Java</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-07-30 17:12</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
