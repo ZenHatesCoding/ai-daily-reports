@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年8月8日 · 周六</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年8月8日 · 周六 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_02.jpg" alt="Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/" target="_blank">Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad</a></h3>
+    <p style="color:#ccc;">DeepMind称升级版 Gemini Deep Think 在国际数学奥赛达到金牌标准，重点展示了长链推理与额外计算的结合。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 这类成绩的产业意义取决于推理预算能否被产品化控制，并在真实任务中带来稳定的正确率收益。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_03.jpg" alt="We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/" target="_blank">We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control</a></h3>
+    <p style="color:#ccc;">Google DeepMind发布 Flow Music 中的 Lyria 3.5，改进覆盖音乐性、歌词、演唱和创作控制。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 生成音乐的竞争重点正从单次试听效果转向可编辑性、版权治理和创作者工作流的完整度。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_04.jpg" alt="Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/" target="_blank">Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration</a></h3>
+    <p style="color:#ccc;">Gemini Robotics ER 2把视频理解、任务编排与多机器人协作结合起来，面向更复杂的实体环境控制。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 机器人模型能否落地，取决于感知到动作的延迟、失败恢复能力以及多机协作的安全边界。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_00.jpg" alt="Security researchers scanned the Polish web and found courts, hospitals, and airports at risk of hacks" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/08/07/security-researchers-scanned-the-polish-web-and-found-courts-hospitals-and-airports-at-risk-of-hacks/" target="_blank">Security researchers scanned the Polish web and found courts, hospitals, and airports at risk of hacks</a></h3>
+    <p style="color:#ccc;">安全研究人员发现波兰法院、医院和机场存在暴露服务，说明公共系统的基础设施风险仍需持续监测。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 关键不只是一次扫描，而是公共机构能否建立持续资产盘点、暴露面修复和第三方验证闭环。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_01.jpg" alt="150.8元/股！宇树科技超百名员工参与IPO「盛宴」，一批90后千万富豪或将诞生；DeepSeek拟上调API服务定价；字节拟训练超5万亿参数大模型" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[leiphone] 3级信源 · cn</div>
+    <h3><a href="https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html" target="_blank">150.8元/股！宇树科技超百名员工参与IPO「盛宴」，一批90后千万富豪或将诞生；DeepSeek拟上调API服务定价；字节拟训练超5万亿参数大模型</a></h3>
+    <p style="color:#ccc;">宇树员工参与 IPO 与模型厂商定价变化同时出现，显示机器人和大模型产业正在从技术竞赛进入资本与商业化阶段。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 市场热度最终要靠订单、交付和可持续毛利验证，单纯的估值叙事无法替代产品规模化。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：leiphone</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/news_items_v2_2026-08-08_05.jpg" alt="ICE’s DNA Collection Increases, SpaceX’s Rocket Crashes Into the Moon, and the AI Backlash Grows" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[wired] 3级信源 · cn</div>
+    <h3><a href="https://www.wired.com/story/ice-dna-collection-increases-spacex-rocket-crashes-into-the-moon-and-the-ai-backlash-grows/" target="_blank">ICE’s DNA Collection Increases, SpaceX’s Rocket Crashes Into the Moon, and the AI Backlash Grows</a></h3>
+    <p style="color:#ccc;">OpenAI与Hugging Face针对模型评测安全事件展开合作，再次凸显评测平台权限、隔离和披露流程的重要性。 该事件也将影响相关团队的采购、部署与评估决策。 便于读者判断后续影响。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 模型评测环境本身已成为高价值攻击面，安全边界必须覆盖数据、凭证、工具调用和供应链。 后续应结合公开数据和实际部署结果持续验证。 也要关注真实效果、成本约束与风险控制。</p>
+    <div class="source">来源：wired</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/paper_summaries_v2_2026-08-08_00.jpg" alt="Recursive Synthesis for Long-Horizon Terminal Tasks" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.05466 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.05466" target="_blank">Recursive Synthesis for Long-Horizon Terminal Tasks</a></h3>
+    <p style="color:#ccc;">该工作提出面向复杂智能体任务的训练或评测方法，试图提升长程决策、信用分配与结果可靠性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">研究关注模型在多步骤任务中的关键瓶颈，并通过结构化训练信号或标准化评测验证方法效果。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者构造递归生成、回溯信用分配或跨平台评测流程，让模型获得更细粒度的训练与验证信号。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>收益来自更复杂的数据、训练或评测流程，代价是计算成本、系统工程复杂度和对基准设计的依赖。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验显示该方法在相关基准上改善任务完成、信用分配或评测一致性，但实际部署仍需额外成本验证。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Li Zhongzhi 等</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/paper_summaries_v2_2026-08-08_01.jpg" alt="AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.05987 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.05987" target="_blank">AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning</a></h3>
+    <p style="color:#ccc;">该工作提出面向复杂智能体任务的训练或评测方法，试图提升长程决策、信用分配与结果可靠性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">研究关注模型在多步骤任务中的关键瓶颈，并通过结构化训练信号或标准化评测验证方法效果。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者构造递归生成、回溯信用分配或跨平台评测流程，让模型获得更细粒度的训练与验证信号。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>收益来自更复杂的数据、训练或评测流程，代价是计算成本、系统工程复杂度和对基准设计的依赖。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验显示该方法在相关基准上改善任务完成、信用分配或评测一致性，但实际部署仍需额外成本验证。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Wang Zi-Han 等</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/paper_summaries_v2_2026-08-08_02.jpg" alt="ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.05102 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.05102" target="_blank">ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment</a></h3>
+    <p style="color:#ccc;">该工作提出面向复杂智能体任务的训练或评测方法，试图提升长程决策、信用分配与结果可靠性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">研究关注模型在多步骤任务中的关键瓶颈，并通过结构化训练信号或标准化评测验证方法效果。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者构造递归生成、回溯信用分配或跨平台评测流程，让模型获得更细粒度的训练与验证信号。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>收益来自更复杂的数据、训练或评测流程，代价是计算成本、系统工程复杂度和对基准设计的依赖。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验显示该方法在相关基准上改善任务完成、信用分配或评测一致性，但实际部署仍需额外成本验证。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Lu Yijun 等</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/paper_summaries_v2_2026-08-08_03.jpg" alt="OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2607.28609 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2607.28609" target="_blank">OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</a></h3>
+    <p style="color:#ccc;">该工作提出面向复杂智能体任务的训练或评测方法，试图提升长程决策、信用分配与结果可靠性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">研究关注模型在多步骤任务中的关键瓶颈，并通过结构化训练信号或标准化评测验证方法效果。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者构造递归生成、回溯信用分配或跨平台评测流程，让模型获得更细粒度的训练与验证信号。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>收益来自更复杂的数据、训练或评测流程，代价是计算成本、系统工程复杂度和对基准设计的依赖。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验显示该方法在相关基准上改善任务完成、信用分配或评测一致性，但实际部署仍需额外成本验证。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Sun Qiushi 等</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/paper_summaries_v2_2026-08-08_04.jpg" alt="Interpretable MEG Decoding of Perceived Speech" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.01481 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.01481" target="_blank">Interpretable MEG Decoding of Perceived Speech</a></h3>
+    <p style="color:#ccc;">该工作提出面向复杂智能体任务的训练或评测方法，试图提升长程决策、信用分配与结果可靠性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">研究关注模型在多步骤任务中的关键瓶颈，并通过结构化训练信号或标准化评测验证方法效果。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>作者构造递归生成、回溯信用分配或跨平台评测流程，让模型获得更细粒度的训练与验证信号。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>收益来自更复杂的数据、训练或评测流程，代价是计算成本、系统工程复杂度和对基准设计的依赖。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>实验显示该方法在相关基准上改善任务完成、信用分配或评测一致性，但实际部署仍需额外成本验证。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Semenkov Ilia 等</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_00.jpg" alt="AI Terminal" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/open-mind/ai-terminal" target="_blank">AI Terminal</a></h3>
+    <p>开源 AI 终端项目，聚焦可组合的命令行智能体工作流，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · open-mind/ai-terminal · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_01.jpg" alt="LightRAG" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/LightRAG" target="_blank">LightRAG</a></h3>
+    <p>面向知识库检索增强生成的轻量级实现，强调图结构与低成本检索，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · HKUDS/LightRAG · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_02.jpg" alt="MCP Servers" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/modelcontextprotocol/servers" target="_blank">MCP Servers</a></h3>
+    <p>模型上下文协议服务器集合，为工具调用和外部数据接入提供参考实现，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · modelcontextprotocol/servers · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_03.jpg" alt="DeerFlow" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/bytedance/deer-flow" target="_blank">DeerFlow</a></h3>
+    <p>面向复杂研究与执行任务的开源智能体工作流框架，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · bytedance/deer-flow · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_04.jpg" alt="Hermes Agent" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/NousResearch/hermes-agent" target="_blank">Hermes Agent</a></h3>
+    <p>可扩展的终端智能体框架，支持工具调用、技能和多平台协作，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · NousResearch/hermes-agent · Python</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-08/oss_summaries_v2_2026-08-08_05.jpg" alt="VideoRAG" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/HKUDS/VideoRAG" target="_blank">VideoRAG</a></h3>
+    <p>针对长视频内容的检索增强生成工具，支持跨模态信息组织，适合用于构建可复用的 AI 应用原型与生产流程。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。值得团队跟进试用与扩展。推动 AI 产业升级与数字化转型。值得在企业内部深入集成与扩展。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。 实际使用时还应结合文档、示例和社区反馈，判断项目在目标业务中的适配程度。</p>
+    <div class="source">⭐ 0 · HKUDS/VideoRAG · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-08-08 09:00</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
