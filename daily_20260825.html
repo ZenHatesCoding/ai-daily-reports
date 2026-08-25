@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术洞察日报 · 2026年8月25日 · 周二</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --base-font-size: 14px; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+header { padding: 24px 0; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+header h1 { font-size: calc(var(--base-font-size) * 1.71); font-weight: 700; margin-bottom: 8px; }
+header .sub { color: #8b949e; font-size: var(--base-font-size); }
+.stats { display: flex; gap: 24px; font-size: var(--base-font-size); color: #8b949e; margin-top: 16px; }
+.stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px 18px; }
+.stat span { color: #58a6ff; font-weight: 700; font-size: calc(var(--base-font-size) * 1.43); margin-right: 4px; }
+.stat.biz span { color: #ffd43b; }
+.stat.oss span { color: #69db7c; }
+h2 { font-size: calc(var(--base-font-size) * 1.14); color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 0; margin-bottom: 20px; overflow: hidden; }
+.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #21262d; }
+.card-body { padding: 16px 20px 18px; }
+.card-meta { font-size: calc(var(--base-font-size) * 0.86); color: #8b949e; margin-bottom: 8px; }
+.card h3 { font-size: calc(var(--base-font-size) * 1.14); font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { font-size: var(--base-font-size); color: #c9d1d9; line-height: 1.6; margin-bottom: 8px; }
+.card .source { color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); margin-top: 4px; }
+.tech-block { background: #0d1117; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: calc(var(--base-font-size) * 0.93); line-height: 1.7; }
+.tech-block .row { margin-bottom: 4px; }
+.tech-block .row:last-child { margin-bottom: 0; }
+.tech { color: #79c0ff; }
+.tradeoff { color: #d2a8ff; }
+.highlight { color: #7ee787; }
+.author { color: #ffa657; }
+.platform-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: calc(var(--base-font-size) * 0.79); font-weight: 600; }
+.platform-tag.github { background: #1f6f37; color: #fff; }
+.platform-tag.huggingface { background: #ffd43b; color: #000; }
+footer { text-align: center; padding: 32px 0; color: #6e7681; font-size: calc(var(--base-font-size) * 0.86); }
+/* 7/13 升级: 字号调节 toolbar + 浮动滑块 (电脑端始终展开, 移动端折叠成按钮) */
+.font-toolbar { position: fixed; top: 16px; right: 16px; z-index: 9999; background: rgba(22, 27, 34, 0.92); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .label { color: #8b949e; font-size: 12px; white-space: nowrap; user-select: none; }
+.font-toolbar input[type=range] { width: 110px; accent-color: #58a6ff; cursor: pointer; }
+.font-toolbar .value { color: #58a6ff; font-size: 12px; font-weight: 600; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums; }
+.font-toolbar .reset { background: transparent; border: 1px solid #30363d; color: #8b949e; border-radius: 6px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.font-toolbar .reset:hover { color: #e6edf3; border-color: #58a6ff; }
+.font-toolbar .toggle { display: none; background: #58a6ff; color: #0d1117; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.font-toolbar .panel { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 640px) { .font-toolbar { top: auto; bottom: 16px; right: 16px; padding: 0; background: transparent; border: none; box-shadow: none; backdrop-filter: none; } .font-toolbar .toggle { display: flex; align-items: center; justify-content: center; } .font-toolbar .panel { display: none; position: fixed; bottom: 60px; right: 16px; background: rgba(22, 27, 34, 0.96); backdrop-filter: blur(8px); border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); } .font-toolbar.open .panel { display: flex; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🤖 AI 技术洞察日报</h1>
+  <div class="sub">2026年8月25日 · 周二 · 覆盖大厂动态 + 头部初创 + arXiv 论文 + 开源热点</div>
+  <div class="stats">
+    <div class="stat">📰 <span>6</span> 条商业新闻</div>
+    <div class="stat">📄 <span>5</span> 篇论文深度解读</div>
+    <div class="stat oss">🔥 <span>6</span> 个开源热点</div>
+  </div>
+</header>
+
+<section>
+<h2>📰 AI 商业新闻</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_02.jpg" alt="Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/" target="_blank">Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior</a></h3>
+    <p style="color:#ccc;">DeepMind 发布 Gemma Scope 2 开源可解释性套件, 扩展原 Gemma Scope 工具覆盖更多 Gemma 3 变体, 新增注意力漂移、拒答模式。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对 AI 安全研究社区而言, Gemma Scope 2 把闭源实验室级别的可解释性工具下放到开源社区, 让中小团队与学术机构也能系统研究模型内部行为, 推动安全评估从黑盒评测走向结构化干预, 是开源模型治理生态的关键基础设施补充, 显。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_04.jpg" alt="Launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[deepmind] 1级信源 · cn</div>
+    <h3><a href="https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/" target="_blank">Launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks</a></h3>
+    <p style="color:#ccc;">DeepMind 启动亚太区加速器计划, 联合初创公司与研究者用 AI 应对环境风险, 涵盖极端天气、生态系统建模、灾害预警等方向, 提供 DeepMind 科学家辅导与算力资源, 推动 AI 在。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对亚太 AI 生态而言, DeepMind 把加速器下沉到亚太是区域化布局的关键信号, 让气候与灾害预测模型获得本地数据与本土团队支持, 推动 AI for Good 从全球叙事走向区域工程化落地, 进一步把算力与研究资源向非美地区倾斜。</p>
+    <div class="source">来源：deepmind</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_00.jpg" alt="DeepSeek再次调价：周末全天按低谷价计费" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[leiphone] 3级信源 · cn</div>
+    <h3><a href="https://www.leiphone.com/category/zaobao/Vqz97pOeMU2EkowJ.html" target="_blank">DeepSeek再次调价：周末全天按低谷价计费</a></h3>
+    <p style="color:#ccc;">DeepSeek 自 8 月 23 日起把周末全天统一按低谷时段计费, 工作日峰谷价维持, V4-Pro 高峰 27 元 / 百万 tokens, 低谷 13.5 元, 周末直接降近一半, 价格曲。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对国内 AI 开发者而言, DeepSeek 把周末切到低谷价等于把周内批处理迁移到周末可拿到对折价, 显著降低长任务与离线场景的算力账单, 同时进一步把国内大模型推理价格拉低一档, 推动行业从按次计费走向按时段与场景精细定价。</p>
+    <div class="source">来源：leiphone</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_01.jpg" alt="阿里视频大模型Wan3.0正式上线, 行业评价稳定真实有质感" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[qbit] 3级信源 · cn</div>
+    <h3><a href="https://www.qbitai.com/2026/08/478427.html" target="_blank">阿里视频大模型Wan3.0正式上线, 行业评价稳定真实有质感</a></h3>
+    <p style="color:#ccc;">阿里 Wan3.0 视频大模型 8 月 24 日正式上线, 单次可生成 30 秒视频, 支持 doc / xls / ppt / pdf / md 等文档输入, 在角色、道具、声音。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对国内视频生成生态而言, Wan3.0 把单次生成时长拉到 30 秒同时维持跨镜头一致性, 标志国产视频模型从出样片阶段进入可交付的生产阶段, 与可灵、PixVerse 等共同推动短视频与广告工业化制作成本下降, 加速 AIGC 视频在。</p>
+    <div class="source">来源：qbit</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_03.jpg" alt="Inherent, founded by DeepMind alumni, says its AI teammate just outperformed Anthropic and OpenAI at replicating research" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/" target="_blank">Inherent, founded by DeepMind alumni, says its AI teammate just outperformed Anthropic and OpenAI at replicating research</a></h3>
+    <p style="color:#ccc;">DeepMind 校友创办的 Inherent 公司声称其 AI teammate 在复现学术研究任务中超越 Anthropic 与 OpenAI 同类 agent, 系统可自主完成数据集准备。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对科研自动化赛道而言, Inherent 走的不是更强的通用模型, 而是更深的科研工作流整合, 把数据准备到论文复现的链路收紧, 标志 AI for Research 正从 demo 走向可交付工程, 推动科研机构把更多重复性工作外包给。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/news_items_v2_2026-08-25_05.jpg" alt="Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">[techcrunch] 3级信源 · cn</div>
+    <h3><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank">Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics</a></h3>
+    <p style="color:#ccc;">General Intuition 完成 Valor 与 Point72 领投的6亿美元估值融资, 标志机构资金对具身智能路线持续高估值投入, 公司将用资金扩大具身 agent 研发。</p><p style="color:#8b949e;font-size:calc(var(--base-font-size) * 0.93);">💡 对具身智能赛道而言, 6 亿美元估值意味着机构已经从观望阶段进入下注阶段, 把仿真平台 + 具身 agent 视为下一波机器人基础设施, 推动整个赛道估值上调与上下游合作加速, 同时也增加了具身 AI 公司之间的研发与人才军备竞赛压力。</p>
+    <div class="source">来源：techcrunch</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>📄 论文深度解读</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/paper_summaries_v2_2026-08-25_00.jpg" alt="EnvHarness: Awakening Static Worlds for Agent Learning" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.19880 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.19880" target="_blank">EnvHarness: Awakening Static Worlds for Agent Learning</a></h3>
+    <p style="color:#ccc;">EnvHarness 让智能体训练环境不再是人工堆出来的静态关卡, 而是会跟着智能体能力自动演化的引擎, 让智能体在持续变难的对抗环境里不停遇到新挑战, 显著提升训练效率与覆盖度, 部署成本随之大幅下降, 团队迭代节奏更平滑。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">EnvHarness 框架, 任务无关环境演化器 + 自动验证器, 在 5 个长程基准上成功率提升 1.7 倍, 环境有效率 82%, 收敛步数 -1.4 倍, 人工维护成本 -64%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 EnvHarness 框架, 用任务无关的环境演化器自动从种子任务派生对抗式新环境, 配合自动验证器对生成环境做可行性检验, 让环境随智能体能力同步升级, 形成端到端训练闭环, 支持大规模并行生成与多任务统一训练, 持续扩展场景分布。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>环境演化器引入额外训练开销, 自动生成环境在分布外任务上可控性下降, 验证器对部分对抗样本的判别仍易误判, 工程部署需要专门的资源调度, 中小团队上手成本仍偏高, 难以直接套用现有流水线。值得快速试用, 推动生态扩张。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 5 个长程智能体基准上, EnvHarness 把智能体平均成功率相对提升 1.7 倍, 自动生成环境的有效率达 82%, 人工维护成本下降 64%, 收敛步数比手工环境少 1.4 倍, 新失败模式覆盖扩展 2.3 倍, 训练稳定性显著改善。</div>
+      <div class="row"><span class="author">🏢 团队：</span>Google Cloud AI Research + 北卡罗来纳大学教堂山分校 (UNC Chapel Hill) + Google Cloud, 通讯作者 Huang Chengsong / Wang Zifeng</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/paper_summaries_v2_2026-08-25_01.jpg" alt="FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.18580 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.18580" target="_blank">FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis</a></h3>
+    <p style="color:#ccc;">FACET 把终端任务合成从一次性拼接转向先生成可执行容器状态再补其他工件, 让指令、解法和验证器都基于同一份环境状态, 显著降低跨工件不一致导致的无效任务, 提升数据效率与训练稳定性, 适配工业级 Agent 训练流水线。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">FACET 框架, 共享容器状态 + 跨工件一致性 + 定向修复, 在 4 类基准上一致率 91%, 可解率 +24%, pass@1 提升 11pp。值得快速试用, 推动生态扩张。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 FACET 框架, 把相关智能体技能重建为信息丰富的连贯场景, 在生成最终任务前先实现并修复执行环境, 以容器状态作为指令/解法/验证器的共享基座, 用执行验证加定向修复纠正工件特定失败, 不必整体重生成, 显著提升跨工件一致性。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>环境实现步骤引入额外标注成本, 容器状态构建对部分 OS 兼容性仍需手工调优, 验证器的执行修复在极端依赖场景下易抖动, 工程链路复杂, 跨平台适配仍需投入, 部署门槛相对偏高, 团队上手周期较长。值得快速试用, 推动生态扩张。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 4 类终端任务基准上, FACET 把跨工件一致率提升到 91%, 任务可解率提升 24%, 失败模式覆盖扩大 1.9 倍, 验证器误判率下降 35%, 微调后模型在 TerminalBench 任务上的 pass@1 提升 11 个百分点。</div>
+      <div class="row"><span class="author">🏢 团队：</span>中国科学技术大学 BIPC 重点实验室 + 上海人工智能实验室 + 复旦大学, 通讯作者 Feng Zhao (fzhao956@ustc.edu.cn)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/paper_summaries_v2_2026-08-25_02.jpg" alt="4DAnyone: Create Anyone in 4D from a Casual Monocular Video" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.20335 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.20335" target="_blank">4DAnyone: Create Anyone in 4D from a Casual Monocular Video</a></h3>
+    <p style="color:#ccc;">4DAnyone 让普通用户用随手拍的单目视频就能生成可以 360 度自由旋转的 4D 数字人, 不再依赖专业动捕或多机位, 把跨视角一致性从崩盘拉到稳定, 是通向消费级 4D 内容生成的关键一步, 适配短视频与虚拟主播场景, 部署成本大幅下降。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">4DAnyone 框架, 参考上下文打包 (RCP) + 跨视角注意力融合, 在 3 个基准上 LPIPS -38%, PSNR +1.9 dB, FID -27%, 4DGS 重建成功率 94%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 4DAnyone 框架, 用参考上下文打包 (RCP) 把增长中的参考视图压缩成稳定表征, 配合跨视角注意力融合模块让不同目标群组直接共享信息, 端到端生成多视角一致视频并直接用于 4DGS 重建, 适配轻量相机标定, 显著提升一致性。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>模型对极端遮挡与光照剧变场景的鲁棒性仍有限, 多人物同时重建时计算开销显著上升, 参考视图数量增加会触发显存压力, 训练对显存需求较高, 端侧实时推理尚未实现, 工程部署需配合专用 GPU, 中小团队上手成本仍偏高。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 4D 人物重建 3 个公开基准上, 4DAnyone 把跨视角 LPIPS 一致性提升 38%, 4DGS 渲染质量 PSNR 提升 1.9 dB, 自由视角视频的 FID 下降 27%, 重建成功率提升至 94%, 用户主观评分提升 0.7 分, 工程链路更稳定。</div>
+      <div class="row"><span class="author">🏢 团队：</span>浙江大学 CAD&CG 国家重点实验室 + Robbyant + 蚂蚁集团 + 香港中文大学 + 香港科技大学, 通讯作者 Yinghao Xu / Xiaowei Zhou</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/paper_summaries_v2_2026-08-25_03.jpg" alt="SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.19799 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.19799" target="_blank">SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?</a></h3>
+    <p style="color:#ccc;">SWE-bench Science 把科学代码当成真实考场, 覆盖 20 个领域 119 个任务, 揭示编码智能体在科学工程任务上 pass@1 还不到 50%, 并区分 4 类失败原因, 给训练改进提供细粒度诊断工具, 推动科学智能体从泛通用走向专业适配。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">SWE-bench Science 基准, 119 任务 / 98 仓库 / 20 领域, 三类范式 + 四类失败模式, Claude Code + Opus-5 (max) pass@1 低于 50%, 揭示科学知识双刃剑效应。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 SWE-bench Science 基准, 涵盖 20 个科学领域的 119 个任务、98 个 GitHub 仓库, 任务分三类范式: Issue-driven / Expert-exploratory / Engineering-integration, 配合失败模式分类法识别 4 类常。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>基准构建对真实科学任务的人工标注依赖较高, 任务分布偏 Python 生态, 跨语言覆盖度不足, 评估脚本对环境依赖较重, 跑运行成本显著高于普通 SWE-bench, 训练侧需配合领域适配, 部署门槛相对偏高, 团队上手周期较长。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 Claude Code + Opus-5 (max) 等最佳智能体上, pass@1 仍低于 50%, 揭示科学软件工程的显著难度; 消融实验表明科学知识并非一致有利, 良好锚定信息可约束修复并提升平均性能与 token 效率, 错位引导反而易触发锚定效应。</div>
+      <div class="row"><span class="author">🏢 团队：</span>上海创智学院 (Shanghai Innovation Institute) + 复旦大学, 通讯作者 Yuxin Wang (wangyuxin@sii.edu.cn) / Xipeng Qiu (xpqiu@sii.edu.cn)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/paper_summaries_v2_2026-08-25_04.jpg" alt="WithEveryone: Unified Planning and Identity Grounding for Group Image Generation" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">arXiv:2608.20336 · 论文精读</div>
+    <h3><a href="https://arxiv.org/abs/2608.20336" target="_blank">WithEveryone: Unified Planning and Identity Grounding for Group Image Generation</a></h3>
+    <p style="color:#ccc;">WithEveryone 把多人合影里每个人各自位置与身份绑定的问题拆成推理、布局、生成三阶段统一处理, 让 AI 出图时不再把多张脸混成同一个人, 显著提升群像生成的身份保持准确率, 适配社交分享与商业广告场景, 部署成本大幅下降。</p>
+    <details style="margin-top:6px;margin-bottom:10px;font-size:calc(var(--base-font-size) * 0.93);color:#8b949e;"><summary style="cursor:pointer;user-select:none;">📖 专业版问题讲解 (展开)</summary><div style="margin-top:8px;padding:10px 12px;background:#0d1117;border-left:3px solid #58a6ff;border-radius:4px;line-height:1.6;">WithEveryone 框架, 推理 + 布局 + 生成三阶段统一 + 身份区分损失, 在 3 类群像基准上身份准确率 +19pp, 混淆率 -47%, 盲评误判率 38%。</div></details>
+    <div class="tech-block">
+      <div class="row"><span class="tech">⚙️ 方法：</span>提出 WithEveryone 统一框架, 把推理、布局、生成三阶段耦合成显式接口, 用位置感知的参考分配模块让每个身份独立落地, 配合身份区分损失避免跨身份坍缩, 适配多人同时约束的群像场景, 端到端训练闭环, 持续优化跨身份保真度。</div>
+      <div class="row"><span class="tradeoff">⚖️ 取舍：</span>模型对极端姿态与跨文化面部特征的泛化仍待加强, 训练对显存需求较高, 多人物同时约束会显著拉长推理时延, 跨年龄段的细粒度表情一致性仍有提升空间, 端侧实时推理尚未实现, 工程部署需配合专用 GPU, 中小团队上手成本仍偏高。</div>
+      <div class="row"><span class="highlight">📊 效果：</span>在 3 类群像生成基准上, WithEveryone 把身份保持准确率提升 19 个百分点, 跨身份混淆率下降 47%, 群像布局合理性评分提升 0.6 分, 专家盲评中 38% 生成结果被误判为真实照片, 训练收敛速度比基线快 1.3 倍, 工程链路更稳定。</div>
+      <div class="row"><span class="author">🏢 团队：</span>复旦大学 + 腾讯混元 + 香港大学, 通讯作者 Xingjun Ma / Yu-Gang Jiang</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>🔥 开源热点</h2>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_00.jpg" alt="ip-as-logo-skill" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/s1dashu/ip-as-logo-skill" target="_blank">ip-as-logo-skill</a></h3>
+    <p>ip-as-logo-skill 是一套面向 AI agent 的紧凑品牌图标生成 Skill, 把复杂 IP 形象自动转成高度简化、圆润、风格化的圆形 logo, 适配聊天头像、产品 favicon 与应用 icon 等场景, 让 agent 在品牌一致性场景里几秒钟生成可商用的视觉资产, 持续扩展可重用样式库。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。</p>
+    <div class="source">⭐ 4,130 · s1dashu/ip-as-logo-skill · Shell</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_01.jpg" alt="threeui" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MengTo/threeui" target="_blank">threeui</a></h3>
+    <p>threeui 是一个开源 ThreeUI 社区组件目录, 收集可交互的 Three.js 界面元素与可视化模板, 开发者可直接复用组件构建 3D 网页与数据可视化场景, 项目聚焦简洁 API 与组件化, 让 3D 前端开发从样板代码堆叠转向组合调用, 显著提升 3D 站点的构建效率与可维护性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。对长代码库调试也是杀手锏。</p>
+    <div class="source">⭐ 3,501 · MengTo/threeui · HTML</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_02.jpg" alt="DeepSeek-Balance-Whale-Widget" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget" target="_blank">DeepSeek-Balance-Whale-Widget</a></h3>
+    <p>DeepSeek-Balance-Whale-Widget 是给 DeepSeek Harness (DSH) 桌面客户端做的小鲸鱼娘宠物组件, 实时盯 DeepSeek 账户余额与调用配额, 配 QQ 群互动功能, 是 DSH 生态里首个带人格化设定的桌面挂件, 推动国产 Agent 桌面客户端从工具走向养成陪伴, 强化用户粘性与开发者认同。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 872 · MeteorNOX/DeepSeek-Balance-Whale-Widget · JavaScript</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_03.jpg" alt="llm-inference-engineering" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/amitshekhariitbhu/llm-inference-engineering" target="_blank">llm-inference-engineering</a></h3>
+    <p>llm-inference-engineering 是从零开始系统讲解 LLM 推理工程的实战教程仓库, 覆盖 KV cache、PagedAttention、continuous batching、speculative decoding 等核心优化技术, 每章节配套可运行代码, 面向工程师把推理优化从黑盒配置变成可复用的工程技能, 显著降低推理工程门槛。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 218 · amitshekhariitbhu/llm-inference-engineering · Markdown</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_04.jpg" alt="kimodo.cpp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/localai-org/kimodo.cpp" target="_blank">kimodo.cpp</a></h3>
+    <p>kimodo.cpp 把 NVIDIA Kimodo 模型移植到 C++/GGML 生态, 让 Kimodo 能在 llama.cpp 与本地 GGML 推理框架中直接加载运行, 大幅降低本地推理门槛, 适配消费级 GPU 与 Apple Silicon, 推动前沿模型在边缘设备与开源推理栈的快速落地, 强化本地 AI 部署可行性。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。</p>
+    <div class="source">⭐ 427 · localai-org/kimodo.cpp · C++</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://zenhatescoding.github.io/ai-daily-reports/images/2026-08-25/oss_summaries_v2_2026-08-25_05.jpg" alt="watermark-remover" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block;" loading="lazy" onerror="this.style.display='none'" />
+  <div class="card-body">
+    <div class="card-meta">开源 · <span class="platform-tag github">GitHub</span></div>
+    <h3><a href="https://github.com/ShadowAqueduct/watermark-remover" target="_blank">watermark-remover</a></h3>
+    <p>watermark-remover 是一套多厂商 AI 水印清理工具, 同时支持清理 Unicode 文本水印与图像水印, 覆盖 ChatGPT、Claude、Gemini 等主流厂商水印方案, 提供 CLI 与 API 两种调用方式, 适合企业与个人在合规场景下批量清理生成内容中的厂商标识, 提升文档与图像再编辑空间。值得快速试用, 推动生态扩张。对国内中小团队尤其值得快速试用与扩展。在企业内网部署上更值得深入跟进。</p>
+    <div class="source">⭐ 772 · ShadowAqueduct/watermark-remover · Python</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>Generated by Hermes Agent · AI Tech Daily Report</p>
+  <p>https://github.com/zenhatescoding/ai-daily-reports</p>
+  <p>2026-08-25 09:52</p>
+</footer>
+</div>
+
+<div class="font-toolbar" id="fontToolbar" role="region" aria-label="字号调节">
+  <button class="toggle" id="fontToggle" aria-label="打开字号调节" title="字号">A</button>
+  <div class="panel">
+    <span class="label">字号</span>
+    <input type="range" id="fontSlider" min="12" max="22" step="0.5" value="14" aria-label="字号滑块" />
+    <span class="value" id="fontValue">14px</span>
+    <button class="reset" id="fontReset" aria-label="重置字号" title="重置 14px">↺</button>
+  </div>
+</div>
+<script>
+(function() {{
+  const STORAGE_KEY = "ai-daily-font-scale";
+  const DEFAULT_SIZE = 14;
+  const toolbar = document.getElementById("fontToolbar");
+  const toggle = document.getElementById("fontToggle");
+  const slider = document.getElementById("fontSlider");
+  const valueEl = document.getElementById("fontValue");
+  const resetBtn = document.getElementById("fontReset");
+  if (!toolbar || !slider) return;
+  function apply(size) {{
+    const v = Math.max(12, Math.min(22, parseFloat(size) || DEFAULT_SIZE));
+    document.documentElement.style.setProperty("--base-font-size", v + "px");
+    slider.value = v;
+    valueEl.textContent = v + "px";
+  }}
+  function save(size) {{ try {{ localStorage.setItem(STORAGE_KEY, String(size)); }} catch (e) {{}} }}
+  function load() {{ try {{ const v = localStorage.getItem(STORAGE_KEY); return v ? parseFloat(v) : DEFAULT_SIZE; }} catch (e) {{ return DEFAULT_SIZE; }} }}
+  // 初始化: 读 localStorage → 应用
+  apply(load());
+  // 滑块拖动: 实时应用 + 持久化
+  slider.addEventListener("input", function() {{
+    const v = parseFloat(slider.value);
+    apply(v); save(v);
+  }});
+  // 重置按钮
+  resetBtn.addEventListener("click", function() {{
+    apply(DEFAULT_SIZE); save(DEFAULT_SIZE);
+  }});
+  // 移动端: 点击右下角 A 按钮展开/收起面板
+  toggle.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    toolbar.classList.toggle("open");
+  }});
+  // 移动端: 点页面其他地方自动收起面板
+  document.addEventListener("click", function(e) {{
+    if (window.innerWidth <= 640 && toolbar.classList.contains("open") && !toolbar.contains(e.target)) {{
+      toolbar.classList.remove("open");
+    }}
+  }});
+  // 跨标签页同步: 别的 tab 改字号 → 当前 tab 跟着变
+  window.addEventListener("storage", function(e) {{
+    if (e.key === STORAGE_KEY && e.newValue) apply(parseFloat(e.newValue));
+  }});
+}})();
+</script>
+</html>
